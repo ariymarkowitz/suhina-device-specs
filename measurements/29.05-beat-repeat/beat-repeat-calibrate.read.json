@@ -1,0 +1,2988 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref BeatRepeat",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal BeatRepeat On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal BeatRepeat Chance",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal BeatRepeat Interval",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal BeatRepeat Offset",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal BeatRepeat Grid",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 8.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal BeatRepeat BlockTripplets",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "cal BeatRepeat GridChance",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "cal BeatRepeat GridChanceType",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "name": "cal BeatRepeat Gate",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "name": "cal BeatRepeat DampVolume",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "name": "cal BeatRepeat DampPitch",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "name": "cal BeatRepeat BasePitch",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "name": "cal BeatRepeat MixType",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "name": "cal BeatRepeat WetLevel",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.10864695906639099,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "name": "cal BeatRepeat FilterOn",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "name": "cal BeatRepeat MidFreq",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.30000001192092896,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "name": "cal BeatRepeat BandWidth",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.449999809265137,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "name": "cal BeatRepeat InstantRepeat",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Beat Repeat",
+     "class_name": "BeatRepeat",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 7.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Grid",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Block Triplets",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Variation",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 10.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Variation Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Decay",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mix Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Volume",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5089499354362488,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 4.0,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeat",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

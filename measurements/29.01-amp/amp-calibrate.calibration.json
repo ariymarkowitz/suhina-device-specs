@@ -1,0 +1,80 @@
+{
+ "set": "amp-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref Amp",
+   "device": "Amp",
+   "element": null
+  },
+  {
+   "name": "cal Amp On",
+   "device": "Amp",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Amp AmpType",
+   "device": "Amp",
+   "element": "AmpType",
+   "default": "2",
+   "stored": "3"
+  },
+  {
+   "name": "cal Amp Bass",
+   "device": "Amp",
+   "element": "Bass",
+   "default": "5",
+   "stored": "6"
+  },
+  {
+   "name": "cal Amp Middle",
+   "device": "Amp",
+   "element": "Middle",
+   "default": "5",
+   "stored": "6"
+  },
+  {
+   "name": "cal Amp Treble",
+   "device": "Amp",
+   "element": "Treble",
+   "default": "5",
+   "stored": "6"
+  },
+  {
+   "name": "cal Amp Presence",
+   "device": "Amp",
+   "element": "Presence",
+   "default": "5",
+   "stored": "6"
+  },
+  {
+   "name": "cal Amp Gain",
+   "device": "Amp",
+   "element": "Gain",
+   "default": "5",
+   "stored": "6"
+  },
+  {
+   "name": "cal Amp Volume",
+   "device": "Amp",
+   "element": "Volume",
+   "default": "9",
+   "stored": "10"
+  },
+  {
+   "name": "cal Amp DualMono",
+   "device": "Amp",
+   "element": "DualMono",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Amp DryWet",
+   "device": "Amp",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  }
+ ]
+}

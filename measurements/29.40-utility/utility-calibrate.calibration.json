@@ -1,0 +1,108 @@
+{
+ "set": "utility-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref StereoGain",
+   "device": "StereoGain",
+   "element": null
+  },
+  {
+   "name": "cal StereoGain On",
+   "device": "StereoGain",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal StereoGain PhaseInvertL",
+   "device": "StereoGain",
+   "element": "PhaseInvertL",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal StereoGain PhaseInvertR",
+   "device": "StereoGain",
+   "element": "PhaseInvertR",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal StereoGain ChannelMode",
+   "device": "StereoGain",
+   "element": "ChannelMode",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal StereoGain StereoWidth",
+   "device": "StereoGain",
+   "element": "StereoWidth",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal StereoGain MidSideBalance",
+   "device": "StereoGain",
+   "element": "MidSideBalance",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal StereoGain Mono",
+   "device": "StereoGain",
+   "element": "Mono",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal StereoGain BassMono",
+   "device": "StereoGain",
+   "element": "BassMono",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal StereoGain BassMonoFrequency",
+   "device": "StereoGain",
+   "element": "BassMonoFrequency",
+   "default": "120",
+   "stored": "365"
+  },
+  {
+   "name": "cal StereoGain Balance",
+   "device": "StereoGain",
+   "element": "Balance",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal StereoGain Gain",
+   "device": "StereoGain",
+   "element": "Gain",
+   "default": "1",
+   "stored": "39.36389163"
+  },
+  {
+   "name": "cal StereoGain LegacyGain",
+   "device": "StereoGain",
+   "element": "LegacyGain",
+   "default": "0",
+   "stored": "-14"
+  },
+  {
+   "name": "cal StereoGain Mute",
+   "device": "StereoGain",
+   "element": "Mute",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal StereoGain DcFilter",
+   "device": "StereoGain",
+   "element": "DcFilter",
+   "default": "false",
+   "stored": "true"
+  }
+ ]
+}

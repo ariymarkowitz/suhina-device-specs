@@ -1,0 +1,51 @@
+{
+ "device": "EQ Eight",
+ "cases": [
+  {
+   "id": "3-Frequency-A-n0.3",
+   "params": {
+    "3 Frequency A": {
+     "norm": 0.3
+    }
+   }
+  },
+  {
+   "id": "3-Frequency-A-d440",
+   "params": {
+    "3 Frequency A": {
+     "display": 440
+    }
+   }
+  },
+  {
+   "id": "3-Frequency-A-d8000",
+   "params": {
+    "3 Frequency A": {
+     "display": 8000
+    }
+   }
+  },
+  {
+   "id": "3-Gain-A--9",
+   "params": {
+    "3 Gain A": -9
+   }
+  },
+  {
+   "id": "3-Gain-A-n0.7",
+   "params": {
+    "3 Gain A": {
+     "norm": 0.7
+    }
+   }
+  },
+  {
+   "id": "3-Gain-A-d4.5",
+   "params": {
+    "3 Gain A": {
+     "display": 4.5
+    }
+   }
+  }
+ ]
+}

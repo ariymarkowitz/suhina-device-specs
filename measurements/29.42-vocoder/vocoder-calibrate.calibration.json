@@ -1,0 +1,178 @@
+{
+ "set": "vocoder-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref Vocoder",
+   "device": "Vocoder",
+   "element": null
+  },
+  {
+   "name": "cal Vocoder On",
+   "device": "Vocoder",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Vocoder LowFrequency",
+   "device": "Vocoder",
+   "element": "LowFrequency",
+   "default": "80",
+   "stored": "502.3772356"
+  },
+  {
+   "name": "cal Vocoder HighFrequency",
+   "device": "Vocoder",
+   "element": "HighFrequency",
+   "default": "12000",
+   "stored": "771.4410063"
+  },
+  {
+   "name": "cal Vocoder FormantShift",
+   "device": "Vocoder",
+   "element": "FormantShift",
+   "default": "0",
+   "stored": "-14.4"
+  },
+  {
+   "name": "cal Vocoder FilterBandWidth",
+   "device": "Vocoder",
+   "element": "FilterBandWidth",
+   "default": "1",
+   "stored": "1.43"
+  },
+  {
+   "name": "cal Vocoder Retro",
+   "device": "Vocoder",
+   "element": "Retro",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Vocoder LevelGate",
+   "device": "Vocoder",
+   "element": "LevelGate",
+   "default": "-60",
+   "stored": "-9.6"
+  },
+  {
+   "name": "cal Vocoder OutputGain",
+   "device": "Vocoder",
+   "element": "OutputGain",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Vocoder EnvelopeRate",
+   "device": "Vocoder",
+   "element": "EnvelopeRate",
+   "default": "1",
+   "stored": "125.8925412"
+  },
+  {
+   "name": "cal Vocoder EnvelopeRelease",
+   "device": "Vocoder",
+   "element": "EnvelopeRelease",
+   "default": "150",
+   "stored": "2716.344687"
+  },
+  {
+   "name": "cal Vocoder UvdThreshold",
+   "device": "Vocoder",
+   "element": "UvdThreshold",
+   "default": "0.5",
+   "stored": "0.3"
+  },
+  {
+   "name": "cal Vocoder UvdSlow",
+   "device": "Vocoder",
+   "element": "UvdSlow",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Vocoder UvdLevel",
+   "device": "Vocoder",
+   "element": "UvdLevel",
+   "default": "0.0003162277571",
+   "stored": "0.08912509306"
+  },
+  {
+   "name": "cal Vocoder CarrierSource/NoiseRate",
+   "device": "Vocoder",
+   "element": "CarrierSource/NoiseRate",
+   "default": "20000",
+   "stored": "490.1274189"
+  },
+  {
+   "name": "cal Vocoder CarrierSource/NoiseCrackle",
+   "device": "Vocoder",
+   "element": "CarrierSource/NoiseCrackle",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal Vocoder CarrierSource/RoutedInput/Volume",
+   "device": "Vocoder",
+   "element": "CarrierSource/RoutedInput/Volume",
+   "default": "1",
+   "stored": "0.008128305197"
+  },
+  {
+   "name": "cal Vocoder CarrierSource/DetectionLowerBound",
+   "device": "Vocoder",
+   "element": "CarrierSource/DetectionLowerBound",
+   "default": "80",
+   "stored": "219"
+  },
+  {
+   "name": "cal Vocoder CarrierSource/DetectionUpperBound",
+   "device": "Vocoder",
+   "element": "CarrierSource/DetectionUpperBound",
+   "default": "500",
+   "stored": "2190.000018"
+  },
+  {
+   "name": "cal Vocoder CarrierSource/OscillatorPitch",
+   "device": "Vocoder",
+   "element": "CarrierSource/OscillatorPitch",
+   "default": "0",
+   "stored": "-14.4"
+  },
+  {
+   "name": "cal Vocoder CarrierSource/OscillatorWaveform",
+   "device": "Vocoder",
+   "element": "CarrierSource/OscillatorWaveform",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Vocoder CarrierFlatten",
+   "device": "Vocoder",
+   "element": "CarrierFlatten",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Vocoder MonoStereo",
+   "device": "Vocoder",
+   "element": "MonoStereo",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Vocoder DryWet",
+   "device": "Vocoder",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal Vocoder ModulatorAmount",
+   "device": "Vocoder",
+   "element": "ModulatorAmount",
+   "default": "1",
+   "stored": "2"
+  }
+ ]
+}

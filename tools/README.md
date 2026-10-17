@@ -197,11 +197,26 @@ $PY tools/harness/make_als.py map measurements/29.09-compressor/compressor-calib
 
 The calibration set has a `ref <class>` track (the factory default) and one `cal <class>
 <element>` track per parameter element with only that element changed. `map` finds the one API
-parameter that moved on each track and works out how an API value becomes the stored value: the
-same number, the display's number (Hz, s, ms, % / 100, or dB as linear gain), or an index. It
-records this in `measurements/als-map-12.4.6.json`. Elements that move no API parameter (the
-Compressor's `LegacyModel`) are listed as unmatched and never set. Re-running `map` for another
-device adds to the file.
+parameter that moved on each track and works out how an API value becomes the stored value:
+
+| `convert` | Stored value | Example |
+|---|---|---|
+| `same` | the API value | Compressor Output (`Gain`, dB) |
+| `integer` | the API value, rounded: Live truncates a stored fraction on loading | Corpus Transpose, Resonators I Note |
+| `base`, `ms`, `percent`, `gain` | the display's number in base units, × 1000 for ms, / 100 for %, or dB as linear gain (each only with that unit) | Compressor Ratio, Attack, Threshold |
+| `linear` | a straight line from the API range onto the element's `MidiControllerRange` (`range`: API min, max, element min, max) | Saturator Drive (0 .. 1 onto −36 .. 36) |
+| `bool`, `offset` | on/off, or the API index plus a constant | Device On, Compressor Model |
+
+`linear` is chosen over a display conversion when the dump's display lies on that line at every
+sample, since it is exact where the display is rounded. The result goes to
+`measurements/als-map-12.4.6.json`. Elements that move no API parameter (the Compressor's
+`LegacyModel`) are listed as unmatched and never set. Re-running `map` for another device
+replaces that device's entry.
+
+The calibration files of each device are `measurements/29.NN-<device>/<device>-calibrate.*`
+(`.als`, `.calibration.json`, `.read.json`). All 42 Live audio effects are mapped; see [All
+effects calibrated](#all-effects-calibrated-live-1246-2026-10-18) for what has no element or no
+parameter.
 
 **Build and check a measurement set:**
 
@@ -223,9 +238,14 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
 `.verified.json`.
 
 - **Values.** A `display` spec in base units is converted exactly (Threshold `display:-20` is
-  stored as 0.1). A `norm` or plain value goes through the dump's sampled display curve, so it
-  lands within the display's rounding of the target: three figures, below 0.1 % of the range for
-  the Compressor. `{"stored": x}` writes a stored value as it is, for a parameter the map has no
+  stored as 0.1), and so is any value through `same`, `integer`, `linear`, `bool` or `offset`.
+  A `norm` or plain value through a display conversion goes through the dump's sampled display
+  curve (exact at the default and at the samples), so it lands within the display's rounding of
+  the target: three figures, below 0.1 % of the range for the Compressor. A display shown to
+  two places is too coarse to interpolate between, so where the samples all lie within their
+  rounding of one exponential (Auto Shift's LFO Rate, 0.01 to 20 Hz) the value comes from that
+  exponential: norm 0.25 is written as 0.0669 Hz and Live reads back 0.25, where interpolating
+  the displayed `0.07 Hz` read back 0.256. `{"stored": x}` writes a stored value as it is, for a parameter the map has no
   conversion for. A display-given value's expected API value is only known to one sample step
   (1/64 of the range), and `verify` allows that much there.
 - **The template** (`--template`, default `measurements/29.09-compressor/compressor-threshold.als`)
@@ -234,6 +254,11 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
   is pointed at `--probe` (default `measurements/probe.wav`) and fitted to its length, so a
   reverb run can use `probe-gap30/probe.wav`. The probe must have the set's sample rate. One set
   has one tempo and one probe, so runs that need another of either go in another set.
+- **Checked in Live 12.4.6.** `measurements/map-check/` builds into one 37-track set
+  (`map-check-gen.als`; `verify` reports 0 problems) that covers `linear` (Saturator Drive and
+  Color Amt Low and Hi, Amp Bass, Reverb Diffuse Level, Roar Env Gain), `integer` (Corpus Transpose -18.6 is written and read back as -19, Resonators I Note
+  40.4 as 40), `base` (Auto Shift LFO Rate), nested elements (EQ Eight band 3) and `gain`
+  (External Audio Effect Input Gain), each by norm and by display.
 - **Not covered yet:** automation (Freeze, Smooth), side-chain routing, MIDI-driven devices
   (Vocoder carrier, Spectral Resonator MIDI), and devices inside racks.
 
@@ -354,3 +379,30 @@ with Ratio and Model set, Release by norm with S/C EQ Freq, Knee and Output set;
 back with every case value and every other parameter as intended. Threshold's stored values
 match those Live saved for the probe-built run to within 1e-6. The Remote Script gives no
 display text in 12.4.6 (`value_string` missing), so `map` reads the display from the dump.
+
+### All effects calibrated (Live 12.4.6, 2026-10-18)
+
+One calibration set per device, read through the Remote Script one after another (`open -a`,
+wait until Live lists the set's tracks, `live_check.py read`). All 41 sets besides the
+Compressor's opened with no dialog or missing media, and every track held its device with the
+dump's parameter count. `map` matched every API parameter of every device to exactly one element,
+with no "several moved" and no "matched both". The two conversions added for this run
+(`integer`, `linear`) were the only fixes `map` needed; before them, five parameters had "no
+conversion fits" (Corpus Transpose, Resonators I Note, Spectral Resonator Note, Saturator Color
+Amt Low and Hi), and `gain` overflowed on displays in Hz.
+
+- **Elements without a parameter**, never set by `build`: Compressor `LegacyModel`,
+  `LegacyEnvFollowerMode`; Delay `DelayLine_SimpleDelayTimeL`/`R` and
+  `DelayLine_PingPongDelayTimeL`/`R` (older delay times; the API's times are other elements);
+  EQ Eight `SpectrumAnalyzer/On` (the display's analyser); Tuner `TuningFreq` (the reference
+  pitch, which the API does not show); Utility `LegacyGain`, `MidSideBalance`.
+- **Nested elements work as paths:** EQ Eight's bands (`Bands.0/ParameterA/Freq`, all 84),
+  Roar's stages (91) and Hybrid Reverb (54) mapped in full, as did External Audio Effect
+  (`InputHelper/Volume`, `OutputHelper/Volume` as gains).
+- **Not parameters, so not in the map:** External Audio Effect's audio routing (To and From
+  the hardware), Hybrid Reverb's impulse response choice, side-chain sources. Spectrum and Tuner
+  have only Device On.
+- **Not calibrated:** Max Audio Effect (`MxDeviceAudioEffect`, the Suhina Probe on the dump's
+  `3-Audio` track): a Max for Live device, not a Live audio effect.
+- **Calibration values:** every element without a `MidiControllerRange` is a bool in these 42
+  effects; an enum at the top of its range steps down instead of up.

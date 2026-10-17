@@ -1,0 +1,538 @@
+{
+ "set": "map-check-gen.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "saturator Drive-n0.2",
+   "run": "saturator",
+   "case": "Drive-n0.2",
+   "device": "Saturator",
+   "params": {
+    "Drive": {
+     "value": 0.2,
+     "element": "PreDrive",
+     "stored": "-21.6"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Drive-n0.75",
+   "run": "saturator",
+   "case": "Drive-n0.75",
+   "device": "Saturator",
+   "params": {
+    "Drive": {
+     "value": 0.75,
+     "element": "PreDrive",
+     "stored": "18"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Drive-d-10",
+   "run": "saturator",
+   "case": "Drive-d-10",
+   "device": "Saturator",
+   "params": {
+    "Drive": {
+     "value": 0.359375,
+     "element": "PreDrive",
+     "stored": "-10.125",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Color-Amt-Low-n0.2",
+   "run": "saturator",
+   "case": "Color-Amt-Low-n0.2",
+   "device": "Saturator",
+   "params": {
+    "Color Amt Low": {
+     "value": 0.2,
+     "element": "BaseDrive",
+     "stored": "-21.6"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Color-Amt-Low-n0.75",
+   "run": "saturator",
+   "case": "Color-Amt-Low-n0.75",
+   "device": "Saturator",
+   "params": {
+    "Color Amt Low": {
+     "value": 0.75,
+     "element": "BaseDrive",
+     "stored": "18"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Color-Amt-Low-d50",
+   "run": "saturator",
+   "case": "Color-Amt-Low-d50",
+   "device": "Saturator",
+   "params": {
+    "Color Amt Low": {
+     "value": 0.75,
+     "element": "BaseDrive",
+     "stored": "18",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Color-Amt-Hi-n0.2",
+   "run": "saturator",
+   "case": "Color-Amt-Hi-n0.2",
+   "device": "Saturator",
+   "params": {
+    "Color Amt Hi": {
+     "value": 0.2,
+     "element": "ColorDepth",
+     "stored": "-14.4"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Color-Amt-Hi-n0.75",
+   "run": "saturator",
+   "case": "Color-Amt-Hi-n0.75",
+   "device": "Saturator",
+   "params": {
+    "Color Amt Hi": {
+     "value": 0.75,
+     "element": "ColorDepth",
+     "stored": "12"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "saturator Color-Amt-Hi-d50",
+   "run": "saturator",
+   "case": "Color-Amt-Hi-d50",
+   "device": "Saturator",
+   "params": {
+    "Color Amt Hi": {
+     "value": 0.75,
+     "element": "ColorDepth",
+     "stored": "12",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "amp Bass-n0.2",
+   "run": "amp",
+   "case": "Bass-n0.2",
+   "device": "Amp",
+   "params": {
+    "Bass": {
+     "value": 0.2,
+     "element": "Bass",
+     "stored": "2"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "amp Bass-n0.8",
+   "run": "amp",
+   "case": "Bass-n0.8",
+   "device": "Amp",
+   "params": {
+    "Bass": {
+     "value": 0.8,
+     "element": "Bass",
+     "stored": "8"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "amp Bass-d3.5",
+   "run": "amp",
+   "case": "Bass-d3.5",
+   "device": "Amp",
+   "params": {
+    "Bass": {
+     "value": 0.35000000000000003,
+     "element": "Bass",
+     "stored": "3.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "corpus Transpose--18.6",
+   "run": "corpus",
+   "case": "Transpose--18.6",
+   "device": "Corpus",
+   "params": {
+    "Transpose": {
+     "value": -19,
+     "element": "Transpose",
+     "stored": "-19"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "corpus Transpose-n0.25",
+   "run": "corpus",
+   "case": "Transpose-n0.25",
+   "device": "Corpus",
+   "params": {
+    "Transpose": {
+     "value": -24,
+     "element": "Transpose",
+     "stored": "-24"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "corpus Transpose-7",
+   "run": "corpus",
+   "case": "Transpose-7",
+   "device": "Corpus",
+   "params": {
+    "Transpose": {
+     "value": 7,
+     "element": "Transpose",
+     "stored": "7"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "corpus Transpose-12.4",
+   "run": "corpus",
+   "case": "Transpose-12.4",
+   "device": "Corpus",
+   "params": {
+    "Transpose": {
+     "value": 12,
+     "element": "Transpose",
+     "stored": "12"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "resonators I-Note-40.4",
+   "run": "resonators",
+   "case": "I-Note-40.4",
+   "device": "Resonator",
+   "params": {
+    "I Note": {
+     "value": 40,
+     "element": "ResNote",
+     "stored": "40"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "resonators I-Note-n0.3",
+   "run": "resonators",
+   "case": "I-Note-n0.3",
+   "device": "Resonator",
+   "params": {
+    "I Note": {
+     "value": 34,
+     "element": "ResNote",
+     "stored": "34"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "resonators I-Note-71",
+   "run": "resonators",
+   "case": "I-Note-71",
+   "device": "Resonator",
+   "params": {
+    "I Note": {
+     "value": 71,
+     "element": "ResNote",
+     "stored": "71"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "reverb Diffuse-Level-n0.2",
+   "run": "reverb",
+   "case": "Diffuse-Level-n0.2",
+   "device": "Reverb",
+   "params": {
+    "Diffuse Level": {
+     "value": 0.2,
+     "element": "MixDiffuse",
+     "stored": "0.4230600095"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "reverb Diffuse-Level-d-6",
+   "run": "reverb",
+   "case": "Diffuse-Level-d-6",
+   "device": "Reverb",
+   "params": {
+    "Diffuse Level": {
+     "value": 0.240625,
+     "element": "MixDiffuse",
+     "stored": "0.502900324",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "reverb Diffuse-Level-d3",
+   "run": "reverb",
+   "case": "Diffuse-Level-d3",
+   "device": "Reverb",
+   "params": {
+    "Diffuse Level": {
+     "value": 0.703125,
+     "element": "MixDiffuse",
+     "stored": "1.411851597",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "roar Env-Gain-n0.1",
+   "run": "roar",
+   "case": "Env-Gain-n0.1",
+   "device": "Roar",
+   "params": {
+    "Env Gain": {
+     "value": 0.1,
+     "element": "ModulationSources_Envelope_Amount",
+     "stored": "7.20957451"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "roar Env-Gain-n0.5",
+   "run": "roar",
+   "case": "Env-Gain-n0.5",
+   "device": "Roar",
+   "params": {
+    "Env Gain": {
+     "value": 0.5,
+     "element": "ModulationSources_Envelope_Amount",
+     "stored": "32.04787255"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "roar Env-Gain-d30",
+   "run": "roar",
+   "case": "Env-Gain-d30",
+   "device": "Roar",
+   "params": {
+    "Env Gain": {
+     "value": 0.46875,
+     "element": "ModulationSources_Envelope_Amount",
+     "stored": "30.10738052",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "auto-shift LFO-Rate-n0.25",
+   "run": "auto-shift",
+   "case": "LFO-Rate-n0.25",
+   "device": "AutoShift",
+   "params": {
+    "LFO Rate": {
+     "value": 0.25,
+     "element": "Lfo_RateHz",
+     "stored": "0.0668740305"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "auto-shift LFO-Rate-d0.5",
+   "run": "auto-shift",
+   "case": "LFO-Rate-d0.5",
+   "device": "AutoShift",
+   "params": {
+    "LFO Rate": {
+     "value": 0.515625,
+     "element": "Lfo_RateHz",
+     "stored": "0.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "auto-shift LFO-Rate-d5",
+   "run": "auto-shift",
+   "case": "LFO-Rate-d5",
+   "device": "AutoShift",
+   "params": {
+    "LFO Rate": {
+     "value": 0.8175697811918244,
+     "element": "Lfo_RateHz",
+     "stored": "5",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "eq-eight 3-Frequency-A-n0.3",
+   "run": "eq-eight",
+   "case": "3-Frequency-A-n0.3",
+   "device": "Eq8",
+   "params": {
+    "3 Frequency A": {
+     "value": 0.3,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "100.6360972"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "eq-eight 3-Frequency-A-d440",
+   "run": "eq-eight",
+   "case": "3-Frequency-A-d440",
+   "device": "Eq8",
+   "params": {
+    "3 Frequency A": {
+     "value": 0.49168333995541663,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "440",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "eq-eight 3-Frequency-A-d8000",
+   "run": "eq-eight",
+   "case": "3-Frequency-A-d8000",
+   "device": "Eq8",
+   "params": {
+    "3 Frequency A": {
+     "value": 0.8685570256083307,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "8000",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "eq-eight 3-Gain-A--9",
+   "run": "eq-eight",
+   "case": "3-Gain-A--9",
+   "device": "Eq8",
+   "params": {
+    "3 Gain A": {
+     "value": -9.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "-9"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "eq-eight 3-Gain-A-n0.7",
+   "run": "eq-eight",
+   "case": "3-Gain-A-n0.7",
+   "device": "Eq8",
+   "params": {
+    "3 Gain A": {
+     "value": 6.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "6"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "eq-eight 3-Gain-A-d4.5",
+   "run": "eq-eight",
+   "case": "3-Gain-A-d4.5",
+   "device": "Eq8",
+   "params": {
+    "3 Gain A": {
+     "value": 4.5,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "4.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "external-audio-effect Input-Gain-n0.3",
+   "run": "external-audio-effect",
+   "case": "Input-Gain-n0.3",
+   "device": "ProxyAudioEffectDevice",
+   "params": {
+    "Input Gain": {
+     "value": 0.3,
+     "element": "InputHelper/Volume",
+     "stored": "0.4897788194"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "external-audio-effect Input-Gain-d-6",
+   "run": "external-audio-effect",
+   "case": "Input-Gain-d-6",
+   "device": "ProxyAudioEffectDevice",
+   "params": {
+    "Input Gain": {
+     "value": 0.3025,
+     "element": "InputHelper/Volume",
+     "stored": "0.5011872336",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "external-audio-effect Input-Gain-d12",
+   "run": "external-audio-effect",
+   "case": "Input-Gain-d12",
+   "device": "ProxyAudioEffectDevice",
+   "params": {
+    "Input Gain": {
+     "value": 0.7005208333333334,
+     "element": "InputHelper/Volume",
+     "stored": "3.981071706",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  }
+ ]
+}

@@ -1,0 +1,3638 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref AutoPan2",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal AutoPan2 On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal AutoPan2 Mode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal AutoPan2 Modulation_Amount",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.30000001192092896,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal AutoPan2 Modulation_Waveform",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal AutoPan2 Modulation_Invert",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal AutoPan2 Modulation_TimeMode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "cal AutoPan2 Modulation_Frequency",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.7000000476837158,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "cal AutoPan2 Modulation_Time",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.5035421848297119,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "name": "cal AutoPan2 Modulation_SyncedRate",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "name": "cal AutoPan2 Modulation_Sixteenth",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 17.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "name": "cal AutoPan2 Modulation_Phase",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.30000001192092896,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "name": "cal AutoPan2 Modulation_PhaseOffset",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "name": "cal AutoPan2 Modulation_StereoMode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "name": "cal AutoPan2 Modulation_Spin",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "name": "cal AutoPan2 PanningWaveformShape",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "name": "cal AutoPan2 TremoloWaveformShape",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "name": "cal AutoPan2 AttackTime",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.6167356967926025,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "name": "cal AutoPan2 DynamicFrequencyModulation",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "name": "cal AutoPan2 HarmonicMode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "name": "cal AutoPan2 VintageMode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Auto Pan-Tremolo",
+     "class_name": "AutoPan2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Amount",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Waveform",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Invert",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Time Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Frequency",
+       "value": 0.35995158553123474,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time",
+       "value": 0.1973896026611328,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Rate",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 21.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "16th",
+       "value": 16.0,
+       "min": 1.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Phase",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Spin",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Panning Shape",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tremolo Shape",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack Time",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dyn Mod",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonic",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vintage",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

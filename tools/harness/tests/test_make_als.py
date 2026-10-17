@@ -83,6 +83,74 @@ class Conversion(unittest.TestCase):
     def test_nothing_fits(self):
         self.assertIsNone(self.pick(False, "float", [(0.3, "12.0 Hz", 99.0), (0.6, "40.0 Hz", 3.0)]))
 
+    def test_a_conversion_needs_its_unit(self):
+        # a frequency in Hz is never a gain (10 ** (20000 / 20) also overflows) nor a time
+        self.assertEqual(self.pick(False, "float", [(0.5, "20.0 kHz", 20000.0), (0.3, "1.00 kHz", 1000.0)]), "base")
+        self.assertFalse(make_als.consistent("gain", [(0.5, "20.0 kHz", 20000.0)]))
+        self.assertFalse(make_als.consistent("ms", [(0.5, "500 Hz", 500.0)]))
+
+    def test_integer(self):
+        # Corpus Transpose: the API takes -19.2, but Live truncates a stored -19.2 to -19 on loading
+        # (the display at -19 as the dump's samples give it: -18.67 st, to half a semitone)
+        pairs = [(0.0, "0 st", 0.0), (-19.0, (-18.666666666666668, "st", 0.5), -19.2)]
+        self.assertEqual(self.pick(False, "float", pairs), "integer")
+        item = {"element": "Transpose", "kind": "float", "convert": "integer"}
+        dp = {"min": -48, "max": 48, "is_quantized": False}
+        self.assertEqual(make_als.stored_value(item, dp, {"value": -18.6}), (-19, "-19"))
+
+    def test_linear(self):
+        # Saturator Color Amt Low: API 0 .. 1 onto the element's -36 .. 36, displayed as -100 .. 100 %
+        pairs = [(0.5, "0.0 %", 0.0), (0.3, "-40 %", -14.4)]
+        self.assertEqual(make_als.choose_conversion(False, "float", pairs, [], (0, 1, -36.0, 36.0)),
+                         {"convert": "linear", "range": [0, 1, -36.0, 36.0]})
+        item = {"element": "BaseDrive", "kind": "float", "convert": "linear", "range": [0, 1, -36.0, 36.0]}
+        self.assertEqual(make_als.stored_value(item, {"min": 0, "max": 1}, {"norm": 0.25})[1], "-18")
+
+    def test_linear_wins_when_the_display_is_on_the_line(self):
+        # Saturator Drive shows -36 .. 36 dB to 0.1 dB; the stored value is exactly on the line
+        ends = (0, 1, -36.0, 36.0)
+        pairs = [(0.5, "0.0 dB", 0.0), (0.3, "-14.4 dB", -14.4)]
+        on_line = [(i / 64, f"{-36 + 72 * i / 64:.1f} dB") for i in range(65)]
+        self.assertEqual(make_als.choose_conversion(False, "float", pairs, [], ends, on_line)["convert"], "linear")
+        # a display that bends away from the line keeps the display conversion
+        bent = [(i / 64, f"{-36 + 72 * (i / 64) ** 2:.1f} dB") for i in range(65)]
+        self.assertEqual(make_als.choose_conversion(False, "float", pairs, [], ends, bent)["convert"], "base")
+
+
+class CoarseDisplay(unittest.TestCase):
+    def test_exponential_fit_under_a_coarse_display(self):
+        # Auto Shift's LFO Rate: 0.01 .. 20 Hz, shown to two places, so "0.07 Hz" at 0.25 is 0.067:
+        # Live read 0.256 back from a stored 0.07, 0.250 from the fit
+        samples = [(i / 64, f"{0.01 * 2000 ** (i / 64):.2f} Hz") for i in range(65)]
+        dp = {"min": 0, "max": 1, "value": 0.5146787, "display": "0.50 Hz", "samples": samples}
+        self.assertIsNotNone(make_als.exponential_fit(dp))
+        item = {"element": "Lfo_RateHz", "kind": "float", "convert": "base"}
+        self.assertAlmostEqual(float(make_als.stored_value(item, dp, {"norm": 0.25})[1]), 0.06687, places=5)
+        # a display that is not an exponential keeps interpolating between the samples
+        bent = [(i / 64, f"{0.01 + 19.99 * (i / 64) ** 2:.2f} Hz") for i in range(65)]
+        self.assertIsNone(make_als.exponential_fit({"samples": bent}))
+
+
+class ChangedValue(unittest.TestCase):
+    """What calibrate writes on an element's track, which Live must accept."""
+
+    def element(self, value, lo=None, hi=None):
+        e = als.ET.fromstring(f'<P><Manual Value="{value}"/><AutomationTarget Id="1"/></P>')
+        if lo is not None:
+            r = als.ET.SubElement(e, "MidiControllerRange")
+            als.ET.SubElement(r, "Min", Value=str(lo))
+            als.ET.SubElement(r, "Max", Value=str(hi))
+        return e
+
+    def test_enum_at_the_top_steps_down(self):
+        self.assertEqual(make_als.changed_value(self.element("3", 0, 3)), "2")
+        self.assertEqual(make_als.changed_value(self.element("0", 0, 3)), "1")
+
+    def test_no_controller_range(self):
+        # every such element in Live 12.4.6's effects is a bool
+        self.assertEqual(make_als.changed_value(self.element("true")), "false")
+        self.assertEqual(make_als.changed_value(self.element("2")), "3")
+
 
 @unittest.skipUnless(HAVE_DATA, "needs measurements/ from Live 12.4.6")
 class FromLiveSets(unittest.TestCase):
@@ -120,6 +188,37 @@ class FromLiveSets(unittest.TestCase):
         self.assertEqual(make_als.value_for_display(dps["Output"], -6.0), -6.0)
         # Live reads 0.200 for 0.1 ms; the dump only pins it to one sample step
         self.assertAlmostEqual(make_als.value_for_display(dps["Attack"], 0.0001), 0.2, delta=1 / 64)
+
+    def test_map_covers_every_effect(self):
+        """Every audio effect in the dump (not the probe, a Max device) is calibrated: each API
+        parameter has an element and a conversion, and gives back the stored values Live read
+        at calibration, exactly or within the display's rounding."""
+        amap = make_als.load_json(D["map"])["devices"]
+        devices_root = als.read_set(D["devices"])
+        classes = {d["class_name"] for d in self.dump["devices"]} - {"MxDeviceAudioEffect"}
+        self.assertEqual(set(amap), classes)
+        for cls in sorted(classes):
+            entry = amap[cls]
+            self.assertEqual(entry["unmatched_params"], [], cls)
+            dd = make_als.dump_device(self.dump, cls)
+            dps = make_als.dump_params(dd)
+            self.assertEqual(set(entry["params"]), set(dps), cls)
+            dev = make_als.source_device(devices_root, dd)
+            for name, item in entry["params"].items():
+                self.assertIsNotNone(item["convert"], f"{cls} {name}")
+                rng = als.controller_range(als.parameter(dev, item["element"]))
+                for v, s in item["points"]:
+                    want, text = make_als.stored_value(item, dps[name], {"value": v}, rng)
+                    if item["convert"] == "integer":
+                        self.assertEqual(want, round(v))
+                        continue
+                    tol = 1e-4 * abs(s) + 1e-6
+                    if item["convert"] in make_als.CONVERSIONS:
+                        # through the sampled display: to within its rounding there, or three figures
+                        n, _, half = make_als.display_at(dps[name], v)
+                        f = make_als.CONVERSIONS[item["convert"]]
+                        tol += max(abs(f(n + half) - f(n - half)), 0.002 * abs(s))
+                    self.assertAlmostEqual(als.parse_stored(text), s, delta=tol, msg=f"{cls} {name} at {v}")
 
     def test_display_specs_are_exact(self):
         dps = make_als.dump_params(make_als.dump_device(self.dump, "Compressor"))

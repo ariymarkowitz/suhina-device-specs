@@ -1,0 +1,432 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref Cabinet",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Cabinet",
+     "class_name": "Cabinet",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Cabinet Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Position",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dual Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal Cabinet On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Cabinet",
+     "class_name": "Cabinet",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Cabinet Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Position",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dual Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal Cabinet CabinetType",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Cabinet",
+     "class_name": "Cabinet",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Cabinet Type",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Position",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dual Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal Cabinet MicrophoneTypeSwitch",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Cabinet",
+     "class_name": "Cabinet",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Cabinet Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Type",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Position",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dual Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal Cabinet MicrophonePosition",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Cabinet",
+     "class_name": "Cabinet",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Cabinet Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Position",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dual Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal Cabinet DualMono",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Cabinet",
+     "class_name": "Cabinet",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Cabinet Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Position",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dual Mono",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal Cabinet DryWet",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Cabinet",
+     "class_name": "Cabinet",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Cabinet Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 4.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Microphone Position",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dual Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

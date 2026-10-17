@@ -1,0 +1,29 @@
+{
+ "device": "Auto Shift",
+ "cases": [
+  {
+   "id": "LFO-Rate-n0.25",
+   "params": {
+    "LFO Rate": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "LFO-Rate-d0.5",
+   "params": {
+    "LFO Rate": {
+     "display": 0.5
+    }
+   }
+  },
+  {
+   "id": "LFO-Rate-d5",
+   "params": {
+    "LFO Rate": {
+     "display": 5
+    }
+   }
+  }
+ ]
+}

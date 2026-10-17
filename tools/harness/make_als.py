@@ -19,9 +19,10 @@ often differs from the parameter's API name and in a different order (Compressor
   (`live_check.py read`).
 - `map` compares each track with its `ref`: the one API parameter that moved is the element's.
   From the stored and API values at the default and the changed value, and the dump's display
-  text, it picks how an API value becomes a stored value (the same number; the display's number
-  in Hz, s, ms, % / 100 or dB as linear gain; an index), and writes it to the map file
-  (`measurements/als-map-12.4.6.json`).
+  text, it picks how an API value becomes a stored value (the same number; the same number as
+  an integer; the display's number in Hz, s, ms, % / 100 or dB as linear gain; a straight line
+  from the API range onto the element's controller range; an index), and writes it to the map
+  file (`measurements/als-map-12.4.6.json`).
 
 `build` then writes any number of cases files (cases.py's format) into one set: a copy of the
 template track per case, named `<run> <case id>` (run = the cases file's name), holding a fresh
@@ -65,7 +66,12 @@ CONVERSIONS = {
     "percent": lambda n: n / 100.0,
     "gain": lambda n: 10.0 ** (n / 20.0),
 }
-PREFERENCE = ["same", "base", "ms", "percent", "gain"]
+# the display unit (in base units) each conversion needs; "base" takes any
+UNITS = {"ms": "s", "percent": "%", "gain": "dB"}
+# "integer": the stored value is the API value, but Live truncates a stored fraction on loading
+# (Corpus Transpose); "linear": the API range maps linearly onto the element's controller range
+# (Saturator's Color Amt Low, -36 .. 36)
+PREFERENCE = ["same", "base", "ms", "percent", "gain", "integer", "linear"]
 
 
 # ---------------------------------------------------------------- display text
@@ -207,8 +213,16 @@ def cmd_calibrate(a):
 
 # ---------------------------------------------------------------- map
 
-def consistent(conv, pairs):
-    """Whether a conversion fits every (api value, display text, stored value) pair."""
+def linear(ends, v):
+    """The stored value at API value v when the API range (amin, amax) maps linearly onto the
+    controller range (lo, hi); `ends` is (amin, amax, lo, hi)."""
+    amin, amax, lo, hi = ends
+    return lo + (v - amin) / (amax - amin) * (hi - lo)
+
+
+def consistent(conv, pairs, ends=None):
+    """Whether a conversion fits every (api value, display text, stored value) pair; `ends` is
+    (API min, API max, controller min, controller max), for "linear"."""
     used = 0
     for v, disp, s in pairs:
         if conv == "same":
@@ -216,14 +230,29 @@ def consistent(conv, pairs):
                 return False
             used += 1
             continue
+        if conv == "integer":
+            if not float(v).is_integer() or v != math.trunc(s):
+                return False
+            used += 1
+            continue
+        if conv == "linear":
+            if ends is None or ends[0] == ends[1] or abs(linear(ends, v) - s) > 1e-4 * max(1.0, abs(s)):
+                return False
+            used += 1
+            continue
         d = disp if isinstance(disp, tuple) else parse_display(disp)
         if d is None:
             return False
-        n, _, half = d
+        n, unit, half = d
         if math.isinf(n):
             continue
+        if UNITS.get(conv, unit) != unit:
+            return False
         f = CONVERSIONS[conv]
-        lo, hi = sorted((f(n - half), f(n + half)))
+        try:
+            lo, hi = sorted((f(n - half), f(n + half)))
+        except OverflowError:
+            return False
         slack = 1e-6 * abs(s) + 1e-9
         if not lo - slack <= s <= hi + slack:
             return False
@@ -293,19 +322,30 @@ def display_at(dp, v):
     return None
 
 
-def choose_conversion(qparam, kind, pairs, endpoints):
-    """The conversion for one parameter, or None when nothing fits."""
+def choose_conversion(qparam, kind, pairs, endpoints, ends=None, samples=()):
+    """The conversion for one parameter, or None when nothing fits. `endpoints` are pairs at
+    the ends of the range, which break ties; `ends` is (API min, API max, controller min,
+    controller max); `samples` the dump's [(API value, display text)]. A display conversion
+    whose display is a straight line onto the controller range at every sample becomes
+    "linear", which is exact where the display is rounded (Saturator Drive, Amp Bass)."""
     if qparam:
         if kind == "bool":
             ok = all((s != 0) == (v != 0) for v, _, s in pairs)
             return {"convert": "bool"} if ok else None
         offsets = {round(s - v, 6) for v, _, s in pairs}
         return {"convert": "offset", "offset": offsets.pop()} if len(offsets) == 1 else None
-    fits = [c for c in PREFERENCE if consistent(c, pairs)]
+    fits = [c for c in PREFERENCE if consistent(c, pairs, ends)]
     if not fits:
         return None
-    best = [c for c in fits if consistent(c, pairs + endpoints)] or fits
-    return {"convert": best[0]}
+    best = ([c for c in fits if consistent(c, pairs + endpoints, ends)] or fits)[0]
+    if best in CONVERSIONS and "linear" in fits:
+        line = [(v, d, linear(ends, v)) for v, d in ((v, parse_display(t)) for v, t in samples) if d]
+        if line and consistent(best, line):
+            best = "linear"
+    out = {"convert": best}
+    if best == "linear":
+        out["range"] = list(ends)
+    return out
 
 
 def cmd_map(a):
@@ -353,14 +393,17 @@ def cmd_map(a):
                       als.parse_stored(stored))
                      for x, stored in ((refv, row["default"]), (now, row["stored"]))]
             endpoints = []
+            ends = None
             rng = als.controller_range(param)
             if rng and dp and dp.get("samples"):
                 endpoints = [(dp["samples"][0][0], dp["samples"][0][1], rng[0]),
                              (dp["samples"][-1][0], dp["samples"][-1][1], rng[1])]
+            if rng:
+                ends = (refv[key]["min"], refv[key]["max"], rng[0], rng[1])
             quantized = bool(refv[key].get("is_quantized"))
             # "1" can be a float element's value: only a quantized parameter's element holds an index
             kind = "bool" if row["default"] in ("true", "false") else ("int" if quantized else "float")
-            conv = choose_conversion(quantized, kind, pairs, endpoints)
+            conv = choose_conversion(quantized, kind, pairs, endpoints, ends, (dp or {}).get("samples", []))
             item = {"element": row["element"], "kind": kind, "points": [[v, s] for v, _, s in pairs]}
             if conv is None:
                 item["convert"] = None
@@ -407,12 +450,37 @@ def api_value(dp, spec):
     return round(v) if dp.get("is_quantized") else v
 
 
+def exponential_fit(dp):
+    """(v0, n0, v1, n1) of the exponential through the first and last finite samples, when every
+    sample lies within its display rounding of it, else None. A display shown to two places
+    (Auto Shift's LFO Rate, 0.01 .. 20 Hz) is too coarse to interpolate between at its low end."""
+    pts = []
+    for sv, text in dp.get("samples", []):
+        d = parse_display(text)
+        if d is not None and math.isfinite(d[0]) and d[0] > 0 and d[1] != "dB":
+            pts.append((sv, d))
+    if len(pts) < 3 or pts[-1][0] == pts[0][0]:
+        return None
+    (v0, d0), (v1, d1) = pts[0], pts[-1]
+    for sv, d in pts:
+        n = d0[0] * (d1[0] / d0[0]) ** ((sv - v0) / (v1 - v0))
+        if abs(n - d[0]) > d[2] + 1e-9:
+            return None
+    return v0, d0[0], v1, d1[0]
+
+
 def interpolate_stored(dp, conv, rng, v):
     """The stored value at API value v: the display number interpolated between the dump's
-    samples (in log for a logarithmic taper, never for dB) and converted. A sample showing
-    -inf or inf stands for the end of the element's controller range."""
+    samples (in log for a logarithmic taper, never for dB), or the display the dump read at the
+    loaded value, and converted. A sample showing -inf or inf stands for the end of the element's
+    controller range."""
     f = CONVERSIONS[conv]
+    if abs(dp.get("value", math.nan) - v) < 1e-7:
+        d = parse_display(dp.get("display", ""))
+        if d is not None and math.isfinite(d[0]):
+            return f(d[0])
     pts = []
+    coarse = False
     for sv, text in dp.get("samples", []):
         d = parse_display(text)
         if d is None:
@@ -424,12 +492,16 @@ def interpolate_stored(dp, conv, rng, v):
             pts.append((sv, None, rng[0] if n < 0 else rng[1]))
         else:
             pts.append((sv, n, f(n)))
+            coarse = coarse or (n > 0 and d[2] > 0.01 * n)
     log = log_taper(dp)
+    fit = exponential_fit(dp) if log and coarse else None
     for (v0, n0, s0), (v1, n1, s1) in zip(pts, pts[1:]):
         if not v0 <= v <= v1:
             continue
         t = 0.0 if v1 == v0 else (v - v0) / (v1 - v0)
         if n0 is not None and n1 is not None:
+            if fit and n0 > 0 and n1 > 0:
+                return f(fit[1] * (fit[3] / fit[1]) ** ((v - fit[0]) / (fit[2] - fit[0])))
             if log and n0 > 0 and n1 > 0:
                 return f(math.exp(math.log(n0) + t * (math.log(n1) - math.log(n0))))
             return f(n0 + t * (n1 - n0))
@@ -481,6 +553,10 @@ def stored_value(item, dp, spec, rng=None):
         return v, als.format_stored(v + item["offset"], kind)
     if conv == "same":
         return v, als.format_stored(v, kind)
+    if conv == "integer":
+        return round(v), als.format_stored(round(v), kind)
+    if conv == "linear":
+        return v, als.format_stored(linear(item["range"], v), kind)
     if isinstance(spec, dict) and "display" in spec:
         n = float(spec["display"])
     else:

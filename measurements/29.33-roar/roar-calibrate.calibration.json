@@ -1,0 +1,647 @@
+{
+ "set": "roar-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref Roar",
+   "device": "Roar",
+   "element": null
+  },
+  {
+   "name": "cal Roar On",
+   "device": "Roar",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Input_InputGain",
+   "device": "Roar",
+   "element": "Input_InputGain",
+   "default": "1",
+   "stored": "0.3311310987"
+  },
+  {
+   "name": "cal Roar Input_ToneAmount",
+   "device": "Roar",
+   "element": "Input_ToneAmount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Input_ToneFrequency",
+   "device": "Roar",
+   "element": "Input_ToneFrequency",
+   "default": "180.000015",
+   "stored": "761.4614898"
+  },
+  {
+   "name": "cal Roar Input_ColorOn",
+   "device": "Roar",
+   "element": "Input_ColorOn",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Roar Input_Blend",
+   "device": "Roar",
+   "element": "Input_Blend",
+   "default": "0.5",
+   "stored": "0.3"
+  },
+  {
+   "name": "cal Roar Input_LowMidCrossover",
+   "device": "Roar",
+   "element": "Input_LowMidCrossover",
+   "default": "199.999985",
+   "stored": "954.0868932"
+  },
+  {
+   "name": "cal Roar Input_MidHighCrossover",
+   "device": "Roar",
+   "element": "Input_MidHighCrossover",
+   "default": "1999.99976",
+   "stored": "771.4410918"
+  },
+  {
+   "name": "cal Roar Stage1_On",
+   "device": "Roar",
+   "element": "Stage1_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage1_Shaper_On",
+   "device": "Roar",
+   "element": "Stage1_Shaper_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage1_Shaper_Type",
+   "device": "Roar",
+   "element": "Stage1_Shaper_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage1_Shaper_Amount",
+   "device": "Roar",
+   "element": "Stage1_Shaper_Amount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage1_Shaper_Bias",
+   "device": "Roar",
+   "element": "Stage1_Shaper_Bias",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage1_Shaper_Trim",
+   "device": "Roar",
+   "element": "Stage1_Shaper_Trim",
+   "default": "1",
+   "stored": "0.3311310987"
+  },
+  {
+   "name": "cal Roar Stage1_Filter_On",
+   "device": "Roar",
+   "element": "Stage1_Filter_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage1_Filter_Type",
+   "device": "Roar",
+   "element": "Stage1_Filter_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage1_Filter_Frequency",
+   "device": "Roar",
+   "element": "Stage1_Filter_Frequency",
+   "default": "15999.998",
+   "stored": "158.8656271"
+  },
+  {
+   "name": "cal Roar Stage1_Filter_Resonance",
+   "device": "Roar",
+   "element": "Stage1_Filter_Resonance",
+   "default": "0.1000000015",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal Roar Stage1_Filter_Morph",
+   "device": "Roar",
+   "element": "Stage1_Filter_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage1_Filter_PeakGain",
+   "device": "Roar",
+   "element": "Stage1_Filter_PeakGain",
+   "default": "1",
+   "stored": "2.862106956"
+  },
+  {
+   "name": "cal Roar Stage1_Filter_PreOn",
+   "device": "Roar",
+   "element": "Stage1_Filter_PreOn",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Roar Stage2_On",
+   "device": "Roar",
+   "element": "Stage2_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage2_Shaper_On",
+   "device": "Roar",
+   "element": "Stage2_Shaper_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage2_Shaper_Type",
+   "device": "Roar",
+   "element": "Stage2_Shaper_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage2_Shaper_Amount",
+   "device": "Roar",
+   "element": "Stage2_Shaper_Amount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage2_Shaper_Bias",
+   "device": "Roar",
+   "element": "Stage2_Shaper_Bias",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage2_Shaper_Trim",
+   "device": "Roar",
+   "element": "Stage2_Shaper_Trim",
+   "default": "1",
+   "stored": "0.3311310987"
+  },
+  {
+   "name": "cal Roar Stage2_Filter_On",
+   "device": "Roar",
+   "element": "Stage2_Filter_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage2_Filter_Type",
+   "device": "Roar",
+   "element": "Stage2_Filter_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage2_Filter_Frequency",
+   "device": "Roar",
+   "element": "Stage2_Filter_Frequency",
+   "default": "15999.998",
+   "stored": "158.8656271"
+  },
+  {
+   "name": "cal Roar Stage2_Filter_Resonance",
+   "device": "Roar",
+   "element": "Stage2_Filter_Resonance",
+   "default": "0.1000000015",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal Roar Stage2_Filter_Morph",
+   "device": "Roar",
+   "element": "Stage2_Filter_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage2_Filter_PeakGain",
+   "device": "Roar",
+   "element": "Stage2_Filter_PeakGain",
+   "default": "1",
+   "stored": "2.862106956"
+  },
+  {
+   "name": "cal Roar Stage2_Filter_PreOn",
+   "device": "Roar",
+   "element": "Stage2_Filter_PreOn",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Roar Stage3_On",
+   "device": "Roar",
+   "element": "Stage3_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage3_Shaper_On",
+   "device": "Roar",
+   "element": "Stage3_Shaper_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage3_Shaper_Type",
+   "device": "Roar",
+   "element": "Stage3_Shaper_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage3_Shaper_Amount",
+   "device": "Roar",
+   "element": "Stage3_Shaper_Amount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage3_Shaper_Bias",
+   "device": "Roar",
+   "element": "Stage3_Shaper_Bias",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage3_Shaper_Trim",
+   "device": "Roar",
+   "element": "Stage3_Shaper_Trim",
+   "default": "1",
+   "stored": "0.3311310987"
+  },
+  {
+   "name": "cal Roar Stage3_Filter_On",
+   "device": "Roar",
+   "element": "Stage3_Filter_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Stage3_Filter_Type",
+   "device": "Roar",
+   "element": "Stage3_Filter_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage3_Filter_Frequency",
+   "device": "Roar",
+   "element": "Stage3_Filter_Frequency",
+   "default": "15999.998",
+   "stored": "158.8656271"
+  },
+  {
+   "name": "cal Roar Stage3_Filter_Resonance",
+   "device": "Roar",
+   "element": "Stage3_Filter_Resonance",
+   "default": "0.1000000015",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal Roar Stage3_Filter_Morph",
+   "device": "Roar",
+   "element": "Stage3_Filter_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Stage3_Filter_PeakGain",
+   "device": "Roar",
+   "element": "Stage3_Filter_PeakGain",
+   "default": "1",
+   "stored": "2.862106956"
+  },
+  {
+   "name": "cal Roar Stage3_Filter_PreOn",
+   "device": "Roar",
+   "element": "Stage3_Filter_PreOn",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackAmount",
+   "device": "Roar",
+   "element": "Feedback_FeedbackAmount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackTimeMode",
+   "device": "Roar",
+   "element": "Feedback_FeedbackTimeMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackTime",
+   "device": "Roar",
+   "element": "Feedback_FeedbackTime",
+   "default": "0.01818181947",
+   "stored": "0.07749595047"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackSyncedRate",
+   "device": "Roar",
+   "element": "Feedback_FeedbackSyncedRate",
+   "default": "-4",
+   "stored": "-3"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackNote",
+   "device": "Roar",
+   "element": "Feedback_FeedbackNote",
+   "default": "33",
+   "stored": "62.4"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackFrequency",
+   "device": "Roar",
+   "element": "Feedback_FeedbackFrequency",
+   "default": "999.999878",
+   "stored": "292.3215105"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackBandwidth",
+   "device": "Roar",
+   "element": "Feedback_FeedbackBandwidth",
+   "default": "8",
+   "stored": "3.05"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackInvert",
+   "device": "Roar",
+   "element": "Feedback_FeedbackInvert",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Roar Feedback_FeedbackGateOn",
+   "device": "Roar",
+   "element": "Feedback_FeedbackGateOn",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo1_RateMode",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo1_RateMode",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo1_Rate",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo1_Rate",
+   "default": "1.00000012",
+   "stored": "0.07943282516"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo1_SyncedRate",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo1_SyncedRate",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo1_Sixteenth",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo1_Sixteenth",
+   "default": "8",
+   "stored": "9"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo1_Waveform",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo1_Waveform",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo1_Morph",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo1_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo1_SmoothingAmount",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo1_SmoothingAmount",
+   "default": "0.0500000082",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo2_RateMode",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo2_RateMode",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo2_Rate",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo2_Rate",
+   "default": "1.00000012",
+   "stored": "0.07943282516"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo2_SyncedRate",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo2_SyncedRate",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo2_Sixteenth",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo2_Sixteenth",
+   "default": "8",
+   "stored": "9"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo2_Waveform",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo2_Waveform",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo2_Morph",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo2_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar ModulationSources_Lfo2_SmoothingAmount",
+   "device": "Roar",
+   "element": "ModulationSources_Lfo2_SmoothingAmount",
+   "default": "0.0500000082",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal Roar ModulationSources_Envelope_Amount",
+   "device": "Roar",
+   "element": "ModulationSources_Envelope_Amount",
+   "default": "1",
+   "stored": "18.19701074"
+  },
+  {
+   "name": "cal Roar ModulationSources_Envelope_Attack",
+   "device": "Roar",
+   "element": "ModulationSources_Envelope_Attack",
+   "default": "0.001000000047",
+   "stored": "0.07000000105"
+  },
+  {
+   "name": "cal Roar ModulationSources_Envelope_HoldOn",
+   "device": "Roar",
+   "element": "ModulationSources_Envelope_HoldOn",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar ModulationSources_Envelope_Release",
+   "device": "Roar",
+   "element": "ModulationSources_Envelope_Release",
+   "default": "0.1000000238",
+   "stored": "0.5419820152"
+  },
+  {
+   "name": "cal Roar ModulationSources_Envelope_Threshold",
+   "device": "Roar",
+   "element": "ModulationSources_Envelope_Threshold",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar ModulationSources_Envelope_Frequency",
+   "device": "Roar",
+   "element": "ModulationSources_Envelope_Frequency",
+   "default": "999.999878",
+   "stored": "292.3215105"
+  },
+  {
+   "name": "cal Roar ModulationSources_Envelope_Width",
+   "device": "Roar",
+   "element": "ModulationSources_Envelope_Width",
+   "default": "8",
+   "stored": "3.05"
+  },
+  {
+   "name": "cal Roar ModulationSources_Noise_RateMode",
+   "device": "Roar",
+   "element": "ModulationSources_Noise_RateMode",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Roar ModulationSources_Noise_Rate",
+   "device": "Roar",
+   "element": "ModulationSources_Noise_Rate",
+   "default": "1.00000012",
+   "stored": "0.07943282516"
+  },
+  {
+   "name": "cal Roar ModulationSources_Noise_SyncedRate",
+   "device": "Roar",
+   "element": "ModulationSources_Noise_SyncedRate",
+   "default": "-2",
+   "stored": "-1"
+  },
+  {
+   "name": "cal Roar ModulationSources_Noise_Sixteenth",
+   "device": "Roar",
+   "element": "ModulationSources_Noise_Sixteenth",
+   "default": "4",
+   "stored": "5"
+  },
+  {
+   "name": "cal Roar ModulationSources_Noise_Type",
+   "device": "Roar",
+   "element": "ModulationSources_Noise_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Roar ModulationSources_Noise_SmoothingAmount",
+   "device": "Roar",
+   "element": "ModulationSources_Noise_SmoothingAmount",
+   "default": "0.0500000082",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal Roar GlobalModulationAmount",
+   "device": "Roar",
+   "element": "GlobalModulationAmount",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Roar Output_CompressionAmount",
+   "device": "Roar",
+   "element": "Output_CompressionAmount",
+   "default": "0.25",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal Roar Output_CompressorHighpassFilterOn",
+   "device": "Roar",
+   "element": "Output_CompressorHighpassFilterOn",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Roar Output_OutputGain",
+   "device": "Roar",
+   "element": "Output_OutputGain",
+   "default": "0.9999998212",
+   "stored": "0.03162277018"
+  },
+  {
+   "name": "cal Roar Output_DryWet",
+   "device": "Roar",
+   "element": "Output_DryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal Roar AudioSideChain/OnOff",
+   "device": "Roar",
+   "element": "AudioSideChain/OnOff",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Roar AudioSideChain/RoutedInput/Volume",
+   "device": "Roar",
+   "element": "AudioSideChain/RoutedInput/Volume",
+   "default": "1",
+   "stored": "0.008128305197"
+  },
+  {
+   "name": "cal Roar AudioSideChain/DryWet",
+   "device": "Roar",
+   "element": "AudioSideChain/DryWet",
+   "default": "1",
+   "stored": "0"
+  }
+ ]
+}

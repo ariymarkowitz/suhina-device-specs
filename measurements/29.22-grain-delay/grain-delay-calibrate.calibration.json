@@ -1,0 +1,87 @@
+{
+ "set": "grain-delay-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref GrainDelay",
+   "device": "GrainDelay",
+   "element": null
+  },
+  {
+   "name": "cal GrainDelay On",
+   "device": "GrainDelay",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal GrainDelay Spray",
+   "device": "GrainDelay",
+   "element": "Spray",
+   "default": "0",
+   "stored": "350"
+  },
+  {
+   "name": "cal GrainDelay Freq",
+   "device": "GrainDelay",
+   "element": "Freq",
+   "default": "60",
+   "stored": "4.49601113"
+  },
+  {
+   "name": "cal GrainDelay Pitch",
+   "device": "GrainDelay",
+   "element": "Pitch",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal GrainDelay RandomPitch",
+   "device": "GrainDelay",
+   "element": "RandomPitch",
+   "default": "0",
+   "stored": "112.8399979"
+  },
+  {
+   "name": "cal GrainDelay Feedback",
+   "device": "GrainDelay",
+   "element": "Feedback",
+   "default": "0",
+   "stored": "0.6649999917"
+  },
+  {
+   "name": "cal GrainDelay NewDryWet",
+   "device": "GrainDelay",
+   "element": "NewDryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal GrainDelay SyncMode",
+   "device": "GrainDelay",
+   "element": "SyncMode",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal GrainDelay BeatDelayEnum",
+   "device": "GrainDelay",
+   "element": "BeatDelayEnum",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal GrainDelay BarDelayOffset",
+   "device": "GrainDelay",
+   "element": "BarDelayOffset",
+   "default": "0",
+   "stored": "-0.1332000017"
+  },
+  {
+   "name": "cal GrainDelay MsDelay",
+   "device": "GrainDelay",
+   "element": "MsDelay",
+   "default": "40",
+   "stored": "4.28709385"
+  }
+ ]
+}

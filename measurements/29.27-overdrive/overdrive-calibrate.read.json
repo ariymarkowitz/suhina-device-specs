@@ -1,0 +1,557 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref Overdrive",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5372435450553894,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.5,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal Overdrive On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5372435450553894,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.5,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal Overdrive MidFreq",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.30000001192092896,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.5,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal Overdrive BandWidth",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5372435450553894,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 3.049999952316284,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal Overdrive Drive",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5372435450553894,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.5,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 30.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal Overdrive DryWet",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5372435450553894,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.5,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 30.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal Overdrive Tone",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5372435450553894,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.5,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 30.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "cal Overdrive PreserveDynamics",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Overdrive",
+     "class_name": "Overdrive",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Filter Freq",
+       "value": 0.5372435450553894,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Filter Width",
+       "value": 6.5,
+       "min": 0.5,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 50.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Preserve Dynamics",
+       "value": 0.30000001192092896,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

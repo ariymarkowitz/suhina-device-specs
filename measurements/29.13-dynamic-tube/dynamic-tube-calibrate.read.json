@@ -1,0 +1,1028 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref Tube",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal Tube On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal Tube DryWet",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal Tube PreDrive",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 1.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal Tube PostDrive",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 1.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal Tube Bias",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal Tube AutoBias",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 1.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "cal Tube AutoBiasAttack",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "cal Tube AutoBiasRelease",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "name": "cal Tube Tone",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 1.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "name": "cal Tube Type",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Dynamic Tube",
+     "class_name": "Tube",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Bias",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Envelope",
+       "value": 0.0,
+       "min": -3.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.2686217725276947,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.4861535429954529,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tone",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Tube Type",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

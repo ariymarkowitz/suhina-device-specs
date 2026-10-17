@@ -1,0 +1,38 @@
+{
+ "set": "external-audio-effect-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref ProxyAudioEffectDevice",
+   "device": "ProxyAudioEffectDevice",
+   "element": null
+  },
+  {
+   "name": "cal ProxyAudioEffectDevice On",
+   "device": "ProxyAudioEffectDevice",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal ProxyAudioEffectDevice OutputHelper/Volume",
+   "device": "ProxyAudioEffectDevice",
+   "element": "OutputHelper/Volume",
+   "default": "1",
+   "stored": "0.008128305197"
+  },
+  {
+   "name": "cal ProxyAudioEffectDevice InputHelper/Volume",
+   "device": "ProxyAudioEffectDevice",
+   "element": "InputHelper/Volume",
+   "default": "1",
+   "stored": "0.008128305197"
+  },
+  {
+   "name": "cal ProxyAudioEffectDevice DryWet",
+   "device": "ProxyAudioEffectDevice",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  }
+ ]
+}

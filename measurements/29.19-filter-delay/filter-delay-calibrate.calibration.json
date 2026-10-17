@@ -1,0 +1,255 @@
+{
+ "set": "filter-delay-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref FilterDelay",
+   "device": "FilterDelay",
+   "element": null
+  },
+  {
+   "name": "cal FilterDelay On",
+   "device": "FilterDelay",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay On1",
+   "device": "FilterDelay",
+   "element": "On1",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay FilterOn1",
+   "device": "FilterDelay",
+   "element": "FilterOn1",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay MidFreq1",
+   "device": "FilterDelay",
+   "element": "MidFreq1",
+   "default": "704",
+   "stored": "3078.801964"
+  },
+  {
+   "name": "cal FilterDelay BandWidth1",
+   "device": "FilterDelay",
+   "element": "BandWidth1",
+   "default": "4",
+   "stored": "6.45"
+  },
+  {
+   "name": "cal FilterDelay DelayTimeSwitch1",
+   "device": "FilterDelay",
+   "element": "DelayTimeSwitch1",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay BeatDelayEnum1",
+   "device": "FilterDelay",
+   "element": "BeatDelayEnum1",
+   "default": "2",
+   "stored": "3"
+  },
+  {
+   "name": "cal FilterDelay BeatDelayOffset1",
+   "device": "FilterDelay",
+   "element": "BeatDelayOffset1",
+   "default": "0",
+   "stored": "-0.1332000017"
+  },
+  {
+   "name": "cal FilterDelay DelayTime1",
+   "device": "FilterDelay",
+   "element": "DelayTime1",
+   "default": "10",
+   "stored": "125.8044032"
+  },
+  {
+   "name": "cal FilterDelay Feedback1",
+   "device": "FilterDelay",
+   "element": "Feedback1",
+   "default": "0.2099999934",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal FilterDelay Pan1",
+   "device": "FilterDelay",
+   "element": "Pan1",
+   "default": "-1",
+   "stored": "0"
+  },
+  {
+   "name": "cal FilterDelay Volume1",
+   "device": "FilterDelay",
+   "element": "Volume1",
+   "default": "1.58489323",
+   "stored": "0.004365158279"
+  },
+  {
+   "name": "cal FilterDelay On2",
+   "device": "FilterDelay",
+   "element": "On2",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay FilterOn2",
+   "device": "FilterDelay",
+   "element": "FilterOn2",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay MidFreq2",
+   "device": "FilterDelay",
+   "element": "MidFreq2",
+   "default": "449",
+   "stored": "3078.801964"
+  },
+  {
+   "name": "cal FilterDelay BandWidth2",
+   "device": "FilterDelay",
+   "element": "BandWidth2",
+   "default": "4",
+   "stored": "6.45"
+  },
+  {
+   "name": "cal FilterDelay DelayTimeSwitch2",
+   "device": "FilterDelay",
+   "element": "DelayTimeSwitch2",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay BeatDelayEnum2",
+   "device": "FilterDelay",
+   "element": "BeatDelayEnum2",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal FilterDelay BeatDelayOffset2",
+   "device": "FilterDelay",
+   "element": "BeatDelayOffset2",
+   "default": "0",
+   "stored": "-0.1332000017"
+  },
+  {
+   "name": "cal FilterDelay DelayTime2",
+   "device": "FilterDelay",
+   "element": "DelayTime2",
+   "default": "10",
+   "stored": "125.8044032"
+  },
+  {
+   "name": "cal FilterDelay Feedback2",
+   "device": "FilterDelay",
+   "element": "Feedback2",
+   "default": "0.4600000083",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal FilterDelay Pan2",
+   "device": "FilterDelay",
+   "element": "Pan2",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal FilterDelay Volume2",
+   "device": "FilterDelay",
+   "element": "Volume2",
+   "default": "0.630957365",
+   "stored": "0.004365158279"
+  },
+  {
+   "name": "cal FilterDelay On3",
+   "device": "FilterDelay",
+   "element": "On3",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay FilterOn3",
+   "device": "FilterDelay",
+   "element": "FilterOn3",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay MidFreq3",
+   "device": "FilterDelay",
+   "element": "MidFreq3",
+   "default": "918",
+   "stored": "3078.801964"
+  },
+  {
+   "name": "cal FilterDelay BandWidth3",
+   "device": "FilterDelay",
+   "element": "BandWidth3",
+   "default": "4",
+   "stored": "6.45"
+  },
+  {
+   "name": "cal FilterDelay DelayTimeSwitch3",
+   "device": "FilterDelay",
+   "element": "DelayTimeSwitch3",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal FilterDelay BeatDelayEnum3",
+   "device": "FilterDelay",
+   "element": "BeatDelayEnum3",
+   "default": "4",
+   "stored": "5"
+  },
+  {
+   "name": "cal FilterDelay BeatDelayOffset3",
+   "device": "FilterDelay",
+   "element": "BeatDelayOffset3",
+   "default": "0",
+   "stored": "-0.1332000017"
+  },
+  {
+   "name": "cal FilterDelay DelayTime3",
+   "device": "FilterDelay",
+   "element": "DelayTime3",
+   "default": "10",
+   "stored": "125.8044032"
+  },
+  {
+   "name": "cal FilterDelay Feedback3",
+   "device": "FilterDelay",
+   "element": "Feedback3",
+   "default": "0.2399999946",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal FilterDelay Pan3",
+   "device": "FilterDelay",
+   "element": "Pan3",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal FilterDelay Volume3",
+   "device": "FilterDelay",
+   "element": "Volume3",
+   "default": "1.99526238",
+   "stored": "0.004365158279"
+  },
+  {
+   "name": "cal FilterDelay DryVolume",
+   "device": "FilterDelay",
+   "element": "DryVolume",
+   "default": "0.5623413324",
+   "stored": "0.003548133822"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "device": "Reverb",
+ "cases": [
+  {
+   "id": "Diffuse-Level-n0.2",
+   "params": {
+    "Diffuse Level": {
+     "norm": 0.2
+    }
+   }
+  },
+  {
+   "id": "Diffuse-Level-d-6",
+   "params": {
+    "Diffuse Level": {
+     "display": -6
+    }
+   }
+  },
+  {
+   "id": "Diffuse-Level-d3",
+   "params": {
+    "Diffuse Level": {
+     "display": 3
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "set": "glue-compressor-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref GlueCompressor",
+   "device": "GlueCompressor",
+   "element": null
+  },
+  {
+   "name": "cal GlueCompressor On",
+   "device": "GlueCompressor",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal GlueCompressor Threshold",
+   "device": "GlueCompressor",
+   "element": "Threshold",
+   "default": "0",
+   "stored": "-1"
+  },
+  {
+   "name": "cal GlueCompressor Range",
+   "device": "GlueCompressor",
+   "element": "Range",
+   "default": "70",
+   "stored": "21"
+  },
+  {
+   "name": "cal GlueCompressor Makeup",
+   "device": "GlueCompressor",
+   "element": "Makeup",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal GlueCompressor Attack",
+   "device": "GlueCompressor",
+   "element": "Attack",
+   "default": "3",
+   "stored": "4"
+  },
+  {
+   "name": "cal GlueCompressor Ratio",
+   "device": "GlueCompressor",
+   "element": "Ratio",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal GlueCompressor Release",
+   "device": "GlueCompressor",
+   "element": "Release",
+   "default": "3",
+   "stored": "4"
+  },
+  {
+   "name": "cal GlueCompressor DryWet",
+   "device": "GlueCompressor",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal GlueCompressor PeakClipIn",
+   "device": "GlueCompressor",
+   "element": "PeakClipIn",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal GlueCompressor SideChain/OnOff",
+   "device": "GlueCompressor",
+   "element": "SideChain/OnOff",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal GlueCompressor SideChain/RoutedInput/Volume",
+   "device": "GlueCompressor",
+   "element": "SideChain/RoutedInput/Volume",
+   "default": "1",
+   "stored": "0.008128305197"
+  },
+  {
+   "name": "cal GlueCompressor SideChain/DryWet",
+   "device": "GlueCompressor",
+   "element": "SideChain/DryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal GlueCompressor SideChainEq/On",
+   "device": "GlueCompressor",
+   "element": "SideChainEq/On",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal GlueCompressor SideChainEq/Mode",
+   "device": "GlueCompressor",
+   "element": "SideChainEq/Mode",
+   "default": "5",
+   "stored": "4"
+  },
+  {
+   "name": "cal GlueCompressor SideChainEq/Freq",
+   "device": "GlueCompressor",
+   "element": "SideChainEq/Freq",
+   "default": "200",
+   "stored": "2324.878481"
+  },
+  {
+   "name": "cal GlueCompressor SideChainEq/Q",
+   "device": "GlueCompressor",
+   "element": "SideChainEq/Q",
+   "default": "0.7071067691",
+   "stored": "2.853821951"
+  },
+  {
+   "name": "cal GlueCompressor SideChainEq/Gain",
+   "device": "GlueCompressor",
+   "element": "SideChainEq/Gain",
+   "default": "0",
+   "stored": "1"
+  }
+ ]
+}

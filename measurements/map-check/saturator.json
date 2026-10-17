@@ -1,0 +1,77 @@
+{
+ "device": "Saturator",
+ "cases": [
+  {
+   "id": "Drive-n0.2",
+   "params": {
+    "Drive": {
+     "norm": 0.2
+    }
+   }
+  },
+  {
+   "id": "Drive-n0.75",
+   "params": {
+    "Drive": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "Drive-d-10",
+   "params": {
+    "Drive": {
+     "display": -10
+    }
+   }
+  },
+  {
+   "id": "Color-Amt-Low-n0.2",
+   "params": {
+    "Color Amt Low": {
+     "norm": 0.2
+    }
+   }
+  },
+  {
+   "id": "Color-Amt-Low-n0.75",
+   "params": {
+    "Color Amt Low": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "Color-Amt-Low-d50",
+   "params": {
+    "Color Amt Low": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "Color-Amt-Hi-n0.2",
+   "params": {
+    "Color Amt Hi": {
+     "norm": 0.2
+    }
+   }
+  },
+  {
+   "id": "Color-Amt-Hi-n0.75",
+   "params": {
+    "Color Amt Hi": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "Color-Amt-Hi-d50",
+   "params": {
+    "Color Amt Hi": {
+     "display": 50
+    }
+   }
+  }
+ ]
+}

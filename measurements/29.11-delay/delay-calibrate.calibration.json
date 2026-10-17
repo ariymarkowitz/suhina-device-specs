@@ -1,0 +1,227 @@
+{
+ "set": "delay-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref Delay",
+   "device": "Delay",
+   "element": null
+  },
+  {
+   "name": "cal Delay On",
+   "device": "Delay",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Delay DelayLine_SmoothingMode",
+   "device": "Delay",
+   "element": "DelayLine_SmoothingMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Delay DelayLine_Link",
+   "device": "Delay",
+   "element": "DelayLine_Link",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Delay DelayLine_PingPong",
+   "device": "Delay",
+   "element": "DelayLine_PingPong",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Delay DelayLine_SyncL",
+   "device": "Delay",
+   "element": "DelayLine_SyncL",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Delay DelayLine_SyncR",
+   "device": "Delay",
+   "element": "DelayLine_SyncR",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Delay DelayLine_TimeL",
+   "device": "Delay",
+   "element": "DelayLine_TimeL",
+   "default": "0.3749999404",
+   "stored": "0.01287333336"
+  },
+  {
+   "name": "cal Delay DelayLine_TimeR",
+   "device": "Delay",
+   "element": "DelayLine_TimeR",
+   "default": "0.3749999404",
+   "stored": "0.01287333336"
+  },
+  {
+   "name": "cal Delay DelayLine_SimpleDelayTimeL",
+   "device": "Delay",
+   "element": "DelayLine_SimpleDelayTimeL",
+   "default": "100",
+   "stored": "5.535238986"
+  },
+  {
+   "name": "cal Delay DelayLine_SimpleDelayTimeR",
+   "device": "Delay",
+   "element": "DelayLine_SimpleDelayTimeR",
+   "default": "100",
+   "stored": "5.535238986"
+  },
+  {
+   "name": "cal Delay DelayLine_PingPongDelayTimeL",
+   "device": "Delay",
+   "element": "DelayLine_PingPongDelayTimeL",
+   "default": "1",
+   "stored": "125.8044032"
+  },
+  {
+   "name": "cal Delay DelayLine_PingPongDelayTimeR",
+   "device": "Delay",
+   "element": "DelayLine_PingPongDelayTimeR",
+   "default": "1",
+   "stored": "125.8044032"
+  },
+  {
+   "name": "cal Delay DelayLine_SyncedSixteenthL",
+   "device": "Delay",
+   "element": "DelayLine_SyncedSixteenthL",
+   "default": "2",
+   "stored": "3"
+  },
+  {
+   "name": "cal Delay DelayLine_SyncedSixteenthR",
+   "device": "Delay",
+   "element": "DelayLine_SyncedSixteenthR",
+   "default": "3",
+   "stored": "4"
+  },
+  {
+   "name": "cal Delay DelayLine_OffsetL",
+   "device": "Delay",
+   "element": "DelayLine_OffsetL",
+   "default": "0",
+   "stored": "-0.1332000017"
+  },
+  {
+   "name": "cal Delay DelayLine_OffsetR",
+   "device": "Delay",
+   "element": "DelayLine_OffsetR",
+   "default": "0",
+   "stored": "-0.1332000017"
+  },
+  {
+   "name": "cal Delay Feedback",
+   "device": "Delay",
+   "element": "Feedback",
+   "default": "0.5",
+   "stored": "0.2849999964"
+  },
+  {
+   "name": "cal Delay Freeze",
+   "device": "Delay",
+   "element": "Freeze",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Delay Filter_On",
+   "device": "Delay",
+   "element": "Filter_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Delay Filter_Frequency",
+   "device": "Delay",
+   "element": "Filter_Frequency",
+   "default": "999.999878",
+   "stored": "292.3215105"
+  },
+  {
+   "name": "cal Delay Filter_Bandwidth",
+   "device": "Delay",
+   "element": "Filter_Bandwidth",
+   "default": "8",
+   "stored": "3.05"
+  },
+  {
+   "name": "cal Delay Modulation_TimeMode",
+   "device": "Delay",
+   "element": "Modulation_TimeMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Delay Modulation_Frequency",
+   "device": "Delay",
+   "element": "Modulation_Frequency",
+   "default": "0.5",
+   "stored": "3.32232393"
+  },
+  {
+   "name": "cal Delay Modulation_Time",
+   "device": "Delay",
+   "element": "Modulation_Time",
+   "default": "1.00000024",
+   "stored": "20.45130374"
+  },
+  {
+   "name": "cal Delay Modulation_SyncedRate",
+   "device": "Delay",
+   "element": "Modulation_SyncedRate",
+   "default": "4",
+   "stored": "5"
+  },
+  {
+   "name": "cal Delay Modulation_Sixteenth",
+   "device": "Delay",
+   "element": "Modulation_Sixteenth",
+   "default": "16",
+   "stored": "17"
+  },
+  {
+   "name": "cal Delay Modulation_Waveform",
+   "device": "Delay",
+   "element": "Modulation_Waveform",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Delay Modulation_Morph",
+   "device": "Delay",
+   "element": "Modulation_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Delay Modulation_AmountTime",
+   "device": "Delay",
+   "element": "Modulation_AmountTime",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Delay Modulation_AmountFilter",
+   "device": "Delay",
+   "element": "Modulation_AmountFilter",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Delay DryWet",
+   "device": "Delay",
+   "element": "DryWet",
+   "default": "0.5",
+   "stored": "0.3"
+  }
+ ]
+}

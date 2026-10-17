@@ -1,0 +1,80 @@
+{
+ "set": "redux-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref Redux2",
+   "device": "Redux2",
+   "element": null
+  },
+  {
+   "name": "cal Redux2 On",
+   "device": "Redux2",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Redux2 SampleRate",
+   "device": "Redux2",
+   "element": "SampleRate",
+   "default": "40000",
+   "stored": "195.5865537"
+  },
+  {
+   "name": "cal Redux2 Jitter",
+   "device": "Redux2",
+   "element": "Jitter",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Redux2 BitDepth",
+   "device": "Redux2",
+   "element": "BitDepth",
+   "default": "16",
+   "stored": "15"
+  },
+  {
+   "name": "cal Redux2 QuantizerShape",
+   "device": "Redux2",
+   "element": "QuantizerShape",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Redux2 QuantizerDcShift",
+   "device": "Redux2",
+   "element": "QuantizerDcShift",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Redux2 EnablePreFilter",
+   "device": "Redux2",
+   "element": "EnablePreFilter",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Redux2 EnablePostFilter",
+   "device": "Redux2",
+   "element": "EnablePostFilter",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Redux2 PostFilterValue",
+   "device": "Redux2",
+   "element": "PostFilterValue",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Redux2 DryWet",
+   "device": "Redux2",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  }
+ ]
+}

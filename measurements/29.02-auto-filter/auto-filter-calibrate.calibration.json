@@ -1,0 +1,325 @@
+{
+ "set": "auto-filter-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref AutoFilter2",
+   "device": "AutoFilter2",
+   "element": null
+  },
+  {
+   "name": "cal AutoFilter2 On",
+   "device": "AutoFilter2",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_Frequency",
+   "device": "AutoFilter2",
+   "element": "Filter_Frequency",
+   "default": "9999.99805",
+   "stored": "158.8656271"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_Resonance",
+   "device": "AutoFilter2",
+   "element": "Filter_Resonance",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_Morph",
+   "device": "AutoFilter2",
+   "element": "Filter_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_Type",
+   "device": "AutoFilter2",
+   "element": "Filter_Type",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_Slope",
+   "device": "AutoFilter2",
+   "element": "Filter_Slope",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_MorphSlope",
+   "device": "AutoFilter2",
+   "element": "Filter_MorphSlope",
+   "default": "2",
+   "stored": "3"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_Circuit",
+   "device": "AutoFilter2",
+   "element": "Filter_Circuit",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_Drive",
+   "device": "AutoFilter2",
+   "element": "Filter_Drive",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_DjControl",
+   "device": "AutoFilter2",
+   "element": "Filter_DjControl",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_VowelPitch",
+   "device": "AutoFilter2",
+   "element": "Filter_VowelPitch",
+   "default": "0",
+   "stored": "-14.4"
+  },
+  {
+   "name": "cal AutoFilter2 Filter_VowelFormant",
+   "device": "AutoFilter2",
+   "element": "Filter_VowelFormant",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Amount",
+   "device": "AutoFilter2",
+   "element": "Lfo_Amount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Waveform",
+   "device": "AutoFilter2",
+   "element": "Lfo_Waveform",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_TimeMode",
+   "device": "AutoFilter2",
+   "element": "Lfo_TimeMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Frequency",
+   "device": "AutoFilter2",
+   "element": "Lfo_Frequency",
+   "default": "1",
+   "stored": "8.804525082"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Time",
+   "device": "AutoFilter2",
+   "element": "Lfo_Time",
+   "default": "1.00000024",
+   "stored": "20.45130374"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_SyncedRate",
+   "device": "AutoFilter2",
+   "element": "Lfo_SyncedRate",
+   "default": "4",
+   "stored": "5"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Sixteenth",
+   "device": "AutoFilter2",
+   "element": "Lfo_Sixteenth",
+   "default": "16",
+   "stored": "17"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Phase",
+   "device": "AutoFilter2",
+   "element": "Lfo_Phase",
+   "default": "4",
+   "stored": "252"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_PhaseOffset",
+   "device": "AutoFilter2",
+   "element": "Lfo_PhaseOffset",
+   "default": "0",
+   "stored": "252"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_StereoMode",
+   "device": "AutoFilter2",
+   "element": "Lfo_StereoMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Spin",
+   "device": "AutoFilter2",
+   "element": "Lfo_Spin",
+   "default": "0",
+   "stored": "0.35"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Morph",
+   "device": "AutoFilter2",
+   "element": "Lfo_Morph",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Smoothing",
+   "device": "AutoFilter2",
+   "element": "Lfo_Smoothing",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_QuantizationMode",
+   "device": "AutoFilter2",
+   "element": "Lfo_QuantizationMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_Steps",
+   "device": "AutoFilter2",
+   "element": "Lfo_Steps",
+   "default": "8",
+   "stored": "9"
+  },
+  {
+   "name": "cal AutoFilter2 Lfo_SahRate",
+   "device": "AutoFilter2",
+   "element": "Lfo_SahRate",
+   "default": "-4",
+   "stored": "-3"
+  },
+  {
+   "name": "cal AutoFilter2 Envelope_Amount",
+   "device": "AutoFilter2",
+   "element": "Envelope_Amount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 Envelope_Attack",
+   "device": "AutoFilter2",
+   "element": "Envelope_Attack",
+   "default": "0.001000000047",
+   "stored": "0.07000000105"
+  },
+  {
+   "name": "cal AutoFilter2 Envelope_HoldOn",
+   "device": "AutoFilter2",
+   "element": "Envelope_HoldOn",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal AutoFilter2 Envelope_Release",
+   "device": "AutoFilter2",
+   "element": "Envelope_Release",
+   "default": "0.25",
+   "stored": "2.1"
+  },
+  {
+   "name": "cal AutoFilter2 Envelope_SahOn",
+   "device": "AutoFilter2",
+   "element": "Envelope_SahOn",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal AutoFilter2 Envelope_SahRate",
+   "device": "AutoFilter2",
+   "element": "Envelope_SahRate",
+   "default": "-4",
+   "stored": "-3"
+  },
+  {
+   "name": "cal AutoFilter2 Output",
+   "device": "AutoFilter2",
+   "element": "Output",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal AutoFilter2 SoftClipOn",
+   "device": "AutoFilter2",
+   "element": "SoftClipOn",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal AutoFilter2 DryWet",
+   "device": "AutoFilter2",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal AutoFilter2 SideChainEq_On",
+   "device": "AutoFilter2",
+   "element": "SideChainEq_On",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal AutoFilter2 SideChainEq_Mode",
+   "device": "AutoFilter2",
+   "element": "SideChainEq_Mode",
+   "default": "5",
+   "stored": "4"
+  },
+  {
+   "name": "cal AutoFilter2 SideChainEq_Freq",
+   "device": "AutoFilter2",
+   "element": "SideChainEq_Freq",
+   "default": "199.999985",
+   "stored": "2324.878501"
+  },
+  {
+   "name": "cal AutoFilter2 SideChainEq_Q",
+   "device": "AutoFilter2",
+   "element": "SideChainEq_Q",
+   "default": "0.7071067095",
+   "stored": "2.853821635"
+  },
+  {
+   "name": "cal AutoFilter2 SideChainEq_Gain",
+   "device": "AutoFilter2",
+   "element": "SideChainEq_Gain",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoFilter2 SideChain/OnOff",
+   "device": "AutoFilter2",
+   "element": "SideChain/OnOff",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal AutoFilter2 SideChain/RoutedInput/Volume",
+   "device": "AutoFilter2",
+   "element": "SideChain/RoutedInput/Volume",
+   "default": "1",
+   "stored": "0.008128305197"
+  },
+  {
+   "name": "cal AutoFilter2 SideChain/DryWet",
+   "device": "AutoFilter2",
+   "element": "SideChain/DryWet",
+   "default": "1",
+   "stored": "0"
+  }
+ ]
+}

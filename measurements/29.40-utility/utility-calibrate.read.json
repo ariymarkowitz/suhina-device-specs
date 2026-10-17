@@ -1,0 +1,1640 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref StereoGain",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal StereoGain On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal StereoGain PhaseInvertL",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal StereoGain PhaseInvertR",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal StereoGain ChannelMode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 2.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal StereoGain StereoWidth",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.4142135381698608,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal StereoGain MidSideBalance",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "cal StereoGain Mono",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "cal StereoGain BassMono",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "name": "cal StereoGain BassMonoFrequency",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.8633228540420532,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "name": "cal StereoGain Balance",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 1.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "name": "cal StereoGain Gain",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.9114845991134644,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "name": "cal StereoGain LegacyGain",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "name": "cal StereoGain Mute",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "name": "cal StereoGain DcFilter",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Utility",
+     "class_name": "StereoGain",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Left Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Right Inv",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Channel Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Stereo Width",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Mono",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Bass Freq",
+       "value": 0.3802112340927124,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Balance",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mute",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "DC Filter",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

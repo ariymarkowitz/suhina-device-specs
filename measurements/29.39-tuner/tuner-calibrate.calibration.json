@@ -1,0 +1,24 @@
+{
+ "set": "tuner-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref Tuner",
+   "device": "Tuner",
+   "element": null
+  },
+  {
+   "name": "cal Tuner On",
+   "device": "Tuner",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Tuner TuningFreq",
+   "device": "Tuner",
+   "element": "TuningFreq",
+   "default": "440",
+   "stored": "459"
+  }
+ ]
+}

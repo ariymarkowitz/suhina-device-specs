@@ -1,0 +1,31 @@
+{
+ "device": "Corpus",
+ "cases": [
+  {
+   "id": "Transpose--18.6",
+   "params": {
+    "Transpose": -18.6
+   }
+  },
+  {
+   "id": "Transpose-n0.25",
+   "params": {
+    "Transpose": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "Transpose-7",
+   "params": {
+    "Transpose": 7
+   }
+  },
+  {
+   "id": "Transpose-12.4",
+   "params": {
+    "Transpose": 12.4
+   }
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref SpectrumAnalyzer",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectrum",
+     "class_name": "SpectrumAnalyzer",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal SpectrumAnalyzer On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectrum",
+     "class_name": "SpectrumAnalyzer",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

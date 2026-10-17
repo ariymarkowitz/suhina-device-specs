@@ -1,0 +1,3638 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref Transmute",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal Transmute On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal Transmute MidiPitch_Transpose",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": -19.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal Transmute MidiPitch_TransposeScaleDegrees",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 1.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal Transmute MidiPitch_Glide",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.472870796918869,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal Transmute PartialFrequencies_FrequencyHz",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal Transmute PartialFrequencies_FrequencyNote",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 67.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "cal Transmute PartialFrequencies_Shift",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.29999998211860657,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "cal Transmute PartialFrequencies_PartialStretch",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "name": "cal Transmute PartialFrequencies_QuantizeToScaleOrTuning",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "name": "cal Transmute DecayDamping_DecayTime",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.09745799750089645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "name": "cal Transmute DecayDamping_HighFreqDamp",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "name": "cal Transmute DecayDamping_LowFreqDamp",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "name": "cal Transmute Modulation_ModRate",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.8984271883964539,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "name": "cal Transmute Modulation_PitchModAmount",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.6594793796539307,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "name": "cal Transmute Global_NumHarmonics",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 0.30000001192092896,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "name": "cal Transmute Global_Unison",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "name": "cal Transmute Global_UnisonAmount",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.9146912097930908,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "name": "cal Transmute Global_InputSend",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5208333134651184,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "name": "cal Transmute Global_DryWet",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "name": "cal Transmute Global_UseScale",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Spectral Resonator",
+     "class_name": "Transmute",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -48.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp Scale",
+       "value": 0.0,
+       "min": -28.0,
+       "max": 28.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Glide",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Freq. Hz",
+       "value": 0.47234049439430237,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Note",
+       "value": 45.0,
+       "min": 0.0,
+       "max": 96.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Stretch",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Quantize",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Decay",
+       "value": 0.2227381467819214,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "High Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Low Damp",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mod Rate",
+       "value": 0.5008407831192017,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Mod",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Harmonics",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Unison Amount",
+       "value": 0.5623413324356079,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Send Gain",
+       "value": 0.5,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Dry Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Scale",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

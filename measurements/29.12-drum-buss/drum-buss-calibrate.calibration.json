@@ -1,0 +1,108 @@
+{
+ "set": "drum-buss-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref DrumBuss",
+   "device": "DrumBuss",
+   "element": null
+  },
+  {
+   "name": "cal DrumBuss On",
+   "device": "DrumBuss",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal DrumBuss EnableCompression",
+   "device": "DrumBuss",
+   "element": "EnableCompression",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal DrumBuss DriveAmount",
+   "device": "DrumBuss",
+   "element": "DriveAmount",
+   "default": "0.200000003",
+   "stored": "0.7"
+  },
+  {
+   "name": "cal DrumBuss DriveType",
+   "device": "DrumBuss",
+   "element": "DriveType",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal DrumBuss CrunchAmount",
+   "device": "DrumBuss",
+   "element": "CrunchAmount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal DrumBuss DampingFrequency",
+   "device": "DrumBuss",
+   "element": "DampingFrequency",
+   "default": "9200",
+   "stored": "1512.126073"
+  },
+  {
+   "name": "cal DrumBuss TransientShaping",
+   "device": "DrumBuss",
+   "element": "TransientShaping",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal DrumBuss BoomFrequency",
+   "device": "DrumBuss",
+   "element": "BoomFrequency",
+   "default": "50",
+   "stored": "51"
+  },
+  {
+   "name": "cal DrumBuss BoomAmount",
+   "device": "DrumBuss",
+   "element": "BoomAmount",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal DrumBuss BoomDecay",
+   "device": "DrumBuss",
+   "element": "BoomDecay",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal DrumBuss BoomAudition",
+   "device": "DrumBuss",
+   "element": "BoomAudition",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal DrumBuss InputTrim",
+   "device": "DrumBuss",
+   "element": "InputTrim",
+   "default": "1",
+   "stored": "0.003548133822"
+  },
+  {
+   "name": "cal DrumBuss OutputGain",
+   "device": "DrumBuss",
+   "element": "OutputGain",
+   "default": "1",
+   "stored": "0.04415704428"
+  },
+  {
+   "name": "cal DrumBuss DryWet",
+   "device": "DrumBuss",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  }
+ ]
+}

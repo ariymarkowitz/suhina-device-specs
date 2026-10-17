@@ -1,0 +1,150 @@
+{
+ "set": "auto-pan-tremolo-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref AutoPan2",
+   "device": "AutoPan2",
+   "element": null
+  },
+  {
+   "name": "cal AutoPan2 On",
+   "device": "AutoPan2",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal AutoPan2 Mode",
+   "device": "AutoPan2",
+   "element": "Mode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Amount",
+   "device": "AutoPan2",
+   "element": "Modulation_Amount",
+   "default": "0.5",
+   "stored": "0.3"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Waveform",
+   "device": "AutoPan2",
+   "element": "Modulation_Waveform",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Invert",
+   "device": "AutoPan2",
+   "element": "Modulation_Invert",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_TimeMode",
+   "device": "AutoPan2",
+   "element": "Modulation_TimeMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Frequency",
+   "device": "AutoPan2",
+   "element": "Modulation_Frequency",
+   "default": "1",
+   "stored": "8.804525082"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Time",
+   "device": "AutoPan2",
+   "element": "Modulation_Time",
+   "default": "1.00000012",
+   "stored": "20.45130374"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_SyncedRate",
+   "device": "AutoPan2",
+   "element": "Modulation_SyncedRate",
+   "default": "6",
+   "stored": "7"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Sixteenth",
+   "device": "AutoPan2",
+   "element": "Modulation_Sixteenth",
+   "default": "16",
+   "stored": "17"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Phase",
+   "device": "AutoPan2",
+   "element": "Modulation_Phase",
+   "default": "180",
+   "stored": "108"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_PhaseOffset",
+   "device": "AutoPan2",
+   "element": "Modulation_PhaseOffset",
+   "default": "0",
+   "stored": "252"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_StereoMode",
+   "device": "AutoPan2",
+   "element": "Modulation_StereoMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 Modulation_Spin",
+   "device": "AutoPan2",
+   "element": "Modulation_Spin",
+   "default": "0",
+   "stored": "0.35"
+  },
+  {
+   "name": "cal AutoPan2 PanningWaveformShape",
+   "device": "AutoPan2",
+   "element": "PanningWaveformShape",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 TremoloWaveformShape",
+   "device": "AutoPan2",
+   "element": "TremoloWaveformShape",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 AttackTime",
+   "device": "AutoPan2",
+   "element": "AttackTime",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 DynamicFrequencyModulation",
+   "device": "AutoPan2",
+   "element": "DynamicFrequencyModulation",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal AutoPan2 HarmonicMode",
+   "device": "AutoPan2",
+   "element": "HarmonicMode",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal AutoPan2 VintageMode",
+   "device": "AutoPan2",
+   "element": "VintageMode",
+   "default": "false",
+   "stored": "true"
+  }
+ ]
+}
