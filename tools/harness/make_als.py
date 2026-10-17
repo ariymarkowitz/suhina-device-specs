@@ -554,6 +554,31 @@ def value_for_display(dp, n):
     raise ValueError(f"display {n} outside the control's range")
 
 
+def display_on_line(item, dp):
+    """The display conversion that puts every dump sample's display on a "linear" element's line,
+    or None (Saturator's Color Amt Low shows -100 .. 100 % for -36 .. 36)."""
+    line = [(v, d, linear(item["range"], v))
+            for v, d in ((v, parse_display(t)) for v, t in dp.get("samples", [])) if d]
+    return next((c for c in PREFERENCE if c in CONVERSIONS and line and consistent(c, line)), None)
+
+
+def linear_display(item, dp, n):
+    """(API value, stored value) for display n (base units) on a "linear" element whose display
+    lies on its line: the line inverted, exact where the dump's display text is rounded. None when
+    the display is not on the line."""
+    conv = display_on_line(item, dp)
+    if conv is None:
+        return None
+    amin, amax, lo, hi = item["range"]
+    s = CONVERSIONS[conv](n)
+    if not min(lo, hi) - 1e-9 <= s <= max(lo, hi) + 1e-9:
+        raise ValueError(f"display {n} outside the control's range")
+    v = amin + (s - lo) / (hi - lo) * (amax - amin)
+    if not dp["min"] - 1e-9 <= v <= dp["max"] + 1e-9:
+        raise ValueError(f"value {v} outside {dp['min']} .. {dp['max']}")
+    return v, s
+
+
 def stored_value(item, dp, spec, rng=None):
     """(API value or None, stored text) for a value spec, through the map entry `item`; `rng` is
     the element's controller range, for display ends that read -inf or inf."""
@@ -563,6 +588,10 @@ def stored_value(item, dp, spec, rng=None):
     conv = item.get("convert")
     if conv is None:
         raise ValueError("the map has no conversion for this parameter; use {\"stored\": x}")
+    if conv == "linear" and isinstance(spec, dict) and "display" in spec:
+        exact = linear_display(item, dp, float(spec["display"]))
+        if exact is not None:
+            return exact[0], als.format_stored(exact[1], kind)
     v = api_value(dp, spec)
     if conv == "bool":
         return v, als.format_stored(v != 0, "bool")

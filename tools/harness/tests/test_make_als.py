@@ -228,6 +228,24 @@ class FromLiveSets(unittest.TestCase):
         self.assertEqual(make_als.stored_value(p["Model"], dps["Model"], {"item": "Peak"})[1], "0")
         self.assertEqual(make_als.stored_value(p["Device On"], dps["Device On"], 0)[1], "false")
 
+    def test_linear_display_specs_are_exact(self):
+        """A display on a "linear" element's line inverts the line rather than the dump's display
+        text, which reads -12 dB at API 0.328125 (-12.375 dB) for Saturator Drive."""
+        sat = make_als.load_json(D["map"])["devices"]["Saturator"]["params"]
+        dps = make_als.dump_params(make_als.dump_device(self.dump, "Saturator"))
+        v, text = make_als.stored_value(sat["Drive"], dps["Drive"], {"display": -12})
+        self.assertEqual(float(text), -12.0)
+        self.assertAlmostEqual(v, 1 / 3, places=4)
+        # a display through a conversion: Chorus Feedback's 50 % is stored as 0.5
+        cho = make_als.load_json(D["map"])["devices"]["Chorus2"]["params"]
+        dps = make_als.dump_params(make_als.dump_device(self.dump, "Chorus2"))
+        v, text = make_als.stored_value(cho["Feedback"], dps["Feedback"], {"display": 50})
+        self.assertEqual(float(text), 0.5)
+        self.assertAlmostEqual(v, 0.5 / 0.99, places=6)
+        with self.assertRaises(ValueError):
+            make_als.stored_value(sat["Drive"], make_als.dump_params(
+                make_als.dump_device(self.dump, "Saturator"))["Drive"], {"display": 40})
+
     def check_set(self, path):
         root = als.read_set(path)
         ids = als.global_ids(root)

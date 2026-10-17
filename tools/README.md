@@ -248,6 +248,13 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
 
 - **Values.** A `display` spec in base units is converted exactly (Threshold `display:-20` is
   stored as 0.1), and so is any value through `same`, `integer`, `linear`, `bool` or `offset`.
+  A `display` spec through `linear` inverts the line, by the display conversion that puts every
+  dump sample on it (Saturator Drive `display:-12` is stored as −12 at API 1/3, where the dump's
+  `-12 dB` sample is at 0.328125, −12.375 dB); the three whose display is on no such line
+  (Saturator Color Amt Low and Hi, Shifter Pitch Fine) go through the sampled display curve.
+  Before this, every `linear` display went through the curve, so the top 100 runs stored a
+  rounded sample there (Saturator Drive and Output, Limiter Output); the device notes give
+  the values stored.
   A `norm` or plain value through a display conversion goes through the dump's sampled display
   curve (exact at the default and at the samples), so it lands within the display's rounding of
   the target: three figures, below 0.1 % of the range for the Compressor. A display shown to
@@ -256,7 +263,8 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
   exponential: norm 0.25 is written as 0.0669 Hz and Live reads back 0.25, where interpolating
   the displayed `0.07 Hz` read back 0.256. `{"stored": x}` writes a stored value as it is, for a parameter the map has no
   conversion for. A display-given value's expected API value is only known to one sample step
-  (1/64 of the range), and `verify` allows that much there.
+  (1/64 of the range) except on a `linear` line, and `verify` allows that much for every
+  display-given value.
 - **The template** (`--template`, default `measurements/29.09-compressor/compressor-threshold.als`)
   supplies the audio track with the probe clip (Warp off), the tempo and the main track. Its
   other tracks and its return tracks are dropped (`--keep-returns` keeps the returns). The clip
@@ -422,11 +430,6 @@ leaves only the export to the UI.
 - `build` finds a parameter by `name` or `original_name`; when two parameters of a device share
   a name, the first one wins.
 - `--display` finds values by bisection and assumes the control's display is monotonic.
-- `make_als.py build` resolves a `display` value from the dump's sampled display text before
-  converting it, so where that text is rounded the stored value is the sample's, not the one
-  asked for: Saturator Drive `display:-12` is stored as −12.375 dB, the sample that reads
-  `-12 dB` (also Limiter Output). Read the stored value from `<set>.cases.json`; for an exact value
-  through a `linear` element, give `{"stored": x}`.
 - `analyse.py`'s `rt60_s` and `noise_db` (186 ms window) do not suit reverbs, and its attack,
   release and FM figures failed for several devices in the top 100 runs; the device notes say
   where and give the figures computed from the renders instead.
