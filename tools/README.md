@@ -261,8 +261,18 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
   supplies the audio track with the probe clip (Warp off), the tempo and the main track. Its
   other tracks and its return tracks are dropped (`--keep-returns` keeps the returns). The clip
   is pointed at `--probe` (default `measurements/probe.wav`) and fitted to its length, so a
-  reverb run can use `probe-gap30/probe.wav`. The probe must have the set's sample rate. One set
-  has one tempo and one probe, so runs that need another of either go in another set.
+  reverb run can use `probe-gap30/probe.wav`. The probe must have the set's sample rate. A cases
+  file can name its own probe (`"probe"`), so runs with different probes can share a set; a run
+  that needs another tempo goes in another set.
+- **`--share`** gives one track to every case whose device is stored identically with the same
+  probe (every run's `bypass` of a device, a `default` that another run also has), named after
+  the first such case; `<set>.cases.json` records each case's `track`, and `verify` follows it.
+- **The set is a Live Project.** Live 12.4.6 loads no sample of a set that is not in a Project
+  folder, whatever the clip's Path says: every clip shows Sample Offline and Live's `Log.txt`
+  says `The file "probe.wav" could not be opened`. `build` writes an empty
+  `Ableton Project Info/` beside each set for that (ignored by git). `verify` reads only devices,
+  so it does not catch an offline clip; a silent `bypass` render does.
+- **Export names.** Live writes a `/` in a track name as `_` in the exported file's name.
 - **Checked in Live 12.4.6.** `measurements/map-check/` builds into one 37-track set
   (`map-check-gen.als`; `verify` reports 0 problems) that covers `linear` (Saturator Drive and
   Color Amt Low and Hi, Amp Bass, Reverb Diffuse Level, Roar Env Gain), `integer` (Corpus Transpose -18.6 is written and read back as -19, Resonators I Note
@@ -270,6 +280,38 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
   (External Audio Effect Input Gain), each by norm and by display.
 - **Not covered yet:** automation (Freeze, Smooth), side-chain routing, MIDI-driven devices
   (Vocoder carrier, Spectral Resonator MIDI), and devices inside racks.
+
+### Many devices' runs in one set: `batch.py`
+
+For more than a few runs, write them as data and let `batch.py` make the cases files, the set and
+the analyses (its docstring has the formats):
+
+```bash
+$PY tools/harness/batch.py check                                        # every device's runs.py
+$PY tools/harness/batch.py build measurements/top100/selection.json     # cases files and one set
+$PY tools/harness/live_check.py open measurements/top100/top100.als --timeout 900
+$PY tools/harness/live_check.py verify measurements/top100/top100.cases.json -o measurements/top100/top100.verified.json
+# export (step 2.5), then
+$PY tools/harness/batch.py analyse measurements/top100/selection.json --export measurements/top100/export --trim
+$PY tools/harness/batch.py summary measurements/top100/selection.json [run ...]
+```
+
+- **Runs** live in each device folder's `runs.py` (`DEVICE` and `RUNS`: name, the Measurement
+  plan step it answers, the question, which parts of `analyse.py`'s result answer it, the probe,
+  a `base` and the cases). Every run also gets `bypass` and `default`. `check` works out every
+  value against the dump and the map, so a wrong name or impossible value shows before Live does.
+- **A selection** (`selection.json`) names the set, its probes and the runs. `build` writes each
+  run's cases file beside its `runs.py`, then one set with `make_als.py build --share`, the
+  tracks ordered by probe, every clip pointing at its group's one probe file.
+- **Export** each probe group's tracks on their own (Selected Tracks Only, the probe's length,
+  name `<set>` for the first probe and `<set>-<probe>` for the others), or all tracks at once
+  under `<set>` at the longest probe's length; then `analyse --trim` cuts each render back to its
+  probe's length and keeps the disk use down (690 tracks at 60 bars: 27 GB, 11 GB trimmed).
+- **Analyse** takes each probe group's offset from its `bypass` renders and writes every track's
+  analysis into its device's `live/`; `<set>.analysis.json` records the offsets and each case's
+  result file. `summary` prints each run's `read` figures per case.
+- **First used** for the top 100 runs (`measurements/top100/README.md`): 100 runs of 37 devices,
+  805 cases on 690 tracks; Live 12.4.6 opened the set in 30 s and `verify` matched 802 cases.
 
 ## 3. Compare an implementation with Live
 
@@ -380,6 +422,14 @@ leaves only the export to the UI.
 - `build` finds a parameter by `name` or `original_name`; when two parameters of a device share
   a name, the first one wins.
 - `--display` finds values by bisection and assumes the control's display is monotonic.
+- `make_als.py build` resolves a `display` value from the dump's sampled display text before
+  converting it, so where that text is rounded the stored value is the sample's, not the one
+  asked for: Saturator Drive `display:-12` is stored as −12.375 dB, the sample that reads
+  `-12 dB` (also Limiter Output). Read the stored value from `<set>.cases.json`; for an exact value
+  through a `linear` element, give `{"stored": x}`.
+- `analyse.py`'s `rt60_s` and `noise_db` (186 ms window) do not suit reverbs, and its attack,
+  release and FM figures failed for several devices in the top 100 runs; the device notes say
+  where and give the figures computed from the renders instead.
 
 ### Generated set, Compressor (`measurements/29.09-compressor/compressor-gen.*`, 2026-10-18)
 

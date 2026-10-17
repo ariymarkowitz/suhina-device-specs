@@ -65,7 +65,14 @@ running the measurement again in Live (`tools/README.md` › 2).
 All 42 audio effects of Live 12's chapter 29 have a note. The Suhina Probe has been built in Live
 12.4.6 (`tools/probe-device/Suhina Probe.amxd`) and its parameter dump is in the notes: ranges,
 defaults, step lists, display units and tapers are tagged `[dump 12.4.6]`, and the `.als`
-element and parameter names `[als 12.4.6]`. What remains `[measure]` is behaviour (curves, times,
-filter shapes), which the behaviour runs in [`tools/`](tools/README.md) › 2 measure, one device and
-parameter at a time. The first such run (Compressor Threshold) and what it showed about the
-tooling are in `tools/README.md` › First run in Live 12.4.6.
+element and parameter names `[als 12.4.6]`. Behaviour (curves, times, filter shapes) is measured
+by behaviour runs ([`tools/`](tools/README.md) › 2 and 2b): the first (Compressor Threshold) is in
+`tools/README.md` › First run in Live 12.4.6, the Reverb's in `measurements/29.32-reverb/`, and
+the top 100 runs of 37 devices in one set in [`measurements/top100/`](measurements/top100/README.md).
+38 notes now have a Measured section with `[measured 12.4.6]` facts (INDEX: `partly measured`);
+External Audio Effect, Looper, Spectrum and Tuner have none.
+
+Next: the remaining priority-1 to 3 candidates in each device's `runs.py` (157 of 257 not yet
+run), the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet
+grids, Roar in Single routing), and what audio with static settings cannot show (automation,
+side-chain, MIDI, Hi-Quality).

@@ -1,8 +1,8 @@
 # Top 100 behaviour runs (Live 12.4.6), in one set
 
-State (2026-10-18, third session): **built, opened, verified, exported and analysed, and every
-run's answer is written into its device note** (step 4 done); step 5, documenting and committing, is
-open. Branch `top100-measurements` (not pushed).
+State (2026-10-18, fourth session): **built, opened, verified, exported and analysed, every
+run's answer is written into its device note, and the tooling and INDEX are documented** (all
+five steps done). Branch `top100-measurements` (not pushed).
 
 ## Done in the second session
 
@@ -266,9 +266,11 @@ priority-3 runs; little about them can be measured from audio with static settin
    `analyse.py` does not do were computed from the renders; `analyse.py`'s `rt60_s` and `noise_db`
    do not suit reverbs, and its attack/release and FM figures failed for several devices (the notes
    say where).
-5. **Document and commit**: a findings section here, `tools/README.md` › 2b for `batch.py` and
-   `--share`, the INDEX remarks, and `.gitignore` for any large `.ir.wav` sets. Commit when the
-   user asks.
+5. Done. **Document**: the findings above; `tools/README.md` › 2b (`--share`, the Project folder,
+   export names, a `batch.py` section) and › Limits (display values stored at a rounded sample;
+   `analyse.py`'s reverb and envelope figures); the INDEX's status (`partly measured`) and remarks
+   for the re-runs and surprises; `.gitignore` already leaves out the `.ir.wav` files and Live's
+   `Samples/`.
 
 ## Known points from the candidates
 
