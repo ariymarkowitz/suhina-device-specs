@@ -1,0 +1,88 @@
+# Spectral Time  (.als element Spectral; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Frozen | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Unit | 0..1 | 0 -> Milliseconds | 0 -> Milliseconds | steps: Milliseconds / ModulationBeat
+    0: Milliseconds; 1: ModulationBeat
+- Sync Interval | 0..21 | 6 -> 1/8 | 6 -> 1/8 | stepped display (22 values, one per integer)
+    0: 1/64; 0.6562: 1/48; 1.641: 1/32; 2.625: 1/24; 3.609: 1/16; 4.594: 1/12; 5.578: 1/8; 6.562: 1/6; 7.547: 3/16; 8.531: 1/4; 9.516: 5/16; 10.5: 1/3; 11.81: 3/8; 12.8: 1/2; 13.78: 3/4; 14.77: 1; 15.75: 1.5; 16.73: 2; 17.72: 3; 18.7: 4; 19.69: 6; 20.67: 8
+- S.Rate ms | 0..1 | 0.363667 -> 500 ms | 0.363667 -> 500 ms | taper: other (linear r2 0.060, log r2 0.267)
+    0: 20.0 ms; 0.125: 39.5 ms; 0.25: 176 ms; 0.375: 546 ms; 0.5: 1.27 s; 0.625: 2.46 s; 0.75: 4.23 s; 0.875: 6.71 s; 1: 10.0 s
+- Mode | 0..1 | 0 -> Manual | 0 -> Manual | steps: Manual / Retrigger
+    0: Manual; 1: Retrigger
+- Retrigger Mode | 0..1 | 0 -> Onsets | 0 -> Onsets | steps: Onsets / Sync
+    0: Onsets; 1: Sync
+- Fade Type | 0..1 | 0 -> Crossfade | 0 -> Crossfade | steps: Crossfade / Envelope
+    0: Crossfade; 1: Envelope
+- Fade In | 0..1 | 0 -> 2.00 ms | 0 -> 2.00 ms | taper: other (linear r2 0.046, log r2 0.108)
+    0: 2.00 ms; 0.125: 21.5 ms; 0.25: 158 ms; 0.375: 529 ms; 0.5: 1.25 s; 0.625: 2.44 s; 0.75: 4.22 s; 0.875: 6.70 s; 1: 10.0 s
+- XFade % | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Fade Out | 0..1 | 0.126076 -> 40.0 ms | 0.126076 -> 40.0 ms | taper: other (linear r2 0.060, log r2 0.267)
+    0: 20.0 ms; 0.125: 39.5 ms; 0.25: 176 ms; 0.375: 546 ms; 0.5: 1.27 s; 0.625: 2.46 s; 0.75: 4.23 s; 0.875: 6.71 s; 1: 10.0 s
+- Sensitivity | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Delay On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Delay Time | 0..1 | 0.468849 -> 250 ms | 0.468849 -> 250 ms | taper: other (linear r2 0.024, log r2 0.075)
+    0: 10.0 ms; 0.125: 12.9 ms; 0.25: 39.6 ms; 0.375: 124 ms; 0.5: 307 ms; 0.625: 635 ms; 0.75: 1.16 s; 0.875: 1.93 s; 1: 3.00 s
+- Delay Mode | 0..4 | 0 -> Time | 0 -> Time | steps: Time / Synced / 16th / 16th Triplet / 16th Dotted
+    0: Time; 1: Synced; 2: 16th; 3: 16th Triplet; 4: 16th Dotted
+- Delay 16th | 1..16 | 3 -> 3  | 3 -> 3  | stepped display (16 values, one per integer)
+    1: 1; 1.703: 2; 2.641: 3; 3.578: 4; 4.516: 5; 5.688: 6; 6.625: 7; 7.562: 8; 8.5: 9; 9.672: 10; 10.61: 11; 11.55: 12; 12.72: 13; 13.66: 14; 14.59: 15; 15.53: 16
+- Delay Synced | 0..21 | 15 -> 1 | 15 -> 1 | stepped display (22 values, one per integer)
+    0: 1/64; 0.6562: 1/48; 1.641: 1/32; 2.625: 1/24; 3.609: 1/16; 4.594: 1/12; 5.578: 1/8; 6.562: 1/6; 7.547: 3/16; 8.531: 1/4; 9.516: 5/16; 10.5: 1/3; 11.81: 3/8; 12.8: 1/2; 13.78: 3/4; 14.77: 1; 15.75: 1.5; 16.73: 2; 17.72: 3; 18.7: 4; 19.69: 6; 20.67: 8
+- Delay Feedback | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Delay Tilt | 0..1 | 0.5 -> 0.00 ms | 0.5 -> 0.00 ms | taper: other (linear r2 0.383, log r2 0.000)
+    0: -2.00 s; 0.125: -974 ms; 0.25: -354 ms; 0.375: -62.5 ms; 0.5: 0.00 ms; 0.625: 62.5 ms; 0.75: 354 ms; 0.875: 974 ms; 1: 2.00 s
+- Delay Spray | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.936, log r2 0.000)
+    0: 0.00 ms; 0.125: 6.25 ms; 0.25: 25.0 ms; 0.375: 56.3 ms; 0.5: 100 ms; 0.625: 156 ms; 0.75: 225 ms; 0.875: 306 ms; 1: 400 ms
+- Delay Mask | 0..1 | 0.5 -> 0.00  | 0.5 -> 0.00  | taper: linear
+    0: -1.00 ; 0.125: -0.75 ; 0.25: -0.50 ; 0.375: -0.25 ; 0.5: 0.00 ; 0.625: 0.25 ; 0.75: 0.50 ; 0.875: 0.75 ; 1: 1.00 
+- Delay Stereo Spread | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Delay Frequency Shift | 0..1 | 0.5 -> 0.00 Hz | 0.5 -> 0.00 Hz | taper: other (linear r2 0.809, log r2 0.000)
+    0: -400 Hz; 0.125: -153 Hz; 0.25: -39.8 Hz; 0.375: -3.96 Hz; 0.5: 0.00 Hz; 0.625: 3.96 Hz; 0.75: 39.8 Hz; 0.875: 153 Hz; 1: 400 Hz
+- Delay Mix | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Send Gain | 0..1 | 1 -> 0.0 dB | 1 -> 0.0 dB | taper: other (linear r2 0.819, log r2 0.000)
+    0: -inf dB; 0.125: -18 dB; 0.25: -12 dB; 0.375: -8.5 dB; 0.5: -6.0 dB; 0.625: -4.1 dB; 0.75: -2.5 dB; 0.875: -1.2 dB; 1: 0.0 dB
+- Dry Wet | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Freezer_On = true
+Freezer_FreezeOn = false
+Freezer_SyncIntervalUnits = 0
+Freezer_SyncIntervalBeats = 6
+Freezer_SyncIntervalSeconds = 0.4999999404
+Freezer_MainMode = 0
+Freezer_RetriggerMode = 0
+Freezer_FadeType = 0
+Freezer_FadeIn = 0.002000000095
+Freezer_CrossfadePercent = 0
+Freezer_FadeOut = 0.03999999538
+Freezer_Sensitivity = 0.5
+Delay_On = true
+Delay_TimeSeconds = 0.2500000298
+Delay_TimeUnit = 0
+Delay_TimeSixteenths = 3
+Delay_TimeDivisions = 15
+Delay_Feedback = 0
+Delay_Tilt = 0
+Delay_Spray = 0
+Delay_Mask = 0
+Delay_StereoSpread = 0
+Delay_FrequencyShift = 0
+Delay_DryWet = 0.5
+InputSendGain = 1
+DryWet = 0.5

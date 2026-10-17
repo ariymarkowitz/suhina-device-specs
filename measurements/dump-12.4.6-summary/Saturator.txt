@@ -1,0 +1,64 @@
+# Saturator  (.als element Saturator; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Drive | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -36 dB; 0.125: -27 dB; 0.25: -18 dB; 0.375: -9.0 dB; 0.5: 0.0 dB; 0.625: 9.0 dB; 0.75: 18 dB; 0.875: 27 dB; 1: 36 dB
+- Pre Dc Filter | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Type | 0..7 | 0 -> Analog Clip | 0 -> Analog Clip | steps: Analog Clip / Soft Sine / Bass Shaper / Medium Curve / Hard Curve / Sinoid Fold / Digital Clip / Waveshaper
+    0: Analog Clip; 1: Soft Sine; 2: Bass Shaper; 3: Medium Curve; 4: Hard Curve; 5: Sinoid Fold; 6: Digital Clip; 7: Waveshaper
+- Color On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Color Amt Low | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Color Freq | 0..1 | 0.545825 -> 1.00 kHz | 0.545825 -> 1.00 kHz | taper: other (linear r2 0.041, log r2 0.283)
+    0: 30.0 Hz; 0.125: 67.0 Hz; 0.25: 149 Hz; 0.375: 334 Hz; 0.5: 745 Hz; 0.625: 1.66 kHz; 0.75: 3.71 kHz; 0.875: 8.29 kHz; 1: 18.5 kHz
+- Color Width | 0..1 | 0.3 -> 30 % | 0.3 -> 30 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Color Amt Hi | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Post Clip Mode | 0..2 | 0 -> No Clip | 0 -> No Clip | steps: No Clip / Soft Clip / Hard Clip
+    0: No Clip; 1: Soft Clip; 2: Hard Clip
+- Output | 0..1 | 1 -> 0.0 dB | 1 -> 0.0 dB | taper: linear
+    0: -36 dB; 0.125: -32 dB; 0.25: -27 dB; 0.375: -22 dB; 0.5: -18 dB; 0.625: -14 dB; 0.75: -9.0 dB; 0.875: -4.5 dB; 1: 0.0 dB
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Threshold | 0..1 | 0 -> -50 dB | 0 -> -50 dB | taper: linear
+    0: -50 dB; 0.125: -44 dB; 0.25: -38 dB; 0.375: -31 dB; 0.5: -25 dB; 0.625: -19 dB; 0.75: -12 dB; 0.875: -6.2 dB; 1: 0.0 dB
+- WS Drive | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- WS Linearity | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- WS Curve | 0..1 | 0.05 -> 5.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- WS Damp | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- WS Period | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- WS Depth | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+PreDrive = 0
+PreDcFilter = false
+Type = 0
+ColorOn = true
+BaseDrive = 0
+ColorFrequency = 999.999878
+ColorWidth = 0.3000000119
+ColorDepth = 0
+PostClip = 0
+PostDrive = 0
+DryWet = 1
+BassShaperThreshold = -50
+WsDrive = 1
+WsLin = 0.5
+WsCurve = 0.05000000075
+WsDamp = 0
+WsPeriod = 0
+WsDepth = 0

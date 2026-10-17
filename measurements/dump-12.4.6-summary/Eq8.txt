@@ -1,0 +1,260 @@
+# EQ Eight  (.als element Eq8; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Output | -12..12 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -12: -12.0 dB; -9: -9.00 dB; -6: -6.00 dB; -3: -3.00 dB; 0: 0.00 dB; 3: 3.00 dB; 6: 6.00 dB; 9: 9.00 dB; 12: 12.0 dB
+- Scale | -2..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    -2: -200 %; -1.5: -150 %; -1: -100 %; -0.5: -50 %; 0: 0.0 %; 0.5: 50 %; 1: 100 %; 1.5: 150 %; 2: 200 %
+- Adaptive Q | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 1 Filter On A | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 1 Filter Type A | 0..7 | 2 -> Low Shelf | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 1 Frequency A | 0..1 | 0.142747 -> 30.0 Hz | 0.180127 -> ~42.3 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 1 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 1 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 1 Filter On B | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 1 Filter Type B | 0..7 | 1 -> High Pass 12dB | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 1 Frequency B | 0..1 | 0.180127 -> 40.0 Hz | 0.180127 -> 40.0 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 1 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 1 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 2 Filter On A | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 2 Filter Type A | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 2 Frequency A | 0..1 | 0.389248 -> 200 Hz | 0.389248 -> 200 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 2 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 2 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 2 Filter On B | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 2 Filter Type B | 0..7 | 2 -> Low Shelf | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 2 Frequency B | 0..1 | 0.389248 -> 200 Hz | 0.389248 -> 200 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 2 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 2 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 3 Filter On A | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 3 Filter Type A | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 3 Frequency A | 0..1 | 0.598368 -> 1000 Hz | 0.299184 -> ~98.2 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 3 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 3 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 3 Filter On B | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 3 Filter Type B | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 3 Frequency B | 0..1 | 0.299184 -> 100.0 Hz | 0.299184 -> 100.0 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 3 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 3 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 4 Filter On A | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 4 Filter Type A | 0..7 | 5 -> High Shelf | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 4 Frequency A | 0..1 | 0.807489 -> 5.00 kHz | 0.508305 -> ~529 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 4 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 4 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 4 Filter On B | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 4 Filter Type B | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 4 Frequency B | 0..1 | 0.508305 -> 500 Hz | 0.508305 -> 500 Hz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 4 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 4 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 5 Filter On A | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 5 Filter Type A | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 5 Frequency A | 0..1 | 0.299184 -> 100.0 Hz | 0.688432 -> ~1.99 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 5 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 5 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 5 Filter On B | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 5 Filter Type B | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 5 Frequency B | 0..1 | 0.688432 -> 2.00 kHz | 0.688432 -> 2.00 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 5 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 5 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 6 Filter On A | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 6 Filter Type A | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 6 Frequency A | 0..1 | 0.897553 -> 10.0 kHz | 0.897553 -> 10.0 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 6 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 6 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 6 Filter On B | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 6 Filter Type B | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 6 Frequency B | 0..1 | 0.897553 -> 10.0 kHz | 0.897553 -> 10.0 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 6 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 6 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 7 Filter On A | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 7 Filter Type A | 0..7 | 3 -> Bell | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 7 Frequency A | 0..1 | 0.807489 -> 5.00 kHz | 0.807489 -> 5.00 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 7 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 7 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 7 Filter On B | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 7 Filter Type B | 0..7 | 5 -> High Shelf | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 7 Frequency B | 0..1 | 0.807489 -> 5.00 kHz | 0.807489 -> 5.00 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 7 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 7 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 8 Filter On A | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 8 Filter Type A | 0..7 | 6 -> Low Pass 12dB | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 8 Frequency A | 0..1 | 0.973926 -> 18.0 kHz | 0.973926 -> 18.0 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 8 Gain A | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 8 Q A | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+- 8 Filter On B | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 8 Filter Type B | 0..7 | 6 -> Low Pass 12dB | 0 -> High Pass 48dB | steps: High Pass 48dB / High Pass 12dB / Low Shelf / Bell / Notch / High Shelf / Low Pass 12dB / Low Pass 48dB
+    0: High Pass 48dB; 1: High Pass 12dB; 2: Low Shelf; 3: Bell; 4: Notch; 5: High Shelf; 6: Low Pass 12dB; 7: Low Pass 48dB
+- 8 Frequency B | 0..1 | 0.973926 -> 18.0 kHz | 0.973926 -> 18.0 kHz | taper: other (linear r2 0.001, log r2 0.106)
+    0: 10.0 Hz; 0.125: 26.2 Hz; 0.25: 68.5 Hz; 0.375: 179 Hz; 0.5: 469 Hz; 0.625: 1.23 kHz; 0.75: 3.21 kHz; 0.875: 8.41 kHz; 1: 22.0 kHz
+- 8 Gain B | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- 8 Q B | 0..1 | 0.376666 -> 0.71 | 0.376666 -> 0.71 | taper: logarithmic
+    0: 0.1; 0.125: 0.19; 0.25: 0.37; 0.375: 0.7; 0.5: 1.34; 0.625: 2.57; 0.75: 4.91; 0.875: 9.41; 1: 18
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+GlobalGain = 0
+Scale = 1
+Bands.0/ParameterA/IsOn = true
+Bands.0/ParameterA/Mode = 2
+Bands.0/ParameterA/Freq = 30
+Bands.0/ParameterA/Gain = 0
+Bands.0/ParameterA/Q = 0.7071067095
+Bands.0/ParameterB/IsOn = false
+Bands.0/ParameterB/Mode = 1
+Bands.0/ParameterB/Freq = 40
+Bands.0/ParameterB/Gain = 0
+Bands.0/ParameterB/Q = 0.7071067095
+Bands.1/ParameterA/IsOn = true
+Bands.1/ParameterA/Mode = 3
+Bands.1/ParameterA/Freq = 200
+Bands.1/ParameterA/Gain = 0
+Bands.1/ParameterA/Q = 0.7071067095
+Bands.1/ParameterB/IsOn = false
+Bands.1/ParameterB/Mode = 2
+Bands.1/ParameterB/Freq = 200
+Bands.1/ParameterB/Gain = 0
+Bands.1/ParameterB/Q = 0.7071067095
+Bands.2/ParameterA/IsOn = true
+Bands.2/ParameterA/Mode = 3
+Bands.2/ParameterA/Freq = 999.999817
+Bands.2/ParameterA/Gain = 0
+Bands.2/ParameterA/Q = 0.7071067095
+Bands.2/ParameterB/IsOn = true
+Bands.2/ParameterB/Mode = 3
+Bands.2/ParameterB/Freq = 99.9999924
+Bands.2/ParameterB/Gain = 0
+Bands.2/ParameterB/Q = 0.7071067095
+Bands.3/ParameterA/IsOn = true
+Bands.3/ParameterA/Mode = 5
+Bands.3/ParameterA/Freq = 5000.00098
+Bands.3/ParameterA/Gain = 0
+Bands.3/ParameterA/Q = 0.7071067095
+Bands.3/ParameterB/IsOn = true
+Bands.3/ParameterB/Mode = 3
+Bands.3/ParameterB/Freq = 500
+Bands.3/ParameterB/Gain = 0
+Bands.3/ParameterB/Q = 0.7071067095
+Bands.4/ParameterA/IsOn = false
+Bands.4/ParameterA/Mode = 3
+Bands.4/ParameterA/Freq = 99.9999924
+Bands.4/ParameterA/Gain = 0
+Bands.4/ParameterA/Q = 0.7071067095
+Bands.4/ParameterB/IsOn = true
+Bands.4/ParameterB/Mode = 3
+Bands.4/ParameterB/Freq = 2000.00024
+Bands.4/ParameterB/Gain = 0
+Bands.4/ParameterB/Q = 0.7071067095
+Bands.5/ParameterA/IsOn = false
+Bands.5/ParameterA/Mode = 3
+Bands.5/ParameterA/Freq = 10000
+Bands.5/ParameterA/Gain = 0
+Bands.5/ParameterA/Q = 0.7071067095
+Bands.5/ParameterB/IsOn = true
+Bands.5/ParameterB/Mode = 3
+Bands.5/ParameterB/Freq = 10000
+Bands.5/ParameterB/Gain = 0
+Bands.5/ParameterB/Q = 0.7071067095
+Bands.6/ParameterA/IsOn = false
+Bands.6/ParameterA/Mode = 3
+Bands.6/ParameterA/Freq = 5000.00098
+Bands.6/ParameterA/Gain = 0
+Bands.6/ParameterA/Q = 0.7071067095
+Bands.6/ParameterB/IsOn = false
+Bands.6/ParameterB/Mode = 5
+Bands.6/ParameterB/Freq = 5000.00098
+Bands.6/ParameterB/Gain = 0
+Bands.6/ParameterB/Q = 0.7071067095
+Bands.7/ParameterA/IsOn = false
+Bands.7/ParameterA/Mode = 6
+Bands.7/ParameterA/Freq = 18000.0039
+Bands.7/ParameterA/Gain = 0
+Bands.7/ParameterA/Q = 0.7071067095
+Bands.7/ParameterB/IsOn = false
+Bands.7/ParameterB/Mode = 6
+Bands.7/ParameterB/Freq = 18000.0039
+Bands.7/ParameterB/Gain = 0
+Bands.7/ParameterB/Q = 0.7071067095
+SpectrumAnalyzer/On = true
+AdaptiveQ = true

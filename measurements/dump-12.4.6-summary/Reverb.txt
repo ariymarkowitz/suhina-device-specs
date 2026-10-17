@@ -1,0 +1,106 @@
+# Reverb  (.als element Reverb; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Predelay | 0..1 | 0.258977 -> 2.50 ms | 0.258977 -> 2.50 ms | taper: logarithmic
+    0: 0.50 ms; 0.125: 1.09 ms; 0.25: 2.36 ms; 0.375: 5.14 ms; 0.5: 11.2 ms; 0.625: 24.3 ms; 0.75: 52.9 ms; 0.875: 115 ms; 1: 250 ms
+- In Lo Cut On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- In Hi Cut On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Input Freq | 0..1 | 0.477294 -> 830 Hz | 0.477294 -> 830 Hz | taper: other (linear r2 0.086, log r2 0.349)
+    0: 50.0 Hz; 0.125: 104 Hz; 0.25: 218 Hz; 0.375: 455 Hz; 0.5: 949 Hz; 0.625: 1.98 kHz; 0.75: 4.13 kHz; 0.875: 8.62 kHz; 1: 18.0 kHz
+- Input Width | 0..1 | 0.629412 -> 5.85  | 0.629412 -> 5.85  | taper: linear
+    0: 0.50 ; 0.125: 1.56 ; 0.25: 2.62 ; 0.375: 3.69 ; 0.5: 4.75 ; 0.625: 5.81 ; 0.75: 6.88 ; 0.875: 7.94 ; 1: 9.00 
+- ER Spin On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- ER Spin Rate | 0..1 | 0.485693 -> 0.30 Hz | 0.485693 -> 0.30 Hz | taper: logarithmic
+    0: 0.07 Hz; 0.125: 0.11 Hz; 0.25: 0.15 Hz; 0.375: 0.22 Hz; 0.5: 0.31 Hz; 0.625: 0.44 Hz; 0.75: 0.63 Hz; 0.875: 0.91 Hz; 1: 1.30 Hz
+- ER Spin Amount | 0..1 | 0.654476 -> 17.50  | 0.654476 -> 17.50  | taper: logarithmic
+    0: 2.00 ; 0.125: 3.03 ; 0.25: 4.58 ; 0.375: 6.93 ; 0.5: 10.49 ; 0.625: 15.87 ; 0.75: 24.02 ; 0.875: 36.35 ; 1: 55.00 
+- ER Shape | 0..1 | 0.5 -> 0.50  | 0.5 -> 0.50  | taper: linear
+    0: 0.00 ; 0.125: 0.12 ; 0.25: 0.25 ; 0.375: 0.38 ; 0.5: 0.50 ; 0.625: 0.62 ; 0.75: 0.75 ; 0.875: 0.88 ; 1: 1.00 
+- Diff. Hi On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Diff. Hi Type | 0..1 | 0 -> Shelf | 0 -> Shelf | steps: Shelf / Lowpass
+    0: Shelf; 1: Lowpass
+- Diff. Hi Freq | 0..1 | 0.810234 -> 4.50 kHz | 0.810234 -> 4.50 kHz | taper: other (linear r2 0.010, log r2 0.222)
+    0: 20.0 Hz; 0.125: 46.1 Hz; 0.25: 106 Hz; 0.375: 245 Hz; 0.5: 566 Hz; 0.625: 1.30 kHz; 0.75: 3.01 kHz; 0.875: 6.94 kHz; 1: 16.0 kHz
+- HiShelf Gain | 0..1 | 0.625 -> 0.70  | 0.625 -> 0.70  | taper: linear
+    0: 0.20 ; 0.125: 0.30 ; 0.25: 0.40 ; 0.375: 0.50 ; 0.5: 0.60 ; 0.625: 0.70 ; 0.75: 0.80 ; 0.875: 0.90 ; 1: 1.00 
+- Diff. Lo On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Diff. Lo Freq | 0..1 | 0.2272 -> 90.0 Hz | 0.2272 -> 90.0 Hz | taper: other (linear r2 0.011, log r2 0.229)
+    0: 20.0 Hz; 0.125: 45.8 Hz; 0.25: 105 Hz; 0.375: 239 Hz; 0.5: 548 Hz; 0.625: 1.25 kHz; 0.75: 2.87 kHz; 0.875: 6.56 kHz; 1: 15.0 kHz
+- LowShelf Gain | 0..1 | 0.6875 -> 0.75  | 0.6875 -> 0.75  | taper: linear
+    0: 0.20 ; 0.125: 0.30 ; 0.25: 0.40 ; 0.375: 0.50 ; 0.5: 0.60 ; 0.625: 0.70 ; 0.75: 0.80 ; 0.875: 0.90 ; 1: 1.00 
+- Chorus On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Chorus Rate | 0..1 | 0.103693 -> 0.02 Hz | 0.103693 -> 0.02 Hz | taper: other (linear r2 0.626, log r2 0.999)
+    0: 0.01 Hz; 0.125: 0.02 Hz; 0.25: 0.05 Hz; 0.375: 0.12 Hz; 0.5: 0.28 Hz; 0.625: 0.65 Hz; 0.75: 1.50 Hz; 0.875: 3.47 Hz; 1: 8.00 Hz
+- Chorus Amount | 0..1 | 0.00250627 -> 0.02  | 0.00250627 -> 0.02  | taper: linear
+    0: 0.01 ; 0.125: 0.51 ; 0.25: 1.01 ; 0.375: 1.51 ; 0.5: 2.01 ; 0.625: 2.50 ; 0.75: 3.00 ; 0.875: 3.50 ; 1: 4.00 
+- Decay Time | 0..1 | 0.314135 -> 1.20 s | 0.314135 -> 1.20 s | taper: other (linear r2 0.329, log r2 0.147)
+    0: 200 ms; 0.125: 408 ms; 0.25: 832 ms; 0.375: 1.70 s; 0.5: 3.46 s; 0.625: 7.07 s; 0.75: 14.4 s; 0.875: 29.4 s; 1: 60.0 s
+- Diffusion | 0..1 | 0.624609 -> 60 % | 0.624609 -> 60 % | taper: linear
+    0: 0.1 %; 0.125: 12 %; 0.25: 24 %; 0.375: 36 %; 0.5: 48 %; 0.625: 60 %; 0.75: 72 %; 0.875: 84 %; 1: 96 %
+- Scale | 0..1 | 0.368421 -> 40 % | 0.368421 -> 40 % | taper: linear
+    0: 5.0 %; 0.125: 17 %; 0.25: 29 %; 0.375: 41 %; 0.5: 52 %; 0.625: 64 %; 0.75: 76 %; 0.875: 88 %; 1: 100 %
+- Freeze On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Flat On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Cut On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Room Size | 0..1 | 0.791515 -> 100.00  | 0.791515 -> 100.00  | taper: logarithmic
+    0: 0.22 ; 0.125: 0.58 ; 0.25: 1.53 ; 0.375: 4.01 ; 0.5: 10.54 ; 0.625: 27.65 ; 0.75: 72.58 ; 0.875: 190.50 ; 1: 500.00 
+- Size Smoothing | 0..2 | 2 -> Fast | 0 -> None | steps: None / Slow / Fast
+    0: None; 1: Slow; 2: Fast
+- Stereo Image | 0..1 | 0.833333 -> 100.00  | 0.833333 -> 100.00  | taper: linear
+    0: 0.00 ; 0.125: 15.00 ; 0.25: 30.00 ; 0.375: 45.00 ; 0.5: 60.00 ; 0.625: 75.00 ; 0.75: 90.00 ; 0.875: 105.00 ; 1: 120.00 
+- Density | 0..3 | 1 -> Low | 0 -> Sparse | steps: Sparse / Low / Mid / High
+    0: Sparse; 1: Low; 2: Mid; 3: High
+- Reflect Level | 0..1 | 0.493563 -> 0.0 dB | 0.493563 -> 0.0 dB | taper: other (linear r2 0.818, log r2 0.000)
+    0: -30 dB; 0.125: -11 dB; 0.25: -5.7 dB; 0.375: -2.3 dB; 0.5: 0.1 dB; 0.625: 2.0 dB; 0.75: 3.5 dB; 0.875: 4.9 dB; 1: 6.0 dB
+- Diffuse Level | 0..1 | 0.493563 -> 0.0 dB | 0.493563 -> 0.0 dB | taper: other (linear r2 0.818, log r2 0.000)
+    0: -30 dB; 0.125: -11 dB; 0.25: -5.7 dB; 0.375: -2.3 dB; 0.5: 0.1 dB; 0.625: 2.0 dB; 0.75: 3.5 dB; 0.875: 4.9 dB; 1: 6.0 dB
+- Dry/Wet | 0..1 | 0.55 -> 55 % | 0.55 -> 55 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+PreDelay = 2.5
+BandHighOn = false
+BandLowOn = true
+BandFreq = 829.999756
+BandWidth = 5.8499999
+SpinOn = true
+EarlyReflectModFreq = 0.2977000177
+EarlyReflectModDepth = 17.5
+DiffuseDelay = 0.5
+ShelfHighOn = true
+HighFilterType = 0
+ShelfHiFreq = 4500.00146
+ShelfHiGain = 0.6999999881
+ShelfLowOn = false
+ShelfLoFreq = 90.0000076
+ShelfLoGain = 0.75
+ChorusOn = true
+SizeModFreq = 0.02000000142
+SizeModDepth = 0.01999999955
+DecayTime = 1200.00012
+AllPassGain = 0.6000000238
+AllPassSize = 0.400000006
+FreezeOn = false
+FlatOn = true
+CutOn = true
+RoomSize = 99.9999924
+SizeSmoothing = 2
+StereoSeparation = 100
+RoomType = 1
+MixReflect = 1
+MixDiffuse = 1
+MixDirect = 0.5500000119

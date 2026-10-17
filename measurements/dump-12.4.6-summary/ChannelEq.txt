@@ -1,0 +1,28 @@
+# Channel EQ  (.als element ChannelEq; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Highpass On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Low Gain | 0..1 | 0.498841 -> 0.0 dB | 0.498841 -> 0.0 dB | taper: linear
+    0: -15 dB; 0.125: -11 dB; 0.25: -7.4 dB; 0.375: -3.7 dB; 0.5: 0.0 dB; 0.625: 3.8 dB; 0.75: 7.5 dB; 0.875: 11 dB; 1: 15 dB
+- Mid Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -12 dB; 0.125: -9.0 dB; 0.25: -6.0 dB; 0.375: -3.0 dB; 0.5: 0.0 dB; 0.625: 3.0 dB; 0.75: 6.0 dB; 0.875: 9.0 dB; 1: 12 dB
+- Mid Freq | 0..1 | 0.610793 -> 1.50 kHz | 0.610793 -> 1.50 kHz | taper: other (linear r2 0.186, log r2 0.515)
+    0: 120 Hz; 0.125: 201 Hz; 0.25: 337 Hz; 0.375: 566 Hz; 0.5: 949 Hz; 0.625: 1.59 kHz; 0.75: 2.67 kHz; 0.875: 4.47 kHz; 1: 7.50 kHz
+- High Gain | 0..1 | 0.498841 -> 0.0 dB | 0.498841 -> 0.0 dB | taper: linear
+    0: -15 dB; 0.125: -11 dB; 0.25: -7.4 dB; 0.375: -3.7 dB; 0.5: 0.0 dB; 0.625: 3.8 dB; 0.75: 7.5 dB; 0.875: 11 dB; 1: 15 dB
+- Output | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -12 dB; 0.125: -9.0 dB; 0.25: -6.0 dB; 0.375: -3.0 dB; 0.5: 0.0 dB; 0.625: 3.0 dB; 0.75: 6.0 dB; 0.875: 9.0 dB; 1: 12 dB
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+HighpassOn = false
+LowShelfGain = 0.9999999404
+MidGain = 1
+MidFrequency = 1500.00012
+HighShelfGain = 0.9999999404
+Gain = 1

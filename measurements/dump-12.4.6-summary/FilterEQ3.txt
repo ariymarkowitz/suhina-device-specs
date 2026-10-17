@@ -1,0 +1,37 @@
+# EQ Three  (.als element FilterEQ3; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- GainLo | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+- GainMid | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+- GainHi | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+- FreqLo | 0..1 | 0.349485 -> 250 Hz | 0.349485 -> 250 Hz | taper: other (linear r2 0.008, log r2 0.359)
+    0: 50.0 Hz; 0.125: 88.9 Hz; 0.25: 158 Hz; 0.375: 281 Hz; 0.5: 500 Hz; 0.625: 889 Hz; 0.75: 1.58 kHz; 0.875: 2.81 kHz; 1: 5.00 kHz
+- FreqHi | 0..1 | 0.561297 -> 2.50 kHz | 0.561297 -> 2.50 kHz | taper: other (linear r2 0.370, log r2 0.369)
+    0: 200 Hz; 0.125: 351 Hz; 0.25: 616 Hz; 0.375: 1.08 kHz; 0.5: 1.90 kHz; 0.625: 3.33 kHz; 0.75: 5.84 kHz; 0.875: 10.3 kHz; 1: 18.0 kHz
+- LowOn | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- MidOn | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- HighOn | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Slope | 0..1 | 1 -> 48 | 0 -> 24 | steps: 24 / 48
+    0: 24; 1: 48
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+GainLo = 1
+GainMid = 1
+GainHi = 1
+FreqLo = 250
+FreqHi = 2500
+LowOn = true
+MidOn = true
+HighOn = true
+Slope = 1

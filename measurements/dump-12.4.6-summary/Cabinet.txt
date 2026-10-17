@@ -1,0 +1,25 @@
+# Cabinet  (.als element Cabinet; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Cabinet Type | 0..4 | 0 -> 1x12 | 0 -> 1x12 | steps: 1x12 / 2x12 / 4x12 / 4x10 / 4x10 Bass
+    0: 1x12; 1: 2x12; 2: 4x12; 3: 4x10; 4: 4x10 Bass
+- Microphone Type | 0..1 | 0 -> Condenser | 0 -> Condenser | steps: Condenser / Dynamic
+    0: Condenser; 1: Dynamic
+- Microphone Position | 0..2 | 0 -> Near On-Axis | 0 -> Near On-Axis | steps: Near On-Axis / Near Off-Axis / Far
+    0: Near On-Axis; 1: Near Off-Axis; 2: Far
+- Dual Mono | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+CabinetType = 0
+MicrophoneTypeSwitch = false
+MicrophonePosition = 0
+DualMono = false
+DryWet = 1

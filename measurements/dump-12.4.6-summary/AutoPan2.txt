@@ -1,0 +1,67 @@
+# Auto Pan-Tremolo  (.als element AutoPan2; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Mode | 0..1 | 0 -> Panning | 0 -> Panning | steps: Panning / Tremolo
+    0: Panning; 1: Tremolo
+- Amount | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Waveform | 0..8 | 0 -> Sine | 0 -> Sine | steps: Sine / Triangle / Shark Tooth / Saw Up / Saw Down / Square / Random / Wander / S & H
+    0: Sine; 1: Triangle; 2: Shark Tooth; 3: Saw Up; 4: Saw Down; 5: Square; 6: Random; 7: Wander; 8: S & H
+- Invert | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Time Mode | 0..5 | 0 -> Rate | 0 -> Rate | steps: Rate / Time / Synced / Triplet / Dotted / 16th
+    0: Rate; 1: Time; 2: Synced; 3: Triplet; 4: Dotted; 5: 16th
+- Frequency | 0..1 | 0.359952 -> 1.00 Hz | 0.359952 -> 1.00 Hz | taper: logarithmic
+    0: 0.10 Hz; 0.125: 0.22 Hz; 0.25: 0.49 Hz; 0.375: 1.10 Hz; 0.5: 2.45 Hz; 0.625: 5.45 Hz; 0.75: 12.1 Hz; 0.875: 27.0 Hz; 1: 60.0 Hz
+- Time | 0..1 | 0.19739 -> 1.00 s | 0.19739 -> 1.00 s | taper: other (linear r2 0.020, log r2 0.056)
+    0: 100 ms; 0.125: 297 ms; 0.25: 2.08 s; 0.375: 7.73 s; 0.5: 20.0 s; 0.625: 41.9 s; 0.75: 76.8 s; 0.875: 128.2 s; 1: 200.0 s
+- Rate | 0..21 | 6 -> 1 | 6 -> 1 | stepped display (22 values, one per integer)
+    0: 8; 0.6562: 6; 1.641: 4; 2.625: 3; 3.609: 2; 4.594: 1.5; 5.578: 1; 6.562: 3/4; 7.547: 1/2; 8.531: 3/8; 9.516: 1/3; 10.5: 5/16; 11.81: 1/4; 12.8: 3/16; 13.78: 1/6; 14.77: 1/8; 15.75: 1/12; 16.73: 1/16; 17.72: 1/24; 18.7: 1/32; 19.69: 1/48; 20.67: 1/64
+- 16th | 1..64 | 16 -> 16  / 16 | 16 -> 16  / 16 | taper: linear
+    1: 1  / 16; 8.875: 9  / 16; 16.75: 17  / 16; 24.62: 25  / 16; 32.5: 33  / 16; 40.38: 40  / 16; 48.25: 48  / 16; 56.12: 56  / 16; 64: 64  / 16
+- Phase | 0..1 | 0.5 -> 180° | 0.5 -> 180° | taper: linear
+    0: 0.0°; 0.125: 45°; 0.25: 90°; 0.375: 135°; 0.5: 180°; 0.625: 225°; 0.75: 270°; 0.875: 315°; 1: 360°
+- Offset | 0..1 | 0 -> 0.0° | 0 -> 0.0° | taper: linear
+    0: 0.0°; 0.125: 45°; 0.25: 90°; 0.375: 135°; 0.5: 180°; 0.625: 225°; 0.75: 270°; 0.875: 315°; 1: 360°
+- Stereo Mode | 0..1 | 0 -> Phase | 0 -> Phase | steps: Phase / Spin
+    0: Phase; 1: Spin
+- Spin | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 6.2 %; 0.25: 12 %; 0.375: 19 %; 0.5: 25 %; 0.625: 31 %; 0.75: 38 %; 0.875: 44 %; 1: 50 %
+- Panning Shape | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Tremolo Shape | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Attack Time | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.000, log r2 0.000)
+    0: 0.00 ms; 0.125: 4.92 ms; 0.25: 49.4 ms; 0.375: 191 ms; 0.5: 497 ms; 0.625: 1.05 s; 0.75: 1.92 s; 0.875: 3.21 s; 1: 5.00 s
+- Dyn Mod | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Harmonic | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Vintage | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Mode = 0
+Modulation_Amount = 0.5
+Modulation_Waveform = 0
+Modulation_Invert = false
+Modulation_TimeMode = 0
+Modulation_Frequency = 1
+Modulation_Time = 1.00000012
+Modulation_SyncedRate = 6
+Modulation_Sixteenth = 16
+Modulation_Phase = 180
+Modulation_PhaseOffset = 0
+Modulation_StereoMode = 0
+Modulation_Spin = 0
+PanningWaveformShape = 0
+TremoloWaveformShape = 0
+AttackTime = 0
+DynamicFrequencyModulation = 0
+HarmonicMode = false
+VintageMode = false

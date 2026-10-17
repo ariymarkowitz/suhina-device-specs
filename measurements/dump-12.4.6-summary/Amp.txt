@@ -1,0 +1,37 @@
+# Amp  (.als element Amp; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Amp Type | 0..6 | 2 -> Blues | 0 -> Clean | steps: Clean / Boost / Blues / Rock / Lead / Heavy / Bass
+    0: Clean; 1: Boost; 2: Blues; 3: Rock; 4: Lead; 5: Heavy; 6: Bass
+- Bass | 0..1 | 0.5 -> 5 | 0.5 -> 5 | taper: linear
+    0: 0; 0.125: 1.25; 0.25: 2.5; 0.375: 3.75; 0.5: 5; 0.625: 6.25; 0.75: 7.5; 0.875: 8.75; 1: 10
+- Middle | 0..1 | 0.5 -> 5 | 0.5 -> 5 | taper: linear
+    0: 0; 0.125: 1.25; 0.25: 2.5; 0.375: 3.75; 0.5: 5; 0.625: 6.25; 0.75: 7.5; 0.875: 8.75; 1: 10
+- Treble | 0..1 | 0.5 -> 5 | 0.5 -> 5 | taper: linear
+    0: 0; 0.125: 1.25; 0.25: 2.5; 0.375: 3.75; 0.5: 5; 0.625: 6.25; 0.75: 7.5; 0.875: 8.75; 1: 10
+- Presence | 0..1 | 0.5 -> 5 | 0.5 -> 5 | taper: linear
+    0: 0; 0.125: 1.25; 0.25: 2.5; 0.375: 3.75; 0.5: 5; 0.625: 6.25; 0.75: 7.5; 0.875: 8.75; 1: 10
+- Input Gain | 0..1 | 0.5 -> 5 | 0.5 -> 5 | taper: linear
+    0: 0; 0.125: 1.25; 0.25: 2.5; 0.375: 3.75; 0.5: 5; 0.625: 6.25; 0.75: 7.5; 0.875: 8.75; 1: 10
+- Volume | 0..1 | 0.9 -> 9 | 0.9 -> 9 | taper: linear
+    0: 0; 0.125: 1.25; 0.25: 2.5; 0.375: 3.75; 0.5: 5; 0.625: 6.25; 0.75: 7.5; 0.875: 8.75; 1: 10
+- Dual Mono | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+AmpType = 2
+Bass = 5
+Middle = 5
+Treble = 5
+Presence = 5
+Gain = 5
+Volume = 9
+DualMono = false
+DryWet = 1

@@ -1,0 +1,34 @@
+# Looper  (.als element Looper; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- State | 0..3 | 0 -> Stop | 0 -> Stop | steps: Stop / Record / Play / Overdub
+    0: Stop; 1: Record; 2: Play; 3: Overdub
+- Feedback | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Reverse | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Monitor | 0..3 | 0 -> Always | 0 -> Always | steps: Always / Never / Rec/OVR / Rec/OVR/Stop
+    0: Always; 1: Never; 2: Rec/OVR; 3: Rec/OVR/Stop
+- Speed | -36..36 | 0 -> 0 | 0 -> 0 | taper: linear
+    -36: -36; -27: -27; -18: -18; -9: -9; 0: 0; 9: 9; 18: 18; 27: 27; 36: 36
+- Quantization | 0..14 | 0 -> Global | 0 -> Global | steps: Global / None / 8 Bars / 4 Bars / 2 Bars / 1 Bar / 1/2 / 1/2T / 1/4 / 1/4T / 1/8 / 1/8T / 1/16 / 1/16T / 1/32
+    0: Global; 1: None; 2: 8 Bars; 3: 4 Bars; 4: 2 Bars; 5: 1 Bar; 6: 1/2; 7: 1/2T; 8: 1/4; 9: 1/4T; 10: 1/8; 11: 1/8T; 12: 1/16; 13: 1/16T; 14: 1/32
+- Song Control | 0..2 | 1 -> Start Song | 0 -> None | steps: None / Start Song / Start & Stop Song
+    0: None; 1: Start Song; 2: Start & Stop Song
+- Tempo Control | 0..2 | 2 -> Set & Follow song tempo | 0 -> None | steps: None / Follow song tempo / Set & Follow song tempo
+    0: None; 1: Follow song tempo; 2: Set & Follow song tempo
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+State = 0
+Feedback = 1
+Reverse = false
+Monitor = 0
+Pitch = 0
+LocalQuantization = 0
+SongControl = 1
+TempoControl = 2

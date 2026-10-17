@@ -1,0 +1,115 @@
+# Shifter  (.als element Shifter; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Lfo Amount Hz | 0..1 | 0 -> 0.00 Hz | 0 -> 0.00 Hz | taper: other (linear r2 0.011, log r2 0.000)
+    0: 0.00 Hz; 0.125: 1.22 Hz; 0.25: 19.5 Hz; 0.375: 98.9 Hz; 0.5: 312 Hz; 0.625: 763 Hz; 0.75: 1.58 kHz; 0.875: 2.93 kHz; 1: 5.00 kHz
+- Lfo Amount St | 0..1 | 0 -> 0.00 st | 0 -> 0.00 st | taper: other (linear r2 0.837, log r2 0.000)
+    0: 0.00 st; 0.125: 0.05 st; 0.25: 0.38 st; 0.375: 1.27 st; 0.5: 3.00 st; 0.625: 5.86 st; 0.75: 10.12 st; 0.875: 16.08 st; 1: 24.00 st
+- Lfo Waveform | 0..9 | 1 -> Triangle | 0 -> Sine | steps: Sine / Triangle / Triangle Analog / Triangle 8 / Triangle 16 / Saw Up / Saw Down / Rectangle / Random / Random S&H
+    0: Sine; 1: Triangle; 2: Triangle Analog; 3: Triangle 8; 4: Triangle 16; 5: Saw Up; 6: Saw Down; 7: Rectangle; 8: Random; 9: Random S&H
+- Lfo Sync | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Lfo Rate Hz | 0..1 | 0.459309 -> 0.50 Hz | 0.459309 -> 0.50 Hz | taper: logarithmic
+    0: 0.01 Hz; 0.125: 0.03 Hz; 0.25: 0.08 Hz; 0.375: 0.24 Hz; 0.5: 0.71 Hz; 0.625: 2.05 Hz; 0.75: 5.95 Hz; 0.875: 17.2 Hz; 1: 50.0 Hz
+- Lfo S. Rate | 0..21 | 12 -> 1/4 | 12 -> 1/4 | stepped display (22 values, one per integer)
+    0: 8; 0.6562: 6; 1.641: 4; 2.625: 3; 3.609: 2; 4.594: 1.5; 5.578: 1; 6.562: 3/4; 7.547: 1/2; 8.531: 3/8; 9.516: 1/3; 10.5: 5/16; 11.81: 1/4; 12.8: 3/16; 13.78: 1/6; 14.77: 1/8; 15.75: 1/12; 16.73: 1/16; 17.72: 1/24; 18.7: 1/32; 19.69: 1/48; 20.67: 1/64
+- Lfo Spin | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Lfo Phase | 0..1 | 0.5 -> 180° | 0.5 -> 180° | taper: linear
+    0: 0.0°; 0.125: 45°; 0.25: 90°; 0.375: 135°; 0.5: 180°; 0.625: 225°; 0.75: 270°; 0.875: 315°; 1: 360°
+- Lfo Spin Amount | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 6.2 %; 0.25: 12 %; 0.375: 19 %; 0.5: 25 %; 0.625: 31 %; 0.75: 38 %; 0.875: 44 %; 1: 50 %
+- Lfo Offset | 0..1 | 0 -> 0.0° | 0 -> 0.0° | taper: linear
+    0: 0.0°; 0.125: 45°; 0.25: 90°; 0.375: 135°; 0.5: 180°; 0.625: 225°; 0.75: 270°; 0.875: 315°; 1: 360°
+- Lfo Width | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Lfo Duty Cycle | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Pitch Coarse | -24..24 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -24: -24 st; -18: -18 st; -12: -12 st; -6: -6 st; 0: 0 st; 6: 6 st; 12: 12 st; 18: 18 st; 24: 24 st
+- Pitch Fine | 0..1 | 0.5 -> 0 ct | 0.5 -> 0 ct | taper: linear
+    0: -100 ct; 0.125: -75 ct; 0.25: -50 ct; 0.375: -25 ct; 0.5: 0 ct; 0.625: 25 ct; 0.75: 50 ct; 0.875: 75 ct; 1: 100 ct
+- Pitch Window | 0..1 | 0.590482 -> 80.0 ms | 0.590482 -> 80.0 ms | taper: other (linear r2 0.837, log r2 0.989)
+    0: 10.0 ms; 0.125: 10.7 ms; 0.25: 15.3 ms; 0.375: 27.9 ms; 0.5: 52.5 ms; 0.625: 93.0 ms; 0.75: 153 ms; 0.875: 238 ms; 1: 350 ms
+- Mod Fine | 0..1 | 0.5 -> 0.00 Hz | 0.5 -> 0.00 Hz | taper: other (linear r2 0.840, log r2 0.000)
+    0: -500 Hz; 0.125: -211 Hz; 0.25: -62.5 Hz; 0.375: -7.81 Hz; 0.5: 0.00 Hz; 0.625: 7.81 Hz; 0.75: 62.5 Hz; 0.875: 211 Hz; 1: 500 Hz
+- FShift Coarse | 0..1 | 0.5 -> 0.00 Hz | 0.5 -> 0.00 Hz | taper: other (linear r2 0.004, log r2 0.000)
+    0: -10.0 kHz; 0.125: -7.50 kHz; 0.25: -5.00 kHz; 0.375: -2.50 kHz; 0.5: 0.00 Hz; 0.625: 2.50 kHz; 0.75: 5.00 kHz; 0.875: 7.50 kHz; 1: 10.0 kHz
+- RM Coarse | 0..1 | 0.75 -> 1.00 kHz | 0.75 -> 1.00 kHz | taper: other (linear r2 0.061, log r2 0.038)
+    0: 1.00 Hz; 0.125: 3.16 Hz; 0.25: 10.0 Hz; 0.375: 31.6 Hz; 0.5: 100 Hz; 0.625: 316 Hz; 0.75: 1.00 kHz; 0.875: 3.16 kHz; 1: 10.0 kHz
+- RM Drive | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- RM Drive Gain | 0..1 | 0 -> 0.0 dB | 0 -> 0.0 dB | taper: other (linear r2 0.999, log r2 0.000)
+    0: 0.0 dB; 0.125: 3.0 dB; 0.25: 6.0 dB; 0.375: 9.0 dB; 0.5: 12 dB; 0.625: 15 dB; 0.75: 18 dB; 0.875: 21 dB; 1: 24 dB
+- MidiPitch Glide | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.019, log r2 0.000)
+    0: 0.00 ms; 0.125: 4.88 ms; 0.25: 78.1 ms; 0.375: 396 ms; 0.5: 1.25 s; 0.625: 3.05 s; 0.75: 6.33 s; 0.875: 11.7 s; 1: 20.0 s
+- Env On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Env Attack | 0..1 | 0.197324 -> 6.00 ms | 0.197324 -> 6.00 ms | taper: linear
+    0: 0.10 ms; 0.125: 3.84 ms; 0.25: 7.57 ms; 0.375: 11.3 ms; 0.5: 15.0 ms; 0.625: 18.8 ms; 0.75: 22.5 ms; 0.875: 26.3 ms; 1: 30.0 ms
+- Env Release | 0..1 | 0.499875 -> 200 ms | 0.499875 -> 200 ms | taper: linear
+    0: 0.10 ms; 0.125: 50.1 ms; 0.25: 100 ms; 0.375: 150 ms; 0.5: 200 ms; 0.625: 250 ms; 0.75: 300 ms; 0.875: 350 ms; 1: 400 ms
+- Env Amount Hz | 0..1 | 0.5 -> 0.00 Hz | 0.5 -> 0.00 Hz | taper: other (linear r2 0.222, log r2 0.000)
+    0: -5.00 kHz; 0.125: -1.58 kHz; 0.25: -312 Hz; 0.375: -19.5 Hz; 0.5: 0.00 Hz; 0.625: 19.5 Hz; 0.75: 312 Hz; 0.875: 1.58 kHz; 1: 5.00 kHz
+- Env Amount St | 0..1 | 0.5 -> 0.00 st | 0.5 -> 0.00 st | taper: other (linear r2 0.840, log r2 0.000)
+    0: -24.00 st; 0.125: -10.12 st; 0.25: -3.00 st; 0.375: -0.38 st; 0.5: 0.00 st; 0.625: 0.38 st; 0.75: 3.00 st; 0.875: 10.12 st; 1: 24.00 st
+- Delay On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Delay Sync | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Delay Time | 0..1 | 0.349013 -> 250 ms | 0.349013 -> 250 ms | taper: other (linear r2 0.014, log r2 0.176)
+    0: 10.0 ms; 0.125: 17.9 ms; 0.25: 89.0 ms; 0.375: 315 ms; 0.5: 805 ms; 0.625: 1.68 s; 0.75: 3.08 s; 0.875: 5.13 s; 1: 8.00 s
+- Delay Synced | 0..17 | 9 -> 1/4 | 9 -> 1/4 | stepped display (18 values, one per integer)
+    0: 1/64; 0.5312: 1/48; 1.594: 1/32; 2.656: 1/24; 3.719: 1/16; 4.516: 1/12; 5.578: 1/8; 6.641: 1/6; 7.703: 3/16; 8.5: 1/4; 9.562: 5/16; 10.62: 1/3; 11.69: 3/8; 12.75: 1/2; 13.55: 3/4; 14.61: 1; 15.67: 1.5; 16.73: 2
+- Delay Feedback | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: other (linear r2 0.954, log r2 0.000)
+    0: 0.0 %; 0.125: 3.6 %; 0.25: 12 %; 0.375: 26 %; 0.5: 43 %; 0.625: 64 %; 0.75: 89 %; 0.875: 118 %; 1: 150 %
+- Mode | 0..2 | 0 -> Pitch | 0 -> Pitch | steps: Pitch / Freq / Ring
+    0: Pitch; 1: Freq; 2: Ring
+- Tone | 0..1 | 1 -> 22.0 kHz | 1 -> 22.0 kHz | taper: other (linear r2 0.395, log r2 0.305)
+    0: 300 Hz; 0.125: 342 Hz; 0.25: 639 Hz; 0.375: 1.44 kHz; 0.5: 3.01 kHz; 0.625: 5.60 kHz; 0.75: 9.45 kHz; 0.875: 14.8 kHz; 1: 22.0 kHz
+- Wide | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Lfo_Amount = 0
+Lfo_AmountPitch = 0
+Lfo_Waveform = 1
+Lfo_SyncOn = false
+Lfo_RateHz = 0.4999999404
+Lfo_SyncedRate = 12
+Lfo_SpinOn = true
+Lfo_PhaseOffset = 180
+Lfo_SpinAmount = 0
+Lfo_Offset = 0
+Lfo_SHWidth = 0
+Lfo_DutyCycle = 0
+Pitch_Coarse = 0
+Pitch_Fine = 0
+Pitch_WindowSize = 0.07999999076
+ModBasedShifting_Fine = 0
+ModBasedShifting_FShift_Coarse = 0
+ModBasedShifting_RingMod_Coarse = 1000
+ModBasedShifting_RingMod_Drive = false
+ModBasedShifting_RingMod_DriveAmount = 0
+MidiPitch_Glide = 0
+EnvelopeFollower_On = false
+EnvelopeFollower_Attack = 0.006000000052
+EnvelopeFollower_Release = 0.200000003
+EnvelopeFollower_AmountHz = 0
+EnvelopeFollower_AmountPitch = 0
+Delay_On = false
+Delay_SyncOn = true
+Delay_TimeSeconds = 0.2499999702
+Delay_SyncedTime = 9
+Delay_Feedback = 0
+Global_ShifterMode = 0
+Global_Tone = 22000
+Global_Wide = false
+Global_DryWet = 1

@@ -1,0 +1,55 @@
+# Chorus-Ensemble  (.als element Chorus2; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Mode | 0..2 | 0 -> Chorus | 0 -> Chorus | steps: Chorus / Ensemble / Vibrato
+    0: Chorus; 1: Ensemble; 2: Vibrato
+- Shape | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Rate | 0..1 | 0.415518 -> 0.90 Hz | 0.415518 -> 0.90 Hz | taper: other (linear r2 0.806, log r2 0.986)
+    0: 0.10 Hz; 0.125: 0.11 Hz; 0.25: 0.25 Hz; 0.375: 0.67 Hz; 0.5: 1.58 Hz; 0.625: 3.22 Hz; 0.75: 5.82 Hz; 0.875: 9.65 Hz; 1: 15.0 Hz
+- Amount | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Feedback | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 37 %; 0.5: 50 %; 0.625: 62 %; 0.75: 74 %; 0.875: 87 %; 1: 99 %
+- FB Invert | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Offset | 0..1 | 0 -> 0.0° | 0 -> 0.0° | taper: linear
+    0: 0.0°; 0.125: 22°; 0.25: 45°; 0.375: 68°; 0.5: 90°; 0.625: 112°; 0.75: 135°; 0.875: 158°; 1: 180°
+- Delay Time | 0..5 | 3 -> 20 ms | 0 -> Auto | steps: Auto / 7 ms / 10 ms / 20 ms / 35 ms / 50 ms
+    0: Auto; 1: 7 ms; 2: 10 ms; 3: 20 ms; 4: 35 ms; 5: 50 ms
+- Delay Taps | 0..1 | 1 -> 2 | 0 -> 1 | steps: 1 / 2
+    0: 1; 1: 2
+- HP On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- HP Freq | 0..1 | 0.284178 -> 50.0 Hz | 0.284178 -> 50.0 Hz | taper: other (linear r2 0.115, log r2 0.030)
+    0: 20.0 Hz; 0.125: 21.9 Hz; 0.25: 39.6 Hz; 0.375: 95.5 Hz; 0.5: 217 Hz; 0.625: 434 Hz; 0.75: 780 Hz; 0.875: 1.29 kHz; 1: 2.00 kHz
+- Width | 0..1 | 0.5 -> 100 % | 0.5 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 25 %; 0.25: 50 %; 0.375: 75 %; 0.5: 100 %; 0.625: 125 %; 0.75: 150 %; 0.875: 175 %; 1: 200 %
+- Warmth | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: other (linear r2 0.806, log r2 0.000)
+    0: 0.0 %; 0.125: 0.1 %; 0.25: 1.0 %; 0.375: 3.8 %; 0.5: 9.9 %; 0.625: 21 %; 0.75: 38 %; 0.875: 64 %; 1: 100 %
+- Output | 0..1 | 0.707107 -> 0.0 dB | 0.707107 -> 0.0 dB | taper: other (linear r2 0.817, log r2 0.000)
+    0: -inf dB; 0.125: -30 dB; 0.25: -18 dB; 0.375: -11 dB; 0.5: -6.0 dB; 0.625: -2.1 dB; 0.75: 1.0 dB; 0.875: 3.7 dB; 1: 6.0 dB
+- Dry/Wet | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Mode = 0
+Shaping = 0
+Rate = 0.9000000358
+Amount = 0.5
+Feedback = 0
+InvertFeedback = false
+VibratoOffset = 0
+ChorusDelayTime = 3
+ChorusTapCount = 1
+HighpassEnabled = false
+HighpassFrequency = 50.0000076
+Width = 1
+Warmth = 0
+OutputGain = 0.9999999404
+DryWet = 0.5

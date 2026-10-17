@@ -1,0 +1,78 @@
+# Vocoder  (.als element Vocoder; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Lower Filter Band | 1.30103..3.30103 | 1.90309 -> 80.0 Hz | 1.90309 -> 80.0 Hz | taper: other (linear r2 0.187, log r2 0.011)
+    1.301: 20.0 Hz; 1.551: 35.6 Hz; 1.801: 63.2 Hz; 2.051: 112 Hz; 2.301: 200 Hz; 2.551: 356 Hz; 2.801: 632 Hz; 3.051: 1.12 kHz; 3.301: 2.00 kHz
+- Upper Filter Band | 2.30103..4.25527 | 4.07918 -> 12.0 kHz | 4.07918 -> 12.0 kHz | taper: other (linear r2 0.370, log r2 0.369)
+    2.301: 200 Hz; 2.545: 351 Hz; 2.79: 616 Hz; 3.034: 1.08 kHz; 3.278: 1.90 kHz; 3.522: 3.33 kHz; 3.767: 5.84 kHz; 4.011: 10.3 kHz; 4.255: 18.0 kHz
+- Formant Shift | -36..36 | 0 -> 0 | 0 -> 0 | taper: linear
+    -36: -36; -27: -27; -18: -18; -9: -9; 0: 0; 9: 9; 18: 18; 27: 27; 36: 36
+- Filter Width | 0.1..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0.1: 10.0 %; 0.3375: 33.8 %; 0.575: 57.5 %; 0.8125: 81.2 %; 1.05: 105 %; 1.288: 129 %; 1.525: 152 %; 1.763: 176 %; 2: 200 %
+- Precise/Retro | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Gate Threshold | -60..12 | -60 -> -inf dB | -60 -> -inf dB | taper: linear
+    -60: -inf dB; -51: -51 dB; -42: -42 dB; -33: -33 dB; -24: -24 dB; -15: -15 dB; -6: -6.0 dB; 3: 3.0 dB; 12: 12 dB
+- Output | -24..24 | 0 -> 0.0 dB | 0 -> 0.0 dB | taper: linear
+    -24: -24 dB; -18: -18 dB; -12: -12 dB; -6: -6.0 dB; 0: 0.0 dB; 6: 6.0 dB; 12: 12 dB; 18: 18 dB; 24: 24 dB
+- Attack Time | 0..3 | 0 -> 1.00 ms | 0 -> 1.00 ms | taper: other (linear r2 0.562, log r2 0.831)
+    0: 1.00 ms; 0.375: 2.37 ms; 0.75: 5.62 ms; 1.125: 13.3 ms; 1.5: 31.6 ms; 1.875: 75.0 ms; 2.25: 178 ms; 2.625: 422 ms; 3: 1.00 s
+- Release Time | 1..4.47712 | 2.17609 -> 150 ms | 2.17609 -> 150 ms | taper: other (linear r2 0.005, log r2 0.100)
+    1: 10.0 ms; 1.435: 27.2 ms; 1.869: 74.0 ms; 2.304: 201 ms; 2.739: 548 ms; 3.173: 1.49 s; 3.608: 4.05 s; 4.042: 11.0 s; 4.477: 30.0 s
+- Unvoiced Sensitivity | 0..1 | 0.5 -> 50.0 % | 0.5 -> 50.0 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+- Unvoiced Speed | 0..1 | 0 -> Fast | 0 -> Fast | steps: Fast / Slow
+    0: Fast; 1: Slow
+- Unvoiced Level | 0..1 | 0 -> -inf dB | 0 -> -inf dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -51 dB; 0.25: -35 dB; 0.375: -25 dB; 0.5: -20 dB; 0.625: -15 dB; 0.75: -10 dB; 0.875: -5.0 dB; 1: 0.0 dB
+- Enhance | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Mono/Stereo | 0..2 | 1 -> Stereo | 0 -> Mono | steps: Mono / Stereo / L/R
+    0: Mono; 1: Stereo; 2: L/R
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+- Envelope Depth | 0..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.25: 25.0 %; 0.5: 50.0 %; 0.75: 75.0 %; 1: 100 %; 1.25: 125 %; 1.5: 150 %; 1.75: 175 %; 2: 200 %
+- Noise Rate | 2..4.30103 | 4.30103 -> 20.0 kHz | 4.30103 -> 20.0 kHz | taper: other (linear r2 0.216, log r2 0.382)
+    2: 100 Hz; 2.288: 194 Hz; 2.575: 376 Hz; 2.863: 729 Hz; 3.151: 1.41 kHz; 3.438: 2.74 kHz; 3.726: 5.32 kHz; 4.013: 10.3 kHz; 4.301: 20.0 kHz
+- Noise Crackle | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+- Lower Pitch Detection | 1.47712..2.47712 | 1.90309 -> 80.0 Hz | 1.90309 -> 80.0 Hz | taper: logarithmic
+    1.477: 30.0 Hz; 1.602: 40.0 Hz; 1.727: 53.3 Hz; 1.852: 71.1 Hz; 1.977: 94.9 Hz; 2.102: 127 Hz; 2.227: 169 Hz; 2.352: 225 Hz; 2.477: 300 Hz
+- Upper Pitch Detection | 2.47712..3.47712 | 2.69897 -> 500 Hz | 2.69897 -> 500 Hz | taper: other (linear r2 0.363, log r2 0.641)
+    2.477: 300 Hz; 2.602: 400 Hz; 2.727: 533 Hz; 2.852: 711 Hz; 2.977: 949 Hz; 3.102: 1.27 kHz; 3.227: 1.69 kHz; 3.352: 2.25 kHz; 3.477: 3.00 kHz
+- Oscillator Pitch | -36..36 | 0 -> 0 | 0 -> 0 | taper: linear
+    -36: -36; -27: -27; -18: -18; -9: -9; 0: 0; 9: 9; 18: 18; 27: 27; 36: 36
+- Oscillator Waveform | 0..3 | 0 -> Saw | 0 -> Saw | steps: Saw / Pulse10 / Pulse25 / Pulse48
+    0: Saw; 1: Pulse10; 2: Pulse25; 3: Pulse48
+- Ext. In Gain | 0..1 | 0.4 -> 0.00 dB | 0.4 -> 0.00 dB | taper: other (linear r2 0.907, log r2 0.000)
+    0: -inf dB; 0.125: -26.6 dB; 0.25: -10.8 dB; 0.375: -1.18 dB; 0.5: 4.00 dB; 0.625: 9.00 dB; 0.75: 14.0 dB; 0.875: 19.0 dB; 1: 24.0 dB
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+LowFrequency = 80
+HighFrequency = 12000
+FormantShift = 0
+FilterBandWidth = 1
+Retro = false
+LevelGate = -60
+OutputGain = 0
+EnvelopeRate = 1
+EnvelopeRelease = 150
+UvdThreshold = 0.5
+UvdSlow = false
+UvdLevel = 0.0003162277571
+CarrierSource/NoiseRate = 20000
+CarrierSource/NoiseCrackle = 1
+CarrierSource/DetectionLowerBound = 80
+CarrierSource/DetectionUpperBound = 500
+CarrierSource/OscillatorPitch = 0
+CarrierSource/OscillatorWaveform = 0
+CarrierFlatten = false
+MonoStereo = 1
+DryWet = 1
+ModulatorAmount = 1

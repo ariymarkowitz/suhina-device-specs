@@ -1,0 +1,37 @@
+# Redux  (.als element Redux2; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Sample Rate | 0..1 | 1 -> 40.0 kHz | 1 -> 40.0 kHz | taper: other (linear r2 0.085, log r2 0.055)
+    0: 20.0 Hz; 0.125: 59.0 Hz; 0.25: 414 Hz; 0.375: 1.54 kHz; 0.5: 3.99 kHz; 0.625: 8.37 kHz; 0.75: 15.3 kHz; 0.875: 25.6 kHz; 1: 40.0 kHz
+- Jitter | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: other (linear r2 0.936, log r2 0.000)
+    0: 0.0 %; 0.125: 1.6 %; 0.25: 6.2 %; 0.375: 14 %; 0.5: 25 %; 0.625: 39 %; 0.75: 56 %; 0.875: 77 %; 1: 100 %
+- Bit Depth | 1..16 | 16 -> 16  | 16 -> 16  | stepped display (16 values, one per integer)
+    1: 1; 1.703: 2; 2.641: 3; 3.578: 4; 4.516: 5; 5.688: 6; 6.625: 7; 7.562: 8; 8.5: 9; 9.672: 10; 10.61: 11; 11.55: 12; 12.72: 13; 13.66: 14; 14.59: 15; 15.53: 16
+- Quantizer Shape | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- DC Shift | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Pre-Filter On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Post-Filter On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Post-Filter | 0..1 | 0.5 -> 0.00  | 0.5 -> 0.00  | taper: linear
+    0: -4.00 ; 0.125: -3.00 ; 0.25: -2.00 ; 0.375: -1.00 ; 0.5: 0.00 ; 0.625: 1.00 ; 0.75: 2.00 ; 0.875: 3.00 ; 1: 4.00 
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+SampleRate = 40000
+Jitter = 0
+BitDepth = 16
+QuantizerShape = 0
+QuantizerDcShift = false
+EnablePreFilter = false
+EnablePostFilter = false
+PostFilterValue = 0
+DryWet = 1

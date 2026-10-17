@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+Icon?
+
+# Python
+tools/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Large, regenerable audio (probe signal from tools/harness/signals.py; renders from Live)
+probe.wav
+measurements/export/
+*.asd
+Backup/

@@ -1,0 +1,67 @@
+# Spectral Resonator  (.als element Transmute; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Transpose | -48..48 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -48: -48 st; -36: -36 st; -24: -24 st; -12: -12 st; 0: 0 st; 12: 12 st; 24: 24 st; 36: 36 st; 48: 48 st
+- Transp Scale | -28..28 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -28: -28 sd; -21: -21 sd; -14: -14 sd; -7: -7 sd; 0: 0 sd; 7: 7 sd; 14: 14 sd; 21: 21 sd; 28: 28 sd
+- Glide | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.019, log r2 0.000)
+    0: 0.00 ms; 0.125: 4.88 ms; 0.25: 78.1 ms; 0.375: 396 ms; 0.5: 1.25 s; 0.625: 3.05 s; 0.75: 6.33 s; 0.875: 11.7 s; 1: 20.0 s
+- Freq. Hz | 0..1 | 0.47234 -> 110 Hz | 0.47234 -> 110 Hz | taper: other (linear r2 0.236, log r2 0.009)
+    0: 8.20 Hz; 0.125: 16.3 Hz; 0.25: 32.4 Hz; 0.375: 64.4 Hz; 0.5: 128 Hz; 0.625: 255 Hz; 0.75: 506 Hz; 0.875: 1.01 kHz; 1: 2.00 kHz
+- Note | 0..96 | 45 -> A1 | 45 -> A1 | taper: unknown
+    0: C-2; 12: C-1; 24: C0; 36: C1; 48: C2; 60: C3; 72: C4; 84: C5; 96: C6
+- Shift | 0..1 | 0.5 -> 0.0 st | 0.5 -> 0.0 st | taper: linear
+    0: -48.0 st; 0.125: -36.0 st; 0.25: -24.0 st; 0.375: -12.0 st; 0.5: 0.0 st; 0.625: 12.0 st; 0.75: 24.0 st; 0.875: 36.0 st; 1: 48.0 st
+- Stretch | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Quantize | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Decay | 0..1 | 0.222738 -> 222 ms | 0.222738 -> 222 ms | taper: other (linear r2 0.081, log r2 0.035)
+    0: 1.00 ms; 0.125: 40.1 ms; 0.25: 313 ms; 0.375: 1.06 s; 0.5: 2.50 s; 0.625: 4.88 s; 0.75: 8.44 s; 0.875: 13.4 s; 1: 20.0 s
+- High Damp | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Low Damp | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Mod Rate | 0..1 | 0.500841 -> 10 % | 0.500841 -> 10 % | taper: other (linear r2 0.806, log r2 0.000)
+    0: 0.0 %; 0.125: 0.1 %; 0.25: 1.0 %; 0.375: 3.8 %; 0.5: 9.9 %; 0.625: 21 %; 0.75: 38 %; 0.875: 64 %; 1: 100 %
+- Pitch Mod | 0..1 | 0 -> 0.00 st | 0 -> 0.00 st | taper: other (linear r2 0.806, log r2 0.000)
+    0: 0.00 st; 0.125: 0.00 st; 0.25: 0.04 st; 0.375: 0.15 st; 0.5: 0.40 st; 0.625: 0.84 st; 0.75: 1.53 st; 0.875: 2.56 st; 1: 4.00 st
+- Harmonics | 0..1 | 1 -> 256  | 1 -> 256  | taper: other (linear r2 0.695, log r2 0.998)
+    0: 1 ; 0.125: 2 ; 0.25: 4 ; 0.375: 8 ; 0.5: 16 ; 0.625: 32 ; 0.75: 64 ; 0.875: 128 ; 1: 256 
+- Unison | 0..3 | 0 -> 1  | 0 -> 1  | stepped display (4 values, one per integer)
+    0: 1; 0.5156: 2; 1.5: 4; 2.531: 8
+- Unison Amount | 0..1 | 0.562341 -> 10 % | 0.562341 -> 10 % | taper: other (linear r2 0.746, log r2 0.000)
+    0: 0.0 %; 0.125: 0.0 %; 0.25: 0.4 %; 0.375: 2.0 %; 0.5: 6.2 %; 0.625: 15 %; 0.75: 32 %; 0.875: 59 %; 1: 100 %
+- Send Gain | 0..1 | 0.5 -> 0.00 dB | 0.5 -> 0.00 dB | taper: linear
+    0: -24.00 dB; 0.125: -18.00 dB; 0.25: -12.00 dB; 0.375: -6.00 dB; 0.5: 0.00 dB; 0.625: 6.00 dB; 0.75: 12.00 dB; 0.875: 18.00 dB; 1: 24.00 dB
+- Dry Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Use Scale | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+MidiPitch_Transpose = 0
+MidiPitch_TransposeScaleDegrees = 0
+MidiPitch_Glide = 0
+PartialFrequencies_FrequencyHz = 110
+PartialFrequencies_FrequencyNote = 45
+PartialFrequencies_Shift = 0
+PartialFrequencies_PartialStretch = 0
+PartialFrequencies_QuantizeToScaleOrTuning = false
+DecayDamping_DecayTime = 0.2219999582
+DecayDamping_HighFreqDamp = 0
+DecayDamping_LowFreqDamp = 0
+Modulation_ModRate = 0.09999999404
+Modulation_PitchModAmount = 0
+Global_NumHarmonics = 256
+Global_Unison = 0
+Global_UnisonAmount = 0.1000000015
+Global_InputSend = 0
+Global_DryWet = 1
+Global_UseScale = false

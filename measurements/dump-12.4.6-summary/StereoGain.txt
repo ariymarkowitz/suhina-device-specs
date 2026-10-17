@@ -1,0 +1,45 @@
+# Utility  (.als element StereoGain; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Left Inv | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Right Inv | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Channel Mode | 0..3 | 1 -> Stereo | 0 -> Left | steps: Left / Stereo / Right / Swap
+    0: Left; 1: Stereo; 2: Right; 3: Swap
+- Stereo Width | 0..2 | 1 -> 100 % | 1 -> 100 % | taper: other (linear r2 0.936, log r2 0.000)
+    0: 0.0 %; 0.25: 6.2 %; 0.5: 25 %; 0.75: 56 %; 1: 100 %; 1.25: 156 %; 1.5: 225 %; 1.75: 306 %; 2: 400 %
+- Mono | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Bass Mono | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Bass Freq | 0..1 | 0.380211 -> 120 Hz | 0.380211 -> 120 Hz | taper: logarithmic
+    0: 50.0 Hz; 0.125: 66.7 Hz; 0.25: 88.9 Hz; 0.375: 119 Hz; 0.5: 158 Hz; 0.625: 211 Hz; 0.75: 281 Hz; 0.875: 375 Hz; 1: 500 Hz
+- Balance | -1..1 | 0 -> C | 0 -> C | taper: other (linear r2 0.000, log r2 0.000)
+    -1: 50L; -0.75: 38L; -0.5: 25L; -0.25: 12L; 0: C; 0.25: 12R; 0.5: 25R; 0.75: 38R; 1: 50R
+- Output | -1..1 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: other (linear r2 0.961, log r2 0.000)
+    -1: -inf dB; -0.75: -29.6 dB; -0.5: -17.5 dB; -0.25: -8.75 dB; 0: 0.00 dB; 0.25: 8.75 dB; 0.5: 17.5 dB; 0.75: 26.2 dB; 1: 35.0 dB
+- Mute | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- DC Filter | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+PhaseInvertL = false
+PhaseInvertR = false
+ChannelMode = 1
+StereoWidth = 1
+MidSideBalance = 1
+Mono = false
+BassMono = false
+BassMonoFrequency = 120
+Balance = 0
+Gain = 1
+LegacyGain = 0
+Mute = false
+DcFilter = false

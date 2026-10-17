@@ -1,0 +1,56 @@
+{
+ "device": "Compressor",
+ "parameter": "Threshold",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {}
+  },
+  {
+   "id": "Threshold-0pct",
+   "params": {
+    "Threshold": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "Threshold-25pct",
+   "params": {
+    "Threshold": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "Threshold-50pct",
+   "params": {
+    "Threshold": {
+     "norm": 0.5
+    }
+   }
+  },
+  {
+   "id": "Threshold-75pct",
+   "params": {
+    "Threshold": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "Threshold-100pct",
+   "params": {
+    "Threshold": {
+     "norm": 1.0
+    }
+   }
+  }
+ ]
+}

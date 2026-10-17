@@ -1,0 +1,25 @@
+# Erosion  (.als element Erosion2; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Amount | 0..1 | 0.2 -> 20 % | 0.2 -> 20 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Frequency | 0..1 | 0.473197 -> 500 Hz | 0.473197 -> 500 Hz | taper: other (linear r2 0.015, log r2 0.222)
+    0: 20.0 Hz; 0.125: 46.8 Hz; 0.25: 110 Hz; 0.375: 256 Hz; 0.5: 600 Hz; 0.625: 1.40 kHz; 0.75: 3.29 kHz; 0.875: 7.69 kHz; 1: 18.0 kHz
+- Filter Width | 0..1 | 0.375 -> 1.00  | 0.375 -> 1.00  | taper: linear
+    0: 0.10 ; 0.125: 0.40 ; 0.25: 0.70 ; 0.375: 1.00 ; 0.5: 1.30 ; 0.625: 1.60 ; 0.75: 1.90 ; 0.875: 2.20 ; 1: 2.50 
+- Noise Blend | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Stereo Width | 0..1 | 0.25 -> 25 % | 0.25 -> 25 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Amount = 0.200000003
+Frequency = 499.999939
+FilterWidth = 0.9999999404
+NoiseBlend = 0.5
+StereoWidth = 0.25

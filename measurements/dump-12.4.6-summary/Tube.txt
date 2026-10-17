@@ -1,0 +1,37 @@
+# Dynamic Tube  (.als element Tube; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+- Drive | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- Output | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- Bias | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Envelope | -3..3 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    -3: -300 %; -2.25: -225 %; -1.5: -150 %; -0.75: -75 %; 0: 0.0 %; 0.75: 75 %; 1.5: 150 %; 2.25: 225 %; 3: 300 %
+- Attack | 0..1 | 0.268622 -> 5.00 ms | 0.268622 -> 5.00 ms | taper: logarithmic
+    0: 1.00 ms; 0.125: 2.11 ms; 0.25: 4.47 ms; 0.375: 9.46 ms; 0.5: 20.0 ms; 0.625: 42.3 ms; 0.75: 89.4 ms; 0.875: 189 ms; 1: 400 ms
+- Release | 0..1 | 0.486154 -> 35.0 ms | 0.486154 -> 35.0 ms | taper: other (linear r2 0.411, log r2 0.481)
+    0: 1.00 ms; 0.125: 2.49 ms; 0.25: 6.22 ms; 0.375: 15.5 ms; 0.5: 38.7 ms; 0.625: 96.6 ms; 0.75: 241 ms; 0.875: 601 ms; 1: 1.50 s
+- Tone | -1..1 | 0 -> 0 | 0 -> 0 | taper: linear
+    -1: -1; -0.75: -0.75; -0.5: -0.5; -0.25: -0.25; 0: 0; 0.25: 0.25; 0.5: 0.5; 0.75: 0.75; 1: 1
+- Tube Type | 0..2 | 0 -> A | 0 -> A | steps: A / B / C
+    0: A; 1: B; 2: C
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+DryWet = 1
+PreDrive = 0
+PostDrive = 0
+Bias = 0
+AutoBias = 0
+AutoBiasAttack = 5
+AutoBiasRelease = 35
+Tone = 0
+Type = 0

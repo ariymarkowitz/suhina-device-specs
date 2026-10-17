@@ -1,0 +1,139 @@
+# Auto Shift  (.als element AutoShift; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Input Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -24 dB; 0.125: -18 dB; 0.25: -12 dB; 0.375: -6.0 dB; 0.5: 0.0 dB; 0.625: 6.0 dB; 0.75: 12 dB; 0.875: 18 dB; 1: 24 dB
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Scale Aware | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Glide Time | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.009, log r2 0.000)
+    0: 0.00 ms; 0.125: 31.2 ms; 0.25: 125 ms; 0.375: 281 ms; 0.5: 500 ms; 0.625: 781 ms; 0.75: 1.12 s; 0.875: 1.53 s; 1: 2.00 s
+- PB Range | 0..48 | 6 -> 6 st | 6 -> 6 st | taper: linear
+    0: 0 st; 6: 6 st; 12: 12 st; 18: 18 st; 24: 24 st; 30: 30 st; 36: 36 st; 42: 42 st; 48: 48 st
+- Attack Time | 0..1 | 0.141421 -> 20.0 ms | 0.141421 -> 20.0 ms | taper: other (linear r2 0.823, log r2 0.000)
+    0: 0.00 ms; 0.125: 15.6 ms; 0.25: 62.5 ms; 0.375: 141 ms; 0.5: 250 ms; 0.625: 391 ms; 0.75: 562 ms; 0.875: 766 ms; 1: 1.00 s
+- Release Time | 0..1 | 0.15874 -> 20.0 ms | 0.15874 -> 20.0 ms | taper: other (linear r2 0.003, log r2 0.000)
+    0: 0.00 ms; 0.125: 9.77 ms; 0.25: 78.1 ms; 0.375: 264 ms; 0.5: 625 ms; 0.625: 1.22 s; 0.75: 2.11 s; 0.875: 3.35 s; 1: 5.00 s
+- Latch | 0..1 | 0 -> Gate | 0 -> Gate | steps: Gate / Latch
+    0: Gate; 1: Latch
+- Pitch St. | -12..12 | 0 -> 0 st | 0 -> 0 st | stepped display (25 values, one per integer)
+    -12: -12 st; -11.25: -11 st; -10.12: -10 st; -9.375: -9 st; -8.25: -8 st; -7.125: -7 st; -6.375: -6 st; -5.25: -5 st; -4.125: -4 st; -3.375: -3 st; -2.25: -2 st; -1.125: -1 st; -0.375: 0 st; 0.75: 1 st; 1.5: 2 st; 2.625: 3 st; 3.75: 4 st; 4.5: 5 st; 5.625: 6 st; 6.75: 7 st; 7.5: 8 st; 8.625: 9 st; 9.75: 10 st; 10.5: 11 st; 11.62: 12 st
+- Pitch Scale Deg. | -12..12 | 0 -> 0 sd | 0 -> 0 sd | stepped display (25 values, one per integer)
+    -12: -12 sd; -11.25: -11 sd; -10.12: -10 sd; -9.375: -9 sd; -8.25: -8 sd; -7.125: -7 sd; -6.375: -6 sd; -5.25: -5 sd; -4.125: -4 sd; -3.375: -3 sd; -2.25: -2 sd; -1.125: -1 sd; -0.375: 0 sd; 0.75: 1 sd; 1.5: 2 sd; 2.625: 3 sd; 3.75: 4 sd; 4.5: 5 sd; 5.625: 6 sd; 6.75: 7 sd; 7.5: 8 sd; 8.625: 9 sd; 9.75: 10 sd; 10.5: 11 sd; 11.62: 12 sd
+- Pitch Fine | 0..1 | 0.5 -> 0 ct | 0.5 -> 0 ct | taper: linear
+    0: -100 ct; 0.125: -75 ct; 0.25: -50 ct; 0.375: -25 ct; 0.5: 0 ct; 0.625: 25 ct; 0.75: 50 ct; 0.875: 75 ct; 1: 100 ct
+- Formant Shift | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Formant Follow | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Quantizer On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Smooth On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Smooth Time | 0..1 | 0.707107 -> 50.0 ms | 0.707107 -> 50.0 ms | taper: other (linear r2 0.747, log r2 0.000)
+    0: 0.00 ms; 0.125: 0.05 ms; 0.25: 0.78 ms; 0.375: 3.96 ms; 0.5: 12.5 ms; 0.625: 30.5 ms; 0.75: 63.3 ms; 0.875: 117 ms; 1: 200 ms
+- Strength | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Root | 0..11 | 0 -> C | 0 -> C | steps: C / C♯ / D / D♯ / E / F / F♯ / G / G♯ / A / A♯ / B
+    0: C; 1: C♯; 2: D; 3: D♯; 4: E; 5: F; 6: F♯; 7: G; 8: G♯; 9: A; 10: A♯; 11: B
+- Scale | 0..36 | 0 -> Custom | 0 -> Custom | steps: Custom / Chromatic / Major / Minor / Dorian / Mixolydian / Lydian / Phrygian / Locrian / Whole Tone / Half-whole Dim. / Whole-half Dim. / Minor Blues / Minor Pentatonic / Major Pentatonic / Harmonic Minor / Harmonic Major / Dorian #4 / Phrygian Dominant / Melodic Minor / Lydian Augmented / Lydian Dominant / Super Locrian / 8-Tone Spanish / Bhairav / Hungarian Minor / Hirajoshi / In-Sen / Iwato / Kumoi / Pelog Selisir / Pelog Tembung / Messiaen 3 / Messiaen 4 / Messiaen 5 / Messiaen 6 / Messiaen 7
+    0: Custom; 1: Chromatic; 2: Major; 3: Minor; 4: Dorian; 5: Mixolydian; 6: Lydian; 7: Phrygian; 8: Locrian; 9: Whole Tone; 10: Half-whole Dim.; 11: Whole-half Dim.; 12: Minor Blues; 13: Minor Pentatonic; 14: Major Pentatonic; 15: Harmonic Minor; 16: Harmonic Major; 17: Dorian #4; 18: Phrygian Dominant; 19: Melodic Minor; 20: Lydian Augmented; 21: Lydian Dominant; 22: Super Locrian; 23: 8-Tone Spanish; 24: Bhairav; 25: Hungarian Minor; 26: Hirajoshi; 27: In-Sen; 28: Iwato; 29: Kumoi; 30: Pelog Selisir; 31: Pelog Tembung; 32: Messiaen 3; 33: Messiaen 4; 34: Messiaen 5; 35: Messiaen 6; 36: Messiaen 7
+- LFO On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- LFO Retrig On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- LFO Delay | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.337, log r2 0.000)
+    0: 0.00 ms; 0.125: 0.37 ms; 0.25: 5.86 ms; 0.375: 29.7 ms; 0.5: 93.8 ms; 0.625: 229 ms; 0.75: 475 ms; 0.875: 879 ms; 1: 1.50 s
+- LFO Fade-In | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.009, log r2 0.000)
+    0: 0.00 ms; 0.125: 31.2 ms; 0.25: 125 ms; 0.375: 281 ms; 0.5: 500 ms; 0.625: 781 ms; 0.75: 1.12 s; 0.875: 1.53 s; 1: 2.00 s
+- LFO Wave | 0..8 | 1 -> Triangle | 0 -> Sine | steps: Sine / Triangle / Triangle 8 / Triangle 16 / Saw Up / Saw Down / Rectangle / Random / Random S&H
+    0: Sine; 1: Triangle; 2: Triangle 8; 3: Triangle 16; 4: Saw Up; 5: Saw Down; 6: Rectangle; 7: Random; 8: Random S&H
+- LFO Sync | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- LFO Rate | 0..1 | 0.514679 -> 0.50 Hz | 0.514679 -> 0.50 Hz | taper: other (linear r2 0.577, log r2 0.999)
+    0: 0.01 Hz; 0.125: 0.03 Hz; 0.25: 0.07 Hz; 0.375: 0.17 Hz; 0.5: 0.45 Hz; 0.625: 1.16 Hz; 0.75: 2.99 Hz; 0.875: 7.73 Hz; 1: 20.0 Hz
+- LFO Synced | 0..21 | 12 -> 1/4 | 12 -> 1/4 | stepped display (22 values, one per integer)
+    0: 8; 0.6562: 6; 1.641: 4; 2.625: 3; 3.609: 2; 4.594: 1.5; 5.578: 1; 6.562: 3/4; 7.547: 1/2; 8.531: 3/8; 9.516: 1/3; 10.5: 5/16; 11.81: 1/4; 12.8: 3/16; 13.78: 1/6; 14.77: 1/8; 15.75: 1/12; 16.73: 1/16; 17.72: 1/24; 18.7: 1/32; 19.69: 1/48; 20.67: 1/64
+- Vibrato Fade-In | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.009, log r2 0.000)
+    0: 0.00 ms; 0.125: 31.2 ms; 0.25: 125 ms; 0.375: 281 ms; 0.5: 500 ms; 0.625: 781 ms; 0.75: 1.12 s; 0.875: 1.53 s; 1: 2.00 s
+- Vibrato Rate | 0..1 | 0.455769 -> 6.00 Hz | 0.455769 -> 6.00 Hz | taper: other (linear r2 0.979, log r2 0.988)
+    0: 2.00 Hz; 0.125: 2.57 Hz; 0.25: 3.62 Hz; 0.375: 4.99 Hz; 0.5: 6.60 Hz; 0.625: 8.42 Hz; 0.75: 10.4 Hz; 0.875: 12.6 Hz; 1: 15.0 Hz
+- Vibrato Amt | 0..1 | 0 -> 0 ct | 0 -> 0 ct | taper: linear
+    0: 0 ct; 0.125: 25 ct; 0.25: 50 ct; 0.375: 75 ct; 0.5: 100 ct; 0.625: 125 ct; 0.75: 150 ct; 0.875: 175 ct; 1: 200 ct
+- Vibrato Natural | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- LFO > Pitch | 0..1 | 0 -> 0.00 st | 0 -> 0.00 st | taper: other (linear r2 0.715, log r2 0.000)
+    0: 0.00 st; 0.125: 0.00 st; 0.25: 0.03 st; 0.375: 0.16 st; 0.5: 0.57 st; 0.625: 1.52 st; 0.75: 3.38 st; 0.875: 6.67 st; 1: 12.00 st
+- LFO > Form. | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- LFO > Vol | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- LFO > Pan | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- MIDI > Pitch Src | 0..6 | 0 -> None | 0 -> None | steps: None / Velocity / Pressure / Mod Wheel / Pitch Bend / Note PB / Slide
+    0: None; 1: Velocity; 2: Pressure; 3: Mod Wheel; 4: Pitch Bend; 5: Note PB; 6: Slide
+- MIDI > Form. Src | 0..6 | 0 -> None | 0 -> None | steps: None / Velocity / Pressure / Mod Wheel / Pitch Bend / Note PB / Slide
+    0: None; 1: Velocity; 2: Pressure; 3: Mod Wheel; 4: Pitch Bend; 5: Note PB; 6: Slide
+- MIDI > Vol Src | 0..6 | 0 -> None | 0 -> None | steps: None / Velocity / Pressure / Mod Wheel / Pitch Bend / Note PB / Slide
+    0: None; 1: Velocity; 2: Pressure; 3: Mod Wheel; 4: Pitch Bend; 5: Note PB; 6: Slide
+- MIDI > Pan Src | 0..6 | 0 -> None | 0 -> None | steps: None / Velocity / Pressure / Mod Wheel / Pitch Bend / Note PB / Slide
+    0: None; 1: Velocity; 2: Pressure; 3: Mod Wheel; 4: Pitch Bend; 5: Note PB; 6: Slide
+- MIDI > Pitch | 0..1 | 0 -> 0.00 st | 0 -> 0.00 st | taper: linear
+    0: 0.00 st; 0.125: 1.50 st; 0.25: 3.00 st; 0.375: 4.50 st; 0.5: 6.00 st; 0.625: 7.50 st; 0.75: 9.00 st; 0.875: 10.50 st; 1: 12.00 st
+- MIDI > Form. | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- MIDI > Vol | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- MIDI > Pan | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Global_InputGain = 0
+Global_DryWet = 1
+Global_UseScale = false
+MidiInput_Glide = 0
+MidiInput_PitchBendRange = 6
+MidiInput_AttackTime = 0.01999999769
+MidiInput_ReleaseTime = 0.01999999397
+MidiInput_Latch = 0
+PitchShift_ShiftSemitones = 0
+PitchShift_ShiftScaleDegrees = 0
+PitchShift_Detune = 0
+PitchShift_FormantShift = 0
+PitchShift_FormantFollow = 0
+Quantizer_Active = true
+Quantizer_Smooth = true
+Quantizer_SmoothingTime = 0.04999999702
+Quantizer_Amount = 1
+Quantizer_RootNote = 0
+Quantizer_InternalScale = 0
+Lfo_Enabled = false
+Lfo_OnsetRetrigger = true
+Lfo_Delay = 0
+Lfo_Attack = 0
+Lfo_Waveform = 1
+Lfo_SyncOn = false
+Lfo_RateHz = 0.4999999404
+Lfo_SyncedRate = 12
+Vibrato_Attack = 0
+Vibrato_RateHz = 6
+Vibrato_Amount = 0
+Vibrato_Humanization = false
+Modulation_LfoToPitchModAmount = 0
+Modulation_LfoToFormantModAmount = 0
+Modulation_LfoToVolumeModAmount = 0
+Modulation_LfoToPanModAmount = 0
+Modulation_MidiToPitchModSource = 0
+Modulation_MidiToFormantModSource = 0
+Modulation_MidiToVolumeModSource = 0
+Modulation_MidiToPanModSource = 0
+Modulation_MidiToPitchModAmount = 0
+Modulation_MidiToFormantModAmount = 0
+Modulation_MidiToVolumeModAmount = 0
+Modulation_MidiToPanModAmount = 0

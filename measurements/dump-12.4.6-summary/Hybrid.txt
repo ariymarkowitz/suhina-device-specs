@@ -1,0 +1,169 @@
+# Hybrid Reverb  (.als element Hybrid; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Predelay Sync | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Predelay | 0..1 | 0.165425 -> 10.0 ms | 0.165425 -> 10.0 ms | taper: other (linear r2 0.007, log r2 0.000)
+    0: 0.00 ms; 0.125: 3.93 ms; 0.25: 39.6 ms; 0.375: 153 ms; 0.5: 398 ms; 0.625: 836 ms; 0.75: 1.53 s; 0.875: 2.56 s; 1: 4.00 s
+- Predelay 16th | 0..16 | 2 -> 2  / 16 | 2 -> 2  / 16 | stepped display (17 values, one per integer)
+    0: 0  / 16; 0.5: 1  / 16; 1.5: 2  / 16; 2.5: 3  / 16; 3.5: 4  / 16; 4.5: 5  / 16; 5.5: 6  / 16; 6.5: 7  / 16; 7.5: 8  / 16; 8.5: 9  / 16; 9.5: 10  / 16; 10.5: 11  / 16; 11.5: 12  / 16; 12.5: 13  / 16; 13.5: 14  / 16; 14.5: 15  / 16; 15.5: 16  / 16
+- Predelay FB | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 24 %; 0.375: 36 %; 0.5: 48 %; 0.625: 59 %; 0.75: 71 %; 0.875: 83 %; 1: 95 %
+- Predel. FB 16th | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 24 %; 0.375: 36 %; 0.5: 48 %; 0.625: 59 %; 0.75: 71 %; 0.875: 83 %; 1: 95 %
+- Algo Type | 0..4 | 0 -> Dark Hall | 0 -> Dark Hall | steps: Dark Hall / Quartz / Shimmer / Tides / Prism
+    0: Dark Hall; 1: Quartz; 2: Shimmer; 3: Tides; 4: Prism
+- Algo Delay | 0..1 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.724, log r2 0.000)
+    0: 0.00 ms; 0.125: 0.98 ms; 0.25: 9.89 ms; 0.375: 38.2 ms; 0.5: 99.4 ms; 0.625: 209 ms; 0.75: 384 ms; 0.875: 641 ms; 1: 1.00 s
+- Freeze | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Freeze In | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Decay | 0..1 | 0.5 -> 3.50 s | 0.5 -> 3.50 s | taper: other (linear r2 0.218, log r2 0.053)
+    0: 100 ms; 0.125: 338 ms; 0.25: 1.00 s; 0.375: 2.06 s; 0.5: 3.50 s; 0.625: 5.84 s; 0.75: 15.0 s; 0.875: 32.7 s; 1: 60.0 s
+- Size | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Damping | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Diffusion | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Modulation | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- DH Shape | 0..1 | 0.5 -> 50.0  | 0.5 -> 50.0  | taper: linear
+    0: 0.00 ; 0.125: 12.5 ; 0.25: 25.0 ; 0.375: 37.5 ; 0.5: 50.0 ; 0.625: 62.5 ; 0.75: 75.0 ; 0.875: 87.5 ; 1: 100 
+- DH BassMult | 0..1 | 0.5 -> 100 % | 0.5 -> 100 % | taper: logarithmic
+    0: 25 %; 0.125: 35 %; 0.25: 50 %; 0.375: 71 %; 0.5: 100 %; 0.625: 141 %; 0.75: 200 %; 0.875: 283 %; 1: 400 %
+- DH Bass X | 0..1 | 0.674953 -> 440 Hz | 0.674953 -> 440 Hz | taper: other (linear r2 0.773, log r2 0.312)
+    0: 80.0 Hz; 0.125: 110 Hz; 0.25: 150 Hz; 0.375: 206 Hz; 0.5: 283 Hz; 0.625: 388 Hz; 0.75: 532 Hz; 0.875: 729 Hz; 1: 1.00 kHz
+- Sh Shimmer | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Sh Pitch Shift | 0..1 | 1 -> 12.00 st | 1 -> 12.00 st | taper: linear
+    0: -12.00 st; 0.125: -9.00 st; 0.25: -6.00 st; 0.375: -3.00 st; 0.5: 0.00 st; 0.625: 3.00 st; 0.75: 6.00 st; 0.875: 9.00 st; 1: 12.00 st
+- Ti Tide | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Ti Rate | 0..29 | 22 -> 1 | 22 -> 1 | stepped display (30 values, one per integer)
+    0: 1/128 T; 0.9062: 1/128; 1.812: 1/64 T; 2.719: 1/128 D; 3.625: 1/64; 4.531: 1/32 T; 5.891: 1/64 D; 6.797: 1/32; 7.703: 1/16 T; 8.609: 1/32 D; 9.516: 1/16; 10.88: 1/8 T; 11.78: 1/16 D; 12.69: 1/8; 13.59: 1/4 T; 14.5: 1/8 D; 15.86: 1/4; 16.77: 1/2 T; 17.67: 1/4 D; 18.58: 1/2; 19.94: 1 T; 20.84: 1/2 D; 21.75: 1; 22.66: 2 T; 23.56: 1 D; 24.92: 2; 25.83: 4 T; 26.73: 2 D; 27.64: 4; 28.55: 4 D
+- Ti Waveform | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Ti Phase | 0..1 | 0.5 -> 90° | 0.5 -> 90° | taper: linear
+    0: 0.0°; 0.125: 22°; 0.25: 45°; 0.375: 68°; 0.5: 90°; 0.625: 112°; 0.75: 135°; 0.875: 158°; 1: 180°
+- Qz Low Damp | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Qz Distance | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Pr High Mult | 0..1 | 0.588592 -> 100 % | 0.588592 -> 100 % | taper: logarithmic
+    0: 10 %; 0.125: 16 %; 0.25: 27 %; 0.375: 43 %; 0.5: 71 %; 0.625: 115 %; 0.75: 188 %; 0.875: 307 %; 1: 500 %
+- Pr Low Mult | 0..1 | 0.588592 -> 100 % | 0.588592 -> 100 % | taper: logarithmic
+    0: 10 %; 0.125: 16 %; 0.25: 27 %; 0.375: 43 %; 0.5: 71 %; 0.625: 115 %; 0.75: 188 %; 0.875: 307 %; 1: 500 %
+- Pr X Over | 0..1 | 0.264455 -> 800 Hz | 0.264455 -> 800 Hz | taper: other (linear r2 0.514, log r2 0.531)
+    0: 400 Hz; 0.125: 555 Hz; 0.25: 770 Hz; 0.375: 1.07 kHz; 0.5: 1.48 kHz; 0.625: 2.06 kHz; 0.75: 2.86 kHz; 0.875: 3.96 kHz; 1: 5.50 kHz
+- Pr Sixth | 0..1 | 0 -> 0.00  | 0 -> 0.00  | taper: linear
+    0: 0.00 ; 0.125: 0.12 ; 0.25: 0.25 ; 0.375: 0.38 ; 0.5: 0.50 ; 0.625: 0.62 ; 0.75: 0.75 ; 0.875: 0.88 ; 1: 1.00 
+- Pr Seventh | 0..1 | 0 -> 0.00  | 0 -> 0.00  | taper: linear
+    0: 0.00 ; 0.125: 0.12 ; 0.25: 0.25 ; 0.375: 0.38 ; 0.5: 0.50 ; 0.625: 0.62 ; 0.75: 0.75 ; 0.875: 0.88 ; 1: 1.00 
+- EQ On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- EQ Pre Algo | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- EQ Lo Type | 0..1 | 0 -> Cut | 0 -> Cut | steps: Cut / Shelf
+    0: Cut; 1: Shelf
+- EQ Lo Freq | 0..1 | 0.200687 -> 80.0 Hz | 0.200687 -> 80.0 Hz | taper: other (linear r2 0.014, log r2 0.211)
+    0: 20.0 Hz; 0.125: 47.4 Hz; 0.25: 112 Hz; 0.375: 267 Hz; 0.5: 632 Hz; 0.625: 1.50 kHz; 0.75: 3.56 kHz; 0.875: 8.43 kHz; 1: 20.0 kHz
+- EQ Lo Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -12 dB; 0.125: -9.0 dB; 0.25: -6.0 dB; 0.375: -3.0 dB; 0.5: 0.0 dB; 0.625: 3.0 dB; 0.75: 6.0 dB; 0.875: 9.0 dB; 1: 12 dB
+- EQ Lo Slope | 0..9 | 1 -> 12 dB | 1 -> 12 dB | stepped display (10 values, one per integer)
+    0: 6 dB; 0.5625: 12 dB; 1.547: 18 dB; 2.531: 24 dB; 3.516: 36 dB; 4.5: 48 dB; 5.625: 60 dB; 6.609: 72 dB; 7.594: 84 dB; 8.578: 96 dB
+- EQ Peak 1 Freq | 0..1 | 0.514689 -> 700 Hz | 0.514689 -> ~705 Hz | taper: other (linear r2 0.014, log r2 0.211)
+    0: 20.0 Hz; 0.125: 47.4 Hz; 0.25: 112 Hz; 0.375: 267 Hz; 0.5: 632 Hz; 0.625: 1.50 kHz; 0.75: 3.56 kHz; 0.875: 8.43 kHz; 1: 20.0 kHz
+- EQ Peak 1 Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -12 dB; 0.125: -9.0 dB; 0.25: -6.0 dB; 0.375: -3.0 dB; 0.5: 0.0 dB; 0.625: 3.0 dB; 0.75: 6.0 dB; 0.875: 9.0 dB; 1: 12 dB
+- EQ Peak 1 Q | 0..1 | 0.155668 -> 0.71  | 0.155668 -> 0.71  | taper: linear
+    0: 0.10 ; 0.125: 0.59 ; 0.25: 1.08 ; 0.375: 1.56 ; 0.5: 2.05 ; 0.625: 2.54 ; 0.75: 3.03 ; 0.875: 3.51 ; 1: 4.00 
+- EQ Peak 2 Freq | 0..1 | 0.62502 -> 1.50 kHz | 0.62502 -> 1.50 kHz | taper: other (linear r2 0.014, log r2 0.211)
+    0: 20.0 Hz; 0.125: 47.4 Hz; 0.25: 112 Hz; 0.375: 267 Hz; 0.5: 632 Hz; 0.625: 1.50 kHz; 0.75: 3.56 kHz; 0.875: 8.43 kHz; 1: 20.0 kHz
+- EQ Peak 2 Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -12 dB; 0.125: -9.0 dB; 0.25: -6.0 dB; 0.375: -3.0 dB; 0.5: 0.0 dB; 0.625: 3.0 dB; 0.75: 6.0 dB; 0.875: 9.0 dB; 1: 12 dB
+- EQ Peak 2 Q | 0..1 | 0.155668 -> 0.71  | 0.155668 -> 0.71  | taper: linear
+    0: 0.10 ; 0.125: 0.59 ; 0.25: 1.08 ; 0.375: 1.56 ; 0.5: 2.05 ; 0.625: 2.54 ; 0.75: 3.03 ; 0.875: 3.51 ; 1: 4.00 
+- EQ Hi Type | 0..1 | 1 -> Shelf | 0 -> Cut | steps: Cut / Shelf
+    0: Cut; 1: Shelf
+- EQ Hi Freq | 0..1 | 0.799313 -> 5.00 kHz | 0.76701 -> ~3.96 kHz | taper: other (linear r2 0.014, log r2 0.211)
+    0: 20.0 Hz; 0.125: 47.4 Hz; 0.25: 112 Hz; 0.375: 267 Hz; 0.5: 632 Hz; 0.625: 1.50 kHz; 0.75: 3.56 kHz; 0.875: 8.43 kHz; 1: 20.0 kHz
+- EQ Hi Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -12 dB; 0.125: -9.0 dB; 0.25: -6.0 dB; 0.375: -3.0 dB; 0.5: 0.0 dB; 0.625: 3.0 dB; 0.75: 6.0 dB; 0.875: 9.0 dB; 1: 12 dB
+- EQ Hi Slope | 0..9 | 4 -> 36 dB | 1 -> ~12 dB | stepped display (10 values, one per integer)
+    0: 6 dB; 0.5625: 12 dB; 1.547: 18 dB; 2.531: 24 dB; 3.516: 36 dB; 4.5: 48 dB; 5.625: 60 dB; 6.609: 72 dB; 7.594: 84 dB; 8.578: 96 dB
+- Send Gain | 0..1 | 1 -> 0.0 dB | 1 -> 0.0 dB | taper: other (linear r2 0.819, log r2 0.000)
+    0: -inf dB; 0.125: -18 dB; 0.25: -12 dB; 0.375: -8.5 dB; 0.5: -6.0 dB; 0.625: -4.1 dB; 0.75: -2.5 dB; 0.875: -1.2 dB; 1: 0.0 dB
+- Routing | 0..3 | 1 -> Parallel | 0 -> Serial | steps: Serial / Parallel / Algorithm / Convolution
+    0: Serial; 1: Parallel; 2: Algorithm; 3: Convolution
+- Blend | 0..1 | 0.5 -> 50/50 | 0.5 -> 50/50 | taper: linear
+    0: 100/0; 0.125: 87/13; 0.25: 75/25; 0.375: 62/38; 0.5: 50/50; 0.625: 37/63; 0.75: 25/75; 0.875: 12/88; 1: 0/100
+- Vintage | 0..4 | 0 -> Off | 0 -> Off | stepped display (5 values, one per integer)
+    0: Off; 0.5: Subtle; 1.5: Old; 2.5: Older; 3.5: Extreme
+- Width | 0..1 | 0.5 -> 100 % | 0.5 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 25 %; 0.25: 50 %; 0.375: 75 %; 0.5: 100 %; 0.625: 125 %; 0.75: 150 %; 0.875: 175 %; 1: 200 %
+- Bass Mono | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Dry/Wet | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+PreDelay_Sync = false
+PreDelay_Time = 0.01000000443
+PreDelay_Sixteenth = 2
+PreDelay_FeedbackTime = 0
+PreDelay_FeedbackSixteenth = 0
+Algorithm_Type = 0
+Algorithm_Delay = 0
+Algorithm_Freeze = false
+Algorithm_FreezeIn = false
+Algorithm_Decay = 3.5
+Algorithm_Size = 0.5
+Algorithm_Damping = 0.5
+Algorithm_Diffusion = 1
+Algorithm_Modulation = 0.5
+Algorithm_Shape = 0.5
+Algorithm_BassMultiplier = 1
+Algorithm_BassCrossover = 440
+Algorithm_Shimmer = 0.5
+Algorithm_PitchShift = 12
+Algorithm_TidesAmount = 0.5
+Algorithm_TidesRate = 22
+Algorithm_TidesWaveform = 0.5
+Algorithm_TidesPhaseOffset = 90
+Algorithm_Quartz_LowDamping = 0.5
+Algorithm_Quartz_Distance = 0.5
+Algorithm_Prism_HighMultiplier = 1.00000012
+Algorithm_Prism_LowMultiplier = 1.00000012
+Algorithm_Prism_CrossoverFrequency = 799.999939
+Algorithm_Prism_Sixth = 0
+Algorithm_Prism_Seventh = 0
+Eq_On = true
+Eq_PreAlgo = false
+Eq_LowBandType = 0
+Eq_LowBandFrequency = 79.9999924
+Eq_LowBandGain = 1
+Eq_LowBandSlope = 1
+Eq_Peak1Frequency = 699.999451
+Eq_Peak1Gain = 1
+Eq_Peak1Q = 0.7071067691
+Eq_Peak2Frequency = 1500.00012
+Eq_Peak2Gain = 1
+Eq_Peak2Q = 0.7071067691
+Eq_HighBandType = 1
+Eq_HighBandFrequency = 4999.99902
+Eq_HighBandGain = 1
+Eq_HighBandSlope = 4
+Send = 1
+Routing = 1
+ConvoAlgoBlend = 0.5
+Vintage = 0
+StereoWidth = 1
+BassMono = false
+DryWet = 0.5

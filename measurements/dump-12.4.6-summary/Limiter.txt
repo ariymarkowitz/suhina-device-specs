@@ -1,0 +1,46 @@
+# Limiter  (.als element Limiter; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Input Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -24 dB; 0.125: -18 dB; 0.25: -12 dB; 0.375: -6.0 dB; 0.5: 0.0 dB; 0.625: 6.0 dB; 0.75: 12 dB; 0.875: 18 dB; 1: 24 dB
+- Ceiling | 0..1 | 0.970144 -> -0.3 dB | 0.970144 -> -0.3 dB | taper: other (linear r2 0.921, log r2 0.000)
+    0: -24 dB; 0.125: -14 dB; 0.25: -10 dB; 0.375: -8.0 dB; 0.5: -6.0 dB; 0.625: -4.3 dB; 0.75: -2.7 dB; 0.875: -1.3 dB; 1: 0.0 dB
+- Release | 0..1 | 0.730311 -> 100 ms | 0.730311 -> 100 ms | taper: other (linear r2 0.244, log r2 0.709)
+    0: 0.01 ms; 0.125: 0.05 ms; 0.25: 0.23 ms; 0.375: 1.13 ms; 0.5: 5.48 ms; 0.625: 26.5 ms; 0.75: 128 ms; 0.875: 620 ms; 1: 3.00 s
+- Auto | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Link | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- M/S Link | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Lookahead | 0..2 | 0 -> 1.5 ms | 0 -> 1.5 ms | steps: 1.5 ms / 3 ms / 6 ms
+    0: 1.5 ms; 1: 3 ms; 2: 6 ms
+- Routing | 0..1 | 0 -> L/R | 0 -> L/R | steps: L/R / M/S
+    0: L/R; 1: M/S
+- Mode | 0..2 | 0 -> Standard | 0 -> Standard | steps: Standard / Soft Clip / True Peak
+    0: Standard; 1: Soft Clip; 2: True Peak
+- Maximize On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Threshold | 0..1 | 0.970144 -> -0.3 dB | 1 -> 0.0 dB | taper: other (linear r2 0.921, log r2 0.000)
+    0: -24 dB; 0.125: -14 dB; 0.25: -10 dB; 0.375: -8.0 dB; 0.5: -6.0 dB; 0.625: -4.3 dB; 0.75: -2.7 dB; 0.875: -1.3 dB; 1: 0.0 dB
+- Output | 0..1 | 1 -> 0.0 dB | 1 -> 0.0 dB | taper: other (linear r2 0.999, log r2 0.000)
+    0: -24 dB; 0.125: -21 dB; 0.25: -18 dB; 0.375: -15 dB; 0.5: -12 dB; 0.625: -9.0 dB; 0.75: -6.0 dB; 0.875: -3.0 dB; 1: 0.0 dB
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Gain = 0
+Ceiling = -0.2999997139
+Release = 99.9999542
+AutoRelease = false
+LinkAmount = 1
+LinkAmountMidSide = 0
+Lookahead = 0
+Routing = 0
+Mode = 0
+Maximize = false
+MaximizeThreshold = -0.2999997139
+MaximizeOutput = 0

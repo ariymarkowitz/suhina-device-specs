@@ -1,0 +1,49 @@
+# Drum Buss  (.als element DrumBuss; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Compressor On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Drive | 0..1 | 0.2 -> 20 % | 0.2 -> 20 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Drive Type | 0..2 | 0 -> Soft | 0 -> Soft | steps: Soft / Medium / Hard
+    0: Soft; 1: Medium; 2: Hard
+- Crunch | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Damping Freq | 0..1 | 0.789495 -> 9.20 kHz | 0.789495 -> 9.20 kHz | taper: other (linear r2 0.412, log r2 0.149)
+    0: 500 Hz; 0.125: 793 Hz; 0.25: 1.26 kHz; 0.375: 1.99 kHz; 0.5: 3.16 kHz; 0.625: 5.01 kHz; 0.75: 7.95 kHz; 0.875: 12.6 kHz; 1: 20.0 kHz
+- Transients | -1..1 | 0 -> 0 | 0 -> 0 | taper: linear
+    -1: -1; -0.75: -0.75; -0.5: -0.5; -0.25: -0.25; 0: 0; 0.25: 0.25; 0.5: 0.5; 0.75: 0.75; 1: 1
+- Boom Freq | 0..1 | 0.464974 -> 50.0 Hz | 0.464974 -> 50.0 Hz | taper: logarithmic
+    0: 30.0 Hz; 0.125: 34.4 Hz; 0.25: 39.5 Hz; 0.375: 45.3 Hz; 0.5: 52.0 Hz; 0.625: 59.6 Hz; 0.75: 68.4 Hz; 0.875: 78.5 Hz; 1: 90.0 Hz
+- Boom Amt | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Boom Decay | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Boom Audition | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Trim | 0..1 | 1 -> 0.00 dB | 1 -> 0.00 dB | taper: other (linear r2 0.916, log r2 0.000)
+    0: -inf dB; 0.125: -50.6 dB; 0.25: -34.8 dB; 0.375: -25.2 dB; 0.5: -20.0 dB; 0.625: -15.0 dB; 0.75: -10.0 dB; 0.875: -5.00 dB; 1: 0.00 dB
+- Output | 0..1 | 0.924942 -> 0.00 dB | 0.924942 -> 0.00 dB | taper: other (linear r2 0.999, log r2 0.000)
+    0: -40.0 dB; 0.125: -32.0 dB; 0.25: -27.0 dB; 0.375: -22.0 dB; 0.5: -17.0 dB; 0.625: -12.0 dB; 0.75: -7.00 dB; 0.875: -2.00 dB; 1: 3.00 dB
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+EnableCompression = false
+DriveAmount = 0.200000003
+DriveType = 0
+CrunchAmount = 0
+DampingFrequency = 9200
+TransientShaping = 0
+BoomFrequency = 50
+BoomAmount = 0
+BoomDecay = 1
+BoomAudition = false
+InputTrim = 1
+OutputGain = 1
+DryWet = 1

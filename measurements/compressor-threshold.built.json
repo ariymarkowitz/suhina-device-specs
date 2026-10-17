@@ -1,0 +1,72 @@
+{
+ "source": "Macintosh HD:/Users/ari/Documents/code/suhina-resources/measurements/compressor-threshold.json",
+ "device": "Compressor",
+ "live_version": "12.4.6",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "default",
+   "params": {},
+   "errors": []
+  },
+  {
+   "id": "Threshold-0pct",
+   "params": {
+    "Threshold": {
+     "value": 0,
+     "display": "-inf dB"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "Threshold-25pct",
+   "params": {
+    "Threshold": {
+     "value": 0.25,
+     "display": "-28.8 dB"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "Threshold-50pct",
+   "params": {
+    "Threshold": {
+     "value": 0.5,
+     "display": "-14.0 dB"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "Threshold-75pct",
+   "params": {
+    "Threshold": {
+     "value": 0.75,
+     "display": "-4.00 dB"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "Threshold-100pct",
+   "params": {
+    "Threshold": {
+     "value": 1,
+     "display": "6.00 dB"
+    }
+   },
+   "errors": []
+  }
+ ]
+}

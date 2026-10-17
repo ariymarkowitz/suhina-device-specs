@@ -1,0 +1,100 @@
+# Phaser-Flanger  (.als element PhaserNew; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Amount | 0..1 | 0.75 -> 75 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Mod Wave | 0..9 | 1 -> Triangle | 0 -> Sine | steps: Sine / Triangle / Triangle Analog / Triangle 8 / Triangle 16 / Saw Up / Saw Down / Rectangle / Random / Random S&H
+    0: Sine; 1: Triangle; 2: Triangle Analog; 3: Triangle 8; 4: Triangle 16; 5: Saw Up; 6: Saw Down; 7: Rectangle; 8: Random; 9: Random S&H
+- Mod Freq | 0..1 | 0.325397 -> 0.15 Hz | 0.361191 -> ~0.20 Hz | taper: logarithmic
+    0: 0.01 Hz; 0.125: 0.03 Hz; 0.25: 0.08 Hz; 0.375: 0.22 Hz; 0.5: 0.63 Hz; 0.625: 1.78 Hz; 0.75: 5.03 Hz; 0.875: 14.2 Hz; 1: 40.0 Hz
+- Mod Freq 2 | 0..1 | 0.471666 -> 0.50 Hz | 0.361191 -> ~0.20 Hz | taper: logarithmic
+    0: 0.01 Hz; 0.125: 0.03 Hz; 0.25: 0.08 Hz; 0.375: 0.22 Hz; 0.5: 0.63 Hz; 0.625: 1.78 Hz; 0.75: 5.03 Hz; 0.875: 14.2 Hz; 1: 40.0 Hz
+- Mod Sync | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Mod Sync 2 | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Mod Rate | 0..21 | 4 -> 2 | 4 -> 2 | stepped display (22 values, one per integer)
+    0: 8; 0.6562: 6; 1.641: 4; 2.625: 3; 3.609: 2; 4.594: 1.5; 5.578: 1; 6.562: 3/4; 7.547: 1/2; 8.531: 3/8; 9.516: 1/3; 10.5: 5/16; 11.81: 1/4; 12.8: 3/16; 13.78: 1/6; 14.77: 1/8; 15.75: 1/12; 16.73: 1/16; 17.72: 1/24; 18.7: 1/32; 19.69: 1/48; 20.67: 1/64
+- Mod Rate 2 | 0..21 | 4 -> 2 | 4 -> 2 | stepped display (22 values, one per integer)
+    0: 8; 0.6562: 6; 1.641: 4; 2.625: 3; 3.609: 2; 4.594: 1.5; 5.578: 1; 6.562: 3/4; 7.547: 1/2; 8.531: 3/8; 9.516: 1/3; 10.5: 5/16; 11.81: 1/4; 12.8: 3/16; 13.78: 1/6; 14.77: 1/8; 15.75: 1/12; 16.73: 1/16; 17.72: 1/24; 18.7: 1/32; 19.69: 1/48; 20.67: 1/64
+- Mod Phase | 0..1 | 0 -> 0.0° | 0.5 -> 180° | taper: linear
+    0: 0.0°; 0.125: 45°; 0.25: 90°; 0.375: 135°; 0.5: 180°; 0.625: 225°; 0.75: 270°; 0.875: 315°; 1: 360°
+- Spin Enabled | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Spin | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 6.2 %; 0.25: 12 %; 0.375: 19 %; 0.5: 25 %; 0.625: 31 %; 0.75: 38 %; 0.875: 44 %; 1: 50 %
+- Duty Cycle | 0..1 | 0.55 -> 10 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Lfo Blend | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Env Enabled | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Env Amount | 0..1 | 0.5 -> 0.00  | 0.5 -> 0.00  | taper: linear
+    0: -1.00 ; 0.125: -0.75 ; 0.25: -0.50 ; 0.375: -0.25 ; 0.5: 0.00 ; 0.625: 0.25 ; 0.75: 0.50 ; 0.875: 0.75 ; 1: 1.00 
+- Env Attack | 0..1 | 0.0301003 -> 1.00 ms | 0.197324 -> ~6.17 ms | taper: linear
+    0: 0.10 ms; 0.125: 3.84 ms; 0.25: 7.57 ms; 0.375: 11.3 ms; 0.5: 15.0 ms; 0.625: 18.8 ms; 0.75: 22.5 ms; 0.875: 26.3 ms; 1: 30.0 ms
+- Env Release | 0..1 | 0.299825 -> 120 ms | 0.499875 -> ~200 ms | taper: linear
+    0: 0.10 ms; 0.125: 50.1 ms; 0.25: 100 ms; 0.375: 150 ms; 0.5: 200 ms; 0.625: 250 ms; 0.75: 300 ms; 0.875: 350 ms; 1: 400 ms
+- Mode | 0..2 | 0 -> Phaser | 0 -> Phaser | steps: Phaser / Flanger / Doubler
+    0: Phaser; 1: Flanger; 2: Doubler
+- Notches | 1..42 | 2 -> 2  | 4 -> ~4  | taper: linear
+    1: 1 ; 6.125: 6 ; 11.25: 11 ; 16.38: 16 ; 21.5: 22 ; 26.62: 27 ; 31.75: 32 ; 36.88: 37 ; 42: 42 
+- Flanger Time | 0..1 | 0.607528 -> 2.50 ms | 0.607528 -> 2.50 ms | taper: logarithmic
+    0: 0.10 ms; 0.125: 0.19 ms; 0.25: 0.38 ms; 0.375: 0.73 ms; 0.5: 1.41 ms; 0.625: 2.74 ms; 0.75: 5.32 ms; 0.875: 10.3 ms; 1: 20.0 ms
+- Doubler Time | 0..1 | 0.68802 -> 80.0 ms | 0.68802 -> 80.0 ms | taper: logarithmic
+    0: 20.0 ms; 0.125: 25.7 ms; 0.25: 33.1 ms; 0.375: 42.6 ms; 0.5: 54.8 ms; 0.625: 70.5 ms; 0.75: 90.6 ms; 0.875: 117 ms; 1: 150 ms
+- Mod Blend | 0..1 | 0 -> 0.00  | 0 -> 0.00  | taper: linear
+    0: 0.00 ; 0.125: 0.12 ; 0.25: 0.25 ; 0.375: 0.38 ; 0.5: 0.50 ; 0.625: 0.62 ; 0.75: 0.75 ; 0.875: 0.88 ; 1: 1.00 
+- Center Freq | 0..1 | 0.312526 -> 400 Hz | 0.476824 -> ~1.04 kHz | taper: other (linear r2 0.137, log r2 0.378)
+    0: 70.0 Hz; 0.125: 141 Hz; 0.25: 282 Hz; 0.375: 567 Hz; 0.5: 1.14 kHz; 0.625: 2.29 kHz; 0.75: 4.59 kHz; 0.875: 9.21 kHz; 1: 18.5 kHz
+- Spread | 0..1 | 0.351562 -> 35 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Feedback | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 37 %; 0.5: 50 %; 0.625: 62 %; 0.75: 74 %; 0.875: 87 %; 1: 99 %
+- Warmth | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Safe Freq | 0..1 | 0.433425 -> 80.0 Hz | 0.468308 -> ~100 Hz | taper: other (linear r2 0.174, log r2 0.009)
+    0: 5.00 Hz; 0.125: 11.1 Hz; 0.25: 24.7 Hz; 0.375: 55.1 Hz; 0.5: 122 Hz; 0.625: 272 Hz; 0.75: 606 Hz; 0.875: 1.35 kHz; 1: 3.00 kHz
+- FB Invert | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Output | 0..1 | 0.707107 -> 0.0 dB | 0.707107 -> 0.0 dB | taper: other (linear r2 0.817, log r2 0.000)
+    0: -inf dB; 0.125: -30 dB; 0.25: -18 dB; 0.375: -11 dB; 0.5: -6.0 dB; 0.625: -2.1 dB; 0.75: 1.0 dB; 0.875: 3.7 dB; 1: 6.0 dB
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Modulation_Amount = 0.75
+Modulation_Waveform = 1
+Modulation_Frequency = 0.1486274302
+Modulation_Frequency2 = 0.5
+Modulation_Sync = false
+Modulation_Sync2 = false
+Modulation_SyncedRate = 4
+Modulation_SyncedRate2 = 4
+Modulation_PhaseOffset = 0
+Modulation_SpinEnabled = false
+Modulation_Spin = 0
+Modulation_DutyCycle = 0.1000000238
+Modulation_LfoBlend = 0
+Modulation_EnvelopeEnabled = true
+Modulation_EnvelopeAmount = 0
+Modulation_EnvelopeAttack = 0.001000000047
+Modulation_EnvelopeRelease = 0.1199999899
+Mode = 0
+Notches = 2
+FlangerDelayTime = 0.002500000177
+DoublerDelayTime = 0.07999999821
+ModulationBlend = 0
+CenterFrequency = 399.999969
+Spread = 0.3515625
+Feedback = 0
+Warmth = 0
+SafeBassFrequency = 79.9999924
+InvertWet = false
+OutputGain = 0.9999999404
+DryWet = 1

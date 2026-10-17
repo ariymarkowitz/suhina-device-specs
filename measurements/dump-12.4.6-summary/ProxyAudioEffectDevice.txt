@@ -1,0 +1,19 @@
+# External Audio Effect  (.als element ProxyAudioEffectDevice; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+- Output Gain | 0..1 | 0.4 -> 0.00 dB | 0.4 -> 0.00 dB | taper: other (linear r2 0.907, log r2 0.000)
+    0: -inf dB; 0.125: -26.6 dB; 0.25: -10.8 dB; 0.375: -1.18 dB; 0.5: 4.00 dB; 0.625: 9.00 dB; 0.75: 14.0 dB; 0.875: 19.0 dB; 1: 24.0 dB
+- Input Gain | 0..1 | 0.4 -> 0.00 dB | 0.4 -> 0.00 dB | taper: other (linear r2 0.907, log r2 0.000)
+    0: -inf dB; 0.125: -26.6 dB; 0.25: -10.8 dB; 0.375: -1.18 dB; 0.5: 4.00 dB; 0.625: 9.00 dB; 0.75: 14.0 dB; 0.875: 19.0 dB; 1: 24.0 dB
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+OutputHelper/Volume = 1
+InputHelper/Volume = 1
+DryWet = 1

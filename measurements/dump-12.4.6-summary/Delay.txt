@@ -1,0 +1,92 @@
+# Delay  (.als element Delay; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Smoothing | 0..2 | 0 -> Repitch | 0 -> Repitch | steps: Repitch / Fade / Jump
+    0: Repitch; 1: Fade; 2: Jump
+- Link | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Ping Pong | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- L Sync | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- R Sync | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- L Time | 0..1 | 0.595385 -> 375 ms | 0.595385 -> 375 ms | taper: other (linear r2 0.050, log r2 0.041)
+    0: 1.00 ms; 0.125: 1.15 ms; 0.25: 5.88 ms; 0.375: 38.1 ms; 0.5: 157 ms; 0.625: 478 ms; 0.75: 1.19 s; 0.875: 2.57 s; 1: 5.00 s
+- R Time | 0..1 | 0.595385 -> 375 ms | 0.595385 -> 375 ms | taper: other (linear r2 0.050, log r2 0.041)
+    0: 1.00 ms; 0.125: 1.15 ms; 0.25: 5.88 ms; 0.375: 38.1 ms; 0.5: 157 ms; 0.625: 478 ms; 0.75: 1.19 s; 0.875: 2.57 s; 1: 5.00 s
+- L 16th | 0..7 | 2 -> 3 | 0 -> 1 | steps: 1 / 2 / 3 / 4 / 5 / 6 / 8 / 16
+    0: 1; 1: 2; 2: 3; 3: 4; 4: 5; 5: 6; 6: 8; 7: 16
+- R 16th | 0..7 | 3 -> 4 | 0 -> 1 | steps: 1 / 2 / 3 / 4 / 5 / 6 / 8 / 16
+    0: 1; 1: 2; 2: 3; 3: 4; 4: 5; 5: 6; 6: 8; 7: 16
+- L Offset | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -33 %; 0.125: -25 %; 0.25: -17 %; 0.375: -8.3 %; 0.5: 0.0 %; 0.625: 8.3 %; 0.75: 17 %; 0.875: 25 %; 1: 33 %
+- R Offset | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -33 %; 0.125: -25 %; 0.25: -17 %; 0.375: -8.3 %; 0.5: 0.0 %; 0.625: 8.3 %; 0.75: 17 %; 0.875: 25 %; 1: 33 %
+- Feedback | 0..1 | 0.526316 -> 50 % | 0.526316 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 24 %; 0.375: 36 %; 0.5: 48 %; 0.625: 59 %; 0.75: 71 %; 0.875: 83 %; 1: 95 %
+- Freeze | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Filter On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Filter Freq | 0..1 | 0.50895 -> 1.00 kHz | 0.50895 -> 1.00 kHz | taper: other (linear r2 0.086, log r2 0.349)
+    0: 50.0 Hz; 0.125: 104 Hz; 0.25: 218 Hz; 0.375: 455 Hz; 0.5: 949 Hz; 0.625: 1.98 kHz; 0.75: 4.13 kHz; 0.875: 8.62 kHz; 1: 18.0 kHz
+- Filter Width | 0..1 | 0.882353 -> 8.00  | 0.882353 -> 8.00  | taper: linear
+    0: 0.50 ; 0.125: 1.56 ; 0.25: 2.62 ; 0.375: 3.69 ; 0.5: 4.75 ; 0.625: 5.81 ; 0.75: 6.88 ; 0.875: 7.94 ; 1: 9.00 
+- LFO Mode | 0..5 | 0 -> Rate | 0 -> Rate | steps: Rate / Time / Synced / Triplet / Dotted / 16th
+    0: Rate; 1: Time; 2: Synced; 3: Triplet; 4: Dotted; 5: 16th
+- LFO Freq | 0..1 | 0.471666 -> 0.50 Hz | 0.471666 -> 0.50 Hz | taper: logarithmic
+    0: 0.01 Hz; 0.125: 0.03 Hz; 0.25: 0.08 Hz; 0.375: 0.22 Hz; 0.5: 0.63 Hz; 0.625: 1.78 Hz; 0.75: 5.03 Hz; 0.875: 14.2 Hz; 1: 40.0 Hz
+- LFO Time | 0..1 | 0.19739 -> 1.00 s | 0.19739 -> 1.00 s | taper: other (linear r2 0.020, log r2 0.056)
+    0: 100 ms; 0.125: 297 ms; 0.25: 2.08 s; 0.375: 7.73 s; 0.5: 20.0 s; 0.625: 41.9 s; 0.75: 76.8 s; 0.875: 128.2 s; 1: 200.0 s
+- LFO Synced | 0..21 | 4 -> 2 | 4 -> 2 | stepped display (22 values, one per integer)
+    0: 8; 0.6562: 6; 1.641: 4; 2.625: 3; 3.609: 2; 4.594: 1.5; 5.578: 1; 6.562: 3/4; 7.547: 1/2; 8.531: 3/8; 9.516: 1/3; 10.5: 5/16; 11.81: 1/4; 12.8: 3/16; 13.78: 1/6; 14.77: 1/8; 15.75: 1/12; 16.73: 1/16; 17.72: 1/24; 18.7: 1/32; 19.69: 1/48; 20.67: 1/64
+- LFO 16th | 1..64 | 16 -> 16  / 16 | 16 -> 16  / 16 | taper: linear
+    1: 1  / 16; 8.875: 9  / 16; 16.75: 17  / 16; 24.62: 25  / 16; 32.5: 33  / 16; 40.38: 40  / 16; 48.25: 48  / 16; 56.12: 56  / 16; 64: 64  / 16
+- LFO Wave | 0..6 | 1 -> Triangle | 0 -> Sine | steps: Sine / Triangle / Ramp Up / Ramp Down / Square / S & H / Wander
+    0: Sine; 1: Triangle; 2: Ramp Up; 3: Ramp Down; 4: Square; 5: S & H; 6: Wander
+- LFO Morph | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- LFO > Delay | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- LFO > Filter | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Dry/Wet | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+DelayLine_SmoothingMode = 0
+DelayLine_Link = true
+DelayLine_PingPong = false
+DelayLine_SyncL = true
+DelayLine_SyncR = true
+DelayLine_TimeL = 0.3749999404
+DelayLine_TimeR = 0.3749999404
+DelayLine_SimpleDelayTimeL = 100
+DelayLine_SimpleDelayTimeR = 100
+DelayLine_PingPongDelayTimeL = 1
+DelayLine_PingPongDelayTimeR = 1
+DelayLine_SyncedSixteenthL = 2
+DelayLine_SyncedSixteenthR = 3
+DelayLine_OffsetL = 0
+DelayLine_OffsetR = 0
+Feedback = 0.5
+Freeze = false
+Filter_On = true
+Filter_Frequency = 999.999878
+Filter_Bandwidth = 8
+Modulation_TimeMode = 0
+Modulation_Frequency = 0.5
+Modulation_Time = 1.00000024
+Modulation_SyncedRate = 4
+Modulation_Sixteenth = 16
+Modulation_Waveform = 1
+Modulation_Morph = 0
+Modulation_AmountTime = 0
+Modulation_AmountFilter = 0
+DryWet = 0.5

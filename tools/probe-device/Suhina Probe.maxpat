@@ -1,0 +1,601 @@
+{
+ "patcher": {
+  "fileversion": 1,
+  "appversion": {
+   "major": 8,
+   "minor": 6,
+   "revision": 0,
+   "architecture": "x64",
+   "modernui": 1
+  },
+  "classnamespace": "box",
+  "rect": [
+   100.0,
+   100.0,
+   700.0,
+   480.0
+  ],
+  "openinpresentation": 1,
+  "devicewidth": 282.0,
+  "default_fontsize": 10.0,
+  "default_fontname": "Arial",
+  "gridsize": [
+   15.0,
+   15.0
+  ],
+  "boxes": [
+   {
+    "box": {
+     "id": "in",
+     "maxclass": "newobj",
+     "numinlets": 2,
+     "numoutlets": 2,
+     "patching_rect": [
+      20,
+      20,
+      60,
+      22
+     ],
+     "text": "plugin~",
+     "outlettype": [
+      "signal",
+      "signal"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "out",
+     "maxclass": "newobj",
+     "numinlets": 2,
+     "numoutlets": 0,
+     "patching_rect": [
+      20,
+      380,
+      60,
+      22
+     ],
+     "text": "plugout~"
+    }
+   },
+   {
+    "box": {
+     "id": "js",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      200,
+      300,
+      120,
+      22
+     ],
+     "text": "js suhina_probe.js",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "dumpbtn",
+     "maxclass": "message",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "patching_rect": [
+      200,
+      20,
+      100,
+      22
+     ],
+     "text": "Dump parameters",
+     "outlettype": [
+      ""
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      8,
+      8,
+      110,
+      20
+     ],
+     "bgcolor": [
+      0.25,
+      0.25,
+      0.25,
+      1.0
+     ],
+     "textcolor": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "fontsize": 11.0
+    }
+   },
+   {
+    "box": {
+     "id": "dumpt",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      200,
+      60,
+      30,
+      22
+     ],
+     "text": "t b",
+     "outlettype": [
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "dumpdlg",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 3,
+     "patching_rect": [
+      200,
+      100,
+      70,
+      22
+     ],
+     "text": "savedialog",
+     "outlettype": [
+      "",
+      "",
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "dumppre",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      200,
+      140,
+      80,
+      22
+     ],
+     "text": "prepend dump",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "buildbtn",
+     "maxclass": "message",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "patching_rect": [
+      330,
+      20,
+      80,
+      22
+     ],
+     "text": "Build cases",
+     "outlettype": [
+      ""
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      124,
+      8,
+      80,
+      20
+     ],
+     "bgcolor": [
+      0.25,
+      0.25,
+      0.25,
+      1.0
+     ],
+     "textcolor": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "fontsize": 11.0
+    }
+   },
+   {
+    "box": {
+     "id": "buildt",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      330,
+      60,
+      30,
+      22
+     ],
+     "text": "t b",
+     "outlettype": [
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "builddlg",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 2,
+     "patching_rect": [
+      330,
+      100,
+      70,
+      22
+     ],
+     "text": "opendialog",
+     "outlettype": [
+      "",
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "buildpre",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      330,
+      140,
+      85,
+      22
+     ],
+     "text": "prepend build",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "popbtn",
+     "maxclass": "message",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "patching_rect": [
+      450,
+      20,
+      60,
+      22
+     ],
+     "text": "Populate",
+     "outlettype": [
+      ""
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      210,
+      8,
+      64,
+      20
+     ],
+     "bgcolor": [
+      0.25,
+      0.25,
+      0.25,
+      1.0
+     ],
+     "textcolor": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "fontsize": 11.0
+    }
+   },
+   {
+    "box": {
+     "id": "popt",
+     "maxclass": "newobj",
+     "numinlets": 1,
+     "numoutlets": 1,
+     "patching_rect": [
+      450,
+      60,
+      30,
+      22
+     ],
+     "text": "t b",
+     "outlettype": [
+      "bang"
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "popmsg",
+     "maxclass": "message",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "patching_rect": [
+      450,
+      100,
+      60,
+      22
+     ],
+     "text": "populate",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "samples",
+     "maxclass": "message",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "patching_rect": [
+      550,
+      100,
+      70,
+      22
+     ],
+     "text": "samples 65",
+     "outlettype": [
+      ""
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "status",
+     "maxclass": "message",
+     "numinlets": 2,
+     "numoutlets": 1,
+     "patching_rect": [
+      200,
+      340,
+      260,
+      22
+     ],
+     "text": "Suhina Probe: ready",
+     "outlettype": [
+      ""
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      8,
+      36,
+      266,
+      20
+     ],
+     "bgcolor": [
+      0.12,
+      0.12,
+      0.12,
+      1.0
+     ],
+     "textcolor": [
+      0.8,
+      0.8,
+      0.8,
+      1.0
+     ]
+    }
+   },
+   {
+    "box": {
+     "id": "title",
+     "maxclass": "comment",
+     "numinlets": 1,
+     "numoutlets": 0,
+     "patching_rect": [
+      20,
+      420,
+      300,
+      20
+     ],
+     "text": "Suhina Probe: dump parameters, build test cases",
+     "presentation": 1,
+     "presentation_rect": [
+      8,
+      62,
+      266,
+      20
+     ]
+    }
+   }
+  ],
+  "lines": [
+   {
+    "patchline": {
+     "source": [
+      "in",
+      0
+     ],
+     "destination": [
+      "out",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "in",
+      1
+     ],
+     "destination": [
+      "out",
+      1
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "dumpbtn",
+      0
+     ],
+     "destination": [
+      "dumpt",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "dumpt",
+      0
+     ],
+     "destination": [
+      "dumpdlg",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "dumpdlg",
+      0
+     ],
+     "destination": [
+      "dumppre",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "dumppre",
+      0
+     ],
+     "destination": [
+      "js",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "buildbtn",
+      0
+     ],
+     "destination": [
+      "buildt",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "buildt",
+      0
+     ],
+     "destination": [
+      "builddlg",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "builddlg",
+      0
+     ],
+     "destination": [
+      "buildpre",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "buildpre",
+      0
+     ],
+     "destination": [
+      "js",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "popbtn",
+      0
+     ],
+     "destination": [
+      "popt",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "popt",
+      0
+     ],
+     "destination": [
+      "popmsg",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "popmsg",
+      0
+     ],
+     "destination": [
+      "js",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "samples",
+      0
+     ],
+     "destination": [
+      "js",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "js",
+      0
+     ],
+     "destination": [
+      "status",
+      0
+     ]
+    }
+   }
+  ]
+ }
+}

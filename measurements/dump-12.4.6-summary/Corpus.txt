@@ -1,0 +1,124 @@
+# Corpus  (.als element Corpus; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Resonance Type | 0..6 | 0 -> Beam | 0 -> Beam | steps: Beam / Marimba / String / Membrane / Plate / Pipe / Tube
+    0: Beam; 1: Marimba; 2: String; 3: Membrane; 4: Plate; 5: Pipe; 6: Tube
+- Resonator Quality | 0..3 | 2 -> Med | 0 -> Eco | steps: Eco / Low / Med / High
+    0: Eco; 1: Low; 2: Med; 3: High
+- Tune | 0..1 | 0.5 -> 261.63 | 0.5 -> 261.63 | taper: logarithmic
+    0: 16.35; 0.125: 32.7; 0.25: 65.41; 0.375: 130.81; 0.5: 261.63; 0.625: 523.26; 0.75: 1046.51; 0.875: 2093.01; 1: 4186
+- Transpose | -48..48 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -48: -48 st; -36: -36 st; -24: -24 st; -12: -12 st; 0: 0 st; 12: +12 st; 24: +24 st; 36: +36 st; 48: +48 st
+- Fine | -50..50 | 0 -> 0 ct | 0 -> 0 ct | taper: linear
+    -50: -50 ct; -37.5: -37 ct; -25: -25 ct; -12.5: -12 ct; 0: 0 ct; 12.5: 12 ct; 25: 25 ct; 37.5: 37 ct; 50: 50 ct
+- Spread | -1..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    -1: -100 %; -0.75: -75 %; -0.5: -50 %; -0.25: -25 %; 0: 0.0 %; 0.25: 25 %; 0.5: 50 %; 0.75: 75 %; 1: 100 %
+- Decay | 0..1 | 0.5 -> 1.32 s | 0.5 -> 1.32 s | taper: other (linear r2 0.109, log r2 0.269)
+    0: 50 ms; 0.125: 113 ms; 0.25: 257 ms; 0.375: 583 ms; 0.5: 1.32 s; 0.625: 3.00 s; 0.75: 6.80 s; 0.875: 15.4 s; 1: 35.0 s
+- Material | -1..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    -1: -100 %; -0.75: -75 %; -0.5: -50 %; -0.25: -25 %; 0: 0.0 %; 0.25: 25 %; 0.5: 50 %; 0.75: 75 %; 1: 100 %
+- Radius | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Brightness | -1..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    -1: -100 %; -0.75: -75 %; -0.5: -50 %; -0.25: -25 %; 0: 0.0 %; 0.25: 25 %; 0.5: 50 %; 0.75: 75 %; 1: 100 %
+- Inharmonics | -1..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    -1: -100 %; -0.75: -75 %; -0.5: -50 %; -0.25: -25 %; 0: 0.0 %; 0.25: 25 %; 0.5: 50 %; 0.75: 75 %; 1: 100 %
+- Opening | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Ratio | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Hit | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Listening L | 0..1 | 0.1 -> 10 % | 0.1 -> 10 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Listening R | 0..1 | 0.9 -> 90 % | 0.9 -> 90 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- LFO On/Off | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- LFO Shape | 0..6 | 0 -> Sine | 0 -> Sine | steps: Sine / Square / Triangle / SawUp / SawDown / Sample & Hold / Random Ramp
+    0: Sine; 1: Square; 2: Triangle; 3: SawUp; 4: SawDown; 5: Sample & Hold; 6: Random Ramp
+- LFO Sync | 0..1 | 0 -> Free | 0 -> Free | steps: Free / Sync
+    0: Free; 1: Sync
+- LFO Rate | 0..1 | 0.5 -> 0.32 | 0.5 -> 0.32 | taper: other (linear r2 0.614, log r2 0.999)
+    0: 0.01; 0.125: 0.02; 0.25: 0.06; 0.375: 0.13; 0.5: 0.32; 0.625: 0.75; 0.75: 1.78; 0.875: 4.22; 1: 10
+- LFO Sync Rate | 0..21 | 4 -> 2 | 4 -> 2 | stepped display (22 values, one per integer)
+    0: 8; 1.312: 6; 2.297: 4; 3.281: 3; 4.266: 2; 5.25: 1.5; 6.234: 1; 7.219: 3/4; 8.203: 1/2; 9.188: 3/8; 10.17: 1/3; 11.16: 5/16; 12.14: 1/4; 13.12: 3/16; 14.11: 1/6; 15.09: 1/8; 16.08: 1/12; 17.06: 1/16; 18.05: 1/24; 19.03: 1/32; 20.02: 1/48; 21: 1/64
+- LFO Stereo Mode | 0..1 | 0 -> Phase | 0 -> Phase | steps: Phase / Spin
+    0: Phase; 1: Spin
+- Spin | 0..0.5 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.0625: 6.2 %; 0.125: 12 %; 0.1875: 19 %; 0.25: 25 %; 0.3125: 31 %; 0.375: 38 %; 0.4375: 44 %; 0.5: 50 %
+- Phase | 0..360 | 180 -> 180° | 180 -> 180° | taper: linear
+    0: 0.00°; 45: 45.0°; 90: 90.0°; 135: 135°; 180: 180°; 225: 225°; 270: 270°; 315: 315°; 360: 360°
+- Offset | 0..360 | 0 -> 0.00° | 0 -> 0.00° | taper: linear
+    0: 0.00°; 45: 45.0°; 90: 90.0°; 135: 135°; 180: 180°; 225: 225°; 270: 270°; 315: 315°; 360: 360°
+- LFO Amount | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Filter On/Off | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Mid Freq | 0..1 | 0.50895 -> 1.00 kHz | 0.50895 -> 1.00 kHz | taper: other (linear r2 0.086, log r2 0.349)
+    0: 50.0 Hz; 0.125: 104 Hz; 0.25: 218 Hz; 0.375: 455 Hz; 0.5: 949 Hz; 0.625: 1.98 kHz; 0.75: 4.13 kHz; 0.875: 8.62 kHz; 1: 18.0 kHz
+- Width | 0.5..9 | 4 -> 4 | 4 -> 4 | taper: linear
+    0.5: 0.5; 1.562: 1.56; 2.625: 2.62; 3.688: 3.69; 4.75: 4.75; 5.812: 5.81; 6.875: 6.88; 7.938: 7.94; 9: 9
+- MIDI Frequency | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- MIDI Mode | 0..1 | 0 -> Last | 0 -> Last | steps: Last / Low
+    0: Last; 1: Low
+- PB Range | 0..24 | 5 -> +5 st | 5 -> +5 st | stepped display (25 values, one per integer)
+    0: 0 st; 1.125: +1 st; 2.25: +2 st; 3: +3 st; 4.125: +4 st; 5.25: +5 st; 6: +6 st; 7.125: +7 st; 8.25: +8 st; 9: +9 st; 10.12: +10 st; 11.25: +11 st; 12: +12 st; 13.12: +13 st; 14.25: +14 st; 15: +15 st; 16.12: +16 st; 17.25: +17 st; 18: +18 st; 19.12: +19 st; 20.25: +20 st; 21: +21 st; 22.12: +22 st; 23.25: +23 st; 24: +24 st
+- Note Off | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Off Decay | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -15 dB; 0.125: -11 dB; 0.25: -7.5 dB; 0.375: -3.8 dB; 0.5: 0.0 dB; 0.625: 3.8 dB; 0.75: 7.5 dB; 0.875: 11 dB; 1: 15 dB
+- Width | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Bleed | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Dry Wet | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+ResonanceType = 0
+ResonatorQuality = 2
+Frequency = 0.5
+Transpose = 0
+FineTranspose = 0
+Detune = 0
+Decay = 0.5
+FreqDamping = 0
+Radius = 0.5
+AmpFreq = 0
+Inharmonics = 0
+TubeOpening = 1
+Ratio = 0.5
+ExcitationX = 0.5
+ListeningXL = 0.1000000015
+ListeningXR = 0.8999999762
+LfoOnOff = false
+LfoType = 0
+LfoSync = 0
+LfoRate = 0.5
+LfoSyncRate = 4
+LfoStereoMode = 0
+LfoSpin = 0
+LfoPhase = 180
+LfoOffset = 0
+LfoAmount = 0
+FilterOn = false
+FilterMidFreq = 1000
+FilterBandWidth = 4
+MidiPitch = false
+MidiMode = 0
+PitchBendRange = 5
+MidiGate = false
+DecayOnNoteOff = 0
+Drive = 0.5
+StereoWidth = 1
+Bleed = 0
+DryWet = 0.5

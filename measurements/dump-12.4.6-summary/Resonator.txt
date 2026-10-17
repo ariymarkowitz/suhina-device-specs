@@ -1,0 +1,118 @@
+# Resonators  (.als element Resonator; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Filter On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Frequency | 0..1 | 0.453696 -> 500 Hz | 0.453696 -> 500 Hz | taper: other (linear r2 0.038, log r2 0.390)
+    0: 50.0 Hz; 0.125: 94.3 Hz; 0.25: 178 Hz; 0.375: 335 Hz; 0.5: 632 Hz; 0.625: 1.19 kHz; 0.75: 2.25 kHz; 0.875: 4.24 kHz; 1: 8.00 kHz
+- Filter Type | 0..3 | 2 -> band pass | 0 -> low pass | steps: low pass / high pass / band pass / notch
+    0: low pass; 1: high pass; 2: band pass; 3: notch
+- Mode | 0..1 | 1 -> Mode A | 0 -> Mode B | steps: Mode B / Mode A
+    0: Mode B; 1: Mode A
+- Decay | 0..100 | 50 -> 50 | 50 -> 50 | taper: linear
+    0: 0; 12.5: 12.5; 25: 25; 37.5: 37.5; 50: 50; 62.5: 62.5; 75: 75; 87.5: 87.5; 100: 100
+- Const | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Color | 0..100 | 90 -> 90 | 90 -> 90 | taper: linear
+    0: 0; 12.5: 12.5; 25: 25; 37.5: 37.5; 50: 50; 62.5: 62.5; 75: 75; 87.5: 87.5; 100: 100
+- Width | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Dry/Wet | 0..1 | 0.5 -> 50 % | 0.5 -> 50 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Output | -15..15 | 0 -> 0.00 dB | 0 -> 0.00 dB | taper: linear
+    -15: -15.0 dB; -11.25: -11.2 dB; -7.5: -7.50 dB; -3.75: -3.75 dB; 0: 0.00 dB; 3.75: 3.75 dB; 7.5: 7.50 dB; 11.25: 11.2 dB; 15: 15.0 dB
+- Use Current Scale | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- I On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- I Note | 12..84 | 48 -> C2 | 48 -> C2 | taper: unknown
+    12: C-1; 21: A-1; 30: F♯0; 39: D♯1; 48: C2; 57: A2; 66: F♯3; 75: D♯4; 84: C5
+- I Note Scale Degrees | -21..21 | 0 -> 0 sd | 0 -> 0 sd | taper: other (linear r2 0.999, log r2 0.000)
+    -21: -21 sd; -15.75: -15 sd; -10.5: -10 sd; -5.25: -5 sd; 0: 0 sd; 5.25: +5 sd; 10.5: +10 sd; 15.75: +15 sd; 21: +21 sd
+- I Tune | -50..50 | 0 -> 0 | 0 -> 0 | taper: linear
+    -50: -50; -37.5: -37; -25: -25; -12.5: -12; 0: 0; 12.5: 12; 25: 25; 37.5: 37; 50: 50
+- I Gain | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+- II On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- II Pitch | -24..24 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -24: -24 st; -18: -18 st; -12: -12 st; -6: -6 st; 0: 0 st; 6: +6 st; 12: +12 st; 18: +18 st; 24: +24 st
+- II Pitch Scale Degrees | -21..21 | 0 -> 0 sd | 0 -> 0 sd | taper: other (linear r2 0.999, log r2 0.000)
+    -21: -21 sd; -15.75: -15 sd; -10.5: -10 sd; -5.25: -5 sd; 0: 0 sd; 5.25: +5 sd; 10.5: +10 sd; 15.75: +15 sd; 21: +21 sd
+- II Tune | -50..50 | 0 -> 0 | 0 -> 0 | taper: linear
+    -50: -50; -37.5: -37; -25: -25; -12.5: -12; 0: 0; 12.5: 12; 25: 25; 37.5: 37; 50: 50
+- II Gain | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+- III On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- III Pitch | -24..24 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -24: -24 st; -18: -18 st; -12: -12 st; -6: -6 st; 0: 0 st; 6: +6 st; 12: +12 st; 18: +18 st; 24: +24 st
+- III Pitch Scale Degrees | -21..21 | 0 -> 0 sd | 0 -> 0 sd | taper: other (linear r2 0.999, log r2 0.000)
+    -21: -21 sd; -15.75: -15 sd; -10.5: -10 sd; -5.25: -5 sd; 0: 0 sd; 5.25: +5 sd; 10.5: +10 sd; 15.75: +15 sd; 21: +21 sd
+- III Tune | -50..50 | 0 -> 0 | 0 -> 0 | taper: linear
+    -50: -50; -37.5: -37; -25: -25; -12.5: -12; 0: 0; 12.5: 12; 25: 25; 37.5: 37; 50: 50
+- III Gain | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+- IV On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- IV Pitch | -24..24 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -24: -24 st; -18: -18 st; -12: -12 st; -6: -6 st; 0: 0 st; 6: +6 st; 12: +12 st; 18: +18 st; 24: +24 st
+- IV Pitch Scale Degrees | -21..21 | 0 -> 0 sd | 0 -> 0 sd | taper: other (linear r2 0.999, log r2 0.000)
+    -21: -21 sd; -15.75: -15 sd; -10.5: -10 sd; -5.25: -5 sd; 0: 0 sd; 5.25: +5 sd; 10.5: +10 sd; 15.75: +15 sd; 21: +21 sd
+- IV Tune | -50..50 | 0 -> 0 | 0 -> 0 | taper: linear
+    -50: -50; -37.5: -37; -25: -25; -12.5: -12; 0: 0; 12.5: 12; 25: 25; 37.5: 37; 50: 50
+- IV Gain | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+- V On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- V Pitch | -24..24 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -24: -24 st; -18: -18 st; -12: -12 st; -6: -6 st; 0: 0 st; 6: +6 st; 12: +12 st; 18: +18 st; 24: +24 st
+- V Pitch Scale Degrees | -21..21 | 0 -> 0 sd | 0 -> 0 sd | taper: other (linear r2 0.999, log r2 0.000)
+    -21: -21 sd; -15.75: -15 sd; -10.5: -10 sd; -5.25: -5 sd; 0: 0 sd; 5.25: +5 sd; 10.5: +10 sd; 15.75: +15 sd; 21: +21 sd
+- V Tune | -50..50 | 0 -> 0 | 0 -> 0 | taper: linear
+    -50: -50; -37.5: -37; -25: -25; -12.5: -12; 0: 0; 12.5: 12; 25: 25; 37.5: 37; 50: 50
+- V Gain | 0..1 | 0.85 -> 0.00 dB | 0.85 -> 0.00 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -44.6 dB; 0.25: -28.8 dB; 0.375: -19.2 dB; 0.5: -14.0 dB; 0.625: -9.00 dB; 0.75: -4.00 dB; 0.875: 1.00 dB; 1: 6.00 dB
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+InFilterOn = true
+InFilterFreq = 500
+InFilterMode = 2
+ResMode = true
+ResDecay = 50
+ResConst = true
+ResColor = 90
+Width = 1
+DryWet = 0.5
+GlobalGain = 0
+UseCurrentScale = false
+ResOn1 = true
+ResNote = 48
+ResNoteScaleDegrees = 0
+ResTune1 = 0
+ResGain1 = 1
+ResOn2 = true
+ResPitch2 = 0
+ResPitchScaleDegrees2 = 0
+ResTune2 = 0
+ResGain2 = 1
+ResOn3 = true
+ResPitch3 = 0
+ResPitchScaleDegrees3 = 0
+ResTune3 = 0
+ResGain3 = 1
+ResOn4 = true
+ResPitch4 = 0
+ResPitchScaleDegrees4 = 0
+ResTune4 = 0
+ResGain4 = 1
+ResOn5 = true
+ResPitch5 = 0
+ResPitchScaleDegrees5 = 0
+ResTune5 = 0
+ResGain5 = 1

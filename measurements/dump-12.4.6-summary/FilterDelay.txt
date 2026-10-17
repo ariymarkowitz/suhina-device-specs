@@ -1,0 +1,112 @@
+# Filter Delay  (.als element FilterDelay; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 1 Input On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 1 Filter On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 1 Filter Freq | 0..1 | 0.449322 -> 704 Hz | 0.449322 -> 704 Hz | taper: other (linear r2 0.086, log r2 0.349)
+    0: 50.0 Hz; 0.125: 104 Hz; 0.25: 218 Hz; 0.375: 455 Hz; 0.5: 949 Hz; 0.625: 1.98 kHz; 0.75: 4.13 kHz; 0.875: 8.62 kHz; 1: 18.0 kHz
+- 1 Filter Width | 0.5..9 | 4 -> 4 | 4 -> 4 | taper: linear
+    0.5: 0.5; 1.562: 1.56; 2.625: 2.62; 3.688: 3.69; 4.75: 4.75; 5.812: 5.81; 6.875: 6.88; 7.938: 7.94; 9: 9
+- 1 Delay Mode | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 1 Beat Delay | 0..7 | 2 -> 3 | 0 -> 1 | steps: 1 / 2 / 3 / 4 / 5 / 6 / 8 / 16
+    0: 1; 1: 2; 2: 3; 3: 4; 4: 5; 5: 6; 6: 8; 7: 16
+- 1 Beat Swing | -0.333..0.333 | 0 -> 0.00 % | 0 -> 0.00 % | taper: linear
+    -0.333: -33.3 %; -0.2498: -25.0 %; -0.1665: -16.7 %; -0.08325: -8.33 %; 0: 0.00 %; 0.08325: 8.33 %; 0.1665: 16.7 %; 0.2498: 25.0 %; 0.333: 33.3 %
+- 1 Time Delay | 1..999 | 10 -> 10.0 ms | 10 -> 10.0 ms | taper: linear
+    1: 1.00 ms; 125.8: 126 ms; 250.5: 250 ms; 375.2: 375 ms; 500: 500 ms; 624.8: 625 ms; 749.5: 750 ms; 874.2: 874 ms; 999: 999 ms
+- 1 Feedback | 0..1 | 0.21 -> 21 % | 0.21 -> 21 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- 1 Pan | -1..1 | -1 -> 50L | -1 -> 50L | taper: other (linear r2 0.000, log r2 0.000)
+    -1: 50L; -0.75: 38L; -0.5: 25L; -0.25: 12L; 0: C; 0.25: 12R; 0.5: 25R; 0.75: 38R; 1: 50R
+- 1 Volume | 0..1 | 0.95 -> 4.0 dB | 0.95 -> 4.0 dB | taper: other (linear r2 0.911, log r2 0.000)
+    0: -inf dB; 0.125: -45 dB; 0.25: -29 dB; 0.375: -19 dB; 0.5: -14 dB; 0.625: -9.0 dB; 0.75: -4.0 dB; 0.875: 1.0 dB; 1: 6.0 dB
+- 2 Input On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 2 Filter On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 2 Filter Freq | 0..1 | 0.372912 -> 449 Hz | 0.372912 -> 449 Hz | taper: other (linear r2 0.086, log r2 0.349)
+    0: 50.0 Hz; 0.125: 104 Hz; 0.25: 218 Hz; 0.375: 455 Hz; 0.5: 949 Hz; 0.625: 1.98 kHz; 0.75: 4.13 kHz; 0.875: 8.62 kHz; 1: 18.0 kHz
+- 2 Filter Width | 0.5..9 | 4 -> 4 | 4 -> 4 | taper: linear
+    0.5: 0.5; 1.562: 1.56; 2.625: 2.62; 3.688: 3.69; 4.75: 4.75; 5.812: 5.81; 6.875: 6.88; 7.938: 7.94; 9: 9
+- 2 Delay Mode | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 2 Beat Delay | 0..7 | 0 -> 1 | 0 -> 1 | steps: 1 / 2 / 3 / 4 / 5 / 6 / 8 / 16
+    0: 1; 1: 2; 2: 3; 3: 4; 4: 5; 5: 6; 6: 8; 7: 16
+- 2 Beat Swing | -0.333..0.333 | 0 -> 0.00 % | 0 -> 0.00 % | taper: linear
+    -0.333: -33.3 %; -0.2498: -25.0 %; -0.1665: -16.7 %; -0.08325: -8.33 %; 0: 0.00 %; 0.08325: 8.33 %; 0.1665: 16.7 %; 0.2498: 25.0 %; 0.333: 33.3 %
+- 2 Time Delay | 1..999 | 10 -> 10.0 ms | 10 -> 10.0 ms | taper: linear
+    1: 1.00 ms; 125.8: 126 ms; 250.5: 250 ms; 375.2: 375 ms; 500: 500 ms; 624.8: 625 ms; 749.5: 750 ms; 874.2: 874 ms; 999: 999 ms
+- 2 Feedback | 0..1 | 0.46 -> 46 % | 0.46 -> 46 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- 2 Pan | -1..1 | 0 -> C | 0 -> C | taper: other (linear r2 0.000, log r2 0.000)
+    -1: 50L; -0.75: 38L; -0.5: 25L; -0.25: 12L; 0: C; 0.25: 12R; 0.5: 25R; 0.75: 38R; 1: 50R
+- 2 Volume | 0..1 | 0.75 -> -4.0 dB | 0.75 -> -4.0 dB | taper: other (linear r2 0.911, log r2 0.000)
+    0: -inf dB; 0.125: -45 dB; 0.25: -29 dB; 0.375: -19 dB; 0.5: -14 dB; 0.625: -9.0 dB; 0.75: -4.0 dB; 0.875: 1.0 dB; 1: 6.0 dB
+- 3 Input On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 3 Filter On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 3 Filter Freq | 0..1 | 0.494414 -> 918 Hz | 0.494414 -> 918 Hz | taper: other (linear r2 0.086, log r2 0.349)
+    0: 50.0 Hz; 0.125: 104 Hz; 0.25: 218 Hz; 0.375: 455 Hz; 0.5: 949 Hz; 0.625: 1.98 kHz; 0.75: 4.13 kHz; 0.875: 8.62 kHz; 1: 18.0 kHz
+- 3 Filter Width | 0.5..9 | 4 -> 4 | 4 -> 4 | taper: linear
+    0.5: 0.5; 1.562: 1.56; 2.625: 2.62; 3.688: 3.69; 4.75: 4.75; 5.812: 5.81; 6.875: 6.88; 7.938: 7.94; 9: 9
+- 3 Delay Mode | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- 3 Beat Delay | 0..7 | 4 -> 5 | 0 -> 1 | steps: 1 / 2 / 3 / 4 / 5 / 6 / 8 / 16
+    0: 1; 1: 2; 2: 3; 3: 4; 4: 5; 5: 6; 6: 8; 7: 16
+- 3 Beat Swing | -0.333..0.333 | 0 -> 0.00 % | 0 -> 0.00 % | taper: linear
+    -0.333: -33.3 %; -0.2498: -25.0 %; -0.1665: -16.7 %; -0.08325: -8.33 %; 0: 0.00 %; 0.08325: 8.33 %; 0.1665: 16.7 %; 0.2498: 25.0 %; 0.333: 33.3 %
+- 3 Time Delay | 1..999 | 10 -> 10.0 ms | 10 -> 10.0 ms | taper: linear
+    1: 1.00 ms; 125.8: 126 ms; 250.5: 250 ms; 375.2: 375 ms; 500: 500 ms; 624.8: 625 ms; 749.5: 750 ms; 874.2: 874 ms; 999: 999 ms
+- 3 Feedback | 0..1 | 0.24 -> 24 % | 0.24 -> 24 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- 3 Pan | -1..1 | 1 -> 50R | 1 -> 50R | taper: other (linear r2 0.000, log r2 0.000)
+    -1: 50L; -0.75: 38L; -0.5: 25L; -0.25: 12L; 0: C; 0.25: 12R; 0.5: 25R; 0.75: 38R; 1: 50R
+- 3 Volume | 0..1 | 1 -> 6.0 dB | 1 -> 6.0 dB | taper: other (linear r2 0.911, log r2 0.000)
+    0: -inf dB; 0.125: -45 dB; 0.25: -29 dB; 0.375: -19 dB; 0.5: -14 dB; 0.625: -9.0 dB; 0.75: -4.0 dB; 0.875: 1.0 dB; 1: 6.0 dB
+- Dry | 0..1 | 0.874942 -> -5.0 dB | 0.874942 -> -5.0 dB | taper: other (linear r2 0.914, log r2 0.000)
+    0: -inf dB; 0.125: -51 dB; 0.25: -35 dB; 0.375: -25 dB; 0.5: -20 dB; 0.625: -15 dB; 0.75: -10 dB; 0.875: -5.0 dB; 1: 0.0 dB
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+On1 = true
+FilterOn1 = true
+MidFreq1 = 704
+BandWidth1 = 4
+DelayTimeSwitch1 = true
+BeatDelayEnum1 = 2
+BeatDelayOffset1 = 0
+DelayTime1 = 10
+Feedback1 = 0.2099999934
+Pan1 = -1
+Volume1 = 1.58489323
+On2 = true
+FilterOn2 = true
+MidFreq2 = 449
+BandWidth2 = 4
+DelayTimeSwitch2 = true
+BeatDelayEnum2 = 0
+BeatDelayOffset2 = 0
+DelayTime2 = 10
+Feedback2 = 0.4600000083
+Pan2 = 0
+Volume2 = 0.630957365
+On3 = true
+FilterOn3 = true
+MidFreq3 = 918
+BandWidth3 = 4
+DelayTimeSwitch3 = true
+BeatDelayEnum3 = 4
+BeatDelayOffset3 = 0
+DelayTime3 = 10
+Feedback3 = 0.2399999946
+Pan3 = 1
+Volume3 = 1.99526238
+DryVolume = 0.5623413324

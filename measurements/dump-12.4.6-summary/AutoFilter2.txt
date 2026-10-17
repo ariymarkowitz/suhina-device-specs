@@ -1,0 +1,142 @@
+# Auto Filter  (.als element AutoFilter2; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Frequency | 0..1 | 0.899657 -> 10.0 kHz | 0.899657 -> 10.0 kHz | taper: other (linear r2 0.014, log r2 0.211)
+    0: 20.0 Hz; 0.125: 47.4 Hz; 0.25: 112 Hz; 0.375: 267 Hz; 0.5: 632 Hz; 0.625: 1.50 kHz; 0.75: 3.56 kHz; 0.875: 8.43 kHz; 1: 20.0 kHz
+- Resonance | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Filter Morph | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Filter Type | 0..9 | 0 -> Low-pass | 0 -> Low-pass | steps: Low-pass / High-pass / Band-pass / Notch / Morph / DJ / Comb / Resampling / Notch+LP / Vowel
+    0: Low-pass; 1: High-pass; 2: Band-pass; 3: Notch; 4: Morph; 5: DJ; 6: Comb; 7: Resampling; 8: Notch+LP; 9: Vowel
+- Filter Slope | 0..1 | 1 -> 24dB | 0 -> 12dB | steps: 12dB / 24dB
+    0: 12dB; 1: 24dB
+- Morph Slope | 0..3 | 2 -> 24dB | 0 -> 6dB | steps: 6dB / 12dB / 24dB / 48dB
+    0: 6dB; 1: 12dB; 2: 24dB; 3: 48dB
+- Circuit | 0..3 | 0 -> SVF | 0 -> SVF | steps: SVF / DFM / MS2 / PRD
+    0: SVF; 1: DFM; 2: MS2; 3: PRD
+- Drive | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Control | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Pitch | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: 9 st; 18: 18 st; 27: 27 st; 36: 36 st
+- Formant | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- LFO Amount | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: other (linear r2 0.936, log r2 0.000)
+    0: 0.0 %; 0.125: 1.6 %; 0.25: 6.2 %; 0.375: 14 %; 0.5: 25 %; 0.625: 39 %; 0.75: 56 %; 0.875: 77 %; 1: 100 %
+- LFO Wave | 0..7 | 0 -> Sine | 0 -> Sine | steps: Sine / Triangle / Saw / Square / Ramp Up / Ramp Down / Wander / S & H
+    0: Sine; 1: Triangle; 2: Saw; 3: Square; 4: Ramp Up; 5: Ramp Down; 6: Wander; 7: S & H
+- LFO T Mode | 0..5 | 0 -> Rate | 0 -> Rate | steps: Rate / Time / Synced / Triplet / Dotted / Sixteenth
+    0: Rate; 1: Time; 2: Synced; 3: Triplet; 4: Dotted; 5: Sixteenth
+- LFO Freq | 0..1 | 0.359952 -> 1.00 Hz | 0.359952 -> 1.00 Hz | taper: logarithmic
+    0: 0.10 Hz; 0.125: 0.22 Hz; 0.25: 0.49 Hz; 0.375: 1.10 Hz; 0.5: 2.45 Hz; 0.625: 5.45 Hz; 0.75: 12.1 Hz; 0.875: 27.0 Hz; 1: 60.0 Hz
+- LFO Time | 0..1 | 0.19739 -> 1.00 s | 0.19739 -> 1.00 s | taper: other (linear r2 0.020, log r2 0.056)
+    0: 100 ms; 0.125: 297 ms; 0.25: 2.08 s; 0.375: 7.73 s; 0.5: 20.0 s; 0.625: 41.9 s; 0.75: 76.8 s; 0.875: 128.2 s; 1: 200.0 s
+- LFO Rate | 0..21 | 4 -> 2 | 4 -> 2 | stepped display (22 values, one per integer)
+    0: 8; 0.6562: 6; 1.641: 4; 2.625: 3; 3.609: 2; 4.594: 1.5; 5.578: 1; 6.562: 3/4; 7.547: 1/2; 8.531: 3/8; 9.516: 1/3; 10.5: 5/16; 11.81: 1/4; 12.8: 3/16; 13.78: 1/6; 14.77: 1/8; 15.75: 1/12; 16.73: 1/16; 17.72: 1/24; 18.7: 1/32; 19.69: 1/48; 20.67: 1/64
+- LFO 16th | 1..64 | 16 -> 16  / 16 | 16 -> 16  / 16 | taper: linear
+    1: 1  / 16; 8.875: 9  / 16; 16.75: 17  / 16; 24.62: 25  / 16; 32.5: 33  / 16; 40.38: 40  / 16; 48.25: 48  / 16; 56.12: 56  / 16; 64: 64  / 16
+- LFO Phase | 0..1 | 0.0111111 -> 4.0° | 0 -> 0.0° | taper: linear
+    0: 0.0°; 0.125: 45°; 0.25: 90°; 0.375: 135°; 0.5: 180°; 0.625: 225°; 0.75: 270°; 0.875: 315°; 1: 360°
+- LFO Offset | 0..1 | 0 -> 0.0° | 0 -> 0.0° | taper: linear
+    0: 0.0°; 0.125: 45°; 0.25: 90°; 0.375: 135°; 0.5: 180°; 0.625: 225°; 0.75: 270°; 0.875: 315°; 1: 360°
+- LFO S Mode | 0..1 | 0 -> Phase | 0 -> Phase | steps: Phase / Spin
+    0: Phase; 1: Spin
+- LFO Spin | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 6.2 %; 0.25: 12 %; 0.375: 19 %; 0.5: 25 %; 0.625: 31 %; 0.75: 38 %; 0.875: 44 %; 1: 50 %
+- LFO Morph | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- LFO Smoothing | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- LFO Q Mode | 0..2 | 0 -> None | 0 -> None | steps: None / Steps / S&H
+    0: None; 1: Steps; 2: S&H
+- LFO Steps | 2..64 | 8 -> 8  | 8 -> 8  | taper: linear
+    2: 2 ; 9.75: 10 ; 17.5: 18 ; 25.25: 25 ; 33: 33 ; 40.75: 41 ; 48.5: 49 ; 56.25: 56 ; 64: 64 
+- LFO S&H | -6..0 | -4 -> 1 / 16 | -4 -> 1 / 16 | stepped display (7 values, one per integer)
+    -6: 1 / 64; -5.438: 1 / 32; -4.406: 1 / 16; -3.469: 1 / 8; -2.438: 1 / 4; -1.406: 1 / 2; -0.4688: 1
+- Env Amount | 0..1 | 0.5 -> 0.0 % | 0.5 -> 0.0 % | taper: linear
+    0: -100 %; 0.125: -75 %; 0.25: -50 %; 0.375: -25 %; 0.5: 0.0 %; 0.625: 25 %; 0.75: 50 %; 0.875: 75 %; 1: 100 %
+- Env Attack | 0..1 | 0.250841 -> 1.00 ms | 0.250841 -> 1.00 ms | taper: other (linear r2 0.806, log r2 0.000)
+    0: 0.00 ms; 0.125: 0.10 ms; 0.25: 0.99 ms; 0.375: 3.82 ms; 0.5: 9.94 ms; 0.625: 20.9 ms; 0.75: 38.4 ms; 0.875: 64.1 ms; 1: 100 ms
+- Env Hold On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Env Release | 0..1 | 0.474156 -> 250 ms | 0.474156 -> 250 ms | taper: other (linear r2 0.040, log r2 0.000)
+    0: 0.00 ms; 0.125: 2.95 ms; 0.25: 29.7 ms; 0.375: 114 ms; 0.5: 298 ms; 0.625: 627 ms; 0.75: 1.15 s; 0.875: 1.92 s; 1: 3.00 s
+- Env S&H On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Env S&H | -6..0 | -4 -> 1 / 16 | -4 -> 1 / 16 | stepped display (7 values, one per integer)
+    -6: 1 / 64; -5.438: 1 / 32; -4.406: 1 / 16; -3.469: 1 / 8; -2.438: 1 / 4; -1.406: 1 / 2; -0.4688: 1
+- Output | 0..1 | 1 -> 0.0 dB | 1 -> 0.0 dB | taper: other (linear r2 0.819, log r2 0.000)
+    0: -inf dB; 0.125: -18 dB; 0.25: -12 dB; 0.375: -8.5 dB; 0.5: -6.0 dB; 0.625: -4.1 dB; 0.75: -2.5 dB; 0.875: -1.2 dB; 1: 0.0 dB
+- Soft Clip On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Dry/Wet | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- S/C EQ On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- S/C EQ Type | 0..5 | 5 -> High pass | 0 -> Low Shelf | steps: Low Shelf / Bell / High Shelf / Low pass / Band pass / High pass
+    0: Low Shelf; 1: Bell; 2: High Shelf; 3: Low pass; 4: Band pass; 5: High pass
+- S/C EQ Freq | 0..1 | 0.305268 -> 200 Hz | 0.305268 -> 200 Hz | taper: other (linear r2 0.024, log r2 0.286)
+    0: 30.0 Hz; 0.125: 65.2 Hz; 0.25: 142 Hz; 0.375: 308 Hz; 0.5: 671 Hz; 0.625: 1.46 kHz; 0.75: 3.17 kHz; 0.875: 6.90 kHz; 1: 15.0 kHz
+- S/C EQ Q | 0..1 | 0.408567 -> 0.71  | 0.408567 -> 0.71  | taper: logarithmic
+    0: 0.10 ; 0.125: 0.18 ; 0.25: 0.33 ; 0.375: 0.60 ; 0.5: 1.10 ; 0.625: 1.99 ; 0.75: 3.63 ; 0.875: 6.60 ; 1: 12.00 
+- S/C EQ Gain | 0..1 | 0.5 -> 0.0 dB | 0.5 -> 0.0 dB | taper: linear
+    0: -15 dB; 0.125: -11 dB; 0.25: -7.5 dB; 0.375: -3.8 dB; 0.5: 0.0 dB; 0.625: 3.8 dB; 0.75: 7.5 dB; 0.875: 11 dB; 1: 15 dB
+- S/C On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- S/C Gain | 0..1 | 0.4 -> 0.00 dB | 0.4 -> 0.00 dB | taper: other (linear r2 0.907, log r2 0.000)
+    0: -inf dB; 0.125: -26.6 dB; 0.25: -10.8 dB; 0.375: -1.18 dB; 0.5: 4.00 dB; 0.625: 9.00 dB; 0.75: 14.0 dB; 0.875: 19.0 dB; 1: 24.0 dB
+- S/C Mix | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.00 %; 0.125: 12.5 %; 0.25: 25.0 %; 0.375: 37.5 %; 0.5: 50.0 %; 0.625: 62.5 %; 0.75: 75.0 %; 0.875: 87.5 %; 1: 100 %
+
+## Parameter elements in the saved set (measurements/populate-12.4.6.als), element = stored Manual value
+On = true
+Filter_Frequency = 9999.99805
+Filter_Resonance = 0
+Filter_Morph = 0
+Filter_Type = 0
+Filter_Slope = 1
+Filter_MorphSlope = 2
+Filter_Circuit = 0
+Filter_Drive = 0
+Filter_DjControl = 0
+Filter_VowelPitch = 0
+Filter_VowelFormant = 0
+Lfo_Amount = 0
+Lfo_Waveform = 0
+Lfo_TimeMode = 0
+Lfo_Frequency = 1
+Lfo_Time = 1.00000024
+Lfo_SyncedRate = 4
+Lfo_Sixteenth = 16
+Lfo_Phase = 4
+Lfo_PhaseOffset = 0
+Lfo_StereoMode = 0
+Lfo_Spin = 0
+Lfo_Morph = 0
+Lfo_Smoothing = 0
+Lfo_QuantizationMode = 0
+Lfo_Steps = 8
+Lfo_SahRate = -4
+Envelope_Amount = 0
+Envelope_Attack = 0.001000000047
+Envelope_HoldOn = true
+Envelope_Release = 0.25
+Envelope_SahOn = false
+Envelope_SahRate = -4
+Output = 1
+SoftClipOn = false
+DryWet = 1
+SideChainEq_On = false
+SideChainEq_Mode = 5
+SideChainEq_Freq = 199.999985
+SideChainEq_Q = 0.7071067095
+SideChainEq_Gain = 0
+SideChain/OnOff = false
+SideChain/RoutedInput/Volume = 1
+SideChain/DryWet = 1
