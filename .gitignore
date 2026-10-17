@@ -13,3 +13,5 @@ probe.wav
 measurements/*/export/
 *.asd
 Backup/
+# the Reverb runs' impulse responses (long tails, 434 MB); remade by analyse.py from the renders
+measurements/29.32-reverb/live/*.ir.wav
