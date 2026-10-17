@@ -1,6 +1,6 @@
 # Suhina resources
 
-Working notes for building Suhina's own built-in effects and instruments from scratch, matching
+Working notes for building [Suhina's](https://github.com/suhina-daw/suhina-daw) own built-in effects and instruments from scratch, matching
 the controls and behaviour of the devices Live 12 ships with, so that a Live Set's devices can
 import into Suhina devices that look, respond and sound as close as possible.
 
