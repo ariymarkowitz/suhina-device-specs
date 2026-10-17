@@ -1,0 +1,163 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-noise-carrier",
+ "question": "spectrum and time-domain look of the carrier at Depth 0 % for Noise Rate 100 Hz, 1.41 kHz, 5.32 kHz and Crackle 50, 10, 0 % (default 20 kHz, 100 %)",
+ "plan": "7",
+ "read": [
+  "noise (long FFT)",
+  "raw render (density)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "rate-100",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Noise Rate": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "rate-1410",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Noise Rate": {
+     "display": 1410
+    }
+   }
+  },
+  {
+   "id": "rate-5320",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Noise Rate": {
+     "display": 5320
+    }
+   }
+  },
+  {
+   "id": "crackle-50",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Noise Crackle": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "crackle-10",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Noise Crackle": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "crackle-0",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Noise Crackle": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "rate-100-crackle-10",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Noise Rate": {
+     "display": 100
+    },
+    "Noise Crackle": {
+     "display": 10
+    }
+   }
+  }
+ ]
+}

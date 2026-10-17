@@ -1,0 +1,246 @@
+{
+ "device": "Beat Repeat",
+ "parameter": "beatrepeat-grid",
+ "question": "impulse taps (time, level) for Grid 1/32, 1/16, 1/8, 1/6, 1/4, 1/3 with Interval 1 Bar and Gate 1 Bar",
+ "plan": "2",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "grid-1-32",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 5,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "grid-1-8",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 9,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "grid-1-6",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 10,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "grid-1-4",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 11,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "grid-1-3",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 12,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

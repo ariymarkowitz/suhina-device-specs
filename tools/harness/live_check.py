@@ -4,6 +4,7 @@
 """Reads the open Live Set's devices through the AbletonMCP Remote Script and checks a set
 written by make_als.py against it.
 
+    python live_check.py open set.als [--app "Ableton Live 12 Trial"] [--timeout 300]
     python live_check.py read [-o read.json]
     python live_check.py verify measure.cases.json [--read read.json] [-o measure.verified.json]
 
@@ -14,6 +15,9 @@ talks to its socket directly, without the project's MCP server. Install it with
 MIDI choose AbletonMCP as a Control Surface (Input and Output None). Open the set in Live
 (`open -a "Ableton Live 12 Trial" set.als`) before reading.
 
+`open` opens a set in Live (`open -a`) and waits until the Remote Script reports its tracks: the
+number of tracks and the first and last track's names. Live opens the set without asking to save
+the one it replaces only when that one has no unsaved changes; if `open` times out, look at Live.
 `read` writes every track's devices with each parameter's API value and display text.
 `verify` checks each track of a make_als.py set: the device is there, each case parameter has
 the API value the case asked for, and every other parameter still has the dump's default (a
@@ -23,8 +27,11 @@ shows (`live`: value and display), which is the record to analyse against.
 
 import argparse
 import json
+import os
 import socket
+import subprocess
 import sys
+import time
 
 import make_als
 
@@ -77,6 +84,41 @@ def read_set(live):
     return out
 
 
+def set_tracks(path):
+    """The names of a set's tracks, as the Remote Script lists them (no return tracks)."""
+    import als
+    root = als.read_set(path)
+    return [als.track_name(t) for t in als.tracks(root, ("AudioTrack", "MidiTrack", "GroupTrack"))]
+
+
+def loaded(live, names):
+    info = live.call("get_session_info")
+    if int(info["track_count"]) != len(names):
+        return False
+    if not names:
+        return True
+    first = live.call("get_track_info", track_index=0).get("name")
+    last = live.call("get_track_info", track_index=len(names) - 1).get("name")
+    return (first, last) == (names[0], names[-1])
+
+
+def cmd_open(a):
+    names = set_tracks(a.set)
+    subprocess.run(["open", "-a", a.app, os.path.abspath(a.set)], check=True)
+    start = time.time()
+    while time.time() - start < a.timeout:
+        time.sleep(2)
+        try:
+            if loaded(Live(timeout=10), names):
+                print(f"{a.set}: open, {len(names)} tracks ({time.time() - start:.0f} s)")
+                return 0
+        except (SystemExit, RuntimeError, OSError):
+            pass  # Live is busy loading, or the Remote Script is not up yet
+    print(f"{a.set}: not open after {a.timeout:.0f} s; look at Live for a dialog "
+          "(save changes, missing files)", file=sys.stderr)
+    return 1
+
+
 def cmd_read(a):
     data = read_set(Live())
     text = json.dumps(data, indent=1)
@@ -103,7 +145,7 @@ def cmd_verify(a):
     live = {t["name"]: t for t in data["tracks"]}
     problems = []
     for rec in spec["cases"]:
-        t = live.get(rec["id"])
+        t = live.get(rec.get("track", rec["id"]))
         devs = [d for d in (t or {}).get("devices", []) if d["class_name"] == rec["device"]]
         if not devs:
             problems.append(f"{rec['id']}: {'no such track' if t is None else 'no ' + rec['device']}")
@@ -135,6 +177,10 @@ def cmd_verify(a):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
+    o = sub.add_parser("open")
+    o.add_argument("set")
+    o.add_argument("--app", default="Ableton Live 12 Trial")
+    o.add_argument("--timeout", type=float, default=300.0, help="seconds to wait")
     r = sub.add_parser("read")
     r.add_argument("-o", "--output")
     v = sub.add_parser("verify")
@@ -144,7 +190,7 @@ def main(argv=None):
     v.add_argument("--tol", type=float, default=0.002, help="allowed error as a fraction of the range")
     v.add_argument("-o", "--output")
     a = ap.parse_args(argv)
-    return {"read": cmd_read, "verify": cmd_verify}[a.cmd](a) or 0
+    return {"open": cmd_open, "read": cmd_read, "verify": cmd_verify}[a.cmd](a) or 0
 
 
 if __name__ == "__main__":

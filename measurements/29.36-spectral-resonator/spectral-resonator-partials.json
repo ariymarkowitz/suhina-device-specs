@@ -1,0 +1,103 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-partials",
+ "question": "peak frequencies of the resonance comb for Freq 55, 220, 880 Hz at Stretch 0, and Stretch -100, -50, +50, +100 % at 110 Hz (Harmonics 256, Decay 222 ms)",
+ "plan": "2, 3",
+ "read": [
+  "noise (long FFT of the render's noise segment)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "freq-55",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 55
+    }
+   }
+  },
+  {
+   "id": "freq-220",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 220
+    }
+   }
+  },
+  {
+   "id": "freq-880",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 880
+    }
+   }
+  },
+  {
+   "id": "stretch-100",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Stretch": {
+     "display": -100
+    }
+   }
+  },
+  {
+   "id": "stretch-50",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Stretch": {
+     "display": -50
+    }
+   }
+  },
+  {
+   "id": "stretch+50",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Stretch": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "stretch+100",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Stretch": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

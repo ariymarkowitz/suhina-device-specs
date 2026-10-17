@@ -1,0 +1,80 @@
+# Top 100 behaviour runs (Live 12.4.6), in one set
+
+State at handoff (2026-10-18): **built, not yet opened in Live, verified, exported or analysed.**
+Committed on branch `top100-measurements` (not pushed).
+
+## What is here
+
+- `selection.json`: the 100 runs, the set name (`top100`) and the two probes. Every run is a
+  priority-1 candidate (see below) except 25 left out to make 100.
+- `top100.als`: one Live Set, **690 tracks for 805 cases**. Each run's `bypass`, and any case
+  that two runs share, plays on one track (`make_als.py build --share`). Tracks are ordered by
+  probe: the gap2 tracks first, then the gap10 tracks (32 tracks: Hybrid Reverb algorithms and decay,
+  Resonators decay, Spectral Resonator decay). Every clip points at one of the two shared probe
+  files (`../probe.wav`, `../29.32-reverb/probe-gap10/probe.wav`); nothing is copied.
+- `top100.cases.json`: per case, its track, probe, and each parameter's API and stored value.
+- Each run's cases file is written beside its device's `runs.py` (`measurements/29.NN-*/<run>.json`).
+
+The candidates: three Sonnet agents read every note's Measurement plan and wrote
+`measurements/29.NN-*/runs.py` for all 42 devices: 257 runs, priority 1 (125), 2 (100) and 3 (32),
+each with `question`, `plan` step, `read` (which analysis answers it) and `why`. `batch.py check`
+passes on all of them. Spectrum, Tuner, Looper and External Audio Effect only have token
+priority-3 runs; little about them can be measured from audio with static settings.
+
+## Tooling added in this session
+
+- `tools/harness/batch.py`: `check`, `build`, `analyse`, `summary`; see its docstring.
+- `make_als.py build`: `--share` (one track per identical device state and probe) and a
+  per-cases-file `"probe"`.
+- `live_check.py open <set>`: opens a set (`open -a`) and waits through the Remote Script until it
+  is loaded; `verify` follows each case's `track`.
+- Tests: `tools/harness/tests/test_batch.py` and new tests in `test_make_als.py`; all 57 pass.
+- `AGENTS.md` (repository root): drive Live through the AbletonMCP Remote Script, not its window.
+- `tools/README.md` › 2b, `measurements/29.32-reverb/README.md`, `README.md`: pointers to that.
+- A trial (`compressor-ratio` alone) was built, opened with `live_check.py open` and passed
+  `verify` with 0 problems in Live 12.4.6.
+
+## Next steps
+
+`PY=tools/.venv/bin/python`
+
+1. **Open and verify** (Remote Script, no UI):
+   ```bash
+   $PY tools/harness/live_check.py open measurements/top100/top100.als --timeout 900
+   $PY tools/harness/live_check.py verify measurements/top100/top100.cases.json -o measurements/top100/top100.verified.json
+   ```
+   690 tracks is far more than any earlier set (37 to 91); if Live struggles, split the selection
+   into two selection files and build two sets.
+2. **Export: the one UI step.** Ask the user first whether they will click it or allow control of
+   Live (the user declined desktop control once in this session and asked for the MCP route).
+   File › Export Audio/Video, WAV, 32-bit, 44.1 kHz, Normalize off, into `measurements/top100/export/`.
+   Either: all tracks at once, name `top100`, length 60 bars (the gap10 probe, 118.75 s), then
+   `analyse --trim`; that needs about 690 × 42 MB ≈ 29 GB until the trim. Or two exports (less disk):
+   select the gap2 tracks, Selected Tracks Only, 24 bars, name `top100`; then the gap10 tracks
+   (the last 32), 60 bars, name `top100-gap10`.
+3. **Analyse and summarise:**
+   ```bash
+   $PY tools/harness/batch.py analyse measurements/top100/selection.json --export measurements/top100/export [--trim]
+   $PY tools/harness/batch.py summary measurements/top100/selection.json > <scratch>/summary.txt
+   ```
+   `analyse` takes each probe group's offset from its bypass renders (an export has come out 40 ms
+   early before) and writes into each device's `live/`.
+4. **Update the device notes** (`live-12/audio-effects/29.NN-*.md`): for each run, the answered
+   plan step gets a `[measured 12.4.6]` fact in Controls, Behaviour or a Measured section. Many runs'
+   `read` says the renders need a reading `analyse.py` does not do (pitch of the steady tone,
+   long FFT of `.ir.wav`, envelopes); do those from the renders. Split this by device group between
+   agents, as the candidate step was.
+5. **Document and commit**: a findings section here, `tools/README.md` › 2b for `batch.py` and
+   `--share`, the INDEX remarks, and `.gitignore` for any large `.ir.wav` sets. Commit when the
+   user asks.
+
+## Known points from the candidates
+
+- Roar's routing mode is not an API parameter: every Roar run plays in the loaded mode, and
+  `roar-routing-default` finds out what that mode does. If it does not feed stage 1 from the
+  input, the other Roar runs show only part of the signal.
+- Corpus has two parameters named Width: `Width` is the filter bandwidth, `Width #2` the stereo width.
+- Glue Compressor's Ratio, Attack and Release are set by index (no item names in the API).
+- Beat Repeat runs use the impulse at bar 1 as the trigger reference.
+- Not measurable this way: automation, side-chain, MIDI, Hi-Quality/Oversampling, the Hybrid
+  Reverb IR choice, Vocoder carrier and band count, Spectral Time resolution, Utility Mid/Side.

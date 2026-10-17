@@ -1,0 +1,129 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-depth-gate",
+ "question": "staircase output level for Depth 0, 50, 150, 200 % and Gate -30 and -10 dB at Depth 100 %",
+ "plan": "5, 6",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "depth-0",
+   "params": {
+    "Envelope Depth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "depth-50",
+   "params": {
+    "Envelope Depth": {
+     "display": 50
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "depth-150",
+   "params": {
+    "Envelope Depth": {
+     "display": 150
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "depth-200",
+   "params": {
+    "Envelope Depth": {
+     "display": 200
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "gate--30",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Gate Threshold": {
+     "display": -30
+    }
+   }
+  },
+  {
+   "id": "gate--10",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Gate Threshold": {
+     "display": -10
+    }
+   }
+  }
+ ]
+}

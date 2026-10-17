@@ -1,0 +1,162 @@
+{
+ "device": "Saturator",
+ "parameter": "saturator-curves",
+ "question": "staircase output and harmonics at Drive +18 dB, Color off, for Soft Sine, Bass Shaper (-50 dB), Medium, Hard, Sinoid Fold, Digital Clip",
+ "plan": "1",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "type-soft",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Soft Sine"
+    }
+   }
+  },
+  {
+   "id": "type-bass",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Bass Shaper"
+    }
+   }
+  },
+  {
+   "id": "type-medium",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Medium Curve"
+    }
+   }
+  },
+  {
+   "id": "type-hard",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Hard Curve"
+    }
+   }
+  },
+  {
+   "id": "type-sinoid",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Sinoid Fold"
+    }
+   }
+  },
+  {
+   "id": "type-digital",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    }
+   }
+  }
+ ]
+}

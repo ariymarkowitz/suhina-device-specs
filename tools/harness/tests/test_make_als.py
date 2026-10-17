@@ -327,6 +327,61 @@ class FromLiveSets(unittest.TestCase):
                 json.dump({"tracks": tracks}, f)
             self.assertEqual(quiet(live_check.main, ["verify", cases, "--read", read]), 1)
 
+    def test_share_and_probe_per_file(self):
+        """--share puts cases with the same stored device on one track; a cases file's own probe
+        gets its own clip."""
+        with tempfile.TemporaryDirectory() as tmp:
+            amap = os.path.join(tmp, "map.json")
+            with open(amap, "w") as f:
+                json.dump(COMPRESSOR_MAP, f)
+            a = os.path.join(tmp, "a.json")
+            b = os.path.join(tmp, "b.json")
+            c = os.path.join(tmp, "c.json")
+            cases = [{"id": "bypass", "params": {"Device On": 0}}, {"id": "default", "params": {}},
+                     {"id": "t", "params": {"Threshold": {"display": -20}}}]
+            with open(a, "w") as f:
+                json.dump({"device": "Compressor", "cases": cases}, f)
+            with open(b, "w") as f:
+                json.dump({"device": "Compressor", "cases": cases[:2] + [
+                    {"id": "t2", "params": {"Threshold": {"display": -10}}}]}, f)
+            short = os.path.join(tmp, "short.wav")
+            from wavio import write_wav
+            import numpy as np
+            write_wav(short, 44100, np.zeros((4410, 2)))
+            with open(c, "w") as f:
+                json.dump({"device": "Compressor", "probe": short, "cases": cases[:1]}, f)
+            out = os.path.join(tmp, "s.als")
+            self.assertEqual(quiet(make_als.main, ["build", a, b, c, "--map", amap, "-o", out, "--share"]), 0)
+            root, ts = self.check_set(out)
+            names = [als.track_name(t) for t in ts]
+            self.assertEqual(names, ["a bypass", "a default", "a t", "b t2", "c bypass"])
+            spec = make_als.load_json(os.path.join(tmp, "s.cases.json"))
+            track = {x["id"]: x["track"] for x in spec["cases"]}
+            self.assertEqual(track["b bypass"], "a bypass")
+            self.assertEqual(track["b default"], "a default")
+            self.assertEqual(track["c bypass"], "c bypass")
+            paths = [t.find(".//SampleRef/FileRef/Path").get("Value") for t in ts]
+            self.assertEqual(paths[-1], os.path.abspath(short))
+            self.assertEqual(paths[0], os.path.abspath(D["probe"]))
+            self.assertEqual(ts[-1].find(".//SampleRef/DefaultDuration").get("Value"), "4410")
+
+    def test_open_waits_for_the_sets_tracks(self):
+        names = live_check.set_tracks(os.path.join(COMPRESSOR_RUN, "compressor-gen.als"))
+        self.assertEqual(len(names), 20)
+
+        class Fake:
+            def __init__(self, tracks):
+                self.tracks = tracks
+
+            def call(self, kind, **p):
+                if kind == "get_session_info":
+                    return {"track_count": len(self.tracks)}
+                return {"name": self.tracks[p["track_index"]]}
+
+        self.assertTrue(live_check.loaded(Fake(names), names))
+        self.assertFalse(live_check.loaded(Fake(names[:-1]), names))
+        self.assertFalse(live_check.loaded(Fake(["other"] + names[1:]), names))
+
     def test_unmapped_parameter_is_an_error(self):
         with tempfile.TemporaryDirectory() as tmp:
             amap = os.path.join(tmp, "map.json")

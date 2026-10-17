@@ -185,11 +185,20 @@ connections): take `MCP_Server/bundled_ableton_remote_script/AbletonMCP_init.py`
 **Settings > Link, Tempo & MIDI** choose **AbletonMCP** as a Control Surface, Input and Output
 None. `nc -z 127.0.0.1 9877` succeeds once it is listening.
 
+**Driving Live through the Remote Script.** Everything up to the export goes through the
+Remote Script, not Live's window: `live_check.py open <set>.als` opens a set (`open -a`) and waits
+until the script lists its tracks (the number, and the first and last names), `read` dumps every
+track's devices, `verify` checks a generated set. Live replaces the open set without asking only
+when that one has no unsaved changes; if `open` times out, a dialog is waiting in Live. Live's API
+has no audio export and the script cannot arm, route or record, so the export (step 2.5) is the
+one step done in the UI. Agents ask the user before taking over Live's window for it
+(`AGENTS.md`).
+
 **Calibrate a device (once per device):**
 
 ```bash
 $PY tools/harness/make_als.py calibrate --device Compressor -o measurements/29.09-compressor/compressor-calibrate.als
-open -a "Ableton Live 12 Trial" measurements/29.09-compressor/compressor-calibrate.als
+$PY tools/harness/live_check.py open measurements/29.09-compressor/compressor-calibrate.als
 $PY tools/harness/live_check.py read -o measurements/29.09-compressor/compressor-calibrate.read.json
 $PY tools/harness/make_als.py map measurements/29.09-compressor/compressor-calibrate.calibration.json \
     measurements/29.09-compressor/compressor-calibrate.read.json
@@ -223,7 +232,7 @@ parameter.
 ```bash
 $PY tools/harness/make_als.py build measurements/29.09-compressor/compressor-threshold.json \
     measurements/29.09-compressor/compressor-attack-gen.json -o measurements/29.09-compressor/compressor-gen.als
-open -a "Ableton Live 12 Trial" measurements/29.09-compressor/compressor-gen.als
+$PY tools/harness/live_check.py open measurements/29.09-compressor/compressor-gen.als
 $PY tools/harness/live_check.py verify measurements/29.09-compressor/compressor-gen.cases.json \
     -o measurements/29.09-compressor/compressor-gen.verified.json
 ```
@@ -334,6 +343,8 @@ Live 12.4.6 Trial with its bundled Max, macOS, 44.1 kHz.
 ### Reverb run (`measurements/29.32-reverb/`, five sets, 2026-10-18)
 
 Driven through desktop control (screenshots, clicks and keystrokes on the Live window), not by hand.
+Later runs build the set as a file and open and check it through the Remote Script (2b), which
+leaves only the export to the UI.
 
 - **Size set through the API is ignored by the export while Smooth is Fast or Slow.** Five Size
   values gave bit-identical renders; with Smooth = None they differ, and a Fast case at Size 1.53

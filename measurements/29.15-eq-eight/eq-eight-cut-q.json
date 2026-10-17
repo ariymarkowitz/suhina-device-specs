@@ -1,0 +1,300 @@
+{
+ "device": "EQ Eight",
+ "parameter": "eq-eight-cut-q",
+ "question": "low-pass and high-pass at 1 kHz, 12 and 48 dB, Q 2 and 6 and 18; notch Q 6",
+ "plan": "2",
+ "read": [
+  "response.sweep_db"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "lp12-q2",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Low Pass 12dB"
+    },
+    "3 Q A": {
+     "display": 2
+    }
+   }
+  },
+  {
+   "id": "lp12-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Low Pass 12dB"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "lp12-q18",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Low Pass 12dB"
+    },
+    "3 Q A": {
+     "display": 18
+    }
+   }
+  },
+  {
+   "id": "hp12-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "High Pass 12dB"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "lp48-q2",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Low Pass 48dB"
+    },
+    "3 Q A": {
+     "display": 2
+    }
+   }
+  },
+  {
+   "id": "lp48-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Low Pass 48dB"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "hp48-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "High Pass 48dB"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "notch-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Notch"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  }
+ ]
+}

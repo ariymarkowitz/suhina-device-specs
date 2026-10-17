@@ -1,0 +1,208 @@
+{
+ "device": "Grain Delay",
+ "parameter": "grain-delay-pitch",
+ "question": "Pitch -36, -12, -5, +0.5, +7 and +12 semitones, 1 kHz tone, grain rate 60 Hz",
+ "plan": "4",
+ "read": [
+  "steady tone pitch",
+  "modulation"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch-36",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": -36,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch-12",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": -12,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch-5",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": -5,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch+0.5",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0.5,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch+7",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 7,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch+12",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 12,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

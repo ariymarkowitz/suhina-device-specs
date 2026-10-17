@@ -1,0 +1,82 @@
+{
+ "device": "Utility",
+ "parameter": "utility-width",
+ "question": "2x2 level matrix (left-only and right-only 1 kHz) and noise correlation for Width 0, 50, 150, 200, 400 %",
+ "plan": "3",
+ "read": [
+  "stereo",
+  "noise"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    }
+   }
+  },
+  {
+   "id": "w0",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "w50",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Stereo Width": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "w150",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Stereo Width": {
+     "display": 150
+    }
+   }
+  },
+  {
+   "id": "w200",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Stereo Width": {
+     "display": 200
+    }
+   }
+  },
+  {
+   "id": "w400",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Stereo Width": {
+     "display": 400
+    }
+   }
+  }
+ ]
+}

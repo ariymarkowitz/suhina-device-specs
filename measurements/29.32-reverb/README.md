@@ -22,6 +22,10 @@ tools/.venv/bin/python tools/harness/signals.py -o measurements/29.32-reverb/pro
 
 ## Runs
 
+These runs were set up by hand with Build cases. New runs are written as a `runs.py` and built
+with `tools/harness/batch.py` (or `make_als.py`), and Live is opened and checked through the
+Remote Script (`tools/README.md` › 2b); only the export is done in Live's window.
+
 Each run gets its own Live Set, saved as `<run>` (Live makes `<run> Project/` here; copy that
 run's `probe.wav`, `Suhina Probe.amxd` and `suhina_probe.js` into it). Then: drag in `probe.wav`
 with Warp off, set the tempo to 120, put Suhina Probe and then Reverb on the track, click

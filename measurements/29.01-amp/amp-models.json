@@ -1,0 +1,276 @@
+{
+ "device": "Amp",
+ "parameter": "amp-models",
+ "question": "static curve (gain, THD, harmonics vs level) and sweep response of every Amp Type, all knobs at 5, Volume 5",
+ "plan": "1, 2",
+ "read": [
+  "static",
+  "response",
+  "stereo"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "model-clean",
+   "params": {
+    "Amp Type": {
+     "item": "Clean"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "model-boost",
+   "params": {
+    "Amp Type": {
+     "item": "Boost"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "model-blues",
+   "params": {
+    "Amp Type": {
+     "item": "Blues"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "model-rock",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "model-lead",
+   "params": {
+    "Amp Type": {
+     "item": "Lead"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "model-heavy",
+   "params": {
+    "Amp Type": {
+     "item": "Heavy"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "model-bass",
+   "params": {
+    "Amp Type": {
+     "item": "Bass"
+    },
+    "Input Gain": {
+     "display": 5
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

@@ -6,7 +6,7 @@
     python make_als.py calibrate --device Compressor -o calib.als
     python live_check.py read -o calib.read.json            # with calib.als open in Live
     python make_als.py map calib.calibration.json calib.read.json
-    python make_als.py build cases.json [cases.json ...] -o measure.als [--probe probe-gap10/probe.wav]
+    python make_als.py build cases.json [cases.json ...] -o measure.als [--probe probe-gap10/probe.wav] [--share]
     python live_check.py verify measure.cases.json          # with measure.als open in Live
 
 A set holds each parameter as a stored value in its own units, under an element name that
@@ -26,8 +26,12 @@ often differs from the parameter's API name and in a different order (Compressor
 
 `build` then writes any number of cases files (cases.py's format) into one set: a copy of the
 template track per case, named `<run> <case id>` (run = the cases file's name), holding a fresh
-copy of the device with the case's values. Beside the set it writes `<set>.cases.json`: every
-track's device and the API value and stored value it should have. `live_check.py verify` checks
+copy of the device with the case's values. A cases file can name its own probe (`"probe"`), so
+runs with different probes share a set; its tracks' clips play that file. With `--share`, cases
+whose device is stored identically with the same probe (every run's `bypass`, a `default` that
+another run also uses) get one track, named after the first such case. Beside the set it writes
+`<set>.cases.json`: every case's device, the track it plays on (`track`) and the API value and
+stored value it should have. `live_check.py verify` checks
 those against Live, which is the test that the set means what it should.
 
 Value specs are cases.py's (`norm`, `value` or a plain number, `item`, `display`) plus
@@ -141,14 +145,22 @@ def source_device(devices_root, dump_dev):
 def start_set(a):
     root = als.read_set(a.template)
     template = als.find_track(root, a.track) if a.track else als.clip_track(root)
-    rate, audio = read_wav(a.probe)
-    tempo = float(root.find("LiveSet/MainTrack/DeviceChain/Mixer/Tempo/Manual").get("Value"))
-    als.point_clip_at(template, a.probe, os.path.dirname(os.path.abspath(a.output)),
-                      frames=len(audio), rate=rate, tempo=tempo)
+    point_template(template, a.probe, a.output, set_tempo(root))
     if not a.keep_returns:
         als.remove_returns(root)
     als.clear_tracks(root)
     return root, template
+
+
+def point_template(template, probe, output, tempo):
+    """Points the template track's clip at `probe` and fits the clip to its length."""
+    rate, audio = read_wav(probe)
+    als.point_clip_at(template, probe, os.path.dirname(os.path.abspath(output)),
+                      frames=len(audio), rate=rate, tempo=tempo)
+
+
+def set_tempo(root):
+    return float(root.find("LiveSet/MainTrack/DeviceChain/Mixer/Tempo/Manual").get("Value"))
 
 
 def write_out(root, ids, path):
@@ -567,17 +579,36 @@ def stored_value(item, dp, spec, rng=None):
     return v, als.format_stored(CONVERSIONS[conv](n), kind)
 
 
+def case_probe(spec, path, default):
+    """The probe a cases file asks for (`"probe"`: a path relative to the repository or to the
+    file), or `default`."""
+    p = spec.get("probe")
+    if not p:
+        return os.path.abspath(default)
+    for base in (ROOT, os.path.dirname(os.path.abspath(path))):
+        if os.path.exists(os.path.join(base, p)):
+            return os.path.abspath(os.path.join(base, p))
+    raise SystemExit(f"{path}: probe {p} not found")
+
+
 def cmd_build(a):
     dump = load_json(a.dump)
     devices_root = als.read_set(a.devices)
     amap = load_json(a.map)["devices"]
     root, template = start_set(a)
+    tempo = set_tempo(root)
+    templates = {os.path.abspath(a.probe): template}
     ids = als.Ids(root)
     out = {"set": os.path.basename(a.output), "generated_by": "make_als.py", "cases": []}
     problems = 0
+    shared = {}  # (probe, device, stored values) -> track name, with --share
     for path in a.cases:
         spec = load_json(path)
         run = os.path.splitext(os.path.basename(path))[0]
+        probe = case_probe(spec, path, a.probe)
+        if probe not in templates:
+            templates[probe] = copy.deepcopy(template)
+            point_template(templates[probe], probe, a.output, tempo)
         dd = dump_device(dump, spec["device"])
         cls = dd["class_name"]
         if cls not in amap:
@@ -588,7 +619,7 @@ def cmd_build(a):
         for case in spec["cases"]:
             dev = copy.deepcopy(fresh)
             rec = {"id": f"{run} {case['id']}", "run": run, "case": case["id"], "device": cls,
-                   "params": {}, "errors": []}
+                   "probe": os.path.relpath(probe, ROOT), "params": {}, "errors": []}
             for name, vspec in (case.get("params") or {}).items():
                 item, dp = mparams.get(name), dparams.get(name)
                 if item is None or dp is None:
@@ -606,13 +637,20 @@ def cmd_build(a):
                     # the API value is only known to within the samples the display was read at
                     rec["params"][name]["tol"] = 1.0 / (len(dp["samples"]) - 1)
             problems += len(rec["errors"])
-            als.add_track(root, template, rec["id"], [dev], ids)
+            # the device's whole stored state, so cases that differ only in how they were written share
+            key = (probe, cls, tuple(als.manual(p) for _, p in als.parameters(dev)))
+            if a.share and key in shared:
+                rec["track"] = shared[key]
+            else:
+                als.add_track(root, templates[probe], rec["id"], [dev], ids)
+                rec["track"] = shared[key] = rec["id"]
             out["cases"].append(rec)
     write_out(root, ids, a.output)
     side = os.path.splitext(a.output)[0] + ".cases.json"
     with open(side, "w") as f:
         json.dump(out, f, indent=1)
-    print(f"wrote {a.output} ({len(out['cases'])} tracks) and {side}"
+    tracks = len({c["track"] for c in out["cases"]})
+    print(f"wrote {a.output} ({tracks} tracks for {len(out['cases'])} cases) and {side}"
           + (f"; {problems} problems (see the errors in {side})" if problems else ""))
     for rec in out["cases"]:
         for e in rec["errors"]:
@@ -652,6 +690,8 @@ def main(argv=None):
     common(b)
     b.add_argument("cases", nargs="+")
     b.add_argument("--map", default=DEFAULTS["map"])
+    b.add_argument("--share", action="store_true",
+                   help="one track for cases whose device ends up stored the same (and same probe)")
     a = ap.parse_args(argv)
     return {"calibrate": cmd_calibrate, "map": cmd_map, "build": cmd_build}[a.cmd](a) or 0
 

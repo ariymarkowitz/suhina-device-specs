@@ -1,0 +1,292 @@
+{
+ "device": "Roar",
+ "parameter": "roar-filter-types",
+ "question": "sweep and impulse through stage 1's filter alone at 1 kHz, Resonance 0.1: BP, HP, Notch, Peak +12 dB, Morph 0.5, Comb, Resampling, Dispersion",
+ "plan": "4",
+ "read": [
+  "response",
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    }
+   }
+  },
+  {
+   "id": "bp",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "BP"
+    }
+   }
+  },
+  {
+   "id": "hp",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "HP"
+    }
+   }
+  },
+  {
+   "id": "notch",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "Notch"
+    }
+   }
+  },
+  {
+   "id": "peak+12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "Peak"
+    },
+    "Flt 1 Peak": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "morph-0.5",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "Morph"
+    },
+    "Flt 1 Morph": {
+     "display": 0.5
+    }
+   }
+  },
+  {
+   "id": "comb",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "Comb"
+    }
+   }
+  },
+  {
+   "id": "resampling",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "Resampling"
+    }
+   }
+  },
+  {
+   "id": "dispersion",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 1,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Flt 1 Freq": {
+     "display": 1000
+    },
+    "Flt 1 Type": {
+     "item": "Dispersion"
+    }
+   }
+  }
+ ]
+}

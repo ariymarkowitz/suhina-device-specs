@@ -1,0 +1,129 @@
+{
+ "device": "Resonators",
+ "parameter": "resonators-tuning",
+ "question": "ringing frequency of Resonator I against Note (C-1 to C5) and Fine Tuning (+-50 ct)",
+ "plan": "2",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0
+   }
+  },
+  {
+   "id": "note-12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Note": 12
+   }
+  },
+  {
+   "id": "note-24",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Note": 24
+   }
+  },
+  {
+   "id": "note-60",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Note": 60
+   }
+  },
+  {
+   "id": "note-69",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Note": 69
+   }
+  },
+  {
+   "id": "note-84",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Note": 84
+   }
+  },
+  {
+   "id": "tune-+50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Tune": 50
+   }
+  },
+  {
+   "id": "tune--50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Tune": -50
+   }
+  }
+ ]
+}

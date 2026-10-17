@@ -1,0 +1,138 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-knee",
+ "question": "static curve at Threshold -20 dB, Ratio 4, Peak, for Knee 3, 6, 10, 18 dB (the default case is Knee 0)",
+ "plan": "3",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "knee-3",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 3,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "knee-6",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 6,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "knee-10",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 10,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "knee-18",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 18,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "device": "Pedal",
+ "parameter": "pedal-gain-taper",
+ "question": "staircase at 1 kHz for each type at Gain 25 and 75 %, EQ flat (reads the low-level gain and the knee)",
+ "plan": "2",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "over-25",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 25
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "over-75",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 75
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "dist-25",
+   "params": {
+    "Type": {
+     "item": "Distortion"
+    },
+    "Drive": {
+     "display": 25
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "dist-75",
+   "params": {
+    "Type": {
+     "item": "Distortion"
+    },
+    "Drive": {
+     "display": 75
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fuzz-25",
+   "params": {
+    "Type": {
+     "item": "Fuzz"
+    },
+    "Drive": {
+     "display": 25
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fuzz-75",
+   "params": {
+    "Type": {
+     "item": "Fuzz"
+    },
+    "Drive": {
+     "display": 75
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

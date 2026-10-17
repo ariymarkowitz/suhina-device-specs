@@ -1,0 +1,228 @@
+{
+ "device": "Limiter",
+ "parameter": "limiter-static",
+ "question": "staircase with Ceiling -6 dB at Gain 0 (the default case), Gain +12 and +24 dB; Ceiling -12 and -1 dB at Gain +12",
+ "plan": "2,3",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gain12",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gain24",
+   "params": {
+    "Input Gain": {
+     "display": 24
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gain12-ceil-12",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -12
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gain12-ceil-1",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -1
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gain-12-ceil-1",
+   "params": {
+    "Input Gain": {
+     "display": -12
+    },
+    "Ceiling": {
+     "display": -1
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

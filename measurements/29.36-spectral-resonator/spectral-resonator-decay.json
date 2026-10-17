@@ -1,0 +1,81 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-decay",
+ "question": "T60 of a partial in the impulse response for Decay 40 ms, 313 ms, 1.06 s, 2.5 s, 8.44 s (Freq 110 Hz)",
+ "plan": "4",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "decay-40ms",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Decay": {
+     "display": 0.04
+    }
+   }
+  },
+  {
+   "id": "decay-313ms",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Decay": {
+     "display": 0.313
+    }
+   }
+  },
+  {
+   "id": "decay-1060ms",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Decay": {
+     "display": 1.06
+    }
+   }
+  },
+  {
+   "id": "decay-2500ms",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Decay": {
+     "display": 2.5
+    }
+   }
+  },
+  {
+   "id": "decay-8440ms",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Decay": {
+     "display": 8.44
+    }
+   }
+  }
+ ]
+}

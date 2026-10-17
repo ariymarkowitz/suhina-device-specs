@@ -1,0 +1,254 @@
+{
+ "device": "Chorus-Ensemble",
+ "parameter": "chorus-depth-rate",
+ "question": "FM depth and rate of the tone through Chorus (20 ms, 2 taps) for Amount 25, 50, 100 % at 1 Hz and Rate 0.5, 5 Hz at 100 %",
+ "plan": "3",
+ "read": [
+  "modulation",
+  "stereo"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "amount-25",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 25
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "amount-50",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 50
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "rate-0.5",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 0.5
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "rate-5",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 5
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

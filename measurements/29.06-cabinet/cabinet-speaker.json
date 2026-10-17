@@ -1,0 +1,139 @@
+{
+ "device": "Cabinet",
+ "parameter": "cabinet-speaker",
+ "question": "sweep response and impulse of every Cabinet Type, Near On-Axis, Condenser",
+ "plan": "1",
+ "read": [
+  "response",
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spk-1x12",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spk-2x12",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spk-4x12",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spk-4x10",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spk-4x10-bass",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

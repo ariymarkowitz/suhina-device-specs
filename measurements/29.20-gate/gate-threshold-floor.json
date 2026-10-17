@@ -1,0 +1,269 @@
+{
+ "device": "Gate",
+ "parameter": "gate-threshold-floor",
+ "question": "Threshold -45, -33, -21 and -9 dB with Floor -inf; and Floor -24, -12, -6 and 0 dB at Threshold -21",
+ "plan": "2,3",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "thr-45",
+   "params": {
+    "Threshold": {
+     "display": -45
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "thr-33",
+   "params": {
+    "Threshold": {
+     "display": -33
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "thr-21",
+   "params": {
+    "Threshold": {
+     "display": -21
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "thr-9",
+   "params": {
+    "Threshold": {
+     "display": -9
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "floor-24",
+   "params": {
+    "Threshold": {
+     "display": -21
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": {
+     "display": -24
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "floor-12",
+   "params": {
+    "Threshold": {
+     "display": -21
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": {
+     "display": -12
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "floor-6",
+   "params": {
+    "Threshold": {
+     "display": -21
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": {
+     "display": -6
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "floor0",
+   "params": {
+    "Threshold": {
+     "display": -21
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": {
+     "display": 0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  }
+ ]
+}

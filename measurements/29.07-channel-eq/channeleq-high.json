@@ -1,0 +1,202 @@
+{
+ "device": "Channel EQ",
+ "parameter": "channeleq-high",
+ "question": "sweep response for High +15, +6, -3, -6, -9, -12, -15 dB",
+ "plan": "5",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "high-p15",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 15
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "high-p6",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 6
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "high-m3",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": -3
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "high-m6",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": -6
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "high-m9",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": -9
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "high-m12",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": -12
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "high-m15",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": -15
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

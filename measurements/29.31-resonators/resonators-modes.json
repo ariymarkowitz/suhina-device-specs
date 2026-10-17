@@ -1,0 +1,107 @@
+{
+ "device": "Resonators",
+ "parameter": "resonators-modes",
+ "question": "partials and decay of Mode A and B at Note C2 and C0; Const off at C2 and C0",
+ "plan": "3, 4",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0
+   }
+  },
+  {
+   "id": "modeB-C2",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Mode": {
+     "item": "Mode B"
+    }
+   }
+  },
+  {
+   "id": "modeB-C0",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Mode": {
+     "item": "Mode B"
+    },
+    "I Note": 24
+   }
+  },
+  {
+   "id": "modeA-C0",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Note": 24
+   }
+  },
+  {
+   "id": "constoff-C2",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Const": 0
+   }
+  },
+  {
+   "id": "constoff-C0",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Const": 0,
+    "I Note": 24
+   }
+  }
+ ]
+}

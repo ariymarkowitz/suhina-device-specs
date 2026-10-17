@@ -1,0 +1,396 @@
+{
+ "device": "Hybrid Reverb",
+ "parameter": "hybrid-reverb-decay",
+ "question": "Dark Hall RT60 for Decay 0.1, 0.5, 1, 2, 6 and 12 s (3.5 s is the default case)",
+ "plan": "6",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 3.5
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "Off"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "decay-0.1",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "Off"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "decay-0.5",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.5
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "Off"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "decay-1",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "Off"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "decay-2",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "Off"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "decay-6",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 6
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "Off"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "decay-12",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 12
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "Off"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,247 @@
+{
+ "device": "Beat Repeat",
+ "parameter": "beatrepeat-gate",
+ "question": "impulse taps and steady-tone window for Gate 1/16 (= Grid), 2/16, 4/16, 8/16 and 2 Bar (the default case is 1 Bar)",
+ "plan": "2",
+ "read": [
+  "impulse",
+  "modulation"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gate-1-16",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 0,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gate-2-16",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 1,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gate-4-16",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gate-8-16",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 7,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "gate-2bar",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 16,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,213 @@
+{
+ "device": "Roar",
+ "parameter": "roar-shaper-types-a",
+ "question": "1 kHz staircase through stage 1, Drive +12 dB, Amount 50 %, filter off, for Soft Sine, Digital Clip, Diode Clipper, Tube Preamp, Polynomial, Tri Fold",
+ "plan": "2",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 1,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 12
+    },
+    "Shaper 1 Amt": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "type-digital-clip",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 1,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 12
+    },
+    "Shaper 1 Amt": {
+     "display": 50
+    },
+    "Shaper 1 Type": {
+     "item": "Digital Clip"
+    }
+   }
+  },
+  {
+   "id": "type-diode-clipper",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 1,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 12
+    },
+    "Shaper 1 Amt": {
+     "display": 50
+    },
+    "Shaper 1 Type": {
+     "item": "Diode Clipper"
+    }
+   }
+  },
+  {
+   "id": "type-tube-preamp",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 1,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 12
+    },
+    "Shaper 1 Amt": {
+     "display": 50
+    },
+    "Shaper 1 Type": {
+     "item": "Tube Preamp"
+    }
+   }
+  },
+  {
+   "id": "type-polynomial",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 1,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 12
+    },
+    "Shaper 1 Amt": {
+     "display": 50
+    },
+    "Shaper 1 Type": {
+     "item": "Polynomial"
+    }
+   }
+  },
+  {
+   "id": "type-tri-fold",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 1,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 12
+    },
+    "Shaper 1 Amt": {
+     "display": 50
+    },
+    "Shaper 1 Type": {
+     "item": "Tri Fold"
+    }
+   }
+  }
+ ]
+}

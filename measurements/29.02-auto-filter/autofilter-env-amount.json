@@ -1,0 +1,254 @@
+{
+ "device": "Auto Filter",
+ "parameter": "autofilter-env-amount",
+ "question": "static curve and bursts of Low-pass 24 dB at 400 Hz with Env Amount -100, -50, 50, 100 % and 0",
+ "plan": "8",
+ "read": [
+  "static",
+  "dynamics"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 100
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "env--100",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": -100
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "env--50",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": -50
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "env-0",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "env-50",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 50
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  }
+ ]
+}

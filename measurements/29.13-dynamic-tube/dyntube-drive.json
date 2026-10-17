@@ -1,0 +1,242 @@
+{
+ "device": "Dynamic Tube",
+ "parameter": "dyntube-drive",
+ "question": "staircase gain and THD for tube C at Bias 50 % with Drive -15, -6, +6, +15 dB, and tubes A and B at Drive +6",
+ "plan": "1",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-drive-m15",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": -15
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-drive-m6",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": -6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-drive-p6",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-drive-p15",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 15
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "a-drive-p6",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b-drive-p6",
+   "params": {
+    "Tube Type": {
+     "item": "B"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}
