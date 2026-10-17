@@ -1,0 +1,202 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-decay",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "preset",
+   "params": {}
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0
+   }
+  },
+  {
+   "id": "decay-0.2s",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "decay-0.83s",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    }
+   }
+  },
+  {
+   "id": "decay-14.4s",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "decay-60s",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 1.0
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-size-1.53",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Room Size": {
+     "display": 1.53
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-size-10.54",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Room Size": {
+     "display": 10.54
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-size-500",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Room Size": {
+     "display": 500
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-filters-preset",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    }
+   }
+  }
+ ]
+}

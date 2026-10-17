@@ -1,0 +1,410 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-size",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "preset",
+   "params": {}
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "size-0.22-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 0.22
+    }
+   }
+  },
+  {
+   "id": "size-1.53-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 1.53
+    }
+   }
+  },
+  {
+   "id": "size-10.54-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 10.54
+    }
+   }
+  },
+  {
+   "id": "size-100-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "size-500-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 500
+    }
+   }
+  },
+  {
+   "id": "size-1.53-er-smooth-fast",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 1.53
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-size-1.53",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Room Size": {
+     "display": 1.53
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-size-10.54",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Room Size": {
+     "display": 10.54
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-size-100",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Room Size": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "decay-3.46s-size-500",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Room Size": {
+     "display": 500
+    }
+   }
+  },
+  {
+   "id": "shape-0-tail",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 0.0
+    }
+   }
+  },
+  {
+   "id": "shape-0.25-tail",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 0.25
+    }
+   }
+  },
+  {
+   "id": "shape-0.75-tail",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 0.75
+    }
+   }
+  },
+  {
+   "id": "shape-1-tail",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 1.0
+    }
+   }
+  },
+  {
+   "id": "diffusion-0.1-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "diffusion-48-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 48
+    }
+   }
+  },
+  {
+   "id": "diffusion-96-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 96
+    }
+   }
+  },
+  {
+   "id": "scale-5-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Scale": {
+     "display": 5
+    }
+   }
+  },
+  {
+   "id": "scale-100-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Scale": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

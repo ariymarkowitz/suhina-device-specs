@@ -1,0 +1,292 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-structure",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "preset",
+   "params": {}
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0
+   }
+  },
+  {
+   "id": "predelay-0.5ms",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Predelay": {
+     "display": 0.0005
+    }
+   }
+  },
+  {
+   "id": "predelay-2.5ms",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Predelay": {
+     "display": 0.0025
+    }
+   }
+  },
+  {
+   "id": "predelay-10ms",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Predelay": {
+     "display": 0.01
+    }
+   }
+  },
+  {
+   "id": "predelay-50ms",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Predelay": {
+     "display": 0.05
+    }
+   }
+  },
+  {
+   "id": "predelay-250ms",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Predelay": {
+     "display": 0.25
+    }
+   }
+  },
+  {
+   "id": "er-only",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "tail-only",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "shape-0",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "ER Shape": {
+     "display": 0.0
+    }
+   }
+  },
+  {
+   "id": "shape-0.25",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "ER Shape": {
+     "display": 0.25
+    }
+   }
+  },
+  {
+   "id": "shape-0.5",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "ER Shape": {
+     "display": 0.5
+    }
+   }
+  },
+  {
+   "id": "shape-0.75",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "ER Shape": {
+     "display": 0.75
+    }
+   }
+  },
+  {
+   "id": "shape-1",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "ER Shape": {
+     "display": 1.0
+    }
+   }
+  },
+  {
+   "id": "size-0.22-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 0.22
+    }
+   }
+  },
+  {
+   "id": "size-1.53-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 1.53
+    }
+   }
+  },
+  {
+   "id": "size-10.54-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 10.54
+    }
+   }
+  },
+  {
+   "id": "size-100-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "size-500-er",
+   "params": {
+    "Dry/Wet": {
+     "norm": 1.0
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 500
+    }
+   }
+  }
+ ]
+}

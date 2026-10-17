@@ -1,0 +1,614 @@
+{
+ "source": "Macintosh HD:/Users/ari/Documents/code/suhina-device-specs/measurements/29.32-reverb/reverb-texture.json",
+ "device": "Reverb",
+ "live_version": "12.4.6",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "preset",
+   "params": {},
+   "errors": []
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "chorus-amt0.5-1Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 1,
+     "display": "On"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Chorus Amount": {
+     "value": 0.12280701845884323,
+     "display": "0.50 "
+    },
+    "Chorus Rate": {
+     "value": 0.6889192461967468,
+     "display": "1.00 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "chorus-amt2-1Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 1,
+     "display": "On"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Chorus Amount": {
+     "value": 0.4987468719482422,
+     "display": "2.00 "
+    },
+    "Chorus Rate": {
+     "value": 0.6889192461967468,
+     "display": "1.00 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "chorus-amt4-1Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 1,
+     "display": "On"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Chorus Amount": {
+     "value": 0.9993734359741211,
+     "display": "4.00 "
+    },
+    "Chorus Rate": {
+     "value": 0.6889192461967468,
+     "display": "1.00 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "chorus-amt2-0.1Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 1,
+     "display": "On"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Chorus Amount": {
+     "value": 0.4987468719482422,
+     "display": "2.00 "
+    },
+    "Chorus Rate": {
+     "value": 0.34427332878112793,
+     "display": "0.10 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "chorus-amt2-4Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 1,
+     "display": "On"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Chorus Amount": {
+     "value": 0.4987468719482422,
+     "display": "2.00 "
+    },
+    "Chorus Rate": {
+     "value": 0.8963068127632141,
+     "display": "4.00 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "spin-amt2-0.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diffuse Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "ER Spin Amount": {
+     "value": 0.00037719757528975606,
+     "display": "2.00 "
+    },
+    "ER Spin Rate": {
+     "value": 0.48832938075065613,
+     "display": "0.30 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "spin-amt17.5-0.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diffuse Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "ER Spin Amount": {
+     "value": 0.6544755101203918,
+     "display": "17.50 "
+    },
+    "ER Spin Rate": {
+     "value": 0.48832938075065613,
+     "display": "0.30 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "spin-amt55-0.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diffuse Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "ER Spin Amount": {
+     "value": 0.9999863505363464,
+     "display": "55.00 "
+    },
+    "ER Spin Rate": {
+     "value": 0.48832938075065613,
+     "display": "0.30 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "spin-amt17.5-1.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diffuse Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "ER Spin Amount": {
+     "value": 0.6544755101203918,
+     "display": "17.50 "
+    },
+    "ER Spin Rate": {
+     "value": 0.9993276596069336,
+     "display": "1.30 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "stereo-0",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Stereo Image": {
+     "value": 0.00004166666622040793,
+     "display": "0.00 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "stereo-60",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Stereo Image": {
+     "value": 0.5,
+     "display": "60.00 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "stereo-120",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Stereo Image": {
+     "value": 0.9999791383743286,
+     "display": "120.00 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "density-sparse",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Density": {
+     "value": 0,
+     "display": "Sparse"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "density-low",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Density": {
+     "value": 1,
+     "display": "Low"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "density-mid",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Density": {
+     "value": 2,
+     "display": "Mid"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "density-high",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Density": {
+     "value": 3,
+     "display": "High"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "diffusion-0.1-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Room Size": {
+     "value": 0.2500542104244232,
+     "display": "1.53 "
+    },
+    "Diffusion": {
+     "value": 0.0002611881645862013,
+     "display": "0.1 %"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "diffusion-48-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Room Size": {
+     "value": 0.2500542104244232,
+     "display": "1.53 "
+    },
+    "Diffusion": {
+     "value": 0.49947866797447205,
+     "display": "48 %"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "diffusion-96-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Room Size": {
+     "value": 0.2500542104244232,
+     "display": "1.53 "
+    },
+    "Diffusion": {
+     "value": 0.9973930716514587,
+     "display": "96 %"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "scale-5-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Room Size": {
+     "value": 0.2500542104244232,
+     "display": "1.53 "
+    },
+    "Scale": {
+     "value": 0.00026365643134340644,
+     "display": "5.0 %"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "scale-100-size1.53",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Room Size": {
+     "value": 0.2500542104244232,
+     "display": "1.53 "
+    },
+    "Scale": {
+     "value": 0.997368335723877,
+     "display": "100 %"
+    }
+   },
+   "errors": []
+  }
+ ]
+}

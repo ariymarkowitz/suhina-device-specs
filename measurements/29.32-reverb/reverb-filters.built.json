@@ -1,0 +1,758 @@
+{
+ "source": "Macintosh HD:/Users/ari/Documents/code/suhina-device-specs/measurements/29.32-reverb/reverb-filters.json",
+ "device": "Reverb",
+ "live_version": "12.4.6",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "preset",
+   "params": {},
+   "errors": []
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-off",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-locut-100Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Input Freq": {
+     "value": 0.11814107745885849,
+     "display": "100 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-hicut-100Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Input Freq": {
+     "value": 0.11814107745885849,
+     "display": "100 Hz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-locut-1000Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Input Freq": {
+     "value": 0.5093310475349426,
+     "display": "1.00 kHz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-hicut-1000Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Input Freq": {
+     "value": 0.5093310475349426,
+     "display": "1.00 kHz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-locut-5000Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Input Freq": {
+     "value": 0.7823798060417175,
+     "display": "5.00 kHz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-hicut-5000Hz",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Input Freq": {
+     "value": 0.7823798060417175,
+     "display": "5.00 kHz"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-both-1000Hz-w0.5",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "In Hi Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Input Freq": {
+     "value": 0.5093310475349426,
+     "display": "1.00 kHz"
+    },
+    "Input Width": {
+     "value": 0.00029462226666510105,
+     "display": "0.50 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-both-1000Hz-w4.75",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "In Hi Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Input Freq": {
+     "value": 0.5093310475349426,
+     "display": "1.00 kHz"
+    },
+    "Input Width": {
+     "value": 0.5,
+     "display": "4.75 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "input-both-1000Hz-w9",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    },
+    "In Lo Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "In Hi Cut On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Input Freq": {
+     "value": 0.5093310475349426,
+     "display": "1.00 kHz"
+    },
+    "Input Width": {
+     "value": 0.9997059106826782,
+     "display": "9.00 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "net-off",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "net-hi-shelf-1000Hz-g0.2",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Hi Type": {
+     "value": 0,
+     "display": "Shelf"
+    },
+    "Diff. Hi Freq": {
+     "value": 0.5855638980865479,
+     "display": "1.00 kHz"
+    },
+    "HiShelf Gain": {
+     "value": 0.0031254999339580536,
+     "display": "0.20 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "net-hi-shelf-1000Hz-g0.6",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Hi Type": {
+     "value": 0,
+     "display": "Shelf"
+    },
+    "Diff. Hi Freq": {
+     "value": 0.5855638980865479,
+     "display": "1.00 kHz"
+    },
+    "HiShelf Gain": {
+     "value": 0.5000000596046448,
+     "display": "0.60 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "net-hi-lowpass-1000Hz-g0.2",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Hi Type": {
+     "value": 1,
+     "display": "Lowpass"
+    },
+    "Diff. Hi Freq": {
+     "value": 0.5855638980865479,
+     "display": "1.00 kHz"
+    },
+    "HiShelf Gain": {
+     "value": 0.0031254999339580536,
+     "display": "0.20 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "net-hi-lowpass-1000Hz-g0.6",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Hi Type": {
+     "value": 1,
+     "display": "Lowpass"
+    },
+    "Diff. Hi Freq": {
+     "value": 0.5855638980865479,
+     "display": "1.00 kHz"
+    },
+    "HiShelf Gain": {
+     "value": 0.5000000596046448,
+     "display": "0.60 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "net-lo-500Hz-g0.2",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diff. Lo Freq": {
+     "value": 0.4862295091152191,
+     "display": "500 Hz"
+    },
+    "LowShelf Gain": {
+     "value": 0.0031254999339580536,
+     "display": "0.20 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "net-lo-500Hz-g0.6",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "In Lo Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "In Hi Cut On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diff. Lo Freq": {
+     "value": 0.4862295091152191,
+     "display": "500 Hz"
+    },
+    "LowShelf Gain": {
+     "value": 0.5000000596046448,
+     "display": "0.60 "
+    }
+   },
+   "errors": []
+  }
+ ]
+}

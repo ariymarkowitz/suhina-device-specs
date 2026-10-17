@@ -232,6 +232,37 @@ Live 12.4.6 Trial with its bundled Max, macOS, 44.1 kHz.
   and release times (about 0.7 ms) from noise; ignore `dynamics` when `impulse.peak_db` is −240.
 - **Before this run, checked without Live:** both test suites.
 
+### Reverb run (`measurements/29.32-reverb/`, five sets, 2026-10-18)
+
+Driven through desktop control (screenshots, clicks and keystrokes on the Live window), not by hand.
+
+- **Size set through the API is ignored by the export while Smooth is Fast or Slow.** Five Size
+  values gave bit-identical renders; with Smooth = None they differ, and a Fast case at Size 1.53
+  equals the untouched default. Put `"Size Smoothing": {"item": "None"}` in every case that sets
+  Room Size.
+- **An export can come out early.** Three of the five Reverb exports were 1764 samples (40.00 ms)
+  ahead of the probe, bypass included; the first two were exact. Cause not found (same steps, same
+  devices). Check the `bypass` render's impulse position first (`impulse.taps[0].time_ms` is
+  not enough: the impulse then lies before the window); fix with `analyse.py --align -1764`.
+- **A save or open panel takes a path only through Go to Folder.** Typing `/Users/...` into a Save As
+  name field turns the slashes into colons and saves a folder of that name on the Desktop. In the
+  panel press Cmd+Shift+G, type the folder, Return, then type the bare name.
+- **Dropping `probe.wav` warps it to about 63 BPM and shortens the clip**: turn Warp off after the
+  drop (the clip then spans the whole file; its Start 1.1.1 and Length show in the status line
+  when the clip is selected). Drop the file with the pointer at the very left of the lane or the
+  clip lands on bar 2; Cut and Paste did not move it.
+- **Export dialog:** the Render Length field keeps its last value; set it to the file's length in
+  bars every run (60 for the 10 s gap, 150 for the 30 s gap). Settings other than Rendered Track
+  and length persisted between runs.
+- **The default set has four tracks and two returns that export as silent files**; delete them
+  before building cases, and clear the browser's search box (it persists) before using Current
+  Project.
+- **Harness:** `impulse.rt60_s` reads far too short for a reverb with early reflections; refit from
+  `.ir.wav`. `modulation` figures for a tone through a reverb are a rough spread, not a clean
+  depth.
+- A Build cases call on 20 to 24 cases took about 15 to 30 s; 60 bars rendered 24 tracks in under
+  30 s, 150 bars in 40 s.
+
 ## Limits
 
 - Attack and release shorter than one cycle of the 1 kHz tone (1 ms) read as about 0.5 ms.

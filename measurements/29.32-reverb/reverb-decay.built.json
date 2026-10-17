@@ -1,0 +1,370 @@
+{
+ "source": "Macintosh HD:/Users/ari/Documents/code/suhina-device-specs/measurements/29.32-reverb/reverb-decay.json",
+ "device": "Reverb",
+ "live_version": "12.4.6",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "preset",
+   "params": {},
+   "errors": []
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-0.2s",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0,
+     "display": "200 ms"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-0.83s",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.2500000596046448,
+     "display": "832 ms"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-3.46s",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-14.4s",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.7499999403953552,
+     "display": "14.4 s"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-60s",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 1,
+     "display": "60.0 s"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-3.46s-size-1.53",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Room Size": {
+     "value": 0.2500542104244232,
+     "display": "1.53 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-3.46s-size-10.54",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Room Size": {
+     "value": 0.5000534057617188,
+     "display": "10.54 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-3.46s-size-500",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    },
+    "Room Size": {
+     "value": 0.9999994039535522,
+     "display": "500.00 "
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "decay-3.46s-filters-preset",
+   "params": {
+    "Dry/Wet": {
+     "value": 1,
+     "display": "100 %"
+    },
+    "Chorus On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Reflect Level": {
+     "value": 0,
+     "display": "-30 dB"
+    },
+    "Diff. Hi On": {
+     "value": 1,
+     "display": "On"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "display": "Off"
+    },
+    "Decay Time": {
+     "value": 0.5,
+     "display": "3.46 s"
+    }
+   },
+   "errors": []
+  }
+ ]
+}
