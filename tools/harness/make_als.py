@@ -53,6 +53,7 @@ from wavio import read_wav
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
+PROJECT_INFO = "Ableton Project Info"
 DEFAULTS = {
     "dump": os.path.join(ROOT, "measurements", "dump-12.4.6.json"),
     "devices": os.path.join(ROOT, "measurements", "populate-12.4.6.als"),
@@ -166,6 +167,10 @@ def set_tempo(root):
 def write_out(root, ids, path):
     ids.close()
     als.write_set(root, path)
+    # Live 12.4.6 loads no sample of a set outside a Project folder ("Sample Offline", and
+    # 'The file "probe.wav" could not be opened' in Log.txt), whatever the clip's Path says;
+    # this empty folder is what makes the set's folder a Project
+    os.makedirs(os.path.join(os.path.dirname(os.path.abspath(path)), PROJECT_INFO), exist_ok=True)
 
 
 # ---------------------------------------------------------------- calibrate

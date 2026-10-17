@@ -1,7 +1,27 @@
 # Top 100 behaviour runs (Live 12.4.6), in one set
 
-State at handoff (2026-10-18): **built, not yet opened in Live, verified, exported or analysed.**
-Committed on branch `top100-measurements` (not pushed).
+State (2026-10-18, second session): **built, opened, verified, exported and analysed; the device
+notes are not updated yet** (next steps 4 and 5). Branch `top100-measurements` (not pushed).
+
+## Done in the second session
+
+- `live_check.py open`: 690 tracks in 30 s. `verify`: 802 of 805 cases match
+  (`top100.verified.json`). The other 3 are Limiter Ceiling/Threshold at −12 dB: stored as
+  −12 dB as asked, but Live's API value is 0.1882 where the harness predicted 0.1719. The display
+  has two significant digits, so a run of API values reads "−12 dB" and the harness took the low
+  end of it; 0.1882 lies between the dump's −14 dB at 0.125 and −10 dB at 0.25, as −12 dB should.
+- **Every clip was Sample Offline** at first (`The file "probe.wav" could not be opened` in Live's
+  `Log.txt`): Live 12.4.6 loads no sample of a set that is not in a Project folder, whatever the
+  clip's Path says, and the earlier calibration sets had the same problem unnoticed (verify reads
+  only devices). `make_als.py` now writes an empty `Ableton Project Info/` beside every set.
+- Export: All Individual Tracks, 1.1.1, 60 bars, WAV 32-bit 44.1 kHz, Normalize off, name
+  `top100`, into `export/`; 691 files (690 tracks and the Main), 27 GB, 11 GB after `--trim`.
+  Live writes a "/" in a track name as "_" in the file name (two tracks); `batch.py` follows that.
+- `batch.py analyse --trim`: offset 0 samples from all 36 gap2 and 3 gap10 bypass renders; 690
+  renders analysed into the devices' `live/` (`top100.analysis.json`). `summary` runs.
+- Silent renders: `utility-gain gain--inf` (expected), `amp-gain gain-0` (Amp gives nothing at
+  Input Gain 0) and `beatrepeat-gate gate-1-16` (Gate = Grid: nothing repeats); the last two are
+  findings for the notes, not render faults.
 
 ## What is here
 
@@ -38,21 +58,21 @@ priority-3 runs; little about them can be measured from audio with static settin
 
 `PY=tools/.venv/bin/python`
 
-1. **Open and verify** (Remote Script, no UI):
+1. Done. **Open and verify** (Remote Script, no UI):
    ```bash
    $PY tools/harness/live_check.py open measurements/top100/top100.als --timeout 900
    $PY tools/harness/live_check.py verify measurements/top100/top100.cases.json -o measurements/top100/top100.verified.json
    ```
    690 tracks is far more than any earlier set (37 to 91); if Live struggles, split the selection
    into two selection files and build two sets.
-2. **Export: the one UI step.** Ask the user first whether they will click it or allow control of
+2. Done (all tracks at once). **Export: the one UI step.** Ask the user first whether they will click it or allow control of
    Live (the user declined desktop control once in this session and asked for the MCP route).
    File › Export Audio/Video, WAV, 32-bit, 44.1 kHz, Normalize off, into `measurements/top100/export/`.
    Either: all tracks at once, name `top100`, length 60 bars (the gap10 probe, 118.75 s), then
    `analyse --trim`; that needs about 690 × 42 MB ≈ 29 GB until the trim. Or two exports (less disk):
    select the gap2 tracks, Selected Tracks Only, 24 bars, name `top100`; then the gap10 tracks
    (the last 32), 60 bars, name `top100-gap10`.
-3. **Analyse and summarise:**
+3. Done. **Analyse and summarise:**
    ```bash
    $PY tools/harness/batch.py analyse measurements/top100/selection.json --export measurements/top100/export [--trim]
    $PY tools/harness/batch.py summary measurements/top100/selection.json > <scratch>/summary.txt

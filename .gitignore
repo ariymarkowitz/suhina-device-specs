@@ -13,5 +13,10 @@ probe.wav
 measurements/*/export/
 *.asd
 Backup/
-# the Reverb runs' impulse responses (long tails, 434 MB); remade by analyse.py from the renders
-measurements/29.32-reverb/live/*.ir.wav
+# the impulse responses analyse.py writes beside each result (the Reverb runs' alone are 434 MB,
+# the top 100 runs' 577 MB); remade by analyse.py from the renders
+measurements/*/live/*.ir.wav
+# what Live writes into a generated set's Project folder while it exports
+measurements/*/Samples/
+# the folder that makes a generated set's folder a Live Project (make_als.py creates it)
+Ableton Project Info/

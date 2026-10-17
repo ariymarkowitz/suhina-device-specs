@@ -186,6 +186,12 @@ def cmd_build(a):
     return make_als.main(["build", *files, "-o", out, "--share", "--probe", first])
 
 
+def file_name(track):
+    """A track's name as Live writes it in an export's file name ("/" becomes "_"); the
+    analysis files use it too."""
+    return track.replace("/", "_")
+
+
 def export_name(sel, probes, probe_key):
     return sel["name"] if probe_key == probes[0] else f"{sel['name']}-{probe_key}"
 
@@ -209,6 +215,7 @@ def cmd_analyse(a):
 
         def wav(track):
             # its own export, or one export of every track at the longest probe's length
+            track = file_name(track)
             for n in (name, sel["name"]):
                 p = os.path.join(a.export, f"{n} {track}.wav")
                 if os.path.exists(p):
@@ -232,11 +239,11 @@ def cmd_analyse(a):
         done = set()
         for c in cs:
             out_dir = os.path.join(folder_of[c["run"]], "live")
-            rel = os.path.relpath(os.path.join(folder_of[c["run"]], "live", c["track"] + ".json"), ROOT)
+            rel = os.path.relpath(os.path.join(folder_of[c["run"]], "live", file_name(c["track"]) + ".json"), ROOT)
             if c["track"] != c["id"]:
                 # a shared track: analysed under the run that has it
                 first = next(x for x in cs if x["id"] == c["track"])
-                rel = os.path.relpath(os.path.join(folder_of[first["run"]], "live", c["track"] + ".json"), ROOT)
+                rel = os.path.relpath(os.path.join(folder_of[first["run"]], "live", file_name(c["track"]) + ".json"), ROOT)
             record["runs"].setdefault(c["run"], {})[c["case"]] = rel
             if c["track"] in done or c["track"] != c["id"]:
                 continue
@@ -261,7 +268,7 @@ def cmd_analyse(a):
                 continue
             result["source"] = os.path.relpath(path, ROOT)
             os.makedirs(out_dir, exist_ok=True)
-            analyse.write_outputs(os.path.join(out_dir, c["track"]), result, extras, rate)
+            analyse.write_outputs(os.path.join(out_dir, file_name(c["track"])), result, extras, rate)
         print(f"{key}: {len(done)} renders analysed")
     out = os.path.splitext(setp)[0] + ".analysis.json"
     with open(out, "w") as f:

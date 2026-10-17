@@ -300,6 +300,7 @@ class FromLiveSets(unittest.TestCase):
             self.assertEqual(quiet(make_als.main, ["build", src, "--map", amap, "-o", out]), 0)
             root, ts = self.check_set(out)
             spec = make_als.load_json(os.path.join(tmp, "measure.cases.json"))
+            self.assertTrue(os.path.isdir(os.path.join(tmp, make_als.PROJECT_INFO)))
             names = [als.track_name(t) for t in ts]
             self.assertEqual(names[:3], ["compressor-threshold bypass", "compressor-threshold default",
                                          "compressor-threshold Threshold-0pct"])
