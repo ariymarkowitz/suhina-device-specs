@@ -54,7 +54,7 @@ tools/.venv/bin/python tools/harness/analyse.py measurements/29.32-reverb/probe-
     "measurements/29.32-reverb/export/reverb-structure "*.wav -o measurements/29.32-reverb/live
 ```
 
-(Quote the glob up to the space: `reverb-structure.wav` is the main mix. `probe-gap30/probe.json` for `reverb-decay`; add `--align -1764` for `reverb-filters`, `reverb-texture` and `reverb-size`.) Points to watch:
+(Quote the glob up to the space: `reverb-structure.wav` is the main mix. `probe-gap30/probe.json` for `reverb-decay`; add `--align -1764` for `reverb-filters`, `reverb-texture` and `reverb-size`.) The `.ir.wav` files in `live/` are not in the repository (434 MB, `.gitignore`): rerunning this command on the renders in `export/` makes them again. Points to watch:
 
 - `impulse.rt60_s` comes from a Schroeder curve over the gap only. The curve is cut off at the
   window's end, which makes long decays read short. For Decay of 14.4 s and above, fit the
