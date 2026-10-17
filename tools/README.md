@@ -115,27 +115,31 @@ has one readable file per device with both.
 
    ```bash
    $PY tools/harness/cases.py sweep measurements/dump-12.4.6.json --device Compressor \
-       --param Threshold --points 7 --set "Ratio=display:4" -o measurements/compressor-threshold.json
+       --param Threshold --points 7 --set "Ratio=display:4" \
+       -o measurements/29.09-compressor/compressor-threshold.json
    ```
 
    Values: `--points N` steps evenly through the internal range, `--display=-40,-30,-20` picks
    values by what the control shows (Hz, s, dB, %), a quantized parameter gets one case per item.
-   Every file starts with `bypass` (device off) and `default`.
+   Every file starts with `bypass` (device off) and `default`. Each device's runs go in its own
+   folder under `measurements/`, named like its note (`29.09-compressor/` for the Compressor).
 4. Click **Build cases** on the probe and choose the cases file. One track per case appears
    under the template, named by case id; `compressor-threshold.built.json` records the value and
    display text each parameter actually got, and any parameter it could not set.
 5. **File > Export Audio/Video**: Rendered Track **All Individual Tracks**, from 1.1.1 for the
    length of the probe (the manifest's `length` / `rate` seconds), WAV, 32-bit, the same sample
    rate, Normalize off, Dither off (greyed out at 32-bit), Create Analysis File off. The probe is
-   46.75 s, so 24 bars at 120 BPM. Save the set too (`compressor-threshold.als`, beside
-   `probe.wav`). Live names the files `<export name> <track name>.wav` (e.g.
+   46.75 s, so 24 bars at 120 BPM. Export into the device's `export/` folder
+   (`measurements/29.09-compressor/export/`) and save the set at the top of its folder
+   (`compressor-threshold.als`). Live names the files `<export name> <track name>.wav` (e.g.
    `compressor-threshold bypass.wav`), adds `<export name>.wav` for the main mix, writes silent
    files for audio and return tracks without clips, and skips MIDI tracks without instruments.
    `compare.py --cases` pairs these by the case id at the end of the name, as it is.
 6. Measure:
 
    ```bash
-   $PY tools/harness/analyse.py measurements/probe.json measurements/export/*.wav -o measurements/live
+   $PY tools/harness/analyse.py measurements/probe.json measurements/29.09-compressor/export/*.wav \
+       -o measurements/29.09-compressor/live
    ```
 
    Per render: `<name>.json` (impulse taps, RT60, frequency response from sweep and noise, static
@@ -169,7 +173,8 @@ those renders the same way, and compare. Two ways to get the renders:
   track switched off.
 
   ```bash
-  $PY tools/harness/render_set.py measurements/compressor-threshold.als -o measurements/mine-renders \
+  $PY tools/harness/render_set.py measurements/29.09-compressor/compressor-threshold.als \
+      -o measurements/29.09-compressor/mine-renders \
       --command "<renderer> {set} -o {out} --sample-rate {rate}" --rate 44100
   ```
 
@@ -179,8 +184,10 @@ those renders the same way, and compare. Two ways to get the renders:
   device's note maps those to stored units (Controls, Implementation notes).
 
 ```bash
-$PY tools/harness/analyse.py measurements/probe.json measurements/mine-renders/*.wav -o measurements/mine
-$PY tools/harness/compare.py measurements/live measurements/mine --cases measurements/compressor-threshold.built.json
+$PY tools/harness/analyse.py measurements/probe.json measurements/29.09-compressor/mine-renders/*.wav \
+    -o measurements/29.09-compressor/mine
+$PY tools/harness/compare.py measurements/29.09-compressor/live measurements/29.09-compressor/mine \
+    --cases measurements/29.09-compressor/compressor-threshold.built.json
 ```
 
 A device the implementation does not have yet must not pass audio through silently: the
@@ -214,7 +221,7 @@ Live 12.4.6 Trial with its bundled Max, macOS, 44.1 kHz.
   `readText` opened the file with the type list `"TEXT"`, and Max does not count a `.json` file as
   TEXT. It now opens with no type list. Test: "build reads a .json cases file from the open
   dialog's Max-style path"; the `File` mock now refuses a `.json` read with `"TEXT"`, as Max did.
-- **Compressor, Threshold at 5 points** (`measurements/compressor-threshold.*`): `bypass` and
+- **Compressor, Threshold at 5 points** (`measurements/29.09-compressor/`): `bypass` and
   `default` equal the probe (impulse at 0 ms, 0 dB, sample offset 0). With the loaded preset
   (4:1, RMS, knee 6 dB, attack 1 ms, release 30 ms) the static curve fits an RMS detector (a sine
   reads 3 dB below its peak) and a 1/4 slope above the threshold: at Threshold −28.8 dB a −6 dBFS

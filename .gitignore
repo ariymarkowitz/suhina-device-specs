@@ -10,6 +10,6 @@ __pycache__/
 
 # Large, regenerable audio (probe signal from tools/harness/signals.py; renders from Live)
 probe.wav
-measurements/export/
+measurements/*/export/
 *.asd
 Backup/

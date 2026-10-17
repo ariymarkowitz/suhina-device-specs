@@ -39,11 +39,12 @@ implementation's own specification.
 | [`live-12/audio-effects/common.md`](live-12/audio-effects/common.md) | controls and behaviour many devices share (side-chain, LFO sync, dry/wet, Hi-Q, the device title bar) |
 | [`live-12/audio-effects/INDEX.md`](live-12/audio-effects/INDEX.md) | every device, its family and how complete its note is |
 | [`tools/`](tools/README.md) | the Suhina Probe device and the measurement harness |
-| `measurements/` | what the tools produced from Live 12.4.6: the dump (and a readable summary per device in `dump-12.4.6-summary/`), the saved sets, the probe signal's manifest (`probe.json`) and the Compressor run's analyses (`live/`) |
+| `measurements/` | what the tools produced from Live 12.4.6: the dump (and a readable summary per device in `dump-12.4.6-summary/`), the saved sets, and the probe signal's manifest (`probe.json`) |
+| `measurements/29.NN-name/` | one folder per device, named like its note, for its behaviour runs: each run's cases file (`<run>.json`), `<run>.built.json` and saved set (`<run>.als`) at the top, Live's renders in `export/` (not in the repository) and their analyses in `live/` |
 
 The large audio files are not in the repository: the probe signal (`probe.wav`, about 16 MB) and
-Live's renders (`measurements/export/`, about 16 MB per case). Comparing an implementation only
-needs the analyses in `measurements/live/`. To recreate the probe signal, run
+Live's renders (each device's `export/`, about 16 MB per case). Comparing an implementation only
+needs the analyses in each device's `live/`. To recreate the probe signal, run
 `tools/.venv/bin/python tools/harness/signals.py -o measurements/probe.wav --rate 44100 --gap 2`
 (the noise is seeded, so it matches the original). Live's renders can only be recreated by
 running the measurement again in Live (`tools/README.md` › 2).
