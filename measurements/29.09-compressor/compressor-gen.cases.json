@@ -1,0 +1,426 @@
+{
+ "set": "compressor-gen.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "compressor-threshold bypass",
+   "run": "compressor-threshold",
+   "case": "bypass",
+   "device": "Compressor2",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-threshold default",
+   "run": "compressor-threshold",
+   "case": "default",
+   "device": "Compressor2",
+   "params": {},
+   "errors": []
+  },
+  {
+   "id": "compressor-threshold Threshold-0pct",
+   "run": "compressor-threshold",
+   "case": "Threshold-0pct",
+   "device": "Compressor2",
+   "params": {
+    "Threshold": {
+     "value": 0.0,
+     "element": "Threshold",
+     "stored": "0.0003162277571"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-threshold Threshold-25pct",
+   "run": "compressor-threshold",
+   "case": "Threshold-25pct",
+   "device": "Compressor2",
+   "params": {
+    "Threshold": {
+     "value": 0.25,
+     "element": "Threshold",
+     "stored": "0.03630780548"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-threshold Threshold-50pct",
+   "run": "compressor-threshold",
+   "case": "Threshold-50pct",
+   "device": "Compressor2",
+   "params": {
+    "Threshold": {
+     "value": 0.5,
+     "element": "Threshold",
+     "stored": "0.1995262315"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-threshold Threshold-75pct",
+   "run": "compressor-threshold",
+   "case": "Threshold-75pct",
+   "device": "Compressor2",
+   "params": {
+    "Threshold": {
+     "value": 0.75,
+     "element": "Threshold",
+     "stored": "0.6309573445"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-threshold Threshold-100pct",
+   "run": "compressor-threshold",
+   "case": "Threshold-100pct",
+   "device": "Compressor2",
+   "params": {
+    "Threshold": {
+     "value": 1.0,
+     "element": "Threshold",
+     "stored": "1.995262315"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-attack-gen bypass",
+   "run": "compressor-attack-gen",
+   "case": "bypass",
+   "device": "Compressor2",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-attack-gen default",
+   "run": "compressor-attack-gen",
+   "case": "default",
+   "device": "Compressor2",
+   "params": {
+    "Ratio": {
+     "value": 0.875,
+     "element": "Ratio",
+     "stored": "8"
+    },
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-attack-gen Attack-0.0001",
+   "run": "compressor-attack-gen",
+   "case": "Attack-0.0001",
+   "device": "Compressor2",
+   "params": {
+    "Ratio": {
+     "value": 0.875,
+     "element": "Ratio",
+     "stored": "8"
+    },
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0"
+    },
+    "Attack": {
+     "value": 0.203125,
+     "element": "Attack",
+     "stored": "0.1",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-attack-gen Attack-0.003",
+   "run": "compressor-attack-gen",
+   "case": "Attack-0.003",
+   "device": "Compressor2",
+   "params": {
+    "Ratio": {
+     "value": 0.875,
+     "element": "Ratio",
+     "stored": "8"
+    },
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0"
+    },
+    "Attack": {
+     "value": 0.49548441584439573,
+     "element": "Attack",
+     "stored": "3",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-attack-gen Attack-0.1",
+   "run": "compressor-attack-gen",
+   "case": "Attack-0.1",
+   "device": "Compressor2",
+   "params": {
+    "Ratio": {
+     "value": 0.875,
+     "element": "Ratio",
+     "stored": "8"
+    },
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0"
+    },
+    "Attack": {
+     "value": 0.8000489406105471,
+     "element": "Attack",
+     "stored": "100",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-attack-gen Attack-0.5",
+   "run": "compressor-attack-gen",
+   "case": "Attack-0.5",
+   "device": "Compressor2",
+   "params": {
+    "Ratio": {
+     "value": 0.875,
+     "element": "Ratio",
+     "stored": "8"
+    },
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0"
+    },
+    "Attack": {
+     "value": 0.9397877812727564,
+     "element": "Attack",
+     "stored": "500",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-release-gen bypass",
+   "run": "compressor-release-gen",
+   "case": "bypass",
+   "device": "Compressor2",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-release-gen default",
+   "run": "compressor-release-gen",
+   "case": "default",
+   "device": "Compressor2",
+   "params": {
+    "S/C EQ Freq": {
+     "value": 0.5642773520494703,
+     "element": "SideChainEq_Freq",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Knee": {
+     "value": 12.0,
+     "element": "Knee",
+     "stored": "12"
+    },
+    "Output": {
+     "value": -6.0,
+     "element": "Gain",
+     "stored": "-6",
+     "tol": 0.015625
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-release-gen Release-0pct",
+   "run": "compressor-release-gen",
+   "case": "Release-0pct",
+   "device": "Compressor2",
+   "params": {
+    "S/C EQ Freq": {
+     "value": 0.5642773520494703,
+     "element": "SideChainEq_Freq",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Knee": {
+     "value": 12.0,
+     "element": "Knee",
+     "stored": "12"
+    },
+    "Output": {
+     "value": -6.0,
+     "element": "Gain",
+     "stored": "-6",
+     "tol": 0.015625
+    },
+    "Release": {
+     "value": 0.0,
+     "element": "Release",
+     "stored": "1"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-release-gen Release-25pct",
+   "run": "compressor-release-gen",
+   "case": "Release-25pct",
+   "device": "Compressor2",
+   "params": {
+    "S/C EQ Freq": {
+     "value": 0.5642773520494703,
+     "element": "SideChainEq_Freq",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Knee": {
+     "value": 12.0,
+     "element": "Knee",
+     "stored": "12"
+    },
+    "Output": {
+     "value": -6.0,
+     "element": "Gain",
+     "stored": "-6",
+     "tol": 0.015625
+    },
+    "Release": {
+     "value": 0.25,
+     "element": "Release",
+     "stored": "82.6"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-release-gen Release-50pct",
+   "run": "compressor-release-gen",
+   "case": "Release-50pct",
+   "device": "Compressor2",
+   "params": {
+    "S/C EQ Freq": {
+     "value": 0.5642773520494703,
+     "element": "SideChainEq_Freq",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Knee": {
+     "value": 12.0,
+     "element": "Knee",
+     "stored": "12"
+    },
+    "Output": {
+     "value": -6.0,
+     "element": "Gain",
+     "stored": "-6",
+     "tol": 0.015625
+    },
+    "Release": {
+     "value": 0.5,
+     "element": "Release",
+     "stored": "459"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-release-gen Release-75pct",
+   "run": "compressor-release-gen",
+   "case": "Release-75pct",
+   "device": "Compressor2",
+   "params": {
+    "S/C EQ Freq": {
+     "value": 0.5642773520494703,
+     "element": "SideChainEq_Freq",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Knee": {
+     "value": 12.0,
+     "element": "Knee",
+     "stored": "12"
+    },
+    "Output": {
+     "value": -6.0,
+     "element": "Gain",
+     "stored": "-6",
+     "tol": 0.015625
+    },
+    "Release": {
+     "value": 0.75,
+     "element": "Release",
+     "stored": "1360"
+    }
+   },
+   "errors": []
+  },
+  {
+   "id": "compressor-release-gen Release-100pct",
+   "run": "compressor-release-gen",
+   "case": "Release-100pct",
+   "device": "Compressor2",
+   "params": {
+    "S/C EQ Freq": {
+     "value": 0.5642773520494703,
+     "element": "SideChainEq_Freq",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Knee": {
+     "value": 12.0,
+     "element": "Knee",
+     "stored": "12"
+    },
+    "Output": {
+     "value": -6.0,
+     "element": "Gain",
+     "stored": "-6",
+     "tol": 0.015625
+    },
+    "Release": {
+     "value": 1.0,
+     "element": "Release",
+     "stored": "3000"
+    }
+   },
+   "errors": []
+  }
+ ]
+}

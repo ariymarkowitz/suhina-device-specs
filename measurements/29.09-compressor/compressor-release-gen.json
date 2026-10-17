@@ -1,0 +1,99 @@
+{
+ "device": "Compressor",
+ "parameter": "Release",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "S/C EQ Freq": {
+     "display": 1000.0
+    },
+    "Knee": 12.0,
+    "Output": {
+     "display": -6.0
+    }
+   }
+  },
+  {
+   "id": "Release-0pct",
+   "params": {
+    "S/C EQ Freq": {
+     "display": 1000.0
+    },
+    "Knee": 12.0,
+    "Output": {
+     "display": -6.0
+    },
+    "Release": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "Release-25pct",
+   "params": {
+    "S/C EQ Freq": {
+     "display": 1000.0
+    },
+    "Knee": 12.0,
+    "Output": {
+     "display": -6.0
+    },
+    "Release": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "Release-50pct",
+   "params": {
+    "S/C EQ Freq": {
+     "display": 1000.0
+    },
+    "Knee": 12.0,
+    "Output": {
+     "display": -6.0
+    },
+    "Release": {
+     "norm": 0.5
+    }
+   }
+  },
+  {
+   "id": "Release-75pct",
+   "params": {
+    "S/C EQ Freq": {
+     "display": 1000.0
+    },
+    "Knee": 12.0,
+    "Output": {
+     "display": -6.0
+    },
+    "Release": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "Release-100pct",
+   "params": {
+    "S/C EQ Freq": {
+     "display": 1000.0
+    },
+    "Knee": 12.0,
+    "Output": {
+     "display": -6.0
+    },
+    "Release": {
+     "norm": 1.0
+    }
+   }
+  }
+ ]
+}

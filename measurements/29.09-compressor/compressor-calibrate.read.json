@@ -1,0 +1,5127 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "ref Compressor2",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "cal Compressor2 On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "cal Compressor2 Threshold",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.10864695906639099,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "cal Compressor2 Ratio",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.875,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "cal Compressor2 ExpansionRatio",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.7000000476837158,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "cal Compressor2 Attack",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "cal Compressor2 Release",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.40799564123153687,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "cal Compressor2 AutoReleaseControlOnOff",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "cal Compressor2 Gain",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": -14.399999618530273,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 9,
+   "name": "cal Compressor2 GainCompensation",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 10,
+   "name": "cal Compressor2 DryWet",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 11,
+   "name": "cal Compressor2 Model",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 2.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 12,
+   "name": "cal Compressor2 LegacyModel",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 13,
+   "name": "cal Compressor2 LogEnvelope",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 14,
+   "name": "cal Compressor2 LegacyEnvFollowerMode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 15,
+   "name": "cal Compressor2 Knee",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 7.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 16,
+   "name": "cal Compressor2 LookAhead",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 17,
+   "name": "cal Compressor2 SideListen",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 18,
+   "name": "cal Compressor2 SideChain/OnOff",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 19,
+   "name": "cal Compressor2 SideChain/RoutedInput/Volume",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.03569526970386505,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 20,
+   "name": "cal Compressor2 SideChain/DryWet",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 21,
+   "name": "cal Compressor2 SideChainEq_On",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 22,
+   "name": "cal Compressor2 SideChainEq_Mode",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 4.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 23,
+   "name": "cal Compressor2 SideChainEq_Freq",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 24,
+   "name": "cal Compressor2 SideChainEq_Q",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.699999988079071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 0.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 25,
+   "name": "cal Compressor2 SideChainEq_Gain",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Compressor",
+     "class_name": "Compressor2",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Threshold",
+       "value": 0.8500000238418579,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Ratio",
+       "value": 0.75,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Expansion Ratio",
+       "value": 1.149999976158142,
+       "min": 1.0,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Attack",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release",
+       "value": 0.1569925993680954,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Auto Release On/Off",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Output",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Makeup",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Dry/Wet",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Model",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Env Mode",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Knee",
+       "value": 6.0,
+       "min": 0.0,
+       "max": 18.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "LookAhead",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Listen",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Type",
+       "value": 5.0,
+       "min": 0.0,
+       "max": 5.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Freq",
+       "value": 0.15782640874385834,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Q",
+       "value": 0.40856707096099854,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C EQ Gain",
+       "value": 1.0,
+       "min": -15.0,
+       "max": 15.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "S/C Gain",
+       "value": 0.4000000059604645,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "S/C Mix",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

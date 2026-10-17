@@ -1,0 +1,363 @@
+{
+ "devices": {
+  "Compressor2": {
+   "display_name": "Compressor",
+   "params": {
+    "Attack": {
+     "convert": "ms",
+     "element": "Attack",
+     "kind": "float",
+     "points": [
+      [
+       0.4000000059604645,
+       1.0
+      ],
+      [
+       0.699999988079071,
+       31.62277639
+      ]
+     ]
+    },
+    "Auto Release On/Off": {
+     "convert": "bool",
+     "element": "AutoReleaseControlOnOff",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Dry/Wet": {
+     "convert": "same",
+     "element": "DryWet",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Env Mode": {
+     "convert": "bool",
+     "element": "LogEnvelope",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Expansion Ratio": {
+     "convert": "same",
+     "element": "ExpansionRatio",
+     "kind": "float",
+     "points": [
+      [
+       1.149999976158142,
+       1.14999998
+      ],
+      [
+       1.7000000476837158,
+       1.7
+      ]
+     ]
+    },
+    "Knee": {
+     "convert": "same",
+     "element": "Knee",
+     "kind": "float",
+     "points": [
+      [
+       6.0,
+       6.0
+      ],
+      [
+       7.0,
+       7.0
+      ]
+     ]
+    },
+    "LookAhead": {
+     "convert": "offset",
+     "element": "LookAhead",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Makeup": {
+     "convert": "bool",
+     "element": "GainCompensation",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Model": {
+     "convert": "offset",
+     "element": "Model",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       2.0,
+       2.0
+      ]
+     ]
+    },
+    "Output": {
+     "convert": "same",
+     "element": "Gain",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.399999618530273,
+       -14.4
+      ]
+     ]
+    },
+    "Ratio": {
+     "convert": "base",
+     "element": "Ratio",
+     "kind": "float",
+     "points": [
+      [
+       0.75,
+       4.0
+      ],
+      [
+       0.875,
+       8.0
+      ]
+     ]
+    },
+    "Release": {
+     "convert": "ms",
+     "element": "Release",
+     "kind": "float",
+     "points": [
+      [
+       0.1569925993680954,
+       30.0
+      ],
+      [
+       0.40799564123153687,
+       271.6344687
+      ]
+     ]
+    },
+    "S/C EQ Freq": {
+     "convert": "base",
+     "element": "SideChainEq_Freq",
+     "kind": "float",
+     "points": [
+      [
+       0.15782640874385834,
+       80.0
+      ],
+      [
+       0.699999988079071,
+       2324.878481
+      ]
+     ]
+    },
+    "S/C EQ Gain": {
+     "convert": "same",
+     "element": "SideChainEq_Gain",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "S/C EQ On": {
+     "convert": "bool",
+     "element": "SideChainEq_On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "S/C EQ Q": {
+     "convert": "base",
+     "element": "SideChainEq_Q",
+     "kind": "float",
+     "points": [
+      [
+       0.40856707096099854,
+       0.7071067691
+      ],
+      [
+       0.699999988079071,
+       2.853821951
+      ]
+     ]
+    },
+    "S/C EQ Type": {
+     "convert": "offset",
+     "element": "SideChainEq_Mode",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       5.0,
+       5.0
+      ],
+      [
+       4.0,
+       4.0
+      ]
+     ]
+    },
+    "S/C Gain": {
+     "convert": "gain",
+     "element": "SideChain/RoutedInput/Volume",
+     "kind": "float",
+     "points": [
+      [
+       0.4000000059604645,
+       1.0
+      ],
+      [
+       0.03569526970386505,
+       0.008128305197
+      ]
+     ]
+    },
+    "S/C Listen": {
+     "convert": "bool",
+     "element": "SideListen",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "S/C Mix": {
+     "convert": "same",
+     "element": "SideChain/DryWet",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "S/C On": {
+     "convert": "bool",
+     "element": "SideChain/OnOff",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Threshold": {
+     "convert": "gain",
+     "element": "Threshold",
+     "kind": "float",
+     "points": [
+      [
+       0.8500000238418579,
+       1.0
+      ],
+      [
+       0.10864695906639099,
+       0.004365158279
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {
+    "LegacyEnvFollowerMode": "no API parameter moved",
+    "LegacyModel": "no API parameter moved"
+   },
+   "unmatched_params": []
+  }
+ },
+ "live_version": null
+}

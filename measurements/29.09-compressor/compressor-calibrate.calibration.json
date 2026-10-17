@@ -1,0 +1,185 @@
+{
+ "set": "compressor-calibrate.als",
+ "tracks": [
+  {
+   "name": "ref Compressor2",
+   "device": "Compressor2",
+   "element": null
+  },
+  {
+   "name": "cal Compressor2 On",
+   "device": "Compressor2",
+   "element": "On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Compressor2 Threshold",
+   "device": "Compressor2",
+   "element": "Threshold",
+   "default": "1",
+   "stored": "0.004365158279"
+  },
+  {
+   "name": "cal Compressor2 Ratio",
+   "device": "Compressor2",
+   "element": "Ratio",
+   "default": "4",
+   "stored": "8"
+  },
+  {
+   "name": "cal Compressor2 ExpansionRatio",
+   "device": "Compressor2",
+   "element": "ExpansionRatio",
+   "default": "1.14999998",
+   "stored": "1.7"
+  },
+  {
+   "name": "cal Compressor2 Attack",
+   "device": "Compressor2",
+   "element": "Attack",
+   "default": "1",
+   "stored": "31.62277639"
+  },
+  {
+   "name": "cal Compressor2 Release",
+   "device": "Compressor2",
+   "element": "Release",
+   "default": "30",
+   "stored": "271.6344687"
+  },
+  {
+   "name": "cal Compressor2 AutoReleaseControlOnOff",
+   "device": "Compressor2",
+   "element": "AutoReleaseControlOnOff",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Compressor2 Gain",
+   "device": "Compressor2",
+   "element": "Gain",
+   "default": "0",
+   "stored": "-14.4"
+  },
+  {
+   "name": "cal Compressor2 GainCompensation",
+   "device": "Compressor2",
+   "element": "GainCompensation",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Compressor2 DryWet",
+   "device": "Compressor2",
+   "element": "DryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal Compressor2 Model",
+   "device": "Compressor2",
+   "element": "Model",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Compressor2 LegacyModel",
+   "device": "Compressor2",
+   "element": "LegacyModel",
+   "default": "1",
+   "stored": "2"
+  },
+  {
+   "name": "cal Compressor2 LogEnvelope",
+   "device": "Compressor2",
+   "element": "LogEnvelope",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Compressor2 LegacyEnvFollowerMode",
+   "device": "Compressor2",
+   "element": "LegacyEnvFollowerMode",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Compressor2 Knee",
+   "device": "Compressor2",
+   "element": "Knee",
+   "default": "6",
+   "stored": "7"
+  },
+  {
+   "name": "cal Compressor2 LookAhead",
+   "device": "Compressor2",
+   "element": "LookAhead",
+   "default": "0",
+   "stored": "1"
+  },
+  {
+   "name": "cal Compressor2 SideListen",
+   "device": "Compressor2",
+   "element": "SideListen",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Compressor2 SideChain/OnOff",
+   "device": "Compressor2",
+   "element": "SideChain/OnOff",
+   "default": "false",
+   "stored": "true"
+  },
+  {
+   "name": "cal Compressor2 SideChain/RoutedInput/Volume",
+   "device": "Compressor2",
+   "element": "SideChain/RoutedInput/Volume",
+   "default": "1",
+   "stored": "0.008128305197"
+  },
+  {
+   "name": "cal Compressor2 SideChain/DryWet",
+   "device": "Compressor2",
+   "element": "SideChain/DryWet",
+   "default": "1",
+   "stored": "0"
+  },
+  {
+   "name": "cal Compressor2 SideChainEq_On",
+   "device": "Compressor2",
+   "element": "SideChainEq_On",
+   "default": "true",
+   "stored": "false"
+  },
+  {
+   "name": "cal Compressor2 SideChainEq_Mode",
+   "device": "Compressor2",
+   "element": "SideChainEq_Mode",
+   "default": "5",
+   "stored": "4"
+  },
+  {
+   "name": "cal Compressor2 SideChainEq_Freq",
+   "device": "Compressor2",
+   "element": "SideChainEq_Freq",
+   "default": "80",
+   "stored": "2324.878481"
+  },
+  {
+   "name": "cal Compressor2 SideChainEq_Q",
+   "device": "Compressor2",
+   "element": "SideChainEq_Q",
+   "default": "0.7071067691",
+   "stored": "2.853821951"
+  },
+  {
+   "name": "cal Compressor2 SideChainEq_Gain",
+   "device": "Compressor2",
+   "element": "SideChainEq_Gain",
+   "default": "0",
+   "stored": "1"
+  }
+ ]
+}

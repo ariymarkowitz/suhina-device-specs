@@ -1,0 +1,79 @@
+{
+ "device": "Compressor",
+ "parameter": "Attack",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Ratio": {
+     "norm": 0.875
+    },
+    "Model": {
+     "item": "Peak"
+    }
+   }
+  },
+  {
+   "id": "Attack-0.0001",
+   "params": {
+    "Ratio": {
+     "norm": 0.875
+    },
+    "Model": {
+     "item": "Peak"
+    },
+    "Attack": {
+     "display": 0.0001
+    }
+   }
+  },
+  {
+   "id": "Attack-0.003",
+   "params": {
+    "Ratio": {
+     "norm": 0.875
+    },
+    "Model": {
+     "item": "Peak"
+    },
+    "Attack": {
+     "display": 0.003
+    }
+   }
+  },
+  {
+   "id": "Attack-0.1",
+   "params": {
+    "Ratio": {
+     "norm": 0.875
+    },
+    "Model": {
+     "item": "Peak"
+    },
+    "Attack": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "Attack-0.5",
+   "params": {
+    "Ratio": {
+     "norm": 0.875
+    },
+    "Model": {
+     "item": "Peak"
+    },
+    "Attack": {
+     "display": 0.5
+    }
+   }
+  }
+ ]
+}

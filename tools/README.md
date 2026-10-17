@@ -7,7 +7,7 @@ parts:
 | Part | What it does |
 |---|---|
 | [`probe-device/`](probe-device/) | **Suhina Probe**, a Max for Live audio effect. Passes audio through unchanged; dumps every device's parameters (range, default, steps, display text across the range, so tapers and units) to JSON; builds one track per test case with the device set to the case's values; adds a track per Live audio effect |
-| [`harness/`](harness/) | Python: the probe signal (`signals.py`), case files from a dump (`cases.py`), measurements of renders (`analyse.py`), renders of the same set through the implementation under test (`render_set.py`), and the comparison (`compare.py`) |
+| [`harness/`](harness/) | Python: the probe signal (`signals.py`), case files from a dump (`cases.py`), a measurement set written directly as an `.als` (`make_als.py`, `als.py`) and checked in Live (`live_check.py`), measurements of renders (`analyse.py`), renders of the same set through the implementation under test (`render_set.py`), and the comparison (`compare.py`) |
 
 Everything here observes the running program through Live's public interfaces (the Live Object
 Model as documented by Cycling '74, rendered audio, saved sets). Nothing reads Live's program
@@ -163,6 +163,80 @@ Which signal answers which question:
 | noise, crackle | `silence` |
 | latency | Live's own readout (hover the device title), or `--align xcorr` on a render with compensation off |
 
+## 2b. Write the measurement set as one `.als` instead
+
+`make_als.py` writes the cases of any number of cases files, for any calibrated devices, into one
+Live Set: one track per case, named `<run> <case id>`, holding the probe clip and a fresh copy of
+the device with the case's values. It replaces steps 2.2 to 2.4 (no dragging the probe in, no
+Build cases). The set still has to be opened in Live and exported (step 2.5), but once for a whole
+batch of runs.
+
+A set stores each parameter in its own units, under an element name that often differs from the
+API name and in a different order (Compressor's Output is `Gain`, EQ Eight's Adaptive Q comes
+last), so each device is calibrated once. Live reports what each stored element means through
+the [AbletonMCP](https://github.com/ahujasid/ableton-mcp) Remote Script (MIT), which
+`live_check.py` talks to on 127.0.0.1:9877.
+
+**Setup (once).** Install only the Remote Script, not the project's MCP server (that one records
+sessions to a remote dataset when it gets consent; the Remote Script makes no outbound
+connections): take `MCP_Server/bundled_ableton_remote_script/AbletonMCP_init.py` from the
+`ableton-mcp` wheel on PyPI (`pip download --no-deps ableton-mcp`) and copy it to
+`~/Music/Ableton/User Library/Remote Scripts/AbletonMCP/__init__.py`. Restart Live, then in
+**Settings > Link, Tempo & MIDI** choose **AbletonMCP** as a Control Surface, Input and Output
+None. `nc -z 127.0.0.1 9877` succeeds once it is listening.
+
+**Calibrate a device (once per device):**
+
+```bash
+$PY tools/harness/make_als.py calibrate --device Compressor -o measurements/29.09-compressor/compressor-calibrate.als
+open -a "Ableton Live 12 Trial" measurements/29.09-compressor/compressor-calibrate.als
+$PY tools/harness/live_check.py read -o measurements/29.09-compressor/compressor-calibrate.read.json
+$PY tools/harness/make_als.py map measurements/29.09-compressor/compressor-calibrate.calibration.json \
+    measurements/29.09-compressor/compressor-calibrate.read.json
+```
+
+The calibration set has a `ref <class>` track (the factory default) and one `cal <class>
+<element>` track per parameter element with only that element changed. `map` finds the one API
+parameter that moved on each track and works out how an API value becomes the stored value: the
+same number, the display's number (Hz, s, ms, % / 100, or dB as linear gain), or an index. It
+records this in `measurements/als-map-12.4.6.json`. Elements that move no API parameter (the
+Compressor's `LegacyModel`) are listed as unmatched and never set. Re-running `map` for another
+device adds to the file.
+
+**Build and check a measurement set:**
+
+```bash
+$PY tools/harness/make_als.py build measurements/29.09-compressor/compressor-threshold.json \
+    measurements/29.09-compressor/compressor-attack-gen.json -o measurements/29.09-compressor/compressor-gen.als
+open -a "Ableton Live 12 Trial" measurements/29.09-compressor/compressor-gen.als
+$PY tools/harness/live_check.py verify measurements/29.09-compressor/compressor-gen.cases.json \
+    -o measurements/29.09-compressor/compressor-gen.verified.json
+```
+
+`build` writes the set and `<set>.cases.json` (per track: device, and per case parameter the
+API value, element and stored value). `verify` reads every track back from Live. It checks each
+case parameter against its API value, and every other parameter against the dump's default,
+which is where a wrongly mapped element shows. With `-o` it writes what Live reports (`live`)
+beside each value: the record to analyse against, in place of `<run>.built.json`. Export as in
+step 2.5 under one export name. Each run's files are then `<export> <run> <case id>.wav`, so
+analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases` takes the
+`.verified.json`.
+
+- **Values.** A `display` spec in base units is converted exactly (Threshold `display:-20` is
+  stored as 0.1). A `norm` or plain value goes through the dump's sampled display curve, so it
+  lands within the display's rounding of the target: three figures, below 0.1 % of the range for
+  the Compressor. `{"stored": x}` writes a stored value as it is, for a parameter the map has no
+  conversion for. A display-given value's expected API value is only known to one sample step
+  (1/64 of the range), and `verify` allows that much there.
+- **The template** (`--template`, default `measurements/29.09-compressor/compressor-threshold.als`)
+  supplies the audio track with the probe clip (Warp off), the tempo and the main track. Its
+  other tracks and its return tracks are dropped (`--keep-returns` keeps the returns). The clip
+  is pointed at `--probe` (default `measurements/probe.wav`) and fitted to its length, so a
+  reverb run can use `probe-gap30/probe.wav`. The probe must have the set's sample rate. One set
+  has one tempo and one probe, so runs that need another of either go in another set.
+- **Not covered yet:** automation (Freeze, Smooth), side-chain routing, MIDI-driven devices
+  (Vocoder carrier, Spectral Resonator MIDI), and devices inside racks.
+
 ## 3. Compare an implementation with Live
 
 Render every case through the implementation, one WAV per case named by its case id, analyse
@@ -270,3 +344,13 @@ Driven through desktop control (screenshots, clicks and keystrokes on the Live w
 - `build` finds a parameter by `name` or `original_name`; when two parameters of a device share
   a name, the first one wins.
 - `--display` finds values by bisection and assumes the control's display is monotonic.
+
+### Generated set, Compressor (`measurements/29.09-compressor/compressor-gen.*`, 2026-10-18)
+
+Live 12.4.6 opened both generated sets (`open -a`) with no warning or missing media.
+Calibration mapped all 23 API parameters of the Compressor; two elements (`LegacyModel`,
+`LegacyEnvFollowerMode`) move none. A set of three runs (the Threshold sweep, Attack by display
+with Ratio and Model set, Release by norm with S/C EQ Freq, Knee and Output set; 20 tracks) read
+back with every case value and every other parameter as intended. Threshold's stored values
+match those Live saved for the probe-built run to within 1e-6. The Remote Script gives no
+display text in 12.4.6 (`value_string` missing), so `map` reads the display from the dump.
