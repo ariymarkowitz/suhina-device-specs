@@ -49,3 +49,73 @@ the Suhina Probe and Max editing are also UI-only and the user's to do.
   `$PY -m unittest discover -s tools/harness/tests > <scratch>/tests.log 2>&1`.
 - Renders (`export/`) and probe WAVs are not in the repository. Point every track's clip at the
   one shared probe file (the builders do), and do not copy probes into Live projects.
+
+## Building a device from a note
+
+A note is the starting point for a Suhina device. The device is designed and written up as a spec
+in Suhina's own `docs/spec/`, then built in [suhina-daw](https://github.com/suhina-daw/suhina-daw),
+whose `AGENTS.md` and ADR 0004 govern the code and whose `docs/spec/device-import.md` gives the
+order of work. This section says how closely to follow the note.
+
+### Simple and fast over exact
+
+Match the note decently, but favour simplicity and performance: **a simple, performant algorithm
+that is 90% accurate is better than a large or slow algorithm that is 99% accurate.** A smaller
+algorithm is easier to check, to keep real-time safe and to run on every track of a big set.
+
+- **What 90% means.** Render the device's cases through the Suhina device and compare them with
+  Live's (`tools/README.md` › 3). Aim to pass `compare.py` at its default tolerances: 0.5 dB for
+  levels, gain curves and responses, 10 % for times, rates and RT60, 0.5 ms for tap times. Every
+  measurement that misses goes in the spec's Known differences (below), with how far off it is.
+- **Exact where it costs nothing.** Ranges, defaults, tapers, step lists and units are
+  `[dump 12.4.6]` and `[als 12.4.6]` facts, and the import depends on them. Either the Suhina
+  parameter takes the same values, or the import mapping converts them exactly. The 90% rule is
+  for the sound, not for the parameters.
+- **What matters most, in order:** what you hear in steady state (static gain curves, frequency
+  responses, tone); then behaviour over time (attack, release, decay, modulation rate and depth);
+  then transient detail, meters and displays.
+- **Budget.** One instance at its default settings should cost under 1 % of one core at 48 kHz
+  (a 60 s offline render in under 0.6 s, release build). Devices that are heavy by nature
+  (reverbs, the spectral devices, Corpus) may need more; their spec says how much and why.
+- **Building blocks.** Use Suhina's `crates/dsp` first, and put a new block there when other
+  devices could use it. Prefer textbook designs: RBJ biquads, one-pole smoothers and envelope
+  followers, a quadratic soft knee. Oversample only where aliasing is audible at ordinary
+  settings. Use FFTs, convolution or large tables only where the device works in the spectrum.
+- **Latency.** Report the same latency as Live (a lookahead, for example; the analyses' impulse
+  offset shows it) and add none that Live does not have, so imported sets stay in time.
+- **Ask first** before an approach that is large or slow: convolution, big tables, a model fitted
+  to the renders, more than 2× oversampling.
+
+### Reading the note
+
+- **Build on what was observed.** `[dump]`, `[als]` and `[measured]` facts are solid; `[manual]`
+  says what a control is for but rarely how it sounds; `[inferred]` and `[source: N]` are guesses
+  to check against the renders.
+- **A `[measure]` gap does not block the work.** Pick the simplest plausible behaviour, record it
+  in the spec as a choice, and add a candidate run to the device's `runs.py` if the gap matters.
+- **Leave out Live's and the harness's quirks.** Some measurements show the export or the
+  harness, not the device: the Reverb's Size ignored while Smooth is on, attack times read from
+  silent renders, exports that come out early (`tools/README.md` › Limits and the run logs). Copy
+  a quirk of the device itself only when it is audible and part of its sound.
+- **Design in seconds and hertz, never in samples.** Every render was made at 44.1 kHz; the device
+  has to behave the same from 8 kHz to 384 kHz.
+
+### Scope
+
+- **Plan the whole parameter list from the note** before writing the first parameter, so ids and
+  order still make sense when the rest lands; ids never change once merged. Ship only parameters
+  that do something.
+- **UI-only parts can wait:** view modes, meters, draggable displays.
+- **Keep a Known differences list** in the Suhina spec: each thing not matched, how far off it is
+  and why it was left. That is better than adding complexity to close the last few percent.
+
+### From note to Suhina
+
+- **The clean-room rules carry over.** The Suhina spec is in Suhina's own words. Only
+  `crates/als`, its tests and `docs/spec/` name Live (suhina-daw `AGENTS.md`, rule 8): the device
+  crate, its name and its interface do not. DSP ported from a project the note's Implementation
+  notes mention needs a GPL-3.0-compatible licence and a row in `ATTRIBUTION.md`.
+- **Report the comparison in the PR:** `compare.py`'s "N of M within tolerance" and the Known
+  differences, beside the conformance tests and golden renders the device PR template asks for.
+- **Fix the note when building shows it is wrong.** Correct the fact and its tag, or add a run
+  for a gap that turned out to matter: the note stays the record of what Live does.

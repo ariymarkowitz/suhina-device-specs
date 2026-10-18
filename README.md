@@ -58,7 +58,8 @@ running the measurement again in Live (`tools/README.md` › 2).
    Live Set and read the values from the `.als`) to fill the `[measure]` gaps.
 3. Write the spec, implement the device and its `.als` import from the note's **Implementation
    notes**, then render the same cases through it and compare with Live's renders
-   ([`tools/`](tools/README.md) › 3).
+   ([`tools/`](tools/README.md) › 3). How closely to match the note, and what to favour over
+   exactness, is in [`AGENTS.md`](AGENTS.md) › Building a device from a note.
 
 ## State and next steps (2026-10-18)
 
