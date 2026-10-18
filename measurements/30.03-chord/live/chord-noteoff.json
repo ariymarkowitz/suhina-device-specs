@@ -1,0 +1,285 @@
+{
+ "set": "midi-effects.als",
+ "run": "chord-noteoff",
+ "lead_beats": 4.0,
+ "tempo": 120.0,
+ "cases": [
+  {
+   "id": "chord-noteoff bypass",
+   "run": "chord-noteoff",
+   "case": "bypass",
+   "track": "chord-noteoff bypass",
+   "params": {
+    "Shift1": {
+     "value": 4
+    },
+    "Shift2": {
+     "value": 7
+    },
+    "Shift3": {
+     "value": 12
+    },
+    "Strum": {
+     "value": 20.0
+    },
+    "Device On": {
+     "value": 0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     8.0,
+     0.125,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     8.0,
+     0.125,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "chord-noteoff default",
+   "run": "chord-noteoff",
+   "case": "default",
+   "track": "chord-noteoff default",
+   "params": {
+    "Shift1": {
+     "value": 4
+    },
+    "Shift2": {
+     "value": 7
+    },
+    "Shift3": {
+     "value": 12
+    },
+    "Strum": {
+     "value": 20.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     8.0,
+     0.125,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.8,
+     0.2,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     8.0,
+     0.125,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "chord-noteoff shift-step",
+   "run": "chord-noteoff",
+   "case": "shift-step",
+   "track": "chord-noteoff shift-step",
+   "params": {
+    "Shift1": {
+     "value": 4
+    },
+    "Shift2": {
+     "value": 7
+    },
+    "Shift3": {
+     "value": 12
+    },
+    "Strum": {
+     "value": 0.0
+    }
+   },
+   "automation": {
+    "Shift1": {
+     "element": "Shift1",
+     "points": [
+      [
+       null,
+       "4"
+      ],
+      [
+       6.0,
+       "5"
+      ]
+     ],
+     "value": 4
+    }
+   },
+   "input": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     67,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     72,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "chord-noteoff off-on",
+   "run": "chord-noteoff",
+   "case": "off-on",
+   "track": "chord-noteoff off-on",
+   "params": {
+    "Shift1": {
+     "value": 4
+    },
+    "Shift2": {
+     "value": 7
+    },
+    "Shift3": {
+     "value": 12
+    },
+    "Strum": {
+     "value": 0.0
+    },
+    "Device On": {
+     "value": 1
+    }
+   },
+   "automation": {
+    "Device On": {
+     "element": "On",
+     "points": [
+      [
+       null,
+       "true"
+      ],
+      [
+       7.0,
+       "false"
+      ],
+      [
+       10.0,
+       "true"
+      ]
+     ],
+     "value": 1
+    }
+   },
+   "input": [
+    [
+     60,
+     4.0,
+     8.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     8.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     8.0,
+     100.0,
+     64.0
+    ],
+    [
+     67,
+     4.0,
+     8.0,
+     100.0,
+     64.0
+    ],
+    [
+     72,
+     4.0,
+     8.0,
+     100.0,
+     64.0
+    ]
+   ]
+  }
+ ]
+}

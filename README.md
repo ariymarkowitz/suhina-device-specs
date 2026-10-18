@@ -93,8 +93,9 @@ the top 100 runs of 37 devices in one set in [`measurements/top100/`](measuremen
 External Audio Effect, Looper, Spectrum and Tuner have none.
 
 The eight MIDI effects of chapter 30 have notes too ([`live-12/midi-effects/`](live-12/midi-effects/INDEX.md)),
-dump checked from their own dump (`measurements/dump-midi-12.4.6.json`); their behaviour is not
-measured yet (the shared plan is in that folder's `common.md`).
+dump checked from their own dump (`measurements/dump-midi-12.4.6.json`); all eight have a
+Measured section from one recording of the devices' MIDI output (`measurements/midi-effects/`,
+`tools/harness/midi_set.py`); (the shared plan is in that folder's `common.md`).
 
 Next: the remaining priority-1 to 3 candidates in each device's `runs.py` (157 of 257 not yet
 run), the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet

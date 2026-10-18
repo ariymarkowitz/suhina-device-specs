@@ -69,8 +69,9 @@ MEAS = os.path.join(ROOT, "measurements")
 def load_runs(paths=None):
     """{run name: (run dict, device display name, device folder)} from the runs.py files."""
     if not paths:
+        # the audio effects' folders; the MIDI effects' runs (30.*) go through midi_set.py
         paths = sorted(os.path.join(MEAS, d, "runs.py") for d in os.listdir(MEAS)
-                       if os.path.exists(os.path.join(MEAS, d, "runs.py")))
+                       if d.startswith("29.") and os.path.exists(os.path.join(MEAS, d, "runs.py")))
     out = {}
     for path in paths:
         spec = importlib.util.spec_from_file_location(f"runs_{len(out)}", path)

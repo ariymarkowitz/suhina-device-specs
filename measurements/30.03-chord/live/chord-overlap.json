@@ -1,0 +1,156 @@
+{
+ "set": "midi-effects.als",
+ "run": "chord-overlap",
+ "lead_beats": 4.0,
+ "tempo": 120.0,
+ "cases": [
+  {
+   "id": "chord-overlap bypass",
+   "run": "chord-overlap",
+   "case": "bypass",
+   "track": "chord-overlap bypass",
+   "params": {
+    "Shift1": {
+     "value": 4
+    },
+    "Shift2": {
+     "value": 7
+    },
+    "Device On": {
+     "value": 0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     67,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     67,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "chord-overlap default",
+   "run": "chord-overlap",
+   "case": "default",
+   "track": "chord-overlap default",
+   "params": {
+    "Shift1": {
+     "value": 4
+    },
+    "Shift2": {
+     "value": 7
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     67,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     67,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     68,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     71,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     74,
+     4.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ]
+  }
+ ]
+}

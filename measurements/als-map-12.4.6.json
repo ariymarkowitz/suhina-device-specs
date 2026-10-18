@@ -9248,6 +9248,1917 @@
    "unmatched_elements": {},
    "unmatched_params": []
   },
+  "MidiArpeggiator": {
+   "display_name": "Arpeggiator",
+   "params": {
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Free Rate": {
+     "convert": "ms",
+     "element": "FreeRate",
+     "kind": "float",
+     "points": [
+      [
+       0.15051500499248505,
+       20.0
+      ],
+      [
+       0.699999988079071,
+       251.1886432
+      ]
+     ]
+    },
+    "Gate": {
+     "convert": "same",
+     "element": "Gate",
+     "kind": "float",
+     "points": [
+      [
+       50.0,
+       50.0
+      ],
+      [
+       4.90127420425415,
+       4.901274189
+      ]
+     ]
+    },
+    "Groove": {
+     "convert": "offset",
+     "element": "Groove",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Hold On": {
+     "convert": "bool",
+     "element": "Hold",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Offset": {
+     "convert": "same",
+     "element": "PatternOffset",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Repeats": {
+     "convert": "same",
+     "element": "RepeatCount",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Ret. Interval": {
+     "convert": "same",
+     "element": "RetriggerInterval",
+     "kind": "float",
+     "points": [
+      [
+       8.0,
+       8.0
+      ],
+      [
+       9.0,
+       9.0
+      ]
+     ]
+    },
+    "Retrigger Mode": {
+     "convert": "offset",
+     "element": "Retrigger",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Style": {
+     "convert": "offset",
+     "element": "Mode",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Sync On": {
+     "convert": "bool",
+     "element": "SyncState",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Synced Rate": {
+     "convert": "same",
+     "element": "SyncedRate",
+     "kind": "float",
+     "points": [
+      [
+       8.0,
+       8.0
+      ],
+      [
+       9.0,
+       9.0
+      ]
+     ]
+    },
+    "Tranpose Key": {
+     "convert": "offset",
+     "element": "TransposeKey",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Tranpose Mode": {
+     "convert": "offset",
+     "element": "TransposeMode",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Transp. Dist.": {
+     "convert": "same",
+     "element": "TransposeDistance",
+     "kind": "float",
+     "points": [
+      [
+       12.0,
+       12.0
+      ],
+      [
+       13.0,
+       13.0
+      ]
+     ]
+    },
+    "Transp. Steps": {
+     "convert": "same",
+     "element": "TransposeSteps",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Use Current Scale": {
+     "convert": "bool",
+     "element": "UseCurrentScale",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Vel. Retrigger": {
+     "convert": "bool",
+     "element": "RetriggerVelocity",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Velocity Decay": {
+     "convert": "ms",
+     "element": "VelocityDecay",
+     "kind": "float",
+     "points": [
+      [
+       0.5293594598770142,
+       1000.0
+      ],
+      [
+       0.30000001192092896,
+       135.9707131
+      ]
+     ]
+    },
+    "Velocity On": {
+     "convert": "bool",
+     "element": "VelocitySwitch",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Velocity Target": {
+     "convert": "same",
+     "element": "VelocityTarget",
+     "kind": "float",
+     "points": [
+      [
+       64.0,
+       64.0
+      ],
+      [
+       38.099998474121094,
+       38.1
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
+  "MidiCcControl": {
+   "display_name": "CC Control",
+   "params": {
+    "Custom A": {
+     "convert": "bool",
+     "element": "CustomBoolValue",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Custom B": {
+     "convert": "integer",
+     "element": "CustomFloatValues.0",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom C": {
+     "convert": "integer",
+     "element": "CustomFloatValues.1",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom D": {
+     "convert": "integer",
+     "element": "CustomFloatValues.2",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom E": {
+     "convert": "integer",
+     "element": "CustomFloatValues.3",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom F": {
+     "convert": "integer",
+     "element": "CustomFloatValues.4",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom G": {
+     "convert": "integer",
+     "element": "CustomFloatValues.5",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom H": {
+     "convert": "integer",
+     "element": "CustomFloatValues.6",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom I": {
+     "convert": "integer",
+     "element": "CustomFloatValues.7",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom J": {
+     "convert": "integer",
+     "element": "CustomFloatValues.8",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom K": {
+     "convert": "integer",
+     "element": "CustomFloatValues.9",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom L": {
+     "convert": "integer",
+     "element": "CustomFloatValues.10",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Custom M": {
+     "convert": "integer",
+     "element": "CustomFloatValues.11",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Mod Wheel": {
+     "convert": "integer",
+     "element": "ModWheel",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Pitch Bend": {
+     "convert": "same",
+     "element": "PitchBend",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -25.600000381469727,
+       -25.6
+      ]
+     ]
+    },
+    "Pressure": {
+     "convert": "integer",
+     "element": "Pressure",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
+  "MidiChord": {
+   "display_name": "Chord",
+   "params": {
+    "Chance1": {
+     "convert": "same",
+     "element": "Chance1",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Chance2": {
+     "convert": "same",
+     "element": "Chance2",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Chance3": {
+     "convert": "same",
+     "element": "Chance3",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Chance4": {
+     "convert": "same",
+     "element": "Chance4",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Chance5": {
+     "convert": "same",
+     "element": "Chance5",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Chance6": {
+     "convert": "same",
+     "element": "Chance6",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Shift1": {
+     "convert": "integer",
+     "element": "Shift1",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift1 Scale Degrees": {
+     "convert": "integer",
+     "element": "ShiftScaleDegrees1",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift2": {
+     "convert": "integer",
+     "element": "Shift2",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift2 Scale Degrees": {
+     "convert": "integer",
+     "element": "ShiftScaleDegrees2",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift3": {
+     "convert": "integer",
+     "element": "Shift3",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift3 Scale Degrees": {
+     "convert": "integer",
+     "element": "ShiftScaleDegrees3",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift4": {
+     "convert": "integer",
+     "element": "Shift4",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift4 Scale Degrees": {
+     "convert": "integer",
+     "element": "ShiftScaleDegrees4",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift5": {
+     "convert": "integer",
+     "element": "Shift5",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift5 Scale Degrees": {
+     "convert": "integer",
+     "element": "ShiftScaleDegrees5",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift6": {
+     "convert": "integer",
+     "element": "Shift6",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Shift6 Scale Degrees": {
+     "convert": "integer",
+     "element": "ShiftScaleDegrees6",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Strum": {
+     "convert": "ms",
+     "element": "Strum",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -12.649110794067383,
+       -160.0
+      ]
+     ]
+    },
+    "Strum Crescendo": {
+     "convert": "same",
+     "element": "StrumCrescendo",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -40.0,
+       -40.0
+      ]
+     ]
+    },
+    "Strum Tension": {
+     "convert": "same",
+     "element": "StrumTension",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -40.0,
+       -40.0
+      ]
+     ]
+    },
+    "Use Current Scale": {
+     "convert": "bool",
+     "element": "UseCurrentScale",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Velocity1": {
+     "convert": "same",
+     "element": "Velocity1",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.049012742936611176,
+       0.04901274113
+      ]
+     ]
+    },
+    "Velocity2": {
+     "convert": "same",
+     "element": "Velocity2",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.049012742936611176,
+       0.04901274113
+      ]
+     ]
+    },
+    "Velocity3": {
+     "convert": "same",
+     "element": "Velocity3",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.049012742936611176,
+       0.04901274113
+      ]
+     ]
+    },
+    "Velocity4": {
+     "convert": "same",
+     "element": "Velocity4",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.049012742936611176,
+       0.04901274113
+      ]
+     ]
+    },
+    "Velocity5": {
+     "convert": "same",
+     "element": "Velocity5",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.049012742936611176,
+       0.04901274113
+      ]
+     ]
+    },
+    "Velocity6": {
+     "convert": "same",
+     "element": "Velocity6",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.049012742936611176,
+       0.04901274113
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
+  "MidiNoteLength": {
+   "display_name": "Note Length",
+   "params": {
+    "Decay Key Scale": {
+     "convert": "same",
+     "element": "DecayKeyScale",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Decay Time": {
+     "convert": "ms",
+     "element": "DecayTime",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       60000.0
+      ],
+      [
+       0.30000001192092896,
+       135.9707131
+      ]
+     ]
+    },
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Gate": {
+     "convert": "same",
+     "element": "Gate",
+     "kind": "float",
+     "points": [
+      [
+       100.0,
+       100.0
+      ],
+      [
+       4.90127420425415,
+       4.901274189
+      ]
+     ]
+    },
+    "Latch": {
+     "convert": "bool",
+     "element": "Latch",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Release Velocity": {
+     "convert": "same",
+     "element": "Balance",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       70.0,
+       70.0
+      ]
+     ]
+    },
+    "Sync On": {
+     "convert": "bool",
+     "element": "SyncState",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Synced Length": {
+     "convert": "same",
+     "element": "SyncedLength",
+     "kind": "float",
+     "points": [
+      [
+       4.0,
+       4.0
+      ],
+      [
+       5.0,
+       5.0
+      ]
+     ]
+    },
+    "Time Length": {
+     "convert": "ms",
+     "element": "TimeLength",
+     "kind": "float",
+     "points": [
+      [
+       0.2646797299385071,
+       100.0
+      ],
+      [
+       0.699999988079071,
+       4412.714962
+      ]
+     ]
+    },
+    "Trigger Source": {
+     "convert": "bool",
+     "element": "Mode",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
+  "MidiPitcher": {
+   "display_name": "Pitch",
+   "params": {
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Lowest": {
+     "convert": "integer",
+     "element": "Lowest",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Mode": {
+     "convert": "offset",
+     "element": "RangeMode",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Pitch": {
+     "convert": "base",
+     "element": "Pitch",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -51.0,
+       -51.2
+      ]
+     ]
+    },
+    "Pitch Scale Degrees": {
+     "convert": "same",
+     "element": "PitchScaleDegrees",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Range": {
+     "convert": "integer",
+     "element": "Range",
+     "kind": "float",
+     "points": [
+      [
+       127.0,
+       127.0
+      ],
+      [
+       38.0,
+       38.1
+      ]
+     ]
+    },
+    "Step Width": {
+     "convert": "same",
+     "element": "StepWidth",
+     "kind": "float",
+     "points": [
+      [
+       12.0,
+       12.0
+      ],
+      [
+       13.0,
+       13.0
+      ]
+     ]
+    },
+    "Step Width Scale Degrees": {
+     "convert": "same",
+     "element": "StepWidthScaleDegrees",
+     "kind": "float",
+     "points": [
+      [
+       7.0,
+       7.0
+      ],
+      [
+       8.0,
+       8.0
+      ]
+     ]
+    },
+    "Use Current Scale": {
+     "convert": "bool",
+     "element": "UseCurrentScale",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
+  "MidiRandom": {
+   "display_name": "Random",
+   "params": {
+    "Chance": {
+     "convert": "same",
+     "element": "Chance",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Choices": {
+     "convert": "same",
+     "element": "Choices",
+     "kind": "float",
+     "points": [
+      [
+       12.0,
+       12.0
+      ],
+      [
+       13.0,
+       13.0
+      ]
+     ]
+    },
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Interval": {
+     "convert": "same",
+     "element": "Scale",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       2.0,
+       2.0
+      ]
+     ]
+    },
+    "Mode": {
+     "convert": "bool",
+     "element": "Alternate",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Sign": {
+     "convert": "offset",
+     "element": "Sign",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Use Current Scale": {
+     "convert": "bool",
+     "element": "UseCurrentScale",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
+  "MidiScale": {
+   "display_name": "Scale",
+   "params": {
+    "Base": {
+     "convert": "same",
+     "element": "Base",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Fold": {
+     "convert": "bool",
+     "element": "Fold",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "InternalScale": {
+     "convert": "offset",
+     "element": "InternalScale",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Lowest": {
+     "convert": "integer",
+     "element": "Lowest",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Map 0": {
+     "convert": "same",
+     "element": "Mapping.0",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Map 1": {
+     "convert": "same",
+     "element": "Mapping.1",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       2.0,
+       2.0
+      ]
+     ]
+    },
+    "Map 10": {
+     "convert": "same",
+     "element": "Mapping.10",
+     "kind": "float",
+     "points": [
+      [
+       10.0,
+       10.0
+      ],
+      [
+       11.0,
+       11.0
+      ]
+     ]
+    },
+    "Map 11": {
+     "convert": "same",
+     "element": "Mapping.11",
+     "kind": "float",
+     "points": [
+      [
+       11.0,
+       11.0
+      ],
+      [
+       12.0,
+       12.0
+      ]
+     ]
+    },
+    "Map 2": {
+     "convert": "same",
+     "element": "Mapping.2",
+     "kind": "float",
+     "points": [
+      [
+       2.0,
+       2.0
+      ],
+      [
+       3.0,
+       3.0
+      ]
+     ]
+    },
+    "Map 3": {
+     "convert": "same",
+     "element": "Mapping.3",
+     "kind": "float",
+     "points": [
+      [
+       3.0,
+       3.0
+      ],
+      [
+       4.0,
+       4.0
+      ]
+     ]
+    },
+    "Map 4": {
+     "convert": "same",
+     "element": "Mapping.4",
+     "kind": "float",
+     "points": [
+      [
+       4.0,
+       4.0
+      ],
+      [
+       5.0,
+       5.0
+      ]
+     ]
+    },
+    "Map 5": {
+     "convert": "same",
+     "element": "Mapping.5",
+     "kind": "float",
+     "points": [
+      [
+       5.0,
+       5.0
+      ],
+      [
+       6.0,
+       6.0
+      ]
+     ]
+    },
+    "Map 6": {
+     "convert": "same",
+     "element": "Mapping.6",
+     "kind": "float",
+     "points": [
+      [
+       6.0,
+       6.0
+      ],
+      [
+       7.0,
+       7.0
+      ]
+     ]
+    },
+    "Map 7": {
+     "convert": "same",
+     "element": "Mapping.7",
+     "kind": "float",
+     "points": [
+      [
+       7.0,
+       7.0
+      ],
+      [
+       8.0,
+       8.0
+      ]
+     ]
+    },
+    "Map 8": {
+     "convert": "same",
+     "element": "Mapping.8",
+     "kind": "float",
+     "points": [
+      [
+       8.0,
+       8.0
+      ],
+      [
+       9.0,
+       9.0
+      ]
+     ]
+    },
+    "Map 9": {
+     "convert": "same",
+     "element": "Mapping.9",
+     "kind": "float",
+     "points": [
+      [
+       9.0,
+       9.0
+      ],
+      [
+       10.0,
+       10.0
+      ]
+     ]
+    },
+    "Range": {
+     "convert": "base",
+     "element": "Range",
+     "kind": "float",
+     "points": [
+      [
+       128.0,
+       128.0
+      ],
+      [
+       38.0,
+       38.4
+      ]
+     ]
+    },
+    "Transpose": {
+     "convert": "integer",
+     "element": "Transpose",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       -14.0,
+       -14.4
+      ]
+     ]
+    },
+    "Use Current Scale": {
+     "convert": "bool",
+     "element": "UseCurrentScale",
+     "kind": "bool",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
+  "MidiVelocity": {
+   "display_name": "Velocity",
+   "params": {
+    "Compand": {
+     "convert": "same",
+     "element": "Compand",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Device On": {
+     "convert": "bool",
+     "element": "On",
+     "kind": "bool",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       0.0,
+       0.0
+      ]
+     ]
+    },
+    "Drive": {
+     "convert": "same",
+     "element": "Drive",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Lowest": {
+     "convert": "integer",
+     "element": "Lowest",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Mode": {
+     "convert": "offset",
+     "element": "Mode",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Operation": {
+     "convert": "offset",
+     "element": "Operation",
+     "kind": "int",
+     "offset": 0.0,
+     "points": [
+      [
+       2.0,
+       2.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Out Hi": {
+     "convert": "integer",
+     "element": "MaxOut",
+     "kind": "float",
+     "points": [
+      [
+       127.0,
+       127.0
+      ],
+      [
+       38.0,
+       38.1
+      ]
+     ]
+    },
+    "Out Low": {
+     "convert": "integer",
+     "element": "MinOut",
+     "kind": "float",
+     "points": [
+      [
+       1.0,
+       1.0
+      ],
+      [
+       88.0,
+       88.9
+      ]
+     ]
+    },
+    "Random": {
+     "convert": "same",
+     "element": "Random",
+     "kind": "float",
+     "points": [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       1.0,
+       1.0
+      ]
+     ]
+    },
+    "Range": {
+     "convert": "integer",
+     "element": "Range",
+     "kind": "float",
+     "points": [
+      [
+       127.0,
+       127.0
+      ],
+      [
+       38.0,
+       38.1
+      ]
+     ]
+    }
+   },
+   "unmatched_elements": {},
+   "unmatched_params": []
+  },
   "MultibandDynamics": {
    "display_name": "Multiband Dynamics",
    "params": {

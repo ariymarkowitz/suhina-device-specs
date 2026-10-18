@@ -117,10 +117,22 @@ def load_json(path):
         return json.load(f)
 
 
+# Devices whose class the probe misreads, by the track the dump found them on: Live 12.4.6's
+# API gave CC Control's class_name and class_display_name as "0" to the probe, where the Remote
+# Script and the saved set give MidiCcControl.
+CLASS_FIXES = {"CC Control": "MidiCcControl"}
+
+
 def dump_device(dump, name):
     """The dump's entry for a device by class or display name, preferring the fresh copy that
     Populate put on a track named after it."""
-    hits = [d for d in dump["devices"] if name in (d.get("class_name"), d.get("class_display_name"))]
+    hits = []
+    for d in dump["devices"]:
+        fix = CLASS_FIXES.get(d.get("track"))
+        if fix and d.get("class_name") == "0":
+            d = dict(d, class_name=fix, class_display_name=d["track"])
+        if name in (d.get("class_name"), d.get("class_display_name")):
+            hits.append(d)
     if not hits:
         raise SystemExit(f"no device {name!r} in the dump")
     fresh = [d for d in hits if d.get("track") == d.get("class_display_name")]

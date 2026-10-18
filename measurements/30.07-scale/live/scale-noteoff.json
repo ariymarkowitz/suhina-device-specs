@@ -1,0 +1,307 @@
+{
+ "set": "midi-effects.als",
+ "run": "scale-noteoff",
+ "lead_beats": 4.0,
+ "tempo": 120.0,
+ "cases": [
+  {
+   "id": "scale-noteoff bypass",
+   "run": "scale-noteoff",
+   "case": "bypass",
+   "track": "scale-noteoff bypass",
+   "params": {
+    "Map 1": {
+     "value": 0.0
+    },
+    "Device On": {
+     "value": 0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     61,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     9.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     61,
+     10.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     11.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     61,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     9.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     61,
+     10.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     11.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "scale-noteoff default",
+   "run": "scale-noteoff",
+   "case": "default",
+   "track": "scale-noteoff default",
+   "params": {
+    "Map 1": {
+     "value": 0.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     61,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     9.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     61,
+     10.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     11.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     9.0,
+     1.0,
+     100.0,
+     100.0
+    ],
+    [
+     60,
+     10.0,
+     2.0,
+     100.0,
+     64.0
+    ],
+    [
+     64,
+     11.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "scale-noteoff transpose-step",
+   "run": "scale-noteoff",
+   "case": "transpose-step",
+   "track": "scale-noteoff transpose-step",
+   "params": {
+    "Map 1": {
+     "value": 1.0
+    },
+    "Transpose": {
+     "value": 0
+    }
+   },
+   "automation": {
+    "Transpose": {
+     "element": "Transpose",
+     "points": [
+      [
+       null,
+       "0"
+      ],
+      [
+       6.0,
+       "5"
+      ]
+     ],
+     "value": 0
+    }
+   },
+   "input": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "scale-noteoff base-step",
+   "run": "scale-noteoff",
+   "case": "base-step",
+   "track": "scale-noteoff base-step",
+   "params": {
+    "Map 1": {
+     "value": 1.0
+    },
+    "Map 0": {
+     "value": 2.0
+    },
+    "Base": {
+     "value": 0.0
+    }
+   },
+   "automation": {
+    "Base": {
+     "element": "Base",
+     "points": [
+      [
+       null,
+       "0"
+      ],
+      [
+       6.0,
+       "2"
+      ]
+     ],
+     "value": 0.0
+    }
+   },
+   "input": [
+    [
+     60,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     62,
+     4.0,
+     4.0,
+     100.0,
+     64.0
+    ]
+   ]
+  }
+ ]
+}

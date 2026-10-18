@@ -196,7 +196,8 @@ class FromLiveSets(unittest.TestCase):
         amap = make_als.load_json(D["map"])["devices"]
         devices_root = als.read_set(D["devices"])
         classes = {d["class_name"] for d in self.dump["devices"]} - {"MxDeviceAudioEffect"}
-        self.assertEqual(set(amap), classes)
+        # the MIDI effects are calibrated too (midi_set.py), from their own dump
+        self.assertEqual({c for c in amap if not c.startswith("Midi")}, classes)
         for cls in sorted(classes):
             entry = amap[cls]
             self.assertEqual(entry["unmatched_params"], [], cls)

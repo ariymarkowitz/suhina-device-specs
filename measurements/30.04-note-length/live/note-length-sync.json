@@ -1,0 +1,665 @@
+{
+ "set": "midi-effects.als",
+ "run": "note-length-sync",
+ "lead_beats": 4.0,
+ "tempo": 120.0,
+ "cases": [
+  {
+   "id": "note-length-sync bypass",
+   "run": "note-length-sync",
+   "case": "bypass",
+   "track": "note-length-sync bypass",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Device On": {
+     "value": 0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync default",
+   "run": "note-length-sync",
+   "case": "default",
+   "track": "note-length-sync default",
+   "params": {
+    "Sync On": {
+     "value": 1
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.166667,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.166667,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.166667,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step0",
+   "run": "note-length-sync",
+   "case": "step0",
+   "track": "note-length-sync step0",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 0.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": []
+  },
+  {
+   "id": "note-length-sync step1",
+   "run": "note-length-sync",
+   "case": "step1",
+   "track": "note-length-sync step1",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 1.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.0625,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step2",
+   "run": "note-length-sync",
+   "case": "step2",
+   "track": "note-length-sync step2",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 2.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.083333,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.083333,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.083333,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step3",
+   "run": "note-length-sync",
+   "case": "step3",
+   "track": "note-length-sync step3",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 3.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.125,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.125,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.125,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step5",
+   "run": "note-length-sync",
+   "case": "step5",
+   "track": "note-length-sync step5",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 5.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.25,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.25,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.25,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step6",
+   "run": "note-length-sync",
+   "case": "step6",
+   "track": "note-length-sync step6",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 6.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.333333,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.333333,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.333333,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step7",
+   "run": "note-length-sync",
+   "case": "step7",
+   "track": "note-length-sync step7",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 7.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.5,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.5,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.5,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step8",
+   "run": "note-length-sync",
+   "case": "step8",
+   "track": "note-length-sync step8",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 8.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     0.666667,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.666667,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     0.666667,
+     100.0,
+     64.0
+    ]
+   ]
+  },
+  {
+   "id": "note-length-sync step9",
+   "run": "note-length-sync",
+   "case": "step9",
+   "track": "note-length-sync step9",
+   "params": {
+    "Sync On": {
+     "value": 1
+    },
+    "Synced Length": {
+     "value": 9.0
+    }
+   },
+   "automation": {},
+   "input": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     0.0625,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     2.0,
+     100.0,
+     64.0
+    ]
+   ],
+   "scale": null,
+   "output": [
+    [
+     60,
+     4.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     16.0,
+     1.0,
+     100.0,
+     64.0
+    ],
+    [
+     60,
+     28.0,
+     1.0,
+     100.0,
+     64.0
+    ]
+   ]
+  }
+ ]
+}
