@@ -1,0 +1,86 @@
+# CC Control  (.als element MidiCcControl; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset) The probe read class_name '0' for this device; the element name is the saved set's.
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Mod Wheel | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Pitch Bend | -64..64 | 0 -> 0 | 0 -> 0 | taper: linear
+    -64: -64; -48: -48; -32: -32; -16: -16; 0: 0; 16: 16; 32: 32; 48: 48; 64: 64
+- Pressure | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom A | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Custom B | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom C | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom D | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom E | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom F | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom G | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom H | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom I | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom J | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom K | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom L | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Custom M | 0..127 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+ModWheel = 0
+PitchBend = 0
+Pressure = 0
+CustomBoolValue = false
+CustomFloatValues.0 = 0
+CustomFloatValues.1 = 0
+CustomFloatValues.2 = 0
+CustomFloatValues.3 = 0
+CustomFloatValues.4 = 0
+CustomFloatValues.5 = 0
+CustomFloatValues.6 = 0
+CustomFloatValues.7 = 0
+CustomFloatValues.8 = 0
+CustomFloatValues.9 = 0
+CustomFloatValues.10 = 0
+CustomFloatValues.11 = 0
+
+## Other elements of the device in the saved set (not parameters), element = Value
+CustomBoolName = Custom A
+CustomBoolTarget = 64
+CustomFloatNames.0 = Custom B
+CustomFloatNames.1 = Custom C
+CustomFloatNames.2 = Custom D
+CustomFloatNames.3 = Custom E
+CustomFloatNames.4 = Custom F
+CustomFloatNames.5 = Custom G
+CustomFloatNames.6 = Custom H
+CustomFloatNames.7 = Custom I
+CustomFloatNames.8 = Custom J
+CustomFloatNames.9 = Custom K
+CustomFloatNames.10 = Custom L
+CustomFloatNames.11 = Custom M
+CustomFloatTargets.0 = 0
+CustomFloatTargets.1 = 0
+CustomFloatTargets.2 = 0
+CustomFloatTargets.3 = 0
+CustomFloatTargets.4 = 0
+CustomFloatTargets.5 = 0
+CustomFloatTargets.6 = 0
+CustomFloatTargets.7 = 0
+CustomFloatTargets.8 = 0
+CustomFloatTargets.9 = 0
+CustomFloatTargets.10 = 0
+CustomFloatTargets.11 = 0

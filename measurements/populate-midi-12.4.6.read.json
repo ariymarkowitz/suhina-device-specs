@@ -1,0 +1,1114 @@
+{
+ "tempo": 120.0,
+ "tracks": [
+  {
+   "index": 0,
+   "name": "Probe",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Suhina Probe",
+     "class_name": "MxDeviceAudioEffect",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 1,
+   "name": "Arpeggiator",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Arpeggiator",
+     "class_name": "MidiArpeggiator",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Style",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 17.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Offset",
+       "value": 0.0,
+       "min": -8.0,
+       "max": 8.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Repeats",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 16.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Sync On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Synced Rate",
+       "value": 8.0,
+       "min": 0.0,
+       "max": 13.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Groove",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 3.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Free Rate",
+       "value": 0.15051500499248505,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 50.0,
+       "min": 1.0,
+       "max": 200.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Retrigger Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Ret. Interval",
+       "value": 8.0,
+       "min": 0.0,
+       "max": 14.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Hold On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Tranpose Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 35.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Tranpose Key",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 11.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transp. Steps",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 8.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Transp. Dist.",
+       "value": 12.0,
+       "min": -24.0,
+       "max": 24.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Vel. Retrigger",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Velocity Decay",
+       "value": 0.5293594598770142,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity Target",
+       "value": 64.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Current Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 2,
+   "name": "CC Control",
+   "devices": [
+    {
+     "index": 0,
+     "name": "CC Control",
+     "class_name": "MidiCcControl",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mod Wheel",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Bend",
+       "value": 0.0,
+       "min": -64.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pressure",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom A",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Custom B",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom C",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom D",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom E",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom F",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom G",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom H",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom I",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom J",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom K",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom L",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Custom M",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 3,
+   "name": "Chord",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Chord",
+     "class_name": "MidiChord",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Shift1",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift1 Scale Degrees",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity1",
+       "value": 1.0,
+       "min": 0.009999999776482582,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Chance1",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift2",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift2 Scale Degrees",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity2",
+       "value": 1.0,
+       "min": 0.009999999776482582,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Chance2",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift3",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift3 Scale Degrees",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity3",
+       "value": 1.0,
+       "min": 0.009999999776482582,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Chance3",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift4",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift4 Scale Degrees",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity4",
+       "value": 1.0,
+       "min": 0.009999999776482582,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Chance4",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift5",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift5 Scale Degrees",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity5",
+       "value": 1.0,
+       "min": 0.009999999776482582,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Chance5",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift6",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Shift6 Scale Degrees",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Velocity6",
+       "value": 1.0,
+       "min": 0.009999999776482582,
+       "max": 2.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Chance6",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Strum",
+       "value": 0.0,
+       "min": -20.0,
+       "max": 20.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Strum Tension",
+       "value": 0.0,
+       "min": -100.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Strum Crescendo",
+       "value": 0.0,
+       "min": -100.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Use Current Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 4,
+   "name": "Note Length",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Note Length",
+     "class_name": "MidiNoteLength",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Trigger Source",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Latch",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Sync On",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Synced Length",
+       "value": 4.0,
+       "min": 0.0,
+       "max": 9.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Time Length",
+       "value": 0.2646797299385071,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Gate",
+       "value": 100.0,
+       "min": 1.0,
+       "max": 200.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Release Velocity",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 100.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay Time",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Decay Key Scale",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 5,
+   "name": "Pitch",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Pitch",
+     "class_name": "MidiPitcher",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Pitch",
+       "value": 0.0,
+       "min": -128.0,
+       "max": 128.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Pitch Scale Degrees",
+       "value": 0.0,
+       "min": -30.0,
+       "max": 30.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Lowest",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Range",
+       "value": 127.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Use Current Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Step Width",
+       "value": 12.0,
+       "min": 1.0,
+       "max": 48.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Step Width Scale Degrees",
+       "value": 7.0,
+       "min": 1.0,
+       "max": 30.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 6,
+   "name": "Random",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Random",
+     "class_name": "MidiRandom",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Chance",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Choices",
+       "value": 12.0,
+       "min": 1.0,
+       "max": 24.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Interval",
+       "value": 1.0,
+       "min": 1.0,
+       "max": 24.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Sign",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Use Current Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 7,
+   "name": "Scale",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Scale",
+     "class_name": "MidiScale",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Base",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 11.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "InternalScale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 35.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Use Current Scale",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Transpose",
+       "value": 0.0,
+       "min": -36.0,
+       "max": 36.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Fold",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Lowest",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Range",
+       "value": 128.0,
+       "min": 0.0,
+       "max": 128.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 0",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 1",
+       "value": 1.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 2",
+       "value": 2.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 3",
+       "value": 3.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 4",
+       "value": 4.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 5",
+       "value": 5.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 6",
+       "value": 6.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 7",
+       "value": 7.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 8",
+       "value": 8.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 9",
+       "value": 9.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 10",
+       "value": 10.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Map 11",
+       "value": 11.0,
+       "min": -1.0,
+       "max": 12.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "index": 8,
+   "name": "Velocity",
+   "devices": [
+    {
+     "index": 0,
+     "name": "Velocity",
+     "class_name": "MidiVelocity",
+     "parameters": [
+      {
+       "name": "Device On",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 1.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Drive",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Compand",
+       "value": 0.0,
+       "min": -1.0,
+       "max": 1.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Random",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 64.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Mode",
+       "value": 0.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Operation",
+       "value": 2.0,
+       "min": 0.0,
+       "max": 2.0,
+       "is_quantized": true,
+       "value_string": null
+      },
+      {
+       "name": "Out Hi",
+       "value": 127.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Out Low",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Range",
+       "value": 127.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      },
+      {
+       "name": "Lowest",
+       "value": 1.0,
+       "min": 0.0,
+       "max": 127.0,
+       "is_quantized": false,
+       "value_string": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

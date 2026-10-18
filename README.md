@@ -36,14 +36,15 @@ Building a device from a note before you start. In short:
   source, no copied tables, no screenshots. Control names, value ranges, units and defaults are
   facts and are recorded as such.
 - Every fact carries a confidence tag and, where it came from elsewhere, a source:
-  - **[manual]** stated in the Live 12 Reference Manual (chapter 29).
+  - **[manual]** stated in the Live 12 Reference Manual (chapter 29, or 30 for the MIDI effects).
   - **[source: N]** from an external source listed at the bottom of the note.
   - **[inferred]** follows from the manual or general DSP practice but is not stated anywhere.
   - **[measure]** unknown; the note says how to measure it.
   - **[dump 12.4.6]** read from Live 12.4.6 through the Live API by the Suhina Probe
-    (`measurements/dump-12.4.6.json`): ranges, defaults, step lists, display text, tapers.
-  - **[als 12.4.6]** read from a set saved by Live 12.4.6 (`measurements/populate-12.4.6.als`):
-    element names and stored values.
+    (`measurements/dump-12.4.6.json`; the MIDI effects in `measurements/dump-midi-12.4.6.json`):
+    ranges, defaults, step lists, display text, tapers.
+  - **[als 12.4.6]** read from a set saved by Live 12.4.6 (`measurements/populate-12.4.6.als`; the
+    MIDI effects in `measurements/populate-midi-12.4.6.als`): element names and stored values.
   - **[measured 12.4.6]** measured from audio rendered by Live 12.4.6 (`tools/` › 2).
 
 ## Layout
@@ -54,6 +55,7 @@ Building a device from a note before you start. In short:
 | [`live-12/audio-effects/_template.md`](live-12/audio-effects/_template.md) | the structure every note follows |
 | [`live-12/audio-effects/common.md`](live-12/audio-effects/common.md) | controls and behaviour many devices share (side-chain, LFO sync, dry/wet, Hi-Q, the device title bar) |
 | [`live-12/audio-effects/INDEX.md`](live-12/audio-effects/INDEX.md) | every device, its family and how complete its note is |
+| [`live-12/midi-effects/`](live-12/midi-effects/) | one note per MIDI effect of Live 12 (manual chapter 30), file `30.NN-name.md`, with its own `_template.md`, `common.md` and [`INDEX.md`](live-12/midi-effects/INDEX.md) |
 | [`tools/`](tools/README.md) | the Suhina Probe device and the measurement harness |
 | [`AGENTS.md`](AGENTS.md) | notes for coding agents: driving Live through the AbletonMCP Remote Script, what still needs Live's window |
 | [`LICENSE`](LICENSE) | the MIT licence, which covers the whole repository |
@@ -89,6 +91,10 @@ by behaviour runs ([`tools/`](tools/README.md) › 2 and 2b): the first (Compres
 the top 100 runs of 37 devices in one set in [`measurements/top100/`](measurements/top100/README.md).
 38 notes now have a Measured section with `[measured 12.4.6]` facts (INDEX: `partly measured`);
 External Audio Effect, Looper, Spectrum and Tuner have none.
+
+The eight MIDI effects of chapter 30 have notes too ([`live-12/midi-effects/`](live-12/midi-effects/INDEX.md)),
+dump checked from their own dump (`measurements/dump-midi-12.4.6.json`); their behaviour is not
+measured yet (the shared plan is in that folder's `common.md`).
 
 Next: the remaining priority-1 to 3 candidates in each device's `runs.py` (157 of 257 not yet
 run), the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet

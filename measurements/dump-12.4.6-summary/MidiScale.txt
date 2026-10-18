@@ -1,0 +1,75 @@
+# Scale  (.als element MidiScale; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Base | 0..11 | 0 -> C | 0 -> C | stepped display (12 values, one per integer)
+    0: C; 1.03125: C♯; 2.0625: D; 3.09375: D♯; 4.125: E; 5.15625: F; 6.015625: F♯; 7.046875: G; 8.078125: G♯; 9.109375: A; 10.14062: A♯; 11: B
+- InternalScale | 0..35 | 0 -> User | 0 -> User | steps: User / Major / Minor / Dorian / Mixolydian / Lydian / Phrygian / Locrian / Whole Tone / Half-whole Dim. / Whole-half Dim. / Minor Blues / Minor Pentatonic / Major Pentatonic / Harmonic Minor / Harmonic Major / Dorian #4 / Phrygian Dominant / Melodic Minor / Lydian Augmented / Lydian Dominant / Super Locrian / 8-Tone Spanish / Bhairav / Hungarian Minor / Hirajoshi / In-Sen / Iwato / Kumoi / Pelog Selisir / Pelog Tembung / Messiaen 3 / Messiaen 4 / Messiaen 5 / Messiaen 6 / Messiaen 7
+    0: User; 1: Major; 2: Minor; 3: Dorian; 4: Mixolydian; 5: Lydian; 6: Phrygian; 7: Locrian; 8: Whole Tone; 9: Half-whole Dim.; 10: Whole-half Dim.; 11: Minor Blues; 12: Minor Pentatonic; 13: Major Pentatonic; 14: Harmonic Minor; 15: Harmonic Major; 16: Dorian #4; 17: Phrygian Dominant; 18: Melodic Minor; 19: Lydian Augmented; 20: Lydian Dominant; 21: Super Locrian; 22: 8-Tone Spanish; 23: Bhairav; 24: Hungarian Minor; 25: Hirajoshi; 26: In-Sen; 27: Iwato; 28: Kumoi; 29: Pelog Selisir; 30: Pelog Tembung; 31: Messiaen 3; 32: Messiaen 4; 33: Messiaen 5; 34: Messiaen 6; 35: Messiaen 7
+- Use Current Scale | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Transpose | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: +9 st; 18: +18 st; 27: +27 st; 36: +36 st
+- Fold | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Lowest | 0..127 | 0 -> C-2 | 0 -> C-2 | taper: unknown
+    0: C-2; 15.875: D♯-1; 31.75: G0; 47.625: B1; 63.5: D♯3; 79.375: G4; 95.25: B5; 111.125: D♯7; 127: G8
+- Range | 0..128 | 128 -> +128 st | 128 -> +128 st | taper: linear
+    0: 0 st; 16: +16 st; 32: +32 st; 48: +48 st; 64: +64 st; 80: +80 st; 96: +96 st; 112: +112 st; 128: +128 st
+- Map 0 | -1..12 | 0 -> 0 | 0 -> 0 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 1 | -1..12 | 1 -> 1 | 1 -> 1 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 2 | -1..12 | 2 -> 2 | 2 -> 2 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 3 | -1..12 | 3 -> 3 | 3 -> 3 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 4 | -1..12 | 4 -> 4 | 4 -> 4 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 5 | -1..12 | 5 -> 5 | 5 -> 5 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 6 | -1..12 | 6 -> 6 | 6 -> 6 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 7 | -1..12 | 7 -> 7 | 7 -> 7 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 8 | -1..12 | 8 -> 8 | 8 -> 8 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 9 | -1..12 | 9 -> 9 | 9 -> 9 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 10 | -1..12 | 10 -> 10 | 10 -> 10 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+- Map 11 | -1..12 | 11 -> 11 | 11 -> 11 | stepped display (14 values, one per integer)
+    -1: -1; -0.796875: 0; 1.03125: 1; 2.046875: 2; 3.0625: 3; 4.078125: 4; 5.09375: 5; 6.109375: 6; 7.125: 7; 8.140625: 8; 9.15625: 9; 10.17188: 10; 11.1875: 11; 12: 12
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+Base = 0
+InternalScale = 0
+UseCurrentScale = false
+Transpose = 0
+Fold = false
+Lowest = 0
+Range = 128
+Mapping.0 = 0
+Mapping.1 = 1
+Mapping.2 = 2
+Mapping.3 = 3
+Mapping.4 = 4
+Mapping.5 = 5
+Mapping.6 = 6
+Mapping.7 = 7
+Mapping.8 = 8
+Mapping.9 = 9
+Mapping.10 = 10
+Mapping.11 = 11
+
+## Other elements of the device in the saved set (not parameters), element = Value
+BaseScrollPosArranger = -1073741824
+BaseScrollPosEnvelope = -1073741824
+TransposeScrollPosArranger = -1073741824
+TransposeScrollPosEnvelope = -1073741824
+LowestScrollPosArranger = -1073741824
+LowestScrollPosEnvelope = -1073741824

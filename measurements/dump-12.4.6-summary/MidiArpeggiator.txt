@@ -1,0 +1,81 @@
+# Arpeggiator  (.als element MidiArpeggiator; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Style | 0..17 | 0 -> Up | 0 -> Up | steps: Up / Down / UpDown / DownUp / Up & Down / Down & Up / Converge / Diverge / Con & Diverge / Pinky Up / Pinky UpDown / Thumb Up / Thumb UpDown / Play Order / Chord Trigger / Random / Random Other / Random Once
+    0: Up; 1: Down; 2: UpDown; 3: DownUp; 4: Up & Down; 5: Down & Up; 6: Converge; 7: Diverge; 8: Con & Diverge; 9: Pinky Up; 10: Pinky UpDown; 11: Thumb Up; 12: Thumb UpDown; 13: Play Order; 14: Chord Trigger; 15: Random; 16: Random Other; 17: Random Once
+- Offset | -8..8 | 0 -> 0 | 0 -> 0 | stepped display (17 values, one per integer)
+    -8: -8; -7.75: -7; -6.75: -6; -5.75: -5; -4.75: -4; -3.75: -3; -2.75: -2; -1.75: -1; -0.75: 0; 1: 1; 2: 2; 3: 3; 4: 4; 5: 5; 6: 6; 7: 7; 8: 8
+- Repeats | 0..16 | 0 -> ∞ | 0 -> ∞ | stepped display (17 values, one per integer)
+    0: ∞; 1: 1; 2: 2; 3: 3; 4: 4; 5: 5; 6: 6; 7: 7; 8: 8; 9: 9; 10: 10; 11: 11; 12: 12; 13: 13; 14: 14; 15: 15; 16: 16
+- Sync On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Synced Rate | 0..13 | 8 -> 1/8 | 8 -> 1/8 | stepped display (14 values, one per integer)
+    0: 1/128; 1.015625: 1/96; 2.03125: 1/64; 3.046875: 1/48; 4.0625: 1/32; 5.078125: 1/24; 6.09375: 1/16; 7.109375: 1/12; 8.125: 1/8; 9.140625: 1/6; 10.15625: 1/4; 11.17188: 1/3; 12.1875: 1/2; 13: 1/1
+- Groove | 0..3 | 0 -> Straight | 0 -> Straight | steps: Straight / Swing 8 / Swing 16 / Swing 32
+    0: Straight; 1: Swing 8; 2: Swing 16; 3: Swing 32
+- Free Rate | 0..1 | 0.150515 -> 20.0 ms | 0.150515 -> 20.0 ms | taper: logarithmic
+    0: 10.0 ms; 0.125: 17.8 ms; 0.25: 31.6 ms; 0.375: 56.2 ms; 0.5: 100 ms; 0.625: 178 ms; 0.75: 316 ms; 0.875: 562 ms; 1: 1.00 s
+- Gate | 1..200 | 50 -> 50 % | 50 -> 50 % | taper: linear
+    1: 1 %; 25.875: 26 %; 50.75: 51 %; 75.625: 76 %; 100.5: 100 %; 125.375: 125 %; 150.25: 150 %; 175.125: 175 %; 200: 200 %
+- Retrigger Mode | 0..2 | 0 -> Off | 0 -> Off | steps: Off / Note / Beat
+    0: Off; 1: Note; 2: Beat
+- Ret. Interval | 0..14 | 8 -> 1 | 8 -> 1 | stepped display (15 values, one per integer)
+    0: 1/16; 1.09375: 1/8; 2.1875: 3/16; 3.0625: 1/4; 4.15625: 3/8; 5.03125: 1/2; 6.125: 3/4; 7: 7/8; 8.09375: 1; 9.1875: 9/8; 10.0625: 5/4; 11.15625: 1.5; 12.03125: 2; 13.125: 3; 14: 4
+- Hold On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Tranpose Mode | 0..35 | 0 -> Chromatic | 0 -> Chromatic | steps: Chromatic / Major / Minor / Dorian / Mixolydian / Lydian / Phrygian / Locrian / Whole Tone / Half-whole Dim. / Whole-half Dim. / Minor Blues / Minor Pentatonic / Major Pentatonic / Harmonic Minor / Harmonic Major / Dorian #4 / Phrygian Dominant / Melodic Minor / Lydian Augmented / Lydian Dominant / Super Locrian / 8-Tone Spanish / Bhairav / Hungarian Minor / Hirajoshi / In-Sen / Iwato / Kumoi / Pelog Selisir / Pelog Tembung / Messiaen 3 / Messiaen 4 / Messiaen 5 / Messiaen 6 / Messiaen 7
+    0: Chromatic; 1: Major; 2: Minor; 3: Dorian; 4: Mixolydian; 5: Lydian; 6: Phrygian; 7: Locrian; 8: Whole Tone; 9: Half-whole Dim.; 10: Whole-half Dim.; 11: Minor Blues; 12: Minor Pentatonic; 13: Major Pentatonic; 14: Harmonic Minor; 15: Harmonic Major; 16: Dorian #4; 17: Phrygian Dominant; 18: Melodic Minor; 19: Lydian Augmented; 20: Lydian Dominant; 21: Super Locrian; 22: 8-Tone Spanish; 23: Bhairav; 24: Hungarian Minor; 25: Hirajoshi; 26: In-Sen; 27: Iwato; 28: Kumoi; 29: Pelog Selisir; 30: Pelog Tembung; 31: Messiaen 3; 32: Messiaen 4; 33: Messiaen 5; 34: Messiaen 6; 35: Messiaen 7
+- Tranpose Key | 0..11 | 0 -> C | 0 -> C | steps: C / C♯ / D / D♯ / E / F / F♯ / G / G♯ / A / A♯ / B
+    0: C; 1: C♯; 2: D; 3: D♯; 4: E; 5: F; 6: F♯; 7: G; 8: G♯; 9: A; 10: A♯; 11: B
+- Transp. Steps | 0..8 | 0 -> 0 | 0 -> 0 | stepped display (9 values, one per integer)
+    0: 0; 1: 1; 2: 2; 3: 3; 4: 4; 5: 5; 6: 6; 7: 7; 8: 8
+- Transp. Dist. | -24..24 | 12 -> +12 st | 12 -> +12 st | taper: linear
+    -24: -24 st; -18: -18 st; -12: -12 st; -6: -6 st; 0: 0 st; 6: +6 st; 12: +12 st; 18: +18 st; 24: +24 st
+- Velocity On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Vel. Retrigger | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Velocity Decay | 0..1 | 0.5293595 -> 1.00 s | 0.5293595 -> 1.00 s | taper: logarithmic
+    0: 10.0 ms; 0.125: 29.7 ms; 0.25: 88.0 ms; 0.375: 261 ms; 0.5: 775 ms; 0.625: 2.30 s; 0.75: 6.82 s; 0.875: 20.2 s; 1: 60.0 s
+- Velocity Target | 0..127 | 64 -> 64 | 64 -> 64 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Use Current Scale | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+Mode = 0
+PatternOffset = 0
+RepeatCount = 0
+SyncState = true
+SyncedRate = 8
+Groove = 0
+FreeRate = 20
+Gate = 50
+Retrigger = 0
+RetriggerInterval = 8
+Hold = false
+TransposeMode = 0
+TransposeKey = 0
+TransposeSteps = 0
+TransposeDistance = 12
+VelocitySwitch = false
+RetriggerVelocity = false
+VelocityDecay = 1000
+VelocityTarget = 64
+UseCurrentScale = false
+
+## Other elements of the device in the saved set (not parameters), element = Value
+PatternOffsetRelativePosition = -1073741824
+RepeatRelativePosition = -1073741824
+RetriggerIntervalRelativePosition = -1073741824
+TransposeStepsRelativePosition = -1073741824
+TransposeDistanceRelativePosition = -1073741824
+RandomStepsCompatibilityMode = false
+GrooveCompatibilityMode = false
+PatternResetCompatibilityMode = false
+StrictNoteOnTimingCompatibilityMode = false

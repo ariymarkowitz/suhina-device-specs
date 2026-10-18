@@ -1,0 +1,42 @@
+# Pitch  (.als element MidiPitcher; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Pitch | -128..128 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -128: -128 st; -96: -96 st; -64: -64 st; -32: -32 st; 0: 0 st; 32: +32 st; 64: +64 st; 96: +96 st; 128: +128 st
+- Pitch Scale Degrees | -30..30 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -30: -30 sd; -22.5: -22 sd; -15: -15 sd; -7.5: -7 sd; 0: 0 sd; 7.5: +7 sd; 15: +15 sd; 22.5: +22 sd; 30: +30 sd
+- Lowest | 0..127 | 0 -> C-2 | 0 -> C-2 | taper: unknown
+    0: C-2; 15.875: D♯-1; 31.75: G0; 47.625: B1; 63.5: D♯3; 79.375: G4; 95.25: B5; 111.125: D♯7; 127: G8
+- Range | 0..127 | 127 -> +127 st | 127 -> +127 st | taper: linear
+    0: 0 st; 15.875: +15 st; 31.75: +31 st; 47.625: +47 st; 63.5: +63 st; 79.375: +79 st; 95.25: +95 st; 111.125: +111 st; 127: +127 st
+- Mode | 0..2 | 0 -> Block | 0 -> Block | steps: Block / Fold / Limit
+    0: Block; 1: Fold; 2: Limit
+- Use Current Scale | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Step Width | 1..48 | 12 -> 12 st | 12 -> 12 st | taper: linear
+    1: 1 st; 6.875: 6 st; 12.75: 12 st; 18.625: 18 st; 24.5: 24 st; 30.375: 30 st; 36.25: 36 st; 42.125: 42 st; 48: 48 st
+- Step Width Scale Degrees | 1..30 | 7 -> 7 sd | 7 -> 7 sd | stepped display (30 values, one per integer)
+    1: 1 sd; 2.359375: 2 sd; 3.265625: 3 sd; 4.171875: 4 sd; 5.078125: 5 sd; 6.4375: 6 sd; 7.34375: 7 sd; 8.25: 8 sd; 9.15625: 9 sd; 10.0625: 10 sd; 11.42188: 11 sd; 12.32812: 12 sd; 13.23438: 13 sd; 14.14062: 14 sd; 15.04688: 15 sd; 16.40625: 16 sd; 17.3125: 17 sd; 18.21875: 18 sd; 19.125: 19 sd; 20.03125: 20 sd; 21.39062: 21 sd; 22.29688: 22 sd; 23.20312: 23 sd; 24.10938: 24 sd; 25.01562: 25 sd; 26.375: 26 sd; 27.28125: 27 sd; 28.1875: 28 sd; 29.09375: 29 sd; 30: 30 sd
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+Pitch = 0
+PitchScaleDegrees = 0
+Lowest = 0
+Range = 127
+RangeMode = 0
+UseCurrentScale = false
+StepWidth = 12
+StepWidthScaleDegrees = 7
+
+## Other elements of the device in the saved set (not parameters), element = Value
+PitchScrollPosArranger = -1073741824
+PitchScrollPosEnvelope = -1073741824
+PitchScaleDegreesScrollPosArranger = -1073741824
+PitchScaleDegreesScrollPosEnvelope = -1073741824
+LowestScrollPosArranger = -1073741824
+LowestScrollPosEnvelope = -1073741824

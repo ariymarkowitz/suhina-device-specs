@@ -1,0 +1,37 @@
+# Velocity  (.als element MidiVelocity; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Drive | -1..1 | 0 -> 0 | 0 -> 0 | taper: linear
+    -1: -1; -0.75: -0.75; -0.5: -0.5; -0.25: -0.25; 0: 0; 0.25: 0.25; 0.5: 0.5; 0.75: 0.75; 1: 1
+- Compand | -1..1 | 0 -> 0 | 0 -> 0 | taper: linear
+    -1: -1; -0.75: -0.75; -0.5: -0.5; -0.25: -0.25; 0: 0; 0.25: 0.25; 0.5: 0.5; 0.75: 0.75; 1: 1
+- Random | 0..64 | 0 -> 0 | 0 -> 0 | taper: linear
+    0: 0; 8: 8; 16: 16; 24: 24; 32: 32; 40: 40; 48: 48; 56: 56; 64: 64
+- Mode | 0..2 | 0 -> Clip | 0 -> Clip | steps: Clip / Gate / Fixed
+    0: Clip; 1: Gate; 2: Fixed
+- Operation | 0..2 | 2 -> Both | 0 -> Velocity | steps: Velocity / Rel. Vel. / Both
+    0: Velocity; 1: Rel. Vel.; 2: Both
+- Out Hi | 0..127 | 127 -> 127 | 127 -> 127 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Out Low | 0..127 | 1 -> 1 | 1 -> 1 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Range | 0..127 | 127 -> 127 | 127 -> 127 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+- Lowest | 0..127 | 1 -> 1 | 1 -> 1 | taper: linear
+    0: 0; 15.875: 15; 31.75: 31; 47.625: 47; 63.5: 63; 79.375: 79; 95.25: 95; 111.125: 111; 127: 127
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+Drive = 0
+Compand = 0
+Random = 0
+Mode = 0
+Operation = 2
+MaxOut = 127
+MinOut = 1
+Range = 127
+Lowest = 1

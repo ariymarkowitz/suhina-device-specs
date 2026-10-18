@@ -1,0 +1,28 @@
+# Random  (.als element MidiRandom; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Chance | 0..1 | 0 -> 0.0 % | 0 -> 0.0 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Choices | 1..24 | 12 -> 12 | 12 -> 12 | stepped display (24 values, one per integer)
+    1: 1; 2.078125: 2; 3.15625: 3; 4.234375: 4; 5.3125: 5; 6.03125: 6; 7.109375: 7; 8.1875: 8; 9.265625: 9; 10.34375: 10; 11.0625: 11; 12.14062: 12; 13.21875: 13; 14.29688: 14; 15.01562: 15; 16.09375: 16; 17.17188: 17; 18.25: 18; 19.32812: 19; 20.04688: 20; 21.125: 21; 22.20312: 22; 23.28125: 23; 24: 24
+- Interval | 1..24 | 1 -> 1 | 1 -> 1 | stepped display (24 values, one per integer)
+    1: 1; 2.078125: 2; 3.15625: 3; 4.234375: 4; 5.3125: 5; 6.03125: 6; 7.109375: 7; 8.1875: 8; 9.265625: 9; 10.34375: 10; 11.0625: 11; 12.14062: 12; 13.21875: 13; 14.29688: 14; 15.01562: 15; 16.09375: 16; 17.17188: 17; 18.25: 18; 19.32812: 19; 20.04688: 20; 21.125: 21; 22.20312: 22; 23.28125: 23; 24: 24
+- Sign | 0..2 | 0 -> Add | 0 -> Add | steps: Add / Sub / Bi
+    0: Add; 1: Sub; 2: Bi
+- Mode | 0..1 | 0 -> Rnd | 0 -> Rnd | steps: Rnd / Alt
+    0: Rnd; 1: Alt
+- Use Current Scale | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+Chance = 0
+Choices = 12
+Scale = 1
+Sign = 0
+Alternate = false
+UseCurrentScale = false

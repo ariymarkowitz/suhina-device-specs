@@ -87,6 +87,14 @@ their `.als` names in stored units (Compressor `Threshold` = 1 is linear gain, 0
 is ms), which the dump's 0..1 internal values do not show. `measurements/dump-12.4.6-summary/`
 has one readable file per device with both.
 
+**MIDI effects.** The probe's Populate adds only audio effects, but its dump reads every track,
+MIDI tracks included. `harness/populate_midi.py` makes the set for the MIDI effects as a file:
+`write` puts the probe and one MIDI track per MIDI effect into a new set, `live_check.py open`
+loads it, and `load` puts each effect on its track from the browser through the Remote Script
+(the factory default preset). Then Dump parameters and save the set, as above. The 12.4.6 run
+is `measurements/dump-midi-12.4.6.json`, `measurements/populate-midi-12.4.6.als` and the
+`Midi*.txt` summaries; its docstring has the commands.
+
 ## 2. Measure the device's behaviour
 
 1. Make the probe signal at the set's sample rate (use `--gap 10` or more for reverbs and long

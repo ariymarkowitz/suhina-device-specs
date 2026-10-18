@@ -1,0 +1,37 @@
+# Note Length  (.als element MidiNoteLength; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Trigger Source | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Latch | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Sync On | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Synced Length | 0..9 | 4 -> 1/24 | 4 -> 1/24 | stepped display (10 values, one per integer)
+    0: 0; 1.125: 1/64; 2.109375: 1/48; 3.09375: 1/32; 4.078125: 1/24; 5.0625: 1/16; 6.046875: 1/12; 7.03125: 1/8; 8.015625: 1/6; 9: 1/4
+- Time Length | 0..1 | 0.2646797 -> 100 ms | 0.2646797 -> 100 ms | taper: logarithmic
+    0: 10.0 ms; 0.125: 29.7 ms; 0.25: 88.0 ms; 0.375: 261 ms; 0.5: 775 ms; 0.625: 2.30 s; 0.75: 6.82 s; 0.875: 20.2 s; 1: 60.0 s
+- Gate | 1..200 | 100 -> 100 % | 100 -> 100 % | taper: linear
+    1: 1 %; 25.875: 26 %; 50.75: 51 %; 75.625: 76 %; 100.5: 100 %; 125.375: 125 %; 150.25: 150 %; 175.125: 175 %; 200: 200 %
+- Release Velocity | 0..100 | 0 -> 0 % | 0 -> 0 % | taper: linear
+    0: 0 %; 12.5: 12 %; 25: 25 %; 37.5: 38 %; 50: 50 %; 62.5: 62 %; 75: 75 %; 87.5: 88 %; 100: 100 %
+- Decay Time | 0..1 | 1 -> 60.0 s | 1 -> 60.0 s | taper: logarithmic
+    0: 10.0 ms; 0.125: 29.7 ms; 0.25: 88.0 ms; 0.375: 261 ms; 0.5: 775 ms; 0.625: 2.30 s; 0.75: 6.82 s; 0.875: 20.2 s; 1: 60.0 s
+- Decay Key Scale | -1..1 | 0 -> 0 | 0 -> 0 | taper: linear
+    -1: -1; -0.75: -0.75; -0.5: -0.5; -0.25: -0.25; 0: 0; 0.25: 0.25; 0.5: 0.5; 0.75: 0.75; 1: 1
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+Mode = false
+Latch = false
+SyncState = false
+SyncedLength = 4
+TimeLength = 100
+Gate = 100
+Balance = 0
+DecayTime = 60000
+DecayKeyScale = 0

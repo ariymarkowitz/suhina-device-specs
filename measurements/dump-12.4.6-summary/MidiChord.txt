@@ -1,0 +1,102 @@
+# Chord  (.als element MidiChord; Live 12.4.6; device freshly loaded from the browser, i.e. Live's factory default preset)
+Line format: name [original_name if different] | internal min..max | loaded value -> display | reset value (default_value, what double-click/Delete restores) -> display | step items, or taper | then: display text at 9 evenly spaced internal values, or every step for stepped controls
+'~' before a display means it was read from the nearest sample, not computed exactly.
+'stepped display' = Live does not flag the parameter as quantized, but its display only takes the listed values (internal value where each first appears, from 65 samples).
+
+- Device On | 0..1 | 1 -> On | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+- Shift1 | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: +9 st; 18: +18 st; 27: +27 st; 36: +36 st
+- Shift1 Scale Degrees | -36..36 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -36: -36 sd; -27: -27 sd; -18: -18 sd; -9: -9 sd; 0: 0 sd; 9: +9 sd; 18: +18 sd; 27: +27 sd; 36: +36 sd
+- Velocity1 | 0.01..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0.01: 1.0 %; 0.25875: 26 %; 0.5075: 51 %; 0.75625: 76 %; 1.005: 100 %; 1.25375: 125 %; 1.5025: 150 %; 1.75125: 175 %; 2: 200 %
+- Chance1 | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Shift2 | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: +9 st; 18: +18 st; 27: +27 st; 36: +36 st
+- Shift2 Scale Degrees | -36..36 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -36: -36 sd; -27: -27 sd; -18: -18 sd; -9: -9 sd; 0: 0 sd; 9: +9 sd; 18: +18 sd; 27: +27 sd; 36: +36 sd
+- Velocity2 | 0.01..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0.01: 1.0 %; 0.25875: 26 %; 0.5075: 51 %; 0.75625: 76 %; 1.005: 100 %; 1.25375: 125 %; 1.5025: 150 %; 1.75125: 175 %; 2: 200 %
+- Chance2 | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Shift3 | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: +9 st; 18: +18 st; 27: +27 st; 36: +36 st
+- Shift3 Scale Degrees | -36..36 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -36: -36 sd; -27: -27 sd; -18: -18 sd; -9: -9 sd; 0: 0 sd; 9: +9 sd; 18: +18 sd; 27: +27 sd; 36: +36 sd
+- Velocity3 | 0.01..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0.01: 1.0 %; 0.25875: 26 %; 0.5075: 51 %; 0.75625: 76 %; 1.005: 100 %; 1.25375: 125 %; 1.5025: 150 %; 1.75125: 175 %; 2: 200 %
+- Chance3 | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Shift4 | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: +9 st; 18: +18 st; 27: +27 st; 36: +36 st
+- Shift4 Scale Degrees | -36..36 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -36: -36 sd; -27: -27 sd; -18: -18 sd; -9: -9 sd; 0: 0 sd; 9: +9 sd; 18: +18 sd; 27: +27 sd; 36: +36 sd
+- Velocity4 | 0.01..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0.01: 1.0 %; 0.25875: 26 %; 0.5075: 51 %; 0.75625: 76 %; 1.005: 100 %; 1.25375: 125 %; 1.5025: 150 %; 1.75125: 175 %; 2: 200 %
+- Chance4 | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Shift5 | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: +9 st; 18: +18 st; 27: +27 st; 36: +36 st
+- Shift5 Scale Degrees | -36..36 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -36: -36 sd; -27: -27 sd; -18: -18 sd; -9: -9 sd; 0: 0 sd; 9: +9 sd; 18: +18 sd; 27: +27 sd; 36: +36 sd
+- Velocity5 | 0.01..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0.01: 1.0 %; 0.25875: 26 %; 0.5075: 51 %; 0.75625: 76 %; 1.005: 100 %; 1.25375: 125 %; 1.5025: 150 %; 1.75125: 175 %; 2: 200 %
+- Chance5 | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Shift6 | -36..36 | 0 -> 0 st | 0 -> 0 st | taper: linear
+    -36: -36 st; -27: -27 st; -18: -18 st; -9: -9 st; 0: 0 st; 9: +9 st; 18: +18 st; 27: +27 st; 36: +36 st
+- Shift6 Scale Degrees | -36..36 | 0 -> 0 sd | 0 -> 0 sd | taper: linear
+    -36: -36 sd; -27: -27 sd; -18: -18 sd; -9: -9 sd; 0: 0 sd; 9: +9 sd; 18: +18 sd; 27: +27 sd; 36: +36 sd
+- Velocity6 | 0.01..2 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0.01: 1.0 %; 0.25875: 26 %; 0.5075: 51 %; 0.75625: 76 %; 1.005: 100 %; 1.25375: 125 %; 1.5025: 150 %; 1.75125: 175 %; 2: 200 %
+- Chance6 | 0..1 | 1 -> 100 % | 1 -> 100 % | taper: linear
+    0: 0.0 %; 0.125: 12 %; 0.25: 25 %; 0.375: 38 %; 0.5: 50 %; 0.625: 62 %; 0.75: 75 %; 0.875: 88 %; 1: 100 %
+- Strum | -20..20 | 0 -> 0.00 ms | 0 -> 0.00 ms | taper: other (linear r2 0.938, log r2 0.000)
+    -20: -400 ms; -15: -225 ms; -10: -100 ms; -5: -25.0 ms; 0: 0.00 ms; 5: 25.0 ms; 10: 100 ms; 15: 225 ms; 20: 400 ms
+- Strum Tension | -100..100 | 0 -> 0 % | 0 -> 0 % | taper: linear
+    -100: -100 %; -75: -75 %; -50: -50 %; -25: -25 %; 0: 0 %; 25: 25 %; 50: 50 %; 75: 75 %; 100: 100 %
+- Strum Crescendo | -100..100 | 0 -> 0 % | 0 -> 0 % | taper: linear
+    -100: -100 %; -75: -75 %; -50: -50 %; -25: -25 %; 0: 0 %; 25: 25 %; 50: 50 %; 75: 75 %; 100: 100 %
+- Use Current Scale | 0..1 | 0 -> Off | 0 -> Off | steps: Off / On
+    0: Off; 1: On
+
+## Parameter elements in the saved set (measurements/populate-midi-12.4.6.als), element = stored Manual value
+On = true
+Shift1 = 0
+ShiftScaleDegrees1 = 0
+Velocity1 = 1
+Chance1 = 1
+Shift2 = 0
+ShiftScaleDegrees2 = 0
+Velocity2 = 1
+Chance2 = 1
+Shift3 = 0
+ShiftScaleDegrees3 = 0
+Velocity3 = 1
+Chance3 = 1
+Shift4 = 0
+ShiftScaleDegrees4 = 0
+Velocity4 = 1
+Chance4 = 1
+Shift5 = 0
+ShiftScaleDegrees5 = 0
+Velocity5 = 1
+Chance5 = 1
+Shift6 = 0
+ShiftScaleDegrees6 = 0
+Velocity6 = 1
+Chance6 = 1
+Strum = 0
+StrumTension = 0
+StrumCrescendo = 0
+UseCurrentScale = false
+
+## Other elements of the device in the saved set (not parameters), element = Value
+PlayDuplicateNotesWhenStrumming = false
+SendPerNoteEventsToGeneratedNotes = true
+ShiftScrollPosArranger = -1073741824
+ShiftScrollPosEnvelope = -1073741824
+ShiftScaleDegreesScrollPosArranger = -1073741824
+ShiftScaleDegreesScrollPosEnvelope = -1073741824
