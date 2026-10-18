@@ -10,6 +10,22 @@ built and checked from its note alone. They are the step *before* a spec: when a
 to be built, its note is checked, measured, and the parts that hold up are written into the
 implementation's own specification.
 
+## For coding agents building a device
+
+If you are an LLM agent implementing a Suhina device from one of these notes, possibly working
+from another checkout such as suhina-daw, read
+[`AGENTS.md`](https://github.com/ariymarkowitz/suhina-device-specs/blob/main/AGENTS.md) ›
+Building a device from a note before you start. In short:
+
+- Quality and performance come first: an algorithm in the same class as Live's, clean output at
+  every sample rate, and under 1 % of one core per instance. Accuracy and simplicity come second.
+- Log every trade-off in the spec's Decisions list, and every measurement outside `compare.py`'s
+  tolerances in its Known differences.
+- Ranges, defaults, tapers and steps (`[dump]`, `[als]`) are exact. Treat `[inferred]` and
+  `[source: N]` facts as guesses to check against the renders.
+- The clean-room rules below carry over: write the spec in your own words, and name Live only
+  where suhina-daw's `AGENTS.md` allows it.
+
 ## Clean-room rules for these notes
 
 - Knowledge comes only from public documentation (the Live 12 Reference Manual, Ableton's help
