@@ -468,7 +468,7 @@
      ]
     },
     "LFO Amount": {
-     "convert": "same",
+     "convert": "percent",
      "element": "Lfo_Amount",
      "kind": "float",
      "points": [
@@ -2704,7 +2704,7 @@
      ]
     },
     "Warmth": {
-     "convert": "same",
+     "convert": "percent",
      "element": "Warmth",
      "kind": "float",
      "points": [
@@ -8025,7 +8025,7 @@
    "display_name": "Hybrid Reverb",
    "params": {
     "Algo Delay": {
-     "convert": "same",
+     "convert": "base",
      "element": "Algorithm_Delay",
      "kind": "float",
      "points": [
@@ -12654,7 +12654,7 @@
      ]
     },
     "Jitter": {
-     "convert": "same",
+     "convert": "percent",
      "element": "Jitter",
      "kind": "float",
      "points": [
@@ -14228,7 +14228,7 @@
      ]
     },
     "Feedback": {
-     "convert": "same",
+     "convert": "percent",
      "element": "Feedback_FeedbackAmount",
      "kind": "float",
      "points": [

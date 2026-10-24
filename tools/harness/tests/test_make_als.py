@@ -247,6 +247,31 @@ class FromLiveSets(unittest.TestCase):
             make_als.stored_value(sat["Drive"], make_als.dump_params(
                 make_als.dump_device(self.dump, "Saturator"))["Drive"], {"display": 40})
 
+    def test_tapered_display_is_not_the_stored_value(self):
+        """Redux Jitter shows 25 % at API 0.5 (a square law) but the element holds the displayed
+        fraction, which two calibration points cannot show: 25 % must be stored as 0.25."""
+        mp = make_als.load_json(D["map"])["devices"]
+        jit = mp["Redux2"]["params"]["Jitter"]
+        dp = make_als.dump_params(make_als.dump_device(self.dump, "Redux2"))["Jitter"]
+        self.assertEqual(jit["convert"], "percent")
+        v, text = make_als.stored_value(jit, dp, {"display": 25})
+        self.assertEqual(float(text), 0.25)
+        self.assertAlmostEqual(v, 0.5, delta=0.02)
+        # a display that is the API value stays "same"
+        corpus = mp["Corpus"]["params"]["Fine"]
+        self.assertEqual(corpus["convert"], "same")
+
+    def test_linear_display_at_the_end_of_the_range(self):
+        """The element's range is a float32, so the display of the control's last value lies a hair
+        outside it: Delay Feedback 95 % against 0.9499999881 must still be API 1."""
+        dly = make_als.load_json(D["map"])["devices"]["Delay"]["params"]
+        dps = make_als.dump_params(make_als.dump_device(self.dump, "Delay"))
+        v, text = make_als.stored_value(dly["Feedback"], dps["Feedback"], {"display": 95})
+        self.assertEqual(v, dps["Feedback"]["max"])
+        self.assertEqual(float(text), 0.95)
+        with self.assertRaises(ValueError):
+            make_als.stored_value(dly["Feedback"], dps["Feedback"], {"display": 96})
+
     def check_set(self, path):
         root = als.read_set(path)
         ids = als.global_ids(root)

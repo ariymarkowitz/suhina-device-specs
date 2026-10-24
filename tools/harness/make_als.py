@@ -367,6 +367,18 @@ def choose_conversion(qparam, kind, pairs, endpoints, ends=None, samples=()):
     if not fits:
         return None
     best = ([c for c in fits if consistent(c, pairs + endpoints, ends)] or fits)[0]
+    if best == "same":
+        # two calibration points cannot tell an element holding the API value from one holding the
+        # displayed number (Redux Jitter: 0.5 at 25 %, API 0.707): when the display is not the API
+        # value, a display conversion that fits is the one
+        shown = [(v, parse_display(t)) for v, t in samples]
+        shown = [(v, d[0]) for v, d in shown if d and math.isfinite(d[0])]
+        span = max((v for v, _ in shown), default=0) - min((v for v, _ in shown), default=0)
+        for c in ("base", "percent", "ms"):
+            f = CONVERSIONS[c]
+            if c in fits and span and max(abs(f(n) - v) for v, n in shown) > 0.05 * span:
+                best = c
+                break
     if best in CONVERSIONS and "linear" in fits:
         line = [(v, d, linear(ends, v)) for v, d in ((v, parse_display(t)) for v, t in samples) if d]
         if line and consistent(best, line):
@@ -583,11 +595,12 @@ def linear_display(item, dp, n):
         return None
     amin, amax, lo, hi = item["range"]
     s = CONVERSIONS[conv](n)
-    if not min(lo, hi) - 1e-9 <= s <= max(lo, hi) + 1e-9:
+    # the element's range is a float32 (Delay Feedback ends at 0.9499999881, not 0.95), so the
+    # control's own end display lies a few parts in 10^8 outside it
+    slack = 1e-6 * abs(hi - lo)
+    if not min(lo, hi) - slack <= s <= max(lo, hi) + slack:
         raise ValueError(f"display {n} outside the control's range")
-    v = amin + (s - lo) / (hi - lo) * (amax - amin)
-    if not dp["min"] - 1e-9 <= v <= dp["max"] + 1e-9:
-        raise ValueError(f"value {v} outside {dp['min']} .. {dp['max']}")
+    v = min(max(amin + (s - lo) / (hi - lo) * (amax - amin), dp["min"]), dp["max"])
     return v, s
 
 
