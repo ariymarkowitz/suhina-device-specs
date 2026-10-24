@@ -1,0 +1,155 @@
+{
+ "device": "Shifter",
+ "parameter": "shifter-envelope",
+ "question": "frequency of the three tone bursts (-30, -6, -30 dBFS) with the follower on, Amount +12, -12, +3 st; +12 st with Attack 30 ms and Release 400 ms",
+ "plan": "9",
+ "read": [
+  "dynamics",
+  "steady (output frequency over time)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 1,
+    "Env Amount St": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "env+12",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 1,
+    "Env Amount St": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "env-12",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 1,
+    "Env Amount St": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "env+3",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 1,
+    "Env Amount St": {
+     "display": 3
+    }
+   }
+  },
+  {
+   "id": "env+12-slow",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 1,
+    "Env Amount St": {
+     "display": 12
+    },
+    "Env Attack": {
+     "display": 0.03
+    },
+    "Env Release": {
+     "display": 0.4
+    }
+   }
+  }
+ ]
+}

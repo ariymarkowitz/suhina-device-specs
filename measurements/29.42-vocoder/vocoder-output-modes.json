@@ -1,0 +1,136 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-output-modes",
+ "question": "2x2 matrix (left-only and right-only 1 kHz) for Mono and L/R (default Stereo); staircase for Level +12 and -12 dB, Dry/Wet 50 %, Enhance on",
+ "plan": "11, 9, 13",
+ "read": [
+  "stereo",
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "mono",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Mono/Stereo": {
+     "item": "Mono"
+    }
+   }
+  },
+  {
+   "id": "lr",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Mono/Stereo": {
+     "item": "L/R"
+    }
+   }
+  },
+  {
+   "id": "level+12",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Output": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "level-12",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Output": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "dw-50",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 50
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "enhance",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 1,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "device": "EQ Eight",
+ "parameter": "eq-eight-shelf-q",
+ "question": "low and high shelf at 1 kHz, +12 dB, Q 0.1, 2 and 6; low shelf -12 dB at Q 2",
+ "plan": "2",
+ "read": [
+  "response.sweep_db"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "ls-q0.1",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "Low Shelf"
+    },
+    "3 Q A": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "ls-q2",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "Low Shelf"
+    },
+    "3 Q A": {
+     "display": 2
+    }
+   }
+  },
+  {
+   "id": "ls-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "Low Shelf"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "hs-q0.1",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "High Shelf"
+    },
+    "3 Q A": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "hs-q2",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "High Shelf"
+    },
+    "3 Q A": {
+     "display": 2
+    }
+   }
+  },
+  {
+   "id": "hs-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "High Shelf"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "ls-q2-cut",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": -12
+    },
+    "3 Filter Type A": {
+     "item": "Low Shelf"
+    },
+    "3 Q A": {
+     "display": 2
+    }
+   }
+  }
+ ]
+}

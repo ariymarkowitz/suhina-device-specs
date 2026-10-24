@@ -1,0 +1,300 @@
+{
+ "device": "Chorus-Ensemble",
+ "parameter": "chorus-feedback",
+ "question": "impulse taps (up to 16) for Feedback 50, 90, 99 % and 90, 99 % inverted, 1 tap at 20 ms, Amount 0",
+ "plan": "7",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "1"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-50",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "1"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-90",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 90
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "1"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-99",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 99
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "1"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-90-invert",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 90
+    },
+    "FB Invert": {
+     "item": "On"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "1"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-99-invert",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 99
+    },
+    "FB Invert": {
+     "item": "On"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "1"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

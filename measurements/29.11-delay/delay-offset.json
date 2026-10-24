@@ -1,0 +1,382 @@
+{
+ "device": "Delay",
+ "parameter": "delay-offset",
+ "question": "impulse taps for Sync 4 (500 ms) with Offset L +33 / R -33 %, +-17 %, and Sync 8 (1 s) with +-33 %",
+ "plan": "2",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "On"
+    },
+    "R Sync": {
+     "item": "On"
+    },
+    "L Time": {
+     "display": 0.1
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 0
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "four-pm33",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "On"
+    },
+    "R Sync": {
+     "item": "On"
+    },
+    "L Time": {
+     "display": 0.1
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Offset": {
+     "display": 33
+    },
+    "R Offset": {
+     "display": -33
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 0
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "L 16th": {
+     "item": "4"
+    },
+    "R 16th": {
+     "item": "4"
+    }
+   }
+  },
+  {
+   "id": "four-pm17",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "On"
+    },
+    "R Sync": {
+     "item": "On"
+    },
+    "L Time": {
+     "display": 0.1
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Offset": {
+     "display": 17
+    },
+    "R Offset": {
+     "display": -17
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 0
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "L 16th": {
+     "item": "4"
+    },
+    "R 16th": {
+     "item": "4"
+    }
+   }
+  },
+  {
+   "id": "eight-pm33",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "On"
+    },
+    "R Sync": {
+     "item": "On"
+    },
+    "L Time": {
+     "display": 0.1
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Offset": {
+     "display": 33
+    },
+    "R Offset": {
+     "display": -33
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 0
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "L 16th": {
+     "item": "8"
+    },
+    "R 16th": {
+     "item": "8"
+    }
+   }
+  },
+  {
+   "id": "one-p33",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "On"
+    },
+    "R Sync": {
+     "item": "On"
+    },
+    "L Time": {
+     "display": 0.1
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Offset": {
+     "display": 33
+    },
+    "R Offset": {
+     "display": -33
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 0
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "L 16th": {
+     "item": "1"
+    },
+    "R 16th": {
+     "item": "1"
+    }
+   }
+  }
+ ]
+}

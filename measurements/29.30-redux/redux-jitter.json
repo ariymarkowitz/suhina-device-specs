@@ -1,0 +1,171 @@
+{
+ "device": "Redux",
+ "parameter": "redux-jitter",
+ "question": "Rate 8 kHz, Jitter 25, 50 and 100 % (0 % is the default case), and Jitter 100 % with the Pre filter",
+ "plan": "2",
+ "read": [
+  "steady tone spectrum",
+  "modulation",
+  "response.noise_db",
+  "stereo"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "jitter-25",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 25
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "jitter-50",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 50
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "jitter-100",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 100
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "jitter-100-pre",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 100
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

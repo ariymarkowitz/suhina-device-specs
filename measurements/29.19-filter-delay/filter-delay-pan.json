@@ -1,0 +1,183 @@
+{
+ "device": "Filter Delay",
+ "parameter": "filter-delay-pan",
+ "question": "delay 2 with Pan 50L, 25L, C (the default case), 25R and 50R, wet only",
+ "plan": "5",
+ "read": [
+  "stereo"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "pan-L50",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": -1,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "pan-L25",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": -0.5,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "pan-R25",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0.5,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "pan-R50",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 1,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "device": "External Audio Effect",
+ "parameter": "external-audio-effect-unrouted-mix",
+ "question": "staircase gain and impulse delay for Dry/Wet 0, 25, 50, 75 % (default 100 %), and at 50 % Output Gain +12 dB, Input Gain +12 dB, Input Gain -inf",
+ "plan": "3, 4",
+ "read": [
+  "static",
+  "silence",
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {}
+  },
+  {
+   "id": "dw-0",
+   "params": {
+    "Dry/Wet": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "dw-25",
+   "params": {
+    "Dry/Wet": {
+     "display": 25
+    }
+   }
+  },
+  {
+   "id": "dw-50",
+   "params": {
+    "Dry/Wet": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "dw-75",
+   "params": {
+    "Dry/Wet": {
+     "display": 75
+    }
+   }
+  },
+  {
+   "id": "dw50-outgain+12",
+   "params": {
+    "Dry/Wet": {
+     "display": 50
+    },
+    "Output Gain": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "dw50-ingain+12",
+   "params": {
+    "Dry/Wet": {
+     "display": 50
+    },
+    "Input Gain": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "dw50-ingain--inf",
+   "params": {
+    "Dry/Wet": {
+     "display": 50
+    },
+    "Input Gain": {
+     "norm": 0.0
+    }
+   }
+  }
+ ]
+}

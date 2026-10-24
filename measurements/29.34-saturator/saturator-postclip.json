@@ -1,0 +1,126 @@
+{
+ "device": "Saturator",
+ "parameter": "saturator-postclip",
+ "question": "staircase at Drive +24 dB (Analog Clip) for No Clip, Soft Clip and Hard Clip at Output 0 and -6 dB",
+ "plan": "6",
+ "read": [
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "none-out-6",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": -6
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "soft-out0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "Soft Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "soft-out-6",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "Soft Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": -6
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "hard-out0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "Hard Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "hard-out-6",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "Hard Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": -6
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

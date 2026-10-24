@@ -1,0 +1,111 @@
+{
+ "device": "Channel EQ",
+ "parameter": "channeleq-highpass",
+ "question": "sweep response and impulse with Highpass On, alone, with Low +12 dB, and with Mid +12 dB at 120 Hz",
+ "plan": "2",
+ "read": [
+  "response",
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "hp-on",
+   "params": {
+    "Highpass On": {
+     "item": "On"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "hp-low-p12",
+   "params": {
+    "Highpass On": {
+     "item": "On"
+    },
+    "Low Gain": {
+     "display": 12
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "hp-mid120-p12",
+   "params": {
+    "Highpass On": {
+     "item": "On"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "display": 120
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

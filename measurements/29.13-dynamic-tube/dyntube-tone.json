@@ -1,0 +1,179 @@
+{
+ "device": "Dynamic Tube",
+ "parameter": "dyntube-tone",
+ "question": "staircase harmonics and sweep response for Tone -1, -0.5, +0.5, +1 on tube C at Bias 50 %, Drive +6 dB",
+ "plan": "4",
+ "read": [
+  "static",
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "tone-m1",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": -1
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "tone-m0.5",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": -0.5
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "tone-p0.5",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0.5
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "tone-p1",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 1
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

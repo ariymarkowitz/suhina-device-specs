@@ -1,0 +1,172 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-delay-feedback",
+ "question": "echo levels of an impulse for Feedback 0, 25, 75, 100 % and Delay Mix 50 % (default 50 % feedback, Mix 100 %)",
+ "plan": "6, 9",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "fb-0",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "fb-25",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 25
+    }
+   }
+  },
+  {
+   "id": "fb-75",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 75
+    }
+   }
+  },
+  {
+   "id": "fb-100",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mix-50",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 50
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "mix-0",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 0
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    }
+   }
+  }
+ ]
+}

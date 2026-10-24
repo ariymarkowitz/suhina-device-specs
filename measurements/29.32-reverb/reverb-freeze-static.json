@@ -1,0 +1,102 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-freeze-static",
+ "question": "energy of the response to the impulse over 10 s with Freeze on at Cut/Flat on/off, both network filters on, against Freeze off",
+ "plan": "9",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 1,
+    "Freeze On": 1
+   }
+  },
+  {
+   "id": "cut-noflat",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 1,
+    "Freeze On": 1,
+    "Flat On": 0
+   }
+  },
+  {
+   "id": "nocut-flat",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 1,
+    "Freeze On": 1,
+    "Cut On": 0
+   }
+  },
+  {
+   "id": "nocut-noflat",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 1,
+    "Freeze On": 1,
+    "Cut On": 0,
+    "Flat On": 0
+   }
+  },
+  {
+   "id": "freeze-off",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 1,
+    "Freeze On": 0
+   }
+  }
+ ]
+}

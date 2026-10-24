@@ -1,0 +1,35 @@
+{
+ "device": "Utility",
+ "parameter": "utility-dc",
+ "question": "sweep response with the DC filter on",
+ "plan": "9",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    }
+   }
+  },
+  {
+   "id": "dc-on",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "DC Filter": 1
+   }
+  }
+ ]
+}

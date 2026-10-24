@@ -1,0 +1,179 @@
+{
+ "device": "Dynamic Tube",
+ "parameter": "dyntube-envelope",
+ "question": "staircase THD and burst harmonics for Envelope -300, -100, +100, +300 % on tube A at Bias 30 %, Drive +6 dB",
+ "plan": "3",
+ "read": [
+  "static",
+  "dynamics"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 30
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "env-m300",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 30
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": -300
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "env-m100",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 30
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": -100
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "env-p100",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 30
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 100
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "env-p300",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 6
+    },
+    "Bias": {
+     "display": 30
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 300
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

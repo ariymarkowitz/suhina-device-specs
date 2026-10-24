@@ -1,0 +1,284 @@
+{
+ "device": "Auto Pan-Tremolo",
+ "parameter": "autopan-attack",
+ "question": "envelope of the steady tone (8 s, onset after silence) for Attack Time 50 ms, 0.5 s, 2 s, 5 s, Tremolo 4 Hz Amount 100 %",
+ "plan": "8",
+ "read": [
+  "envelope",
+  "modulation"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 4
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "attack-0.05",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 4
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0.05
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "attack-0.5",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 4
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0.5
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "attack-2",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 4
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 2
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "attack-5",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 4
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 5
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

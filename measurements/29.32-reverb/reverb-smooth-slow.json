@@ -1,0 +1,125 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-smooth-slow",
+ "question": "early-reflection taps at Size 10.54 and 1.53 with Smooth None, Slow and Fast (the preset)",
+ "plan": "10",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 10.54
+    }
+   }
+  },
+  {
+   "id": "none-10.54",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 10.54
+    },
+    "Size Smoothing": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "slow-10.54",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 10.54
+    },
+    "Size Smoothing": {
+     "item": "Slow"
+    }
+   }
+  },
+  {
+   "id": "none-1.53",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Size Smoothing": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "slow-1.53",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Size Smoothing": {
+     "item": "Slow"
+    }
+   }
+  }
+ ]
+}

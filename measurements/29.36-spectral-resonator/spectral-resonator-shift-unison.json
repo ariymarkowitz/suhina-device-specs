@@ -1,0 +1,116 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-shift-unison",
+ "question": "spectrum of the 1 kHz tone with a partial series on 100 Hz: Shift +12, -12, +6 st; Unison 2 and 8 voices at Uni. Amt 100 %, 8 voices at 10 %",
+ "plan": "5, 10",
+ "read": [
+  "steady (spectrum)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "shift+12",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 100
+    },
+    "Shift": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "shift-12",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 100
+    },
+    "Shift": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "shift+6",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 100
+    },
+    "Shift": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "uni2-100",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 100
+    },
+    "Unison": 1,
+    "Unison Amount": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "uni8-100",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 100
+    },
+    "Unison": 3,
+    "Unison Amount": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "uni8-10",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 100
+    },
+    "Unison": 3,
+    "Unison Amount": {
+     "display": 10
+    }
+   }
+  }
+ ]
+}

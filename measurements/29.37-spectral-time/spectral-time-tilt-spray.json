@@ -1,0 +1,200 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-tilt-spray",
+ "question": "arrival time against frequency in the sweep and impulse with Time 100 ms, Feedback 0: Tilt +-500 ms, Spray 200 ms, Tilt +500 ms with Mask +-0.5, Spray 200 ms with Stereo 100 %",
+ "plan": "8",
+ "read": [
+  "sweep (arrival time against frequency)",
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "tilt+500ms",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Tilt": {
+     "display": 0.5
+    }
+   }
+  },
+  {
+   "id": "tilt-500ms",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Tilt": {
+     "display": -0.5
+    }
+   }
+  },
+  {
+   "id": "spray-200ms",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Spray": {
+     "display": 0.2
+    }
+   }
+  },
+  {
+   "id": "tilt+500-mask+0.5",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Tilt": {
+     "display": 0.5
+    },
+    "Delay Mask": {
+     "display": 0.5
+    }
+   }
+  },
+  {
+   "id": "tilt+500-mask-0.5",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Tilt": {
+     "display": 0.5
+    },
+    "Delay Mask": {
+     "display": -0.5
+    }
+   }
+  },
+  {
+   "id": "spray-200-stereo100",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Spray": {
+     "display": 0.2
+    },
+    "Delay Stereo Spread": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

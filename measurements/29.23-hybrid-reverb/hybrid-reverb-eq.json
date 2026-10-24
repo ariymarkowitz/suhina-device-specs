@@ -1,0 +1,503 @@
+{
+ "device": "Hybrid Reverb",
+ "parameter": "hybrid-reverb-eq",
+ "question": "noise response of the wet path (Decay 0.1 s) with the EQ on and flat (the default case: low cut at 20 Hz, high shelf 0 dB): low cut 1 kHz at 12 and 48 dB, low shelf -12 dB, high cut 2 kHz, peak 1 +12 dB, peak 2 -12 dB at Q 4",
+ "plan": "10",
+ "read": [
+  "response.noise_db"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "On"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    },
+    "EQ Lo Type": {
+     "item": "Cut"
+    },
+    "EQ Lo Freq": {
+     "display": 20
+    },
+    "EQ Lo Slope": 1,
+    "EQ Hi Type": {
+     "item": "Shelf"
+    },
+    "EQ Hi Gain": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "locut-1k-12",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "On"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    },
+    "EQ Lo Type": {
+     "item": "Cut"
+    },
+    "EQ Lo Freq": {
+     "display": 1000
+    },
+    "EQ Lo Slope": 1,
+    "EQ Hi Type": {
+     "item": "Shelf"
+    },
+    "EQ Hi Gain": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "locut-1k-48",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "On"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    },
+    "EQ Lo Type": {
+     "item": "Cut"
+    },
+    "EQ Lo Freq": {
+     "display": 1000
+    },
+    "EQ Lo Slope": 5,
+    "EQ Hi Type": {
+     "item": "Shelf"
+    },
+    "EQ Hi Gain": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "loshelf-1k",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "On"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    },
+    "EQ Lo Type": {
+     "item": "Shelf"
+    },
+    "EQ Lo Freq": {
+     "display": 1000
+    },
+    "EQ Lo Slope": 1,
+    "EQ Hi Type": {
+     "item": "Shelf"
+    },
+    "EQ Hi Gain": {
+     "display": 0
+    },
+    "EQ Lo Gain": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "hicut-2k",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "On"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    },
+    "EQ Lo Type": {
+     "item": "Cut"
+    },
+    "EQ Lo Freq": {
+     "display": 20
+    },
+    "EQ Lo Slope": 1,
+    "EQ Hi Type": {
+     "item": "Cut"
+    },
+    "EQ Hi Gain": {
+     "display": 0
+    },
+    "EQ Hi Freq": {
+     "display": 2000
+    },
+    "EQ Hi Slope": 1
+   }
+  },
+  {
+   "id": "peak1",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "On"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    },
+    "EQ Lo Type": {
+     "item": "Cut"
+    },
+    "EQ Lo Freq": {
+     "display": 20
+    },
+    "EQ Lo Slope": 1,
+    "EQ Hi Type": {
+     "item": "Shelf"
+    },
+    "EQ Hi Gain": {
+     "display": 0
+    },
+    "EQ Peak 1 Gain": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "peak2-q4",
+   "params": {
+    "Routing": {
+     "item": "Algorithm"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "norm": 1.0
+    },
+    "Predelay Sync": {
+     "item": "Off"
+    },
+    "Predelay": {
+     "display": 0
+    },
+    "Algo Delay": {
+     "display": 0
+    },
+    "Predelay FB": {
+     "display": 0
+    },
+    "Predel. FB 16th": {
+     "display": 0
+    },
+    "Algo Type": {
+     "item": "Dark Hall"
+    },
+    "Decay": {
+     "display": 0.1
+    },
+    "Size": {
+     "display": 50
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Freeze In": {
+     "item": "Off"
+    },
+    "EQ On": {
+     "item": "On"
+    },
+    "Vintage": 0,
+    "Width": {
+     "display": 100
+    },
+    "Bass Mono": {
+     "item": "Off"
+    },
+    "EQ Lo Type": {
+     "item": "Cut"
+    },
+    "EQ Lo Freq": {
+     "display": 20
+    },
+    "EQ Lo Slope": 1,
+    "EQ Hi Type": {
+     "item": "Shelf"
+    },
+    "EQ Hi Gain": {
+     "display": 0
+    },
+    "EQ Peak 2 Gain": {
+     "display": -12
+    },
+    "EQ Peak 2 Q": {
+     "display": 4
+    }
+   }
+  }
+ ]
+}

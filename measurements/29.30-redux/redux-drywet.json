@@ -1,0 +1,109 @@
+{
+ "device": "Redux",
+ "parameter": "redux-drywet",
+ "question": "Rate 8 kHz, 8 bits: Dry/Wet 0 and 50 % (100 % is the default case)",
+ "plan": "7",
+ "read": [
+  "impulse",
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 8,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "dw-0",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 8,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "dw-50",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 8,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 50
+    }
+   }
+  }
+ ]
+}

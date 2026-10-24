@@ -1,0 +1,140 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-delay-shift",
+ "question": "frequency of the 1 kHz tone in each 1 s repeat (Time 1 s, Feedback 70 %) for Shift +10, +50, -50, +200 Hz",
+ "plan": "7",
+ "read": [
+  "steady (spectrum over time)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    }
+   }
+  },
+  {
+   "id": "shift+10",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    },
+    "Delay Frequency Shift": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "shift+50",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    },
+    "Delay Frequency Shift": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "shift-50",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    },
+    "Delay Frequency Shift": {
+     "display": -50
+    }
+   }
+  },
+  {
+   "id": "shift+200",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    },
+    "Delay Frequency Shift": {
+     "display": 200
+    }
+   }
+  }
+ ]
+}

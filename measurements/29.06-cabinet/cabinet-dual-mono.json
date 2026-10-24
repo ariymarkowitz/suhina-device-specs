@@ -1,0 +1,120 @@
+{
+ "device": "Cabinet",
+ "parameter": "cabinet-dual-mono",
+ "question": "2x2 level matrix, impulse L/R taps and sweep L/R of Mono and Dual, for On-Axis and Far",
+ "plan": "3",
+ "read": [
+  "stereo",
+  "impulse",
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mono-on",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "dual-on",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "On"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mono-far",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "dual-far",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "On"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

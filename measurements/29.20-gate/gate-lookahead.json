@@ -1,0 +1,154 @@
+{
+ "device": "Gate",
+ "parameter": "gate-lookahead",
+ "question": "Lookahead 0, 1.5 and 10 ms (impulse delay); with Attack 50 ms at 0 and 10 ms Lookahead",
+ "plan": "8",
+ "read": [
+  "impulse",
+  "dynamics"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "la-1.5",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "1.5 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "la-10",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "10 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "la-0-att50",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "la-10-att50",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "10 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  }
+ ]
+}

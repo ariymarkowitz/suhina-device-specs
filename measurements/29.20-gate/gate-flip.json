@@ -1,0 +1,129 @@
+{
+ "device": "Gate",
+ "parameter": "gate-flip",
+ "question": "Flip on with fastest times; with Attack 100 ms; with Release 100 ms; with Floor -12 dB",
+ "plan": "7",
+ "read": [
+  "static",
+  "dynamics"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Flip"
+    }
+   }
+  },
+  {
+   "id": "flip-att100",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.1
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Flip"
+    }
+   }
+  },
+  {
+   "id": "flip-rel100",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Flip"
+    }
+   }
+  },
+  {
+   "id": "flip-floor-12",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": {
+     "display": -12
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Flip"
+    }
+   }
+  }
+ ]
+}

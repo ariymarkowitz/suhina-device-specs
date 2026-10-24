@@ -1,0 +1,119 @@
+{
+ "device": "Cabinet",
+ "parameter": "cabinet-drywet",
+ "question": "impulse taps and sweep at Dry/Wet 0, 25, 50, 75 % (100 % is the default)",
+ "plan": "5",
+ "read": [
+  "impulse",
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "wet-0",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "wet-25",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 25
+    }
+   }
+  },
+  {
+   "id": "wet-50",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "wet-75",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 75
+    }
+   }
+  }
+ ]
+}

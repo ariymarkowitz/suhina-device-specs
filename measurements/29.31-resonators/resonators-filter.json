@@ -1,0 +1,155 @@
+{
+ "device": "Resonators",
+ "parameter": "resonators-filter",
+ "question": "sweep response of the input filter alone (Decay 0) for LP, HP, BP and Notch",
+ "plan": "6",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 1,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0,
+    "Frequency": {
+     "display": 1000
+    }
+   }
+  },
+  {
+   "id": "lp-1k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 1,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0,
+    "Frequency": {
+     "display": 1000
+    },
+    "Filter Type": {
+     "item": "low pass"
+    }
+   }
+  },
+  {
+   "id": "hp-1k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 1,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0,
+    "Frequency": {
+     "display": 1000
+    },
+    "Filter Type": {
+     "item": "high pass"
+    }
+   }
+  },
+  {
+   "id": "bp-1k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 1,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0,
+    "Frequency": {
+     "display": 1000
+    },
+    "Filter Type": {
+     "item": "band pass"
+    }
+   }
+  },
+  {
+   "id": "notch-1k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 1,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0,
+    "Frequency": {
+     "display": 1000
+    },
+    "Filter Type": {
+     "item": "notch"
+    }
+   }
+  },
+  {
+   "id": "lp-200",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 1,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0,
+    "Frequency": {
+     "display": 200
+    },
+    "Filter Type": {
+     "item": "low pass"
+    }
+   }
+  },
+  {
+   "id": "bp-4k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 1,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0,
+    "Frequency": {
+     "display": 4000
+    },
+    "Filter Type": {
+     "item": "band pass"
+    }
+   }
+  }
+ ]
+}

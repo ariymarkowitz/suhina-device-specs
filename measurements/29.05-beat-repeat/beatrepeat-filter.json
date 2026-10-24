@@ -1,0 +1,266 @@
+{
+ "device": "Beat Repeat",
+ "parameter": "beatrepeat-filter",
+ "question": "noise spectrum of the repeats for Freq 200 Hz, 1 kHz, 5 kHz at Width 4, and Width 1 and 9 at 1 kHz, Filter On",
+ "plan": "8",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 11,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "On"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "f200-w4",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 11,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "On"
+    },
+    "Repeat": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 200
+    },
+    "Filter Width": 4
+   }
+  },
+  {
+   "id": "f1000-w4",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 11,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "On"
+    },
+    "Repeat": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": 4
+   }
+  },
+  {
+   "id": "f5000-w4",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 11,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "On"
+    },
+    "Repeat": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 5000
+    },
+    "Filter Width": 4
+   }
+  },
+  {
+   "id": "f1000-w1",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 11,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "On"
+    },
+    "Repeat": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": 1
+   }
+  },
+  {
+   "id": "f1000-w9",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 5,
+    "Offset": 0,
+    "Grid": 11,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 0,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 15,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "On"
+    },
+    "Repeat": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": 9
+   }
+  }
+ ]
+}

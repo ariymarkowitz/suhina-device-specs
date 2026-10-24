@@ -1,0 +1,166 @@
+{
+ "device": "EQ Three",
+ "parameter": "eq-three-freq",
+ "question": "low band alone at FreqLo 50 Hz and 5 kHz, high band alone at FreqHi 200 Hz and 18 kHz, a narrow mid band, and FreqLo above FreqHi",
+ "plan": "2,8",
+ "read": [
+  "response.sweep_db"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "FreqLo": {
+     "display": 500
+    },
+    "FreqHi": {
+     "display": 2000
+    },
+    "Slope": {
+     "item": "24"
+    }
+   }
+  },
+  {
+   "id": "low-50",
+   "params": {
+    "FreqLo": {
+     "display": 50
+    },
+    "FreqHi": {
+     "display": 2000
+    },
+    "Slope": {
+     "item": "24"
+    },
+    "GainMid": {
+     "norm": 0.0
+    },
+    "GainHi": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "low-5k",
+   "params": {
+    "FreqLo": {
+     "display": 5000
+    },
+    "FreqHi": {
+     "display": 2000
+    },
+    "Slope": {
+     "item": "24"
+    },
+    "GainMid": {
+     "norm": 0.0
+    },
+    "GainHi": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "high-200",
+   "params": {
+    "FreqLo": {
+     "display": 500
+    },
+    "FreqHi": {
+     "display": 200
+    },
+    "Slope": {
+     "item": "24"
+    },
+    "GainLo": {
+     "norm": 0.0
+    },
+    "GainMid": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "high-18k",
+   "params": {
+    "FreqLo": {
+     "display": 500
+    },
+    "FreqHi": {
+     "display": 18000
+    },
+    "Slope": {
+     "item": "24"
+    },
+    "GainLo": {
+     "norm": 0.0
+    },
+    "GainMid": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "mid-narrow",
+   "params": {
+    "FreqLo": {
+     "display": 1000
+    },
+    "FreqHi": {
+     "display": 1100
+    },
+    "Slope": {
+     "item": "24"
+    },
+    "GainLo": {
+     "norm": 0.0
+    },
+    "GainHi": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "crossed-mid",
+   "params": {
+    "FreqLo": {
+     "display": 3000
+    },
+    "FreqHi": {
+     "display": 500
+    },
+    "Slope": {
+     "item": "24"
+    },
+    "GainLo": {
+     "norm": 0.0
+    },
+    "GainHi": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "crossed-flat",
+   "params": {
+    "FreqLo": {
+     "display": 3000
+    },
+    "FreqHi": {
+     "display": 500
+    },
+    "Slope": {
+     "item": "24"
+    }
+   }
+  }
+ ]
+}

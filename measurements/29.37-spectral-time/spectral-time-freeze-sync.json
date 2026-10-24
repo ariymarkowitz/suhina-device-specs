@@ -1,0 +1,200 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-freeze-sync",
+ "question": "spectrogram of the sweep and level of the staircase with Frozen on, Retrigger Sync 500 ms: X-Fade 0, 50, 100 % (Crossfade); Envelope with Fade 2/40 ms and 300/300 ms; interval 1/8 note (250 ms)",
+ "plan": "5",
+ "read": [
+  "sweep (spectrogram)",
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Sync"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "xfade-50",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Sync"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "xfade-100",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Sync"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "env-2-40ms",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Sync"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Envelope"
+    },
+    "XFade %": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "env-300-300ms",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Sync"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Envelope"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Fade In": {
+     "display": 0.3
+    },
+    "Fade Out": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "beat-1/8",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Sync"
+    },
+    "Unit": {
+     "item": "ModulationBeat"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Sync Interval": 6
+   }
+  }
+ ]
+}

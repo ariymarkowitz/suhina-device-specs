@@ -1,0 +1,1467 @@
+{
+ "set": "remaining.als",
+ "groups": {
+  "gap2": {
+   "export": "remaining",
+   "offset_samples": 0,
+   "bypass_renders": 42,
+   "bypass_disagreeing": {}
+  },
+  "gap10": {
+   "export": "remaining-gap10",
+   "offset_samples": 0,
+   "bypass_renders": 2,
+   "bypass_disagreeing": {}
+  }
+ },
+ "runs": {
+  "autopan-shape": {
+   "bypass": "measurements/29.03-auto-pan-tremolo/live/autopan-shape bypass.json",
+   "default": "measurements/29.03-auto-pan-tremolo/live/autopan-shape default.json",
+   "trem-shape--100": "measurements/29.03-auto-pan-tremolo/live/autopan-shape trem-shape--100.json",
+   "trem-shape--50": "measurements/29.03-auto-pan-tremolo/live/autopan-shape trem-shape--50.json",
+   "trem-shape-50": "measurements/29.03-auto-pan-tremolo/live/autopan-shape trem-shape-50.json",
+   "trem-shape-100": "measurements/29.03-auto-pan-tremolo/live/autopan-shape trem-shape-100.json",
+   "pan-shape-50": "measurements/29.03-auto-pan-tremolo/live/autopan-shape pan-shape-50.json",
+   "pan-shape-100": "measurements/29.03-auto-pan-tremolo/live/autopan-shape pan-shape-100.json",
+   "invert-sine": "measurements/29.03-auto-pan-tremolo/live/autopan-shape invert-sine.json",
+   "invert-saw-up": "measurements/29.03-auto-pan-tremolo/live/autopan-shape invert-saw-up.json"
+  },
+  "autoshift-strength": {
+   "bypass": "measurements/29.04-auto-shift/live/autoshift-strength bypass.json",
+   "default": "measurements/29.04-auto-shift/live/autoshift-strength default.json",
+   "strength-0": "measurements/29.04-auto-shift/live/autoshift-strength strength-0.json",
+   "strength-25": "measurements/29.04-auto-shift/live/autoshift-strength strength-25.json",
+   "strength-50": "measurements/29.04-auto-shift/live/autoshift-strength strength-50.json",
+   "strength-75": "measurements/29.04-auto-shift/live/autoshift-strength strength-75.json"
+  },
+  "beatrepeat-trigger": {
+   "bypass": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bypass.json",
+   "default": "measurements/29.05-beat-repeat/live/beatrepeat-trigger default.json",
+   "bar-offset-8": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bar-offset-8.json",
+   "bar-offset-4": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bar-offset-4.json",
+   "interval-half": "measurements/29.05-beat-repeat/live/beatrepeat-trigger interval-half.json",
+   "interval-quarter": "measurements/29.05-beat-repeat/live/beatrepeat-trigger interval-quarter.json",
+   "chance-0": "measurements/29.05-beat-repeat/live/beatrepeat-trigger chance-0.json",
+   "repeat-chance-0": "measurements/29.05-beat-repeat/live/beatrepeat-trigger repeat-chance-0.json"
+  },
+  "beatrepeat-decay-volume": {
+   "bypass": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bypass.json",
+   "default": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume default.json",
+   "decay-25": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume decay-25.json",
+   "decay-50": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume decay-50.json",
+   "decay-100": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume decay-100.json",
+   "volume-m12": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume volume-m12.json",
+   "volume-m6": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume volume-m6.json",
+   "volume-p6": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume volume-p6.json"
+  },
+  "cabinet-mic": {
+   "bypass": "measurements/29.06-cabinet/live/cabinet-mic bypass.json",
+   "default": "measurements/29.06-cabinet/live/cabinet-mic default.json",
+   "near-on-axis-condenser": "measurements/29.06-cabinet/live/cabinet-mic default.json",
+   "near-off-axis-condenser": "measurements/29.06-cabinet/live/cabinet-mic near-off-axis-condenser.json",
+   "far-condenser": "measurements/29.06-cabinet/live/cabinet-mic far-condenser.json",
+   "near-on-axis-dynamic": "measurements/29.06-cabinet/live/cabinet-mic near-on-axis-dynamic.json",
+   "near-off-axis-dynamic": "measurements/29.06-cabinet/live/cabinet-mic near-off-axis-dynamic.json",
+   "far-dynamic": "measurements/29.06-cabinet/live/cabinet-mic far-dynamic.json"
+  },
+  "channeleq-highpass": {
+   "bypass": "measurements/29.07-channel-eq/live/channeleq-highpass bypass.json",
+   "default": "measurements/29.07-channel-eq/live/channeleq-highpass default.json",
+   "hp-on": "measurements/29.07-channel-eq/live/channeleq-highpass hp-on.json",
+   "hp-low-p12": "measurements/29.07-channel-eq/live/channeleq-highpass hp-low-p12.json",
+   "hp-mid120-p12": "measurements/29.07-channel-eq/live/channeleq-highpass hp-mid120-p12.json"
+  },
+  "chorus-auto-amount": {
+   "bypass": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount bypass.json",
+   "default": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount default.json",
+   "auto-amount-25": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount auto-amount-25.json",
+   "auto-amount-50": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount auto-amount-50.json",
+   "auto-amount-100": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount auto-amount-100.json"
+  },
+  "corpus-decay-material": {
+   "bypass": "measurements/29.10-corpus/live/corpus-decay-material bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-decay-material default.json",
+   "decay-0.2": "measurements/29.10-corpus/live/corpus-decay-material decay-0.2.json",
+   "decay-0.5": "measurements/29.10-corpus/live/corpus-decay-material decay-0.5.json",
+   "decay-1.0": "measurements/29.10-corpus/live/corpus-decay-material decay-1.0.json",
+   "material-m100": "measurements/29.10-corpus/live/corpus-decay-material material-m100.json",
+   "material-m50": "measurements/29.10-corpus/live/corpus-decay-material material-m50.json",
+   "material-p100": "measurements/29.10-corpus/live/corpus-decay-material material-p100.json"
+  },
+  "corpus-tune-spread": {
+   "bypass": "measurements/29.10-corpus/live/corpus-decay-material bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-decay-material default.json",
+   "tune-c3": "measurements/29.10-corpus/live/corpus-tune-spread tune-c3.json",
+   "tune-c5": "measurements/29.10-corpus/live/corpus-tune-spread tune-c5.json",
+   "tune-c6": "measurements/29.10-corpus/live/corpus-tune-spread tune-c6.json",
+   "spread-p100": "measurements/29.10-corpus/live/corpus-tune-spread spread-p100.json",
+   "spread-m100": "measurements/29.10-corpus/live/corpus-tune-spread spread-m100.json",
+   "transpose-12": "measurements/29.10-corpus/live/corpus-tune-spread transpose-12.json",
+   "fine-p50": "measurements/29.10-corpus/live/corpus-tune-spread fine-p50.json"
+  },
+  "delay-offset": {
+   "bypass": "measurements/29.11-delay/live/delay-offset bypass.json",
+   "default": "measurements/29.11-delay/live/delay-offset default.json",
+   "four-pm33": "measurements/29.11-delay/live/delay-offset four-pm33.json",
+   "four-pm17": "measurements/29.11-delay/live/delay-offset four-pm17.json",
+   "eight-pm33": "measurements/29.11-delay/live/delay-offset eight-pm33.json",
+   "one-p33": "measurements/29.11-delay/live/delay-offset one-p33.json"
+  },
+  "delay-lfo-delay": {
+   "bypass": "measurements/29.11-delay/live/delay-offset bypass.json",
+   "default": "measurements/29.11-delay/live/delay-lfo-delay default.json",
+   "d100-200-a100": "measurements/29.11-delay/live/delay-lfo-delay default.json",
+   "d300-a100": "measurements/29.11-delay/live/delay-lfo-delay d300-a100.json",
+   "d300-a50": "measurements/29.11-delay/live/delay-lfo-delay d300-a50.json",
+   "d300-a25": "measurements/29.11-delay/live/delay-lfo-delay d300-a25.json",
+   "d300-fade": "measurements/29.11-delay/live/delay-lfo-delay d300-fade.json",
+   "d300-jump": "measurements/29.11-delay/live/delay-lfo-delay d300-jump.json"
+  },
+  "drumbuss-boom": {
+   "bypass": "measurements/29.12-drum-buss/live/drumbuss-boom bypass.json",
+   "default": "measurements/29.12-drum-buss/live/drumbuss-boom default.json",
+   "boom-50": "measurements/29.12-drum-buss/live/drumbuss-boom boom-50.json",
+   "boom-100": "measurements/29.12-drum-buss/live/drumbuss-boom boom-100.json",
+   "boom-100-f30": "measurements/29.12-drum-buss/live/drumbuss-boom boom-100-f30.json",
+   "boom-100-f90": "measurements/29.12-drum-buss/live/drumbuss-boom boom-100-f90.json",
+   "boom-100-decay-0": "measurements/29.12-drum-buss/live/drumbuss-boom boom-100-decay-0.json",
+   "boom-100-decay-50": "measurements/29.12-drum-buss/live/drumbuss-boom boom-100-decay-50.json",
+   "boom-100-audition": "measurements/29.12-drum-buss/live/drumbuss-boom boom-100-audition.json"
+  },
+  "drumbuss-transients": {
+   "bypass": "measurements/29.12-drum-buss/live/drumbuss-boom bypass.json",
+   "default": "measurements/29.12-drum-buss/live/drumbuss-boom default.json",
+   "transients-m1": "measurements/29.12-drum-buss/live/drumbuss-transients transients-m1.json",
+   "transients-m0.5": "measurements/29.12-drum-buss/live/drumbuss-transients transients-m0.5.json",
+   "transients-p0.5": "measurements/29.12-drum-buss/live/drumbuss-transients transients-p0.5.json",
+   "transients-p1": "measurements/29.12-drum-buss/live/drumbuss-transients transients-p1.json"
+  },
+  "dyntube-tone": {
+   "bypass": "measurements/29.13-dynamic-tube/live/dyntube-tone bypass.json",
+   "default": "measurements/29.13-dynamic-tube/live/dyntube-tone default.json",
+   "tone-m1": "measurements/29.13-dynamic-tube/live/dyntube-tone tone-m1.json",
+   "tone-m0.5": "measurements/29.13-dynamic-tube/live/dyntube-tone tone-m0.5.json",
+   "tone-p0.5": "measurements/29.13-dynamic-tube/live/dyntube-tone tone-p0.5.json",
+   "tone-p1": "measurements/29.13-dynamic-tube/live/dyntube-tone tone-p1.json"
+  },
+  "dyntube-envelope": {
+   "bypass": "measurements/29.13-dynamic-tube/live/dyntube-tone bypass.json",
+   "default": "measurements/29.13-dynamic-tube/live/dyntube-envelope default.json",
+   "env-m300": "measurements/29.13-dynamic-tube/live/dyntube-envelope env-m300.json",
+   "env-m100": "measurements/29.13-dynamic-tube/live/dyntube-envelope env-m100.json",
+   "env-p100": "measurements/29.13-dynamic-tube/live/dyntube-envelope env-p100.json",
+   "env-p300": "measurements/29.13-dynamic-tube/live/dyntube-envelope env-p300.json"
+  },
+  "echo-time-offset": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-time-offset default.json",
+   "ms-1-3": "measurements/29.14-echo/live/echo-time-offset ms-1-3.json",
+   "ms-20-50": "measurements/29.14-echo/live/echo-time-offset ms-20-50.json",
+   "ms-750-1000": "measurements/29.14-echo/live/echo-time-offset ms-750-1000.json",
+   "quarter-pm33": "measurements/29.14-echo/live/echo-time-offset quarter-pm33.json",
+   "quarter-pm17": "measurements/29.14-echo/live/echo-time-offset quarter-pm17.json"
+  },
+  "gate-return": {
+   "bypass": "measurements/29.20-gate/live/gate-return bypass.json",
+   "default": "measurements/29.20-gate/live/gate-return default.json",
+   "ret-4": "measurements/29.20-gate/live/gate-return ret-4.json",
+   "ret-6": "measurements/29.20-gate/live/gate-return ret-6.json",
+   "ret-8": "measurements/29.20-gate/live/gate-return ret-8.json",
+   "ret-12": "measurements/29.20-gate/live/gate-return ret-12.json",
+   "ret-24": "measurements/29.20-gate/live/gate-return ret-24.json"
+  },
+  "hybrid-reverb-predelay": {
+   "bypass": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay bypass.json",
+   "default": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay default.json",
+   "pd-100ms": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay pd-100ms.json",
+   "pd-500ms": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay pd-500ms.json",
+   "sync-2": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay sync-2.json",
+   "sync-8": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay sync-8.json",
+   "ad-100ms": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay ad-100ms.json",
+   "ad-500ms": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay ad-500ms.json",
+   "fb-50": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay fb-50.json",
+   "fb-95": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay fb-95.json"
+  },
+  "overdrive-dynamics": {
+   "bypass": "measurements/29.27-overdrive/live/overdrive-dynamics bypass.json",
+   "default": "measurements/29.27-overdrive/live/overdrive-dynamics default.json",
+   "dyn-0": "measurements/29.27-overdrive/live/overdrive-dynamics dyn-0.json",
+   "dyn-50": "measurements/29.27-overdrive/live/overdrive-dynamics dyn-50.json"
+  },
+  "roar-tone": {
+   "bypass": "measurements/29.33-roar/live/roar-tone bypass.json",
+   "default": "measurements/29.33-roar/live/roar-tone default.json",
+   "tone-100": "measurements/29.33-roar/live/roar-tone tone-100.json",
+   "tone-50": "measurements/29.33-roar/live/roar-tone tone-50.json",
+   "tone+50": "measurements/29.33-roar/live/roar-tone tone+50.json",
+   "tone+100": "measurements/29.33-roar/live/roar-tone tone+100.json",
+   "tone+100-2k": "measurements/29.33-roar/live/roar-tone tone+100-2k.json",
+   "tone+100-color": "measurements/29.33-roar/live/roar-tone tone+100-color.json"
+  },
+  "roar-feedback": {
+   "bypass": "measurements/29.33-roar/live/roar-tone bypass.json",
+   "default": "measurements/29.33-roar/live/roar-feedback default.json",
+   "time-5ms": "measurements/29.33-roar/live/roar-feedback time-5ms.json",
+   "time-50ms": "measurements/29.33-roar/live/roar-feedback time-50ms.json",
+   "time-250ms": "measurements/29.33-roar/live/roar-feedback time-250ms.json",
+   "synced-1/8": "measurements/29.33-roar/live/roar-feedback synced-1_8.json",
+   "note-A2": "measurements/29.33-roar/live/roar-feedback note-A2.json",
+   "invert": "measurements/29.33-roar/live/roar-feedback invert.json",
+   "fb-25": "measurements/29.33-roar/live/roar-feedback fb-25.json",
+   "gate-on": "measurements/29.33-roar/live/roar-feedback gate-on.json"
+  },
+  "shifter-ring": {
+   "bypass": "measurements/29.35-shifter/live/shifter-ring bypass.json",
+   "default": "measurements/29.35-shifter/live/shifter-ring default.json",
+   "ring-100": "measurements/29.35-shifter/live/shifter-ring ring-100.json",
+   "ring-440": "measurements/29.35-shifter/live/shifter-ring ring-440.json",
+   "ring-5000": "measurements/29.35-shifter/live/shifter-ring ring-5000.json",
+   "drive-0": "measurements/29.35-shifter/live/shifter-ring drive-0.json",
+   "drive-12": "measurements/29.35-shifter/live/shifter-ring drive-12.json",
+   "drive-24": "measurements/29.35-shifter/live/shifter-ring drive-24.json"
+  },
+  "spectral-time-freeze-sync": {
+   "bypass": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync bypass.json",
+   "default": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync default.json",
+   "xfade-50": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync xfade-50.json",
+   "xfade-100": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync xfade-100.json",
+   "env-2-40ms": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync env-2-40ms.json",
+   "env-300-300ms": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync env-300-300ms.json",
+   "beat-1/8": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync beat-1_8.json"
+  },
+  "spectral-time-delay-shift": {
+   "bypass": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync bypass.json",
+   "default": "measurements/29.37-spectral-time/live/spectral-time-delay-shift default.json",
+   "shift+10": "measurements/29.37-spectral-time/live/spectral-time-delay-shift shift+10.json",
+   "shift+50": "measurements/29.37-spectral-time/live/spectral-time-delay-shift shift+50.json",
+   "shift-50": "measurements/29.37-spectral-time/live/spectral-time-delay-shift shift-50.json",
+   "shift+200": "measurements/29.37-spectral-time/live/spectral-time-delay-shift shift+200.json"
+  },
+  "amp-volume": {
+   "bypass": "measurements/29.01-amp/live/amp-volume bypass.json",
+   "default": "measurements/29.01-amp/live/amp-volume default.json",
+   "blues-vol-0": "measurements/29.01-amp/live/amp-volume blues-vol-0.json",
+   "blues-vol-5": "measurements/29.01-amp/live/amp-volume default.json",
+   "blues-vol-9": "measurements/29.01-amp/live/amp-volume blues-vol-9.json",
+   "blues-vol-10": "measurements/29.01-amp/live/amp-volume blues-vol-10.json",
+   "clean-vol-10": "measurements/29.01-amp/live/amp-volume clean-vol-10.json",
+   "heavy-vol-10": "measurements/29.01-amp/live/amp-volume heavy-vol-10.json",
+   "bass-vol-10": "measurements/29.01-amp/live/amp-volume bass-vol-10.json"
+  },
+  "amp-presence": {
+   "bypass": "measurements/29.01-amp/live/amp-volume bypass.json",
+   "default": "measurements/29.01-amp/live/amp-presence default.json",
+   "rock-pres-0": "measurements/29.01-amp/live/amp-presence rock-pres-0.json",
+   "rock-pres-5": "measurements/29.01-amp/live/amp-presence default.json",
+   "rock-pres-10": "measurements/29.01-amp/live/amp-presence rock-pres-10.json",
+   "lead-pres-0": "measurements/29.01-amp/live/amp-presence lead-pres-0.json",
+   "lead-pres-5": "measurements/29.01-amp/live/amp-presence lead-pres-5.json",
+   "lead-pres-10": "measurements/29.01-amp/live/amp-presence lead-pres-10.json"
+  },
+  "amp-dual-mono": {
+   "bypass": "measurements/29.01-amp/live/amp-volume bypass.json",
+   "default": "measurements/29.01-amp/live/amp-dual-mono default.json",
+   "mono": "measurements/29.01-amp/live/amp-dual-mono default.json",
+   "dual": "measurements/29.01-amp/live/amp-dual-mono dual.json",
+   "dual-wet-50": "measurements/29.01-amp/live/amp-dual-mono dual-wet-50.json",
+   "mono-wet-50": "measurements/29.01-amp/live/amp-dual-mono mono-wet-50.json"
+  },
+  "autofilter-types-other": {
+   "bypass": "measurements/29.02-auto-filter/live/autofilter-types-other bypass.json",
+   "default": "measurements/29.02-auto-filter/live/autofilter-types-other default.json",
+   "morph": "measurements/29.02-auto-filter/live/autofilter-types-other morph.json",
+   "dj-plus": "measurements/29.02-auto-filter/live/autofilter-types-other dj-plus.json",
+   "comb": "measurements/29.02-auto-filter/live/autofilter-types-other comb.json",
+   "resampling": "measurements/29.02-auto-filter/live/autofilter-types-other resampling.json",
+   "notch-lp": "measurements/29.02-auto-filter/live/autofilter-types-other notch-lp.json",
+   "vowel": "measurements/29.02-auto-filter/live/autofilter-types-other vowel.json"
+  },
+  "autofilter-lfo-waves": {
+   "bypass": "measurements/29.02-auto-filter/live/autofilter-types-other bypass.json",
+   "default": "measurements/29.02-auto-filter/live/autofilter-lfo-waves default.json",
+   "wave-sine": "measurements/29.02-auto-filter/live/autofilter-lfo-waves default.json",
+   "wave-triangle": "measurements/29.02-auto-filter/live/autofilter-lfo-waves wave-triangle.json",
+   "wave-saw": "measurements/29.02-auto-filter/live/autofilter-lfo-waves wave-saw.json",
+   "wave-square": "measurements/29.02-auto-filter/live/autofilter-lfo-waves wave-square.json",
+   "wave-rampup": "measurements/29.02-auto-filter/live/autofilter-lfo-waves wave-rampup.json",
+   "wave-rampdown": "measurements/29.02-auto-filter/live/autofilter-lfo-waves wave-rampdown.json",
+   "wave-wander": "measurements/29.02-auto-filter/live/autofilter-lfo-waves wave-wander.json",
+   "wave-snh": "measurements/29.02-auto-filter/live/autofilter-lfo-waves wave-snh.json"
+  },
+  "autofilter-lfo-amount": {
+   "bypass": "measurements/29.02-auto-filter/live/autofilter-types-other bypass.json",
+   "default": "measurements/29.02-auto-filter/live/autofilter-lfo-waves default.json",
+   "amount-10": "measurements/29.02-auto-filter/live/autofilter-lfo-amount amount-10.json",
+   "amount-25": "measurements/29.02-auto-filter/live/autofilter-lfo-amount amount-25.json",
+   "amount-50": "measurements/29.02-auto-filter/live/autofilter-lfo-amount amount-50.json",
+   "freq-4hz": "measurements/29.02-auto-filter/live/autofilter-lfo-amount freq-4hz.json"
+  },
+  "autopan-stereo-offset": {
+   "bypass": "measurements/29.03-auto-pan-tremolo/live/autopan-shape bypass.json",
+   "default": "measurements/29.03-auto-pan-tremolo/live/autopan-stereo-offset default.json",
+   "phase-0": "measurements/29.03-auto-pan-tremolo/live/autopan-stereo-offset phase-0.json",
+   "phase-90": "measurements/29.03-auto-pan-tremolo/live/autopan-stereo-offset phase-90.json",
+   "phase-270": "measurements/29.03-auto-pan-tremolo/live/autopan-stereo-offset phase-270.json",
+   "spin-25": "measurements/29.03-auto-pan-tremolo/live/autopan-stereo-offset spin-25.json",
+   "spin-50": "measurements/29.03-auto-pan-tremolo/live/autopan-stereo-offset spin-50.json"
+  },
+  "autopan-time-modes": {
+   "bypass": "measurements/29.03-auto-pan-tremolo/live/autopan-shape bypass.json",
+   "default": "measurements/29.03-auto-pan-tremolo/live/autopan-shape default.json",
+   "rate-2hz": "measurements/29.03-auto-pan-tremolo/live/autopan-time-modes rate-2hz.json",
+   "time-0.5s": "measurements/29.03-auto-pan-tremolo/live/autopan-time-modes time-0.5s.json",
+   "synced-quarter": "measurements/29.03-auto-pan-tremolo/live/autopan-time-modes synced-quarter.json",
+   "triplet-quarter": "measurements/29.03-auto-pan-tremolo/live/autopan-time-modes triplet-quarter.json",
+   "dotted-quarter": "measurements/29.03-auto-pan-tremolo/live/autopan-time-modes dotted-quarter.json",
+   "sixteenth-4": "measurements/29.03-auto-pan-tremolo/live/autopan-time-modes sixteenth-4.json"
+  },
+  "autopan-attack": {
+   "bypass": "measurements/29.03-auto-pan-tremolo/live/autopan-shape bypass.json",
+   "default": "measurements/29.03-auto-pan-tremolo/live/autopan-attack default.json",
+   "attack-0.05": "measurements/29.03-auto-pan-tremolo/live/autopan-attack attack-0.05.json",
+   "attack-0.5": "measurements/29.03-auto-pan-tremolo/live/autopan-attack attack-0.5.json",
+   "attack-2": "measurements/29.03-auto-pan-tremolo/live/autopan-attack attack-2.json",
+   "attack-5": "measurements/29.03-auto-pan-tremolo/live/autopan-attack attack-5.json"
+  },
+  "autopan-dynmod": {
+   "bypass": "measurements/29.03-auto-pan-tremolo/live/autopan-shape bypass.json",
+   "default": "measurements/29.03-auto-pan-tremolo/live/autopan-time-modes rate-2hz.json",
+   "dynmod--100": "measurements/29.03-auto-pan-tremolo/live/autopan-dynmod dynmod--100.json",
+   "dynmod--50": "measurements/29.03-auto-pan-tremolo/live/autopan-dynmod dynmod--50.json",
+   "dynmod-50": "measurements/29.03-auto-pan-tremolo/live/autopan-dynmod dynmod-50.json",
+   "dynmod-100": "measurements/29.03-auto-pan-tremolo/live/autopan-dynmod dynmod-100.json"
+  },
+  "autoshift-vibrato": {
+   "bypass": "measurements/29.04-auto-shift/live/autoshift-strength bypass.json",
+   "default": "measurements/29.04-auto-shift/live/autoshift-vibrato default.json",
+   "rate-2": "measurements/29.04-auto-shift/live/autoshift-vibrato rate-2.json",
+   "rate-6": "measurements/29.04-auto-shift/live/autoshift-vibrato default.json",
+   "rate-15": "measurements/29.04-auto-shift/live/autoshift-vibrato rate-15.json",
+   "amt-100": "measurements/29.04-auto-shift/live/autoshift-vibrato amt-100.json",
+   "natural": "measurements/29.04-auto-shift/live/autoshift-vibrato natural.json",
+   "fade-in-1s": "measurements/29.04-auto-shift/live/autoshift-vibrato fade-in-1s.json"
+  },
+  "autoshift-lfo-waves": {
+   "bypass": "measurements/29.04-auto-shift/live/autoshift-strength bypass.json",
+   "default": "measurements/29.04-auto-shift/live/autoshift-lfo-waves default.json",
+   "wave-triangle": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-triangle.json",
+   "wave-triangle-8": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-triangle-8.json",
+   "wave-triangle-16": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-triangle-16.json",
+   "wave-saw-up": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-saw-up.json",
+   "wave-saw-down": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-saw-down.json",
+   "wave-rectangle": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-rectangle.json",
+   "wave-random": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-random.json",
+   "wave-random-snh": "measurements/29.04-auto-shift/live/autoshift-lfo-waves wave-random-snh.json"
+  },
+  "autoshift-lfo-depth": {
+   "bypass": "measurements/29.04-auto-shift/live/autoshift-strength bypass.json",
+   "default": "measurements/29.04-auto-shift/live/autoshift-lfo-depth default.json",
+   "pitch-2": "measurements/29.04-auto-shift/live/autoshift-lfo-depth pitch-2.json",
+   "pitch-12": "measurements/29.04-auto-shift/live/autoshift-lfo-depth pitch-12.json",
+   "vol-50": "measurements/29.04-auto-shift/live/autoshift-lfo-depth vol-50.json",
+   "vol-100": "measurements/29.04-auto-shift/live/autoshift-lfo-depth vol-100.json",
+   "pan-100": "measurements/29.04-auto-shift/live/autoshift-lfo-depth pan-100.json",
+   "form-100": "measurements/29.04-auto-shift/live/autoshift-lfo-depth form-100.json"
+  },
+  "beatrepeat-pitch": {
+   "bypass": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bypass.json",
+   "default": "measurements/29.05-beat-repeat/live/beatrepeat-pitch default.json",
+   "pitch-m3": "measurements/29.05-beat-repeat/live/beatrepeat-pitch pitch-m3.json",
+   "pitch-m7": "measurements/29.05-beat-repeat/live/beatrepeat-pitch pitch-m7.json",
+   "pitch-m12": "measurements/29.05-beat-repeat/live/beatrepeat-pitch pitch-m12.json",
+   "pdecay-50": "measurements/29.05-beat-repeat/live/beatrepeat-pitch pdecay-50.json",
+   "pdecay-100": "measurements/29.05-beat-repeat/live/beatrepeat-pitch pdecay-100.json",
+   "pdecay-50-pitch-m12": "measurements/29.05-beat-repeat/live/beatrepeat-pitch pdecay-50-pitch-m12.json"
+  },
+  "beatrepeat-filter": {
+   "bypass": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bypass.json",
+   "default": "measurements/29.05-beat-repeat/live/beatrepeat-filter default.json",
+   "f200-w4": "measurements/29.05-beat-repeat/live/beatrepeat-filter f200-w4.json",
+   "f1000-w4": "measurements/29.05-beat-repeat/live/beatrepeat-filter default.json",
+   "f5000-w4": "measurements/29.05-beat-repeat/live/beatrepeat-filter f5000-w4.json",
+   "f1000-w1": "measurements/29.05-beat-repeat/live/beatrepeat-filter f1000-w1.json",
+   "f1000-w9": "measurements/29.05-beat-repeat/live/beatrepeat-filter f1000-w9.json"
+  },
+  "beatrepeat-mix-modes": {
+   "bypass": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bypass.json",
+   "default": "measurements/29.05-beat-repeat/live/beatrepeat-mix-modes default.json",
+   "mix": "measurements/29.05-beat-repeat/live/beatrepeat-mix-modes mix.json",
+   "ins": "measurements/29.05-beat-repeat/live/beatrepeat-mix-modes ins.json",
+   "gate": "measurements/29.05-beat-repeat/live/beatrepeat-mix-modes default.json"
+  },
+  "cabinet-product": {
+   "bypass": "measurements/29.06-cabinet/live/cabinet-mic bypass.json",
+   "default": "measurements/29.06-cabinet/live/cabinet-product default.json",
+   "1x12-far-dynamic": "measurements/29.06-cabinet/live/cabinet-product 1x12-far-dynamic.json",
+   "1x12-off-condenser": "measurements/29.06-cabinet/live/cabinet-product 1x12-off-condenser.json",
+   "bass-on-dynamic": "measurements/29.06-cabinet/live/cabinet-product bass-on-dynamic.json",
+   "bass-far-condenser": "measurements/29.06-cabinet/live/cabinet-product bass-far-condenser.json",
+   "bass-off-dynamic": "measurements/29.06-cabinet/live/cabinet-product bass-off-dynamic.json",
+   "2x12-far-dynamic": "measurements/29.06-cabinet/live/cabinet-product 2x12-far-dynamic.json"
+  },
+  "cabinet-linearity": {
+   "bypass": "measurements/29.06-cabinet/live/cabinet-mic bypass.json",
+   "default": "measurements/29.06-cabinet/live/cabinet-product default.json",
+   "lin-1x12-condenser": "measurements/29.06-cabinet/live/cabinet-product default.json",
+   "lin-1x12-dynamic": "measurements/29.06-cabinet/live/cabinet-linearity lin-1x12-dynamic.json",
+   "lin-4x12-dynamic": "measurements/29.06-cabinet/live/cabinet-mic near-on-axis-dynamic.json",
+   "lin-bass-far": "measurements/29.06-cabinet/live/cabinet-product bass-far-condenser.json"
+  },
+  "cabinet-dual-mono": {
+   "bypass": "measurements/29.06-cabinet/live/cabinet-mic bypass.json",
+   "default": "measurements/29.06-cabinet/live/cabinet-dual-mono default.json",
+   "mono-on": "measurements/29.06-cabinet/live/cabinet-dual-mono default.json",
+   "dual-on": "measurements/29.06-cabinet/live/cabinet-dual-mono dual-on.json",
+   "mono-far": "measurements/29.06-cabinet/live/cabinet-dual-mono mono-far.json",
+   "dual-far": "measurements/29.06-cabinet/live/cabinet-dual-mono dual-far.json"
+  },
+  "chorus-vibrato-shape": {
+   "bypass": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount bypass.json",
+   "default": "measurements/29.08-chorus-ensemble/live/chorus-vibrato-shape default.json",
+   "shape-50": "measurements/29.08-chorus-ensemble/live/chorus-vibrato-shape shape-50.json",
+   "shape-100": "measurements/29.08-chorus-ensemble/live/chorus-vibrato-shape shape-100.json",
+   "offset-90": "measurements/29.08-chorus-ensemble/live/chorus-vibrato-shape offset-90.json",
+   "offset-180": "measurements/29.08-chorus-ensemble/live/chorus-vibrato-shape offset-180.json"
+  },
+  "chorus-width": {
+   "bypass": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount bypass.json",
+   "default": "measurements/29.08-chorus-ensemble/live/chorus-width default.json",
+   "chorus-w0": "measurements/29.08-chorus-ensemble/live/chorus-width chorus-w0.json",
+   "chorus-w200": "measurements/29.08-chorus-ensemble/live/chorus-width chorus-w200.json",
+   "ensemble-w100": "measurements/29.08-chorus-ensemble/live/chorus-width ensemble-w100.json",
+   "ensemble-w0": "measurements/29.08-chorus-ensemble/live/chorus-width ensemble-w0.json",
+   "ensemble-w200": "measurements/29.08-chorus-ensemble/live/chorus-width ensemble-w200.json"
+  },
+  "chorus-feedback": {
+   "bypass": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount bypass.json",
+   "default": "measurements/29.08-chorus-ensemble/live/chorus-feedback default.json",
+   "fb-50": "measurements/29.08-chorus-ensemble/live/chorus-feedback fb-50.json",
+   "fb-90": "measurements/29.08-chorus-ensemble/live/chorus-feedback fb-90.json",
+   "fb-99": "measurements/29.08-chorus-ensemble/live/chorus-feedback fb-99.json",
+   "fb-90-invert": "measurements/29.08-chorus-ensemble/live/chorus-feedback fb-90-invert.json",
+   "fb-99-invert": "measurements/29.08-chorus-ensemble/live/chorus-feedback fb-99-invert.json"
+  },
+  "chorus-highpass-warmth": {
+   "bypass": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount bypass.json",
+   "default": "measurements/29.08-chorus-ensemble/live/chorus-highpass-warmth default.json",
+   "hp-50": "measurements/29.08-chorus-ensemble/live/chorus-highpass-warmth hp-50.json",
+   "hp-200": "measurements/29.08-chorus-ensemble/live/chorus-highpass-warmth hp-200.json",
+   "hp-1000": "measurements/29.08-chorus-ensemble/live/chorus-highpass-warmth hp-1000.json",
+   "warmth-50": "measurements/29.08-chorus-ensemble/live/chorus-highpass-warmth warmth-50.json",
+   "warmth-100": "measurements/29.08-chorus-ensemble/live/chorus-highpass-warmth warmth-100.json"
+  },
+  "compressor-env-mode": {
+   "bypass": "measurements/29.09-compressor/live/compressor-env-mode bypass.json",
+   "default": "measurements/29.09-compressor/live/compressor-env-mode default.json",
+   "lin-ratio-2": "measurements/29.09-compressor/live/compressor-env-mode lin-ratio-2.json",
+   "lin-ratio-10": "measurements/29.09-compressor/live/compressor-env-mode default.json",
+   "log-ratio-2": "measurements/29.09-compressor/live/compressor-env-mode log-ratio-2.json",
+   "log-ratio-10": "measurements/29.09-compressor/live/compressor-env-mode log-ratio-10.json",
+   "auto-lin": "measurements/29.09-compressor/live/compressor-env-mode auto-lin.json",
+   "auto-log": "measurements/29.09-compressor/live/compressor-env-mode auto-log.json"
+  },
+  "compressor-lookahead": {
+   "bypass": "measurements/29.09-compressor/live/compressor-env-mode bypass.json",
+   "default": "measurements/29.09-compressor/live/compressor-lookahead default.json",
+   "look-1": "measurements/29.09-compressor/live/compressor-lookahead look-1.json",
+   "look-10": "measurements/29.09-compressor/live/compressor-lookahead look-10.json",
+   "look-10-wet-50": "measurements/29.09-compressor/live/compressor-lookahead look-10-wet-50.json",
+   "look-10-attack-10ms": "measurements/29.09-compressor/live/compressor-lookahead look-10-attack-10ms.json"
+  },
+  "compressor-makeup": {
+   "bypass": "measurements/29.09-compressor/live/compressor-env-mode bypass.json",
+   "default": "measurements/29.09-compressor/live/compressor-makeup default.json",
+   "makeup-r2": "measurements/29.09-compressor/live/compressor-makeup makeup-r2.json",
+   "makeup-r4": "measurements/29.09-compressor/live/compressor-makeup default.json",
+   "makeup-rinf": "measurements/29.09-compressor/live/compressor-makeup makeup-rinf.json",
+   "makeup-r4-t40": "measurements/29.09-compressor/live/compressor-makeup makeup-r4-t40.json"
+  },
+  "corpus-hit-inharm": {
+   "bypass": "measurements/29.10-corpus/live/corpus-decay-material bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-decay-material default.json",
+   "hit-0": "measurements/29.10-corpus/live/corpus-hit-inharm hit-0.json",
+   "hit-100": "measurements/29.10-corpus/live/corpus-hit-inharm hit-100.json",
+   "pos-0": "measurements/29.10-corpus/live/corpus-hit-inharm pos-0.json",
+   "pos-100": "measurements/29.10-corpus/live/corpus-hit-inharm pos-100.json",
+   "bright-m100": "measurements/29.10-corpus/live/corpus-hit-inharm bright-m100.json",
+   "bright-p100": "measurements/29.10-corpus/live/corpus-hit-inharm bright-p100.json",
+   "inharm-m100": "measurements/29.10-corpus/live/corpus-hit-inharm inharm-m100.json",
+   "inharm-p100": "measurements/29.10-corpus/live/corpus-hit-inharm inharm-p100.json"
+  },
+  "corpus-type-params": {
+   "bypass": "measurements/29.10-corpus/live/corpus-decay-material bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-decay-material default.json",
+   "pipe-open-0": "measurements/29.10-corpus/live/corpus-type-params pipe-open-0.json",
+   "pipe-radius-0": "measurements/29.10-corpus/live/corpus-type-params pipe-radius-0.json",
+   "pipe-radius-100": "measurements/29.10-corpus/live/corpus-type-params pipe-radius-100.json",
+   "tube-radius-0": "measurements/29.10-corpus/live/corpus-type-params tube-radius-0.json",
+   "tube-radius-100": "measurements/29.10-corpus/live/corpus-type-params tube-radius-100.json",
+   "membrane-ratio-0": "measurements/29.10-corpus/live/corpus-type-params membrane-ratio-0.json",
+   "membrane-ratio-100": "measurements/29.10-corpus/live/corpus-type-params membrane-ratio-100.json",
+   "plate-ratio-100": "measurements/29.10-corpus/live/corpus-type-params plate-ratio-100.json"
+  },
+  "delay-lfo-filter": {
+   "bypass": "measurements/29.11-delay/live/delay-offset bypass.json",
+   "default": "measurements/29.11-delay/live/delay-lfo-filter default.json",
+   "filter-25": "measurements/29.11-delay/live/delay-lfo-filter filter-25.json",
+   "filter-50": "measurements/29.11-delay/live/delay-lfo-filter filter-50.json",
+   "filter-100": "measurements/29.11-delay/live/delay-lfo-filter filter-100.json"
+  },
+  "delay-lfo-waves": {
+   "bypass": "measurements/29.11-delay/live/delay-offset bypass.json",
+   "default": "measurements/29.11-delay/live/delay-lfo-delay d300-a100.json",
+   "wave-triangle": "measurements/29.11-delay/live/delay-lfo-waves wave-triangle.json",
+   "wave-ramp-up": "measurements/29.11-delay/live/delay-lfo-waves wave-ramp-up.json",
+   "wave-ramp-down": "measurements/29.11-delay/live/delay-lfo-waves wave-ramp-down.json",
+   "wave-square": "measurements/29.11-delay/live/delay-lfo-waves wave-square.json",
+   "wave-snh": "measurements/29.11-delay/live/delay-lfo-waves wave-snh.json",
+   "wave-wander": "measurements/29.11-delay/live/delay-lfo-waves wave-wander.json",
+   "triangle-morph-p100": "measurements/29.11-delay/live/delay-lfo-waves triangle-morph-p100.json",
+   "triangle-morph-m100": "measurements/29.11-delay/live/delay-lfo-waves triangle-morph-m100.json"
+  },
+  "delay-time": {
+   "bypass": "measurements/29.11-delay/live/delay-offset bypass.json",
+   "default": "measurements/29.11-delay/live/delay-time default.json",
+   "sync-1-2": "measurements/29.11-delay/live/delay-time sync-1-2.json",
+   "sync-3-4": "measurements/29.11-delay/live/delay-offset default.json",
+   "sync-5-6": "measurements/29.11-delay/live/delay-time sync-5-6.json",
+   "sync-8-3": "measurements/29.11-delay/live/delay-time sync-8-3.json",
+   "ms-1-3": "measurements/29.11-delay/live/delay-time ms-1-3.json",
+   "ms-20-50": "measurements/29.11-delay/live/delay-time ms-20-50.json",
+   "ms-250-500": "measurements/29.11-delay/live/delay-time ms-250-500.json",
+   "ms-750-1000": "measurements/29.11-delay/live/delay-time ms-750-1000.json"
+  },
+  "delay-pingpong": {
+   "bypass": "measurements/29.11-delay/live/delay-offset bypass.json",
+   "default": "measurements/29.11-delay/live/delay-pingpong default.json",
+   "pp-on": "measurements/29.11-delay/live/delay-pingpong pp-on.json",
+   "pp-on-unequal": "measurements/29.11-delay/live/delay-pingpong pp-on-unequal.json",
+   "pp-on-fb-0": "measurements/29.11-delay/live/delay-pingpong pp-on-fb-0.json"
+  },
+  "delay-drywet": {
+   "bypass": "measurements/29.11-delay/live/delay-offset bypass.json",
+   "default": "measurements/29.11-delay/live/delay-drywet default.json",
+   "wet-0": "measurements/29.11-delay/live/delay-drywet wet-0.json",
+   "wet-25": "measurements/29.11-delay/live/delay-drywet wet-25.json",
+   "wet-50": "measurements/29.11-delay/live/delay-drywet wet-50.json",
+   "wet-75": "measurements/29.11-delay/live/delay-drywet wet-75.json"
+  },
+  "drumbuss-damp-crunch": {
+   "bypass": "measurements/29.12-drum-buss/live/drumbuss-boom bypass.json",
+   "default": "measurements/29.12-drum-buss/live/drumbuss-boom default.json",
+   "damp-500": "measurements/29.12-drum-buss/live/drumbuss-damp-crunch damp-500.json",
+   "damp-2000": "measurements/29.12-drum-buss/live/drumbuss-damp-crunch damp-2000.json",
+   "damp-9200": "measurements/29.12-drum-buss/live/drumbuss-damp-crunch damp-9200.json",
+   "crunch-50": "measurements/29.12-drum-buss/live/drumbuss-damp-crunch crunch-50.json",
+   "crunch-100": "measurements/29.12-drum-buss/live/drumbuss-damp-crunch crunch-100.json"
+  },
+  "dyntube-env-time": {
+   "bypass": "measurements/29.13-dynamic-tube/live/dyntube-tone bypass.json",
+   "default": "measurements/29.13-dynamic-tube/live/dyntube-env-time default.json",
+   "attack-1ms": "measurements/29.13-dynamic-tube/live/dyntube-env-time attack-1ms.json",
+   "attack-50ms": "measurements/29.13-dynamic-tube/live/dyntube-env-time attack-50ms.json",
+   "attack-400ms": "measurements/29.13-dynamic-tube/live/dyntube-env-time attack-400ms.json",
+   "release-1ms": "measurements/29.13-dynamic-tube/live/dyntube-env-time release-1ms.json",
+   "release-300ms": "measurements/29.13-dynamic-tube/live/dyntube-env-time release-300ms.json",
+   "release-1500ms": "measurements/29.13-dynamic-tube/live/dyntube-env-time release-1500ms.json"
+  },
+  "echo-gate-duck": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-time-offset default.json",
+   "gate-20-r50": "measurements/29.14-echo/live/echo-gate-duck gate-20-r50.json",
+   "gate-20-r500": "measurements/29.14-echo/live/echo-gate-duck gate-20-r500.json",
+   "duck-30": "measurements/29.14-echo/live/echo-gate-duck duck-30.json",
+   "duck-10": "measurements/29.14-echo/live/echo-gate-duck duck-10.json",
+   "duck-30-r1000": "measurements/29.14-echo/live/echo-gate-duck duck-30-r1000.json"
+  },
+  "echo-mod-delay": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-mod-delay default.json",
+   "mod-50": "measurements/29.14-echo/live/echo-mod-delay mod-50.json",
+   "mod-100-x4": "measurements/29.14-echo/live/echo-mod-delay mod-100-x4.json",
+   "phase-0": "measurements/29.14-echo/live/echo-mod-delay phase-0.json",
+   "phase-180": "measurements/29.14-echo/live/echo-mod-delay phase-180.json",
+   "repitch-on": "measurements/29.14-echo/live/echo-mod-delay repitch-on.json",
+   "wave-square": "measurements/29.14-echo/live/echo-mod-delay wave-square.json",
+   "wave-random": "measurements/29.14-echo/live/echo-mod-delay wave-random.json"
+  },
+  "echo-mod-filter-env": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-mod-filter-env default.json",
+   "flt-25": "measurements/29.14-echo/live/echo-mod-filter-env flt-25.json",
+   "flt-50": "measurements/29.14-echo/live/echo-mod-filter-env flt-50.json",
+   "env-flt-100": "measurements/29.14-echo/live/echo-mod-filter-env env-flt-100.json",
+   "env-dly-100": "measurements/29.14-echo/live/echo-mod-filter-env env-dly-100.json"
+  },
+  "echo-reverb": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-reverb default.json",
+   "pre": "measurements/29.14-echo/live/echo-reverb pre.json",
+   "post": "measurements/29.14-echo/live/echo-reverb default.json",
+   "feedback": "measurements/29.14-echo/live/echo-reverb feedback.json",
+   "post-decay-25": "measurements/29.14-echo/live/echo-reverb post-decay-25.json",
+   "post-level-100": "measurements/29.14-echo/live/echo-reverb post-level-100.json"
+  },
+  "echo-channel-stereo": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-channel-stereo default.json",
+   "ping-pong": "measurements/29.14-echo/live/echo-channel-stereo ping-pong.json",
+   "mid-side": "measurements/29.14-echo/live/echo-channel-stereo mid-side.json",
+   "mid-side-width-0": "measurements/29.14-echo/live/echo-channel-stereo mid-side-width-0.json",
+   "width-0": "measurements/29.14-echo/live/echo-channel-stereo width-0.json",
+   "width-200": "measurements/29.14-echo/live/echo-channel-stereo width-200.json"
+  },
+  "eq-eight-scale": {
+   "bypass": "measurements/29.15-eq-eight/live/eq-eight-scale bypass.json",
+   "default": "measurements/29.15-eq-eight/live/eq-eight-scale default.json",
+   "scale-50": "measurements/29.15-eq-eight/live/eq-eight-scale scale-50.json",
+   "scale-0": "measurements/29.15-eq-eight/live/eq-eight-scale scale-0.json",
+   "scale-m50": "measurements/29.15-eq-eight/live/eq-eight-scale scale-m50.json",
+   "scale-m100": "measurements/29.15-eq-eight/live/eq-eight-scale scale-m100.json",
+   "scale-200": "measurements/29.15-eq-eight/live/eq-eight-scale scale-200.json"
+  },
+  "eq-eight-shelf-q": {
+   "bypass": "measurements/29.15-eq-eight/live/eq-eight-scale bypass.json",
+   "default": "measurements/29.15-eq-eight/live/eq-eight-shelf-q default.json",
+   "ls-q0.1": "measurements/29.15-eq-eight/live/eq-eight-shelf-q ls-q0.1.json",
+   "ls-q2": "measurements/29.15-eq-eight/live/eq-eight-shelf-q ls-q2.json",
+   "ls-q6": "measurements/29.15-eq-eight/live/eq-eight-shelf-q ls-q6.json",
+   "hs-q0.1": "measurements/29.15-eq-eight/live/eq-eight-shelf-q hs-q0.1.json",
+   "hs-q2": "measurements/29.15-eq-eight/live/eq-eight-shelf-q hs-q2.json",
+   "hs-q6": "measurements/29.15-eq-eight/live/eq-eight-shelf-q hs-q6.json",
+   "ls-q2-cut": "measurements/29.15-eq-eight/live/eq-eight-shelf-q ls-q2-cut.json"
+  },
+  "eq-eight-freq": {
+   "bypass": "measurements/29.15-eq-eight/live/eq-eight-scale bypass.json",
+   "default": "measurements/29.15-eq-eight/live/eq-eight-shelf-q default.json",
+   "bell-30": "measurements/29.15-eq-eight/live/eq-eight-freq bell-30.json",
+   "bell-100": "measurements/29.15-eq-eight/live/eq-eight-freq bell-100.json",
+   "bell-10k": "measurements/29.15-eq-eight/live/eq-eight-freq bell-10k.json",
+   "bell-16k": "measurements/29.15-eq-eight/live/eq-eight-freq bell-16k.json",
+   "bell-20k": "measurements/29.15-eq-eight/live/eq-eight-freq bell-20k.json",
+   "bell-22k": "measurements/29.15-eq-eight/live/eq-eight-freq bell-22k.json",
+   "lp12-16k": "measurements/29.15-eq-eight/live/eq-eight-freq lp12-16k.json",
+   "hs-16k": "measurements/29.15-eq-eight/live/eq-eight-freq hs-16k.json"
+  },
+  "eq-three-freq": {
+   "bypass": "measurements/29.16-eq-three/live/eq-three-freq bypass.json",
+   "default": "measurements/29.16-eq-three/live/eq-three-freq default.json",
+   "low-50": "measurements/29.16-eq-three/live/eq-three-freq low-50.json",
+   "low-5k": "measurements/29.16-eq-three/live/eq-three-freq low-5k.json",
+   "high-200": "measurements/29.16-eq-three/live/eq-three-freq high-200.json",
+   "high-18k": "measurements/29.16-eq-three/live/eq-three-freq high-18k.json",
+   "mid-narrow": "measurements/29.16-eq-three/live/eq-three-freq mid-narrow.json",
+   "crossed-mid": "measurements/29.16-eq-three/live/eq-three-freq crossed-mid.json",
+   "crossed-flat": "measurements/29.16-eq-three/live/eq-three-freq crossed-flat.json"
+  },
+  "erosion-noise": {
+   "bypass": "measurements/29.17-erosion/live/erosion-noise bypass.json",
+   "default": "measurements/29.17-erosion/live/erosion-noise default.json",
+   "w-0.1": "measurements/29.17-erosion/live/erosion-noise w-0.1.json",
+   "w-1": "measurements/29.17-erosion/live/erosion-noise default.json",
+   "w-2.5": "measurements/29.17-erosion/live/erosion-noise w-2.5.json",
+   "f100-w-1": "measurements/29.17-erosion/live/erosion-noise f100-w-1.json",
+   "f5k-w-1": "measurements/29.17-erosion/live/erosion-noise f5k-w-1.json"
+  },
+  "erosion-blend": {
+   "bypass": "measurements/29.17-erosion/live/erosion-noise bypass.json",
+   "default": "measurements/29.17-erosion/live/erosion-blend default.json",
+   "blend-0": "measurements/29.17-erosion/live/erosion-blend default.json",
+   "blend-25": "measurements/29.17-erosion/live/erosion-blend blend-25.json",
+   "blend-50": "measurements/29.17-erosion/live/erosion-blend blend-50.json",
+   "blend-75": "measurements/29.17-erosion/live/erosion-blend blend-75.json",
+   "blend-100": "measurements/29.17-erosion/live/erosion-noise default.json"
+  },
+  "erosion-stereo": {
+   "bypass": "measurements/29.17-erosion/live/erosion-noise bypass.json",
+   "default": "measurements/29.17-erosion/live/erosion-blend default.json",
+   "sine-sw-50": "measurements/29.17-erosion/live/erosion-stereo sine-sw-50.json",
+   "sine-sw-100": "measurements/29.17-erosion/live/erosion-stereo sine-sw-100.json",
+   "noise-sw-0": "measurements/29.17-erosion/live/erosion-noise default.json",
+   "noise-sw-50": "measurements/29.17-erosion/live/erosion-stereo noise-sw-50.json",
+   "noise-sw-100": "measurements/29.17-erosion/live/erosion-stereo noise-sw-100.json"
+  },
+  "filter-delay-pan": {
+   "bypass": "measurements/29.19-filter-delay/live/filter-delay-pan bypass.json",
+   "default": "measurements/29.19-filter-delay/live/filter-delay-pan default.json",
+   "pan-L50": "measurements/29.19-filter-delay/live/filter-delay-pan pan-L50.json",
+   "pan-L25": "measurements/29.19-filter-delay/live/filter-delay-pan pan-L25.json",
+   "pan-R25": "measurements/29.19-filter-delay/live/filter-delay-pan pan-R25.json",
+   "pan-R50": "measurements/29.19-filter-delay/live/filter-delay-pan pan-R50.json"
+  },
+  "filter-delay-levels": {
+   "bypass": "measurements/29.19-filter-delay/live/filter-delay-pan bypass.json",
+   "default": "measurements/29.19-filter-delay/live/filter-delay-pan default.json",
+   "vol+6": "measurements/29.19-filter-delay/live/filter-delay-levels vol+6.json",
+   "vol-20": "measurements/29.19-filter-delay/live/filter-delay-levels vol-20.json",
+   "vol-inf": "measurements/29.19-filter-delay/live/filter-delay-levels vol-inf.json",
+   "dry-0": "measurements/29.19-filter-delay/live/filter-delay-levels dry-0.json",
+   "dry-20": "measurements/29.19-filter-delay/live/filter-delay-levels dry-20.json"
+  },
+  "filter-delay-routing": {
+   "bypass": "measurements/29.19-filter-delay/live/filter-delay-pan bypass.json",
+   "default": "measurements/29.19-filter-delay/live/filter-delay-routing default.json",
+   "d1-only": "measurements/29.19-filter-delay/live/filter-delay-routing d1-only.json",
+   "d3-only": "measurements/29.19-filter-delay/live/filter-delay-routing d3-only.json"
+  },
+  "gate-hold": {
+   "bypass": "measurements/29.20-gate/live/gate-return bypass.json",
+   "default": "measurements/29.20-gate/live/gate-hold default.json",
+   "hold-50": "measurements/29.20-gate/live/gate-hold hold-50.json",
+   "hold-200": "measurements/29.20-gate/live/gate-hold hold-200.json",
+   "hold-500": "measurements/29.20-gate/live/gate-hold hold-500.json"
+  },
+  "gate-lookahead": {
+   "bypass": "measurements/29.20-gate/live/gate-return bypass.json",
+   "default": "measurements/29.20-gate/live/gate-lookahead default.json",
+   "la-1.5": "measurements/29.20-gate/live/gate-lookahead la-1.5.json",
+   "la-10": "measurements/29.20-gate/live/gate-lookahead la-10.json",
+   "la-0-att50": "measurements/29.20-gate/live/gate-lookahead la-0-att50.json",
+   "la-10-att50": "measurements/29.20-gate/live/gate-lookahead la-10-att50.json"
+  },
+  "gate-flip": {
+   "bypass": "measurements/29.20-gate/live/gate-return bypass.json",
+   "default": "measurements/29.20-gate/live/gate-flip default.json",
+   "flip-att100": "measurements/29.20-gate/live/gate-flip flip-att100.json",
+   "flip-rel100": "measurements/29.20-gate/live/gate-flip flip-rel100.json",
+   "flip-floor-12": "measurements/29.20-gate/live/gate-flip flip-floor-12.json"
+  },
+  "glue-range": {
+   "bypass": "measurements/29.21-glue-compressor/live/glue-range bypass.json",
+   "default": "measurements/29.21-glue-compressor/live/glue-range default.json",
+   "range-0": "measurements/29.21-glue-compressor/live/glue-range range-0.json",
+   "range-6": "measurements/29.21-glue-compressor/live/glue-range range-6.json",
+   "range-15": "measurements/29.21-glue-compressor/live/glue-range range-15.json",
+   "range-30": "measurements/29.21-glue-compressor/live/glue-range range-30.json",
+   "range-40": "measurements/29.21-glue-compressor/live/glue-range range-40.json"
+  },
+  "glue-attack-amount": {
+   "bypass": "measurements/29.21-glue-compressor/live/glue-range bypass.json",
+   "default": "measurements/29.21-glue-compressor/live/glue-attack-amount default.json",
+   "att10-thr-10": "measurements/29.21-glue-compressor/live/glue-attack-amount att10-thr-10.json",
+   "att10-thr-40": "measurements/29.21-glue-compressor/live/glue-attack-amount att10-thr-40.json",
+   "att10-r10": "measurements/29.21-glue-compressor/live/glue-attack-amount att10-r10.json",
+   "auto-thr-10": "measurements/29.21-glue-compressor/live/glue-attack-amount auto-thr-10.json",
+   "auto-thr-20": "measurements/29.21-glue-compressor/live/glue-attack-amount auto-thr-20.json",
+   "auto-thr-30": "measurements/29.21-glue-compressor/live/glue-attack-amount auto-thr-30.json"
+  },
+  "glue-softclip": {
+   "bypass": "measurements/29.21-glue-compressor/live/glue-range bypass.json",
+   "default": "measurements/29.21-glue-compressor/live/glue-softclip default.json",
+   "off-mk12": "measurements/29.21-glue-compressor/live/glue-softclip off-mk12.json",
+   "on-mk0": "measurements/29.21-glue-compressor/live/glue-softclip on-mk0.json",
+   "on-mk6": "measurements/29.21-glue-compressor/live/glue-softclip on-mk6.json",
+   "on-mk12": "measurements/29.21-glue-compressor/live/glue-softclip on-mk12.json",
+   "on-mk20": "measurements/29.21-glue-compressor/live/glue-softclip on-mk20.json"
+  },
+  "grain-delay-feedback": {
+   "bypass": "measurements/29.22-grain-delay/live/grain-delay-feedback bypass.json",
+   "default": "measurements/29.22-grain-delay/live/grain-delay-feedback default.json",
+   "fb-25": "measurements/29.22-grain-delay/live/grain-delay-feedback fb-25.json",
+   "fb-50": "measurements/29.22-grain-delay/live/grain-delay-feedback fb-50.json",
+   "fb-95": "measurements/29.22-grain-delay/live/grain-delay-feedback fb-95.json",
+   "fb-50-p12": "measurements/29.22-grain-delay/live/grain-delay-feedback fb-50-p12.json"
+  },
+  "grain-delay-spray": {
+   "bypass": "measurements/29.22-grain-delay/live/grain-delay-feedback bypass.json",
+   "default": "measurements/29.22-grain-delay/live/grain-delay-spray default.json",
+   "spray-5": "measurements/29.22-grain-delay/live/grain-delay-spray spray-5.json",
+   "spray-20": "measurements/29.22-grain-delay/live/grain-delay-spray spray-20.json",
+   "spray-60": "measurements/29.22-grain-delay/live/grain-delay-spray spray-60.json",
+   "spray-200": "measurements/29.22-grain-delay/live/grain-delay-spray spray-200.json"
+  },
+  "grain-delay-random": {
+   "bypass": "measurements/29.22-grain-delay/live/grain-delay-feedback bypass.json",
+   "default": "measurements/29.22-grain-delay/live/grain-delay-random default.json",
+   "rand-10": "measurements/29.22-grain-delay/live/grain-delay-random rand-10.json",
+   "rand-40": "measurements/29.22-grain-delay/live/grain-delay-random rand-40.json",
+   "rand-91": "measurements/29.22-grain-delay/live/grain-delay-random rand-91.json",
+   "rand-161": "measurements/29.22-grain-delay/live/grain-delay-random rand-161.json"
+  },
+  "hybrid-reverb-output": {
+   "bypass": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay bypass.json",
+   "default": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output default.json",
+   "width-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output width-0.json",
+   "width-200": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output width-200.json",
+   "vintage-1": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output vintage-1.json",
+   "vintage-2": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output vintage-2.json",
+   "vintage-4": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output vintage-4.json",
+   "bass-mono": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output bass-mono.json",
+   "dw-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output dw-0.json",
+   "dw-50": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-output dw-50.json"
+  },
+  "limiter-lookahead-modes": {
+   "bypass": "measurements/29.24-limiter/live/limiter-lookahead-modes bypass.json",
+   "default": "measurements/29.24-limiter/live/limiter-lookahead-modes default.json",
+   "la-1.5": "measurements/29.24-limiter/live/limiter-lookahead-modes la-1.5.json",
+   "la-6": "measurements/29.24-limiter/live/limiter-lookahead-modes la-6.json",
+   "soft-clip": "measurements/29.24-limiter/live/limiter-lookahead-modes soft-clip.json",
+   "true-peak": "measurements/29.24-limiter/live/limiter-lookahead-modes true-peak.json",
+   "ms": "measurements/29.24-limiter/live/limiter-lookahead-modes ms.json"
+  },
+  "multiband-dynamics-bands": {
+   "bypass": "measurements/29.26-multiband-dynamics/live/multiband-dynamics-bands bypass.json",
+   "default": "measurements/29.26-multiband-dynamics/live/multiband-dynamics-bands default.json",
+   "tone-in-low": "measurements/29.26-multiband-dynamics/live/multiband-dynamics-bands tone-in-low.json",
+   "tone-in-high": "measurements/29.26-multiband-dynamics/live/multiband-dynamics-bands tone-in-high.json",
+   "neighbour-low-r4": "measurements/29.26-multiband-dynamics/live/multiband-dynamics-bands neighbour-low-r4.json",
+   "mid-off-r4": "measurements/29.26-multiband-dynamics/live/multiband-dynamics-bands mid-off-r4.json"
+  },
+  "overdrive-drywet": {
+   "bypass": "measurements/29.27-overdrive/live/overdrive-dynamics bypass.json",
+   "default": "measurements/29.27-overdrive/live/overdrive-drywet default.json",
+   "dw-0": "measurements/29.27-overdrive/live/overdrive-drywet dw-0.json",
+   "dw-25": "measurements/29.27-overdrive/live/overdrive-drywet dw-25.json",
+   "dw-75": "measurements/29.27-overdrive/live/overdrive-drywet dw-75.json"
+  },
+  "pedal-eq-mid": {
+   "bypass": "measurements/29.28-pedal/live/pedal-eq-mid bypass.json",
+   "default": "measurements/29.28-pedal/live/pedal-eq-mid default.json",
+   "mid+100-low": "measurements/29.28-pedal/live/pedal-eq-mid mid+100-low.json",
+   "mid+100-mid": "measurements/29.28-pedal/live/pedal-eq-mid mid+100-mid.json",
+   "mid+100-high": "measurements/29.28-pedal/live/pedal-eq-mid mid+100-high.json",
+   "mid+50-mid": "measurements/29.28-pedal/live/pedal-eq-mid mid+50-mid.json",
+   "mid-100-mid": "measurements/29.28-pedal/live/pedal-eq-mid mid-100-mid.json",
+   "mid-50-mid": "measurements/29.28-pedal/live/pedal-eq-mid mid-50-mid.json",
+   "mid-100-low": "measurements/29.28-pedal/live/pedal-eq-mid mid-100-low.json"
+  },
+  "pedal-eq-bass-treble": {
+   "bypass": "measurements/29.28-pedal/live/pedal-eq-mid bypass.json",
+   "default": "measurements/29.28-pedal/live/pedal-eq-mid default.json",
+   "bass+100": "measurements/29.28-pedal/live/pedal-eq-bass-treble bass+100.json",
+   "bass+50": "measurements/29.28-pedal/live/pedal-eq-bass-treble bass+50.json",
+   "bass-100": "measurements/29.28-pedal/live/pedal-eq-bass-treble bass-100.json",
+   "treble+100": "measurements/29.28-pedal/live/pedal-eq-bass-treble treble+100.json",
+   "treble+50": "measurements/29.28-pedal/live/pedal-eq-bass-treble treble+50.json",
+   "treble-100": "measurements/29.28-pedal/live/pedal-eq-bass-treble treble-100.json",
+   "sub": "measurements/29.28-pedal/live/pedal-eq-bass-treble sub.json",
+   "sub-bass-100": "measurements/29.28-pedal/live/pedal-eq-bass-treble sub-bass-100.json"
+  },
+  "phaser-flanger-lfo-shape": {
+   "bypass": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape bypass.json",
+   "default": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape default.json",
+   "wave-triangle": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-triangle.json",
+   "wave-triangle-analog": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-triangle-analog.json",
+   "wave-triangle-8": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-triangle-8.json",
+   "wave-triangle-16": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-triangle-16.json",
+   "wave-saw-up": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-saw-up.json",
+   "wave-saw-down": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-saw-down.json",
+   "wave-rectangle": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-rectangle.json",
+   "wave-random-sh": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape wave-random-sh.json"
+  },
+  "phaser-flanger-lfo-stereo": {
+   "bypass": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape bypass.json",
+   "default": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape default.json",
+   "duty+100": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo duty+100.json",
+   "duty-100": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo duty-100.json",
+   "phase-90": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo phase-90.json",
+   "phase-180": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo phase-180.json",
+   "spin-25": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo spin-25.json",
+   "spin-50": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo spin-50.json",
+   "lfo2-50": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo lfo2-50.json",
+   "lfo2-100": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-stereo lfo2-100.json"
+  },
+  "redux-shape-dc": {
+   "bypass": "measurements/29.30-redux/live/redux-shape-dc bypass.json",
+   "default": "measurements/29.30-redux/live/redux-shape-dc default.json",
+   "b4-shape50": "measurements/29.30-redux/live/redux-shape-dc b4-shape50.json",
+   "b4-shape100": "measurements/29.30-redux/live/redux-shape-dc b4-shape100.json",
+   "b2-shape50": "measurements/29.30-redux/live/redux-shape-dc b2-shape50.json",
+   "b2-dc": "measurements/29.30-redux/live/redux-shape-dc b2-dc.json",
+   "b4-dc": "measurements/29.30-redux/live/redux-shape-dc b4-dc.json",
+   "b8-dc": "measurements/29.30-redux/live/redux-shape-dc b8-dc.json",
+   "b4-dc-shape100": "measurements/29.30-redux/live/redux-shape-dc b4-dc-shape100.json"
+  },
+  "redux-jitter": {
+   "bypass": "measurements/29.30-redux/live/redux-shape-dc bypass.json",
+   "default": "measurements/29.30-redux/live/redux-jitter default.json",
+   "jitter-25": "measurements/29.30-redux/live/redux-jitter jitter-25.json",
+   "jitter-50": "measurements/29.30-redux/live/redux-jitter jitter-50.json",
+   "jitter-100": "measurements/29.30-redux/live/redux-jitter jitter-100.json",
+   "jitter-100-pre": "measurements/29.30-redux/live/redux-jitter jitter-100-pre.json"
+  },
+  "resonators-color": {
+   "bypass": "measurements/29.31-resonators/live/resonators-color bypass.json",
+   "default": "measurements/29.31-resonators/live/resonators-color default.json",
+   "color-0": "measurements/29.31-resonators/live/resonators-color color-0.json",
+   "color-25": "measurements/29.31-resonators/live/resonators-color color-25.json",
+   "color-50": "measurements/29.31-resonators/live/resonators-color color-50.json",
+   "color-75": "measurements/29.31-resonators/live/resonators-color color-75.json",
+   "color-100": "measurements/29.31-resonators/live/resonators-color color-100.json"
+  },
+  "resonators-filter": {
+   "bypass": "measurements/29.31-resonators/live/resonators-color bypass.json",
+   "default": "measurements/29.31-resonators/live/resonators-filter default.json",
+   "lp-1k": "measurements/29.31-resonators/live/resonators-filter lp-1k.json",
+   "hp-1k": "measurements/29.31-resonators/live/resonators-filter hp-1k.json",
+   "bp-1k": "measurements/29.31-resonators/live/resonators-filter default.json",
+   "notch-1k": "measurements/29.31-resonators/live/resonators-filter notch-1k.json",
+   "lp-200": "measurements/29.31-resonators/live/resonators-filter lp-200.json",
+   "bp-4k": "measurements/29.31-resonators/live/resonators-filter bp-4k.json"
+  },
+  "resonators-routing": {
+   "bypass": "measurements/29.31-resonators/live/resonators-color bypass.json",
+   "default": "measurements/29.31-resonators/live/resonators-routing default.json",
+   "only-I": "measurements/29.31-resonators/live/resonators-routing only-I.json",
+   "only-II": "measurements/29.31-resonators/live/resonators-routing only-II.json",
+   "only-III": "measurements/29.31-resonators/live/resonators-routing only-III.json",
+   "only-II-w50": "measurements/29.31-resonators/live/resonators-routing only-II-w50.json",
+   "only-II-w0": "measurements/29.31-resonators/live/resonators-routing only-II-w0.json",
+   "only-III-w0": "measurements/29.31-resonators/live/resonators-routing only-III-w0.json"
+  },
+  "reverb-locut-law": {
+   "bypass": "measurements/29.32-reverb/live/reverb-locut-law bypass.json",
+   "default": "measurements/29.32-reverb/live/reverb-locut-law default.json",
+   "lo-1k-w0.5": "measurements/29.32-reverb/live/reverb-locut-law lo-1k-w0.5.json",
+   "lo-1k-w2": "measurements/29.32-reverb/live/reverb-locut-law lo-1k-w2.json",
+   "lo-1k-w4.75": "measurements/29.32-reverb/live/reverb-locut-law lo-1k-w4.75.json",
+   "lo-1k-w9": "measurements/29.32-reverb/live/reverb-locut-law lo-1k-w9.json",
+   "lo-300Hz": "measurements/29.32-reverb/live/reverb-locut-law lo-300Hz.json",
+   "lo-2k": "measurements/29.32-reverb/live/reverb-locut-law lo-2k.json"
+  },
+  "reverb-smooth-slow": {
+   "bypass": "measurements/29.32-reverb/live/reverb-locut-law bypass.json",
+   "default": "measurements/29.32-reverb/live/reverb-smooth-slow default.json",
+   "none-10.54": "measurements/29.32-reverb/live/reverb-smooth-slow none-10.54.json",
+   "slow-10.54": "measurements/29.32-reverb/live/reverb-smooth-slow slow-10.54.json",
+   "none-1.53": "measurements/29.32-reverb/live/reverb-smooth-slow none-1.53.json",
+   "slow-1.53": "measurements/29.32-reverb/live/reverb-smooth-slow slow-1.53.json"
+  },
+  "roar-filter-res": {
+   "bypass": "measurements/29.33-roar/live/roar-tone bypass.json",
+   "default": "measurements/29.33-roar/live/roar-filter-res default.json",
+   "lp-res0": "measurements/29.33-roar/live/roar-filter-res lp-res0.json",
+   "lp-res0.5": "measurements/29.33-roar/live/roar-filter-res lp-res0.5.json",
+   "lp-res1": "measurements/29.33-roar/live/roar-filter-res lp-res1.json",
+   "bp-res0.5": "measurements/29.33-roar/live/roar-filter-res bp-res0.5.json",
+   "bp-res1": "measurements/29.33-roar/live/roar-filter-res bp-res1.json",
+   "morph-0.25": "measurements/29.33-roar/live/roar-filter-res morph-0.25.json",
+   "morph-0.75": "measurements/29.33-roar/live/roar-filter-res morph-0.75.json",
+   "morph-1": "measurements/29.33-roar/live/roar-filter-res morph-1.json"
+  },
+  "roar-compressor-output": {
+   "bypass": "measurements/29.33-roar/live/roar-tone bypass.json",
+   "default": "measurements/29.33-roar/live/roar-tone default.json",
+   "comp-50": "measurements/29.33-roar/live/roar-compressor-output comp-50.json",
+   "comp-100": "measurements/29.33-roar/live/roar-compressor-output comp-100.json",
+   "comp-100-nohp": "measurements/29.33-roar/live/roar-compressor-output comp-100-nohp.json",
+   "drive+24": "measurements/29.33-roar/live/roar-compressor-output drive+24.json",
+   "out+12": "measurements/29.33-roar/live/roar-compressor-output out+12.json",
+   "drive+24-dw50": "measurements/29.33-roar/live/roar-compressor-output drive+24-dw50.json"
+  },
+  "roar-shaper-types-b": {
+   "bypass": "measurements/29.33-roar/live/roar-tone bypass.json",
+   "default": "measurements/29.33-roar/live/roar-shaper-types-b default.json",
+   "type-bit-crusher": "measurements/29.33-roar/live/roar-shaper-types-b type-bit-crusher.json",
+   "type-half-wave-rectifier": "measurements/29.33-roar/live/roar-shaper-types-b type-half-wave-rectifier.json",
+   "type-full-wave-rectifier": "measurements/29.33-roar/live/roar-shaper-types-b type-full-wave-rectifier.json",
+   "type-fractal": "measurements/29.33-roar/live/roar-shaper-types-b type-fractal.json",
+   "type-noise-injection": "measurements/29.33-roar/live/roar-shaper-types-b type-noise-injection.json",
+   "type-shards": "measurements/29.33-roar/live/roar-shaper-types-b type-shards.json"
+  },
+  "saturator-waveshaper": {
+   "bypass": "measurements/29.34-saturator/live/saturator-waveshaper bypass.json",
+   "default": "measurements/29.34-saturator/live/saturator-waveshaper default.json",
+   "curve-50": "measurements/29.34-saturator/live/saturator-waveshaper curve-50.json",
+   "curve-100": "measurements/29.34-saturator/live/saturator-waveshaper curve-100.json",
+   "lin-0": "measurements/29.34-saturator/live/saturator-waveshaper lin-0.json",
+   "lin-100": "measurements/29.34-saturator/live/saturator-waveshaper lin-100.json",
+   "damp-50": "measurements/29.34-saturator/live/saturator-waveshaper damp-50.json",
+   "depth-50": "measurements/29.34-saturator/live/saturator-waveshaper depth-50.json",
+   "depth-50-period-50": "measurements/29.34-saturator/live/saturator-waveshaper depth-50-period-50.json",
+   "wsdrive-50": "measurements/29.34-saturator/live/saturator-waveshaper wsdrive-50.json"
+  },
+  "saturator-bass-shaper": {
+   "bypass": "measurements/29.34-saturator/live/saturator-waveshaper bypass.json",
+   "default": "measurements/29.34-saturator/live/saturator-bass-shaper default.json",
+   "thr-0": "measurements/29.34-saturator/live/saturator-bass-shaper thr-0.json",
+   "thr-12": "measurements/29.34-saturator/live/saturator-bass-shaper thr-12.json",
+   "thr-25": "measurements/29.34-saturator/live/saturator-bass-shaper thr-25.json",
+   "thr-40": "measurements/29.34-saturator/live/saturator-bass-shaper thr-40.json"
+  },
+  "saturator-postclip": {
+   "bypass": "measurements/29.34-saturator/live/saturator-waveshaper bypass.json",
+   "default": "measurements/29.34-saturator/live/saturator-postclip default.json",
+   "none-out-6": "measurements/29.34-saturator/live/saturator-postclip none-out-6.json",
+   "soft-out0": "measurements/29.34-saturator/live/saturator-postclip soft-out0.json",
+   "soft-out-6": "measurements/29.34-saturator/live/saturator-postclip soft-out-6.json",
+   "hard-out0": "measurements/29.34-saturator/live/saturator-postclip hard-out0.json",
+   "hard-out-6": "measurements/29.34-saturator/live/saturator-postclip hard-out-6.json"
+  },
+  "shifter-delay-loop": {
+   "bypass": "measurements/29.35-shifter/live/shifter-ring bypass.json",
+   "default": "measurements/29.35-shifter/live/shifter-delay-loop default.json",
+   "loop-freq+100": "measurements/29.35-shifter/live/shifter-delay-loop loop-freq+100.json",
+   "loop-freq-100": "measurements/29.35-shifter/live/shifter-delay-loop loop-freq-100.json",
+   "loop-pitch+12": "measurements/29.35-shifter/live/shifter-delay-loop loop-pitch+12.json",
+   "loop-pitch-12": "measurements/29.35-shifter/live/shifter-delay-loop loop-pitch-12.json"
+  },
+  "shifter-pitch-window": {
+   "bypass": "measurements/29.35-shifter/live/shifter-ring bypass.json",
+   "default": "measurements/29.35-shifter/live/shifter-pitch-window default.json",
+   "win-10ms": "measurements/29.35-shifter/live/shifter-pitch-window win-10ms.json",
+   "win-30ms": "measurements/29.35-shifter/live/shifter-pitch-window win-30ms.json",
+   "win-200ms": "measurements/29.35-shifter/live/shifter-pitch-window win-200ms.json",
+   "win-350ms": "measurements/29.35-shifter/live/shifter-pitch-window win-350ms.json",
+   "fine+50": "measurements/29.35-shifter/live/shifter-pitch-window fine+50.json",
+   "fine+100": "measurements/29.35-shifter/live/shifter-pitch-window fine+100.json",
+   "fine-100": "measurements/29.35-shifter/live/shifter-pitch-window fine-100.json",
+   "dw-50": "measurements/29.35-shifter/live/shifter-pitch-window dw-50.json"
+  },
+  "shifter-lfo": {
+   "bypass": "measurements/29.35-shifter/live/shifter-ring bypass.json",
+   "default": "measurements/29.35-shifter/live/shifter-lfo default.json",
+   "amt12-sine": "measurements/29.35-shifter/live/shifter-lfo amt12-sine.json",
+   "amt12-triangle": "measurements/29.35-shifter/live/shifter-lfo amt12-triangle.json",
+   "amt12-sawup": "measurements/29.35-shifter/live/shifter-lfo amt12-sawup.json",
+   "amt12-rect": "measurements/29.35-shifter/live/shifter-lfo amt12-rect.json",
+   "amt3-5Hz": "measurements/29.35-shifter/live/shifter-lfo amt3-5Hz.json"
+  },
+  "spectral-resonator-damp-harmonics": {
+   "bypass": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics bypass.json",
+   "default": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics default.json",
+   "hf-50": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics hf-50.json",
+   "hf-100": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics hf-100.json",
+   "lf-50": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics lf-50.json",
+   "lf-100": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics lf-100.json",
+   "harm-16": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics harm-16.json",
+   "harm-4": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics harm-4.json"
+  },
+  "spectral-resonator-shift-unison": {
+   "bypass": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics bypass.json",
+   "default": "measurements/29.36-spectral-resonator/live/spectral-resonator-shift-unison default.json",
+   "shift+12": "measurements/29.36-spectral-resonator/live/spectral-resonator-shift-unison shift+12.json",
+   "shift-12": "measurements/29.36-spectral-resonator/live/spectral-resonator-shift-unison shift-12.json",
+   "shift+6": "measurements/29.36-spectral-resonator/live/spectral-resonator-shift-unison shift+6.json",
+   "uni2-100": "measurements/29.36-spectral-resonator/live/spectral-resonator-shift-unison uni2-100.json",
+   "uni8-100": "measurements/29.36-spectral-resonator/live/spectral-resonator-shift-unison uni8-100.json",
+   "uni8-10": "measurements/29.36-spectral-resonator/live/spectral-resonator-shift-unison uni8-10.json"
+  },
+  "spectral-resonator-send-mix-latency": {
+   "bypass": "measurements/29.36-spectral-resonator/live/spectral-resonator-damp-harmonics bypass.json",
+   "default": "measurements/29.36-spectral-resonator/live/spectral-resonator-send-mix-latency default.json",
+   "send-12": "measurements/29.36-spectral-resonator/live/spectral-resonator-send-mix-latency send-12.json",
+   "send+12": "measurements/29.36-spectral-resonator/live/spectral-resonator-send-mix-latency send+12.json",
+   "send+24": "measurements/29.36-spectral-resonator/live/spectral-resonator-send-mix-latency send+24.json",
+   "dw-50": "measurements/29.36-spectral-resonator/live/spectral-resonator-send-mix-latency dw-50.json",
+   "dw-0": "measurements/29.36-spectral-resonator/live/spectral-resonator-send-mix-latency dw-0.json"
+  },
+  "spectral-time-tilt-spray": {
+   "bypass": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync bypass.json",
+   "default": "measurements/29.37-spectral-time/live/spectral-time-tilt-spray default.json",
+   "tilt+500ms": "measurements/29.37-spectral-time/live/spectral-time-tilt-spray tilt+500ms.json",
+   "tilt-500ms": "measurements/29.37-spectral-time/live/spectral-time-tilt-spray tilt-500ms.json",
+   "spray-200ms": "measurements/29.37-spectral-time/live/spectral-time-tilt-spray spray-200ms.json",
+   "tilt+500-mask+0.5": "measurements/29.37-spectral-time/live/spectral-time-tilt-spray tilt+500-mask+0.5.json",
+   "tilt+500-mask-0.5": "measurements/29.37-spectral-time/live/spectral-time-tilt-spray tilt+500-mask-0.5.json",
+   "spray-200-stereo100": "measurements/29.37-spectral-time/live/spectral-time-tilt-spray spray-200-stereo100.json"
+  },
+  "spectral-time-freeze-onsets": {
+   "bypass": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync bypass.json",
+   "default": "measurements/29.37-spectral-time/live/spectral-time-freeze-onsets default.json",
+   "sens-0": "measurements/29.37-spectral-time/live/spectral-time-freeze-onsets sens-0.json",
+   "sens-25": "measurements/29.37-spectral-time/live/spectral-time-freeze-onsets sens-25.json",
+   "sens-75": "measurements/29.37-spectral-time/live/spectral-time-freeze-onsets sens-75.json",
+   "sens-100": "measurements/29.37-spectral-time/live/spectral-time-freeze-onsets sens-100.json"
+  },
+  "spectral-time-delay-feedback": {
+   "bypass": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync bypass.json",
+   "default": "measurements/29.37-spectral-time/live/spectral-time-delay-feedback default.json",
+   "fb-0": "measurements/29.37-spectral-time/live/spectral-time-delay-feedback fb-0.json",
+   "fb-25": "measurements/29.37-spectral-time/live/spectral-time-delay-feedback fb-25.json",
+   "fb-75": "measurements/29.37-spectral-time/live/spectral-time-delay-feedback fb-75.json",
+   "fb-100": "measurements/29.37-spectral-time/live/spectral-time-delay-feedback fb-100.json",
+   "mix-50": "measurements/29.37-spectral-time/live/spectral-time-delay-feedback mix-50.json",
+   "mix-0": "measurements/29.37-spectral-time/live/spectral-time-delay-feedback mix-0.json"
+  },
+  "spectral-time-mix-latency": {
+   "bypass": "measurements/29.37-spectral-time/live/spectral-time-freeze-sync bypass.json",
+   "default": "measurements/29.37-spectral-time/live/spectral-time-mix-latency default.json",
+   "dw-50": "measurements/29.37-spectral-time/live/spectral-time-mix-latency dw-50.json",
+   "freezer-idle": "measurements/29.37-spectral-time/live/spectral-time-mix-latency freezer-idle.json",
+   "delay-10ms-mix100": "measurements/29.37-spectral-time/live/spectral-time-mix-latency delay-10ms-mix100.json",
+   "send-6": "measurements/29.37-spectral-time/live/spectral-time-mix-latency send-6.json",
+   "send-12": "measurements/29.37-spectral-time/live/spectral-time-mix-latency send-12.json"
+  },
+  "utility-channels-order": {
+   "bypass": "measurements/29.40-utility/live/utility-channels-order bypass.json",
+   "default": "measurements/29.40-utility/live/utility-channels-order default.json",
+   "mode-left": "measurements/29.40-utility/live/utility-channels-order mode-left.json",
+   "mode-right": "measurements/29.40-utility/live/utility-channels-order mode-right.json",
+   "mode-swap": "measurements/29.40-utility/live/utility-channels-order mode-swap.json",
+   "mono": "measurements/29.40-utility/live/utility-channels-order mono.json",
+   "invR-mono": "measurements/29.40-utility/live/utility-channels-order invR-mono.json",
+   "modeL-invR": "measurements/29.40-utility/live/utility-channels-order modeL-invR.json",
+   "modeR-invL": "measurements/29.40-utility/live/utility-channels-order modeR-invL.json",
+   "bal+1-bassmono500": "measurements/29.40-utility/live/utility-channels-order bal+1-bassmono500.json"
+  },
+  "utility-balance": {
+   "bypass": "measurements/29.40-utility/live/utility-channels-order bypass.json",
+   "default": "measurements/29.40-utility/live/utility-channels-order default.json",
+   "bal-1": "measurements/29.40-utility/live/utility-balance bal-1.json",
+   "bal-0.5": "measurements/29.40-utility/live/utility-balance bal-0.5.json",
+   "bal+0.5": "measurements/29.40-utility/live/utility-balance bal+0.5.json",
+   "bal+1": "measurements/29.40-utility/live/utility-balance bal+1.json"
+  },
+  "vinyl-distortion-crackle": {
+   "bypass": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle bypass.json",
+   "default": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle default.json",
+   "vol-0.1": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle vol-0.1.json",
+   "vol-1": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle vol-1.json",
+   "dens-1": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle dens-1.json",
+   "dens-25": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle dens-25.json",
+   "dens-50": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle dens-50.json"
+  },
+  "vinyl-distortion-global-drive": {
+   "bypass": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-crackle bypass.json",
+   "default": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-global-drive default.json",
+   "global-0": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-global-drive global-0.json",
+   "global-0.25": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-global-drive global-0.25.json",
+   "global-0.5": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-global-drive global-0.5.json",
+   "drives-0": "measurements/29.41-vinyl-distortion/live/vinyl-distortion-global-drive drives-0.json"
+  },
+  "vocoder-formant": {
+   "bypass": "measurements/29.42-vocoder/live/vocoder-formant bypass.json",
+   "default": "measurements/29.42-vocoder/live/vocoder-formant default.json",
+   "formant-12": "measurements/29.42-vocoder/live/vocoder-formant formant-12.json",
+   "formant-5": "measurements/29.42-vocoder/live/vocoder-formant formant-5.json",
+   "formant+5": "measurements/29.42-vocoder/live/vocoder-formant formant+5.json",
+   "formant+12": "measurements/29.42-vocoder/live/vocoder-formant formant+12.json",
+   "formant+24": "measurements/29.42-vocoder/live/vocoder-formant formant+24.json"
+  },
+  "vocoder-unvoiced": {
+   "bypass": "measurements/29.42-vocoder/live/vocoder-formant bypass.json",
+   "default": "measurements/29.42-vocoder/live/vocoder-unvoiced default.json",
+   "unv--10dB": "measurements/29.42-vocoder/live/vocoder-unvoiced unv--10dB.json",
+   "unv--20dB": "measurements/29.42-vocoder/live/vocoder-unvoiced unv--20dB.json",
+   "sens-0": "measurements/29.42-vocoder/live/vocoder-unvoiced sens-0.json",
+   "sens-50-fast": "measurements/29.42-vocoder/live/vocoder-unvoiced sens-50-fast.json",
+   "sens-50-slow": "measurements/29.42-vocoder/live/vocoder-unvoiced sens-50-slow.json"
+  },
+  "autopan-harmonic-vintage": {
+   "bypass": "measurements/29.03-auto-pan-tremolo/live/autopan-shape bypass.json",
+   "default": "measurements/29.03-auto-pan-tremolo/live/autopan-shape default.json",
+   "harmonic-amount-0": "measurements/29.03-auto-pan-tremolo/live/autopan-harmonic-vintage harmonic-amount-0.json",
+   "harmonic-100": "measurements/29.03-auto-pan-tremolo/live/autopan-harmonic-vintage harmonic-100.json",
+   "vintage-amount-0": "measurements/29.03-auto-pan-tremolo/live/autopan-harmonic-vintage vintage-amount-0.json",
+   "vintage-100": "measurements/29.03-auto-pan-tremolo/live/autopan-harmonic-vintage vintage-100.json"
+  },
+  "autoshift-scale": {
+   "bypass": "measurements/29.04-auto-shift/live/autoshift-strength bypass.json",
+   "default": "measurements/29.04-auto-shift/live/autoshift-strength default.json",
+   "c-minor": "measurements/29.04-auto-shift/live/autoshift-scale c-minor.json",
+   "c-minor-pent": "measurements/29.04-auto-shift/live/autoshift-scale c-minor-pent.json",
+   "c-whole-tone": "measurements/29.04-auto-shift/live/autoshift-scale c-whole-tone.json",
+   "b-phrygian": "measurements/29.04-auto-shift/live/autoshift-scale b-phrygian.json",
+   "c-messiaen3": "measurements/29.04-auto-shift/live/autoshift-scale c-messiaen3.json",
+   "chromatic": "measurements/29.04-auto-shift/live/autoshift-scale chromatic.json"
+  },
+  "autoshift-formant": {
+   "bypass": "measurements/29.04-auto-shift/live/autoshift-strength bypass.json",
+   "default": "measurements/29.04-auto-shift/live/autoshift-formant default.json",
+   "formant-m100": "measurements/29.04-auto-shift/live/autoshift-formant formant-m100.json",
+   "formant-p100": "measurements/29.04-auto-shift/live/autoshift-formant formant-p100.json",
+   "up12-follow-0": "measurements/29.04-auto-shift/live/autoshift-formant up12-follow-0.json",
+   "up12-follow-100": "measurements/29.04-auto-shift/live/autoshift-formant up12-follow-100.json"
+  },
+  "autoshift-gain-mix": {
+   "bypass": "measurements/29.04-auto-shift/live/autoshift-strength bypass.json",
+   "default": "measurements/29.04-auto-shift/live/autoshift-formant up12-follow-0.json",
+   "gain-m12": "measurements/29.04-auto-shift/live/autoshift-gain-mix gain-m12.json",
+   "gain-p12": "measurements/29.04-auto-shift/live/autoshift-gain-mix gain-p12.json",
+   "wet-0": "measurements/29.04-auto-shift/live/autoshift-gain-mix wet-0.json",
+   "wet-25": "measurements/29.04-auto-shift/live/autoshift-gain-mix wet-25.json",
+   "wet-50": "measurements/29.04-auto-shift/live/autoshift-gain-mix wet-50.json",
+   "wet-75": "measurements/29.04-auto-shift/live/autoshift-gain-mix wet-75.json"
+  },
+  "beatrepeat-variation": {
+   "bypass": "measurements/29.05-beat-repeat/live/beatrepeat-trigger bypass.json",
+   "default": "measurements/29.05-beat-repeat/live/beatrepeat-decay-volume default.json",
+   "var-5": "measurements/29.05-beat-repeat/live/beatrepeat-variation var-5.json",
+   "var-10": "measurements/29.05-beat-repeat/live/beatrepeat-variation var-10.json",
+   "var-10-auto": "measurements/29.05-beat-repeat/live/beatrepeat-variation var-10-auto.json",
+   "var-10-sixteenth": "measurements/29.05-beat-repeat/live/beatrepeat-variation var-10-sixteenth.json",
+   "var-10-no-triplets": "measurements/29.05-beat-repeat/live/beatrepeat-variation var-10-no-triplets.json"
+  },
+  "cabinet-drywet": {
+   "bypass": "measurements/29.06-cabinet/live/cabinet-mic bypass.json",
+   "default": "measurements/29.06-cabinet/live/cabinet-mic default.json",
+   "wet-0": "measurements/29.06-cabinet/live/cabinet-drywet wet-0.json",
+   "wet-25": "measurements/29.06-cabinet/live/cabinet-drywet wet-25.json",
+   "wet-50": "measurements/29.06-cabinet/live/cabinet-drywet wet-50.json",
+   "wet-75": "measurements/29.06-cabinet/live/cabinet-drywet wet-75.json"
+  },
+  "channeleq-combined": {
+   "bypass": "measurements/29.07-channel-eq/live/channeleq-highpass bypass.json",
+   "default": "measurements/29.07-channel-eq/live/channeleq-highpass default.json",
+   "output-p12": "measurements/29.07-channel-eq/live/channeleq-combined output-p12.json",
+   "output-m12": "measurements/29.07-channel-eq/live/channeleq-combined output-m12.json",
+   "all-boost": "measurements/29.07-channel-eq/live/channeleq-combined all-boost.json",
+   "all-cut-hp": "measurements/29.07-channel-eq/live/channeleq-combined all-cut-hp.json"
+  },
+  "chorus-mix-output": {
+   "bypass": "measurements/29.08-chorus-ensemble/live/chorus-auto-amount bypass.json",
+   "default": "measurements/29.08-chorus-ensemble/live/chorus-highpass-warmth default.json",
+   "wet-0": "measurements/29.08-chorus-ensemble/live/chorus-mix-output wet-0.json",
+   "wet-25": "measurements/29.08-chorus-ensemble/live/chorus-mix-output wet-25.json",
+   "wet-50": "measurements/29.08-chorus-ensemble/live/chorus-mix-output wet-50.json",
+   "out-m12": "measurements/29.08-chorus-ensemble/live/chorus-mix-output out-m12.json",
+   "out-p6": "measurements/29.08-chorus-ensemble/live/chorus-mix-output out-p6.json"
+  },
+  "corpus-quality-width": {
+   "bypass": "measurements/29.10-corpus/live/corpus-decay-material bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-decay-material default.json",
+   "quality-eco": "measurements/29.10-corpus/live/corpus-quality-width quality-eco.json",
+   "quality-low": "measurements/29.10-corpus/live/corpus-quality-width quality-low.json",
+   "quality-med": "measurements/29.10-corpus/live/corpus-quality-width quality-med.json",
+   "width-0": "measurements/29.10-corpus/live/corpus-quality-width width-0.json",
+   "width-50": "measurements/29.10-corpus/live/corpus-quality-width width-50.json"
+  },
+  "corpus-filter-bleed": {
+   "bypass": "measurements/29.10-corpus/live/corpus-decay-material bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-filter-bleed default.json",
+   "filter-300": "measurements/29.10-corpus/live/corpus-filter-bleed filter-300.json",
+   "filter-3000": "measurements/29.10-corpus/live/corpus-filter-bleed filter-3000.json",
+   "filter-w1": "measurements/29.10-corpus/live/corpus-filter-bleed filter-w1.json",
+   "filter-w9": "measurements/29.10-corpus/live/corpus-filter-bleed filter-w9.json",
+   "bleed-100": "measurements/29.10-corpus/live/corpus-filter-bleed bleed-100.json",
+   "gain-p15": "measurements/29.10-corpus/live/corpus-filter-bleed gain-p15.json",
+   "wet-50": "measurements/29.10-corpus/live/corpus-filter-bleed wet-50.json"
+  },
+  "drumbuss-mix-output": {
+   "bypass": "measurements/29.12-drum-buss/live/drumbuss-boom bypass.json",
+   "default": "measurements/29.12-drum-buss/live/drumbuss-mix-output default.json",
+   "wet-0": "measurements/29.12-drum-buss/live/drumbuss-mix-output wet-0.json",
+   "wet-50": "measurements/29.12-drum-buss/live/drumbuss-mix-output wet-50.json",
+   "wet-50-out-m10": "measurements/29.12-drum-buss/live/drumbuss-mix-output wet-50-out-m10.json",
+   "out-m10": "measurements/29.12-drum-buss/live/drumbuss-mix-output out-m10.json",
+   "out-p3": "measurements/29.12-drum-buss/live/drumbuss-mix-output out-p3.json"
+  },
+  "dyntube-output-wet": {
+   "bypass": "measurements/29.13-dynamic-tube/live/dyntube-tone bypass.json",
+   "default": "measurements/29.13-dynamic-tube/live/dyntube-output-wet default.json",
+   "out-m15": "measurements/29.13-dynamic-tube/live/dyntube-output-wet out-m15.json",
+   "out-p15": "measurements/29.13-dynamic-tube/live/dyntube-output-wet out-p15.json",
+   "wet-0": "measurements/29.13-dynamic-tube/live/dyntube-output-wet wet-0.json",
+   "wet-50": "measurements/29.13-dynamic-tube/live/dyntube-output-wet wet-50.json"
+  },
+  "echo-noise-wobble": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-noise-wobble default.json",
+   "noise-50": "measurements/29.14-echo/live/echo-noise-wobble noise-50.json",
+   "noise-100-m0": "measurements/29.14-echo/live/echo-noise-wobble noise-100-m0.json",
+   "noise-100-m100": "measurements/29.14-echo/live/echo-noise-wobble noise-100-m100.json",
+   "wobble-50": "measurements/29.14-echo/live/echo-noise-wobble wobble-50.json",
+   "wobble-100-m0": "measurements/29.14-echo/live/echo-noise-wobble wobble-100-m0.json",
+   "wobble-100-m100": "measurements/29.14-echo/live/echo-noise-wobble wobble-100-m100.json"
+  },
+  "echo-input-mix": {
+   "bypass": "measurements/29.14-echo/live/echo-time-offset bypass.json",
+   "default": "measurements/29.14-echo/live/echo-input-mix default.json",
+   "in-p10": "measurements/29.14-echo/live/echo-input-mix in-p10.json",
+   "in-p20": "measurements/29.14-echo/live/echo-input-mix in-p20.json",
+   "in-p20-d": "measurements/29.14-echo/live/echo-input-mix in-p20-d.json",
+   "out-m12": "measurements/29.14-echo/live/echo-input-mix out-m12.json",
+   "wet-25": "measurements/29.14-echo/live/echo-input-mix wet-25.json"
+  },
+  "external-audio-effect-unrouted-mix": {
+   "bypass": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix bypass.json",
+   "default": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix default.json",
+   "dw-0": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix dw-0.json",
+   "dw-25": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix dw-25.json",
+   "dw-50": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix dw-50.json",
+   "dw-75": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix dw-75.json",
+   "dw50-outgain+12": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix dw50-outgain+12.json",
+   "dw50-ingain+12": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix dw50-ingain+12.json",
+   "dw50-ingain--inf": "measurements/29.18-external-audio-effect/live/external-audio-effect-unrouted-mix dw50-ingain--inf.json"
+  },
+  "glue-makeup-mix": {
+   "bypass": "measurements/29.21-glue-compressor/live/glue-range bypass.json",
+   "default": "measurements/29.21-glue-compressor/live/glue-softclip default.json",
+   "mk10": "measurements/29.21-glue-compressor/live/glue-makeup-mix mk10.json",
+   "mk20": "measurements/29.21-glue-compressor/live/glue-makeup-mix mk20.json",
+   "mix-0": "measurements/29.21-glue-compressor/live/glue-makeup-mix mix-0.json",
+   "mix-50": "measurements/29.21-glue-compressor/live/glue-makeup-mix mix-50.json"
+  },
+  "grain-delay-stereo-mix": {
+   "bypass": "measurements/29.22-grain-delay/live/grain-delay-feedback bypass.json",
+   "default": "measurements/29.22-grain-delay/live/grain-delay-stereo-mix default.json",
+   "spray20": "measurements/29.22-grain-delay/live/grain-delay-stereo-mix spray20.json",
+   "rand40": "measurements/29.22-grain-delay/live/grain-delay-random rand-40.json",
+   "dw-0": "measurements/29.22-grain-delay/live/grain-delay-stereo-mix dw-0.json",
+   "dw-25": "measurements/29.22-grain-delay/live/grain-delay-stereo-mix dw-25.json",
+   "dw-50": "measurements/29.22-grain-delay/live/grain-delay-stereo-mix dw-50.json",
+   "dw-75": "measurements/29.22-grain-delay/live/grain-delay-stereo-mix dw-75.json"
+  },
+  "hybrid-reverb-eq": {
+   "bypass": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-predelay bypass.json",
+   "default": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-eq default.json",
+   "locut-1k-12": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-eq locut-1k-12.json",
+   "locut-1k-48": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-eq locut-1k-48.json",
+   "loshelf-1k": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-eq loshelf-1k.json",
+   "hicut-2k": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-eq hicut-2k.json",
+   "peak1": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-eq peak1.json",
+   "peak2-q4": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-eq peak2-q4.json"
+  },
+  "looper-monitor-states": {
+   "bypass": "measurements/29.25-looper/live/looper-monitor-states bypass.json",
+   "default": "measurements/29.25-looper/live/looper-monitor-states default.json",
+   "stop-never": "measurements/29.25-looper/live/looper-monitor-states stop-never.json",
+   "stop-recovr": "measurements/29.25-looper/live/looper-monitor-states stop-recovr.json",
+   "stop-recovrstop": "measurements/29.25-looper/live/looper-monitor-states stop-recovrstop.json",
+   "record-never": "measurements/29.25-looper/live/looper-monitor-states record-never.json",
+   "record-recovr": "measurements/29.25-looper/live/looper-monitor-states record-recovr.json",
+   "play-recovr": "measurements/29.25-looper/live/looper-monitor-states play-recovr.json",
+   "play-recovrstop": "measurements/29.25-looper/live/looper-monitor-states play-recovrstop.json",
+   "overdub-recovrstop": "measurements/29.25-looper/live/looper-monitor-states overdub-recovrstop.json"
+  },
+  "pedal-output-mix": {
+   "bypass": "measurements/29.28-pedal/live/pedal-eq-mid bypass.json",
+   "default": "measurements/29.28-pedal/live/pedal-output-mix default.json",
+   "out+12": "measurements/29.28-pedal/live/pedal-output-mix out+12.json",
+   "out-12": "measurements/29.28-pedal/live/pedal-output-mix out-12.json",
+   "dw-0": "measurements/29.28-pedal/live/pedal-output-mix dw-0.json",
+   "dw-50": "measurements/29.28-pedal/live/pedal-output-mix dw-50.json"
+  },
+  "phaser-flanger-envelope": {
+   "bypass": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape bypass.json",
+   "default": "measurements/29.29-phaser-flanger/live/phaser-flanger-envelope default.json",
+   "env+1": "measurements/29.29-phaser-flanger/live/phaser-flanger-envelope env+1.json",
+   "env-1": "measurements/29.29-phaser-flanger/live/phaser-flanger-envelope env-1.json",
+   "env+0.5": "measurements/29.29-phaser-flanger/live/phaser-flanger-envelope env+0.5.json",
+   "env+1-att30": "measurements/29.29-phaser-flanger/live/phaser-flanger-envelope env+1-att30.json",
+   "env+1-rel400": "measurements/29.29-phaser-flanger/live/phaser-flanger-envelope env+1-rel400.json"
+  },
+  "phaser-flanger-warmth-output": {
+   "bypass": "measurements/29.29-phaser-flanger/live/phaser-flanger-lfo-shape bypass.json",
+   "default": "measurements/29.29-phaser-flanger/live/phaser-flanger-warmth-output default.json",
+   "warmth-50": "measurements/29.29-phaser-flanger/live/phaser-flanger-warmth-output warmth-50.json",
+   "warmth-100": "measurements/29.29-phaser-flanger/live/phaser-flanger-warmth-output warmth-100.json",
+   "out+6": "measurements/29.29-phaser-flanger/live/phaser-flanger-warmth-output out+6.json",
+   "out-12": "measurements/29.29-phaser-flanger/live/phaser-flanger-warmth-output out-12.json",
+   "dw-0": "measurements/29.29-phaser-flanger/live/phaser-flanger-warmth-output dw-0.json",
+   "dw-50": "measurements/29.29-phaser-flanger/live/phaser-flanger-warmth-output dw-50.json"
+  },
+  "redux-drywet": {
+   "bypass": "measurements/29.30-redux/live/redux-shape-dc bypass.json",
+   "default": "measurements/29.30-redux/live/redux-drywet default.json",
+   "dw-0": "measurements/29.30-redux/live/redux-drywet dw-0.json",
+   "dw-50": "measurements/29.30-redux/live/redux-drywet dw-50.json"
+  },
+  "reverb-spin-grid": {
+   "bypass": "measurements/29.32-reverb/live/reverb-locut-law bypass.json",
+   "default": "measurements/29.32-reverb/live/reverb-spin-grid default.json",
+   "spin-amt17.5-0.07Hz": "measurements/29.32-reverb/live/reverb-spin-grid spin-amt17.5-0.07Hz.json",
+   "spin-amt17.5-0.6Hz": "measurements/29.32-reverb/live/reverb-spin-grid spin-amt17.5-0.6Hz.json",
+   "spin-amt5-1.3Hz": "measurements/29.32-reverb/live/reverb-spin-grid spin-amt5-1.3Hz.json",
+   "spin-amt35-0.15Hz": "measurements/29.32-reverb/live/reverb-spin-grid spin-amt35-0.15Hz.json",
+   "spin-amt55-1.3Hz": "measurements/29.32-reverb/live/reverb-spin-grid spin-amt55-1.3Hz.json"
+  },
+  "reverb-diffusion-size10": {
+   "bypass": "measurements/29.32-reverb/live/reverb-locut-law bypass.json",
+   "default": "measurements/29.32-reverb/live/reverb-diffusion-size10 default.json",
+   "diffusion-0.1": "measurements/29.32-reverb/live/reverb-diffusion-size10 diffusion-0.1.json",
+   "diffusion-96": "measurements/29.32-reverb/live/reverb-diffusion-size10 diffusion-96.json",
+   "scale-5": "measurements/29.32-reverb/live/reverb-diffusion-size10 scale-5.json",
+   "scale-100": "measurements/29.32-reverb/live/reverb-diffusion-size10 scale-100.json"
+  },
+  "saturator-predc": {
+   "bypass": "measurements/29.34-saturator/live/saturator-waveshaper bypass.json",
+   "default": "measurements/29.34-saturator/live/saturator-predc default.json",
+   "predc-on": "measurements/29.34-saturator/live/saturator-predc predc-on.json",
+   "predc-on-drive18": "measurements/29.34-saturator/live/saturator-predc predc-on-drive18.json"
+  },
+  "shifter-envelope": {
+   "bypass": "measurements/29.35-shifter/live/shifter-ring bypass.json",
+   "default": "measurements/29.35-shifter/live/shifter-envelope default.json",
+   "env+12": "measurements/29.35-shifter/live/shifter-envelope env+12.json",
+   "env-12": "measurements/29.35-shifter/live/shifter-envelope env-12.json",
+   "env+3": "measurements/29.35-shifter/live/shifter-envelope env+3.json",
+   "env+12-slow": "measurements/29.35-shifter/live/shifter-envelope env+12-slow.json"
+  },
+  "spectrum-transparency": {
+   "bypass": "measurements/29.38-spectrum/live/spectrum-transparency bypass.json",
+   "default": "measurements/29.38-spectrum/live/spectrum-transparency default.json",
+   "on": "measurements/29.38-spectrum/live/spectrum-transparency default.json"
+  },
+  "tuner-transparency": {
+   "bypass": "measurements/29.39-tuner/live/tuner-transparency bypass.json",
+   "default": "measurements/29.39-tuner/live/tuner-transparency default.json",
+   "on": "measurements/29.39-tuner/live/tuner-transparency default.json"
+  },
+  "utility-dc": {
+   "bypass": "measurements/29.40-utility/live/utility-channels-order bypass.json",
+   "default": "measurements/29.40-utility/live/utility-channels-order default.json",
+   "dc-on": "measurements/29.40-utility/live/utility-dc dc-on.json"
+  },
+  "vocoder-output-modes": {
+   "bypass": "measurements/29.42-vocoder/live/vocoder-formant bypass.json",
+   "default": "measurements/29.42-vocoder/live/vocoder-output-modes default.json",
+   "mono": "measurements/29.42-vocoder/live/vocoder-output-modes mono.json",
+   "lr": "measurements/29.42-vocoder/live/vocoder-output-modes lr.json",
+   "level+12": "measurements/29.42-vocoder/live/vocoder-output-modes level+12.json",
+   "level-12": "measurements/29.42-vocoder/live/vocoder-output-modes level-12.json",
+   "dw-50": "measurements/29.42-vocoder/live/vocoder-output-modes dw-50.json",
+   "enhance": "measurements/29.42-vocoder/live/vocoder-output-modes enhance.json"
+  },
+  "hybrid-reverb-blend": {
+   "bypass": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend bypass.json",
+   "default": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend default.json",
+   "convolution": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend convolution.json",
+   "par-100-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend par-100-0.json",
+   "par-75-25": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend par-75-25.json",
+   "par-25-75": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend par-25-75.json",
+   "par-0-100": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend par-0-100.json",
+   "ser-100-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend ser-100-0.json",
+   "ser-50-50": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend ser-50-50.json",
+   "ser-0-100": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend ser-0-100.json"
+  },
+  "hybrid-reverb-darkhall": {
+   "bypass": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend bypass.json",
+   "default": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall default.json",
+   "size-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall size-0.json",
+   "size-100": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall size-100.json",
+   "damping-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall damping-0.json",
+   "damping-100": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall damping-100.json",
+   "diffusion-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall diffusion-0.json",
+   "shape-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall shape-0.json",
+   "bass-25": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall bass-25.json",
+   "bass-400": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall bass-400.json"
+  },
+  "hybrid-reverb-shimmer": {
+   "bypass": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend bypass.json",
+   "default": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-shimmer default.json",
+   "pitch+7": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-shimmer pitch+7.json",
+   "pitch-12": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-shimmer pitch-12.json",
+   "pitch0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-shimmer pitch0.json",
+   "shimmer-0": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-shimmer shimmer-0.json",
+   "shimmer-100": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-shimmer shimmer-100.json"
+  },
+  "reverb-network-freq": {
+   "bypass": "measurements/29.32-reverb/live/reverb-network-freq bypass.json",
+   "default": "measurements/29.32-reverb/live/reverb-network-freq default.json",
+   "hi-shelf-250": "measurements/29.32-reverb/live/reverb-network-freq hi-shelf-250.json",
+   "hi-shelf-4k": "measurements/29.32-reverb/live/reverb-network-freq hi-shelf-4k.json",
+   "hi-shelf-12k": "measurements/29.32-reverb/live/reverb-network-freq hi-shelf-12k.json",
+   "hi-lowpass-250": "measurements/29.32-reverb/live/reverb-network-freq hi-lowpass-250.json",
+   "hi-lowpass-4k": "measurements/29.32-reverb/live/reverb-network-freq hi-lowpass-4k.json",
+   "lo-shelf-200": "measurements/29.32-reverb/live/reverb-network-freq lo-shelf-200.json",
+   "lo-shelf-2k": "measurements/29.32-reverb/live/reverb-network-freq lo-shelf-2k.json"
+  },
+  "reverb-freeze-static": {
+   "bypass": "measurements/29.32-reverb/live/reverb-network-freq bypass.json",
+   "default": "measurements/29.32-reverb/live/reverb-freeze-static default.json",
+   "cut-noflat": "measurements/29.32-reverb/live/reverb-freeze-static cut-noflat.json",
+   "nocut-flat": "measurements/29.32-reverb/live/reverb-freeze-static nocut-flat.json",
+   "nocut-noflat": "measurements/29.32-reverb/live/reverb-freeze-static nocut-noflat.json",
+   "freeze-off": "measurements/29.32-reverb/live/reverb-freeze-static freeze-off.json"
+  },
+  "hybrid-reverb-freeze": {
+   "bypass": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-blend bypass.json",
+   "default": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-darkhall default.json",
+   "freeze": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-freeze freeze.json",
+   "freeze-in": "measurements/29.23-hybrid-reverb/live/hybrid-reverb-freeze freeze-in.json"
+  }
+ }
+}

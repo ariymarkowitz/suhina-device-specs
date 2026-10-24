@@ -1,0 +1,107 @@
+{
+ "device": "Resonators",
+ "parameter": "resonators-color",
+ "question": "level of the resonance peaks against frequency for Color 0, 25, 50, 75, 100 at short Decay",
+ "plan": "5",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 20
+   }
+  },
+  {
+   "id": "color-0",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 20,
+    "Color": 0
+   }
+  },
+  {
+   "id": "color-25",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 20,
+    "Color": 25
+   }
+  },
+  {
+   "id": "color-50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 20,
+    "Color": 50
+   }
+  },
+  {
+   "id": "color-75",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 20,
+    "Color": 75
+   }
+  },
+  {
+   "id": "color-100",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 20,
+    "Color": 100
+   }
+  }
+ ]
+}

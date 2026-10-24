@@ -1,0 +1,165 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-locut-law",
+ "question": "sweep response of the Lo Cut alone (Hi Cut off, short tail) against Input Width at 1 kHz and Input Freq at Width 5.85",
+ "plan": "3",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "In Lo Cut On": 1,
+    "In Hi Cut On": 0,
+    "Input Freq": {
+     "display": 1000
+    },
+    "Input Width": {
+     "display": 5.85
+    }
+   }
+  },
+  {
+   "id": "lo-1k-w0.5",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "In Lo Cut On": 1,
+    "In Hi Cut On": 0,
+    "Input Freq": {
+     "display": 1000
+    },
+    "Input Width": {
+     "display": 0.5
+    }
+   }
+  },
+  {
+   "id": "lo-1k-w2",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "In Lo Cut On": 1,
+    "In Hi Cut On": 0,
+    "Input Freq": {
+     "display": 1000
+    },
+    "Input Width": {
+     "display": 2
+    }
+   }
+  },
+  {
+   "id": "lo-1k-w4.75",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "In Lo Cut On": 1,
+    "In Hi Cut On": 0,
+    "Input Freq": {
+     "display": 1000
+    },
+    "Input Width": {
+     "display": 4.75
+    }
+   }
+  },
+  {
+   "id": "lo-1k-w9",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "In Lo Cut On": 1,
+    "In Hi Cut On": 0,
+    "Input Freq": {
+     "display": 1000
+    },
+    "Input Width": {
+     "display": 9
+    }
+   }
+  },
+  {
+   "id": "lo-300Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "In Lo Cut On": 1,
+    "In Hi Cut On": 0,
+    "Input Freq": {
+     "display": 300
+    },
+    "Input Width": {
+     "display": 5.85
+    }
+   }
+  },
+  {
+   "id": "lo-2k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "In Lo Cut On": 1,
+    "In Hi Cut On": 0,
+    "Input Freq": {
+     "display": 2000
+    },
+    "Input Width": {
+     "display": 5.85
+    }
+   }
+  }
+ ]
+}
