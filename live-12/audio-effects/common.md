@@ -147,16 +147,31 @@ on/off with a glide time of 0.01 – 1 s in its Max wrapper [source: 1].
 
 ## Dry/Wet
 
-- Linear crossfade 0 – 100 % unless a note says otherwise [inferred]; every Max wrapper stores
-  it as 0 – 1 [source: 1].
+- **There is no one law.** Measured in Live 12.4.6 (impulse taps and gains of the dry and the wet part at 25, 50 and 75 %; the
+  device notes give the figures), the laws fall into families. Every Max wrapper stores the
+  knob as 0 – 1 [source: 1]. In every device measured the dry part is not delayed (its impulse
+  tap is at 0 ms) [measured 12.4.6].
+  - **Linear amplitude crossfade** (dry 1 - x, wet x; 0.5 and 0.5 at 50 %): Drum Buss, Dynamic Tube, Echo, Glue Compressor, Pedal,
+    Phaser-Flanger (the dry share inside the device's own 0.5 + 0.5 aside), Redux, Roar, Saturator, Vocoder [measured 12.4.6]. Compressor is
+    assumed to be the same [inferred]. Residuals of the 50 % render against 0.5 x dry + 0.5 x wet were -150 dB (Saturator) and -152 dB (Redux).
+  - **Equal-power cosine and sine** (dry cos(pi x / 2), wet sin(pi x / 2); 0.707 each at 50 %): Amp, Cabinet, External Audio Effect (dry part
+    only), Overdrive, Reverb, Shifter, Spectral Resonator, Spectral Time (the global Dry/Wet and the Delay Mix) [measured 12.4.6]. Hybrid Reverb takes
+    3 dB off the dry at 50 %, so it is this law or the next [measured 12.4.6].
+  - **Power-complementary S-shaped law** (wet sin(theta), dry cos(theta), theta = 90 degrees x (1 - cos(pi x)) / 2; the dry is still 0.974 at 25 %
+    and the two cross at 0.707 at 50 %): Auto Shift, Chorus-Ensemble, Delay [measured 12.4.6].
+  - **Raised cosine**: Grain Delay, dry part (1 + cos(pi x)) / 2 [measured 12.4.6].
+  - **Neither**: Corpus has the dry tap at 0.844 and the wet part at 0.85 of its 100 % level at 50 %, both -1.5 dB, so the two add to more than one [measured 12.4.6].
+  - Not measured: Auto Filter, Auto Pan-Tremolo, Beat Repeat, Filter Delay, Limiter, Looper, Multiband Dynamics, Gate and Resonators (several have no wet/dry
+    knob of their own); Erosion, Utility and the EQs have none.
 - Delay and Echo have a **Dry/Wet Equal-Loudness** option (context menu; `drywetmode` 0 linear,
   1 equal-loudness in the wrapper) [manual; source: 1].
 - Dry/Wet sits at the output in Compressor, Glue Compressor and Drum Buss. In Multiband Dynamics
   and Gate the only Dry/Wet is the side-chain one, which blends detector sources [manual].
 - Erosion, Vinyl Distortion and Dynamic Tube have no Dry/Wet in the manual; in Vinyl Distortion
   the global Drive acts as the wet amount [manual].
-- To measure: render a sine at 0, 25, 50, 75 and 100 % and fit the law; check whether the dry
-  path is delayed to match the wet path's latency.
+- To measure a new device: render an impulse and a 1 kHz tone at 0, 25, 50, 75 and 100 %; read the taps and gains
+  of the dry and the wet part and compare them with the families above. Equal-Loudness in Delay and Echo
+  changes the law, which the runs did not toggle.
 
 ## Analysers and displays
 

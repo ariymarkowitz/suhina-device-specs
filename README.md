@@ -82,17 +82,19 @@ running the measurement again in Live (`tools/README.md` › 2).
    ([`tools/`](tools/README.md) › 3). How closely to match the note, and what to favour over
    exactness, is in [`AGENTS.md`](AGENTS.md) › Building a device from a note.
 
-## State and next steps (2026-10-18)
+## State and next steps (2026-10-25)
 
 All 42 audio effects of Live 12's chapter 29 have a note. The Suhina Probe has been built in Live
 12.4.6 (`tools/probe-device/Suhina Probe.amxd`) and its parameter dump is in the notes: ranges,
 defaults, step lists, display units and tapers are tagged `[dump 12.4.6]`, and the `.als`
 element and parameter names `[als 12.4.6]`. Behaviour (curves, times, filter shapes) is measured
 by behaviour runs ([`tools/`](tools/README.md) › 2 and 2b): the first (Compressor Threshold) is in
-`tools/README.md` › First run in Live 12.4.6, the Reverb's in `measurements/29.32-reverb/`, and
-the top 100 runs of 37 devices in one set in [`measurements/top100/`](measurements/top100/README.md).
-38 notes now have a Measured section with `[measured 12.4.6]` facts (INDEX: `partly measured`);
-External Audio Effect, Looper, Spectrum and Tuner have none.
+`tools/README.md` › First run in Live 12.4.6, the Reverb's in `measurements/29.32-reverb/`, the
+top 100 runs of 37 devices in one set in [`measurements/top100/`](measurements/top100/README.md),
+and the other 157 priority 1 to 3 runs of all 42 devices in a second set in
+[`measurements/remaining/`](measurements/remaining/README.md), whose answers are written into the
+notes. All 42 notes now have a Measured section with `[measured 12.4.6]` facts (INDEX: `partly
+measured`; Compressor's are in its Behaviour section).
 
 The eight MIDI effects of chapter 30 have notes too ([`live-12/midi-effects/`](live-12/midi-effects/INDEX.md)),
 dump checked from their own dump (`measurements/dump-midi-12.4.6.json`); all eight have a
@@ -103,10 +105,12 @@ Automation playback is measured from seven hand-made sets (`measurements/automat
 segment moves, the curve family, the volume fader's taper and the smoothing of jumps are in
 [`live-12/automation.md`](live-12/automation.md), and Utility's Gain taper and smoothing in its note.
 
-Next: the remaining priority-1 to 3 candidates in each device's `runs.py` (157 of 257 not yet
-run), the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet
-grids, Roar in Single routing), and what audio with static settings cannot show (side-chain,
-MIDI, Hi-Quality; automation beyond the parameters in `measurements/automation/`).
+Next: the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet
+grids, Roar in Single routing, a way to start the Looper), the settings the remaining set could not
+reach ([`measurements/remaining/README.md`](measurements/remaining/README.md) › Settings that did not
+reach the audio), the candidates of priority 4 and below in each device's `runs.py`, and what audio
+with static settings cannot show (side-chain, MIDI, Hi-Quality; automation beyond the parameters in
+`measurements/automation/`).
 
 ## Licence
 
