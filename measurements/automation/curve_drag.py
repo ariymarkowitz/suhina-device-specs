@@ -3,10 +3,16 @@
 
 """How Live 12 splits a bent automation segment and how dragging a curve moves its handles.
 
-Three sets, all automating Utility's Gain on the Operator track (see README.md here):
+Five sets, all automating Utility's Gain on the Operator track (see README.md here):
 
 - utility-gain-splits: bars 1-4 are bent segments; bars 5-8 are the same segments, each split by a
   point placed on it; bar 9 is split segments reshaped by hand.
+- split-overshoot (sets/split-overshoot.als, once saved): one bar per curve of OVERSHOOT, a point
+  to place by hand on each at the share of the bar given there; `analyse` reads whether Live kept
+  the halves' control points where de Casteljau puts them, even outside the unit box, or clamped
+  them to it.
+- split-overshoot-drag (sets/split-overshoot-drag.als): the same set with each split half dragged
+  a little by hand (Alt/Option), to see what a drag does to a handle outside the unit box.
 - curve-drag: 4 copies of 14 starting curves (CURVES below), each copy dragged by hand by a
   different amount, one drag per segment.
 - curve-drag-lopsided: 4 copies of 12 lopsided S curves and curves that cross the diagonal
@@ -20,8 +26,9 @@ Operator track (Arrangement, the whole song) for analyse.py.
 Usage (numpy only):
 
     tools/.venv/bin/python measurements/automation/curve_drag.py make <set> <out-dir>
-        writes the two starting sets (curve-drag.start.als, curve-drag-lopsided.start.als) from a
-        set like sets/utility-gain-splits.als, to drag again in Live
+        writes the starting sets (curve-drag.start.als, curve-drag-lopsided.start.als and
+        split-overshoot.start.als) from a set like sets/utility-gain-splits.als, to drag or split
+        again in Live
     tools/.venv/bin/python measurements/automation/curve_drag.py analyse
         checks the splits and replays every drag through the rule in automation.md; writes
         live/utility-gain-splits.splits.json, live/curve-drag.drags.json and
@@ -40,6 +47,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 UTILITY_GAIN = "22587"  # the PointeeId of Utility's Gain in these sets
+COPIES_OD = 2          # copies of split-overshoot in split-overshoot-drag
 STEP = 1 / 64           # one step of a drag, in F
 TOL = 1e-4
 
@@ -186,18 +194,32 @@ LOPSIDED = [
     ("one handle on the diagonal: (0.3, 0.3), p 3/4 F 0.5", (0.3, 0.3) + vcurve(0.25, 0, 0.75, 0.5)[2:]),
 ]
 
+# split-overshoot: curves whose control points run back in time, split where the halves' points
+# would leave the unit box (de Casteljau, no clamping): each is (label, curve, share of the
+# segment's time to place the point at). The last stays inside, as a control.
+OVERSHOOT = [
+    ("x1 of the first half above 1", (1.0, 0.0, 0.0, 1.0), 0.75),
+    ("x2 of the second half below 0", (1.0, 0.0, 0.0, 1.0), 0.25),
+    ("x1 of the first half just above 1", (0.9, 0.1, 0.2, 0.95), 0.7),
+    ("y1 of the first half above 1", (0.0, 1.0, 1.0, 0.0), 0.75),
+    ("y2 of the second half below 0", (0.0, 1.0, 1.0, 0.0), 0.25),
+    ("control: Live's family, stays inside", (0.125, 0.625, 0.375, 0.875), 0.5),
+]
+
 SETS = {"curve-drag": CURVES, "curve-drag-lopsided": LOPSIDED}
 LOW, HIGH = 1.0, 3.98107171  # 0 dB and +12 dB
 SEG = 4.0                    # a bar per segment
 COPIES = 4
+START_SETS = {**{n: (c, COPIES) for n, c in SETS.items()},
+              "split-overshoot": ([(l, c) for l, c, _ in OVERSHOOT], 1)}
 
 
-def layout(curves):
+def layout(curves, copies=COPIES):
     """Each segment's copy, place, start beat and starting curve. Segments alternate rising and
     falling from 0 dB; each copy ends with a flat bar."""
     period = (len(curves) + 1) * SEG
     out = []
-    for k in range(COPIES):
+    for k in range(copies):
         for j, (label, c) in enumerate(curves):
             out.append({"copy": k + 1, "segment": j + 1, "label": label,
                         "start": k * period + j * SEG, "rising": j % 2 == 0, "curve": c})
@@ -229,9 +251,9 @@ def make(src, out_dir):
     xml0 = gzip.decompress(Path(src).read_bytes()).decode("utf-8")
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    for name, curves in SETS.items():
-        segs, period = layout(curves)
-        total = COPIES * period
+    for name, (curves, copies) in START_SETS.items():
+        segs, period = layout(curves, copies)
+        total = copies * period
         ev, n = ['<FloatEvent Id="0" Time="-63072000" Value="1" />'], 1
         for s in segs:
             v = LOW if s["rising"] else HIGH
@@ -319,6 +341,72 @@ def splits():
     return out
 
 
+def overshoot():
+    """Each OVERSHOOT segment of the saved split-overshoot set: the point placed on it, and whether
+    its halves' controls are de Casteljau's (outside the unit box if they are) or clamped to it."""
+    path = HERE / "sets" / "split-overshoot.als"
+    if not path.exists():
+        print("  sets/split-overshoot.als is not saved yet")
+        return []
+    pts = envelope_points(path)
+    segs, _ = layout([(l, c) for l, c, _ in OVERSHOOT], 1)
+    out = []
+    for s, (_, c, share) in zip(segs, OVERSHOOT):
+        a, b = s["start"], s["start"] + SEG
+        inner = [p for p in pts if a < p[0] < b]
+        row = {"label": s["label"], "curve": c, "asked_share": share}
+        if len(inner) != 1:
+            print(f"  {s['label']}: {len(inner)} points inside the bar, wanted 1")
+            out.append({**row, "points": len(inner)})
+            continue
+        first, m = next(p for p in pts if p[0] == a), inner[0]
+        x = (m[0] - a) / SEG
+        lo, hi = 0.0, 1.0
+        for _ in range(100):
+            mid = (lo + hi) / 2
+            lo, hi = (mid, hi) if bezier_at(c, mid)[0] < x else (lo, mid)
+        left, right, f = split_bezier(c, (lo + hi) / 2)
+        clamp = lambda v: tuple(min(1.0, max(0.0, u)) for u in v)
+        got = {"left": first[2], "right": m[2]}
+        row.update({"share": round(x, 6), "unclamped": {"left": left, "right": right},
+                    "got": got, "outside": any(u < 0 or u > 1 for u in left + right)})
+        for name, want in (("de Casteljau", {"left": left, "right": right}),
+                           ("clamped", {"left": clamp(left), "right": clamp(right)})):
+            row["off_" + name.split()[-1]] = max(abs(u - v) for k in want for u, v in zip(want[k], got[k]))
+        out.append(row)
+        print(f"  {s['label']} (x {x:.4f}): off de Casteljau {row['off_Casteljau']:.1e}, "
+              f"off clamped {row['off_clamped']:.1e}, outside the box: {row['outside']}")
+    return out
+
+
+def overshoot_drags():
+    """Each segment of split-overshoot-drag against the split set it was made from: the set holds
+    COPIES_OD copies of split-overshoot (28 beats apart), the first dragged a little one way, the
+    second the other. Each curve is replayed as the clamped start dragged by the fitted steps."""
+    a, b = HERE / "sets" / "split-overshoot.als", HERE / "sets" / "split-overshoot-drag.als"
+    if not (a.exists() and b.exists()):
+        print("  sets/split-overshoot.als and split-overshoot-drag.als are not both saved yet")
+        return []
+    before = [p for p in envelope_points(a) if p[2] is not None]
+    after = {round(t, 6): c for t, _, c in envelope_points(b)}
+    period = (len(OVERSHOOT) + 1) * SEG
+    out = []
+    for k in range(COPIES_OD):
+        for t, _, c in before:
+            g = after.get(round(t + k * period, 6))
+            if g is None:
+                continue
+            clamped = tuple(min(1.0, max(0.0, u)) for u in c)
+            r = fit(clamped, g, 1)
+            row = {"copy": k + 1, "start": t, "before": c, "after": g,
+                   "outside": clamped != tuple(c), "clamped_start": clamped, "fit": r}
+            out.append(row)
+            what = ("unchanged" if g == tuple(c) else
+                    f"{r['steps'][0]:+d} steps from the clamped start" if r else "NO FIT")
+            print(f"  copy {k + 1} beat {t:g}: {'outside the box, ' if row['outside'] else ''}{what}")
+    return out
+
+
 def drags(name):
     pts = {round(t, 6): c for t, v, c in envelope_points(HERE / "sets" / f"{name}.als")}
     segs, _ = layout(SETS[name])
@@ -352,6 +440,10 @@ def analyse():
     (HERE / "live").mkdir(exist_ok=True)
     print("utility-gain-splits")
     (HERE / "live" / "utility-gain-splits.splits.json").write_text(json.dumps(splits(), indent=1) + "\n")
+    print("split-overshoot")
+    (HERE / "live" / "split-overshoot.splits.json").write_text(json.dumps(overshoot(), indent=1) + "\n")
+    print("split-overshoot-drag")
+    (HERE / "live" / "split-overshoot-drag.drags.json").write_text(json.dumps(overshoot_drags(), indent=1) + "\n")
     for name in SETS:
         print(name)
         (HERE / "live" / f"{name}.drags.json").write_text(json.dumps(drags(name), indent=1) + "\n")

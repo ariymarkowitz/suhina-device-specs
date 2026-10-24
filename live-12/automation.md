@@ -6,9 +6,9 @@ every parameter measured so far (four, on three devices and the mixer), so it is
 here; a device's note points here for the part that is its own (a taper, a smoothing time). It
 also says how Live's editor splits a bent segment and how dragging a curve reshapes it.
 
-Everything below is `[measured 12.4.6]` unless tagged otherwise: ten sets automating one
+Everything below is `[measured 12.4.6]` unless tagged otherwise: twelve sets automating one
 parameter each on a track playing Operator's sine (261.6 Hz), rendered and read back by
-`measurements/automation/analyse.py`; the split and dragged curves are read from three of those
+`measurements/automation/analyse.py`; the split and dragged curves are read from five of those
 sets by `measurements/automation/curve_drag.py`. The runs, the sets and how to make the renders
 again are in [`measurements/automation/README.md`](../measurements/automation/README.md).
 
@@ -22,7 +22,9 @@ again are in [`measurements/automation/README.md`](../measurements/automation/RE
   own family, whose two points mirror each other (one handle sets the bend); splitting and
   dragging give other pairs.
 - **Splitting** a bent segment cuts its Bezier exactly where the new point goes (de Casteljau),
-  so the sound does not change.
+  so the sound does not change. The halves' control points are **not clamped**: from a curve
+  whose points run back in time they can lie outside the unit box (down to -0.29, up to 1.29
+  seen). A drag then clamps them into it.
 - **Dragging** a curve moves each control point along a fixed path of its own, in steps of 1/64:
   both the same way when they are on one side of the diagonal, opposite ways when they are on
   opposite sides.
@@ -75,14 +77,16 @@ bent segment of the three curve runs (S curves, crossed and lopsided control poi
 the edges of the box) fit to 0.03 dB rms or better, but for one steep segment (Smoothing of
 jumps › Fast curves).
 
-**Any two control points in the unit box.** The two points are independent: splitting a segment
-and dragging other shapes give pairs that are not mirrored, with the second left of the first, or
-one point on the top edge and one on the bottom [als 12.4.6]. Every point seen lies in the square
-0 to 1 by 0 to 1, and Live's editor keeps them there (Dragging a curve › Ends). The square is
-enough for playback [inferred]: with x1 and x2 in it, the time share x(t) never falls (its slope
+**Any two control points in the unit box, and after a split any two at all.** The two points are
+independent: splitting a segment and dragging other shapes give pairs that are not mirrored, with
+the second left of the first, or one point on the top edge and one on the bottom [als 12.4.6].
+Bending and dragging keep them in the square 0 to 1 by 0 to 1 (Dragging a curve › Ends).
+**A split does not**: the halves of a curve whose points run back in time, such as (1, 0, 0, 1)
+or (0, 1, 1, 0), are stored outside it, unclamped (Splitting a segment › Outside the box). Inside the square, playback needs nothing more
+[inferred]: with x1 and x2 in it, the time share x(t) never falls (its slope
 3 ((1 - t)^2 x1 + 2 t (1 - t) (x2 - x1) + t^2 (1 - x2)) is least, 3 (1 - 2 t)^2, at x1 = 1,
 x2 = 0), so the curve is a function of time; with y1 and y2 in it, the curve stays between its
-two points.
+two points. A split half is a piece of such a curve, so it keeps that shape whatever its points.
 
 **Live's own family.** Bending a straight segment gives **mirrored control points**: the second
 is (1 - y1, 1 - x1), the first reflected across the line x + y = 1, so the bend is one handle.
@@ -122,6 +126,17 @@ All eight splits match this to 1e-7, the precision of the stored values [als 12.
 plays as the unsplit segment did (0.03 dB rms or better). The halves are no longer mirrored, so a
 split leaves Live's family. The point goes where it was placed, on the grid or not (beats
 18.0226 and 30.8846).
+
+**Outside the box.** The divide by M's coordinates can take a half's point past 1 or below 0
+when the curve's own points run back, in time (x1 well above x2) or in value (y1 well above
+y2). Live stores the result as it is: split-overshoot (utility-gain, one bar per curve)
+has (1, 0, 0, 1) split at 0.75 of its time give a first half with x1 = 1.1958, the same curve
+split at 0.25 a second half with x2 = -0.1958, and (0, 1, 1, 0) at 0.75 and 0.25 a first half
+with y1 = 1.2931 and a second with y2 = -0.2931. All four match de Casteljau to 3e-9 and are
+0.20 to 0.29 from the clamped values; a half that stays inside (Live's family, split at 0.5) is
+the same either way. Live's family never leaves the box, in the 200 000 random splits tried and
+in all 8 of utility-gain-splits. That the halves play as the unsplit segment does is expected
+and not heard [measure]. A milder case (x1 = 1.059) was not placed.
 
 ## Dragging a curve
 
@@ -187,8 +202,13 @@ copy each of these two-drag results has one solution in whole steps:
 moves the point below the diagonal later and the other earlier: the S bends further. The other
 direction flattens an S through a straight line into the reverse S. In curve-drag-lopsided each
 bar's copies were dragged one way (copies 1, 2 and 4) or the other (copy 3), and the fitted steps
-keep that sign through every change of mode. Which way on the screen moves a curve later, and whether it flips
-between rising and falling segments, is not measured [measure].
+keep that sign through every change of mode. On the screen, split-overshoot-drag (11 split halves,
+one copy dragged a little up and one a little down, so every pair has opposite signs) shows that
+when both points move together, dragging **up moves a falling segment's curve later and a
+rising one's earlier**: the point under the pointer follows it, as it would on any lane (beats
+4, 12, 15, 20, 22 falling, +; beats 3, 16, 17 rising, -). With the points apart, up was + on all
+three seen (beats 0, 5, 8: rising, falling, rising), so there it did not flip with the segment
+[measure]. How far the mouse moves per step is not measured [measure].
 
 **Ends.** A control point that would pass the end of its path (F below 0 or above 2) stops there
 while the other goes on, changing the shape (curve-drag bar 6 copies 2 and 4, bar 8 copy 3, bar 9
@@ -197,8 +217,20 @@ can stop one step short of a corner: the symmetric S curves stopped at F = 1.990
 (curve-drag bars 7 and 14 copy 3, bar 11 copy 4), and the lopsided set reached the corners
 exactly where its steps landed on them (curve-drag-lopsided bars 3, 4, 7 copy 3).
 
+**A drag clamps a point outside the box.** The first thing a drag does is move each control point
+that lies outside the square to the nearest point in it, each coordinate on its own: x1 =
+1.1958 becomes 1, y2 = -0.2931 becomes 0, (0, 1.2931) the corner (0, 1). Then the drag goes on
+as in the rule, from the clamped curve (split-overshoot-drag: six split halves dragged a little,
+all 19 moved segments fit, from 1 to 9 steps). A drag shorter than one step still clamps and
+moves nothing else: three segments of the first, small drag (beats 0, 5 and 17) changed only by
+the clamp, and in the second set of drags on the same curves, two copies dragged a little up and
+a little down, the same three moved 4, 3 and 3 steps, so the clamp is not a block. The sound
+changes with it, since the curve does. Beat 12 put a handle in the corner (0, 1) with the other
+at (0.605, 0.844) on the same side: one step later took it to F = 1/64 on the path p = 1/4, as
+curve_drag.py assumes (and 3 and 9 steps in the two copies went on along it).
+
 A point that ends in a corner has lost its p (it is on every path). What the next drag does with
-it is not seen [measure]; curve_drag.py assumes Live's family.
+it is seen once, above (beat 12) [measure]; curve_drag.py assumes Live's family.
 
 ## The volume fader's taper
 
@@ -262,10 +294,12 @@ delay is from this one segment [measure].
 
 ## Open
 
-- Which way on the screen a curve drag moves a curve later, and how far the mouse moves per step
-  (Dragging a curve) [measure].
+- How far the mouse moves per step of a curve drag, and which way on the screen moves the
+  curve later when the points move apart on a rising segment as against a falling one
+  (Dragging a curve › Direction) [measure].
 - Where a drag takes a control point that starts in the corner (0, 1) or (1, 0) while the other
-  point is elsewhere [measure].
+  point is elsewhere: one case (Dragging a curve › Ends) took Live's family path; the rest are
+  not seen [measure].
 - The smoothing of a mute, and of a gain parameter's continuous motion faster than its ramp time
   [measure].
 - Other parameter kinds: a frequency knob (logarithmic), a choice, a toggle [measure].
