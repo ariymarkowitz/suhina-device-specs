@@ -108,7 +108,7 @@ segment moves, the curve family, the volume fader's taper and the smoothing of j
 Next: the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet
 grids, Roar in Single routing, a way to start the Looper), the settings the remaining set could not
 reach ([`measurements/remaining/README.md`](measurements/remaining/README.md) › Settings that did not
-reach the audio), the candidates of priority 4 and below in each device's `runs.py`, and what audio
+reach the audio), new runs for the open gaps the notes list (all 257 candidates in the devices' `runs.py` files have now been run), and what audio
 with static settings cannot show (side-chain, MIDI, Hi-Quality; automation beyond the parameters in
 `measurements/automation/`).
 
