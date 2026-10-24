@@ -1,0 +1,373 @@
+{
+ "run": "operator-volume-88k",
+ "rate": 88200,
+ "tempo": 120.0,
+ "points": [
+  [
+   0.0,
+   0.262673527,
+   null
+  ],
+  [
+   2.205704451798202,
+   0.001688756282,
+   null
+  ],
+  [
+   4.0,
+   0.534845233,
+   null
+  ],
+  [
+   6.0,
+   0.262673527,
+   [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  ],
+  [
+   10.0,
+   0.05251443759,
+   [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  ],
+  [
+   18.0,
+   0.262673527,
+   [
+    0.15234375,
+    0.54296875,
+    0.45703125,
+    0.84765625
+   ]
+  ],
+  [
+   22.0,
+   0.522339642,
+   [
+    0.171875,
+    0.484375,
+    0.515625,
+    0.828125
+   ]
+  ],
+  [
+   26.0,
+   0.262673527,
+   null
+  ],
+  [
+   28.0,
+   0.003051875392,
+   null
+  ],
+  [
+   28.0,
+   0.4398933649,
+   null
+  ],
+  [
+   32.0,
+   0.262673527,
+   null
+  ]
+ ],
+ "even in position": {
+  "reference_dbfs": 4.401,
+  "rms_db": 0.02,
+  "max_db": 0.152,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 0.038,
+    "max_db": 0.081
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 0.024,
+    "max_db": 0.056
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.002,
+    "max_db": 0.005
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.021,
+    "max_db": 0.137
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.02,
+    "max_db": 0.087
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.01,
+    "max_db": 0.036
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.004,
+    "max_db": 0.009
+   },
+   {
+    "from": 26.0,
+    "to": 28.0,
+    "curve": false,
+    "rms_db": 0.036,
+    "max_db": 0.152
+   },
+   {
+    "from": 28.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.005,
+    "max_db": 0.007
+   }
+  ]
+ },
+ "even in dB": {
+  "reference_dbfs": 4.406,
+  "rms_db": 3.239,
+  "max_db": 12.912,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 7.306,
+    "max_db": 10.222
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 8.909,
+    "max_db": 12.912
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.006,
+    "max_db": 0.008
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.254,
+    "max_db": 1.295
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.62,
+    "max_db": 1.871
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.015,
+    "max_db": 0.041
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.003,
+    "max_db": 0.008
+   },
+   {
+    "from": 26.0,
+    "to": 28.0,
+    "curve": false,
+    "rms_db": 6.268,
+    "max_db": 8.787
+   },
+   {
+    "from": 28.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.001,
+    "max_db": 0.005
+   }
+  ]
+ },
+ "even in gain": {
+  "reference_dbfs": 4.123,
+  "rms_db": 3.727,
+  "max_db": 19.333,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 8.67,
+    "max_db": 15.641
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 10.425,
+    "max_db": 19.333
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.181,
+    "max_db": 0.27
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.283,
+    "max_db": 0.928
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.282,
+    "max_db": 0.779
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.164,
+    "max_db": 0.266
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.16,
+    "max_db": 0.268
+   },
+   {
+    "from": 26.0,
+    "to": 28.0,
+    "curve": false,
+    "rms_db": 6.742,
+    "max_db": 11.973
+   },
+   {
+    "from": 28.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.119,
+    "max_db": 0.27
+   }
+  ]
+ },
+ "jumps": [
+  {
+   "beat": 28,
+   "from_db": -50.31,
+   "to_db": -7.13,
+   "best": "position, smootherstep",
+   "signal_rms": 0.5061310024913589,
+   "position, smootherstep": {
+    "residual": 0.0008285329074806553,
+    "samples": 764,
+    "ms": 8.66,
+    "centre_samples": 2.0
+   },
+   "position, raised cosine": {
+    "residual": 0.001443362808212475,
+    "samples": 658,
+    "ms": 7.46,
+    "centre_samples": 1.0
+   },
+   "position, smoothstep": {
+    "residual": 0.0017620203128014317,
+    "samples": 637,
+    "ms": 7.22,
+    "centre_samples": 0.5
+   },
+   "position, linear": {
+    "residual": 0.004065824084853729,
+    "samples": 484,
+    "ms": 5.49,
+    "centre_samples": -1.0
+   },
+   "dB, smootherstep": {
+    "residual": 0.0027728470359489332,
+    "samples": 1035,
+    "ms": 11.73,
+    "centre_samples": -123.5
+   },
+   "dB, raised cosine": {
+    "residual": 0.0033611072004356185,
+    "samples": 921,
+    "ms": 10.44,
+    "centre_samples": -131.5
+   },
+   "dB, smoothstep": {
+    "residual": 0.003711120993270146,
+    "samples": 918,
+    "ms": 10.41,
+    "centre_samples": -138.0
+   },
+   "dB, linear": {
+    "residual": 0.0072832582726238305,
+    "samples": 830,
+    "ms": 9.41,
+    "centre_samples": -182.0
+   },
+   "gain, smootherstep": {
+    "residual": 0.001978800466087478,
+    "samples": 665,
+    "ms": 7.54,
+    "centre_samples": 98.5
+   },
+   "gain, raised cosine": {
+    "residual": 0.0018401233643791698,
+    "samples": 567,
+    "ms": 6.43,
+    "centre_samples": 98.5
+   },
+   "gain, smoothstep": {
+    "residual": 0.0018134514890503412,
+    "samples": 547,
+    "ms": 6.2,
+    "centre_samples": 98.5
+   },
+   "gain, linear": {
+    "residual": 0.0027104028775159807,
+    "samples": 389,
+    "ms": 4.41,
+    "centre_samples": 98.5
+   }
+  }
+ ]
+}

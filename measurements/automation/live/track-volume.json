@@ -1,0 +1,422 @@
+{
+ "run": "track-volume",
+ "rate": 44100,
+ "tempo": 120.0,
+ "points": [
+  [
+   0.0,
+   1.0,
+   null
+  ],
+  [
+   3.0,
+   0.0003162277571,
+   null
+  ],
+  [
+   6.0,
+   1.99526238,
+   [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  ],
+  [
+   8.0,
+   0.6606934071,
+   [
+    0.0,
+    1.0,
+    0.0,
+    1.0
+   ]
+  ],
+  [
+   10.0,
+   0.06309572607,
+   [
+    0.484375,
+    0.171875,
+    0.828125,
+    0.515625
+   ]
+  ],
+  [
+   14.0,
+   0.473151207,
+   [
+    0.15625,
+    0.53125,
+    0.46875,
+    0.84375
+   ]
+  ],
+  [
+   18.0,
+   1.07151914,
+   null
+  ],
+  [
+   21.0,
+   0.07079458237,
+   [
+    0.47265625,
+    0.17578125,
+    0.82421875,
+    0.52734375
+   ]
+  ],
+  [
+   26.0,
+   0.2609739304,
+   [
+    0.109375,
+    0.671875,
+    0.328125,
+    0.890625
+   ]
+  ],
+  [
+   28.481807255244757,
+   1.0,
+   null
+  ],
+  [
+   30.0,
+   0.2238721102,
+   null
+  ],
+  [
+   30.0,
+   0.7585775852,
+   null
+  ],
+  [
+   32.0,
+   1.0,
+   null
+  ]
+ ],
+ "fader table": {
+  "from": [
+   3,
+   6
+  ],
+  "zero_db_dbfs": -8.165,
+  "position of 0 dB": 0.8477
+ },
+ "even in position": {
+  "reference_dbfs": -8.08,
+  "rms_db": 0.026,
+  "max_db": 0.288,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 3.0,
+    "curve": false,
+    "rms_db": 0.044,
+    "max_db": 0.288
+   },
+   {
+    "from": 6.0,
+    "to": 8.0,
+    "curve": true,
+    "rms_db": 0.064,
+    "max_db": 0.125
+   },
+   {
+    "from": 8.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.037,
+    "max_db": 0.248
+   },
+   {
+    "from": 10.0,
+    "to": 14.0,
+    "curve": true,
+    "rms_db": 0.014,
+    "max_db": 0.03
+   },
+   {
+    "from": 14.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.003,
+    "max_db": 0.01
+   },
+   {
+    "from": 18.0,
+    "to": 21.0,
+    "curve": false,
+    "rms_db": 0.016,
+    "max_db": 0.032
+   },
+   {
+    "from": 21.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.01,
+    "max_db": 0.023
+   },
+   {
+    "from": 26.0,
+    "to": 28.481807255244757,
+    "curve": true,
+    "rms_db": 0.008,
+    "max_db": 0.028
+   },
+   {
+    "from": 28.481807255244757,
+    "to": 30.0,
+    "curve": false,
+    "rms_db": 0.009,
+    "max_db": 0.03
+   },
+   {
+    "from": 30.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.007,
+    "max_db": 0.042
+   }
+  ]
+ },
+ "even in dB": {
+  "reference_dbfs": -7.828,
+  "rms_db": 4.612,
+  "max_db": 20.848,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 3.0,
+    "curve": false,
+    "rms_db": 14.248,
+    "max_db": 20.848
+   },
+   {
+    "from": 6.0,
+    "to": 8.0,
+    "curve": true,
+    "rms_db": 0.255,
+    "max_db": 0.318
+   },
+   {
+    "from": 8.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.586,
+    "max_db": 1.49
+   },
+   {
+    "from": 10.0,
+    "to": 14.0,
+    "curve": true,
+    "rms_db": 0.876,
+    "max_db": 1.344
+   },
+   {
+    "from": 14.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.252,
+    "max_db": 0.261
+   },
+   {
+    "from": 18.0,
+    "to": 21.0,
+    "curve": false,
+    "rms_db": 0.627,
+    "max_db": 1.109
+   },
+   {
+    "from": 21.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.524,
+    "max_db": 0.832
+   },
+   {
+    "from": 26.0,
+    "to": 28.481807255244757,
+    "curve": true,
+    "rms_db": 0.256,
+    "max_db": 0.281
+   },
+   {
+    "from": 28.481807255244757,
+    "to": 30.0,
+    "curve": false,
+    "rms_db": 0.246,
+    "max_db": 0.275
+   },
+   {
+    "from": 30.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.247,
+    "max_db": 0.281
+   }
+  ]
+ },
+ "even in gain": {
+  "reference_dbfs": -8.798,
+  "rms_db": 5.373,
+  "max_db": 31.945,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 3.0,
+    "curve": false,
+    "rms_db": 16.07,
+    "max_db": 31.945
+   },
+   {
+    "from": 6.0,
+    "to": 8.0,
+    "curve": true,
+    "rms_db": 0.621,
+    "max_db": 0.723
+   },
+   {
+    "from": 8.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 1.162,
+    "max_db": 3.372
+   },
+   {
+    "from": 10.0,
+    "to": 14.0,
+    "curve": true,
+    "rms_db": 1.419,
+    "max_db": 2.135
+   },
+   {
+    "from": 14.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.391,
+    "max_db": 0.717
+   },
+   {
+    "from": 18.0,
+    "to": 21.0,
+    "curve": false,
+    "rms_db": 3.872,
+    "max_db": 5.476
+   },
+   {
+    "from": 21.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.324,
+    "max_db": 0.713
+   },
+   {
+    "from": 26.0,
+    "to": 28.481807255244757,
+    "curve": true,
+    "rms_db": 0.623,
+    "max_db": 1.216
+   },
+   {
+    "from": 28.481807255244757,
+    "to": 30.0,
+    "curve": false,
+    "rms_db": 1.119,
+    "max_db": 1.637
+   },
+   {
+    "from": 30.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.666,
+    "max_db": 0.754
+   }
+  ]
+ },
+ "jumps": [
+  {
+   "beat": 30,
+   "from_db": -13.0,
+   "to_db": -2.4,
+   "best": "dB, smootherstep",
+   "signal_rms": 0.21201265531961258,
+   "position, smootherstep": {
+    "residual": 0.00015155541619810234,
+    "samples": 191,
+    "ms": 4.33,
+    "centre_samples": -0.5
+   },
+   "position, raised cosine": {
+    "residual": 0.0002805580286770069,
+    "samples": 165,
+    "ms": 3.74,
+    "centre_samples": -0.5
+   },
+   "position, smoothstep": {
+    "residual": 0.00035246386815336746,
+    "samples": 160,
+    "ms": 3.63,
+    "centre_samples": 0.0
+   },
+   "position, linear": {
+    "residual": 0.0010387902437020199,
+    "samples": 122,
+    "ms": 2.77,
+    "centre_samples": 1.0
+   },
+   "dB, smootherstep": {
+    "residual": 0.00015074367765435174,
+    "samples": 191,
+    "ms": 4.33,
+    "centre_samples": -0.5
+   },
+   "dB, raised cosine": {
+    "residual": 0.00027971079404148503,
+    "samples": 165,
+    "ms": 3.74,
+    "centre_samples": -0.5
+   },
+   "dB, smoothstep": {
+    "residual": 0.0003518946514641179,
+    "samples": 160,
+    "ms": 3.63,
+    "centre_samples": 0.0
+   },
+   "dB, linear": {
+    "residual": 0.0010387609665487739,
+    "samples": 122,
+    "ms": 2.77,
+    "centre_samples": 1.0
+   },
+   "gain, smootherstep": {
+    "residual": 0.0003791682460172871,
+    "samples": 180,
+    "ms": 4.08,
+    "centre_samples": 12.0
+   },
+   "gain, raised cosine": {
+    "residual": 0.0004132718268292288,
+    "samples": 154,
+    "ms": 3.49,
+    "centre_samples": 12.0
+   },
+   "gain, smoothstep": {
+    "residual": 0.00044550874967107896,
+    "samples": 149,
+    "ms": 3.38,
+    "centre_samples": 12.5
+   },
+   "gain, linear": {
+    "residual": 0.0009527017914557145,
+    "samples": 113,
+    "ms": 2.56,
+    "centre_samples": 12.5
+   }
+  }
+ ]
+}

@@ -1,0 +1,373 @@
+{
+ "run": "utility-gain-jump62",
+ "rate": 44100,
+ "tempo": 120.0,
+ "points": [
+  [
+   0.0,
+   1.0,
+   null
+  ],
+  [
+   2.205704451798202,
+   0.0,
+   null
+  ],
+  [
+   4.0,
+   3.46935868,
+   null
+  ],
+  [
+   6.0,
+   1.0,
+   [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  ],
+  [
+   10.0,
+   0.1067690626,
+   [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  ],
+  [
+   18.0,
+   1.0,
+   [
+    0.15234375,
+    0.54296875,
+    0.45703125,
+    0.84765625
+   ]
+  ],
+  [
+   22.0,
+   3.3295691,
+   [
+    0.171875,
+    0.484375,
+    0.515625,
+    0.828125
+   ]
+  ],
+  [
+   26.0,
+   1.0,
+   null
+  ],
+  [
+   28.0,
+   0.001842491329,
+   null
+  ],
+  [
+   28.0,
+   2.46485329,
+   null
+  ],
+  [
+   32.0,
+   1.0,
+   null
+  ]
+ ],
+ "even in position": {
+  "reference_dbfs": -13.6,
+  "rms_db": 0.34,
+  "max_db": 11.79,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 0.177,
+    "max_db": 2.224
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 0.046,
+    "max_db": 0.395
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.001,
+    "max_db": 0.004
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.03,
+    "max_db": 0.195
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.03,
+    "max_db": 0.198
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.011,
+    "max_db": 0.045
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.007,
+    "max_db": 0.019
+   },
+   {
+    "from": 26.0,
+    "to": 28.0,
+    "curve": false,
+    "rms_db": 1.355,
+    "max_db": 11.79
+   },
+   {
+    "from": 28.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.005,
+    "max_db": 0.022
+   }
+  ]
+ },
+ "even in dB": {
+  "reference_dbfs": -13.596,
+  "rms_db": 6.243,
+  "max_db": 25.071,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 15.758,
+    "max_db": 22.869
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 16.97,
+    "max_db": 25.071
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.005,
+    "max_db": 0.008
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.026,
+    "max_db": 0.15
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.07,
+    "max_db": 0.248
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.015,
+    "max_db": 0.049
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.005,
+    "max_db": 0.014
+   },
+   {
+    "from": 26.0,
+    "to": 28.0,
+    "curve": false,
+    "rms_db": 10.149,
+    "max_db": 15.603
+   },
+   {
+    "from": 28.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.003,
+    "max_db": 0.017
+   }
+  ]
+ },
+ "even in gain": {
+  "reference_dbfs": -14.465,
+  "rms_db": 6.438,
+  "max_db": 43.549,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 14.489,
+    "max_db": 38.786
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 18.907,
+    "max_db": 43.549
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.529,
+    "max_db": 0.782
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.918,
+    "max_db": 3.749
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 1.559,
+    "max_db": 4.155
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.496,
+    "max_db": 0.844
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.476,
+    "max_db": 0.828
+   },
+   {
+    "from": 26.0,
+    "to": 28.0,
+    "curve": false,
+    "rms_db": 10.513,
+    "max_db": 20.361
+   },
+   {
+    "from": 28.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.373,
+    "max_db": 0.846
+   }
+  ]
+ },
+ "jumps": [
+  {
+   "beat": 28,
+   "from_db": -54.69,
+   "to_db": 7.84,
+   "best": "dB, smootherstep",
+   "signal_rms": 0.35571102664938353,
+   "position, smootherstep": {
+    "residual": 0.00038524679213016377,
+    "samples": 196,
+    "ms": 4.44,
+    "centre_samples": -1.0
+   },
+   "position, raised cosine": {
+    "residual": 0.0006988500860593206,
+    "samples": 176,
+    "ms": 3.99,
+    "centre_samples": -2.0
+   },
+   "position, smoothstep": {
+    "residual": 0.0008921410336761484,
+    "samples": 176,
+    "ms": 3.99,
+    "centre_samples": -3.0
+   },
+   "position, linear": {
+    "residual": 0.0029446122229531105,
+    "samples": 155,
+    "ms": 3.51,
+    "centre_samples": -7.5
+   },
+   "dB, smootherstep": {
+    "residual": 0.0003687867743853998,
+    "samples": 247,
+    "ms": 5.6,
+    "centre_samples": -23.5
+   },
+   "dB, raised cosine": {
+    "residual": 0.00041714876810063046,
+    "samples": 228,
+    "ms": 5.17,
+    "centre_samples": -27.0
+   },
+   "dB, smoothstep": {
+    "residual": 0.0006133019922138258,
+    "samples": 231,
+    "ms": 5.24,
+    "centre_samples": -29.5
+   },
+   "dB, linear": {
+    "residual": 0.0029772923419572133,
+    "samples": 237,
+    "ms": 5.37,
+    "centre_samples": -48.5
+   },
+   "gain, smootherstep": {
+    "residual": 0.0017228611984214123,
+    "samples": 135,
+    "ms": 3.06,
+    "centre_samples": 37.5
+   },
+   "gain, raised cosine": {
+    "residual": 0.0018301760562203313,
+    "samples": 115,
+    "ms": 2.61,
+    "centre_samples": 37.5
+   },
+   "gain, smoothstep": {
+    "residual": 0.0018956084589168557,
+    "samples": 113,
+    "ms": 2.56,
+    "centre_samples": 37.5
+   },
+   "gain, linear": {
+    "residual": 0.0027656467572756277,
+    "samples": 85,
+    "ms": 1.93,
+    "centre_samples": 37.5
+   }
+  }
+ ]
+}

@@ -1,0 +1,288 @@
+{
+ "run": "utility-gain-curves",
+ "rate": 44100,
+ "tempo": 120.0,
+ "points": [
+  [
+   0.0,
+   1.0,
+   null
+  ],
+  [
+   2.205704451798202,
+   0.0,
+   null
+  ],
+  [
+   4.0,
+   3.46935868,
+   null
+  ],
+  [
+   6.0,
+   1.0,
+   [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  ],
+  [
+   10.0,
+   0.1067690626,
+   [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ]
+  ],
+  [
+   18.0,
+   1.0,
+   [
+    0.15234375,
+    0.54296875,
+    0.45703125,
+    0.84765625
+   ]
+  ],
+  [
+   22.0,
+   3.3295691,
+   [
+    0.171875,
+    0.484375,
+    0.515625,
+    0.828125
+   ]
+  ],
+  [
+   26.0,
+   1.0,
+   null
+  ],
+  [
+   30.0,
+   0.23612082,
+   null
+  ],
+  [
+   32.0,
+   1.0,
+   null
+  ]
+ ],
+ "even in position": {
+  "reference_dbfs": -13.601,
+  "rms_db": 0.032,
+  "max_db": 1.192,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 0.095,
+    "max_db": 1.192
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 0.031,
+    "max_db": 0.299
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.001,
+    "max_db": 0.003
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.03,
+    "max_db": 0.194
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.031,
+    "max_db": 0.199
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.01,
+    "max_db": 0.044
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.008,
+    "max_db": 0.019
+   },
+   {
+    "from": 26.0,
+    "to": 30.0,
+    "curve": false,
+    "rms_db": 0.002,
+    "max_db": 0.004
+   },
+   {
+    "from": 30.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.001,
+    "max_db": 0.003
+   }
+  ]
+ },
+ "even in dB": {
+  "reference_dbfs": -13.599,
+  "rms_db": 5.715,
+  "max_db": 25.065,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 15.761,
+    "max_db": 22.863
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 16.973,
+    "max_db": 25.065
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.002,
+    "max_db": 0.005
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 0.023,
+    "max_db": 0.147
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 0.072,
+    "max_db": 0.252
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.012,
+    "max_db": 0.046
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.007,
+    "max_db": 0.018
+   },
+   {
+    "from": 26.0,
+    "to": 30.0,
+    "curve": false,
+    "rms_db": 0.002,
+    "max_db": 0.005
+   },
+   {
+    "from": 30.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.002,
+    "max_db": 0.004
+   }
+  ]
+ },
+ "even in gain": {
+  "reference_dbfs": -14.741,
+  "rms_db": 5.817,
+  "max_db": 42.909,
+  "segments": [
+   {
+    "from": 0.0,
+    "to": 2.205704451798202,
+    "curve": false,
+    "rms_db": 14.268,
+    "max_db": 38.289
+   },
+   {
+    "from": 2.205704451798202,
+    "to": 4.0,
+    "curve": false,
+    "rms_db": 18.67,
+    "max_db": 42.909
+   },
+   {
+    "from": 4.0,
+    "to": 6.0,
+    "curve": false,
+    "rms_db": 0.455,
+    "max_db": 1.048
+   },
+   {
+    "from": 6.0,
+    "to": 10.0,
+    "curve": true,
+    "rms_db": 1.057,
+    "max_db": 3.473
+   },
+   {
+    "from": 10.0,
+    "to": 18.0,
+    "curve": true,
+    "rms_db": 1.524,
+    "max_db": 3.88
+   },
+   {
+    "from": 18.0,
+    "to": 22.0,
+    "curve": true,
+    "rms_db": 0.582,
+    "max_db": 1.12
+   },
+   {
+    "from": 22.0,
+    "to": 26.0,
+    "curve": true,
+    "rms_db": 0.467,
+    "max_db": 1.104
+   },
+   {
+    "from": 26.0,
+    "to": 30.0,
+    "curve": false,
+    "rms_db": 0.722,
+    "max_db": 1.077
+   },
+   {
+    "from": 30.0,
+    "to": 32.0,
+    "curve": false,
+    "rms_db": 0.715,
+    "max_db": 1.061
+   }
+  ]
+ },
+ "jumps": []
+}

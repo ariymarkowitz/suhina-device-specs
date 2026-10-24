@@ -55,11 +55,13 @@ Building a device from a note before you start. In short:
 | [`live-12/audio-effects/_template.md`](live-12/audio-effects/_template.md) | the structure every note follows |
 | [`live-12/audio-effects/common.md`](live-12/audio-effects/common.md) | controls and behaviour many devices share (side-chain, LFO sync, dry/wet, Hi-Q, the device title bar) |
 | [`live-12/audio-effects/INDEX.md`](live-12/audio-effects/INDEX.md) | every device, its family and how complete its note is |
+| [`live-12/automation.md`](live-12/automation.md) | how Live plays automation, for every parameter: segments even in the control's position, the Bezier curve family, the volume fader's taper, the smoothing of jumps |
 | [`live-12/midi-effects/`](live-12/midi-effects/) | one note per MIDI effect of Live 12 (manual chapter 30), file `30.NN-name.md`, with its own `_template.md`, `common.md` and [`INDEX.md`](live-12/midi-effects/INDEX.md) |
 | [`tools/`](tools/README.md) | the Suhina Probe device and the measurement harness |
 | [`AGENTS.md`](AGENTS.md) | notes for coding agents: driving Live through the AbletonMCP Remote Script, what still needs Live's window |
 | [`LICENSE`](LICENSE) | the MIT licence, which covers the whole repository |
 | `measurements/` | what the tools produced from Live 12.4.6: the dump (and a readable summary per device in `dump-12.4.6-summary/`), the saved sets, the probe signal's manifest (`probe.json`), and the map from API parameters to stored set elements for calibrated devices (`als-map-12.4.6.json`, `tools/README.md` › 2b) |
+| [`measurements/automation/`](measurements/automation/README.md) | the automation runs: hand-made sets, their analyses and `analyse.py` (renders not in the repository) |
 | `measurements/29.NN-name/` | one folder per device, named like its note, for its behaviour runs: each run's cases file (`<run>.json`), `<run>.built.json` and saved set (`<run>.als`) at the top, Live's renders in `export/` (not in the repository) and their analyses in `live/` |
 
 The large audio files are not in the repository: the probe signal (`probe.wav`, about 16 MB) and
@@ -97,10 +99,14 @@ dump checked from their own dump (`measurements/dump-midi-12.4.6.json`); all eig
 Measured section from one recording of the devices' MIDI output (`measurements/midi-effects/`,
 `tools/harness/midi_set.py`); (the shared plan is in that folder's `common.md`).
 
+Automation playback is measured from seven hand-made sets (`measurements/automation/`): how a
+segment moves, the curve family, the volume fader's taper and the smoothing of jumps are in
+[`live-12/automation.md`](live-12/automation.md), and Utility's Gain taper and smoothing in its note.
+
 Next: the remaining priority-1 to 3 candidates in each device's `runs.py` (157 of 257 not yet
 run), the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet
-grids, Roar in Single routing), and what audio with static settings cannot show (automation,
-side-chain, MIDI, Hi-Quality).
+grids, Roar in Single routing), and what audio with static settings cannot show (side-chain,
+MIDI, Hi-Quality; automation beyond the parameters in `measurements/automation/`).
 
 ## Licence
 
