@@ -48,6 +48,10 @@ RUNS = {
     "track-volume": {"kind": "fader", "jumps": [30], "table_from": (3, 6)},
     "operator-volume-88k": {"kind": "fader", "jumps": [28]},
     "operator-fine": {"kind": "fine", "jumps": [2, 3]},
+    # Curve shapes: split curves and hand-dragged ones (curve_drag.py reads the handles).
+    "utility-gain-splits": {"kind": "utility", "jumps": []},
+    "curve-drag": {"kind": "utility", "jumps": []},
+    "curve-drag-lopsided": {"kind": "utility", "jumps": []},
 }
 
 

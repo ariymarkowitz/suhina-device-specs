@@ -17,9 +17,19 @@ a jump (two points at one beat).
 | `track-volume` | the track's Volume | the whole fader from the bottom to the top, bends both ways, a jump at beat 30 | recorded post-mixer on a second track, 24-bit, 44.1 kHz |
 | `operator-volume-88k` | Operator's Volume | the Utility run's shape on another gain parameter, a jump at beat 28 | Bounce, 88.2 kHz |
 | `operator-fine` | Operator A's Fine (ratio mode) | a pitch parameter over 4 beats, bends, jumps at beats 2 and 3 | Bounce, 44.1 kHz |
+| `utility-gain-splits` | Utility's Gain | eight bent segments (bars 1 to 4), the same split by a point each (bars 5 to 8), split segments reshaped by hand (bar 9) | Bounce, 88.2 kHz |
+| `curve-drag` | Utility's Gain | 14 starting curves in 4 copies, each copy Alt-dragged by hand by a different amount | Bounce, 88.2 kHz |
+| `curve-drag-lopsided` | Utility's Gain | 12 lopsided S curves and curves that cross the diagonal in 4 copies; copy 4 dragged twice the same way | Bounce, 88.2 kHz |
 
 A Bounce renders the track before its mixer, so the track volume run was recorded instead: the
 Operator track routed into a second audio track's input and recorded there.
+
+The two drag sets started as files: `curve_drag.py make` writes them from
+`sets/utility-gain-splits.als` with the starting curves listed in the script, and the curves were
+then dragged in Live and the set saved. Each copy is one segment per bar alternating 0 dB and
++12 dB, then a flat bar. To drag the curves again, make the starting sets and follow the plan in
+the script's docstring (copy 1 a little one way, copy 2 a lot the same way, copy 3 the other
+way, copy 4 the same way as copy 2).
 
 ## Files
 
@@ -32,4 +42,9 @@ Operator track routed into a second audio track's input and recorded there.
   error of each reading per segment, the ramp fits at the jumps) and `live/<run>.envelope.csv`
   (level in dBFS, or frequency in Hz, every 2 ms). It also writes `live/fader-taper.csv` from
   the track volume run. Run it with `tools/.venv/bin/python measurements/automation/analyse.py
-  [run ...]` (numpy only; about two minutes for all seven).
+  [run ...]` (numpy only; a few minutes for all ten).
+- `curve_drag.py`: `analyse` checks every split in `utility-gain-splits` against de Casteljau and
+  replays every drag of the two drag sets through the rule in automation.md › Dragging a curve,
+  writing `live/utility-gain-splits.splits.json` and `live/<run>.drags.json` (each segment's
+  starting and saved curve, its paths and the fitted steps); `make` writes the starting sets.
+  It reads the sets only, no renders.
