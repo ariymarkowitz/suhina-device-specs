@@ -1,0 +1,4293 @@
+{
+ "set": "fourth.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "delay-time-jump-noise bypass",
+   "run": "delay-time-jump-noise",
+   "case": "bypass",
+   "device": "Delay",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "delay-time-jump-noise bypass"
+  },
+  {
+   "id": "delay-time-jump-noise default",
+   "run": "delay-time-jump-noise",
+   "case": "default",
+   "device": "Delay",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Smoothing": {
+     "value": 0,
+     "element": "DelayLine_SmoothingMode",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Link": {
+     "value": 0,
+     "element": "DelayLine_Link",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Ping Pong": {
+     "value": 0,
+     "element": "DelayLine_PingPong",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncL",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "R Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncR",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeL",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.5247681669137686,
+       "0.2"
+      ]
+     ],
+     "live": {
+      "value": 0.524800181388855,
+      "display": null
+     }
+    },
+    "R Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeR",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.45640501379966736,
+      "display": null
+     }
+    },
+    "L Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetL",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "R Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetR",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Freeze": {
+     "value": 0,
+     "element": "Freeze",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "Filter_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Freq": {
+     "value": 0.508932388602563,
+     "element": "Filter_Frequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.508949875831604,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.8823529411764706,
+     "element": "Filter_Bandwidth",
+     "stored": "8",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8823529481887817,
+      "display": null
+     }
+    },
+    "LFO > Delay": {
+     "value": 0.0,
+     "element": "Modulation_AmountTime",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO > Filter": {
+     "value": 0.0,
+     "element": "Modulation_AmountFilter",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Mode": {
+     "value": 0,
+     "element": "Modulation_TimeMode",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "LFO Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Morph": {
+     "value": 0.5,
+     "element": "Modulation_Morph",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "delay-time-jump-noise default"
+  },
+  {
+   "id": "delay-time-jump-noise repitch",
+   "run": "delay-time-jump-noise",
+   "case": "repitch",
+   "device": "Delay",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Smoothing": {
+     "value": 0,
+     "element": "DelayLine_SmoothingMode",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Link": {
+     "value": 0,
+     "element": "DelayLine_Link",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Ping Pong": {
+     "value": 0,
+     "element": "DelayLine_PingPong",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncL",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "R Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncR",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeL",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.5247681669137686,
+       "0.2"
+      ]
+     ],
+     "live": {
+      "value": 0.524800181388855,
+      "display": null
+     }
+    },
+    "R Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeR",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.45640501379966736,
+      "display": null
+     }
+    },
+    "L Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetL",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "R Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetR",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Freeze": {
+     "value": 0,
+     "element": "Freeze",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "Filter_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Freq": {
+     "value": 0.508932388602563,
+     "element": "Filter_Frequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.508949875831604,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.8823529411764706,
+     "element": "Filter_Bandwidth",
+     "stored": "8",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8823529481887817,
+      "display": null
+     }
+    },
+    "LFO > Delay": {
+     "value": 0.0,
+     "element": "Modulation_AmountTime",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO > Filter": {
+     "value": 0.0,
+     "element": "Modulation_AmountFilter",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Mode": {
+     "value": 0,
+     "element": "Modulation_TimeMode",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "LFO Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Morph": {
+     "value": 0.5,
+     "element": "Modulation_Morph",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "delay-time-jump-noise default"
+  },
+  {
+   "id": "delay-time-jump-noise fade",
+   "run": "delay-time-jump-noise",
+   "case": "fade",
+   "device": "Delay",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Smoothing": {
+     "value": 1,
+     "element": "DelayLine_SmoothingMode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Link": {
+     "value": 0,
+     "element": "DelayLine_Link",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Ping Pong": {
+     "value": 0,
+     "element": "DelayLine_PingPong",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncL",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "R Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncR",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeL",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.5247681669137686,
+       "0.2"
+      ]
+     ],
+     "live": {
+      "value": 0.524800181388855,
+      "display": null
+     }
+    },
+    "R Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeR",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.45640501379966736,
+      "display": null
+     }
+    },
+    "L Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetL",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "R Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetR",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Freeze": {
+     "value": 0,
+     "element": "Freeze",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "Filter_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Freq": {
+     "value": 0.508932388602563,
+     "element": "Filter_Frequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.508949875831604,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.8823529411764706,
+     "element": "Filter_Bandwidth",
+     "stored": "8",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8823529481887817,
+      "display": null
+     }
+    },
+    "LFO > Delay": {
+     "value": 0.0,
+     "element": "Modulation_AmountTime",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO > Filter": {
+     "value": 0.0,
+     "element": "Modulation_AmountFilter",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Mode": {
+     "value": 0,
+     "element": "Modulation_TimeMode",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "LFO Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Morph": {
+     "value": 0.5,
+     "element": "Modulation_Morph",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "delay-time-jump-noise fade"
+  },
+  {
+   "id": "delay-time-jump-noise jump",
+   "run": "delay-time-jump-noise",
+   "case": "jump",
+   "device": "Delay",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Smoothing": {
+     "value": 2,
+     "element": "DelayLine_SmoothingMode",
+     "stored": "2",
+     "live": {
+      "value": 2.0,
+      "display": null
+     }
+    },
+    "Link": {
+     "value": 0,
+     "element": "DelayLine_Link",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Ping Pong": {
+     "value": 0,
+     "element": "DelayLine_PingPong",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncL",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "R Sync": {
+     "value": 0,
+     "element": "DelayLine_SyncR",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "L Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeL",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.45646527290383504,
+       "0.1"
+      ],
+      [
+       64.0,
+       0.5247681669137686,
+       "0.2"
+      ]
+     ],
+     "live": {
+      "value": 0.524800181388855,
+      "display": null
+     }
+    },
+    "R Time": {
+     "value": 0.45646527290383504,
+     "element": "DelayLine_TimeR",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.45640501379966736,
+      "display": null
+     }
+    },
+    "L Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetL",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "R Offset": {
+     "value": 0.5,
+     "element": "DelayLine_OffsetR",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Freeze": {
+     "value": 0,
+     "element": "Freeze",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "Filter_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Freq": {
+     "value": 0.508932388602563,
+     "element": "Filter_Frequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.508949875831604,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.8823529411764706,
+     "element": "Filter_Bandwidth",
+     "stored": "8",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8823529481887817,
+      "display": null
+     }
+    },
+    "LFO > Delay": {
+     "value": 0.0,
+     "element": "Modulation_AmountTime",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO > Filter": {
+     "value": 0.0,
+     "element": "Modulation_AmountFilter",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Mode": {
+     "value": 0,
+     "element": "Modulation_TimeMode",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "LFO Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LFO Morph": {
+     "value": 0.5,
+     "element": "Modulation_Morph",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "delay-time-jump-noise jump"
+  },
+  {
+   "id": "spectral-resonator-mod-rate bypass",
+   "run": "spectral-resonator-mod-rate",
+   "case": "bypass",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "spectral-resonator-mod-rate bypass"
+  },
+  {
+   "id": "spectral-resonator-mod-rate default",
+   "run": "spectral-resonator-mod-rate",
+   "case": "default",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "spectral-resonator-mod-rate default"
+  },
+  {
+   "id": "spectral-resonator-mod-rate chorus-rate1",
+   "run": "spectral-resonator-mod-rate",
+   "case": "chorus-rate1",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    },
+    "Mod Rate": {
+     "value": 0.25,
+     "element": "Modulation_ModRate",
+     "stored": "0.01",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25084149837493896,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "1"
+   },
+   "track": "spectral-resonator-mod-rate chorus-rate1"
+  },
+  {
+   "id": "spectral-resonator-mod-rate chorus-rate10",
+   "run": "spectral-resonator-mod-rate",
+   "case": "chorus-rate10",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    },
+    "Mod Rate": {
+     "value": 0.5014204545454546,
+     "element": "Modulation_ModRate",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5008407831192017,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "1"
+   },
+   "track": "spectral-resonator-mod-rate chorus-rate10"
+  },
+  {
+   "id": "spectral-resonator-mod-rate chorus-rate64",
+   "run": "spectral-resonator-mod-rate",
+   "case": "chorus-rate64",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    },
+    "Mod Rate": {
+     "value": 0.875,
+     "element": "Modulation_ModRate",
+     "stored": "0.64",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "1"
+   },
+   "track": "spectral-resonator-mod-rate chorus-rate64"
+  },
+  {
+   "id": "spectral-resonator-mod-rate wander-rate1",
+   "run": "spectral-resonator-mod-rate",
+   "case": "wander-rate1",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    },
+    "Mod Rate": {
+     "value": 0.25,
+     "element": "Modulation_ModRate",
+     "stored": "0.01",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25084149837493896,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "2"
+   },
+   "track": "spectral-resonator-mod-rate wander-rate1"
+  },
+  {
+   "id": "spectral-resonator-mod-rate wander-rate64",
+   "run": "spectral-resonator-mod-rate",
+   "case": "wander-rate64",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    },
+    "Mod Rate": {
+     "value": 0.875,
+     "element": "Modulation_ModRate",
+     "stored": "0.64",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8745724558830261,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "2"
+   },
+   "track": "spectral-resonator-mod-rate wander-rate64"
+  },
+  {
+   "id": "spectral-time-order-reference bypass",
+   "run": "spectral-time-order-reference",
+   "case": "bypass",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-order-reference bypass"
+  },
+  {
+   "id": "spectral-time-order-reference default",
+   "run": "spectral-time-order-reference",
+   "case": "default",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 1,
+     "element": "Freezer_On",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay Mode": {
+     "value": 0,
+     "element": "Delay_TimeUnit",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4688490629196167,
+      "display": null
+     }
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Frozen": {
+     "value": 1,
+     "element": "Freezer_FreezeOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Mode": {
+     "value": 1,
+     "element": "Freezer_MainMode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Retrigger Mode": {
+     "value": 1,
+     "element": "Freezer_RetriggerMode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "S.Rate ms": {
+     "value": 0.3637834917422547,
+     "element": "Freezer_SyncIntervalSeconds",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.36366671323776245,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-order-reference default"
+  },
+  {
+   "id": "spectral-time-order-reference order-0",
+   "run": "spectral-time-order-reference",
+   "case": "order-0",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 1,
+     "element": "Freezer_On",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay Mode": {
+     "value": 0,
+     "element": "Delay_TimeUnit",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4688490629196167,
+      "display": null
+     }
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Frozen": {
+     "value": 1,
+     "element": "Freezer_FreezeOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Mode": {
+     "value": 1,
+     "element": "Freezer_MainMode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Retrigger Mode": {
+     "value": 1,
+     "element": "Freezer_RetriggerMode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "S.Rate ms": {
+     "value": 0.3637834917422547,
+     "element": "Freezer_SyncIntervalSeconds",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.36366671323776245,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "ProcessingOrder": "0"
+   },
+   "track": "spectral-time-order-reference default"
+  },
+  {
+   "id": "spectral-time-order-reference order-1",
+   "run": "spectral-time-order-reference",
+   "case": "order-1",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 1,
+     "element": "Freezer_On",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Delay Mode": {
+     "value": 0,
+     "element": "Delay_TimeUnit",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4688490629196167,
+      "display": null
+     }
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Frozen": {
+     "value": 1,
+     "element": "Freezer_FreezeOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Mode": {
+     "value": 1,
+     "element": "Freezer_MainMode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Retrigger Mode": {
+     "value": 1,
+     "element": "Freezer_RetriggerMode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "S.Rate ms": {
+     "value": 0.3637834917422547,
+     "element": "Freezer_SyncIntervalSeconds",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.36366671323776245,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "ProcessingOrder": "1"
+   },
+   "track": "spectral-time-order-reference order-1"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bypass",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bypass",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "vocoder-band-counts-bw25 bypass"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 default",
+   "run": "vocoder-band-counts-bw25",
+   "case": "default",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "vocoder-band-counts-bw25 default"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-0",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-0",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "0"
+   },
+   "track": "vocoder-band-counts-bw25 bands-0"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-1",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-1",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "1"
+   },
+   "track": "vocoder-band-counts-bw25 bands-1"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-2",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-2",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "2"
+   },
+   "track": "vocoder-band-counts-bw25 bands-2"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-3",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-3",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "3"
+   },
+   "track": "vocoder-band-counts-bw25 bands-3"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-4",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-4",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "4"
+   },
+   "track": "vocoder-band-counts-bw25 default"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-5",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-5",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "5"
+   },
+   "track": "vocoder-band-counts-bw25 bands-5"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-6",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-6",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "6"
+   },
+   "track": "vocoder-band-counts-bw25 bands-6"
+  },
+  {
+   "id": "vocoder-band-counts-bw25 bands-7",
+   "run": "vocoder-band-counts-bw25",
+   "case": "bands-7",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 0.0,
+     "element": "ModulatorAmount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Filter Width": {
+     "value": 0.25041666803881524,
+     "element": "FilterBandWidth",
+     "stored": "0.250416668",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.25041666626930237,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FilterBank/BandCount": "7"
+   },
+   "track": "vocoder-band-counts-bw25 bands-7"
+  },
+  {
+   "id": "spectral-resonator-dialmode-conflict bypass",
+   "run": "spectral-resonator-dialmode-conflict",
+   "case": "bypass",
+   "device": "Transmute",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "spectral-resonator-dialmode-conflict bypass"
+  },
+  {
+   "id": "spectral-resonator-dialmode-conflict default",
+   "run": "spectral-resonator-dialmode-conflict",
+   "case": "default",
+   "device": "Transmute",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Freq. Hz": {
+     "value": 0.47198765434526574,
+     "element": "PartialFrequencies_FrequencyHz",
+     "stored": "110",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.47234049439430237,
+      "display": null
+     }
+    },
+    "Note": {
+     "value": 57,
+     "element": "PartialFrequencies_FrequencyNote",
+     "stored": "57",
+     "live": {
+      "value": 57.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "spectral-resonator-dialmode-conflict default"
+  },
+  {
+   "id": "spectral-resonator-dialmode-conflict dialmode-0",
+   "run": "spectral-resonator-dialmode-conflict",
+   "case": "dialmode-0",
+   "device": "Transmute",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Freq. Hz": {
+     "value": 0.47198765434526574,
+     "element": "PartialFrequencies_FrequencyHz",
+     "stored": "110",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.47234049439430237,
+      "display": null
+     }
+    },
+    "Note": {
+     "value": 57,
+     "element": "PartialFrequencies_FrequencyNote",
+     "stored": "57",
+     "live": {
+      "value": 57.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "PartialFrequencies_FrequencyDialMode": "0"
+   },
+   "track": "spectral-resonator-dialmode-conflict default"
+  },
+  {
+   "id": "spectral-resonator-dialmode-conflict dialmode-1",
+   "run": "spectral-resonator-dialmode-conflict",
+   "case": "dialmode-1",
+   "device": "Transmute",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Freq. Hz": {
+     "value": 0.47198765434526574,
+     "element": "PartialFrequencies_FrequencyHz",
+     "stored": "110",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.47234049439430237,
+      "display": null
+     }
+    },
+    "Note": {
+     "value": 57,
+     "element": "PartialFrequencies_FrequencyNote",
+     "stored": "57",
+     "live": {
+      "value": 57.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "PartialFrequencies_FrequencyDialMode": "1"
+   },
+   "track": "spectral-resonator-dialmode-conflict dialmode-1"
+  },
+  {
+   "id": "compressor-peak-buzz-eq-off bypass",
+   "run": "compressor-peak-buzz-eq-off",
+   "case": "bypass",
+   "device": "Compressor2",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "compressor-peak-buzz-eq-off bypass"
+  },
+  {
+   "id": "compressor-peak-buzz-eq-off default",
+   "run": "compressor-peak-buzz-eq-off",
+   "case": "default",
+   "device": "Compressor2",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Knee": {
+     "value": 0.0,
+     "element": "Knee",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Attack": {
+     "value": 0.0,
+     "element": "Attack",
+     "stored": "0.01",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Release": {
+     "value": 0.0,
+     "element": "Release",
+     "stored": "1",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LookAhead": {
+     "value": 0,
+     "element": "LookAhead",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Threshold": {
+     "value": 0.4505208333333333,
+     "element": "Threshold",
+     "stored": "0.1584893192",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4499998092651367,
+      "display": null
+     }
+    },
+    "Ratio": {
+     "value": 0.8995413829910357,
+     "element": "Ratio",
+     "stored": "10",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8999999761581421,
+      "display": null
+     }
+    },
+    "S/C EQ On": {
+     "value": 0,
+     "element": "SideChainEq_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "compressor-peak-buzz-eq-off default"
+  },
+  {
+   "id": "compressor-peak-buzz-eq-off peak-fast",
+   "run": "compressor-peak-buzz-eq-off",
+   "case": "peak-fast",
+   "device": "Compressor2",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Knee": {
+     "value": 0.0,
+     "element": "Knee",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Attack": {
+     "value": 0.0,
+     "element": "Attack",
+     "stored": "0.01",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Release": {
+     "value": 0.0,
+     "element": "Release",
+     "stored": "1",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LookAhead": {
+     "value": 0,
+     "element": "LookAhead",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Threshold": {
+     "value": 0.4505208333333333,
+     "element": "Threshold",
+     "stored": "0.1584893192",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4499998092651367,
+      "display": null
+     }
+    },
+    "Ratio": {
+     "value": 0.8995413829910357,
+     "element": "Ratio",
+     "stored": "10",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8999999761581421,
+      "display": null
+     }
+    },
+    "S/C EQ On": {
+     "value": 0,
+     "element": "SideChainEq_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "compressor-peak-buzz-eq-off default"
+  },
+  {
+   "id": "compressor-peak-buzz-eq-off rms-fast",
+   "run": "compressor-peak-buzz-eq-off",
+   "case": "rms-fast",
+   "device": "Compressor2",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Model": {
+     "value": 1,
+     "element": "Model",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Knee": {
+     "value": 0.0,
+     "element": "Knee",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Attack": {
+     "value": 0.0,
+     "element": "Attack",
+     "stored": "0.01",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Release": {
+     "value": 0.0,
+     "element": "Release",
+     "stored": "1",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "LookAhead": {
+     "value": 0,
+     "element": "LookAhead",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Threshold": {
+     "value": 0.4505208333333333,
+     "element": "Threshold",
+     "stored": "0.1584893192",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4499998092651367,
+      "display": null
+     }
+    },
+    "Ratio": {
+     "value": 0.8995413829910357,
+     "element": "Ratio",
+     "stored": "10",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8999999761581421,
+      "display": null
+     }
+    },
+    "S/C EQ On": {
+     "value": 0,
+     "element": "SideChainEq_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "compressor-peak-buzz-eq-off rms-fast"
+  },
+  {
+   "id": "compressor-peak-buzz-eq-off peak-rel100",
+   "run": "compressor-peak-buzz-eq-off",
+   "case": "peak-rel100",
+   "device": "Compressor2",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Model": {
+     "value": 0,
+     "element": "Model",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Knee": {
+     "value": 0.0,
+     "element": "Knee",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Attack": {
+     "value": 0.0,
+     "element": "Attack",
+     "stored": "0.01",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Release": {
+     "value": 0.2713028404327419,
+     "element": "Release",
+     "stored": "100",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.2713049054145813,
+      "display": null
+     }
+    },
+    "LookAhead": {
+     "value": 0,
+     "element": "LookAhead",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Threshold": {
+     "value": 0.4505208333333333,
+     "element": "Threshold",
+     "stored": "0.1584893192",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4499998092651367,
+      "display": null
+     }
+    },
+    "Ratio": {
+     "value": 0.8995413829910357,
+     "element": "Ratio",
+     "stored": "10",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8999999761581421,
+      "display": null
+     }
+    },
+    "S/C EQ On": {
+     "value": 0,
+     "element": "SideChainEq_On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "compressor-peak-buzz-eq-off peak-rel100"
+  },
+  {
+   "id": "phaser-flanger-env-times-small bypass",
+   "run": "phaser-flanger-env-times-small",
+   "case": "bypass",
+   "device": "PhaserNew",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-env-times-small bypass"
+  },
+  {
+   "id": "phaser-flanger-env-times-small default",
+   "run": "phaser-flanger-env-times-small",
+   "case": "default",
+   "device": "PhaserNew",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Mode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Amount": {
+     "value": 0.0,
+     "element": "Modulation_Amount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7071067690849304,
+      "display": null
+     }
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4",
+     "live": {
+      "value": 4.0,
+      "display": null
+     }
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4768235981464386,
+      "display": null
+     }
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Flanger Time": {
+     "value": 1.0,
+     "element": "FlangerDelayTime",
+     "stored": "0.02",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.6880202889442444,
+      "display": null
+     }
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.722381055355072,
+      "display": null
+     }
+    },
+    "Env Enabled": {
+     "value": 1,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Env Amount": {
+     "value": 0.55,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.550000011920929,
+      "display": null
+     }
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-env-times-small default"
+  },
+  {
+   "id": "phaser-flanger-env-times-small att0.1",
+   "run": "phaser-flanger-env-times-small",
+   "case": "att0.1",
+   "device": "PhaserNew",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Mode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Amount": {
+     "value": 0.0,
+     "element": "Modulation_Amount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7071067690849304,
+      "display": null
+     }
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4",
+     "live": {
+      "value": 4.0,
+      "display": null
+     }
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4768235981464386,
+      "display": null
+     }
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Flanger Time": {
+     "value": 1.0,
+     "element": "FlangerDelayTime",
+     "stored": "0.02",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.6880202889442444,
+      "display": null
+     }
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.722381055355072,
+      "display": null
+     }
+    },
+    "Env Enabled": {
+     "value": 1,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Env Amount": {
+     "value": 0.55,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.550000011920929,
+      "display": null
+     }
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Env Attack": {
+     "value": 8.461538649253079e-11,
+     "element": "Modulation_EnvelopeAttack",
+     "stored": "0.0001",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Env Release": {
+     "value": 0.24981244936990069,
+     "element": "Modulation_EnvelopeRelease",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.24981243908405304,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-env-times-small att0.1"
+  },
+  {
+   "id": "phaser-flanger-env-times-small att30",
+   "run": "phaser-flanger-env-times-small",
+   "case": "att30",
+   "device": "PhaserNew",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Mode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Amount": {
+     "value": 0.0,
+     "element": "Modulation_Amount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7071067690849304,
+      "display": null
+     }
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4",
+     "live": {
+      "value": 4.0,
+      "display": null
+     }
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4768235981464386,
+      "display": null
+     }
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Flanger Time": {
+     "value": 1.0,
+     "element": "FlangerDelayTime",
+     "stored": "0.02",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.6880202889442444,
+      "display": null
+     }
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.722381055355072,
+      "display": null
+     }
+    },
+    "Env Enabled": {
+     "value": 1,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Env Amount": {
+     "value": 0.55,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.550000011920929,
+      "display": null
+     }
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Env Attack": {
+     "value": 1,
+     "element": "Modulation_EnvelopeAttack",
+     "stored": "0.03",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Env Release": {
+     "value": 0.24981244936990069,
+     "element": "Modulation_EnvelopeRelease",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.24981243908405304,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-env-times-small att30"
+  },
+  {
+   "id": "phaser-flanger-env-times-small rel0.1",
+   "run": "phaser-flanger-env-times-small",
+   "case": "rel0.1",
+   "device": "PhaserNew",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Mode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Amount": {
+     "value": 0.0,
+     "element": "Modulation_Amount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7071067690849304,
+      "display": null
+     }
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4",
+     "live": {
+      "value": 4.0,
+      "display": null
+     }
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4768235981464386,
+      "display": null
+     }
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Flanger Time": {
+     "value": 1.0,
+     "element": "FlangerDelayTime",
+     "stored": "0.02",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.6880202889442444,
+      "display": null
+     }
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.722381055355072,
+      "display": null
+     }
+    },
+    "Env Enabled": {
+     "value": 1,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Env Amount": {
+     "value": 0.55,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.550000011920929,
+      "display": null
+     }
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Env Attack": {
+     "value": 0.030100335204718085,
+     "element": "Modulation_EnvelopeAttack",
+     "stored": "0.001",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.03010033629834652,
+      "display": null
+     }
+    },
+    "Env Release": {
+     "value": 6.32658154956975e-12,
+     "element": "Modulation_EnvelopeRelease",
+     "stored": "0.0001",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-env-times-small rel0.1"
+  },
+  {
+   "id": "phaser-flanger-env-times-small rel400",
+   "run": "phaser-flanger-env-times-small",
+   "case": "rel400",
+   "device": "PhaserNew",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Mode",
+     "stored": "1",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Amount": {
+     "value": 0.0,
+     "element": "Modulation_Amount",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7071067690849304,
+      "display": null
+     }
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4",
+     "live": {
+      "value": 4.0,
+      "display": null
+     }
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4768235981464386,
+      "display": null
+     }
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Flanger Time": {
+     "value": 1.0,
+     "element": "FlangerDelayTime",
+     "stored": "0.02",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.6880202889442444,
+      "display": null
+     }
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5552378296852112,
+      "display": null
+     }
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5,
+      "display": null
+     }
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.722381055355072,
+      "display": null
+     }
+    },
+    "Env Enabled": {
+     "value": 1,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Env Amount": {
+     "value": 0.55,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.550000011920929,
+      "display": null
+     }
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Env Attack": {
+     "value": 0.030100335204718085,
+     "element": "Modulation_EnvelopeAttack",
+     "stored": "0.001",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.03010033629834652,
+      "display": null
+     }
+    },
+    "Env Release": {
+     "value": 0.9999999849962493,
+     "element": "Modulation_EnvelopeRelease",
+     "stored": "0.4",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-env-times-small rel400"
+  },
+  {
+   "id": "vocoder-pitch-limits bypass",
+   "run": "vocoder-pitch-limits",
+   "case": "bypass",
+   "device": "Vocoder",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "vocoder-pitch-limits bypass"
+  },
+  {
+   "id": "vocoder-pitch-limits default",
+   "run": "vocoder-pitch-limits",
+   "case": "default",
+   "device": "Vocoder",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 1.0,
+     "element": "ModulatorAmount",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "CarrierSource/Type": "3"
+   },
+   "track": "vocoder-pitch-limits default"
+  },
+  {
+   "id": "vocoder-pitch-limits limits-wide",
+   "run": "vocoder-pitch-limits",
+   "case": "limits-wide",
+   "device": "Vocoder",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 1.0,
+     "element": "ModulatorAmount",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Lower Pitch Detection": {
+     "value": 1.4771212339401245,
+     "element": "CarrierSource/DetectionLowerBound",
+     "stored": "30",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.4771212339401245,
+      "display": null
+     }
+    },
+    "Upper Pitch Detection": {
+     "value": 3.477121353149414,
+     "element": "CarrierSource/DetectionUpperBound",
+     "stored": "3000",
+     "tol": 0.015625,
+     "live": {
+      "value": 3.477121353149414,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "CarrierSource/Type": "3"
+   },
+   "track": "vocoder-pitch-limits limits-wide"
+  },
+  {
+   "id": "vocoder-pitch-limits limits-mid",
+   "run": "vocoder-pitch-limits",
+   "case": "limits-mid",
+   "device": "Vocoder",
+   "probe": "measurements/probe-ext/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 1.0,
+     "element": "ModulatorAmount",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "Lower Pitch Detection": {
+     "value": 2.300837992916867,
+     "element": "CarrierSource/DetectionLowerBound",
+     "stored": "200",
+     "tol": 0.015625,
+     "live": {
+      "value": 2.301029920578003,
+      "display": null
+     }
+    },
+    "Upper Pitch Detection": {
+     "value": 2.903220148410676,
+     "element": "CarrierSource/DetectionUpperBound",
+     "stored": "800",
+     "tol": 0.015625,
+     "live": {
+      "value": 2.903090000152588,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "elements": {
+    "CarrierSource/Type": "3"
+   },
+   "track": "vocoder-pitch-limits limits-mid"
+  }
+ ],
+ "keys": {}
+}

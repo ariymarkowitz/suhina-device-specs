@@ -96,7 +96,8 @@ and the other 157 priority 1 to 3 runs of all 42 devices in a second set in
 [`measurements/remaining/`](measurements/remaining/README.md), whose answers are written into the
 notes. A third set of 147 runs on 39 devices (1048 renders, five parts and a pilot) was rendered in
 Live 12.4.7 ([`measurements/third/`](measurements/third/README.md)) and read into the notes as
-`[measured 12.4.7]` (Measured › Third set). All 42 notes now have a Measured section with
+`[measured 12.4.7]` (Measured › Third set). Eight runs the third set left open were rendered as a fourth set
+in Live 12.4.7 ([`measurements/fourth/`](measurements/fourth/README.md)). All 42 notes now have a Measured section with
 `[measured 12.4.6]` facts (INDEX: `partly measured`; Compressor's are in its Behaviour section).
 
 The eight MIDI effects of chapter 30 have notes too ([`live-12/midi-effects/`](live-12/midi-effects/INDEX.md)),
@@ -108,13 +109,13 @@ Automation playback is measured from seven hand-made sets (`measurements/automat
 segment moves, the curve family, the volume fader's taper and the smoothing of jumps are in
 [`live-12/automation.md`](live-12/automation.md), and Utility's Gain taper and smoothing in its note.
 
-Next: the eight candidate runs added to the devices' `runs.py` files after the third set (listed in
-[`measurements/third/README.md`](measurements/third/README.md) › Settings that did not read, and what is
-open: Compressor's 50 Hz buzz with the side-chain EQ off, Delay's time jumps with noise, the
-Phaser-Flanger envelope times, Spectral Resonator's Mod Rate and frequency dial, Spectral Time's
-processing order, the Vocoder's band counts and Pitch Tracking limits), the other open points the notes
-list (every other candidate in the devices' `runs.py` files has been run), and what audio with static
-settings cannot show (MIDI pitch bend and velocity, Roar's other matrix cells, Shifter's Spread;
+Next: the points the notes still list as open. They are Delay's ramped time (`delay-time-ramp-noise`
+in `runs.py`, the one candidate not yet run), the Vocoder's rule for a parked oscillator when the
+Pitch Tracking input is outside its limits, Mod Rate in Granular and in Hz, the third set's other
+open points ([`measurements/third/README.md`](measurements/third/README.md) › Settings that did not
+read, and what is open: Looper's Feedback law and crossfades, Glue Compressor's Oversample, Limiter's
+fs/4 at 45 degrees, Corpus' Tune sharpness, Spectral Time's AvoidFreezingOnsets), and what audio with
+static settings cannot show (MIDI pitch bend and velocity, Roar's other matrix cells, Shifter's Spread;
 automation beyond the parameters in `measurements/automation/`).
 
 ## Licence

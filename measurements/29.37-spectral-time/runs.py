@@ -113,7 +113,7 @@ RUNS = [
      "base": dict(DELAY, **{"Delay Mode": {"item": "Synced"}, "Delay Feedback": {"display": 0}}),
      "cases": [[f"synced-{i}", {"Delay Synced": i}] for i in (6, 9, 12, 18)]},
 
-    # ---- candidate after the third set: `order-1` of spectral-time-resolution-order has no render of the other order to compare with
+    # ---- fourth set: `order-1` of spectral-time-resolution-order has no render of the other order to compare with
     {"name": "spectral-time-order-reference", "plan": "9", "probe": "gap2", "read": ["raw render (level and spectrum over time)"], "priority": 3,
      "why": "the processing order: the third set rendered Freezer and Delay on with ProcessingOrder 1 only, so the order's effect cannot be read",
      "question": "Freezer (Retrigger, Sync every 500 ms, Frozen) and Delay (250 ms, Feedback 0) both on: ProcessingOrder 0 and 1",

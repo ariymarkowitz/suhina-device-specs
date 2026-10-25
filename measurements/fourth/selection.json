@@ -1,0 +1,18 @@
+{
+ "name": "fourth",
+ "probes": {
+  "gap2": "measurements/probe.wav",
+  "gap10": "measurements/29.32-reverb/probe-gap10/probe.wav",
+  "ext": "measurements/probe-ext/probe.wav"
+ },
+ "runs": [
+  "compressor-peak-buzz-eq-off",
+  "delay-time-jump-noise",
+  "phaser-flanger-env-times-small",
+  "spectral-resonator-mod-rate",
+  "spectral-resonator-dialmode-conflict",
+  "spectral-time-order-reference",
+  "vocoder-band-counts-bw25",
+  "vocoder-pitch-limits"
+ ]
+}

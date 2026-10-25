@@ -335,6 +335,9 @@ $PY tools/harness/batch.py summary measurements/top100/selection.json [run ...]
   in five parts built from `third-N.selection.json`, rendered by Live 12.4.7; `verify` matched all
   1158 cases. Live was updated to 12.4.7 between the top 100 set and the remaining set, so the
   remaining set's renders are 12.4.7 as well (its notes keep the tag 12.4.6).
+- **Fourth set** (`measurements/fourth/README.md`): the eight candidate runs left open by the third set,
+  45 cases on 40 tracks in one set, rendered by Live 12.4.7 with every track exported at once at 60
+  bars (`analyse --trim` cut each probe group back); `verify` matched all 45 cases.
 
 ## 3. Compare an implementation with Live
 

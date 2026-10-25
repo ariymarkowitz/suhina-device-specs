@@ -1,0 +1,1255 @@
+{
+ "rate": 44100,
+ "offset_samples": 0,
+ "length_s": 86.49603174603175,
+ "impulse": {
+  "peak_db": -4.90675783715491e-07,
+  "taps": [
+   {
+    "time_ms": 0.0,
+    "level_db": -4.90675783715491e-07,
+    "left": 0.9999999435088643,
+    "right": 0.9999999435088643
+   }
+  ],
+  "rt60_s": null
+ },
+ "silence": {
+  "rms_db": [
+   -240.0,
+   -240.0
+  ],
+  "peak_db": [
+   -240.0,
+   -240.0
+  ]
+ },
+ "ext": {
+  "stair100": [
+   {
+    "in_db": -60.0,
+    "left_out_db": -60.000428053423434,
+    "left_gain_db": -0.0004280534234339939,
+    "left_thd_pct": 0.06154114280407642,
+    "harmonics_db": [
+     -64.24845943411206,
+     -85.95072359615446,
+     -97.2555576833094,
+     -106.17061522706918,
+     -112.61944230089657
+    ],
+    "right_out_db": -60.000428053423434,
+    "right_gain_db": -0.0004280534234339939,
+    "right_thd_pct": 0.06154114280407642
+   },
+   {
+    "in_db": -57.0,
+    "left_out_db": -57.00042809295873,
+    "left_gain_db": -0.00042809295872814346,
+    "left_thd_pct": 0.06154114262576932,
+    "harmonics_db": [
+     -64.24845942808501,
+     -85.95072849351389,
+     -97.2555596756868,
+     -106.17057351997883,
+     -112.61942300306275
+    ],
+    "right_out_db": -57.00042809295873,
+    "right_gain_db": -0.00042809295872814346,
+    "right_thd_pct": 0.06154114262576932
+   },
+   {
+    "in_db": -54.0,
+    "left_out_db": -54.00042806250088,
+    "left_gain_db": -0.00042806250088034403,
+    "left_thd_pct": 0.06154114257645929,
+    "harmonics_db": [
+     -64.24845942106076,
+     -85.95073026095832,
+     -97.25555910653657,
+     -106.17061352043257,
+     -112.61944185312046
+    ],
+    "right_out_db": -54.00042806250088,
+    "right_gain_db": -0.00042806250088034403,
+    "right_thd_pct": 0.06154114257645929
+   },
+   {
+    "in_db": -51.0,
+    "left_out_db": -51.000428085649794,
+    "left_gain_db": -0.0004280856497942409,
+    "left_thd_pct": 0.061541142710306605,
+    "harmonics_db": [
+     -64.24845943117471,
+     -85.95072597278579,
+     -97.25555827503582,
+     -106.17060969882331,
+     -112.61944005357742
+    ],
+    "right_out_db": -51.000428085649794,
+    "right_gain_db": -0.0004280856497942409,
+    "right_thd_pct": 0.061541142710306605
+   },
+   {
+    "in_db": -48.0,
+    "left_out_db": -48.00042803837939,
+    "left_gain_db": -0.0004280383793897613,
+    "left_thd_pct": 0.06154114248880161,
+    "harmonics_db": [
+     -64.24845941111228,
+     -85.95073370246132,
+     -97.25556063112543,
+     -106.17058277342579,
+     -112.61943655558733
+    ],
+    "right_out_db": -48.00042803837939,
+    "right_gain_db": -0.0004280383793897613,
+    "right_thd_pct": 0.06154114248880161
+   },
+   {
+    "in_db": -45.0,
+    "left_out_db": -45.000428065227815,
+    "left_gain_db": -0.0004280652278154662,
+    "left_thd_pct": 0.061541142614891665,
+    "harmonics_db": [
+     -64.24845941993813,
+     -85.95072958664096,
+     -97.25555910389268,
+     -106.17060916008101,
+     -112.61943958520561
+    ],
+    "right_out_db": -45.000428065227815,
+    "right_gain_db": -0.0004280652278154662,
+    "right_thd_pct": 0.061541142614891665
+   },
+   {
+    "in_db": -42.0,
+    "left_out_db": -42.00042805399534,
+    "left_gain_db": -0.00042805399534273647,
+    "left_thd_pct": 0.061541142641454216,
+    "harmonics_db": [
+     -64.24845942715977,
+     -85.95072807993994,
+     -97.25555897930238,
+     -106.17060079504283,
+     -112.61944071784487
+    ],
+    "right_out_db": -42.00042805399534,
+    "right_gain_db": -0.00042805399534273647,
+    "right_thd_pct": 0.061541142641454216
+   },
+   {
+    "in_db": -39.0,
+    "left_out_db": -39.000428034691794,
+    "left_gain_db": -0.000428034691793755,
+    "left_thd_pct": 0.06154114254752219,
+    "harmonics_db": [
+     -64.24845940882561,
+     -85.95073279358091,
+     -97.2555604006181,
+     -106.17058385321317,
+     -112.61943525559559
+    ],
+    "right_out_db": -39.000428034691794,
+    "right_gain_db": -0.000428034691793755,
+    "right_thd_pct": 0.06154114254752219
+   },
+   {
+    "in_db": -36.0,
+    "left_out_db": -36.000428062120804,
+    "left_gain_db": -0.00042806212080392925,
+    "left_thd_pct": 0.061541142602370966,
+    "harmonics_db": [
+     -64.2484594140711,
+     -85.95073106780333,
+     -97.2555604526422,
+     -106.17056510939517,
+     -112.61943001794813
+    ],
+    "right_out_db": -36.000428062120804,
+    "right_gain_db": -0.00042806212080392925,
+    "right_thd_pct": 0.061541142602370966
+   },
+   {
+    "in_db": -33.0,
+    "left_out_db": -33.00042810954454,
+    "left_gain_db": -0.00042810954454353123,
+    "left_thd_pct": 0.061541142682766455,
+    "harmonics_db": [
+     -64.24845942530338,
+     -85.95072769456269,
+     -97.25555930032677,
+     -106.1705761084365,
+     -112.61942742673419
+    ],
+    "right_out_db": -33.00042810954454,
+    "right_gain_db": -0.00042810954454353123,
+    "right_thd_pct": 0.061541142682766455
+   },
+   {
+    "in_db": -30.0,
+    "left_out_db": -30.000428075734156,
+    "left_gain_db": -0.0004280757341561525,
+    "left_thd_pct": 0.06154114267352992,
+    "harmonics_db": [
+     -64.24845941943494,
+     -85.95072854059012,
+     -97.2555592005189,
+     -106.17059578670721,
+     -112.6194350295747
+    ],
+    "right_out_db": -30.000428075734156,
+    "right_gain_db": -0.0004280757341561525,
+    "right_thd_pct": 0.06154114267352992
+   },
+   {
+    "in_db": -27.0,
+    "left_out_db": -27.0004280723318,
+    "left_gain_db": -0.00042807233180042203,
+    "left_thd_pct": 0.06154114266336544,
+    "harmonics_db": [
+     -64.24845943480577,
+     -85.95072650448982,
+     -97.25555844818062,
+     -106.17059835118467,
+     -112.61943012352923
+    ],
+    "right_out_db": -27.0004280723318,
+    "right_gain_db": -0.00042807233180042203,
+    "right_thd_pct": 0.06154114266336544
+   },
+   {
+    "in_db": -24.0,
+    "left_out_db": -24.000428059101004,
+    "left_gain_db": -0.0004280591010044077,
+    "left_thd_pct": 0.06154114267738113,
+    "harmonics_db": [
+     -64.24845941243171,
+     -85.95072954153294,
+     -97.25555951827852,
+     -106.17059267287813,
+     -112.61943943316736
+    ],
+    "right_out_db": -24.000428059101004,
+    "right_gain_db": -0.0004280591010044077,
+    "right_thd_pct": 0.06154114267738113
+   },
+   {
+    "in_db": -21.0,
+    "left_out_db": -21.000428042182946,
+    "left_gain_db": -0.0004280421829463421,
+    "left_thd_pct": 0.06154114256757882,
+    "harmonics_db": [
+     -64.24845941756308,
+     -85.9507311707284,
+     -97.25556001469533,
+     -106.17057993458134,
+     -112.6194359025271
+    ],
+    "right_out_db": -21.000428042182946,
+    "right_gain_db": -0.0004280421829463421,
+    "right_thd_pct": 0.06154114256757882
+   },
+   {
+    "in_db": -18.0,
+    "left_out_db": -18.000428056721894,
+    "left_gain_db": -0.00042805672189416555,
+    "left_thd_pct": 0.06154114256890667,
+    "harmonics_db": [
+     -64.24845940866719,
+     -85.95073238812881,
+     -97.25556031410599,
+     -106.17058475946317,
+     -112.61943722799603
+    ],
+    "right_out_db": -18.000428056721894,
+    "right_gain_db": -0.00042805672189416555,
+    "right_thd_pct": 0.06154114256890667
+   },
+   {
+    "in_db": -15.0,
+    "left_out_db": -15.000428054017476,
+    "left_gain_db": -0.0004280540174761427,
+    "left_thd_pct": 0.061541142586960876,
+    "harmonics_db": [
+     -64.24845941270658,
+     -85.95073177580156,
+     -97.25556113223413,
+     -106.17053693565337,
+     -112.61941769126112
+    ],
+    "right_out_db": -15.000428054017476,
+    "right_gain_db": -0.0004280540174761427,
+    "right_thd_pct": 0.061541142586960876
+   },
+   {
+    "in_db": -12.0,
+    "left_out_db": -12.000428066055004,
+    "left_gain_db": -0.00042806605500445016,
+    "left_thd_pct": 0.06154114270534001,
+    "harmonics_db": [
+     -64.24845942701138,
+     -85.95072676398263,
+     -97.25555879696024,
+     -106.17059557462481,
+     -112.61943045488431
+    ],
+    "right_out_db": -12.000428066055004,
+    "right_gain_db": -0.00042806605500445016,
+    "right_thd_pct": 0.06154114270534001
+   },
+   {
+    "in_db": -9.0,
+    "left_out_db": -9.00042812443299,
+    "left_gain_db": -0.0004281244329895628,
+    "left_thd_pct": 0.0615411426553661,
+    "harmonics_db": [
+     -64.2484594262273,
+     -85.95072802885969,
+     -97.25555920226591,
+     -106.17058705379827,
+     -112.61943620277377
+    ],
+    "right_out_db": -9.00042812443299,
+    "right_gain_db": -0.0004281244329895628,
+    "right_thd_pct": 0.0615411426553661
+   },
+   {
+    "in_db": -6.0,
+    "left_out_db": -6.000428084677601,
+    "left_gain_db": -0.00042808467760124813,
+    "left_thd_pct": 0.06154114264260412,
+    "harmonics_db": [
+     -64.24845941904235,
+     -85.95072925212477,
+     -97.25555912456008,
+     -106.17060292489879,
+     -112.6194409730269
+    ],
+    "right_out_db": -6.000428084677601,
+    "right_gain_db": -0.00042808467760124813,
+    "right_thd_pct": 0.06154114264260412
+   },
+   {
+    "in_db": -3.0,
+    "left_out_db": -3.0004280374491628,
+    "left_gain_db": -0.00042803744916275477,
+    "left_thd_pct": 0.06154114261764721,
+    "harmonics_db": [
+     -64.24845942231329,
+     -85.95072897428507,
+     -97.25555791027985,
+     -106.17064681166815,
+     -112.6194500179834
+    ],
+    "right_out_db": -3.0004280374491628,
+    "right_gain_db": -0.00042803744916275477,
+    "right_thd_pct": 0.06154114261764721
+   },
+   {
+    "in_db": 0.0,
+    "left_out_db": -0.0004280502855344739,
+    "left_gain_db": -0.0004280502855344739,
+    "left_thd_pct": 0.06154114264601748,
+    "harmonics_db": [
+     -64.24845942828982,
+     -85.95072753005715,
+     -97.25555775138325,
+     -106.1706361668857,
+     -112.61944571149274
+    ],
+    "right_out_db": -0.0004280502855344739,
+    "right_gain_db": -0.0004280502855344739,
+    "right_thd_pct": 0.06154114264601748
+   }
+  ],
+  "tone10k": {
+   "rms_db": [
+    -9.010299977180717,
+    -9.010299977180717
+   ],
+   "level_db": [
+    -6.000000020540882,
+    -6.000000020540882
+   ],
+   "gain_db": [
+    0.0,
+    0.0
+   ],
+   "peaks": [
+    [
+     [
+      10000.0,
+      -6.0
+     ]
+    ],
+    [
+     [
+      10000.0,
+      -6.0
+     ]
+    ]
+   ],
+   "thd_pct": 1.4588181485303227e-07
+  },
+  "tone15k": {
+   "rms_db": [
+    -9.010300047276314,
+    -9.010300047276314
+   ],
+   "level_db": [
+    -6.000000090636528,
+    -6.000000090636528
+   ],
+   "gain_db": [
+    0.0,
+    0.0
+   ],
+   "peaks": [
+    [
+     [
+      15000.0,
+      -6.0
+     ]
+    ],
+    [
+     [
+      15000.0,
+      -6.0
+     ]
+    ]
+   ],
+   "thd_pct": 0.0
+  },
+  "tone3k": {
+   "rms_db": [
+    -15.010299999216466,
+    -15.010299999216466
+   ],
+   "level_db": [
+    -12.000000042576657,
+    -12.000000042576657
+   ],
+   "gain_db": [
+    0.0,
+    0.0
+   ],
+   "peaks": [
+    [
+     [
+      3000.0,
+      -12.0
+     ]
+    ],
+    [
+     [
+      3000.0,
+      -12.0
+     ]
+    ]
+   ],
+   "thd_pct": 6.035621225267796e-07
+  },
+  "tone50": {
+   "rms_db": [
+    -9.010299977709822,
+    -9.010299977709822
+   ],
+   "level_db": [
+    -6.000000021070013,
+    -6.000000021070013
+   ],
+   "gain_db": [
+    0.0,
+    0.0
+   ],
+   "peaks": [
+    [
+     [
+      50.0,
+      -6.0
+     ]
+    ],
+    [
+     [
+      50.0,
+      -6.0
+     ]
+    ]
+   ],
+   "thd_pct": 3.445246449613502e-07
+  },
+  "saw": {
+   "rms_db": [
+    -18.16907872884789,
+    -18.16907872884789
+   ],
+   "level_db": [
+    -17.302204493402645,
+    -17.302204493402645
+   ],
+   "gain_db": [
+    0.0,
+    0.0
+   ],
+   "peaks": [
+    [
+     [
+      150.0,
+      -17.3
+     ],
+     [
+      300.0,
+      -23.32
+     ],
+     [
+      450.0,
+      -26.84
+     ],
+     [
+      600.0,
+      -29.34
+     ],
+     [
+      750.0,
+      -31.28
+     ],
+     [
+      900.0,
+      -32.87
+     ],
+     [
+      1050.0,
+      -34.2
+     ],
+     [
+      1200.0,
+      -35.36
+     ],
+     [
+      1350.0,
+      -36.39
+     ],
+     [
+      1500.0,
+      -37.3
+     ],
+     [
+      1650.0,
+      -38.13
+     ],
+     [
+      1800.0,
+      -38.89
+     ]
+    ],
+    [
+     [
+      150.0,
+      -17.3
+     ],
+     [
+      300.0,
+      -23.32
+     ],
+     [
+      450.0,
+      -26.84
+     ],
+     [
+      600.0,
+      -29.34
+     ],
+     [
+      750.0,
+      -31.28
+     ],
+     [
+      900.0,
+      -32.87
+     ],
+     [
+      1050.0,
+      -34.2
+     ],
+     [
+      1200.0,
+      -35.36
+     ],
+     [
+      1350.0,
+      -36.39
+     ],
+     [
+      1500.0,
+      -37.3
+     ],
+     [
+      1650.0,
+      -38.13
+     ],
+     [
+      1800.0,
+      -38.89
+     ]
+    ]
+   ],
+   "thd_pct": 74.1463236238294
+  },
+  "shortbursts": [
+   {
+    "length_ms": 1.0,
+    "peak_db": [
+     -6.000055239106325,
+     -6.000055239106325
+    ],
+    "peak_gain_db": [
+     -5.5239106324656007e-05,
+     -5.5239106324656007e-05
+    ],
+    "rms_gain_db": [
+     0.009771029998242753,
+     0.009771029998242753
+    ],
+    "tail_peak_db": [
+     -240.0,
+     -240.0
+    ]
+   },
+   {
+    "length_ms": 5.0,
+    "peak_db": [
+     -6.0013775701704875,
+     -6.0013775701704875
+    ],
+    "peak_gain_db": [
+     -0.0013775701704874521,
+     -0.0013775701704874521
+    ],
+    "rms_gain_db": [
+     -0.010099966885624312,
+     -0.010099966885624312
+    ],
+    "tail_peak_db": [
+     -240.0,
+     -240.0
+    ]
+   },
+   {
+    "length_ms": 10.0,
+    "peak_db": [
+     -6.000055239106325,
+     -6.000055239106325
+    ],
+    "peak_gain_db": [
+     -5.5239106324656007e-05,
+     -5.5239106324656007e-05
+    ],
+    "rms_gain_db": [
+     -2.1070011513302234e-08,
+     -2.1070011513302234e-08
+    ],
+    "tail_peak_db": [
+     -240.0,
+     -240.0
+    ]
+   },
+   {
+    "length_ms": 30.0,
+    "peak_db": [
+     -6.000055239106325,
+     -6.000055239106325
+    ],
+    "peak_gain_db": [
+     -5.5239106324656007e-05,
+     -5.5239106324656007e-05
+    ],
+    "rms_gain_db": [
+     -2.0616490736813375e-08,
+     -2.0616490736813375e-08
+    ],
+    "tail_peak_db": [
+     -240.0,
+     -240.0
+    ]
+   },
+   {
+    "length_ms": 100.0,
+    "peak_db": [
+     -6.000055239106325,
+     -6.000055239106325
+    ],
+    "peak_gain_db": [
+     -5.5239106324656007e-05,
+     -5.5239106324656007e-05
+    ],
+    "rms_gain_db": [
+     -2.0253672516901133e-08,
+     -2.0253672516901133e-08
+    ],
+    "tail_peak_db": [
+     -240.0,
+     -240.0
+    ]
+   },
+   {
+    "length_ms": 300.0,
+    "peak_db": [
+     -6.000055239106325,
+     -6.000055239106325
+    ],
+    "peak_gain_db": [
+     -5.5239106324656007e-05,
+     -5.5239106324656007e-05
+    ],
+    "rms_gain_db": [
+     -2.0253672516901133e-08,
+     -2.0253672516901133e-08
+    ],
+    "tail_peak_db": [
+     -240.0,
+     -240.0
+    ]
+   }
+  ],
+  "ramp": [
+   {
+    "in_db": -60,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -59,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -58,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -57,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -56,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -55,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -54,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -53,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -52,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -51,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -50,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -49,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -48,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -47,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -46,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -45,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -44,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -43,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -42,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -41,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -40,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -39,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -38,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -37,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -36,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -35,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -34,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -33,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -32,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -31,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -30,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -29,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -28,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -27,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -26,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -25,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -24,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -23,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -22,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -21,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -20,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -19,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -18,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -17,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -16,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -15,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -14,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -13,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -12,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -11,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -10,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -9,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -8,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -7,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -6,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -5,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -4,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -3,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -2,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": -1,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   },
+   {
+    "in_db": 0,
+    "up_left_gain_db": 0.0,
+    "up_right_gain_db": 0.0,
+    "down_left_gain_db": 0.0,
+    "down_right_gain_db": 0.0
+   }
+  ],
+  "threetone": {
+   "gain_db": {
+    "60": [
+     -1.4701498685099068e-08,
+     -1.4701498685099068e-08
+    ],
+    "200": [
+     -1.313832598270892e-09,
+     -1.313832598270892e-09
+    ],
+    "2000": [
+     -9.343498419411844e-09,
+     -9.343498419411844e-09
+    ]
+   },
+   "peaks": [
+    [
+     [
+      60.0,
+      -18.0
+     ],
+     [
+      200.0,
+      -18.0
+     ],
+     [
+      2000.0,
+      -18.0
+     ]
+    ],
+    [
+     [
+      60.0,
+      -18.0
+     ],
+     [
+      200.0,
+      -18.0
+     ],
+     [
+      2000.0,
+      -18.0
+     ]
+    ]
+   ]
+  },
+  "lrsplit": {
+   "level_db": [
+    -6.0000000210270485,
+    -17.999999993122977
+   ],
+   "gain_db": [
+    -2.10270485467845e-08,
+    6.877023395190918e-09
+   ]
+  },
+  "mid": {
+   "mid_db": 0.0,
+   "side_db": -240.0,
+   "left_db": 0.0,
+   "right_db": 0.0
+  },
+  "side": {
+   "mid_db": -240.0,
+   "side_db": 0.0,
+   "left_db": 0.0,
+   "right_db": 0.0
+  },
+  "dcstep": {
+   "start": 0.30000001192092896,
+   "end": 0.30000001192092896,
+   "after_end_min": 0.0,
+   "tau_ms": null
+  },
+  "lowsines": [
+   {
+    "freq": 1.0,
+    "gain_db": [
+     2.6818174347909007e-09,
+     2.6818174347909007e-09
+    ]
+   },
+   {
+    "freq": 5.0,
+    "gain_db": [
+     -3.3190978854236164e-09,
+     -3.3190978854236164e-09
+    ]
+   },
+   {
+    "freq": 20.0,
+    "gain_db": [
+     -5.214122467123161e-09,
+     -5.214122467123161e-09
+    ]
+   }
+  ],
+  "glide": {
+   "rms_db": [
+    -15.010116543906191,
+    -15.010116543906191
+   ]
+  },
+  "impulsetrain": {
+   "rms_db": [
+    -44.205298975910985,
+    -44.205298975910985
+   ]
+  }
+ },
+ "source": "measurements/fourth/export/fourth vocoder-pitch-limits bypass.wav"
+}

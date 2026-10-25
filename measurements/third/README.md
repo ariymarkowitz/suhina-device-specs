@@ -104,8 +104,8 @@ sines and pulses to modulation traces).
   (`Input_RoutingMode`, seven modes in the Max wrapper's order), the oversampling switches of Saturator,
   Pedal and Roar, Spectral Time's Resolution, Zero Dry Signal Latency and order,
   the Vocoder's carrier source, and the MIDI pitch mode with its routing in Shifter, Spectral Resonator
-  and Corpus. `Spectral Resonator`'s frequency dial mode and the Vocoder's band count are stored but not
-  separated from their defaults by the renders (candidate runs below).
+  and Corpus. `Spectral Resonator`'s frequency dial mode and the Vocoder's band count are stored but were not
+  separated from their defaults by these renders (read in the fourth set).
 - **Automation lanes work at 44.1 kHz**: the Looper's State, Utility's Mute and Gain, Reverb's Freeze,
   Hybrid Reverb's and Spectral Time's freeze, Delay and Echo time jumps, EQ and Chorus switches. Mute is
   a hard sample-accurate switch; Gain ramps over about 4 ms.
@@ -135,21 +135,25 @@ sines and pulses to modulation traces).
 - **Looper**: the Overdub pass leaves the first take at 0.42 and the playback is 0.95 of the input; the
   Feedback law and the crossfades need a noise take and a click track.
 - **Delay and Filter Delay**: the splice at a time jump with a periodic test tone was hidden (a 1 kHz
-  tone over a 100 ms shift); the Fade and Jump modes need a non-periodic input. `delay-time-jump-noise`
-  is the candidate.
+  tone over a 100 ms shift). Delay's `delay-time-jump-noise` (fourth set) found a lane's step sample-exact
+  and the same in Repitch, Fade and Jump, so the modes need a ramped lane (candidate
+  `delay-time-ramp-noise`); Filter Delay's Fade and Jump modes are not run.
 - **Glue Compressor** Oversample did not clip in the test; **Limiter** fs/4 at 45 degrees is open;
   **Corpus** Tune sharpness and Random and LFO details are open.
 - **Compressor** 50 Hz buzz: the `compressor-peak-buzz` render had the preset's side-chain EQ on;
-  `compressor-peak-buzz-eq-off` repeats it with the EQ off.
+  `compressor-peak-buzz-eq-off` (fourth set) repeats it with the EQ off: 21.7 % THD at the fastest times.
 - **Phaser-Flanger** envelope times: Env Amount +1 clamped the delay at its shortest for the bed and
-  the burst, so no time constant was fitted (`phaser-flanger-env-times-small`).
-- **Spectral Resonator**: Mod Rate was changed only with ModMode None (`spectral-resonator-mod-rate`),
-  and the frequency dial mode case had equal values in both dials (`spectral-resonator-dialmode-conflict`).
-- **Spectral Time**: ProcessingOrder was rendered at 1 only (`spectral-time-order-reference`);
-  AvoidFreezingOnsets without a reference.
-- **Vocoder**: the band counts were at Filter Width 100 % where the bands tile
-  (`vocoder-band-counts-bw25`); the Pitch Tracking limits' effect (`vocoder-pitch-limits`).
+  the burst, so no time constant was fitted; `phaser-flanger-env-times-small` (fourth set) fits Release
+  (a pole of about the setting) and Attack 30 ms.
+- **Spectral Resonator**: Mod Rate was changed only with ModMode None, and the frequency dial mode case had
+  equal values in both dials; the fourth set read both (Mod Rate speeds Chorus and Wander up; mode 0 is
+  Hertz, 1 is the note). Mod Rate in Granular and in Hz is open.
+- **Spectral Time**: ProcessingOrder was rendered at 1 only; the fourth set has both orders.
+  AvoidFreezingOnsets without a reference is open.
+- **Vocoder**: the band counts were at Filter Width 100 % where the bands tile; the fourth set counted them
+  at 25 % (stored 0 to 7 give 4 to 32 bands in steps of 4) and moved the Pitch Tracking limits (the rule
+  for a parked oscillator is open).
 - **Not set up**: Shifter's Spread, Roar's other matrix cells, Pedal's 20 Hz staircase.
 
-These eight candidate runs are in the devices' `runs.py` at priority 3, with the question each answers;
-they are not part of `selection.json` and have not been built.
+The eight candidate runs of this list were run as the fourth set
+([`../fourth/README.md`](../fourth/README.md)).

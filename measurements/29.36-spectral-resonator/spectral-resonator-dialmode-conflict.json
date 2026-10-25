@@ -1,0 +1,56 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-dialmode-conflict",
+ "question": "the 1 kHz tone through the comb with Freq. Hz 110 and Note 57 (220 Hz): FrequencyDialMode 0 and 1",
+ "plan": "1",
+ "read": [
+  "steady (spectrum)"
+ ],
+ "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 110
+    },
+    "Note": 57
+   }
+  },
+  {
+   "id": "dialmode-0",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 110
+    },
+    "Note": 57,
+    "@PartialFrequencies_FrequencyDialMode": 0
+   }
+  },
+  {
+   "id": "dialmode-1",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 110
+    },
+    "Note": 57,
+    "@PartialFrequencies_FrequencyDialMode": 1
+   }
+  }
+ ]
+}

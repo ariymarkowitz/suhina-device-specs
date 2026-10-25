@@ -97,7 +97,7 @@ RUNS = [
               [["unison4-32", {"Unison": 2, "Unison Amount": {"display": 32}}],
                ["dialmode-1", {"@PartialFrequencies_FrequencyDialMode": 1, "Note": 45}]]},
 
-    # ---- candidates after the third set
+    # ---- fourth set (rendered after the third)
     {"name": "spectral-resonator-mod-rate", "plan": "9", "probe": "gap2", "read": ["noise spectrum over time"], "priority": 3,
      "why": "the third set's modulation run only changed Mod Rate with ModMode None, which does nothing: Mod Rate's effect needs a mode that modulates",
      "question": "noise at Pitch Mod 2.56 st in Chorus (ModMode 1) at Mod Rate 1, 10 and 64 %; Wander (ModMode 2) at 1 and 64 %",

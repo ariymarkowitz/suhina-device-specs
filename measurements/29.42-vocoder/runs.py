@@ -125,7 +125,7 @@ RUNS = [
                               "@CarrierSource/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-saw.wav"}),
      "cases": [["enhance-off", {"Enhance": OFF}], ["enhance-on", {"Enhance": ON}]]},
 
-    # ---- candidates after the third set
+    # ---- fourth set (rendered after the third)
     {"name": "vocoder-band-counts-bw25", "plan": "1, 2", "probe": "gap2", "read": ["noise"], "priority": 3,
      "why": "the third set's band-count cases were at Filter Width 100 %, where the bands tile and cannot be counted; at 25 % the bands are separate peaks",
      "question": "noise through the bank (Depth 0, noise carrier) with BandCount 0 to 7 at Filter Width 25 %: count the peaks",

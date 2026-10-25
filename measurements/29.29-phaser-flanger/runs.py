@@ -163,7 +163,7 @@ RUNS = [
      "cases": [[f"safe-{f}", dict(MOD, **{"Safe Freq": {"display": f}})] for f in (5, 200, 3000)] +
               [[f"warmth-{w}", {"Warmth": {"display": w}}] for w in (25, 75, 100)]},
 
-    # ---- candidate after the third set: the +1 runs clamped the delay at its shortest for the bed and the burst
+    # ---- fourth set: the +1 runs clamped the delay at its shortest for the bed and the burst
     {"name": "phaser-flanger-env-times-small", "plan": "9", "probe": "ext", "read": ["ext: bedbursts, shortbursts"], "priority": 3,
      "why": "the envelope follower's attack and release with the delay in its linear range: Env Amount +1 clamped the Flanger's delay for the bed and the burst alike",
      "question": "Flanger delay under the bed bursts, Time 20 ms, Env Amount +0.1: Attack 0.1 and 30 ms with Release 100 ms; Release 0.1 and 400 ms with Attack 1 ms",
