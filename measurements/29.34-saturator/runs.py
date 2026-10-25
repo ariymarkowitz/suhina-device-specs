@@ -86,4 +86,53 @@ RUNS = [
      "base": {**BASE, "Drive": {"display": 0}},
      "cases": [["predc-on", {"Pre Dc Filter": ON}],
                ["predc-on-drive18", {"Pre Dc Filter": ON, "Drive": {"display": 18}}]]},
+
+    # ---- third set: Hi-Quality is the stored element Oversampling (on in the loaded preset)
+    {"name": "saturator-hiquality", "plan": "7", "probe": "ext", "read": ["ext: tone10k, tone15k peaks"], "priority": 1,
+     "why": "aliasing with Hi-Quality off and on (stored element Oversampling), Analog Clip at Drive +24 dB",
+     "question": "spectral lines of the 10 and 15 kHz sines at Drive +24 dB with Oversampling stored on and off",
+     "base": {"Drive": {"display": 24}},
+     "cases": [["hq-on", {"@Oversampling": True}], ["hq-off", {"@Oversampling": False}]]},
+
+    # ---- third set (measurements/third/): the extended probe's 1 kHz ramp (-60 to 0 dBFS and
+    # back at 10 dB/s) gives each curve in 0.5 dB steps; Hi-Quality is the stored element
+    # Oversampling (on in the loaded device; saturator-hiquality, in the pilot, read it at 88.2 kHz)
+    {"name": "saturator-curves-ramp", "plan": "1", "probe": "ext", "read": ["ext: ramp, stair100"], "priority": 1,
+     "why": "the fixed curves and Bass Shaper on the fine ramp and at 100 Hz, at Drive 0 and +18 dB",
+     "question": "gain and harmonics against level on the ramp and the 100 Hz staircase for each fixed Type at Drive 0 and +18 dB, Hi-Quality on",
+     "base": BASE,
+     "cases": [[f"{t.lower().replace(' ', '-')}-d{d}", {"Type": {"item": t}, "Drive": {"display": d}}]
+               for t in ("Analog Clip", "Soft Sine", "Bass Shaper", "Medium Curve", "Hard Curve", "Sinoid Fold", "Digital Clip")
+               for d in (0, 18)]},
+
+    {"name": "saturator-hiquality-types", "plan": "7", "probe": "ext", "read": ["ext: tone10k, tone15k peaks"], "priority": 1,
+     "why": "aliasing with Hi-Quality off and on, at 44.1 kHz, for the clip, the fold and the Waveshaper",
+     "question": "spectral lines of the 10 and 15 kHz sines at Drive +24 dB for Analog Clip, Digital Clip, Sinoid Fold and Waveshaper, Oversampling true and false",
+     "base": dict(BASE, **{"Drive": {"display": 24}}),
+     "cases": [[f"{t.lower().replace(' ', '-')}-hq-{'on' if q else 'off'}", {"Type": {"item": t}, "@Oversampling": q}]
+               for t in ("Analog Clip", "Digital Clip", "Sinoid Fold", "Waveshaper") for q in (True, False)]},
+
+    {"name": "saturator-waveshaper-more", "plan": "3", "probe": "ext", "read": ["ext: ramp, stair100, dcstep"], "priority": 2,
+     "why": "the Waveshaper's controls at intermediate values (polynomial terms, the sine's depth and period, Damp's dead zone, Shaper Drive's crossfade)",
+     "question": "the ramp, 100 Hz staircase and DC step for Curve 25, 75, 100 %; Depth 25 and 75 % at Period 50 %; Damp 25 and 75 %; Linearity 0 and 100 %; WS Drive 0 and 50 %",
+     "base": WS,
+     "cases": [[f"curve-{v}", {"WS Curve": {"display": v}}] for v in (25, 75, 100)] +
+              [[f"depth-{v}", {"WS Depth": {"display": v}, "WS Period": {"display": 50}}] for v in (25, 75)] +
+              [[f"damp-{v}", {"WS Damp": {"display": v}}] for v in (25, 75)] +
+              [[f"linearity-{v}", {"WS Linearity": {"display": v}}] for v in (0, 100)] +
+              [[f"wsdrive-{v}", {"WS Drive": {"display": v}}] for v in (0, 50)]},
+
+    {"name": "saturator-color-more", "plan": "5", "probe": "gap2", "read": ["response", "static"], "priority": 2,
+     "why": "the colour filters' negative amounts, other frequencies and intermediate amounts, read through Digital Clip",
+     "question": "sweep and staircase through Digital Clip at Drive +12 dB with Color on: Amt Lo -100 %; Amt Hi -100 %; Amt Hi +50 % at 200 Hz and 5 kHz (Width 30 %)",
+     "base": dict(BASE, **{"Type": {"item": "Digital Clip"}, "Drive": {"display": 12}, "Color On": ON,
+                           "Color Amt Low": {"display": 0}, "Color Amt Hi": {"display": 0}, "Color Width": {"display": 30}}),
+     "cases": [["lo-100", {"Color Amt Low": {"display": -100}}], ["hi-100", {"Color Amt Hi": {"display": -100}}]] +
+              [[f"hi50-{f}", {"Color Amt Hi": {"display": 50}, "Color Freq": {"display": f}}] for f in (200, 5000)]},
+
+    {"name": "saturator-predc-step", "plan": "8", "probe": "ext", "read": ["ext: dcstep, lowsines"], "priority": 2,
+     "why": "the Pre-DC filter's step response and its effect on 1, 5 and 20 Hz",
+     "question": "the DC step and the 1, 5, 20 Hz sines at Drive 0, Pre Dc Filter off and on",
+     "base": dict(BASE, **{"Drive": {"display": 0}}),
+     "cases": [["predc-off", {"Pre Dc Filter": OFF}], ["predc-on", {"Pre Dc Filter": ON}]]},
 ]

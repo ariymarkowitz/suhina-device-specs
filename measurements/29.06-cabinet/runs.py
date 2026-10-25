@@ -82,4 +82,12 @@ RUNS = [
      "question": "impulse taps and sweep at Dry/Wet 0, 25, 50, 75 % (100 % is the default)",
      "base": dict(BASE, **{"Cabinet Type": {"item": "4x12"}}),
      "cases": [[f"wet-{w}", {"Dry/Wet": {"display": w}}] for w in (0, 25, 50, 75)]},
+
+    # ---- third set (measurements/third/): the full grid, so no combination is inferred
+    {"name": "cabinet-grid", "plan": "1", "probe": "gap2", "read": ["impulse", "response"], "priority": 2,
+     "why": "every Speaker x Position x Microphone combination (some repeat earlier runs as a check)",
+     "question": "impulse and sweep response of the 24 combinations of the four speakers besides the 4x12",
+     "base": BASE,
+     "cases": [[f"{slug(s)}-{slug(p)}-{m.lower()}", cfg(s, p, m)]
+               for s in SPEAKERS if s != "4x12" for p in POSITIONS for m in ("Condenser", "Dynamic")]},
 ]

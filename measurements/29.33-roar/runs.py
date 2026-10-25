@@ -120,4 +120,73 @@ RUNS = [
      "question": "1 kHz staircase through stage 1, Drive +12 dB, Amount 50 %, for Bit Crusher, Half and Full Wave Rectifier, Fractal, Noise Injection, Shards",
      "base": SHAPER1,
      "cases": types(["Bit Crusher", "Half Wave Rectifier", "Full Wave Rectifier", "Fractal", "Noise Injection", "Shards"])},
+
+    # ---- third set: the routing mode is no API parameter, but the set stores it
+    # (Input_RoutingMode, 0 = Single .. 6 = Delay in the Max wrapper's order), so it is written
+    # as a stored element
+    {"name": "roar-single-routing", "plan": "2, 5", "probe": "gap2", "read": ["static", "response"], "priority": 1,
+     "why": "whether a stored Input_RoutingMode reaches the audio: Single (0) should put the 1 kHz staircase through stage 1's shaper",
+     "question": "1 kHz staircase and sweep with Shaper 1 Soft Sine at Amt 100 %, routing stored as 0 (Single) and as 3 (Multi Band, the loaded one)",
+     "base": {"Shaper 1 Amt": {"display": 100}},
+     "cases": [["single", {"@Input_RoutingMode": 0}], ["multiband", {"@Input_RoutingMode": 3}]]},
+
+    # roar-single-routing (pilot) showed that a stored Input_RoutingMode reaches the audio:
+    # Single (0) put the staircase through stage 1's shaper. So the shaper, filter and routing
+    # runs are repeated in Single and the other modes (0 Single, 1 Serial, 2 Parallel, 3 Multi
+    # Band, 4 Mid Side, 5 Feedback, 6 Delay: the Max wrapper's order, to be confirmed by the
+    # renders). The modulation matrix cells are stored elements too
+    # (ModulationMatrix_<target>_<source>, 0 in the loaded device; their scale is [measure]).
+    {"name": "roar-single-shapers", "plan": "2", "probe": "ext", "read": ["ext: ramp, stair100, tone3k, silence (DC)"], "priority": 1,
+     "why": "every shaper's curve in Single routing, on the 1 kHz ramp and the 100 Hz staircase; Amount and Bias on Soft Sine",
+     "question": "the ramp, 100 Hz staircase and 3 kHz sine through stage 1 (Drive +12 dB, Amt 50 %) for each of the 12 types; Soft Sine at Amt 25 and 100 % and Bias -50 and +50 %",
+     "base": dict(SHAPER1, **{"@Input_RoutingMode": 0}),
+     "cases": types(["Soft Sine", "Digital Clip", "Bit Crusher", "Diode Clipper", "Tube Preamp", "Half Wave Rectifier",
+                     "Full Wave Rectifier", "Polynomial", "Fractal", "Tri Fold", "Noise Injection", "Shards"]) +
+              [[f"softsine-amt{a}", {"Shaper 1 Amt": {"display": a}}] for a in (25, 100)] +
+              [[f"softsine-bias{b:+d}", {"Shaper 1 Bias": {"display": b / 100}}] for b in (-50, 50)]},
+
+    {"name": "roar-single-filters", "plan": "4", "probe": "gap2", "read": ["response", "impulse"], "priority": 1,
+     "why": "the filters in Single routing: each type at 1 kHz, resonance on the low-pass, the Morph cycle, Comb and Resampling against Frequency",
+     "question": "sweep response and impulse through stage 1's filter alone at 1 kHz: each type at Res 0.5; LP at Res 0 and 1.0; Morph 0, 0.25, 0.75; Comb and Resampling at 200 Hz; Peak at +12 dB",
+     "base": dict(FILTER1, **{"@Input_RoutingMode": 0, "Flt 1 Res": {"display": 0.5}}),
+     "cases": [[f"type-{t.lower()}", {"Flt 1 Type": {"item": t}}] for t in ("LP", "BP", "HP", "Notch", "Peak", "Comb", "Resampling", "Dispersion")] +
+              [[f"lp-res{r}", {"Flt 1 Type": {"item": "LP"}, "Flt 1 Res": {"display": r}}] for r in (0, 1)] +
+              [[f"morph-{m}", {"Flt 1 Type": {"item": "Morph"}, "Flt 1 Morph": {"display": m}}] for m in (0, 0.25, 0.75)] +
+              [[f"{t.lower()}-200", {"Flt 1 Type": {"item": t}, "Flt 1 Freq": {"display": 200}}] for t in ("Comb", "Resampling")] +
+              [["peak+12", {"Flt 1 Type": {"item": "Peak"}, "Flt 1 Peak": {"display": 12}}]]},
+
+    {"name": "roar-routings", "plan": "5", "probe": "gap2", "read": ["static", "impulse", "stereo", "response"], "priority": 1,
+     "why": "the other routing modes: Serial and Parallel with two different shapers and Blend, Mid Side with one-sided input, Feedback and Delay's repeats",
+     "question": "stage 1 Digital Clip and stage 2 Soft Sine (Drive +12 dB, Amt 50 %): Serial and Parallel at Blend 0, 50, 100; Mid Side; Feedback and Delay with Feedback 50 % (impulse repeats)",
+     "base": dict(SHAPER1, **{"Shaper 1 Type": {"item": "Digital Clip"}, "Shaper 2 On": ON, "Shaper 2 Type": {"item": "Soft Sine"},
+                              "Shaper 2 Amt": {"display": 50}}),
+     "cases": [[f"{n}-blend{b}", {"@Input_RoutingMode": m, "Blend": {"display": b}}] for n, m in (("serial", 1), ("parallel", 2))
+               for b in (0, 50, 100)] +
+              [["midside", {"@Input_RoutingMode": 4}],
+               ["feedback-fb50", {"@Input_RoutingMode": 5, "Feedback": {"display": 50}}],
+               ["delay-fb50", {"@Input_RoutingMode": 6, "Feedback": {"display": 50}}]]},
+
+    {"name": "roar-level-output-hq", "plan": "3, 11", "probe": "ext", "read": ["ext: ramp, tone10k, tone15k peaks", "impulse"], "priority": 2,
+     "why": "Shaper Level and Output at their ends with the shaper off, and the stored HiQuality switch against aliasing at high Amount",
+     "question": "level of the ramp in Single with shaper 1 bypassed in effect (Amt 0): Shaper 1 Level -24 and +24 dB, Output -48 and +12 dB; the 10 and 15 kHz sines through Digital Clip at Amt 100 %, HiQuality off and on",
+     "base": dict(SHAPER1, **{"@Input_RoutingMode": 0}),
+     "cases": [[f"level{l:+d}", {"Shaper 1 Amt": {"display": 0}, "Shaper 1 Level": {"display": l}}] for l in (-24, 24)] +
+              [[f"output{o:+d}", {"Shaper 1 Amt": {"display": 0}, "Output": {"display": o}}] for o in (-48, 12)] +
+              [[f"clip-hq-{'on' if q else 'off'}", {"Shaper 1 Type": {"item": "Digital Clip"}, "Shaper 1 Amt": {"display": 100},
+                                                    "@HiQuality": q}] for q in (False, True)]},
+
+    {"name": "roar-modulation", "plan": "9, 10", "probe": "gap2", "read": ["envelope of the steady tone"], "priority": 2,
+     "why": "the LFOs, envelope and noise read through the Output gain (matrix cell stored), and the matrix cell's scale",
+     "question": "the steady tone in Single, shaper off, LFO 1 free at 1 Hz with ModulationMatrix_Output_Lfo1 stored 1, 50, 100 and -100 (the cell holds whole numbers; its scale is unknown); LFO 1 Square, Ramp Up, Morph +50 %, Smooth 50 %; LFO 2 cell; Noise cell (Simplex, S&H); Env cell on the bursts",
+     "base": dict(PASS, **{"@Input_RoutingMode": 0, "Output": {"display": -12}, "LFO 1 Rate Mode": {"item": "Free"},
+                           "LFO 1 Rate": {"display": 1}, "LFO 1 Wave": {"item": "Sine"}, "LFO 1 Morph": {"display": 0},
+                           "LFO 1 Smooth": {"display": 0}, "@ModulationMatrix_Output_Lfo1": 1}),
+     "cases": [[f"lfo1-cell{v:+d}", {"@ModulationMatrix_Output_Lfo1": v}] for v in (50, 100, -100)] +
+              [[f"lfo1-{w.lower().replace(' ', '-')}", {"LFO 1 Wave": {"item": w}}] for w in ("Triangle", "Square", "Ramp Up")] +
+              [["lfo1-morph+50", {"LFO 1 Morph": {"display": 50}}], ["lfo1-smooth-50", {"LFO 1 Smooth": {"display": 50}}],
+               ["noise-simplex", {"@ModulationMatrix_Output_Lfo1": 0, "@ModulationMatrix_Output_Noise": 1,
+                                  "Noise Rate Mode": {"item": "Free"}, "Noise Rate": {"display": 1}}],
+               ["noise-snh", {"@ModulationMatrix_Output_Lfo1": 0, "@ModulationMatrix_Output_Noise": 1, "Noise Type": {"item": "Sample & Hold"},
+                              "Noise Rate Mode": {"item": "Free"}, "Noise Rate": {"display": 4}}],
+               ["env", {"@ModulationMatrix_Output_Lfo1": 0, "@ModulationMatrix_Output_Env": 1}]]},
 ]

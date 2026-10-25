@@ -97,4 +97,12 @@ RUNS = [
          ["d1-only", {"1 Input On": {"item": "On"}, "2 Input On": {"item": "Off"}}],
          ["d3-only", {"3 Input On": {"item": "On"}, "2 Input On": {"item": "Off"}}],
      ]},
+
+    # ---- third set (measurements/third/): the time changed by a lane; the stored element
+    # DelayTransitionMode (1 in the loaded device) may choose how a change sounds
+    {"name": "filter-delay-time-jump", "plan": "7", "probe": "gap2", "read": ["raw render around the jump (pitch glide or crossfade)"], "priority": 1,
+     "why": "what a delay-time change does to the sound (pitch glide or crossfade), and the stored transition mode",
+     "question": "the steady tone's echo around 2 Time Delay jumping from 100 to 200 ms at beat 46 (23 s), DelayTransitionMode 1 and 0",
+     "base": dict(BASE, **{"2 Time Delay": {"auto": [[0, {"display": 0.1}], [46, {"display": 0.1}], [46, {"display": 0.2}]]}}),
+     "cases": [["mode1", {"@DelayTransitionMode": 1}], ["mode0", {"@DelayTransitionMode": 0}]]},
 ]

@@ -106,4 +106,40 @@ RUNS = [
          ["mix-0", {"Ratio": ratio("10"), "Threshold": {"display": -30}, "Range": {"display": 70}, "Dry/Wet": {"display": 0}}],
          ["mix-50", {"Ratio": ratio("10"), "Threshold": {"display": -30}, "Range": {"display": 70}, "Dry/Wet": {"display": 50}}],
      ]},
+
+    # ---- third set (measurements/third/): the extended probe (short bursts, bursts over a bed, a
+    # 10 dB/s ramp, split tone, side noise, 10 and 15 kHz sines); Oversample and SideChainListen
+    # are stored elements; the side-chain run plays key-duck on a key track
+    {"name": "glue-knee-ramp", "plan": "3", "probe": "ext", "read": ["ext: ramp"], "priority": 1,
+     "why": "the knee in fine steps (the staircase's 3 dB steps could not resolve it) for each ratio",
+     "question": "gain against level on the 1 kHz ramp, Threshold -20 dB, Attack 0.01, Release 0.1, Ratio 2, 4, 10",
+     "base": BASE,
+     "cases": [[f"ratio-{r}", {"Ratio": ratio(r)}] for r in RATIOS]},
+
+    {"name": "glue-detector-release", "plan": "6, 14", "probe": "ext", "read": ["ext: shortbursts, bedbursts envelope"], "priority": 1,
+     "why": "the detector (peak or averaged) from 1 to 300 ms bursts, and Auto release after a click, 100 ms and 3 s of compression at three amounts",
+     "question": "peak gain of the short bursts at Threshold -16 dB (10 dB over), Ratio 10; gain over the bed after each bed burst with Release A at Threshold -9, -15, -24 dB",
+     "base": dict(BASE, **{"Ratio": ratio("10")}),
+     "cases": [["detector-thr-16", {"Threshold": {"display": -16}}]] +
+              [[f"auto-thr{t}", {"Threshold": {"display": t}, "Release": release("A")}] for t in (-9, -15, -24)]},
+
+    {"name": "glue-stereo-oversample", "plan": "10, 12", "probe": "ext", "read": ["ext: lrsplit, side, tone10k, tone15k peaks", "impulse"], "priority": 2,
+     "why": "stereo linking (does the quiet channel follow the loud one), and Oversample (stored element) against aliasing and the impulse's alignment",
+     "question": "per-channel gain of the split tone and of side noise at Threshold -24 dB, Ratio 10; spectral lines of the 10 and 15 kHz sines at Threshold -30 dB, Ratio 10, Peak Clip In on, Oversample off and on",
+     "base": dict(BASE, **{"Ratio": ratio("10")}),
+     "cases": [["link-thr-24", {"Threshold": {"display": -24}}],
+               ["os-off", {"Threshold": {"display": -30}, "Peak Clip In": {"item": "On"}, "@Oversample": False}],
+               ["os-on", {"Threshold": {"display": -30}, "Peak Clip In": {"item": "On"}, "@Oversample": True}]]},
+
+    {"name": "glue-sidechain", "plan": "13", "probe": "gap2", "read": ["envelope of the steady tone under the key bursts", "response (Listen)"], "priority": 1,
+     "why": "the external side-chain: reduction against key level, S/C Gain, S/C Mix, Dry/Wet with a key, and the S/C EQ heard through Listen",
+     "question": "the steady tone under key-duck's bursts, Threshold -30 dB, Ratio 10: S/C Gain 0, +12 dB, S/C Mix 50 %, Dry/Wet 50 %; Listen with the EQ off, Bell 1 kHz +12 dB Q 2, Low pass 1 kHz, High pass 1 kHz",
+     "base": dict(BASE, **{"Threshold": {"display": -30}, "Ratio": ratio("10"), "S/C On": {"item": "On"},
+                           "S/C EQ On": {"item": "Off"}, "S/C Gain": {"display": 0}, "S/C Mix": {"display": 100},
+                           "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"}),
+     "cases": [["sc-gain+12", {"S/C Gain": {"display": 12}}], ["sc-mix-50", {"S/C Mix": {"display": 50}}],
+               ["drywet-50", {"Dry/Wet": {"display": 50}}], ["listen-eq-off", {"@SideChainListen": True}]] +
+              [[f"listen-{n}", {"@SideChainListen": True, "S/C EQ On": {"item": "On"}, "S/C EQ Type": {"item": t},
+                                "S/C EQ Freq": {"display": 1000}, "S/C EQ Q": {"display": q}, "S/C EQ Gain": g}]
+               for n, t, q, g in (("bell", "Bell", 2, 12), ("lp", "Low pass", 0.71, 0), ("hp", "High pass", 0.71, 0))]},
 ]

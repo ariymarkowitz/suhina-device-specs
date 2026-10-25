@@ -85,4 +85,33 @@ RUNS = [
      "question": "Rate 8 kHz, 8 bits: Dry/Wet 0 and 50 % (100 % is the default case)",
      "base": BASE | rate(8000) | {"Bit Depth": 8},
      "cases": [["dw-0", {"Dry/Wet": {"display": 0}}], ["dw-50", {"Dry/Wet": {"display": 50}}]]},
+
+    # ---- third set (measurements/third/): the extended probe (3 kHz, 10 and 15 kHz sines, the
+    # slow ramp); the eco mode is the stored element EcoProcessing
+    {"name": "redux-section-order", "plan": "6", "probe": "ext", "read": ["ext: tone3k peaks"], "priority": 1,
+     "why": "the order of downsampler and quantizer: the 3 kHz sine at Rate 8 kHz and 3 bits gives different lines for each order",
+     "question": "spectral lines of the 3 kHz sine at Rate 8 kHz, Bits 3, Post filter off and on, Pre filter on",
+     "base": dict(BASE, **rate(8000), **{"Bit Depth": 3}),
+     "cases": [["post-off", {}], ["post-on", {"Post-Filter On": {"item": "On"}}], ["pre-on", {"Pre-Filter On": {"item": "On"}}]]},
+
+    {"name": "redux-bits-shape-ramp", "plan": "4", "probe": "ext", "read": ["ext: ramp (quantizer levels)", "stair100"], "priority": 2,
+     "why": "Shape at 25 and 75 %, Bits 8 and 12 with Shape, and Bits 3 and 6, from the slow ramp's levels",
+     "question": "quantizer levels on the ramp: Bits 4 at Shape 25, 75 %; Bits 8 and 12 at Shape 100 %; Bits 3 and 6 at Shape 0",
+     "base": BASE,
+     "cases": [[f"b4-shape{s}", {"Bit Depth": 4, "Quantizer Shape": {"display": s}}] for s in (25, 75)] +
+              [[f"b{b}-shape100", {"Bit Depth": b, "Quantizer Shape": {"display": 100}}] for b in (8, 12)] +
+              [[f"b{b}", {"Bit Depth": b}] for b in (3, 6)]},
+
+    {"name": "redux-rate-hq", "plan": "1, 7, 8", "probe": "ext", "read": ["ext: tone10k, tone15k peaks", "impulse"], "priority": 1,
+     "why": "the 10 and 15 kHz sines through the hold at several Rates (aliasing lines), the eco mode's difference, and the panel's lowest Rate",
+     "question": "spectral lines of the 10 and 15 kHz sines at Rate 12, 25 kHz, and at 12 kHz with EcoProcessing true; the impulse and 1 kHz tone at the lowest Rate",
+     "base": BASE,
+     "cases": [[f"rate-{r}", rate(r)] for r in (12000, 25000)] +
+              [["rate-12000-eco", dict(rate(12000), **{"@EcoProcessing": True})], ["rate-min", {"Sample Rate": {"norm": 0}}]]},
+
+    {"name": "redux-pre-corner", "plan": "3", "probe": "gap2", "read": ["response (noise and sweep)"], "priority": 2,
+     "why": "the Pre filter's corner at other Rates (its slope from the sweep)",
+     "question": "noise and sweep response with the Pre filter alone at Rate 2 kHz and 16 kHz",
+     "base": BASE,
+     "cases": [[f"pre-{r}", dict(rate(r), **{"Pre-Filter On": {"item": "On"}})] for r in (2000, 16000)]},
 ]

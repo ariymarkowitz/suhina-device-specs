@@ -64,4 +64,46 @@ RUNS = [
      "cases": [["mono", {"Dual Mono": {"item": "Off"}}], ["dual", {"Dual Mono": {"item": "On"}}],
                ["dual-wet-50", {"Dual Mono": {"item": "On"}, "Dry/Wet": {"display": 50}}],
                ["mono-wet-50", {"Dry/Wet": {"display": 50}}]]},
+
+    # ---- third set (measurements/third/). The extended probe (signals.py --kind ext) adds a
+    # 100 Hz staircase and a 1 kHz level ramp (-60 to 0 dBFS and back at 10 dB/s), so one render
+    # gives the curve at both frequencies (ext: stair100 and ramp)
+    {"name": "amp-gain-models", "plan": "1", "probe": "ext", "read": ["ext: stair100, ramp"], "priority": 1,
+     "why": "the Gain sweep of every model at 100 Hz and 1 kHz (only Rock had one, at 1 kHz)",
+     "question": "100 Hz staircase and 1 kHz ramp for each model at Input Gain 0, 2.5, 5, 7.5, 10, Volume 5",
+     "base": BASE,
+     "cases": [[f"{m.lower()}-gain-{g}", {"Amp Type": {"item": m}, "Input Gain": {"display": g}}]
+               for m in MODELS for g in (0, 2.5, 5, 7.5, 10)]},
+
+    {"name": "amp-volume-models", "plan": "1", "probe": "ext", "read": ["ext: stair100, ramp"], "priority": 2,
+     "why": "Volume below 10 for the models other than Blues: where the power stage starts to distort",
+     "question": "100 Hz staircase and 1 kHz ramp at Input Gain 2 and Volume 0, 2.5, 7.5 for Clean, Boost, Rock, Lead, Heavy, Bass",
+     "base": dict(BASE, **{"Input Gain": {"display": 2}}),
+     "cases": [[f"{m.lower()}-vol-{v}", {"Amp Type": {"item": m}, "Volume": {"display": v}}]
+               for m in MODELS if m != "Blues" for v in (0, 2.5, 7.5)]},
+
+    {"name": "amp-tone-stack-models", "plan": "2", "probe": "gap2", "read": ["response"], "priority": 2,
+     "why": "the tone stack of the six models besides Rock: each control at its ends (does each model have its own stack?)",
+     "question": "sweep response at Input Gain 1 with Bass, Middle, Treble each at 0 and 10 alone, for Clean, Boost, Blues, Lead, Heavy, Bass",
+     "base": dict(BASE, **{"Input Gain": {"display": 1}}),
+     "cases": [[f"{m.lower()}-{n.lower()}-{v}", {"Amp Type": {"item": m}, n: {"display": v}}]
+               for m in MODELS if m != "Rock" for n in ("Bass", "Middle", "Treble") for v in (0, 10)]},
+
+    {"name": "amp-tone-interactions", "plan": "2", "probe": "gap2", "read": ["response"], "priority": 2,
+     "why": "interaction of the tone controls (a passive stack: Middle sets how much Bass and Treble do), to fit a topology",
+     "question": "Rock at Input Gain 1: all three at 0, all at 10, Bass and Treble at 10 with Middle 0, Bass 10 Treble 0, Bass 0 Treble 10, Middle 10 with Bass and Treble 0",
+     "base": dict(BASE, **{"Input Gain": {"display": 1}}),
+     "cases": [["all-0", {"Bass": {"display": 0}, "Middle": {"display": 0}, "Treble": {"display": 0}}],
+               ["all-10", {"Bass": {"display": 10}, "Middle": {"display": 10}, "Treble": {"display": 10}}],
+               ["scoop", {"Bass": {"display": 10}, "Middle": {"display": 0}, "Treble": {"display": 10}}],
+               ["bass10-treble0", {"Bass": {"display": 10}, "Treble": {"display": 0}}],
+               ["bass0-treble10", {"Bass": {"display": 0}, "Treble": {"display": 10}}],
+               ["mid-only", {"Bass": {"display": 0}, "Middle": {"display": 10}, "Treble": {"display": 0}}]]},
+
+    {"name": "amp-presence-models", "plan": "3", "probe": "gap2", "read": ["response"], "priority": 2,
+     "why": "Presence in the five models not yet measured",
+     "question": "sweep response at Input Gain 1 with Presence 0 and 10 for Clean, Boost, Blues, Heavy, Bass",
+     "base": dict(BASE, **{"Input Gain": {"display": 1}}),
+     "cases": [[f"{m.lower()}-presence-{v}", {"Amp Type": {"item": m}, "Presence": {"display": v}}]
+               for m in ("Clean", "Boost", "Blues", "Heavy", "Bass") for v in (0, 10)]},
 ]

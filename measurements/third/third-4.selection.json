@@ -1,0 +1,41 @@
+{
+ "name": "third-4",
+ "probes": {
+  "gap10": "measurements/29.32-reverb/probe-gap10/probe.wav",
+  "ext": "measurements/probe-ext/probe.wav"
+ },
+ "runs": [
+  "hybrid-reverb-decay-algos",
+  "hybrid-reverb-freeze-toggle",
+  "reverb-freeze-toggle",
+  "corpus-decay-radius",
+  "hybrid-reverb-algo-controls",
+  "spectral-resonator-long-decay-unison",
+  "amp-gain-models",
+  "autofilter-drive",
+  "autoshift-glide",
+  "autoshift-ranges",
+  "chorus-tap-phases",
+  "compressor-auto-release-bursts",
+  "compressor-rms-window",
+  "compressor-stereo",
+  "corpus-lfo",
+  "delay-lfo-shapes",
+  "drumbuss-curves-100hz",
+  "dyntube-curves-100hz",
+  "dyntube-hiquality",
+  "echo-mod-shapes",
+  "eq-eight-modes",
+  "gate-detector-retrigger",
+  "gate-ramp",
+  "glue-detector-release",
+  "glue-knee-ramp",
+  "grain-delay-spray-train",
+  "limiter-auto-release-bursts",
+  "limiter-link-routing",
+  "mbd-rms-window",
+  "pedal-curves-low-high",
+  "pedal-hiquality",
+  "redux-rate-hq"
+ ]
+}

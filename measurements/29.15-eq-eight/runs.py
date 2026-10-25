@@ -142,4 +142,39 @@ RUNS = [
          ["lp12-16k", band("Low Pass 12dB", freq=16000)],
          ["hs-16k", band("High Shelf", gain=12, freq=16000)],
      ]},
+
+    # ---- third set (measurements/third/). Mode and Oversampling are stored elements, not
+    # parameters: Mode (0 Stereo, then L/R and M/S in the panel's order: [measure] which is 1 and 2)
+    # and Precision (Oversampling). In L/R and M/S the A bands act on left or mid and the B bands
+    # on right or side.
+    {"name": "eq-eight-modes", "plan": "5", "probe": "ext", "read": ["ext: mid, side, lrsplit"], "priority": 1,
+     "why": "the L/R and M/S modes: which curve acts on which channel, and the encoding's gains with flat curves",
+     "question": "gains of mid-only and side-only noise and of the split tone with Mode 1 and 2 stored: flat, band 3 A at +12 dB (1 kHz bell, Q 0.71), and band 3 B at +12 dB",
+     "base": dict(BASE, **{"3 Filter On B": {"item": "On"}, "3 Filter Type B": {"item": "Bell"},
+                           "3 Frequency B": {"display": 1000}, "3 Gain B": {"display": 0}, "3 Filter Type A": {"item": "Bell"}}),
+     "cases": [[f"mode{m}-{w}", dict({"@Mode": m}, **p)] for m in (1, 2)
+               for w, p in (("flat", {}), ("a12", {"3 Gain A": {"display": 12}}), ("b12", {"3 Gain B": {"display": 12}}))]},
+
+    {"name": "eq-eight-freq-gain", "plan": "2, 3", "probe": "gap2", "read": ["response", "impulse"], "priority": 2,
+     "why": "the bell and shelves at 100 Hz and 10 kHz and at +-15 dB, the notch's depth, Adaptive Q at -6 dB and on the low shelf",
+     "question": "sweep response: Bell at 100 Hz and 10 kHz, +15 and -15 dB, Q 0.71; Notch at 1 kHz Q 0.71 and 6; Bell -6 dB with Adaptive Q on; Low Shelf +12 dB with Adaptive Q on and off",
+     "base": BASE,
+     "cases": [[f"bell-{f}-{'p' if g > 0 else 'm'}15", band("Bell", g, 0.71, f)] for f in (100, 10000) for g in (15, -15)] +
+              [[f"notch-q{q}", band("Notch", None, q)] for q in (0.71, 6)] +
+              [["bell-m6-adaptive", dict(band("Bell", -6, 0.71), **{"Adaptive Q": {"item": "On"}})],
+               ["lowshelf-12-adaptive", dict(band("Low Shelf", 12, 0.71, 200), **{"Adaptive Q": {"item": "On"}})],
+               ["lowshelf-12", band("Low Shelf", 12, 0.71, 200)]]},
+
+    {"name": "eq-eight-oversampling", "plan": "7", "probe": "gap2", "read": ["response", "impulse"], "priority": 2,
+     "why": "Oversampling (stored Precision): the response near Nyquist and the impulse's alignment",
+     "question": "sweep response and impulse with a 15 kHz bell at +15 dB, Q 18, and a 48 dB low-pass at 18 kHz, Precision 0 and 1",
+     "base": BASE,
+     "cases": [[f"bell15k-p{p}", dict(band("Bell", 15, 18, 15000), **{"@Precision": p})] for p in (0, 1)] +
+              [[f"lp48-18k-p{p}", dict(band("Low Pass 48dB", None, 0.71, 18000), **{"@Precision": p})] for p in (0, 1)]},
+
+    {"name": "eq-eight-freq-glide", "plan": "9", "probe": "gap2", "read": ["raw render over the noise (steps, zipper)"], "priority": 2,
+     "why": "smoothing of the band frequency while it moves",
+     "question": "the noise through a +12 dB bell, Q 2, whose frequency glides from 100 Hz to 10 kHz over beats 62 to 69",
+     "base": dict(BASE, **band("Bell", 12, 2)),
+     "cases": [["glide", {"3 Frequency A": {"auto": [[0, {"display": 100}], [62, {"display": 100}], [69, {"display": 10000}]]}}]]},
 ]

@@ -97,4 +97,57 @@ RUNS = [
                ["harmonic-100", {"Harmonic": {"item": "On"}}],
                ["vintage-amount-0", {"Vintage": {"item": "On"}, "Amount": {"display": 0}}],
                ["vintage-100", {"Vintage": {"item": "On"}}]]},
+
+    # ---- third set (measurements/third/): a stored Waveform never reached the audio, so the
+    # waveform is set by an automation lane instead (make_als.py: {"auto": ...})
+    {"name": "autopan-waveform-lane", "plan": "3, 4", "probe": "gap2", "read": ["envelope", "modulation"],
+     "priority": 1,
+     "why": "whether the Waveform reaches the audio through an automation lane (a jump before the impulse, or a one-point lane), and whether a stored Waveform works in Panning mode",
+     "question": "envelope of the steady tone, Tremolo 1 Hz: Waveform Triangle by a jump at beat 0.5, Saw Up by a one-point lane, Triangle stored (Tremolo and Panning)",
+     "base": BASE,
+     "cases": [["lane-triangle-jump", {"Waveform": {"auto": [[0, {"item": "Sine"}], [0.5, {"item": "Triangle"}]]}}],
+               ["lane-sawup-const", {"Waveform": {"auto": [[0, {"item": "Saw Up"}]]}}],
+               ["stored-triangle", {"Waveform": {"item": "Triangle"}}],
+               ["stored-triangle-pan", dict(PAN, Waveform={"item": "Triangle"})]]},
+
+    # autopan-waveform-lane (pilot) found that Waveform takes effect in Panning mode only, stored
+    # or automated; in Tremolo every waveform renders as the Sine. So the waveforms are read in
+    # Panning, whose gain law (sin/cos of the LFO position) is already measured.
+    {"name": "autopan-waveforms-pan", "plan": "3, 4", "probe": "gap2", "read": ["envelope", "modulation"],
+     "priority": 1,
+     "why": "the shape of every Waveform, read through the Panning law; Shark Tooth and the random ones also at 4 and 0.25 Hz",
+     "question": "per-channel envelope of the steady tone in Panning, Amount 100 %, 1 Hz, for each Waveform; Shark Tooth, Random, Wander, S & H also at 4 and 0.25 Hz",
+     "base": dict(BASE, **PAN),
+     "cases": [[f"pan-{w.lower().replace(' & ', 'n').replace(' ', '-')}", {"Waveform": {"item": w}}]
+               for w in ("Sine", "Triangle", "Shark Tooth", "Saw Up", "Saw Down", "Square", "Random", "Wander", "S & H")] +
+              [[f"pan-{w.lower().replace(' & ', 'n').replace(' ', '-')}-{f}hz", {"Waveform": {"item": w}, "Frequency": {"display": f}}]
+               for w in ("Shark Tooth", "Random", "Wander", "S & H") for f in (4, 0.25)]},
+
+    {"name": "autopan-random-width", "plan": "4", "probe": "gap2", "read": ["envelope", "modulation"], "priority": 2,
+     "why": "what Phase does to the random shapes (the manual: it becomes a width), and Shape and Invert on non-sine waves",
+     "question": "Panning envelopes of Random and Wander at Phase 0 and 90; Saw Up with Invert; Square with Panning Shape 100 %",
+     "base": dict(BASE, **PAN),
+     "cases": [[f"{w.lower()}-phase-{p}", {"Waveform": {"item": w}, "Phase": {"display": p}}]
+               for w in ("Random", "Wander") for p in (0, 90)] +
+              [["sawup-invert", {"Waveform": {"item": "Saw Up"}, "Invert": {"item": "On"}}],
+               ["square-shape-100", {"Waveform": {"item": "Square"}, "Panning Shape": {"display": 100}}]]},
+
+    {"name": "autopan-sync-offset", "plan": "6, 7", "probe": "gap2", "read": ["envelope"], "priority": 2,
+     "why": "where a synced LFO sits against the beat (the render starts on beat 1) for Offset 0, 90, 180, and more entries of the Rate list",
+     "question": "Panning envelopes, Synced: Rate 1/4 with Offset 0, 90, 180; Rate 1/8, 1/16, 1/2 and 3/16 at Offset 0",
+     "base": dict(BASE, **PAN, **{"Time Mode": {"item": "Synced"}}),
+     "cases": [[f"q-offset-{o}", {"Rate": 12, "Offset": {"display": o}}] for o in (0, 90, 180)] +
+              [[f"rate-{n}", {"Rate": i}] for n, i in (("1-8", 15), ("1-16", 17), ("1-2", 8), ("3-16", 13))]},
+
+    {"name": "autopan-onset", "plan": "8", "probe": "ext", "read": ["ext: shortbursts, bedbursts envelope"], "priority": 2,
+     "why": "the onset detector behind Attack Time: which bursts restart the ramp (after silence, over a -30 dBFS bed) and how loud an onset must be",
+     "question": "envelope of the short bursts and of the bursts over a bed, Tremolo 4 Hz, Amount 100 %, Attack Time 0.5 s",
+     "base": dict(BASE, **{"Frequency": {"display": 4}, "Attack Time": {"display": 0.5}}),
+     "cases": [["attack-0.5", {}], ["attack-0.5-pan", PAN]]},
+
+    {"name": "autopan-harmonic-crossover", "plan": "10", "probe": "ext", "read": ["ext: threetone", "raw render"], "priority": 2,
+     "why": "Harmonic's crossover: the 60 Hz, 200 Hz and 2 kHz tones move in opposition; their gains over a cycle give the split",
+     "question": "the three-tone segment through Tremolo, Amount 100 %, 1 Hz, Harmonic on (per-tone envelopes)",
+     "base": BASE,
+     "cases": [["harmonic", {"Harmonic": {"item": "On"}}], ["harmonic-amount-50", {"Harmonic": {"item": "On"}, "Amount": {"display": 50}}]]},
 ]

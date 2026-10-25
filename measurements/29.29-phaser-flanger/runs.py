@@ -133,4 +133,41 @@ RUNS = [
          ["dw-0", {"Dry/Wet": {"display": 0}}],
          ["dw-50", {"Dry/Wet": {"display": 50}}],
      ]},
+
+    # ---- third set (measurements/third/)
+    {"name": "phaser-flanger-blend-amount", "plan": "5", "probe": "gap2", "read": ["noise", "modulation", "envelope"], "priority": 2,
+     "why": "Blend 0.5 (Center and Spread moving together) and Amounts below 100 %",
+     "question": "noise and steady tone through the Phaser, 1 Hz sine: Mod Blend 0.5 at Amount 100 %; Amount 25 and 50 % at Blend 0",
+     "base": BASE,
+     "cases": [["blend-0.5", {"Amount": {"display": 100}, "Mod Blend": {"norm": 0.5}}]] +
+              [[f"amount-{a}", {"Amount": {"display": a}}] for a in (25, 50)]},
+
+    {"name": "phaser-flanger-lfo2-sync", "plan": "8", "probe": "ext", "read": ["ext: impulsetrain (delay per impulse)"], "priority": 2,
+     "why": "LFO2's rate at other settings and the sync lists, read from the Flanger's delay at each impulse of the train",
+     "question": "Flanger delay per impulse, Amount 100 %: LFO2 alone (Lfo Blend 100 %) at 1 and 8 Hz; LFO1 synced at Rate 8, 12, 15",
+     "base": dict(BASE, **FLANGER, **MOD),
+     "cases": [[f"lfo2-{f}hz", {"Lfo Blend": {"display": 100}, "Mod Freq 2": {"display": f}}] for f in (1, 8)] +
+              [[f"sync-r{r}", {"Mod Sync": {"item": "On"}, "Mod Rate": r}] for r in (8, 12, 15)]},
+
+    {"name": "phaser-flanger-env-times", "plan": "9", "probe": "ext", "read": ["ext: impulsetrain, shortbursts, bedbursts"], "priority": 2,
+     "why": "the envelope follower's attack and release at the ends of their ranges, read through the Flanger's delay",
+     "question": "Flanger delay under the bed bursts and short bursts, Env Amount +1: Attack 0.1 and 30 ms with Release 100 ms; Release 0.1 and 400 ms with Attack 1 ms",
+     "base": dict(BASE, **FLANGER, **{"Env Enabled": {"item": "On"}, "Env Amount": {"display": 1}}),
+     "cases": [[f"att{a}", {"Env Attack": {"display": a / 1000}, "Env Release": {"display": 0.1}}] for a in (0.1, 30)] +
+              [[f"rel{r}", {"Env Attack": {"display": 0.001}, "Env Release": {"display": r / 1000}}] for r in (0.1, 400)]},
+
+    {"name": "phaser-flanger-safe-warmth", "plan": "10, 11", "probe": "ext", "read": ["ext: threetone, ramp"], "priority": 2,
+     "why": "Safe Bass: how much of the 60 and 200 Hz tones escapes the modulation at three cut-offs; Warmth's curve on the slow ramp",
+     "question": "per-tone sidebands of the 60 Hz, 200 Hz and 2 kHz tones through the Phaser at Amount 100 %, Safe Freq 5, 200 Hz, 3 kHz; the ramp at Warmth 25, 75, 100 %",
+     "base": BASE,
+     "cases": [[f"safe-{f}", dict(MOD, **{"Safe Freq": {"display": f}})] for f in (5, 200, 3000)] +
+              [[f"warmth-{w}", {"Warmth": {"display": w}}] for w in (25, 75, 100)]},
+
+    # ---- candidate after the third set: the +1 runs clamped the delay at its shortest for the bed and the burst
+    {"name": "phaser-flanger-env-times-small", "plan": "9", "probe": "ext", "read": ["ext: bedbursts, shortbursts"], "priority": 3,
+     "why": "the envelope follower's attack and release with the delay in its linear range: Env Amount +1 clamped the Flanger's delay for the bed and the burst alike",
+     "question": "Flanger delay under the bed bursts, Time 20 ms, Env Amount +0.1: Attack 0.1 and 30 ms with Release 100 ms; Release 0.1 and 400 ms with Attack 1 ms",
+     "base": dict(BASE, **FLANGER, **{"Flanger Time": {"display": 0.02}, "Env Enabled": {"item": "On"}, "Env Amount": {"display": 0.1}}),
+     "cases": [[f"att{a}", {"Env Attack": {"display": a / 1000}, "Env Release": {"display": 0.1}}] for a in (0.1, 30)] +
+              [[f"rel{r}", {"Env Attack": {"display": 0.001}, "Env Release": {"display": r / 1000}}] for r in (0.1, 400)]},
 ]

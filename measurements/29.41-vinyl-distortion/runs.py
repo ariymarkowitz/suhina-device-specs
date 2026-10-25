@@ -62,4 +62,19 @@ RUNS = [
      "cases": [["global-0", {"Global Drive": {"display": 0}}], ["global-0.25", {"Global Drive": {"display": 0.25}}],
                ["global-0.5", {"Global Drive": {"display": 0.5}}],
                ["drives-0", {"Tracing Drive": {"display": 0}, "Pinch Drive": {"display": 0}}]]},
+
+    # ---- third set (measurements/third/)
+    {"name": "vinyl-distortion-band", "plan": "2, 4", "probe": "ext", "read": ["ext: stair100, tone3k, tone10k", "impulse"], "priority": 2,
+     "why": "Tracing at 100 Hz and 3 kHz with its band on the tone, the band's colouring at Drive 0, and distortion against tone frequency at a fixed band (the 3 and 10 kHz sines)",
+     "question": "100 Hz staircase with the band at 100 Hz; 3 kHz sine with the band at 3 kHz; Drive 0 (impulse); band at 1 kHz with Drive 1",
+     "base": TRACING,
+     "cases": [["band100", {"Tracing Freq.": {"display": 100}, "Tracing Drive": {"display": 1}}],
+               ["band3k", {"Tracing Freq.": {"display": 3000}, "Tracing Drive": {"display": 1}}],
+               ["drive0", {"Tracing Drive": {"display": 0}}], ["band1k-drive1", {"Tracing Drive": {"display": 1}}]]},
+
+    {"name": "vinyl-distortion-crackle-repeat", "plan": "7", "probe": "gap2", "read": ["silence and every gap (click times)"], "priority": 2,
+     "why": "whether two devices crackle alike (a fixed seed), and whether Global Drive changes the crackle",
+     "question": "click times over the whole render at Density 10, Volume 0.5 on two tracks (an unused setting differs), and at Global Drive 0",
+     "base": {"Tracing On": OFF, "Pinch On": OFF, "Crackle Density": 10, "Crackle Volume": {"display": 0.5}, "Global Drive": {"display": 1}},
+     "cases": [["a", {}], ["b", {"Tracing Freq.": {"display": 2000}}], ["drive0", {"Global Drive": {"display": 0}}]]},
 ]

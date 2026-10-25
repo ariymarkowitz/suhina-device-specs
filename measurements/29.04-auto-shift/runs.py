@@ -103,4 +103,44 @@ RUNS = [
      "base": dict(BASE, **{"Pitch St.": {"display": 12}}),
      "cases": [["gain-m12", {"Input Gain": {"display": -12}}], ["gain-p12", {"Input Gain": {"display": 12}}]] +
               [[f"wet-{w}", {"Dry/Wet": {"display": w}}] for w in (0, 25, 50, 75)]},
+
+    # ---- third set (measurements/third/). The extended probe has a 200 to 400 Hz glide (4 s),
+    # a 150 Hz saw (a harmonic source with a real fundamental) and tones at 50 Hz, 3 and 10 kHz.
+    # The Pitch Range and Live Mode are stored elements (Global_PitchRange, Global_LiveMode).
+    {"name": "autoshift-glide", "plan": "4", "probe": "ext", "read": ["ext: glide (instantaneous frequency)"], "priority": 1,
+     "why": "the quantizer on a moving input: steps and transitions on the 200 to 400 Hz glide, Smooth off, 50 and 200 ms, Strength 50 %",
+     "question": "pitch of the glide through the quantizer (C major, Strength 100 %) with Smooth off, Smooth 50 ms and 200 ms, and Strength 50 % with Smooth off",
+     "base": dict(BASE, **{"Quantizer On": {"item": "On"}}),
+     "cases": [["smooth-off", {}],
+               ["smooth-50ms", {"Smooth On": {"item": "On"}, "Smooth Time": {"display": 0.05}}],
+               ["smooth-200ms", {"Smooth On": {"item": "On"}, "Smooth Time": {"display": 0.2}}],
+               ["strength-50", {"Strength": {"display": 50}}]]},
+
+    {"name": "autoshift-ranges", "plan": "2, 3", "probe": "ext", "read": ["ext: glide, saw, tone50, tone3k", "impulse"], "priority": 1,
+     "why": "pitch detection across the three Pitch Ranges and Live Mode (stored elements): which inputs each range tracks, octave errors, and the alignment of the output",
+     "question": "the glide, the 150 Hz saw and the 50 Hz and 3 kHz tones through the quantizer (C major) with Global_PitchRange 0, 1, 2, and range 1 with Live Mode on",
+     "base": dict(BASE, **{"Quantizer On": {"item": "On"}}),
+     "cases": [[f"range-{r}", {"@Global_PitchRange": r}] for r in (0, 2)] +
+              [["range-1-live", {"@Global_LiveMode": True}]]},
+
+    {"name": "autoshift-formant-saw", "plan": "8", "probe": "ext", "read": ["ext: saw (spectral envelope)"], "priority": 2,
+     "why": "formant handling on a harmonic source: Follow 50 % with a shift, and Formant Shift at -50 and +50 %",
+     "question": "spectrum of the 150 Hz saw at Pitch +12 with Formant Follow 0, 50, 100 %; Formant Shift -50 and +50 % at no shift",
+     "base": BASE,
+     "cases": [[f"up12-follow-{f}", {"Pitch St.": 12, "Formant Follow": {"display": f}}] for f in (0, 50, 100)] +
+              [[f"formant{f:+d}", {"Formant Shift": {"display": f}}] for f in (-50, 50)]},
+
+    {"name": "autoshift-lfo-timing", "plan": "10", "probe": "gap2", "read": ["modulation (FM over time)"], "priority": 2,
+     "why": "LFO Delay and Fade-In, Sync, Retrigger and the Formant target, from the steady tone's pitch over time",
+     "question": "pitch of the steady tone with the LFO (1 Hz sine, 6 st) at Delay 1 s, Fade-In 2 s, Sync 1/4, Retrig off; and LFO > Form. 50 % with no pitch depth",
+     "base": LFO,
+     "cases": [["delay-1s", {"LFO Delay": {"display": 1}}], ["fadein-2s", {"LFO Fade-In": {"display": 2}}],
+               ["sync-q", {"LFO Sync": {"item": "On"}, "LFO Synced": 12}], ["retrig-off", {"LFO Retrig On": {"item": "Off"}}],
+               ["formant-50", {"LFO > Pitch": {"display": 0}, "LFO > Form.": {"display": 50}}]]},
+
+    {"name": "autoshift-vibrato-natural", "plan": "11", "probe": "gap2", "read": ["modulation"], "priority": 3,
+     "why": "the Vibrato with Natural on and with a Fade-In (the plain vibrato was measured)",
+     "question": "pitch of the steady tone with Vibrato 50 ct at 6 Hz: Natural on; Fade-In 1 s",
+     "base": dict(BASE, **{"Vibrato Amt": {"display": 50}, "Vibrato Rate": {"display": 6}}),
+     "cases": [["natural", {"Vibrato Natural": {"item": "On"}}], ["fadein-1s", {"Vibrato Fade-In": {"display": 1}}]]},
 ]

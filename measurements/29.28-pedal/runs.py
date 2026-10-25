@@ -77,4 +77,26 @@ RUNS = [
          ["dw-0", {"Dry/Wet": {"display": 0}}],
          ["dw-50", {"Dry/Wet": {"display": 50}}],
      ]},
+
+    # ---- third set (measurements/third/): the extended probe; Hi-Quality is the stored element
+    # Oversampling (off in the loaded device)
+    {"name": "pedal-curves-low-high", "plan": "1", "probe": "ext", "read": ["ext: stair100, tone50, tone3k, ramp"], "priority": 1,
+     "why": "the circuits at 100 Hz, 50 Hz and 3 kHz (pre-filtering, low end), and gating in Fuzz on the slow ramp",
+     "question": "100 Hz staircase, 50 Hz and 3 kHz sines and the 1 kHz ramp for each type at Gain 0, 50, 100 %",
+     "base": BASE,
+     "cases": [case(t, g) for t in ("Overdrive", "Distortion", "Fuzz") for g in (0, 50, 100)]},
+
+    {"name": "pedal-hiquality", "plan": "5", "probe": "ext", "read": ["ext: tone10k, tone15k peaks", "impulse"], "priority": 1,
+     "why": "aliasing with Hi-Quality (stored Oversampling) off and on at Gain 100 %",
+     "question": "spectral lines of the 10 and 15 kHz sines for each type at Gain 100 %, Oversampling false and true",
+     "base": dict(BASE, **{"Drive": {"display": 100}}),
+     "cases": [[f"{t[:4].lower()}-hq-{'on' if q else 'off'}", {"Type": {"item": t}, "@Oversampling": q}]
+               for t in ("Overdrive", "Distortion", "Fuzz") for q in (False, True)]},
+
+    {"name": "pedal-switching", "plan": "6", "probe": "gap2", "read": ["raw render around the switches"], "priority": 2,
+     "why": "clicks and state clearing when the type or the Mid Frequency is switched during a tone",
+     "question": "the steady tone at Gain 50 %, Mid +50 %: Type Overdrive to Distortion at beat 46 and to Fuzz at beat 52; Mid Freq Low to High at beat 46",
+     "base": dict(BASE, **{"Drive": {"display": 50}, "Mid": {"display": 50}}),
+     "cases": [["type-switch", {"Type": {"auto": [[0, {"item": "Overdrive"}], [46, {"item": "Distortion"}], [52, {"item": "Fuzz"}]]}}],
+               ["midfreq-switch", {"Mid Freq": {"auto": [[0, {"item": "Low"}], [46, {"item": "High"}]]}}]]},
 ]

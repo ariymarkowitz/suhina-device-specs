@@ -1,0 +1,19 @@
+{
+ "suhina_probe_signal": 1,
+ "kind": "key-noise",
+ "rate": 44100,
+ "channels": 2,
+ "length": 2061676,
+ "gap": 2.0,
+ "tempo": 120.0,
+ "segments": [
+  {
+   "name": "noise",
+   "start": 0,
+   "length": 2061676,
+   "level_db": -18.0,
+   "seed": 3
+  }
+ ],
+ "timed_against": "the main probe (build)"
+}

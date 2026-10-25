@@ -1,0 +1,42 @@
+{
+ "name": "third-5",
+ "probes": {
+  "ext": "measurements/probe-ext/probe.wav"
+ },
+ "runs": [
+  "redux-section-order",
+  "roar-single-shapers",
+  "saturator-curves-ramp",
+  "saturator-hiquality",
+  "saturator-hiquality-types",
+  "utility-midside",
+  "vocoder-pitch-tracking",
+  "amp-volume-models",
+  "autofilter-env-detector",
+  "autofilter-hiquality-alias",
+  "autofilter-resampling",
+  "autopan-harmonic-crossover",
+  "autopan-onset",
+  "autoshift-formant-saw",
+  "channeleq-alias-boost",
+  "compressor-peak-buzz",
+  "corpus-bleed-limiter",
+  "drumbuss-alias-stereo",
+  "dyntube-detector",
+  "gate-stereo",
+  "glue-stereo-oversample",
+  "limiter-ceiling-modes",
+  "mbd-knee-ramp",
+  "overdrive-curves-100hz",
+  "phaser-flanger-env-times",
+  "phaser-flanger-lfo2-sync",
+  "phaser-flanger-safe-warmth",
+  "redux-bits-shape-ramp",
+  "roar-level-output-hq",
+  "saturator-predc-step",
+  "saturator-waveshaper-more",
+  "utility-dc-audition",
+  "vinyl-distortion-band",
+  "vocoder-gate-ramp"
+ ]
+}

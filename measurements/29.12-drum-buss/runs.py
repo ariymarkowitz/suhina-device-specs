@@ -77,4 +77,28 @@ RUNS = [
      "cases": [["wet-0", {"Dry/Wet": {"display": 0}}], ["wet-50", {"Dry/Wet": {"display": 50}}],
                ["wet-50-out-m10", {"Dry/Wet": {"display": 50}, "Output": {"display": -10}}],
                ["out-m10", {"Output": {"display": -10}}], ["out-p3", {"Output": {"display": 3}}]]},
+
+    # ---- third set (measurements/third/): the extended probe's 100 Hz staircase and 1 kHz ramp
+    # (curves at two frequencies), 10 and 15 kHz sines (aliasing), loud-left / quiet-right tone,
+    # and 60 Hz bursts over a bed (the transient shaper below its 100 Hz split)
+    {"name": "drumbuss-curves-100hz", "plan": "2", "probe": "ext", "read": ["ext: stair100, ramp"], "priority": 1,
+     "why": "each Drive Type's curve at 100 Hz and in fine steps at 1 kHz, including Medium and Hard at Drive 0",
+     "question": "100 Hz staircase and 1 kHz ramp for Soft, Medium, Hard at Drive 0, 50, 100 %, Damping 20 kHz",
+     "base": BASE,
+     "cases": [[f"{t.lower()}-{d}", {"Drive Type": {"item": t}, "Drive": {"display": d}}]
+               for t in ("Soft", "Medium", "Hard") for d in (0, 50, 100)]},
+
+    {"name": "drumbuss-alias-stereo", "plan": "11, 12", "probe": "ext", "read": ["ext: tone10k, tone15k peaks, lrsplit, side, bursts60"], "priority": 2,
+     "why": "aliasing at Hard, Drive 100 % and Crunch 100 %; whether the compressor and transient shaper are linked across channels; the transient shaper on 60 Hz bursts",
+     "question": "spectral lines of the 10 and 15 kHz sines at Hard, Drive 100 %, Crunch 100 %; per-channel gain of the split tone and side noise and the 60 Hz bursts with Compressor on, and with Transients +100 and -100 %",
+     "base": BASE,
+     "cases": [["hard-crunch", {"Drive Type": {"item": "Hard"}, "Drive": {"display": 100}, "Crunch": {"display": 100}}],
+               ["comp-on", {"Compressor On": {"item": "On"}}],
+               ["transients+100", {"Transients": 1}], ["transients-100", {"Transients": -1}]]},
+
+    {"name": "drumbuss-boom-freqs", "plan": "7", "probe": "gap2", "read": ["impulse (ring frequency)"], "priority": 3,
+     "why": "the Boom resonance at Freq values between notes (does it snap to notes without Force To Note?)",
+     "question": "ring frequency of the impulse with Boom 100 % (Audition on) at Freq 35, 63 and 82 Hz",
+     "base": dict(BASE, **{"Boom Amt": {"display": 100}, "Boom Audition": {"item": "On"}}),
+     "cases": [[f"boom-{f}", {"Boom Freq": {"display": f}}] for f in (35, 63, 82)]},
 ]

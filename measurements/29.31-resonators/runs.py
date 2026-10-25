@@ -74,4 +74,27 @@ RUNS = [
                ["only-II-w50", {"II On": ON, "Width": {"display": 50}}],
                ["only-II-w0", {"II On": ON, "Width": {"display": 0}}],
                ["only-III-w0", {"III On": ON, "Width": {"display": 0}}]]},
+
+    # ---- third set (measurements/third/)
+    {"name": "resonators-others", "plan": "2, 3", "probe": "gap2", "read": ["impulse (ring frequency, T30)"], "priority": 1,
+     "why": "Resonators II to V: their Pitch relative to I, Tune, and their decay with Const on and off",
+     "question": "ring frequency and decay of each of II to V alone at Pitch +12 (I at C2); II at Pitch -24 and +24 and Tune +50; II at Pitch +12 with Const off",
+     "base": ALL_OFF,
+     "cases": [[f"{r.lower()}-p12", {f"{r} On": ON, f"{r} Pitch": 12}] for r in ("II", "III", "IV", "V")] +
+              [[f"ii-p{p:+d}", {"II On": ON, "II Pitch": p}] for p in (-24, 24)] +
+              [["ii-tune+50", {"II On": ON, "II Tune": 50}], ["ii-p12-constoff", {"II On": ON, "II Pitch": 12, "Const": OFF}]]},
+
+    {"name": "resonators-notes-const", "plan": "2, 3", "probe": "gap2", "read": ["impulse (ring frequency, T30)"], "priority": 2,
+     "why": "more Note values over the range and Const off at more pitches (a law needs more than two points)",
+     "question": "Resonator I alone: Note 30, 60, 72, 84; Const off at Note 36, 60, 72",
+     "base": BASE,
+     "cases": [[f"note-{n}", {"I Note": n}] for n in (30, 60, 72, 84)] +
+              [[f"constoff-{n}", {"I Note": n, "Const": OFF}] for n in (36, 60, 72)]},
+
+    {"name": "resonators-gain-mix", "plan": "8, 10", "probe": "gap2", "read": ["impulse", "static"], "priority": 2,
+     "why": "a resonator's Gain, the output Gain and Dry/Wet at 50 %, and whether the dry is delayed",
+     "question": "impulse and staircase: I Gain -12 dB; Output +6 dB; Dry/Wet 50 % and 0 %",
+     "base": BASE,
+     "cases": [["i-gain-12", {"I Gain": {"display": -12}}], ["output+6", {"Output": {"display": 6}}],
+               ["drywet-50", {"Dry/Wet": {"display": 50}}], ["drywet-0", {"Dry/Wet": {"display": 0}}]]},
 ]

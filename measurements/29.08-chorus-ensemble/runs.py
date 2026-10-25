@@ -96,4 +96,19 @@ RUNS = [
      "base": BASE,
      "cases": [[f"wet-{w}", {"Dry/Wet": {"display": w}}] for w in (0, 25, 50)] +
               [["out-m12", {"Output": {"display": -12}}], ["out-p6", {"Output": {"display": 6}}]]},
+
+    # ---- third set (measurements/third/). The extended probe's impulse train (one impulse every
+    # 100 ms for 2 s) gives twenty snapshots of the taps' delays, so each tap's LFO can be followed.
+    {"name": "chorus-tap-phases", "plan": "4", "probe": "ext", "read": ["ext: impulsetrain (taps per impulse)"], "priority": 1,
+     "why": "the LFO phase of each tap in Chorus and Ensemble (and whether one and two taps differ when modulated)",
+     "question": "tap delays of each impulse of the train, Amount 100 %, Rate 1 Hz, Feedback 0: Chorus with 2 taps and 1 tap, Ensemble, Vibrato",
+     "base": MOD,
+     "cases": [["chorus-2taps", {}], ["chorus-1tap", {"Delay Taps": {"item": "1"}}],
+               ["ensemble", {"Mode": {"item": "Ensemble"}}], ["vibrato", {"Mode": {"item": "Vibrato"}}]]},
+
+    {"name": "chorus-mode-switch", "plan": "4", "probe": "gap2", "read": ["raw render around the switch"], "priority": 3,
+     "why": "what happens at a mode change while playing (crossfade, click, reset of the LFO)",
+     "question": "the steady tone with Mode switching from Chorus to Ensemble at beat 46 (23 s) and to Vibrato at beat 52 (26 s), Amount 100 %",
+     "base": MOD,
+     "cases": [["switch", {"Mode": {"auto": [[0, {"item": "Chorus"}], [46, {"item": "Ensemble"}], [52, {"item": "Vibrato"}]]}}]]},
 ]

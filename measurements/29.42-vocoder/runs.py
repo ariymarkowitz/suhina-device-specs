@@ -84,4 +84,58 @@ RUNS = [
      "cases": [["mono", {"Mono/Stereo": {"item": "Mono"}}], ["lr", {"Mono/Stereo": {"item": "L/R"}}],
                ["level+12", {"Output": {"display": 12}}], ["level-12", {"Output": {"display": -12}}],
                ["dw-50", {"Dry/Wet": {"display": 50}}], ["enhance", {"Enhance": ON}]]},
+
+    # ---- third set (measurements/third/). Stored elements: CarrierSource/Type (0 Noise, loaded;
+    # the panel's other carriers External, Modulator, Pitch Tracking tried as 1, 2, 3, to be read
+    # from the renders), CarrierSource/RoutedInput/Routable/Target (the external carrier: a key
+    # track, signals.py --kind key-saw or key-noise), FilterBank/BandCount (an index: stored 4 =
+    # 20 bands; the panel's list 4, 8, 12, 16, 20, 24, 32, 40 is assumed).
+    {"name": "vocoder-carriers", "plan": "2, 4, 8, 14", "probe": "gap2", "read": ["response", "static", "dynamics", "impulse"], "priority": 1,
+     "why": "the carriers the API cannot choose: External (a 110 Hz saw and a noise track), Modulator, Pitch Tracking",
+     "question": "the probe as modulator at Depth 100 %: Type 1 with key-saw and with key-noise; Type 2; Type 3",
+     "base": CLASSIC,
+     "cases": [["external-saw", {"@CarrierSource/Type": 1, "@CarrierSource/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-saw.wav"}],
+               ["external-noise", {"@CarrierSource/Type": 1, "@CarrierSource/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-noise.wav"}],
+               ["type-2", {"@CarrierSource/Type": 2}], ["type-3", {"@CarrierSource/Type": 3}]]},
+
+    {"name": "vocoder-band-counts", "plan": "1, 2, 3", "probe": "gap2", "read": ["noise", "response"], "priority": 1,
+     "why": "the other band counts (stored index), and BW 10, 50, 150 %",
+     "question": "noise and sweep through the bank (Depth 0, noise carrier) with BandCount 0, 1, 7; Filter Width 10, 50, 150 %",
+     "base": CARRIER,
+     "cases": [[f"bands-{b}", {"@FilterBank/BandCount": b}] for b in (0, 1, 7)] +
+              [[f"bw-{w}", {"Filter Width": {"display": w}}] for w in (10, 50, 150)]},
+
+    {"name": "vocoder-pitch-tracking", "plan": "8", "probe": "ext", "read": ["ext: glide, saw, tone50, tone3k (output pitch)"], "priority": 1,
+     "why": "Pitch Tracking (Type 3, assumed): the oscillator's frequency against the input's, its limits, the waveforms and the Pitch control's unit",
+     "question": "output pitch for the glide, the 150 Hz saw and the 50 Hz and 3 kHz tones: Saw, Pulse10, Pulse25, Pulse48; Oscillator Pitch +12",
+     "base": dict(CLASSIC, **{"@CarrierSource/Type": 3}),
+     "cases": [[f"wave-{w.lower()}", {"Oscillator Waveform": {"item": w}}] for w in ("Pulse10", "Pulse25", "Pulse48")] +
+              [["pitch+12", {"Oscillator Pitch": 12}]]},
+
+    {"name": "vocoder-gate-ramp", "plan": "6", "probe": "ext", "read": ["ext: ramp"], "priority": 2,
+     "why": "the Gate's hysteresis on the slow ramp",
+     "question": "the ramp through Gate -30 dB (Depth 100 %, noise carrier): where the output opens rising and closes falling",
+     "base": CLASSIC,
+     "cases": [["gate-30", {"Gate Threshold": {"display": -30}}]]},
+
+    {"name": "vocoder-enhance-saw", "plan": "9", "probe": "gap2", "read": ["noise", "steady (spectrum)", "response"], "priority": 2,
+     "why": "Enhance with a harmonic external carrier (the key tracks last as long as the main probe)",
+     "question": "the probe through the 110 Hz saw carrier with Enhance off and on",
+     "base": dict(CLASSIC, **{"@CarrierSource/Type": 1,
+                              "@CarrierSource/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-saw.wav"}),
+     "cases": [["enhance-off", {"Enhance": OFF}], ["enhance-on", {"Enhance": ON}]]},
+
+    # ---- candidates after the third set
+    {"name": "vocoder-band-counts-bw25", "plan": "1, 2", "probe": "gap2", "read": ["noise"], "priority": 3,
+     "why": "the third set's band-count cases were at Filter Width 100 %, where the bands tile and cannot be counted; at 25 % the bands are separate peaks",
+     "question": "noise through the bank (Depth 0, noise carrier) with BandCount 0 to 7 at Filter Width 25 %: count the peaks",
+     "base": dict(CARRIER, **{"Filter Width": {"display": 25}}),
+     "cases": [[f"bands-{b}", {"@FilterBank/BandCount": b}] for b in range(8)]},
+
+    {"name": "vocoder-pitch-limits", "plan": "8", "probe": "ext", "read": ["ext: lowsines, tone50, tone3k, tone10k, glide (output pitch)"], "priority": 3,
+     "why": "the third set (default limits 80 Hz and 500 Hz) found the oscillator parked near 215.7 Hz for a 50 Hz and a 3 kHz input and at 499 Hz for a 1 kHz input: whether the limit clamps, folds an octave or parks needs the limits moved",
+     "question": "output pitch for the glide and tones with the High and Low tracking limits at their extremes (Pitch Tracking, Saw)",
+     "base": dict(CLASSIC, **{"@CarrierSource/Type": 3}),
+     "cases": [["limits-wide", {"Lower Pitch Detection": {"display": 30}, "Upper Pitch Detection": {"display": 3000}}],
+               ["limits-mid", {"Lower Pitch Detection": {"display": 200}, "Upper Pitch Detection": {"display": 800}}]]},
 ]

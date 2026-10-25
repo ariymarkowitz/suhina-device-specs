@@ -63,4 +63,18 @@ RUNS = [
          ["crossed-mid", MID | {"FreqLo": {"display": 3000}, "FreqHi": {"display": 500}}],
          ["crossed-flat", {"FreqLo": {"display": 3000}, "FreqHi": {"display": 500}}],
      ]},
+
+    # ---- third set (measurements/third/)
+    {"name": "eq-three-kill-lanes", "plan": "5", "probe": "gap2", "read": ["raw render around the switches"], "priority": 2,
+     "why": "clicks or ramps when a band is killed and restored, and when its gain jumps, during the steady tone (in the mid band)",
+     "question": "the steady 1 kHz tone with MidOn off at beat 44 and on at beat 48, and GainMid jumping from 0 dB to -inf at beat 52",
+     "base": BASE,
+     "cases": [["kill-mid", {"MidOn": {"auto": [[0, {"item": "On"}], [44, {"item": "Off"}], [48, {"item": "On"}]]}}],
+               ["gain-jump", {"GainMid": {"auto": [[0, {"display": 0}], [52, {"display": 0}], [52, INF]]}}]]},
+
+    {"name": "eq-three-flat-element", "plan": "2", "probe": "gap2", "read": ["response"], "priority": 3,
+     "why": "the stored element FlatResponse (true in the loaded device): what false does to the crossover sum",
+     "question": "sweep response with all gains at 0 dB and FlatResponse false, at Slope 24 and 48",
+     "base": BASE,
+     "cases": [[f"notflat-{s}", {"@FlatResponse": False, "Slope": {"item": s}}] for s in ("24", "48")]},
 ]

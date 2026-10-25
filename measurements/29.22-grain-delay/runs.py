@@ -80,4 +80,26 @@ RUNS = [
          ["dw-50", {"Pitch": 12, "DryWet": {"display": 50}}],
          ["dw-75", {"Pitch": 12, "DryWet": {"display": 75}}],
      ]},
+
+    # ---- third set (measurements/third/)
+    {"name": "grain-delay-buttons", "plan": "2", "probe": "gap2", "read": ["impulse"], "priority": 2,
+     "why": "the other sync buttons and the negative offset",
+     "question": "echo time of the impulse for Beat Delay 2, 3, 5, 6, 8 and for 4 with Beat Swing -33.3 %",
+     "base": dict(BASE, **{"Delay Mode": {"item": "On"}, "Beat Swing": {"display": 0}}),
+     "cases": [[f"beat-{b}", {"Beat Delay": {"item": str(b)}}] for b in (2, 3, 5, 6, 8)] +
+              [["beat-4-swing-33", {"Beat Delay": {"item": "4"}, "Beat Swing": -0.333}]]},
+
+    {"name": "grain-delay-window", "plan": "3", "probe": "gap2", "read": ["envelope of the steady tone (grain window shape)"], "priority": 1,
+     "why": "the grain window's shape, which shows only when Pitch is not 0, at a low and a high grain rate",
+     "question": "envelope and spectrum of the steady tone at Pitch +12, -12 and +7 with Frequency 10 Hz, and +12 at 60 Hz",
+     "base": BASE,
+     "cases": [[f"pitch{p:+d}-10hz", {"Pitch": p, "Frequency": {"display": 10}}] for p in (12, -12, 7)] +
+              [["pitch+12-60hz", {"Pitch": 12}]]},
+
+    {"name": "grain-delay-spray-train", "plan": "5, 6", "probe": "ext", "read": ["ext: impulsetrain (arrival times per impulse)", "glide"], "priority": 1,
+     "why": "Spray's distribution of arrival times over twenty impulses, and Random Pitch's per-grain frequencies at a low grain rate",
+     "question": "arrival times of each impulse of the train's copies at Spray 20, 60, 200 ms; the 150 Hz saw's partials and the glide at Random 40 and 161, Frequency 10 Hz",
+     "base": BASE,
+     "cases": [[f"spray-{s}", {"Spray": {"display": s / 1000}}] for s in (20, 60, 200)] +
+              [[f"random-{r}-10hz", {"Random": {"display": r}, "Frequency": {"display": 10}}] for r in (40, 161)]},
 ]

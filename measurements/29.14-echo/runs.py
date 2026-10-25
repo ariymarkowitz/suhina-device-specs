@@ -156,4 +156,38 @@ RUNS = [
                ["in-p20-d", {"Input Gain": {"display": 20}, "Clip Dry": {"item": "On"}}],
                ["out-m12", {"Output": {"display": -12}}],
                ["wet-25", {"Dry Wet": {"display": 25}}]]},
+
+    # ---- third set (measurements/third/)
+    {"name": "echo-sync-more", "plan": "2", "probe": "gap2", "read": ["impulse"], "priority": 2,
+     "why": "the rest of the Synced list and more 16th counts, Triplet and Dotted at other values",
+     "question": "echo time of the impulse for Synced 1/64 and 1/32, 16th counts 1, 7 and 12, Triplet 1/16 and 1/2, Dotted 1/16 and 1/2",
+     "base": SYNC,
+     "cases": [[f"synced{v}", {"L Synced": v, "R Synced": v}] for v in (-6, -5)] +
+              [[f"sixteenth-{n}", {"L Sync Mode": {"item": "16th"}, "R Sync Mode": {"item": "16th"}, "L 16th": n, "R 16th": n}]
+               for n in (1, 7, 12)] +
+              [[f"{m.lower()}{v}", {"L Sync Mode": {"item": m}, "R Sync Mode": {"item": m}, "L Synced": v, "R Synced": v}]
+               for m in ("Triplet", "Dotted") for v in (-4, HALF)]},
+
+    {"name": "echo-mod-shapes", "plan": "8", "probe": "ext", "read": ["ext: impulsetrain (echo time per impulse)"], "priority": 1,
+     "why": "the modulation waves' shapes and the Mod Rate list, as the echo time of each impulse of the train",
+     "question": "echo delay after each impulse, L and R 50 ms, Mod 1 Hz, Dly < Mod 100 %: each Mod Wave; Sine with Mod Sync at 1/4 and 1/2",
+     "base": dict(BASE, **{"L Time": {"display": 0.05}, "R Time": {"display": 0.05}, "Dly < Mod": {"display": 100}}),
+     "cases": [[f"wave-{w.lower().replace(' ', '-')}", {"Mod Wave": {"item": w}}]
+               for w in ("Sine", "Triangle", "Saw Up", "Saw Down", "Square", "Random")] +
+              [[f"sync-r{r}", {"Mod Sync": {"item": "On"}, "Mod Rate": r}] for r in (12, 8)]},
+
+    {"name": "echo-repitch-jump", "plan": "11", "probe": "gap2", "read": ["raw render around the jump (pitch glide)"], "priority": 1,
+     "why": "the Repitch glide when the delay time steps from 100 to 200 ms, against Repitch off and a shorter Smoothing Time",
+     "question": "the steady tone's echo around L and R Time jumping from 100 to 200 ms at beat 46 (23 s): Repitch on at 400 and 100 ms, Repitch off",
+     "base": dict(BASE, **{"Link": {"item": "On"},
+                           "L Time": {"auto": [[0, {"display": 0.1}], [46, {"display": 0.1}], [46, {"display": 0.2}]]}}),
+     "cases": [["repitch-400", {"Repitch": {"item": "On"}, "Repitch Smoothing Time": {"display": 0.4}}],
+               ["repitch-100", {"Repitch": {"item": "On"}, "Repitch Smoothing Time": {"display": 0.1}}],
+               ["repitch-off", {}]]},
+
+    {"name": "echo-drywet-mode", "plan": "12", "probe": "gap2", "read": ["impulse", "static"], "priority": 2,
+     "why": "the stored DryWetMode (loaded 0): what the other value does to the dry and wet levels at 50 %",
+     "question": "impulse and staircase at Dry Wet 50 % with DryWetMode 0 and 1",
+     "base": dict(BASE, **{"Dry Wet": {"display": 50}}),
+     "cases": [["mode0", {"@DryWetMode": 0}], ["mode1", {"@DryWetMode": 1}]]},
 ]

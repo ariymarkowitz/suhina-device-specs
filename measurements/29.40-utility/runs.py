@@ -61,4 +61,24 @@ RUNS = [
      "question": "sweep response with the DC filter on",
      "base": STEREO,
      "cases": [["dc-on", {"DC Filter": ON}]]},
+
+    # ---- third set: automation lanes (make_als.py {"auto": ...}); beat 2 x seconds
+    {"name": "utility-mute-lane", "plan": "10", "probe": "gap2", "read": ["raw render around the jumps"], "priority": 1,
+     "why": "Mute switched during the steady tone (clicks, ramp length), and a sanity check that a float lane plays: Gain jumps -12 dB at beat 22 (11 s, in the staircase)",
+     "question": "the steady tone around Mute on at beat 44 (22 s) and off at beat 46 (23 s); the staircase around a Gain jump from 0 to -12 dB at beat 22",
+     "cases": [["mute", {"Mute": {"auto": [[0, {"item": "Off"}], [44, {"item": "On"}], [46, {"item": "Off"}]]}}],
+               ["gain-jump", {"Output": {"auto": [[0, {"display": 0}], [22, {"display": 0}], [22, {"display": -12}]]}}]]},
+
+    # The Mid/Side knob is a stored parameter element without an API parameter (MidSideBalance,
+    # 0 .. 2, loaded 1, switched on by MidSideBalanceOn); Bass Mono Audition is BassMonoAudition.
+    {"name": "utility-midside", "plan": "1, 4", "probe": "ext", "read": ["ext: mid, side, lrsplit"], "priority": 1,
+     "why": "the Mid/Side knob's law: mid and side levels against its position",
+     "question": "gains of mid-only and side-only noise with MidSideBalanceOn and MidSideBalance 0, 0.5, 1, 1.5, 2",
+     "base": {"@MidSideBalanceOn": True},
+     "cases": [[f"ms-{v}", {"@MidSideBalance": v}] for v in (0, 0.5, 1, 1.5, 2)]},
+
+    {"name": "utility-dc-audition", "plan": "6, 9", "probe": "ext", "read": ["ext: dcstep, lowsines, side, mid"], "priority": 2,
+     "why": "the DC filter's step response and its effect on 1, 5 and 20 Hz; Bass Mono Audition's output",
+     "question": "DC step and low sines with DC Filter on; mid and side noise with Bass Mono on at 120 Hz and BassMonoAudition true",
+     "cases": [["dc-on", {"DC Filter": ON}], ["bassmono-audition", {"Bass Mono": ON, "@BassMonoAudition": True}]]},
 ]

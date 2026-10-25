@@ -28,4 +28,15 @@ RUNS = [
      + [["dw50-outgain+12", {"Dry/Wet": {"display": 50}, "Output Gain": {"display": 12}}],
         ["dw50-ingain+12", {"Dry/Wet": {"display": 50}, "Input Gain": {"display": 12}}],
         ["dw50-ingain--inf", {"Dry/Wet": {"display": 50}, "Input Gain": {"norm": 0.0}}]]},
+
+    # ---- third set (measurements/third/): the Hardware Latency is a stored value
+    # (LatencyValue/Value, in ms unless IsValueSampleBased), so its effect on the unrouted
+    # device's dry path can be rendered
+    {"name": "external-audio-effect-latency", "plan": "2, 7", "probe": "gap2", "read": ["impulse"], "priority": 3,
+     "why": "whether the Hardware Latency setting delays the dry path or shifts the track, and the unit switch",
+     "question": "impulse through the unrouted device at Dry/Wet 0 and 50 % with Hardware Latency 10 ms, and 441 samples with the unit in samples",
+     "base": {"Dry/Wet": {"display": 50}},
+     "cases": [["lat10ms-dry0", {"Dry/Wet": {"display": 0}, "@LatencyValue/Value": 10}],
+               ["lat10ms-dry50", {"@LatencyValue/Value": 10}],
+               ["lat441smp-dry50", {"@LatencyValue/Value": 441, "@LatencyValue/IsValueSampleBased": True}]]},
 ]

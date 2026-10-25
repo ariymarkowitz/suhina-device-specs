@@ -92,4 +92,47 @@ RUNS = [
                ["env+3", {"Env Amount St": {"display": 3}}],
                ["env+12-slow", {"Env Amount St": {"display": 12}, "Env Attack": {"display": 0.03},
                                 "Env Release": {"display": 0.4}}]]},
+
+    # ---- third set (measurements/third/). Pitch Mode is the stored element Global_PitchMode
+    # (0 in the loaded device: internal; MIDI is [measure], tried as 1); the MIDI notes come from
+    # a MIDI track into the device's MIDI side-chain (make_als.py {"midi": ...}). The steady 1 kHz
+    # tone runs from beat 41.5 to 57.5.
+    {"name": "shifter-window-more", "plan": "2", "probe": "gap2", "read": ["impulse", "modulation", "response"], "priority": 2,
+     "why": "Window at its ends: latency, transients and the steady tone's purity at +12 st",
+     "question": "impulse, sweep and steady tone at Pitch +12 with Window 10, 30 and 350 ms",
+     "base": dict(BASE, **{"Pitch Coarse": 12}),
+     "cases": [[f"window-{w}", {"Pitch Window": {"display": w / 1000}}] for w in (10, 30, 350)]},
+
+    {"name": "shifter-freq-wide", "plan": "4, 6", "probe": "gap2", "read": ["steady (spectrum)", "stereo"], "priority": 2,
+     "why": "Freq mode above 1 kHz and the Fine control's range; Wide in each mode (left and right shifts)",
+     "question": "spectrum of the steady tone: Freq +2.5 kHz and -5 kHz; Fine +62.5 and -500 Hz; Wide on at Pitch +7, Freq +100 Hz and Ring 1 kHz",
+     "base": FREQ,
+     "cases": [["freq+2500", {"FShift Coarse": {"display": 2500}}], ["freq-5000", {"FShift Coarse": {"display": -5000}}],
+               ["fine+62.5", {"Mod Fine": {"display": 62.5}}], ["fine-500", {"Mod Fine": {"display": -500}}],
+               ["wide-pitch", {"Mode": {"item": "Pitch"}, "Pitch Coarse": 7, "Wide": ON}],
+               ["wide-freq", {"FShift Coarse": {"display": 100}, "Wide": ON}],
+               ["wide-ring", {"Mode": {"item": "Ring"}, "Wide": ON}]]},
+
+    {"name": "shifter-lfo-more", "plan": "8", "probe": "gap2", "read": ["modulation (per channel)"], "priority": 2,
+     "why": "Spin, Offset, Duty Cycle, Phase, the Hz-mode depth, sync and the stepped and random waves",
+     "question": "pitch of the steady tone (LFO 1 Hz, 3 st): Spin 50 %; Offset 90; Rectangle at Duty Cycle 50 %; Phase 0 and 90; Freq mode at 98.9 Hz depth; Sync 1/4; Triangle 8; Random",
+     "base": dict(BASE, **{"Lfo Amount St": {"display": 3}, "Lfo Rate Hz": {"display": 1}, "Lfo Waveform": {"item": "Sine"},
+                           "Lfo Sync": OFF, "Lfo Spin": OFF}),
+     "cases": [["spin-50", {"Lfo Spin": ON, "Lfo Spin Amount": {"display": 50}}], ["offset-90", {"Lfo Offset": {"display": 90}}],
+               ["rect-duty50", {"Lfo Waveform": {"item": "Rectangle"}, "Lfo Duty Cycle": {"display": 50}}],
+               ["phase-0", {"Lfo Phase": {"display": 0}}], ["phase-90", {"Lfo Phase": {"display": 90}}],
+               ["hz-depth", {"Mode": {"item": "Freq"}, "Lfo Amount St": {"display": 0}, "Lfo Amount Hz": {"display": 98.9}}],
+               ["sync-q", {"Lfo Sync": ON, "Lfo S. Rate": 12}],
+               ["triangle8", {"Lfo Waveform": {"item": "Triangle 8"}}], ["random", {"Lfo Waveform": {"item": "Random"}}]]},
+
+    {"name": "shifter-midi", "plan": "10", "probe": "gap2", "read": ["modulation (pitch of the steady tone over time)"], "priority": 1,
+     "why": "MIDI pitch mode: the shift for each note (C3 = no shift?), Glide, and overlapping notes; two routing forms are tried",
+     "question": "pitch of the steady tone with Global_PitchMode 1 and notes C3 (beats 42 to 46), E3 (46 to 50), G3 (50 to 54) overlapping C4 (53 to 56): Glide 0 and 78 ms; the PostFxOut routing",
+     "base": dict(BASE, **{"@Global_PitchMode": 1,
+                           "@MidiSideChain/RoutedInput/Routable/Target": {"midi": {"name": "shifter", "length": 60, "notes": [
+                               [60, 42, 4, 100], [64, 46, 4, 100], [67, 50, 4, 100], [72, 53, 3, 100]]}}}),
+     "cases": [["glide-78", {"MidiPitch Glide": {"display": 0.078}}],
+               ["postfx-route", {"@MidiSideChain/RoutedInput/Routable/Target": {"midi": {"name": "shifter", "length": 60, "notes": [
+                   [60, 42, 4, 100], [64, 46, 4, 100], [67, 50, 4, 100], [72, 53, 3, 100]]}, "out": "PostFxOut"}}],
+               ["pitchmode-2", {"@Global_PitchMode": 2}]]},
 ]

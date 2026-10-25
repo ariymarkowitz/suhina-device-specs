@@ -59,4 +59,13 @@ RUNS = [
      "question": "Dry/Wet 0, 25 and 75 % at Drive 75 % (100 % is the wet-only base)",
      "base": BASE | {"Drive": {"display": 75}},
      "cases": [[f"dw-{v}", {"Dry/Wet": {"display": v}}] for v in (0, 25, 75)]},
+
+    # ---- third set (measurements/third/): the extended probe's 100 Hz staircase, 1 kHz ramp and
+    # 3 kHz sine stand in for the plan's 200 Hz and 2 kHz curves
+    {"name": "overdrive-curves-100hz", "plan": "2", "probe": "ext", "read": ["ext: stair100, ramp, tone3k"], "priority": 2,
+     "why": "the drive curve at a low and a high frequency (the band-pass in front shapes what the shaper sees)",
+     "question": "100 Hz staircase, 1 kHz ramp and 3 kHz sine at Drive 0, 25, 50, 75, 100 % with Dynamics 100 %, and Drive 100 % at Dynamics 0 %",
+     "base": BASE,
+     "cases": [[f"drive-{d}", {"Drive": {"display": d}}] for d in (0, 25, 75, 100)] +
+              [["drive-100-dyn0", {"Drive": {"display": 100}, "Preserve Dynamics": {"display": 0}}]]},
 ]

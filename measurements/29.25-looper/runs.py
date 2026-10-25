@@ -37,4 +37,14 @@ RUNS = [
                case("stop-recovrstop", "Stop", "Rec/OVR/Stop"), case("record-never", "Record", "Never"),
                case("record-recovr", "Record", "Rec/OVR"), case("play-recovr", "Play", "Rec/OVR"),
                case("play-recovrstop", "Play", "Rec/OVR/Stop"), case("overdub-recovrstop", "Overdub", "Rec/OVR/Stop")]},
+
+    # ---- third set: the State is played by an automation lane, so the device acts during the
+    # render (beat 1 = 0.5 s of the probe; the impulse is at beat 1)
+    {"name": "looper-state-lane", "plan": "4, 9, 12", "probe": "gap2", "read": ["impulse", "raw render"], "priority": 1,
+     "why": "whether a State lane makes the Looper record and play back: recording beats 0.5 to 4 holds the impulse, so playback repeats it every 1.75 s",
+     "question": "the render with State Record at beat 0.5 and Play at beat 4; then Record 0.5, Overdub 4, Play 8; Monitor Always",
+     "base": BASE,
+     "cases": [["rec-play", {"State": {"auto": [[0, {"item": "Stop"}], [0.5, {"item": "Record"}], [4, {"item": "Play"}]]}}],
+               ["rec-overdub-play", {"State": {"auto": [[0, {"item": "Stop"}], [0.5, {"item": "Record"}],
+                                                        [4, {"item": "Overdub"}], [8, {"item": "Play"}]]}}]]},
 ]

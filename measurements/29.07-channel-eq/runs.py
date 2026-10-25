@@ -64,4 +64,21 @@ RUNS = [
                ["all-boost", {"Low Gain": {"display": 15}, "Mid Gain": {"display": 12}, "High Gain": {"display": 15}}],
                ["all-cut-hp", {"Highpass On": {"item": "On"}, "Low Gain": {"display": -15}, "Mid Gain": {"display": -12},
                                "High Gain": {"display": -15}}]]},
+
+    # ---- third set (measurements/third/)
+    {"name": "channeleq-alias-boost", "plan": "8", "probe": "ext", "read": ["ext: tone10k, tone15k peaks", "impulse"], "priority": 2,
+     "why": "aliasing or added lines with High at full boost (and Low and Mid at full boost), and the impulse's alignment",
+     "question": "spectral lines of the 10 and 15 kHz sines at High +15 dB; at Low +15, Mid +12 dB, High +15 dB",
+     "base": BASE,
+     "cases": [["high-max", {"High Gain": {"display": 15}}],
+               ["all-max", {"Low Gain": {"display": 15}, "Mid Gain": {"display": 12}, "High Gain": {"display": 15}}]]},
+
+    {"name": "channeleq-lanes", "plan": "4, 8", "probe": "gap2", "read": ["raw render around the changes"], "priority": 2,
+     "why": "smoothing of parameter changes: a Mid Gain jump on the steady tone and a Mid Freq glide over the noise (zipper noise, steps)",
+     "question": "steady tone with Mid Gain jumping 0 to +12 dB at beat 46 (23 s), Mid Freq 1 kHz; noise with Mid Freq gliding 120 Hz to 7.5 kHz over beats 62 to 69 at Mid Gain +12 dB",
+     "base": BASE,
+     "cases": [["mid-gain-jump", {"Mid Freq": {"display": 1000},
+                                  "Mid Gain": {"auto": [[0, {"display": 0}], [46, {"display": 0}], [46, {"display": 12}]]}}],
+               ["mid-freq-glide", {"Mid Gain": {"display": 12},
+                                   "Mid Freq": {"auto": [[0, {"display": 120}], [62, {"display": 120}], [69, {"display": 7500}]]}}]]},
 ]

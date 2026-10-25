@@ -1,0 +1,36 @@
+{
+ "name": "third-2",
+ "probes": {
+  "gap2": "measurements/probe.wav"
+ },
+ "runs": [
+  "amp-tone-stack-models",
+  "autofilter-clip-output-mix",
+  "autofilter-depth-up",
+  "autofilter-freq-res-grid",
+  "autofilter-lfo-params",
+  "autopan-random-width",
+  "autopan-sync-offset",
+  "autoshift-lfo-timing",
+  "beatrepeat-chance-quarters",
+  "beatrepeat-variation-quarters",
+  "cabinet-grid",
+  "channeleq-lanes",
+  "compressor-drywet",
+  "compressor-log-lin-amounts",
+  "compressor-makeup-more",
+  "corpus-hit-listening",
+  "corpus-tune-types",
+  "delay-drywet-mode",
+  "echo-drywet-mode",
+  "echo-sync-more",
+  "eq-eight-freq-gain",
+  "eq-eight-freq-glide",
+  "eq-eight-oversampling",
+  "eq-three-kill-lanes",
+  "grain-delay-buttons",
+  "hybrid-reverb-eq-ranges",
+  "hybrid-reverb-tides",
+  "mbd-amount-time-below"
+ ]
+}

@@ -143,4 +143,51 @@ RUNS = [
          ["freeze", {"Freeze": {"item": "On"}}],
          ["freeze-in", {"Freeze": {"item": "On"}, "Freeze In": {"item": "On"}}],
      ]},
+
+    # ---- third set (measurements/third/): the long-tail probe (gap10) for decays; lanes for
+    # Freeze toggled during the render
+    {"name": "hybrid-reverb-decay-algos", "plan": "6", "probe": "gap10", "read": ["impulse (.ir.wav: T30 per band)"], "priority": 1,
+     "why": "Decay against T60 for the four algorithms besides Dark Hall, and Dark Hall above 12 s (initial slope over the 10 s window)",
+     "question": "impulse responses at Decay 1 s and 8 s for Quartz, Shimmer, Tides, Prism; Dark Hall at Decay 20 and 60 s",
+     "base": BASE,
+     "cases": [[f"{a.lower()}-{d}s", algo(a, Decay={"display": d})] for a in ("Quartz", "Shimmer", "Tides", "Prism") for d in (1, 8)] +
+              [[f"darkhall-{d}s", {"Decay": {"display": d}}] for d in (20, 60)]},
+
+    {"name": "hybrid-reverb-algo-controls", "plan": "6", "probe": "gap10", "read": ["impulse (.ir.wav: T30 per band, echo density, spectrum)"], "priority": 2,
+     "why": "the other algorithms' own controls, Dark Hall's Bass X, and Prism's crossover",
+     "question": "impulse responses (Decay 3.5 s): Quartz Low Damp 0 and 100 %, Distance 0 and 100 %; Prism X Over 400 Hz and 3 kHz with Low Mult at its minimum, High Mult at its minimum; Dark Hall Bass X 150 Hz and 1 kHz with Bass Mult at its maximum; Shimmer at 0 and 100 %",
+     "base": BASE,
+     "cases": [[f"quartz-lowdamp-{v}", algo("Quartz", **{"Qz Low Damp": {"display": v}})] for v in (0, 100)] +
+              [[f"quartz-distance-{v}", algo("Quartz", **{"Qz Distance": {"display": v}})] for v in (0, 100)] +
+              [[f"prism-xover-{f}-lowmin", algo("Prism", **{"Pr X Over": {"display": f}, "Pr Low Mult": {"norm": 0}})] for f in (400, 3000)] +
+              [["prism-highmin", algo("Prism", **{"Pr High Mult": {"norm": 0}})]] +
+              [[f"darkhall-bassx-{f}", {"DH Bass X": {"display": f}, "DH BassMult": {"norm": 1}}] for f in (150, 1000)] +
+              [[f"shimmer-{v}", algo("Shimmer", **{"Sh Shimmer": {"display": v}})] for v in (0, 100)]},
+
+    {"name": "hybrid-reverb-tides", "plan": "8", "probe": "gap2", "read": ["noise spectrum over time", "modulation"], "priority": 2,
+     "why": "Tides: the movement of the spectrum over time against Tide, Waveform, Rate and Phase",
+     "question": "the noise and the steady tone through Tides (Decay 1 s): Tide 100 % at Waveform 0, 50, 100 %; Rate 1/4 and 2; Phase 0 and 180",
+     "base": dict(BASE, **algo("Tides", Decay={"display": 1}, **{"Ti Tide": {"display": 100}})),
+     "cases": [[f"wave-{w}", {"Ti Waveform": {"display": w}}] for w in (0, 100)] +
+              [["rate-q", {"Ti Rate": 16}], ["rate-2", {"Ti Rate": 25}],
+               ["phase-0", {"Ti Phase": {"display": 0}}], ["phase-180", {"Ti Phase": {"display": 180}}]]},
+
+    {"name": "hybrid-reverb-freeze-toggle", "plan": "9", "probe": "gap10", "read": ["raw render (level over time, fades)"], "priority": 1,
+     "why": "Freeze toggled during the render: the loop's level over time and the fade times, with Freeze In off and on",
+     "question": "the impulse's tail with Freeze on at beat 2 (1 s) and off at beat 16 (8 s), Freeze In off and on",
+     "base": dict(BASE, **{"Freeze": {"auto": [[0, {"item": "Off"}], [2, {"item": "On"}], [16, {"item": "Off"}]]}}),
+     "cases": [["in-off", {}], ["in-on", {"Freeze In": {"item": "On"}}]]},
+
+    {"name": "hybrid-reverb-eq-ranges", "plan": "10, 11", "probe": "gap2", "read": ["response"], "priority": 2,
+     "why": "the wet EQ's slopes and Q, and EQ Pre Algo (before or after the algorithm) in each routing",
+     "question": "sweep response (Algorithm, Decay 0.1 s): Lo cut at 200 Hz with slopes 6, 24, 96 dB; Peak 1 at 1 kHz +12 dB with its Q at the ends; Hi cut at 2 kHz 36 dB, Pre Algo off and on, in Algorithm and Serial routing",
+     "base": dict(BASE, **SHORT, **{"EQ On": {"item": "On"}, "EQ Lo Gain": {"display": 0}, "EQ Hi Gain": {"display": 0},
+                                     "EQ Peak 1 Gain": {"display": 0}, "EQ Peak 2 Gain": {"display": 0}}),
+     "cases": [[f"locut-{n}", {"EQ Lo Type": {"item": "Cut"}, "EQ Lo Freq": {"display": 200}, "EQ Lo Slope": i}]
+               for n, i in (("6db", 0), ("24db", 3), ("96db", 9))] +
+              [[f"peak1-q{n}", {"EQ Peak 1 Freq": {"display": 1000}, "EQ Peak 1 Gain": {"display": 12}, "EQ Peak 1 Q": {"norm": q}}]
+               for n, q in (("min", 0), ("max", 1))] +
+              [[f"hicut-{r.lower()}-pre{p}", {"Routing": {"item": r}, "EQ Hi Type": {"item": "Cut"}, "EQ Hi Freq": {"display": 2000},
+                                              "EQ Hi Slope": 4, "EQ Pre Algo": {"item": "On" if p else "Off"}}]
+               for r in ("Algorithm", "Serial") for p in (0, 1)]},
 ]

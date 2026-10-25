@@ -121,4 +121,43 @@ RUNS = [
      "question": "level of the steady tone and tap levels for Dry/Wet 0, 25, 50, 75 % (100 % is the default case); delay 100 ms, Feedback 0",
      "base": dict(BASE, **{"R Time": {"display": 0.1}}),
      "cases": [[f"wet-{w}", {"Dry/Wet": {"display": w}}] for w in (0, 25, 50, 75)]},
+
+    # ---- third set (measurements/third/): automation lanes (make_als.py {"auto": ...}; beat =
+    # 0.5 s of the probe), the extended probe's impulse train, and two stored elements:
+    # EcoProcessing (the Hi-Quality option, inverted) and DryWetMode (the Equal-Loudness option)
+    {"name": "delay-lfo-shapes", "plan": "6", "probe": "ext", "read": ["ext: impulsetrain (echo time per impulse)"], "priority": 1,
+     "why": "the LFO waves and Morph, read as the echo time of each impulse of the train (twenty snapshots over 2 s)",
+     "question": "echo delay after each impulse, L and R 50 ms, LFO 1 Hz, LFO > Delay 100 %: each Wave, and Triangle at Morph -50 and +50 %",
+     "base": dict(BASE, **{"L Time": {"display": 0.05}, "R Time": {"display": 0.05}, "LFO > Delay": {"display": 100}}),
+     "cases": [[f"wave-{w.lower().replace(' & ', '').replace(' ', '-')}", {"LFO Wave": {"item": w}}]
+               for w in ("Sine", "Triangle", "Ramp Up", "Ramp Down", "Square", "S & H", "Wander")] +
+              [[f"triangle-morph{m:+d}", {"LFO Wave": {"item": "Triangle"}, "LFO Morph": {"display": m}}] for m in (-50, 50)]},
+
+    {"name": "delay-time-jump", "plan": "7", "probe": "gap2", "read": ["raw render around the jump (pitch, crossfade, discontinuity)"], "priority": 1,
+     "why": "what Repitch, Fade and Jump do when the delay time steps from 100 to 200 ms, with Hi-Quality on and off",
+     "question": "the steady tone's echo around L and R Time jumping from 100 to 200 ms at beat 46 (23 s), each Smoothing; Repitch and Fade with EcoProcessing stored true",
+     "base": dict(BASE, **{"R Time": {"display": 0.1},
+                           "L Time": {"auto": [[0, {"display": 0.1}], [46, {"display": 0.1}], [46, {"display": 0.2}]]}}),
+     "cases": [[s.lower(), {"Smoothing": {"item": s}}] for s in ("Repitch", "Fade", "Jump")] +
+              [[f"{s.lower()}-eco", {"Smoothing": {"item": s}, "@EcoProcessing": True}] for s in ("Repitch", "Fade")]},
+
+    {"name": "delay-freeze", "plan": "9", "probe": "gap2", "read": ["raw render", "response"], "priority": 1,
+     "why": "Freeze pressed during the sweep: whether new input still enters, and how the frozen loop behaves (level, decay) until it is released",
+     "question": "Freeze on at beat 8 (4 s, mid-sweep) and off at beat 20 (10 s), Feedback 50 % and 0 %, Dry/Wet 100 %",
+     "base": dict(BASE, **{"Feedback": {"display": 50},
+                           "Freeze": {"auto": [[0, {"item": "Off"}], [8, {"item": "On"}], [20, {"item": "Off"}]]}}),
+     "cases": [["fb50", {}], ["fb0", {"Feedback": {"display": 0}}]]},
+
+    {"name": "delay-drywet-mode", "plan": "8", "probe": "gap2", "read": ["impulse", "static"], "priority": 2,
+     "why": "the stored DryWetMode (loaded 1): what the other value does to the dry and wet levels at 50 %",
+     "question": "impulse and staircase at Dry/Wet 50 % with DryWetMode 1 and 0",
+     "base": dict(BASE, **{"Dry/Wet": {"display": 50}}),
+     "cases": [["mode1", {"@DryWetMode": 1}], ["mode0", {"@DryWetMode": 0}]]},
+
+    {"name": "delay-time-jump-noise", "plan": "7", "probe": "gap2", "read": ["raw render around the jump (pitch, crossfade, discontinuity)"], "priority": 2,
+     "why": "delay-time-jump used the steady 1 kHz tone, where a step of 100 ms (100 cycles) is invisible; the noise shows the crossfade of Fade, the splice of Jump and any glide of Repitch",
+     "question": "the noise's echo around L Time jumping from 100 to 200 ms at beat 64 (32 s), each Smoothing, then stepped through a ramp of several seconds",
+     "base": dict(BASE, **{"R Time": {"display": 0.1},
+                           "L Time": {"auto": [[0, {"display": 0.1}], [64, {"display": 0.1}], [64, {"display": 0.2}]]}}),
+     "cases": [[s.lower(), {"Smoothing": {"item": s}}] for s in ("Repitch", "Fade", "Jump")]},
 ]

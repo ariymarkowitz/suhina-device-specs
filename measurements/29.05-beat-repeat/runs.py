@@ -107,4 +107,45 @@ RUNS = [
                ["var-10-auto", {"Variation": 10, "Variation Type": {"item": "Auto"}}],
                ["var-10-sixteenth", {"Variation": 10, "Variation Type": {"item": "1/16"}}],
                ["var-10-no-triplets", {"Variation": 10, "Block Triplets": {"item": "On"}}]]},
+
+    # ---- third set: Grid 1/6 replayed 375 ms slices when stored; the same value by a lane
+    {"name": "beatrepeat-grid-lane", "plan": "2", "probe": "gap2", "read": ["impulse", "envelope"], "priority": 1,
+     "why": "whether Grid 1/6 and 1/3 give triplet slices when set by an automation lane instead of the stored value",
+     "question": "repeat spacing of the impulse for Grid 1/6 and 1/3 jumped in at beat 0.25 by a lane, against the stored values",
+     "base": BASE,
+     "cases": [["lane-1-6", {"Grid": {"auto": [[0, GRID["1/16"]], [0.25, GRID["1/6"]]]}}],
+               ["lane-1-3", {"Grid": {"auto": [[0, GRID["1/16"]], [0.25, GRID["1/3"]]]}}],
+               ["stored-1-6", {"Grid": GRID["1/6"]}]]},
+
+    # The dump shows Grid's labels change between integers (1/6 first appears at 10.08, 1/3 at
+    # 12.19), while the runs stored whole numbers. The same Grid by a lane gave the same slices
+    # (beatrepeat-grid-lane), so the stored value is read as Live reads it; midpoints of the
+    # labels' ranges show whether the triplet values exist at all.
+    {"name": "beatrepeat-grid-midpoints", "plan": "2", "probe": "gap2", "read": ["envelope", "impulse"], "priority": 1,
+     "why": "the slice length at the middle of each triplet label's range and at the integers either side of 1/6, to settle what the triplet Grids do",
+     "question": "repeat spacing on the steady tone and impulse for Grid 2.6 (1/96), 4.7 (1/48), 6.6 (1/24), 8.7 (1/12), 9.6 (1/8), 10.5 (1/6), 12.6 (1/3), and 9.0, 11.0",
+     "base": BASE,
+     "cases": [[f"grid-{v}", {"Grid": v}] for v in (2.6, 4.7, 6.6, 8.7, 9.6, 10.5, 12.6, 9.0, 11.0)]},
+
+    {"name": "beatrepeat-chance-quarters", "plan": "4", "probe": "gap2", "read": ["envelope"], "priority": 2,
+     "why": "Chance statistics: with Interval 1/4 and Gate 1/8 every quarter note is a draw, about 40 per render over the probe's sounding segments (Mix Type Ins, so a trigger cuts the input)",
+     "question": "which quarters repeat at Chance 25, 50 and 75 % (and 50 % on a second track with an unused setting changed, to see whether two devices draw alike)",
+     "base": dict(BASE, **{"Interval": INTERVAL["1/4"], "Gate": 1, "Mix Type": {"item": "Ins"}}),
+     "cases": [[f"chance-{c}", {"Chance": {"display": c}}] for c in (25, 50, 75)] +
+              [["chance-50-b", {"Chance": {"display": 50}, "Filter Width": 2}]]},
+
+    {"name": "beatrepeat-variation-quarters", "plan": "5", "probe": "gap2", "read": ["envelope", "impulse"], "priority": 2,
+     "why": "Variation draws: Interval 1/4 gives about 40 triggers per render, so the drawn Grids can be counted per mode",
+     "question": "slice lengths per trigger at Interval 1/4, Gate 1/4, Variation 5 in each Variation Type, and Variation 10 in Auto with No Triplets on",
+     "base": dict(BASE, **{"Interval": INTERVAL["1/4"], "Gate": 3, "Variation": 5}),
+     "cases": [[f"var5-{t.replace('/', '-').lower()}", {"Variation Type": {"item": t}}] for t in ("Trigger", "1/4", "1/8", "1/16", "Auto")] +
+              [["var10-auto-notrip", {"Variation": 10, "Variation Type": {"item": "Auto"}, "Block Triplets": {"item": "On"}}]]},
+
+    {"name": "beatrepeat-interactions", "plan": "10", "probe": "gap2", "read": ["envelope", "impulse"], "priority": 3,
+     "why": "Gate longer than Interval, and Repeat (forced repetition) at Chance 0, switched on and off by a lane during the steady tone",
+     "question": "Interval 1/4 with Gate 1/2; Chance 0 with Repeat on from beat 44 to beat 48 (22 to 24 s)",
+     "base": BASE,
+     "cases": [["gate-over-interval", {"Interval": INTERVAL["1/4"], "Gate": 7}],
+               ["repeat-lane-chance0", {"Chance": {"display": 0},
+                                        "Repeat": {"auto": [[0, {"item": "Off"}], [44, {"item": "On"}], [48, {"item": "Off"}]]}}]]},
 ]

@@ -86,4 +86,21 @@ RUNS = [
      "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 10.54}},
      "cases": [["diffusion-0.1", {"Diffusion": {"display": 0.1}}], ["diffusion-96", {"Diffusion": {"display": 96}}],
                ["scale-5", {"Scale": {"display": 5}}], ["scale-100", {"Scale": {"display": 100}}]]},
+
+    # ---- third set (measurements/third/): Freeze and Size changed by automation lanes during the
+    # render (make_als.py {"auto": ...}). On the gap10 probe the impulse is at 0.5 s (beat 1) and
+    # the sweep starts at 10.5 s (beat 21).
+    {"name": "reverb-freeze-toggle", "plan": "9", "probe": "gap10", "read": ["raw render (level over time)", "response"], "priority": 1,
+     "why": "Freeze pressed after the impulse and released later: the loop's level over time, whether the sweep enters while frozen, Flat and Cut",
+     "question": "Freeze on at beat 2 (1 s) and off at beat 40 (20 s), Decay 3.46 s: Flat off and on with Cut off, and Cut on",
+     "base": dict(STATIC, **{"Decay Time": {"norm": 0.5},
+                             "Freeze On": {"auto": [[0, OFF], [2, ON], [40, OFF]]}}),
+     "cases": [["flat-off", {"Flat On": OFF, "Cut On": OFF}], ["flat-on", {"Flat On": ON, "Cut On": OFF}],
+               ["cut-on", {"Flat On": OFF, "Cut On": ON}]]},
+
+    {"name": "reverb-smooth-glide", "plan": "10", "probe": "gap2", "read": ["impulse (tap times against time)"], "priority": 1,
+     "why": "the Size glide under Smooth None, Slow and Fast: Size jumps from 10 to 100 just before the impulse, so the early taps show where the glide is",
+     "question": "early reflection taps of the impulse with Room Size jumping from 10 to 100 at beat 0.9 (45 ms before the impulse), each Size Smoothing",
+     "base": dict(STATIC, **SHORT, **{"Room Size": {"auto": [[0, {"display": 10}], [0.9, {"display": 10}], [0.9, {"display": 100}]]}}),
+     "cases": [[s.lower(), {"Size Smoothing": {"item": s}}] for s in ("None", "Slow", "Fast")]},
 ]

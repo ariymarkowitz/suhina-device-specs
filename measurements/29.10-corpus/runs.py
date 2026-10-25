@@ -97,4 +97,68 @@ RUNS = [
                ["filter-w9", {"Filter On/Off": {"item": "On"}, "Width": 9}],
                ["bleed-100", {"Bleed": {"display": 100}}], ["gain-p15", {"Gain": {"display": 15}}],
                ["wet-50", {"Dry Wet": {"display": 50}}]]},
+
+    # ---- third set (measurements/third/)
+    {"name": "corpus-tune-types", "plan": "2", "probe": "gap2", "read": ["impulse (partials)"], "priority": 2,
+     "why": "Tune on the types besides Beam (the earlier Tune values rendered sharp; is that type-dependent?), and intermediate Inharmonics and Ratio",
+     "question": "partials of the impulse response at Tune 110 and 880 Hz for Marimba, String, Membrane, Plate, Pipe, Tube; Beam at Inharmonics -50 and +50 %; Membrane at Ratio 25 and 75 %",
+     "base": BASE,
+     "cases": [[f"{t.lower()}-{f}", {"Resonance Type": {"item": t}, "Tune": {"display": f}}]
+               for t in TYPES if t != "Beam" for f in (110, 880)] +
+              [[f"inharm{v:+d}", {"Inharmonics": {"display": v}}] for v in (-50, 50)] +
+              [[f"membrane-ratio-{v}", {"Resonance Type": {"item": "Membrane"}, "Ratio": {"display": v}}] for v in (25, 75)]},
+
+    {"name": "corpus-decay-radius", "plan": "3", "probe": "gap10", "read": ["impulse (T60 per partial)"], "priority": 2,
+     "why": "the ends of Decay and Radius's effect on decay, with a 10 s tail",
+     "question": "T60 of the partials at Decay 50 ms and 5 s on Beam; Pipe and Tube at Radius 0 and 100 % (Decay 0.8 s)",
+     "base": BASE,
+     "cases": [["decay-0.05", {"Decay": {"display": 0.05}}], ["decay-5", {"Decay": {"display": 5}}]] +
+              [[f"{t.lower()}-radius-{r}", {"Resonance Type": {"item": t}, "Radius": {"display": r}}]
+               for t in ("Pipe", "Tube") for r in (0, 100)]},
+
+    {"name": "corpus-hit-listening", "plan": "4", "probe": "gap2", "read": ["impulse (partials per channel)"], "priority": 2,
+     "why": "Hit and the listening positions at intermediate values (comb pattern of the partials)",
+     "question": "partials of the impulse response on Beam at Hit 10, 25, 75 %; Listening L/R at 30/70 and 50/50 %",
+     "base": BASE,
+     "cases": [[f"hit-{h}", {"Hit": {"display": h}}] for h in (10, 25, 75)] +
+              [["listen-30-70", {"Listening L": {"display": 30}, "Listening R": {"display": 70}}],
+               ["listen-50-50", {"Listening L": {"display": 50}, "Listening R": {"display": 50}}]]},
+
+    {"name": "corpus-lfo", "plan": "7", "probe": "ext", "read": ["ext: impulsetrain (pitch of each ring)"], "priority": 1,
+     "why": "the LFO: depth against Amount, shapes, Spin and Phase, read from the pitch of the ring after each impulse of the train",
+     "question": "fundamental of each 100 ms ring (Decay 0.2 s, Tune 440 Hz) with the LFO at 1 Hz free: Amount 50 and 100 % Sine, 100 % Square, Triangle, SawUp, Sample & Hold; Spin 25 %; Phase 0",
+     "base": dict(BASE, **{"Decay": {"display": 0.2}, "Tune": {"display": 440}, "LFO On/Off": {"item": "On"},
+                           "LFO Sync": {"item": "Free"}, "LFO Rate": {"display": 1}, "LFO Shape": {"item": "Sine"},
+                           "LFO Amount": {"display": 100}, "Phase": {"display": 180}, "Offset": {"display": 0}}),
+     "cases": [["sine-50", {"LFO Amount": {"display": 50}}], ["sine-100", {}]] +
+              [[f"{s.lower().replace(' & ', '-')}", {"LFO Shape": {"item": s}}] for s in ("Square", "Triangle", "SawUp", "Sample & Hold")] +
+              [["spin-25", {"LFO Stereo Mode": {"item": "Spin"}, "Spin": {"display": 25}}], ["phase-0", {"Phase": {"display": 0}}]]},
+
+    {"name": "corpus-bleed-limiter", "plan": "9", "probe": "ext", "read": ["ext: bedbursts envelope, stair100", "response"], "priority": 2,
+     "why": "Bleed with the filter on, and the output limiter's timing on loud bursts",
+     "question": "Filter on (1 kHz, width 4) with Bleed 0, 50, 100 %; the bed bursts at Gain +15 dB with the filter off",
+     "base": BASE,
+     "cases": [[f"filter-bleed-{b}", {"Filter On/Off": {"item": "On"}, "Bleed": {"display": b}}] for b in (0, 50, 100)] +
+              [["gain15", {"Gain": {"display": 15}}]]},
+
+    {"name": "corpus-drywet-ring", "plan": "10", "probe": "gap2", "read": ["raw render after the impulse"], "priority": 3,
+     "why": "whether dropping Dry/Wet cuts a ringing resonator (the manual says the ring is not cut)",
+     "question": "the impulse's ring (Decay 3 s) with Dry Wet jumping from 100 to 0 % at beat 2 (1 s)",
+     "base": dict(BASE, **{"Decay": {"display": 3}}),
+     "cases": [["drop", {"Dry Wet": {"auto": [[0, {"display": 100}], [2, {"display": 100}], [2, {"display": 0}]]}}]]},
+
+    # MIDI: a MIDI track plays notes into Corpus's MIDI side-chain (make_als.py {"midi": ...}).
+    # The probe excites the resonator: the impulse at beat 1, the noise from beat 61.5 to 69.5.
+    {"name": "corpus-midi", "plan": "11", "probe": "gap2", "read": ["impulse (partials)", "noise spectrum over time"], "priority": 1,
+     "why": "MIDI Frequency: the note sets the tune (and Transpose and Fine on top), Last and Low with overlapping notes, Note Off with Off Decay; two routing forms are tried",
+     "question": "fundamental of the impulse's ring with A3 held (beats 0 to 4); then the noise with C4 held from beat 61 and E4 from 63 to 67: Last and Low; Note Off on with Off Decay 0, 50, 100 % (A3 released at beat 1.5)",
+     "base": dict(BASE, **{"MIDI Frequency": {"item": "On"}, "Decay": {"display": 2},
+                           "@SideChain/RoutedInput/Routable/Target": {"midi": {"name": "corpus", "length": 72, "notes": [
+                               [57, 0, 4, 100], [60, 61, 8, 100], [64, 63, 4, 100]]}}}),
+     "cases": [["postfx-route", {"@SideChain/RoutedInput/Routable/Target": {"midi": {"name": "corpus", "length": 72, "notes": [
+                   [57, 0, 4, 100], [60, 61, 8, 100], [64, 63, 4, 100]]}, "out": "PostFxOut"}}],
+               ["transpose+12", {"Transpose": 12}], ["fine+50", {"Fine": 50}], ["low", {"MIDI Mode": {"item": "Low"}}]] +
+              [[f"offdecay-{d}", {"Note Off": {"item": "On"}, "Off Decay": {"display": d},
+                                  "@SideChain/RoutedInput/Routable/Target": {"midi": {"name": "corpus-short", "length": 72, "notes": [
+                                      [57, 0, 1.5, 100], [60, 61, 8, 100], [64, 63, 4, 100]]}}}] for d in (0, 50, 100)]},
 ]

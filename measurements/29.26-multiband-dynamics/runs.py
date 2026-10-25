@@ -104,4 +104,49 @@ RUNS = [
          ["neighbour-low-r4", {"Above Threshold (Low)": {"display": -30}, "Above Ratio (Low)": -0.75}],
          ["mid-off-r4", above(-0.75) | {"Band Activator (Mid)": {"item": "Off"}}],
      ]},
+
+    # ---- third set (measurements/third/). Solo is a stored element (SoloLow, SoloMid,
+    # SoloHigh); the crossovers can be stored crossed although the API refuses it; the side-chain
+    # run plays key-duck on a key track (SideListen is a stored element)
+    {"name": "mbd-solo-crossovers", "plan": "2, 10, 13", "probe": "gap2", "read": ["response", "impulse"], "priority": 1,
+     "why": "each band alone (Solo) at crossovers 100 Hz / 1 kHz and 1 kHz / 10 kHz, and the crossovers stored crossed (Low above High)",
+     "question": "sweep response and impulse with SoloLow, SoloMid, SoloHigh at each crossover pair; all bands with Low-Mid 3 kHz and Mid-High 1 kHz",
+     "base": {"Amount": {"display": 100}},
+     "cases": [[f"solo-{b.lower()}-{lo}-{hi}", dict(xo(lo, hi), **{f"@Solo{b}": True})]
+               for lo, hi in ((100, 1000), (1000, 10000)) for b in ("Low", "Mid", "High")] +
+              [["crossed-3000-1000", xo(3000, 1000)]]},
+
+    {"name": "mbd-rms-window", "plan": "8", "probe": "ext", "read": ["ext: shortbursts"], "priority": 1,
+     "why": "the RMS window: the reduction of 1 to 300 ms bursts in RMS and Peak at minimum attack",
+     "question": "peak gain of the short bursts (-6 dBFS) through the Mid band, Above -12 dB at 1 : Inf, fastest times, RMS and Peak",
+     "base": dict(BASE, **above(-1), **{"Above Threshold (Mid)": {"display": -12}}),
+     "cases": [["peak", {}], ["rms", {"Peak/RMS Mode": {"item": "RMS"}}]]},
+
+    {"name": "mbd-amount-time-below", "plan": "4, 6, 7", "probe": "gap2", "read": ["static", "dynamics"], "priority": 2,
+     "why": "Amount 0 and 25 %, Time 50 % and 1000 %, the Below stage's attack and release, and both stages in one band",
+     "question": "staircase and bursts through the Mid band: Above 1:4 at Amount 0 and 25 %; Time 32 % and 1000 % with Attack 10 ms, Release 100 ms; Below 1:2 at -18 dB with Attack 10 ms and Release 10, 100, 1000 ms; Above 1:4 at -20 with Below 1:2 at -40 dB",
+     "base": BASE,
+     "cases": [[f"amount-{a}", dict(above(-0.75), **{"Amount": {"display": a}})] for a in (0, 25)] +
+              [[f"time-{t}", dict(above(-0.75), **{"Time Scaling": {"display": t}, "Attack Time (Mid)": {"display": 0.01},
+                                                    "Release Time (Mid)": {"display": 0.1}})] for t in (32, 1000)] +
+              [[f"below-rel{r}", dict(below(0.5), **{"Below Threshold (Mid)": {"display": -18}, "Attack Time (Mid)": {"display": 0.01},
+                                                      "Release Time (Mid)": {"display": r / 1000}})] for r in (10, 100, 1000)] +
+              [["both-stages", dict(above(-0.75), **{"Above Threshold (Mid)": {"display": -20}, "Below Ratio (Mid)": 0.5,
+                                                      "Below Threshold (Mid)": {"display": -40}})]]},
+
+    {"name": "mbd-knee-ramp", "plan": "4", "probe": "ext", "read": ["ext: ramp"], "priority": 2,
+     "why": "the knee in fine steps (3 dB steps could not resolve it), Soft Knee off and on",
+     "question": "gain against level on the 1 kHz ramp, Mid band Above 1:4 at -30 dB, Peak, fastest times, Soft Knee off and on",
+     "base": dict(BASE, **above(-0.75)),
+     "cases": [["knee-off", {}], ["knee-on", {"Soft Knee On/Off": {"item": "On"}}]]},
+
+    {"name": "mbd-sidechain", "plan": "11, 12", "probe": "gap2", "read": ["envelope of the steady tone under the key bursts", "response"], "priority": 1,
+     "why": "the external side-chain per band: reduction of the steady tone (Mid band) by key-duck's 1 kHz bursts, S/C Gain, S/C Mix, and whether Listen plays the full-range or the split key",
+     "question": "the steady tone under the key bursts, Above -30 dB at 1:4 in all three bands: S/C on at Gain 0 and +12 dB, S/C Mix 50 %, SideListen on (the key sweep's response)",
+     "base": dict(BASE, **above(-0.75), **{"Above Ratio (Low)": -0.75, "Above Ratio (High)": -0.75,
+                                           "Above Threshold (Low)": {"display": -30}, "Above Threshold (High)": {"display": -30},
+                                           "S/C On": {"item": "On"}, "S/C Gain": {"display": 0}, "S/C Mix": {"display": 100},
+                                           "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"}),
+     "cases": [["sc-gain+12", {"S/C Gain": {"display": 12}}], ["sc-mix-50", {"S/C Mix": {"display": 50}}],
+               ["listen", {"@SideListen": True}]]},
 ]

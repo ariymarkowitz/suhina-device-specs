@@ -1,0 +1,7756 @@
+{
+ "set": "third-3.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "pedal-switching bypass",
+   "run": "pedal-switching",
+   "case": "bypass",
+   "device": "Pedal",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "pedal-switching bypass"
+  },
+  {
+   "id": "pedal-switching default",
+   "run": "pedal-switching",
+   "case": "default",
+   "device": "Pedal",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Type": {
+     "value": 0,
+     "element": "Type",
+     "stored": "0"
+    },
+    "Drive": {
+     "value": 0.5,
+     "element": "Gain",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.0,
+     "element": "Output",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Bass": {
+     "value": 0.0,
+     "element": "Bass",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mid": {
+     "value": 0.5,
+     "element": "Mid",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Treble": {
+     "value": 0.0,
+     "element": "Treble",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mid Freq": {
+     "value": 1,
+     "element": "MidFreq",
+     "stored": "1"
+    },
+    "Sub": {
+     "value": 0,
+     "element": "Sub",
+     "stored": "false"
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "pedal-switching default"
+  },
+  {
+   "id": "pedal-switching type-switch",
+   "run": "pedal-switching",
+   "case": "type-switch",
+   "device": "Pedal",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Type": {
+     "value": 0,
+     "element": "Type",
+     "stored": "0",
+     "auto": [
+      [
+       0.0,
+       0,
+       "0"
+      ],
+      [
+       46.0,
+       1,
+       "1"
+      ],
+      [
+       52.0,
+       2,
+       "2"
+      ]
+     ]
+    },
+    "Drive": {
+     "value": 0.5,
+     "element": "Gain",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.0,
+     "element": "Output",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Bass": {
+     "value": 0.0,
+     "element": "Bass",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mid": {
+     "value": 0.5,
+     "element": "Mid",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Treble": {
+     "value": 0.0,
+     "element": "Treble",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mid Freq": {
+     "value": 1,
+     "element": "MidFreq",
+     "stored": "1"
+    },
+    "Sub": {
+     "value": 0,
+     "element": "Sub",
+     "stored": "false"
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "pedal-switching type-switch"
+  },
+  {
+   "id": "pedal-switching midfreq-switch",
+   "run": "pedal-switching",
+   "case": "midfreq-switch",
+   "device": "Pedal",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Type": {
+     "value": 0,
+     "element": "Type",
+     "stored": "0"
+    },
+    "Drive": {
+     "value": 0.5,
+     "element": "Gain",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.0,
+     "element": "Output",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Bass": {
+     "value": 0.0,
+     "element": "Bass",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mid": {
+     "value": 0.5,
+     "element": "Mid",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Treble": {
+     "value": 0.0,
+     "element": "Treble",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mid Freq": {
+     "value": 0,
+     "element": "MidFreq",
+     "stored": "0",
+     "auto": [
+      [
+       0.0,
+       0,
+       "0"
+      ],
+      [
+       46.0,
+       2,
+       "2"
+      ]
+     ]
+    },
+    "Sub": {
+     "value": 0,
+     "element": "Sub",
+     "stored": "false"
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "pedal-switching midfreq-switch"
+  },
+  {
+   "id": "phaser-flanger-blend-amount bypass",
+   "run": "phaser-flanger-blend-amount",
+   "case": "bypass",
+   "device": "PhaserNew",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-blend-amount bypass"
+  },
+  {
+   "id": "phaser-flanger-blend-amount default",
+   "run": "phaser-flanger-blend-amount",
+   "case": "default",
+   "device": "PhaserNew",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Mode",
+     "stored": "0"
+    },
+    "Amount": {
+     "value": 0.0,
+     "element": "Modulation_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false"
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4"
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0"
+    },
+    "Flanger Time": {
+     "value": 0.6078693757727607,
+     "element": "FlangerDelayTime",
+     "stored": "0.0025",
+     "tol": 0.015625
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false"
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0"
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false"
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false"
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625
+    },
+    "Env Enabled": {
+     "value": 0,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "false"
+    },
+    "Env Amount": {
+     "value": 0.5,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-blend-amount default"
+  },
+  {
+   "id": "phaser-flanger-blend-amount blend-0.5",
+   "run": "phaser-flanger-blend-amount",
+   "case": "blend-0.5",
+   "device": "PhaserNew",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Mode",
+     "stored": "0"
+    },
+    "Amount": {
+     "value": 1.0,
+     "element": "Modulation_Amount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false"
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4"
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Mod Blend": {
+     "value": 0.5,
+     "element": "ModulationBlend",
+     "stored": "0.5"
+    },
+    "Flanger Time": {
+     "value": 0.6078693757727607,
+     "element": "FlangerDelayTime",
+     "stored": "0.0025",
+     "tol": 0.015625
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false"
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0"
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false"
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false"
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625
+    },
+    "Env Enabled": {
+     "value": 0,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "false"
+    },
+    "Env Amount": {
+     "value": 0.5,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-blend-amount blend-0.5"
+  },
+  {
+   "id": "phaser-flanger-blend-amount amount-25",
+   "run": "phaser-flanger-blend-amount",
+   "case": "amount-25",
+   "device": "PhaserNew",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Mode",
+     "stored": "0"
+    },
+    "Amount": {
+     "value": 0.25,
+     "element": "Modulation_Amount",
+     "stored": "0.25",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false"
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4"
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0"
+    },
+    "Flanger Time": {
+     "value": 0.6078693757727607,
+     "element": "FlangerDelayTime",
+     "stored": "0.0025",
+     "tol": 0.015625
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false"
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0"
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false"
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false"
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625
+    },
+    "Env Enabled": {
+     "value": 0,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "false"
+    },
+    "Env Amount": {
+     "value": 0.5,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-blend-amount amount-25"
+  },
+  {
+   "id": "phaser-flanger-blend-amount amount-50",
+   "run": "phaser-flanger-blend-amount",
+   "case": "amount-50",
+   "device": "PhaserNew",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Mode",
+     "stored": "0"
+    },
+    "Amount": {
+     "value": 0.5,
+     "element": "Modulation_Amount",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertWet",
+     "stored": "false"
+    },
+    "Warmth": {
+     "value": 0.0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Notches": {
+     "value": 4.0,
+     "element": "Notches",
+     "stored": "4"
+    },
+    "Center Freq": {
+     "value": 0.47709837187353016,
+     "element": "CenterFrequency",
+     "stored": "1000",
+     "tol": 0.015625
+    },
+    "Spread": {
+     "value": 0.5,
+     "element": "Spread",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Mod Blend": {
+     "value": 0.0,
+     "element": "ModulationBlend",
+     "stored": "0"
+    },
+    "Flanger Time": {
+     "value": 0.6078693757727607,
+     "element": "FlangerDelayTime",
+     "stored": "0.0025",
+     "tol": 0.015625
+    },
+    "Doubler Time": {
+     "value": 0.6881103053629398,
+     "element": "DoublerDelayTime",
+     "stored": "0.08",
+     "tol": 0.015625
+    },
+    "Mod Sync": {
+     "value": 0,
+     "element": "Modulation_Sync",
+     "stored": "false"
+    },
+    "Mod Freq": {
+     "value": 0.5555414669353529,
+     "element": "Modulation_Frequency",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Mod Wave": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0"
+    },
+    "Mod Phase": {
+     "value": 0.0,
+     "element": "Modulation_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Spin Enabled": {
+     "value": 0,
+     "element": "Modulation_SpinEnabled",
+     "stored": "false"
+    },
+    "Spin": {
+     "value": 0.0,
+     "element": "Modulation_Spin",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Duty Cycle": {
+     "value": 0.5,
+     "element": "Modulation_DutyCycle",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Blend": {
+     "value": 0.0,
+     "element": "Modulation_LfoBlend",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Mod Sync 2": {
+     "value": 0,
+     "element": "Modulation_Sync2",
+     "stored": "false"
+    },
+    "Mod Freq 2": {
+     "value": 0.7224024061861852,
+     "element": "Modulation_Frequency2",
+     "stored": "4",
+     "tol": 0.015625
+    },
+    "Env Enabled": {
+     "value": 0,
+     "element": "Modulation_EnvelopeEnabled",
+     "stored": "false"
+    },
+    "Env Amount": {
+     "value": 0.5,
+     "element": "Modulation_EnvelopeAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Safe Freq": {
+     "value": 0.0,
+     "element": "SafeBassFrequency",
+     "stored": "5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "phaser-flanger-blend-amount amount-50"
+  },
+  {
+   "id": "redux-pre-corner bypass",
+   "run": "redux-pre-corner",
+   "case": "bypass",
+   "device": "Redux2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "redux-pre-corner bypass"
+  },
+  {
+   "id": "redux-pre-corner default",
+   "run": "redux-pre-corner",
+   "case": "default",
+   "device": "Redux2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Sample Rate": {
+     "value": 1.0,
+     "element": "SampleRate",
+     "stored": "40000",
+     "tol": 0.015625
+    },
+    "Jitter": {
+     "value": 0,
+     "element": "Jitter",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Bit Depth": {
+     "value": 16.0,
+     "element": "BitDepth",
+     "stored": "16"
+    },
+    "Quantizer Shape": {
+     "value": 0.0,
+     "element": "QuantizerShape",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "DC Shift": {
+     "value": 0,
+     "element": "QuantizerDcShift",
+     "stored": "false"
+    },
+    "Pre-Filter On": {
+     "value": 0,
+     "element": "EnablePreFilter",
+     "stored": "false"
+    },
+    "Post-Filter On": {
+     "value": 0,
+     "element": "EnablePostFilter",
+     "stored": "false"
+    },
+    "Post-Filter": {
+     "value": 0.5,
+     "element": "PostFilterValue",
+     "stored": "0"
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "redux-pre-corner default"
+  },
+  {
+   "id": "redux-pre-corner pre-2000",
+   "run": "redux-pre-corner",
+   "case": "pre-2000",
+   "device": "Redux2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Sample Rate": {
+     "value": 0.40566326757708926,
+     "element": "SampleRate",
+     "stored": "2000",
+     "tol": 0.015625
+    },
+    "Jitter": {
+     "value": 0,
+     "element": "Jitter",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Bit Depth": {
+     "value": 16.0,
+     "element": "BitDepth",
+     "stored": "16"
+    },
+    "Quantizer Shape": {
+     "value": 0.0,
+     "element": "QuantizerShape",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "DC Shift": {
+     "value": 0,
+     "element": "QuantizerDcShift",
+     "stored": "false"
+    },
+    "Pre-Filter On": {
+     "value": 1,
+     "element": "EnablePreFilter",
+     "stored": "true"
+    },
+    "Post-Filter On": {
+     "value": 0,
+     "element": "EnablePostFilter",
+     "stored": "false"
+    },
+    "Post-Filter": {
+     "value": 0.5,
+     "element": "PostFilterValue",
+     "stored": "0"
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "redux-pre-corner pre-2000"
+  },
+  {
+   "id": "redux-pre-corner pre-16000",
+   "run": "redux-pre-corner",
+   "case": "pre-16000",
+   "device": "Redux2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Sample Rate": {
+     "value": 0.7600678867686538,
+     "element": "SampleRate",
+     "stored": "16000",
+     "tol": 0.015625
+    },
+    "Jitter": {
+     "value": 0,
+     "element": "Jitter",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Bit Depth": {
+     "value": 16.0,
+     "element": "BitDepth",
+     "stored": "16"
+    },
+    "Quantizer Shape": {
+     "value": 0.0,
+     "element": "QuantizerShape",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "DC Shift": {
+     "value": 0,
+     "element": "QuantizerDcShift",
+     "stored": "false"
+    },
+    "Pre-Filter On": {
+     "value": 1,
+     "element": "EnablePreFilter",
+     "stored": "true"
+    },
+    "Post-Filter On": {
+     "value": 0,
+     "element": "EnablePostFilter",
+     "stored": "false"
+    },
+    "Post-Filter": {
+     "value": 0.5,
+     "element": "PostFilterValue",
+     "stored": "0"
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "redux-pre-corner pre-16000"
+  },
+  {
+   "id": "resonators-gain-mix bypass",
+   "run": "resonators-gain-mix",
+   "case": "bypass",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix bypass"
+  },
+  {
+   "id": "resonators-gain-mix default",
+   "run": "resonators-gain-mix",
+   "case": "default",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix default"
+  },
+  {
+   "id": "resonators-gain-mix i-gain-12",
+   "run": "resonators-gain-mix",
+   "case": "i-gain-12",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Gain": {
+     "value": 0.5494791666666666,
+     "element": "ResGain1",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix i-gain-12"
+  },
+  {
+   "id": "resonators-gain-mix output+6",
+   "run": "resonators-gain-mix",
+   "case": "output+6",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 6.0,
+     "element": "GlobalGain",
+     "stored": "6",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix output+6"
+  },
+  {
+   "id": "resonators-gain-mix drywet-50",
+   "run": "resonators-gain-mix",
+   "case": "drywet-50",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 0.5,
+     "element": "DryWet",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix drywet-50"
+  },
+  {
+   "id": "resonators-gain-mix drywet-0",
+   "run": "resonators-gain-mix",
+   "case": "drywet-0",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 0.0,
+     "element": "DryWet",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix drywet-0"
+  },
+  {
+   "id": "resonators-notes-const bypass",
+   "run": "resonators-notes-const",
+   "case": "bypass",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix bypass"
+  },
+  {
+   "id": "resonators-notes-const default",
+   "run": "resonators-notes-const",
+   "case": "default",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-gain-mix default"
+  },
+  {
+   "id": "resonators-notes-const note-30",
+   "run": "resonators-notes-const",
+   "case": "note-30",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Note": {
+     "value": 30,
+     "element": "ResNote",
+     "stored": "30"
+    }
+   },
+   "errors": [],
+   "track": "resonators-notes-const note-30"
+  },
+  {
+   "id": "resonators-notes-const note-60",
+   "run": "resonators-notes-const",
+   "case": "note-60",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Note": {
+     "value": 60,
+     "element": "ResNote",
+     "stored": "60"
+    }
+   },
+   "errors": [],
+   "track": "resonators-notes-const note-60"
+  },
+  {
+   "id": "resonators-notes-const note-72",
+   "run": "resonators-notes-const",
+   "case": "note-72",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Note": {
+     "value": 72,
+     "element": "ResNote",
+     "stored": "72"
+    }
+   },
+   "errors": [],
+   "track": "resonators-notes-const note-72"
+  },
+  {
+   "id": "resonators-notes-const note-84",
+   "run": "resonators-notes-const",
+   "case": "note-84",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Note": {
+     "value": 84,
+     "element": "ResNote",
+     "stored": "84"
+    }
+   },
+   "errors": [],
+   "track": "resonators-notes-const note-84"
+  },
+  {
+   "id": "resonators-notes-const constoff-36",
+   "run": "resonators-notes-const",
+   "case": "constoff-36",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Note": {
+     "value": 36,
+     "element": "ResNote",
+     "stored": "36"
+    },
+    "Const": {
+     "value": 0,
+     "element": "ResConst",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-notes-const constoff-36"
+  },
+  {
+   "id": "resonators-notes-const constoff-60",
+   "run": "resonators-notes-const",
+   "case": "constoff-60",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Note": {
+     "value": 60,
+     "element": "ResNote",
+     "stored": "60"
+    },
+    "Const": {
+     "value": 0,
+     "element": "ResConst",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-notes-const constoff-60"
+  },
+  {
+   "id": "resonators-notes-const constoff-72",
+   "run": "resonators-notes-const",
+   "case": "constoff-72",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "InFilterOn",
+     "stored": "false"
+    },
+    "II On": {
+     "value": 0,
+     "element": "ResOn2",
+     "stored": "false"
+    },
+    "III On": {
+     "value": 0,
+     "element": "ResOn3",
+     "stored": "false"
+    },
+    "IV On": {
+     "value": 0,
+     "element": "ResOn4",
+     "stored": "false"
+    },
+    "V On": {
+     "value": 0,
+     "element": "ResOn5",
+     "stored": "false"
+    },
+    "I Note": {
+     "value": 72,
+     "element": "ResNote",
+     "stored": "72"
+    },
+    "Const": {
+     "value": 0,
+     "element": "ResConst",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "resonators-notes-const constoff-72"
+  },
+  {
+   "id": "roar-modulation bypass",
+   "run": "roar-modulation",
+   "case": "bypass",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "roar-modulation bypass"
+  },
+  {
+   "id": "roar-modulation default",
+   "run": "roar-modulation",
+   "case": "default",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "1"
+   },
+   "track": "roar-modulation default"
+  },
+  {
+   "id": "roar-modulation lfo1-cell+50",
+   "run": "roar-modulation",
+   "case": "lfo1-cell+50",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "50"
+   },
+   "track": "roar-modulation lfo1-cell+50"
+  },
+  {
+   "id": "roar-modulation lfo1-cell+100",
+   "run": "roar-modulation",
+   "case": "lfo1-cell+100",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "100"
+   },
+   "track": "roar-modulation lfo1-cell+100"
+  },
+  {
+   "id": "roar-modulation lfo1-cell-100",
+   "run": "roar-modulation",
+   "case": "lfo1-cell-100",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "-100"
+   },
+   "track": "roar-modulation lfo1-cell-100"
+  },
+  {
+   "id": "roar-modulation lfo1-triangle",
+   "run": "roar-modulation",
+   "case": "lfo1-triangle",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 1,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "1"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "1"
+   },
+   "track": "roar-modulation lfo1-triangle"
+  },
+  {
+   "id": "roar-modulation lfo1-square",
+   "run": "roar-modulation",
+   "case": "lfo1-square",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 2,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "2"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "1"
+   },
+   "track": "roar-modulation lfo1-square"
+  },
+  {
+   "id": "roar-modulation lfo1-ramp-up",
+   "run": "roar-modulation",
+   "case": "lfo1-ramp-up",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 3,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "3"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "1"
+   },
+   "track": "roar-modulation lfo1-ramp-up"
+  },
+  {
+   "id": "roar-modulation lfo1-morph+50",
+   "run": "roar-modulation",
+   "case": "lfo1-morph+50",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.75,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "1"
+   },
+   "track": "roar-modulation lfo1-morph+50"
+  },
+  {
+   "id": "roar-modulation lfo1-smooth-50",
+   "run": "roar-modulation",
+   "case": "lfo1-smooth-50",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0.8125,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "1"
+   },
+   "track": "roar-modulation lfo1-smooth-50"
+  },
+  {
+   "id": "roar-modulation noise-simplex",
+   "run": "roar-modulation",
+   "case": "noise-simplex",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Noise Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Noise_RateMode",
+     "stored": "0"
+    },
+    "Noise Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Noise_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "0",
+    "ModulationMatrix_Output_Noise": "1"
+   },
+   "track": "roar-modulation noise-simplex"
+  },
+  {
+   "id": "roar-modulation noise-snh",
+   "run": "roar-modulation",
+   "case": "noise-snh",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Noise Type": {
+     "value": 2,
+     "element": "ModulationSources_Noise_Type",
+     "stored": "2"
+    },
+    "Noise Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Noise_RateMode",
+     "stored": "0"
+    },
+    "Noise Rate": {
+     "value": 0.8672156748911748,
+     "element": "ModulationSources_Noise_Rate",
+     "stored": "4",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "0",
+    "ModulationMatrix_Output_Noise": "1"
+   },
+   "track": "roar-modulation noise-snh"
+  },
+  {
+   "id": "roar-modulation env",
+   "run": "roar-modulation",
+   "case": "env",
+   "device": "Roar",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Output_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tone Amt": {
+     "value": 0.5,
+     "element": "Input_ToneAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Comp Amt": {
+     "value": 0.0,
+     "element": "Output_CompressionAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0,
+     "element": "Feedback_FeedbackAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fb Gate On": {
+     "value": 0,
+     "element": "Feedback_FeedbackGateOn",
+     "stored": "false"
+    },
+    "Shaper 1 On": {
+     "value": 0,
+     "element": "Stage1_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 2 On": {
+     "value": 0,
+     "element": "Stage2_Shaper_On",
+     "stored": "false"
+    },
+    "Shaper 3 On": {
+     "value": 0,
+     "element": "Stage3_Shaper_On",
+     "stored": "false"
+    },
+    "Flt 1 On": {
+     "value": 0,
+     "element": "Stage1_Filter_On",
+     "stored": "false"
+    },
+    "Flt 2 On": {
+     "value": 0,
+     "element": "Stage2_Filter_On",
+     "stored": "false"
+    },
+    "Flt 3 On": {
+     "value": 0,
+     "element": "Stage3_Filter_On",
+     "stored": "false"
+    },
+    "Output": {
+     "value": 0.59375,
+     "element": "Output_OutputGain",
+     "stored": "0.2511886432",
+     "tol": 0.015625
+    },
+    "LFO 1 Rate Mode": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_RateMode",
+     "stored": "0"
+    },
+    "LFO 1 Rate": {
+     "value": 0.6663931506789067,
+     "element": "ModulationSources_Lfo1_Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO 1 Wave": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_Waveform",
+     "stored": "0"
+    },
+    "LFO 1 Morph": {
+     "value": 0.5,
+     "element": "ModulationSources_Lfo1_Morph",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO 1 Smooth": {
+     "value": 0,
+     "element": "ModulationSources_Lfo1_SmoothingAmount",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Input_RoutingMode": "0",
+    "ModulationMatrix_Output_Lfo1": "0",
+    "ModulationMatrix_Output_Env": "1"
+   },
+   "track": "roar-modulation env"
+  },
+  {
+   "id": "saturator-color-more bypass",
+   "run": "saturator-color-more",
+   "case": "bypass",
+   "device": "Saturator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "saturator-color-more bypass"
+  },
+  {
+   "id": "saturator-color-more default",
+   "run": "saturator-color-more",
+   "case": "default",
+   "device": "Saturator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Color On": {
+     "value": 1,
+     "element": "ColorOn",
+     "stored": "true"
+    },
+    "Post Clip Mode": {
+     "value": 0,
+     "element": "PostClip",
+     "stored": "0"
+    },
+    "Drive": {
+     "value": 0.6666666666666666,
+     "element": "PreDrive",
+     "stored": "12",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 1.0,
+     "element": "PostDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Type": {
+     "value": 6,
+     "element": "Type",
+     "stored": "6"
+    },
+    "Color Amt Low": {
+     "value": 0.5,
+     "element": "BaseDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Color Amt Hi": {
+     "value": 0.5,
+     "element": "ColorDepth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Color Width": {
+     "value": 0.296875,
+     "element": "ColorWidth",
+     "stored": "0.296875",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "saturator-color-more default"
+  },
+  {
+   "id": "saturator-color-more lo-100",
+   "run": "saturator-color-more",
+   "case": "lo-100",
+   "device": "Saturator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Color On": {
+     "value": 1,
+     "element": "ColorOn",
+     "stored": "true"
+    },
+    "Post Clip Mode": {
+     "value": 0,
+     "element": "PostClip",
+     "stored": "0"
+    },
+    "Drive": {
+     "value": 0.6666666666666666,
+     "element": "PreDrive",
+     "stored": "12",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 1.0,
+     "element": "PostDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Type": {
+     "value": 6,
+     "element": "Type",
+     "stored": "6"
+    },
+    "Color Amt Low": {
+     "value": 0.0,
+     "element": "BaseDrive",
+     "stored": "-36",
+     "tol": 0.015625
+    },
+    "Color Amt Hi": {
+     "value": 0.5,
+     "element": "ColorDepth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Color Width": {
+     "value": 0.296875,
+     "element": "ColorWidth",
+     "stored": "0.296875",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "saturator-color-more lo-100"
+  },
+  {
+   "id": "saturator-color-more hi-100",
+   "run": "saturator-color-more",
+   "case": "hi-100",
+   "device": "Saturator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Color On": {
+     "value": 1,
+     "element": "ColorOn",
+     "stored": "true"
+    },
+    "Post Clip Mode": {
+     "value": 0,
+     "element": "PostClip",
+     "stored": "0"
+    },
+    "Drive": {
+     "value": 0.6666666666666666,
+     "element": "PreDrive",
+     "stored": "12",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 1.0,
+     "element": "PostDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Type": {
+     "value": 6,
+     "element": "Type",
+     "stored": "6"
+    },
+    "Color Amt Low": {
+     "value": 0.5,
+     "element": "BaseDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Color Amt Hi": {
+     "value": 0.0,
+     "element": "ColorDepth",
+     "stored": "-24",
+     "tol": 0.015625
+    },
+    "Color Width": {
+     "value": 0.296875,
+     "element": "ColorWidth",
+     "stored": "0.296875",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "saturator-color-more hi-100"
+  },
+  {
+   "id": "saturator-color-more hi50-200",
+   "run": "saturator-color-more",
+   "case": "hi50-200",
+   "device": "Saturator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Color On": {
+     "value": 1,
+     "element": "ColorOn",
+     "stored": "true"
+    },
+    "Post Clip Mode": {
+     "value": 0,
+     "element": "PostClip",
+     "stored": "0"
+    },
+    "Drive": {
+     "value": 0.6666666666666666,
+     "element": "PreDrive",
+     "stored": "12",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 1.0,
+     "element": "PostDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Type": {
+     "value": 6,
+     "element": "Type",
+     "stored": "6"
+    },
+    "Color Amt Low": {
+     "value": 0.5,
+     "element": "BaseDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Color Amt Hi": {
+     "value": 0.75,
+     "element": "ColorDepth",
+     "stored": "12",
+     "tol": 0.015625
+    },
+    "Color Width": {
+     "value": 0.296875,
+     "element": "ColorWidth",
+     "stored": "0.296875",
+     "tol": 0.015625
+    },
+    "Color Freq": {
+     "value": 0.29530108333091354,
+     "element": "ColorFrequency",
+     "stored": "200",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "saturator-color-more hi50-200"
+  },
+  {
+   "id": "saturator-color-more hi50-5000",
+   "run": "saturator-color-more",
+   "case": "hi50-5000",
+   "device": "Saturator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Color On": {
+     "value": 1,
+     "element": "ColorOn",
+     "stored": "true"
+    },
+    "Post Clip Mode": {
+     "value": 0,
+     "element": "PostClip",
+     "stored": "0"
+    },
+    "Drive": {
+     "value": 0.6666666666666666,
+     "element": "PreDrive",
+     "stored": "12",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 1.0,
+     "element": "PostDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Type": {
+     "value": 6,
+     "element": "Type",
+     "stored": "6"
+    },
+    "Color Amt Low": {
+     "value": 0.5,
+     "element": "BaseDrive",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Color Amt Hi": {
+     "value": 0.75,
+     "element": "ColorDepth",
+     "stored": "12",
+     "tol": 0.015625
+    },
+    "Color Width": {
+     "value": 0.296875,
+     "element": "ColorWidth",
+     "stored": "0.296875",
+     "tol": 0.015625
+    },
+    "Color Freq": {
+     "value": 0.7962543679694855,
+     "element": "ColorFrequency",
+     "stored": "5000",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "saturator-color-more hi50-5000"
+  },
+  {
+   "id": "shifter-freq-wide bypass",
+   "run": "shifter-freq-wide",
+   "case": "bypass",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide bypass"
+  },
+  {
+   "id": "shifter-freq-wide default",
+   "run": "shifter-freq-wide",
+   "case": "default",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Global_ShifterMode",
+     "stored": "1"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide default"
+  },
+  {
+   "id": "shifter-freq-wide freq+2500",
+   "run": "shifter-freq-wide",
+   "case": "freq+2500",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Global_ShifterMode",
+     "stored": "1"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "FShift Coarse": {
+     "value": 0.625,
+     "element": "ModBasedShifting_FShift_Coarse",
+     "stored": "2500",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide freq+2500"
+  },
+  {
+   "id": "shifter-freq-wide freq-5000",
+   "run": "shifter-freq-wide",
+   "case": "freq-5000",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Global_ShifterMode",
+     "stored": "1"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "FShift Coarse": {
+     "value": 0.25,
+     "element": "ModBasedShifting_FShift_Coarse",
+     "stored": "-5000",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide freq-5000"
+  },
+  {
+   "id": "shifter-freq-wide fine+62.5",
+   "run": "shifter-freq-wide",
+   "case": "fine+62.5",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Global_ShifterMode",
+     "stored": "1"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Mod Fine": {
+     "value": 0.75,
+     "element": "ModBasedShifting_Fine",
+     "stored": "62.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide fine+62.5"
+  },
+  {
+   "id": "shifter-freq-wide fine-500",
+   "run": "shifter-freq-wide",
+   "case": "fine-500",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Global_ShifterMode",
+     "stored": "1"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Mod Fine": {
+     "value": 0.0,
+     "element": "ModBasedShifting_Fine",
+     "stored": "-500",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide fine-500"
+  },
+  {
+   "id": "shifter-freq-wide wide-pitch",
+   "run": "shifter-freq-wide",
+   "case": "wide-pitch",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 7.0,
+     "element": "Pitch_Coarse",
+     "stored": "7"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Wide": {
+     "value": 1,
+     "element": "Global_Wide",
+     "stored": "true"
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide wide-pitch"
+  },
+  {
+   "id": "shifter-freq-wide wide-freq",
+   "run": "shifter-freq-wide",
+   "case": "wide-freq",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Global_ShifterMode",
+     "stored": "1"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "FShift Coarse": {
+     "value": 0.505,
+     "element": "ModBasedShifting_FShift_Coarse",
+     "stored": "100",
+     "tol": 0.015625
+    },
+    "Wide": {
+     "value": 1,
+     "element": "Global_Wide",
+     "stored": "true"
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide wide-freq"
+  },
+  {
+   "id": "shifter-freq-wide wide-ring",
+   "run": "shifter-freq-wide",
+   "case": "wide-ring",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 2,
+     "element": "Global_ShifterMode",
+     "stored": "2"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Wide": {
+     "value": 1,
+     "element": "Global_Wide",
+     "stored": "true"
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide wide-ring"
+  },
+  {
+   "id": "shifter-lfo-more bypass",
+   "run": "shifter-lfo-more",
+   "case": "bypass",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide bypass"
+  },
+  {
+   "id": "shifter-lfo-more default",
+   "run": "shifter-lfo-more",
+   "case": "default",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 0,
+     "element": "Lfo_Waveform",
+     "stored": "0"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more default"
+  },
+  {
+   "id": "shifter-lfo-more spin-50",
+   "run": "shifter-lfo-more",
+   "case": "spin-50",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 0,
+     "element": "Lfo_Waveform",
+     "stored": "0"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 1,
+     "element": "Lfo_SpinOn",
+     "stored": "true"
+    },
+    "Lfo Spin Amount": {
+     "value": 1.0,
+     "element": "Lfo_SpinAmount",
+     "stored": "0.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more spin-50"
+  },
+  {
+   "id": "shifter-lfo-more offset-90",
+   "run": "shifter-lfo-more",
+   "case": "offset-90",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 0,
+     "element": "Lfo_Waveform",
+     "stored": "0"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    },
+    "Lfo Offset": {
+     "value": 0.25,
+     "element": "Lfo_Offset",
+     "stored": "90",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more offset-90"
+  },
+  {
+   "id": "shifter-lfo-more rect-duty50",
+   "run": "shifter-lfo-more",
+   "case": "rect-duty50",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 7,
+     "element": "Lfo_Waveform",
+     "stored": "7"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    },
+    "Lfo Duty Cycle": {
+     "value": 0.75,
+     "element": "Lfo_DutyCycle",
+     "stored": "0.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more rect-duty50"
+  },
+  {
+   "id": "shifter-lfo-more phase-0",
+   "run": "shifter-lfo-more",
+   "case": "phase-0",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 0,
+     "element": "Lfo_Waveform",
+     "stored": "0"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    },
+    "Lfo Phase": {
+     "value": 0.0,
+     "element": "Lfo_PhaseOffset",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more phase-0"
+  },
+  {
+   "id": "shifter-lfo-more phase-90",
+   "run": "shifter-lfo-more",
+   "case": "phase-90",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 0,
+     "element": "Lfo_Waveform",
+     "stored": "0"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    },
+    "Lfo Phase": {
+     "value": 0.25,
+     "element": "Lfo_PhaseOffset",
+     "stored": "90",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more phase-90"
+  },
+  {
+   "id": "shifter-lfo-more hz-depth",
+   "run": "shifter-lfo-more",
+   "case": "hz-depth",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 1,
+     "element": "Global_ShifterMode",
+     "stored": "1"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0.375,
+     "element": "Lfo_Amount",
+     "stored": "98.9",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 0,
+     "element": "Lfo_Waveform",
+     "stored": "0"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more hz-depth"
+  },
+  {
+   "id": "shifter-lfo-more sync-q",
+   "run": "shifter-lfo-more",
+   "case": "sync-q",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 0,
+     "element": "Lfo_Waveform",
+     "stored": "0"
+    },
+    "Lfo Sync": {
+     "value": 1,
+     "element": "Lfo_SyncOn",
+     "stored": "true"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    },
+    "Lfo S. Rate": {
+     "value": 12.0,
+     "element": "Lfo_SyncedRate",
+     "stored": "12"
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more sync-q"
+  },
+  {
+   "id": "shifter-lfo-more triangle8",
+   "run": "shifter-lfo-more",
+   "case": "triangle8",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 3,
+     "element": "Lfo_Waveform",
+     "stored": "3"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more triangle8"
+  },
+  {
+   "id": "shifter-lfo-more random",
+   "run": "shifter-lfo-more",
+   "case": "random",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 0.0,
+     "element": "Pitch_Coarse",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0.5,
+     "element": "Lfo_AmountPitch",
+     "stored": "3",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Lfo Rate Hz": {
+     "value": 0.5411071548904268,
+     "element": "Lfo_RateHz",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Lfo Waveform": {
+     "value": 8,
+     "element": "Lfo_Waveform",
+     "stored": "8"
+    },
+    "Lfo Sync": {
+     "value": 0,
+     "element": "Lfo_SyncOn",
+     "stored": "false"
+    },
+    "Lfo Spin": {
+     "value": 0,
+     "element": "Lfo_SpinOn",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-lfo-more random"
+  },
+  {
+   "id": "shifter-window-more bypass",
+   "run": "shifter-window-more",
+   "case": "bypass",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-freq-wide bypass"
+  },
+  {
+   "id": "shifter-window-more default",
+   "run": "shifter-window-more",
+   "case": "default",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 12.0,
+     "element": "Pitch_Coarse",
+     "stored": "12"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "shifter-window-more default"
+  },
+  {
+   "id": "shifter-window-more window-10",
+   "run": "shifter-window-more",
+   "case": "window-10",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 12.0,
+     "element": "Pitch_Coarse",
+     "stored": "12"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Pitch Window": {
+     "value": 0,
+     "element": "Pitch_WindowSize",
+     "stored": "0.01",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-window-more window-10"
+  },
+  {
+   "id": "shifter-window-more window-30",
+   "run": "shifter-window-more",
+   "case": "window-30",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 12.0,
+     "element": "Pitch_Coarse",
+     "stored": "12"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Pitch Window": {
+     "value": 0.3887409477593423,
+     "element": "Pitch_WindowSize",
+     "stored": "0.03",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-window-more window-30"
+  },
+  {
+   "id": "shifter-window-more window-350",
+   "run": "shifter-window-more",
+   "case": "window-350",
+   "device": "Shifter",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Global_ShifterMode",
+     "stored": "0"
+    },
+    "Pitch Coarse": {
+     "value": 12.0,
+     "element": "Pitch_Coarse",
+     "stored": "12"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "Pitch_Fine",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay On": {
+     "value": 0,
+     "element": "Delay_On",
+     "stored": "false"
+    },
+    "Lfo Amount St": {
+     "value": 0,
+     "element": "Lfo_AmountPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Lfo Amount Hz": {
+     "value": 0,
+     "element": "Lfo_Amount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Env On": {
+     "value": 0,
+     "element": "EnvelopeFollower_On",
+     "stored": "false"
+    },
+    "Pitch Window": {
+     "value": 1.0,
+     "element": "Pitch_WindowSize",
+     "stored": "0.35",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "shifter-window-more window-350"
+  },
+  {
+   "id": "spectral-resonator-midi-poly bypass",
+   "run": "spectral-resonator-midi-poly",
+   "case": "bypass",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "spectral-resonator-midi-poly bypass"
+  },
+  {
+   "id": "spectral-resonator-midi-poly default",
+   "run": "spectral-resonator-midi-poly",
+   "case": "default",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Global_PitchMode": "1",
+    "MidiPitch_MonoPolyMode": "1",
+    "MidiSideChain/RoutedInput/Routable/Target": "MidiIn/Track.70/TrackOut"
+   },
+   "track": "spectral-resonator-midi-poly default"
+  },
+  {
+   "id": "spectral-resonator-midi-poly poly-0",
+   "run": "spectral-resonator-midi-poly",
+   "case": "poly-0",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Global_PitchMode": "1",
+    "MidiPitch_MonoPolyMode": "1",
+    "MidiSideChain/RoutedInput/Routable/Target": "MidiIn/Track.70/TrackOut",
+    "MidiPitch_Polyphony": "0"
+   },
+   "track": "spectral-resonator-midi-poly poly-0"
+  },
+  {
+   "id": "spectral-resonator-midi-poly poly-1",
+   "run": "spectral-resonator-midi-poly",
+   "case": "poly-1",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Global_PitchMode": "1",
+    "MidiPitch_MonoPolyMode": "1",
+    "MidiSideChain/RoutedInput/Routable/Target": "MidiIn/Track.70/TrackOut",
+    "MidiPitch_Polyphony": "1"
+   },
+   "track": "spectral-resonator-midi-poly poly-1"
+  },
+  {
+   "id": "spectral-resonator-midi-poly poly-2",
+   "run": "spectral-resonator-midi-poly",
+   "case": "poly-2",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Global_PitchMode": "1",
+    "MidiPitch_MonoPolyMode": "1",
+    "MidiSideChain/RoutedInput/Routable/Target": "MidiIn/Track.70/TrackOut",
+    "MidiPitch_Polyphony": "2"
+   },
+   "track": "spectral-resonator-midi-poly poly-2"
+  },
+  {
+   "id": "spectral-resonator-modulation bypass",
+   "run": "spectral-resonator-modulation",
+   "case": "bypass",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "spectral-resonator-midi-poly bypass"
+  },
+  {
+   "id": "spectral-resonator-modulation default",
+   "run": "spectral-resonator-modulation",
+   "case": "default",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625
+    },
+    "Mod Rate": {
+     "value": 0.5014204545454546,
+     "element": "Modulation_ModRate",
+     "stored": "0.1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "spectral-resonator-modulation default"
+  },
+  {
+   "id": "spectral-resonator-modulation mode-0",
+   "run": "spectral-resonator-modulation",
+   "case": "mode-0",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625
+    },
+    "Mod Rate": {
+     "value": 0.5014204545454546,
+     "element": "Modulation_ModRate",
+     "stored": "0.1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "0"
+   },
+   "track": "spectral-resonator-modulation default"
+  },
+  {
+   "id": "spectral-resonator-modulation mode-1",
+   "run": "spectral-resonator-modulation",
+   "case": "mode-1",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625
+    },
+    "Mod Rate": {
+     "value": 0.5014204545454546,
+     "element": "Modulation_ModRate",
+     "stored": "0.1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "1"
+   },
+   "track": "spectral-resonator-modulation mode-1"
+  },
+  {
+   "id": "spectral-resonator-modulation mode-2",
+   "run": "spectral-resonator-modulation",
+   "case": "mode-2",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625
+    },
+    "Mod Rate": {
+     "value": 0.5014204545454546,
+     "element": "Modulation_ModRate",
+     "stored": "0.1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "2"
+   },
+   "track": "spectral-resonator-modulation mode-2"
+  },
+  {
+   "id": "spectral-resonator-modulation mode-3",
+   "run": "spectral-resonator-modulation",
+   "case": "mode-3",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625
+    },
+    "Mod Rate": {
+     "value": 0.5014204545454546,
+     "element": "Modulation_ModRate",
+     "stored": "0.1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "3"
+   },
+   "track": "spectral-resonator-modulation mode-3"
+  },
+  {
+   "id": "spectral-resonator-modulation mode-0-rate1",
+   "run": "spectral-resonator-modulation",
+   "case": "mode-0-rate1",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625
+    },
+    "Mod Rate": {
+     "value": 0.25,
+     "element": "Modulation_ModRate",
+     "stored": "0.01",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "0"
+   },
+   "track": "spectral-resonator-modulation mode-0-rate1"
+  },
+  {
+   "id": "spectral-resonator-modulation mode-0-rate64",
+   "run": "spectral-resonator-modulation",
+   "case": "mode-0-rate64",
+   "device": "Transmute",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch Mod": {
+     "value": 0.875,
+     "element": "Modulation_PitchModAmount",
+     "stored": "2.56",
+     "tol": 0.015625
+    },
+    "Mod Rate": {
+     "value": 0.875,
+     "element": "Modulation_ModRate",
+     "stored": "0.64",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "Modulation_ModMode": "0"
+   },
+   "track": "spectral-resonator-modulation mode-0-rate64"
+  },
+  {
+   "id": "vinyl-distortion-crackle-repeat bypass",
+   "run": "vinyl-distortion-crackle-repeat",
+   "case": "bypass",
+   "device": "Vinyl",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "vinyl-distortion-crackle-repeat bypass"
+  },
+  {
+   "id": "vinyl-distortion-crackle-repeat default",
+   "run": "vinyl-distortion-crackle-repeat",
+   "case": "default",
+   "device": "Vinyl",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Tracing On": {
+     "value": 0,
+     "element": "Band2On",
+     "stored": "false"
+    },
+    "Pinch On": {
+     "value": 0,
+     "element": "Band1On",
+     "stored": "false"
+    },
+    "Crackle Density": {
+     "value": 10.0,
+     "element": "CracleDensity",
+     "stored": "10"
+    },
+    "Crackle Volume": {
+     "value": 0.5,
+     "element": "CracleVolume",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Global Drive": {
+     "value": 1.0,
+     "element": "Drive",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "vinyl-distortion-crackle-repeat default"
+  },
+  {
+   "id": "vinyl-distortion-crackle-repeat a",
+   "run": "vinyl-distortion-crackle-repeat",
+   "case": "a",
+   "device": "Vinyl",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Tracing On": {
+     "value": 0,
+     "element": "Band2On",
+     "stored": "false"
+    },
+    "Pinch On": {
+     "value": 0,
+     "element": "Band1On",
+     "stored": "false"
+    },
+    "Crackle Density": {
+     "value": 10.0,
+     "element": "CracleDensity",
+     "stored": "10"
+    },
+    "Crackle Volume": {
+     "value": 0.5,
+     "element": "CracleVolume",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Global Drive": {
+     "value": 1.0,
+     "element": "Drive",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "vinyl-distortion-crackle-repeat default"
+  },
+  {
+   "id": "vinyl-distortion-crackle-repeat b",
+   "run": "vinyl-distortion-crackle-repeat",
+   "case": "b",
+   "device": "Vinyl",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Tracing On": {
+     "value": 0,
+     "element": "Band2On",
+     "stored": "false"
+    },
+    "Pinch On": {
+     "value": 0,
+     "element": "Band1On",
+     "stored": "false"
+    },
+    "Crackle Density": {
+     "value": 10.0,
+     "element": "CracleDensity",
+     "stored": "10"
+    },
+    "Crackle Volume": {
+     "value": 0.5,
+     "element": "CracleVolume",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Global Drive": {
+     "value": 1.0,
+     "element": "Drive",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Tracing Freq.": {
+     "value": 0.6267138049155957,
+     "element": "BandFreq2",
+     "stored": "2000",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "vinyl-distortion-crackle-repeat b"
+  },
+  {
+   "id": "vinyl-distortion-crackle-repeat drive0",
+   "run": "vinyl-distortion-crackle-repeat",
+   "case": "drive0",
+   "device": "Vinyl",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Tracing On": {
+     "value": 0,
+     "element": "Band2On",
+     "stored": "false"
+    },
+    "Pinch On": {
+     "value": 0,
+     "element": "Band1On",
+     "stored": "false"
+    },
+    "Crackle Density": {
+     "value": 10.0,
+     "element": "CracleDensity",
+     "stored": "10"
+    },
+    "Crackle Volume": {
+     "value": 0.5,
+     "element": "CracleVolume",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Global Drive": {
+     "value": 0.0,
+     "element": "Drive",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "vinyl-distortion-crackle-repeat drive0"
+  },
+  {
+   "id": "vocoder-enhance-saw bypass",
+   "run": "vocoder-enhance-saw",
+   "case": "bypass",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "vocoder-enhance-saw bypass"
+  },
+  {
+   "id": "vocoder-enhance-saw default",
+   "run": "vocoder-enhance-saw",
+   "case": "default",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 1.0,
+     "element": "ModulatorAmount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false"
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571"
+    }
+   },
+   "errors": [],
+   "elements": {
+    "CarrierSource/Type": "1",
+    "CarrierSource/RoutedInput/Routable/Target": "AudioIn/Track.86/PostFxOut"
+   },
+   "track": "vocoder-enhance-saw default"
+  },
+  {
+   "id": "vocoder-enhance-saw enhance-off",
+   "run": "vocoder-enhance-saw",
+   "case": "enhance-off",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 1.0,
+     "element": "ModulatorAmount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Enhance": {
+     "value": 0,
+     "element": "CarrierFlatten",
+     "stored": "false"
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571"
+    }
+   },
+   "errors": [],
+   "elements": {
+    "CarrierSource/Type": "1",
+    "CarrierSource/RoutedInput/Routable/Target": "AudioIn/Track.86/PostFxOut"
+   },
+   "track": "vocoder-enhance-saw default"
+  },
+  {
+   "id": "vocoder-enhance-saw enhance-on",
+   "run": "vocoder-enhance-saw",
+   "case": "enhance-on",
+   "device": "Vocoder",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Envelope Depth": {
+     "value": 1.0,
+     "element": "ModulatorAmount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Enhance": {
+     "value": 1,
+     "element": "CarrierFlatten",
+     "stored": "true"
+    },
+    "Unvoiced Level": {
+     "value": 0.0,
+     "element": "UvdLevel",
+     "stored": "0.0003162277571"
+    }
+   },
+   "errors": [],
+   "elements": {
+    "CarrierSource/Type": "1",
+    "CarrierSource/RoutedInput/Routable/Target": "AudioIn/Track.86/PostFxOut"
+   },
+   "track": "vocoder-enhance-saw enhance-on"
+  },
+  {
+   "id": "autoshift-vibrato-natural bypass",
+   "run": "autoshift-vibrato-natural",
+   "case": "bypass",
+   "device": "AutoShift",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "autoshift-vibrato-natural bypass"
+  },
+  {
+   "id": "autoshift-vibrato-natural default",
+   "run": "autoshift-vibrato-natural",
+   "case": "default",
+   "device": "AutoShift",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Quantizer On": {
+     "value": 0,
+     "element": "Quantizer_Active",
+     "stored": "false"
+    },
+    "Smooth On": {
+     "value": 0,
+     "element": "Quantizer_Smooth",
+     "stored": "false"
+    },
+    "Scale Aware": {
+     "value": 0,
+     "element": "Global_UseScale",
+     "stored": "false"
+    },
+    "Input Gain": {
+     "value": 0.5,
+     "element": "Global_InputGain",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch St.": {
+     "value": 0.0,
+     "element": "PitchShift_ShiftSemitones",
+     "stored": "0"
+    },
+    "Pitch Scale Deg.": {
+     "value": 0.0,
+     "element": "PitchShift_ShiftScaleDegrees",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "PitchShift_Detune",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Formant Shift": {
+     "value": 0.5,
+     "element": "PitchShift_FormantShift",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Formant Follow": {
+     "value": 0.0,
+     "element": "PitchShift_FormantFollow",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Strength": {
+     "value": 1.0,
+     "element": "Quantizer_Amount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Root": {
+     "value": 0,
+     "element": "Quantizer_RootNote",
+     "stored": "0"
+    },
+    "Scale": {
+     "value": 2,
+     "element": "Quantizer_InternalScale",
+     "stored": "2"
+    },
+    "Vibrato Amt": {
+     "value": 0.25,
+     "element": "Vibrato_Amount",
+     "stored": "50",
+     "tol": 0.015625
+    },
+    "Vibrato Natural": {
+     "value": 0,
+     "element": "Vibrato_Humanization",
+     "stored": "false"
+    },
+    "Vibrato Fade-In": {
+     "value": 0.0,
+     "element": "Vibrato_Attack",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO On": {
+     "value": 0,
+     "element": "Lfo_Enabled",
+     "stored": "false"
+    },
+    "LFO > Pitch": {
+     "value": 0,
+     "element": "Modulation_LfoToPitchModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Form.": {
+     "value": 0.5,
+     "element": "Modulation_LfoToFormantModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Vol": {
+     "value": 0.0,
+     "element": "Modulation_LfoToVolumeModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Pan": {
+     "value": 0.0,
+     "element": "Modulation_LfoToPanModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Vibrato Rate": {
+     "value": 0.4555018262529874,
+     "element": "Vibrato_RateHz",
+     "stored": "6",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "autoshift-vibrato-natural default"
+  },
+  {
+   "id": "autoshift-vibrato-natural natural",
+   "run": "autoshift-vibrato-natural",
+   "case": "natural",
+   "device": "AutoShift",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Quantizer On": {
+     "value": 0,
+     "element": "Quantizer_Active",
+     "stored": "false"
+    },
+    "Smooth On": {
+     "value": 0,
+     "element": "Quantizer_Smooth",
+     "stored": "false"
+    },
+    "Scale Aware": {
+     "value": 0,
+     "element": "Global_UseScale",
+     "stored": "false"
+    },
+    "Input Gain": {
+     "value": 0.5,
+     "element": "Global_InputGain",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch St.": {
+     "value": 0.0,
+     "element": "PitchShift_ShiftSemitones",
+     "stored": "0"
+    },
+    "Pitch Scale Deg.": {
+     "value": 0.0,
+     "element": "PitchShift_ShiftScaleDegrees",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "PitchShift_Detune",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Formant Shift": {
+     "value": 0.5,
+     "element": "PitchShift_FormantShift",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Formant Follow": {
+     "value": 0.0,
+     "element": "PitchShift_FormantFollow",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Strength": {
+     "value": 1.0,
+     "element": "Quantizer_Amount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Root": {
+     "value": 0,
+     "element": "Quantizer_RootNote",
+     "stored": "0"
+    },
+    "Scale": {
+     "value": 2,
+     "element": "Quantizer_InternalScale",
+     "stored": "2"
+    },
+    "Vibrato Amt": {
+     "value": 0.25,
+     "element": "Vibrato_Amount",
+     "stored": "50",
+     "tol": 0.015625
+    },
+    "Vibrato Natural": {
+     "value": 1,
+     "element": "Vibrato_Humanization",
+     "stored": "true"
+    },
+    "Vibrato Fade-In": {
+     "value": 0.0,
+     "element": "Vibrato_Attack",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO On": {
+     "value": 0,
+     "element": "Lfo_Enabled",
+     "stored": "false"
+    },
+    "LFO > Pitch": {
+     "value": 0,
+     "element": "Modulation_LfoToPitchModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Form.": {
+     "value": 0.5,
+     "element": "Modulation_LfoToFormantModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Vol": {
+     "value": 0.0,
+     "element": "Modulation_LfoToVolumeModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Pan": {
+     "value": 0.0,
+     "element": "Modulation_LfoToPanModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Vibrato Rate": {
+     "value": 0.4555018262529874,
+     "element": "Vibrato_RateHz",
+     "stored": "6",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "autoshift-vibrato-natural natural"
+  },
+  {
+   "id": "autoshift-vibrato-natural fadein-1s",
+   "run": "autoshift-vibrato-natural",
+   "case": "fadein-1s",
+   "device": "AutoShift",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Quantizer On": {
+     "value": 0,
+     "element": "Quantizer_Active",
+     "stored": "false"
+    },
+    "Smooth On": {
+     "value": 0,
+     "element": "Quantizer_Smooth",
+     "stored": "false"
+    },
+    "Scale Aware": {
+     "value": 0,
+     "element": "Global_UseScale",
+     "stored": "false"
+    },
+    "Input Gain": {
+     "value": 0.5,
+     "element": "Global_InputGain",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "Global_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Pitch St.": {
+     "value": 0.0,
+     "element": "PitchShift_ShiftSemitones",
+     "stored": "0"
+    },
+    "Pitch Scale Deg.": {
+     "value": 0.0,
+     "element": "PitchShift_ShiftScaleDegrees",
+     "stored": "0"
+    },
+    "Pitch Fine": {
+     "value": 0.5,
+     "element": "PitchShift_Detune",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Formant Shift": {
+     "value": 0.5,
+     "element": "PitchShift_FormantShift",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Formant Follow": {
+     "value": 0.0,
+     "element": "PitchShift_FormantFollow",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Strength": {
+     "value": 1.0,
+     "element": "Quantizer_Amount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Root": {
+     "value": 0,
+     "element": "Quantizer_RootNote",
+     "stored": "0"
+    },
+    "Scale": {
+     "value": 2,
+     "element": "Quantizer_InternalScale",
+     "stored": "2"
+    },
+    "Vibrato Amt": {
+     "value": 0.25,
+     "element": "Vibrato_Amount",
+     "stored": "50",
+     "tol": 0.015625
+    },
+    "Vibrato Natural": {
+     "value": 0,
+     "element": "Vibrato_Humanization",
+     "stored": "false"
+    },
+    "Vibrato Fade-In": {
+     "value": 0.7073170731707317,
+     "element": "Vibrato_Attack",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "LFO On": {
+     "value": 0,
+     "element": "Lfo_Enabled",
+     "stored": "false"
+    },
+    "LFO > Pitch": {
+     "value": 0,
+     "element": "Modulation_LfoToPitchModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Form.": {
+     "value": 0.5,
+     "element": "Modulation_LfoToFormantModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Vol": {
+     "value": 0.0,
+     "element": "Modulation_LfoToVolumeModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "LFO > Pan": {
+     "value": 0.0,
+     "element": "Modulation_LfoToPanModAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Vibrato Rate": {
+     "value": 0.4555018262529874,
+     "element": "Vibrato_RateHz",
+     "stored": "6",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "autoshift-vibrato-natural fadein-1s"
+  },
+  {
+   "id": "beatrepeat-interactions bypass",
+   "run": "beatrepeat-interactions",
+   "case": "bypass",
+   "device": "BeatRepeat",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "beatrepeat-interactions bypass"
+  },
+  {
+   "id": "beatrepeat-interactions default",
+   "run": "beatrepeat-interactions",
+   "case": "default",
+   "device": "BeatRepeat",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Chance": {
+     "value": 1.0,
+     "element": "Chance",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Interval": {
+     "value": 5.0,
+     "element": "Interval",
+     "stored": "5"
+    },
+    "Offset": {
+     "value": 0.0,
+     "element": "Offset",
+     "stored": "0"
+    },
+    "Grid": {
+     "value": 7.0,
+     "element": "Grid",
+     "stored": "7"
+    },
+    "Block Triplets": {
+     "value": 0,
+     "element": "BlockTripplets",
+     "stored": "false"
+    },
+    "Variation": {
+     "value": 0.0,
+     "element": "GridChance",
+     "stored": "0"
+    },
+    "Variation Type": {
+     "value": 0,
+     "element": "GridChanceType",
+     "stored": "0"
+    },
+    "Gate": {
+     "value": 15.0,
+     "element": "Gate",
+     "stored": "15"
+    },
+    "Decay": {
+     "value": 0.0,
+     "element": "DampVolume",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Pitch Decay": {
+     "value": 0.0,
+     "element": "DampPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Pitch": {
+     "value": 0.0,
+     "element": "BasePitch",
+     "stored": "0"
+    },
+    "Mix Type": {
+     "value": 2,
+     "element": "MixType",
+     "stored": "2"
+    },
+    "Volume": {
+     "value": 0.8489583333333334,
+     "element": "WetLevel",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "FilterOn",
+     "stored": "false"
+    },
+    "Repeat": {
+     "value": 0,
+     "element": "InstantRepeat",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "beatrepeat-interactions default"
+  },
+  {
+   "id": "beatrepeat-interactions gate-over-interval",
+   "run": "beatrepeat-interactions",
+   "case": "gate-over-interval",
+   "device": "BeatRepeat",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Chance": {
+     "value": 1.0,
+     "element": "Chance",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Interval": {
+     "value": 3.0,
+     "element": "Interval",
+     "stored": "3"
+    },
+    "Offset": {
+     "value": 0.0,
+     "element": "Offset",
+     "stored": "0"
+    },
+    "Grid": {
+     "value": 7.0,
+     "element": "Grid",
+     "stored": "7"
+    },
+    "Block Triplets": {
+     "value": 0,
+     "element": "BlockTripplets",
+     "stored": "false"
+    },
+    "Variation": {
+     "value": 0.0,
+     "element": "GridChance",
+     "stored": "0"
+    },
+    "Variation Type": {
+     "value": 0,
+     "element": "GridChanceType",
+     "stored": "0"
+    },
+    "Gate": {
+     "value": 7.0,
+     "element": "Gate",
+     "stored": "7"
+    },
+    "Decay": {
+     "value": 0.0,
+     "element": "DampVolume",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Pitch Decay": {
+     "value": 0.0,
+     "element": "DampPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Pitch": {
+     "value": 0.0,
+     "element": "BasePitch",
+     "stored": "0"
+    },
+    "Mix Type": {
+     "value": 2,
+     "element": "MixType",
+     "stored": "2"
+    },
+    "Volume": {
+     "value": 0.8489583333333334,
+     "element": "WetLevel",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "FilterOn",
+     "stored": "false"
+    },
+    "Repeat": {
+     "value": 0,
+     "element": "InstantRepeat",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "beatrepeat-interactions gate-over-interval"
+  },
+  {
+   "id": "beatrepeat-interactions repeat-lane-chance0",
+   "run": "beatrepeat-interactions",
+   "case": "repeat-lane-chance0",
+   "device": "BeatRepeat",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Chance": {
+     "value": 0.0,
+     "element": "Chance",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Interval": {
+     "value": 5.0,
+     "element": "Interval",
+     "stored": "5"
+    },
+    "Offset": {
+     "value": 0.0,
+     "element": "Offset",
+     "stored": "0"
+    },
+    "Grid": {
+     "value": 7.0,
+     "element": "Grid",
+     "stored": "7"
+    },
+    "Block Triplets": {
+     "value": 0,
+     "element": "BlockTripplets",
+     "stored": "false"
+    },
+    "Variation": {
+     "value": 0.0,
+     "element": "GridChance",
+     "stored": "0"
+    },
+    "Variation Type": {
+     "value": 0,
+     "element": "GridChanceType",
+     "stored": "0"
+    },
+    "Gate": {
+     "value": 15.0,
+     "element": "Gate",
+     "stored": "15"
+    },
+    "Decay": {
+     "value": 0.0,
+     "element": "DampVolume",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Pitch Decay": {
+     "value": 0.0,
+     "element": "DampPitch",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Pitch": {
+     "value": 0.0,
+     "element": "BasePitch",
+     "stored": "0"
+    },
+    "Mix Type": {
+     "value": 2,
+     "element": "MixType",
+     "stored": "2"
+    },
+    "Volume": {
+     "value": 0.8489583333333334,
+     "element": "WetLevel",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Filter On": {
+     "value": 0,
+     "element": "FilterOn",
+     "stored": "false"
+    },
+    "Repeat": {
+     "value": 0,
+     "element": "InstantRepeat",
+     "stored": "false",
+     "auto": [
+      [
+       0.0,
+       0,
+       "false"
+      ],
+      [
+       44.0,
+       1,
+       "true"
+      ],
+      [
+       48.0,
+       0,
+       "false"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "beatrepeat-interactions repeat-lane-chance0"
+  },
+  {
+   "id": "chorus-mode-switch bypass",
+   "run": "chorus-mode-switch",
+   "case": "bypass",
+   "device": "Chorus2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "chorus-mode-switch bypass"
+  },
+  {
+   "id": "chorus-mode-switch default",
+   "run": "chorus-mode-switch",
+   "case": "default",
+   "device": "Chorus2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Mode",
+     "stored": "0"
+    },
+    "Shape": {
+     "value": 0.0,
+     "element": "Shaping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Rate": {
+     "value": 0.4306112600811643,
+     "element": "Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Amount": {
+     "value": 1.0,
+     "element": "Amount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertFeedback",
+     "stored": "false"
+    },
+    "Offset": {
+     "value": 0.0,
+     "element": "VibratoOffset",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Delay Time": {
+     "value": 3,
+     "element": "ChorusDelayTime",
+     "stored": "3"
+    },
+    "Delay Taps": {
+     "value": 1,
+     "element": "ChorusTapCount",
+     "stored": "1"
+    },
+    "HP On": {
+     "value": 0,
+     "element": "HighpassEnabled",
+     "stored": "false"
+    },
+    "Width": {
+     "value": 0.5,
+     "element": "Width",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Warmth": {
+     "value": 0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "chorus-mode-switch default"
+  },
+  {
+   "id": "chorus-mode-switch switch",
+   "run": "chorus-mode-switch",
+   "case": "switch",
+   "device": "Chorus2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Mode": {
+     "value": 0,
+     "element": "Mode",
+     "stored": "0",
+     "auto": [
+      [
+       0.0,
+       0,
+       "0"
+      ],
+      [
+       46.0,
+       1,
+       "1"
+      ],
+      [
+       52.0,
+       2,
+       "2"
+      ]
+     ]
+    },
+    "Shape": {
+     "value": 0.0,
+     "element": "Shaping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Rate": {
+     "value": 0.4306112600811643,
+     "element": "Rate",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Amount": {
+     "value": 1.0,
+     "element": "Amount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Feedback": {
+     "value": 0.0,
+     "element": "Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "FB Invert": {
+     "value": 0,
+     "element": "InvertFeedback",
+     "stored": "false"
+    },
+    "Offset": {
+     "value": 0.0,
+     "element": "VibratoOffset",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Delay Time": {
+     "value": 3,
+     "element": "ChorusDelayTime",
+     "stored": "3"
+    },
+    "Delay Taps": {
+     "value": 1,
+     "element": "ChorusTapCount",
+     "stored": "1"
+    },
+    "HP On": {
+     "value": 0,
+     "element": "HighpassEnabled",
+     "stored": "false"
+    },
+    "Width": {
+     "value": 0.5,
+     "element": "Width",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Warmth": {
+     "value": 0,
+     "element": "Warmth",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.70703125,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "chorus-mode-switch switch"
+  },
+  {
+   "id": "corpus-drywet-ring bypass",
+   "run": "corpus-drywet-ring",
+   "case": "bypass",
+   "device": "Corpus",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "corpus-drywet-ring bypass"
+  },
+  {
+   "id": "corpus-drywet-ring default",
+   "run": "corpus-drywet-ring",
+   "case": "default",
+   "device": "Corpus",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Resonance Type": {
+     "value": 0,
+     "element": "ResonanceType",
+     "stored": "0"
+    },
+    "Resonator Quality": {
+     "value": 3,
+     "element": "ResonatorQuality",
+     "stored": "3"
+    },
+    "Tune": {
+     "value": 0.5,
+     "element": "Frequency",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Transpose": {
+     "value": 0,
+     "element": "Transpose",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fine": {
+     "value": 0.0,
+     "element": "FineTranspose",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Spread": {
+     "value": 0.0,
+     "element": "Detune",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Decay": {
+     "value": 0.625,
+     "element": "Decay",
+     "stored": "0.625",
+     "tol": 0.015625
+    },
+    "Material": {
+     "value": 0.0,
+     "element": "FreqDamping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Radius": {
+     "value": 0.5,
+     "element": "Radius",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Brightness": {
+     "value": 0.0,
+     "element": "AmpFreq",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Inharmonics": {
+     "value": 0.0,
+     "element": "Inharmonics",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Opening": {
+     "value": 1.0,
+     "element": "TubeOpening",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Ratio": {
+     "value": 0.5,
+     "element": "Ratio",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Hit": {
+     "value": 0.5,
+     "element": "ExcitationX",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Listening L": {
+     "value": 0.099609375,
+     "element": "ListeningXL",
+     "stored": "0.099609375",
+     "tol": 0.015625
+    },
+    "Listening R": {
+     "value": 0.8984375,
+     "element": "ListeningXR",
+     "stored": "0.8984375",
+     "tol": 0.015625
+    },
+    "LFO On/Off": {
+     "value": 0,
+     "element": "LfoOnOff",
+     "stored": "false"
+    },
+    "Filter On/Off": {
+     "value": 0,
+     "element": "FilterOn",
+     "stored": "false"
+    },
+    "Bleed": {
+     "value": 0.0,
+     "element": "Bleed",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Gain": {
+     "value": 0.5,
+     "element": "Drive",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Width #2": {
+     "value": 1.0,
+     "element": "StereoWidth",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "MIDI Frequency": {
+     "value": 0,
+     "element": "MidiPitch",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "corpus-drywet-ring default"
+  },
+  {
+   "id": "corpus-drywet-ring drop",
+   "run": "corpus-drywet-ring",
+   "case": "drop",
+   "device": "Corpus",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Resonance Type": {
+     "value": 0,
+     "element": "ResonanceType",
+     "stored": "0"
+    },
+    "Resonator Quality": {
+     "value": 3,
+     "element": "ResonatorQuality",
+     "stored": "3"
+    },
+    "Tune": {
+     "value": 0.5,
+     "element": "Frequency",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Transpose": {
+     "value": 0,
+     "element": "Transpose",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Fine": {
+     "value": 0.0,
+     "element": "FineTranspose",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Spread": {
+     "value": 0.0,
+     "element": "Detune",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Decay": {
+     "value": 0.625,
+     "element": "Decay",
+     "stored": "0.625",
+     "tol": 0.015625
+    },
+    "Material": {
+     "value": 0.0,
+     "element": "FreqDamping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Radius": {
+     "value": 0.5,
+     "element": "Radius",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Brightness": {
+     "value": 0.0,
+     "element": "AmpFreq",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Inharmonics": {
+     "value": 0.0,
+     "element": "Inharmonics",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Opening": {
+     "value": 1.0,
+     "element": "TubeOpening",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Ratio": {
+     "value": 0.5,
+     "element": "Ratio",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Hit": {
+     "value": 0.5,
+     "element": "ExcitationX",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Listening L": {
+     "value": 0.099609375,
+     "element": "ListeningXL",
+     "stored": "0.099609375",
+     "tol": 0.015625
+    },
+    "Listening R": {
+     "value": 0.8984375,
+     "element": "ListeningXR",
+     "stored": "0.8984375",
+     "tol": 0.015625
+    },
+    "LFO On/Off": {
+     "value": 0,
+     "element": "LfoOnOff",
+     "stored": "false"
+    },
+    "Filter On/Off": {
+     "value": 0,
+     "element": "FilterOn",
+     "stored": "false"
+    },
+    "Bleed": {
+     "value": 0.0,
+     "element": "Bleed",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Gain": {
+     "value": 0.5,
+     "element": "Drive",
+     "stored": "0.5",
+     "tol": 0.015625
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       1.0,
+       "1"
+      ],
+      [
+       2.0,
+       1.0,
+       "1"
+      ],
+      [
+       2.0,
+       0.0,
+       "0"
+      ]
+     ]
+    },
+    "Width #2": {
+     "value": 1.0,
+     "element": "StereoWidth",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "MIDI Frequency": {
+     "value": 0,
+     "element": "MidiPitch",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "corpus-drywet-ring drop"
+  },
+  {
+   "id": "drumbuss-boom-freqs bypass",
+   "run": "drumbuss-boom-freqs",
+   "case": "bypass",
+   "device": "DrumBuss",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "drumbuss-boom-freqs bypass"
+  },
+  {
+   "id": "drumbuss-boom-freqs default",
+   "run": "drumbuss-boom-freqs",
+   "case": "default",
+   "device": "DrumBuss",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Compressor On": {
+     "value": 0,
+     "element": "EnableCompression",
+     "stored": "false"
+    },
+    "Drive": {
+     "value": 0.203125,
+     "element": "DriveAmount",
+     "stored": "0.203125",
+     "tol": 0.015625
+    },
+    "Drive Type": {
+     "value": 0,
+     "element": "DriveType",
+     "stored": "0"
+    },
+    "Crunch": {
+     "value": 0.0,
+     "element": "CrunchAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Damping Freq": {
+     "value": 1.0,
+     "element": "DampingFrequency",
+     "stored": "20000",
+     "tol": 0.015625
+    },
+    "Transients": {
+     "value": 0.0,
+     "element": "TransientShaping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Boom Freq": {
+     "value": 0.4648672190646022,
+     "element": "BoomFrequency",
+     "stored": "50",
+     "tol": 0.015625
+    },
+    "Boom Amt": {
+     "value": 1.0,
+     "element": "BoomAmount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Decay": {
+     "value": 1.0,
+     "element": "BoomDecay",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Audition": {
+     "value": 1,
+     "element": "BoomAudition",
+     "stored": "true"
+    },
+    "Trim": {
+     "value": 1.0,
+     "element": "InputTrim",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.9248991935483871,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "drumbuss-boom-freqs default"
+  },
+  {
+   "id": "drumbuss-boom-freqs boom-35",
+   "run": "drumbuss-boom-freqs",
+   "case": "boom-35",
+   "device": "DrumBuss",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Compressor On": {
+     "value": 0,
+     "element": "EnableCompression",
+     "stored": "false"
+    },
+    "Drive": {
+     "value": 0.203125,
+     "element": "DriveAmount",
+     "stored": "0.203125",
+     "tol": 0.015625
+    },
+    "Drive Type": {
+     "value": 0,
+     "element": "DriveType",
+     "stored": "0"
+    },
+    "Crunch": {
+     "value": 0.0,
+     "element": "CrunchAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Damping Freq": {
+     "value": 1.0,
+     "element": "DampingFrequency",
+     "stored": "20000",
+     "tol": 0.015625
+    },
+    "Transients": {
+     "value": 0.0,
+     "element": "TransientShaping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Boom Freq": {
+     "value": 0.140625,
+     "element": "BoomFrequency",
+     "stored": "35",
+     "tol": 0.015625
+    },
+    "Boom Amt": {
+     "value": 1.0,
+     "element": "BoomAmount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Decay": {
+     "value": 1.0,
+     "element": "BoomDecay",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Audition": {
+     "value": 1,
+     "element": "BoomAudition",
+     "stored": "true"
+    },
+    "Trim": {
+     "value": 1.0,
+     "element": "InputTrim",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.9248991935483871,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "drumbuss-boom-freqs boom-35"
+  },
+  {
+   "id": "drumbuss-boom-freqs boom-63",
+   "run": "drumbuss-boom-freqs",
+   "case": "boom-63",
+   "device": "DrumBuss",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Compressor On": {
+     "value": 0,
+     "element": "EnableCompression",
+     "stored": "false"
+    },
+    "Drive": {
+     "value": 0.203125,
+     "element": "DriveAmount",
+     "stored": "0.203125",
+     "tol": 0.015625
+    },
+    "Drive Type": {
+     "value": 0,
+     "element": "DriveType",
+     "stored": "0"
+    },
+    "Crunch": {
+     "value": 0.0,
+     "element": "CrunchAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Damping Freq": {
+     "value": 1.0,
+     "element": "DampingFrequency",
+     "stored": "20000",
+     "tol": 0.015625
+    },
+    "Transients": {
+     "value": 0.0,
+     "element": "TransientShaping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Boom Freq": {
+     "value": 0.67501981005693,
+     "element": "BoomFrequency",
+     "stored": "63",
+     "tol": 0.015625
+    },
+    "Boom Amt": {
+     "value": 1.0,
+     "element": "BoomAmount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Decay": {
+     "value": 1.0,
+     "element": "BoomDecay",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Audition": {
+     "value": 1,
+     "element": "BoomAudition",
+     "stored": "true"
+    },
+    "Trim": {
+     "value": 1.0,
+     "element": "InputTrim",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.9248991935483871,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "drumbuss-boom-freqs boom-63"
+  },
+  {
+   "id": "drumbuss-boom-freqs boom-82",
+   "run": "drumbuss-boom-freqs",
+   "case": "boom-82",
+   "device": "DrumBuss",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Compressor On": {
+     "value": 0,
+     "element": "EnableCompression",
+     "stored": "false"
+    },
+    "Drive": {
+     "value": 0.203125,
+     "element": "DriveAmount",
+     "stored": "0.203125",
+     "tol": 0.015625
+    },
+    "Drive Type": {
+     "value": 0,
+     "element": "DriveType",
+     "stored": "0"
+    },
+    "Crunch": {
+     "value": 0.0,
+     "element": "CrunchAmount",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Damping Freq": {
+     "value": 1.0,
+     "element": "DampingFrequency",
+     "stored": "20000",
+     "tol": 0.015625
+    },
+    "Transients": {
+     "value": 0.0,
+     "element": "TransientShaping",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Boom Freq": {
+     "value": 0.9152112506182524,
+     "element": "BoomFrequency",
+     "stored": "82",
+     "tol": 0.015625
+    },
+    "Boom Amt": {
+     "value": 1.0,
+     "element": "BoomAmount",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Decay": {
+     "value": 1.0,
+     "element": "BoomDecay",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Boom Audition": {
+     "value": 1,
+     "element": "BoomAudition",
+     "stored": "true"
+    },
+    "Trim": {
+     "value": 1.0,
+     "element": "InputTrim",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Output": {
+     "value": 0.9248991935483871,
+     "element": "OutputGain",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "drumbuss-boom-freqs boom-82"
+  },
+  {
+   "id": "eq-three-flat-element bypass",
+   "run": "eq-three-flat-element",
+   "case": "bypass",
+   "device": "FilterEQ3",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "eq-three-flat-element bypass"
+  },
+  {
+   "id": "eq-three-flat-element default",
+   "run": "eq-three-flat-element",
+   "case": "default",
+   "device": "FilterEQ3",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "FreqLo": {
+     "value": 0.5,
+     "element": "FreqLo",
+     "stored": "500",
+     "tol": 0.015625
+    },
+    "FreqHi": {
+     "value": 0.5112729071629559,
+     "element": "FreqHi",
+     "stored": "2000",
+     "tol": 0.015625
+    },
+    "Slope": {
+     "value": 1,
+     "element": "Slope",
+     "stored": "1"
+    }
+   },
+   "errors": [],
+   "track": "eq-three-flat-element default"
+  },
+  {
+   "id": "eq-three-flat-element notflat-24",
+   "run": "eq-three-flat-element",
+   "case": "notflat-24",
+   "device": "FilterEQ3",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "FreqLo": {
+     "value": 0.5,
+     "element": "FreqLo",
+     "stored": "500",
+     "tol": 0.015625
+    },
+    "FreqHi": {
+     "value": 0.5112729071629559,
+     "element": "FreqHi",
+     "stored": "2000",
+     "tol": 0.015625
+    },
+    "Slope": {
+     "value": 0,
+     "element": "Slope",
+     "stored": "0"
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FlatResponse": "false"
+   },
+   "track": "eq-three-flat-element notflat-24"
+  },
+  {
+   "id": "eq-three-flat-element notflat-48",
+   "run": "eq-three-flat-element",
+   "case": "notflat-48",
+   "device": "FilterEQ3",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "FreqLo": {
+     "value": 0.5,
+     "element": "FreqLo",
+     "stored": "500",
+     "tol": 0.015625
+    },
+    "FreqHi": {
+     "value": 0.5112729071629559,
+     "element": "FreqHi",
+     "stored": "2000",
+     "tol": 0.015625
+    },
+    "Slope": {
+     "value": 1,
+     "element": "Slope",
+     "stored": "1"
+    }
+   },
+   "errors": [],
+   "elements": {
+    "FlatResponse": "false"
+   },
+   "track": "eq-three-flat-element notflat-48"
+  },
+  {
+   "id": "external-audio-effect-latency bypass",
+   "run": "external-audio-effect-latency",
+   "case": "bypass",
+   "device": "ProxyAudioEffectDevice",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "external-audio-effect-latency bypass"
+  },
+  {
+   "id": "external-audio-effect-latency default",
+   "run": "external-audio-effect-latency",
+   "case": "default",
+   "device": "ProxyAudioEffectDevice",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 0.5,
+     "element": "DryWet",
+     "stored": "0.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "external-audio-effect-latency default"
+  },
+  {
+   "id": "external-audio-effect-latency lat10ms-dry0",
+   "run": "external-audio-effect-latency",
+   "case": "lat10ms-dry0",
+   "device": "ProxyAudioEffectDevice",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 0.0,
+     "element": "DryWet",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "LatencyValue/Value": "10"
+   },
+   "track": "external-audio-effect-latency lat10ms-dry0"
+  },
+  {
+   "id": "external-audio-effect-latency lat10ms-dry50",
+   "run": "external-audio-effect-latency",
+   "case": "lat10ms-dry50",
+   "device": "ProxyAudioEffectDevice",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 0.5,
+     "element": "DryWet",
+     "stored": "0.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "LatencyValue/Value": "10"
+   },
+   "track": "external-audio-effect-latency lat10ms-dry50"
+  },
+  {
+   "id": "external-audio-effect-latency lat441smp-dry50",
+   "run": "external-audio-effect-latency",
+   "case": "lat441smp-dry50",
+   "device": "ProxyAudioEffectDevice",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 0.5,
+     "element": "DryWet",
+     "stored": "0.5",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "elements": {
+    "LatencyValue/Value": "441",
+    "LatencyValue/IsValueSampleBased": "true"
+   },
+   "track": "external-audio-effect-latency lat441smp-dry50"
+  },
+  {
+   "id": "spectral-time-synced-steps bypass",
+   "run": "spectral-time-synced-steps",
+   "case": "bypass",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-synced-steps bypass"
+  },
+  {
+   "id": "spectral-time-synced-steps default",
+   "run": "spectral-time-synced-steps",
+   "case": "default",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 0,
+     "element": "Freezer_On",
+     "stored": "false"
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true"
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mode": {
+     "value": 1,
+     "element": "Delay_TimeUnit",
+     "stored": "1"
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-synced-steps default"
+  },
+  {
+   "id": "spectral-time-synced-steps synced-6",
+   "run": "spectral-time-synced-steps",
+   "case": "synced-6",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 0,
+     "element": "Freezer_On",
+     "stored": "false"
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true"
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mode": {
+     "value": 1,
+     "element": "Delay_TimeUnit",
+     "stored": "1"
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Delay Synced": {
+     "value": 6.0,
+     "element": "Delay_TimeDivisions",
+     "stored": "6"
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-synced-steps synced-6"
+  },
+  {
+   "id": "spectral-time-synced-steps synced-9",
+   "run": "spectral-time-synced-steps",
+   "case": "synced-9",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 0,
+     "element": "Freezer_On",
+     "stored": "false"
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true"
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mode": {
+     "value": 1,
+     "element": "Delay_TimeUnit",
+     "stored": "1"
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Delay Synced": {
+     "value": 9.0,
+     "element": "Delay_TimeDivisions",
+     "stored": "9"
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-synced-steps synced-9"
+  },
+  {
+   "id": "spectral-time-synced-steps synced-12",
+   "run": "spectral-time-synced-steps",
+   "case": "synced-12",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 0,
+     "element": "Freezer_On",
+     "stored": "false"
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true"
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mode": {
+     "value": 1,
+     "element": "Delay_TimeUnit",
+     "stored": "1"
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Delay Synced": {
+     "value": 12.0,
+     "element": "Delay_TimeDivisions",
+     "stored": "12"
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-synced-steps synced-12"
+  },
+  {
+   "id": "spectral-time-synced-steps synced-18",
+   "run": "spectral-time-synced-steps",
+   "case": "synced-18",
+   "device": "Spectral",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "On": {
+     "value": 0,
+     "element": "Freezer_On",
+     "stored": "false"
+    },
+    "Delay On": {
+     "value": 1,
+     "element": "Delay_On",
+     "stored": "true"
+    },
+    "Dry Wet": {
+     "value": 1.0,
+     "element": "DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mix": {
+     "value": 1.0,
+     "element": "Delay_DryWet",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Delay Mode": {
+     "value": 1,
+     "element": "Delay_TimeUnit",
+     "stored": "1"
+    },
+    "Delay Time": {
+     "value": 0.46875,
+     "element": "Delay_TimeSeconds",
+     "stored": "0.25",
+     "tol": 0.015625
+    },
+    "Delay Feedback": {
+     "value": 0.0,
+     "element": "Delay_Feedback",
+     "stored": "0",
+     "tol": 0.015625
+    },
+    "Delay Synced": {
+     "value": 18.0,
+     "element": "Delay_TimeDivisions",
+     "stored": "18"
+    }
+   },
+   "errors": [],
+   "track": "spectral-time-synced-steps synced-18"
+  }
+ ],
+ "keys": {
+  "midi specres-chord": {
+   "midi": {
+    "length": 72.0,
+    "notes": [
+     [
+      45,
+      61.5,
+      8.0,
+      100.0,
+      64.0
+     ],
+     [
+      48,
+      61.5,
+      8.0,
+      100.0,
+      64.0
+     ],
+     [
+      52,
+      61.5,
+      8.0,
+      100.0,
+      64.0
+     ],
+     [
+      55,
+      61.5,
+      8.0,
+      100.0,
+      64.0
+     ]
+    ],
+    "scale": null
+   },
+   "track_id": "70"
+  },
+  "key key-saw": {
+   "wav": "measurements/probe-keys/key-saw.wav",
+   "track_id": "86"
+  }
+ }
+}

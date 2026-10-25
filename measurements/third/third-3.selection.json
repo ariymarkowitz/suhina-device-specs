@@ -1,0 +1,30 @@
+{
+ "name": "third-3",
+ "probes": {
+  "gap2": "measurements/probe.wav"
+ },
+ "runs": [
+  "pedal-switching",
+  "phaser-flanger-blend-amount",
+  "redux-pre-corner",
+  "resonators-gain-mix",
+  "resonators-notes-const",
+  "roar-modulation",
+  "saturator-color-more",
+  "shifter-freq-wide",
+  "shifter-lfo-more",
+  "shifter-window-more",
+  "spectral-resonator-midi-poly",
+  "spectral-resonator-modulation",
+  "vinyl-distortion-crackle-repeat",
+  "vocoder-enhance-saw",
+  "autoshift-vibrato-natural",
+  "beatrepeat-interactions",
+  "chorus-mode-switch",
+  "corpus-drywet-ring",
+  "drumbuss-boom-freqs",
+  "eq-three-flat-element",
+  "external-audio-effect-latency",
+  "spectral-time-synced-steps"
+ ]
+}

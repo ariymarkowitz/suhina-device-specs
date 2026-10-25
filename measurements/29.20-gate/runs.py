@@ -73,4 +73,40 @@ RUNS = [
          ["flip-rel100", {"Release": ms(100)}],
          ["flip-floor-12", {"Floor": {"display": -12}}],
      ]},
+
+    # ---- third set (measurements/third/). The extended probe's 10 dB/s ramp (1 kHz, -60 to 0
+    # dBFS and back) gives the opening and closing levels without the staircase's 3 dB steps; its
+    # short bursts (1 to 300 ms at -6 dBFS) test the detector; its split tone (left -6, right
+    # -18 dBFS) the linking. The side-chain run plays key-duck on a key track.
+    {"name": "gate-ramp", "plan": "2", "probe": "ext", "read": ["ext: ramp (envelope)"], "priority": 1,
+     "why": "the open and close levels on a slow ramp for Return 0, 6, 12, 24 dB",
+     "question": "level of the ramp where the gate opens (rising) and closes (falling), Threshold -30 dB, fastest times, Floor -75 dB",
+     "base": dict(BASE, **{"Threshold": {"display": -30}}),
+     "cases": [[f"return-{r}", {"Return": {"display": r}}] for r in (0, 6, 12, 24)]},
+
+    {"name": "gate-detector-retrigger", "plan": "6, 9", "probe": "ext", "read": ["ext: shortbursts, impulsetrain, bedbursts"], "priority": 1,
+     "why": "whether short bursts open the gate (peak or RMS detection), and how a burst inside a long release re-opens it",
+     "question": "which of the 1 to 300 ms bursts at -6 dBFS open the gate at Threshold -9 and -12 dB; with Release 1.5 s the second burst during the release (Attack 0.02 and 20 ms)",
+     "base": BASE,
+     "cases": [["thr-9", {"Threshold": {"display": -9}}], ["thr-12", {"Threshold": {"display": -12}}],
+               ["release-1.5-fast", {"Threshold": {"display": -12}, "Release": {"display": 1.5}}],
+               ["release-1.5-attack20", {"Threshold": {"display": -12}, "Release": {"display": 1.5}, "Attack": {"display": 0.02}}]]},
+
+    {"name": "gate-stereo", "plan": "10", "probe": "ext", "read": ["ext: lrsplit, side"], "priority": 2,
+     "why": "linking: does the quiet channel open with the loud one",
+     "question": "per-channel gain of the split tone (left -6, right -18 dBFS) at Threshold -12 dB, and of side-only noise at Threshold -24 dB",
+     "base": BASE,
+     "cases": [["thr-12", {"Threshold": {"display": -12}}], ["thr-24", {"Threshold": {"display": -24}}]]},
+
+    {"name": "gate-sidechain", "plan": "11", "probe": "gap2", "read": ["envelope of the steady tone under the key bursts", "response (Listen)"], "priority": 1,
+     "why": "the external side-chain: opening by the key's level, S/C Gain, S/C Mix, and the S/C EQ heard through Listen",
+     "question": "the steady tone under key-duck's bursts (-36 to 0 dBFS), Threshold -20 dB: S/C Gain 0, +12 dB, S/C Mix 50 %; Listen with the EQ off, Bell 1 kHz +12 dB Q 2, Low pass 1 kHz, High pass 1 kHz",
+     "base": dict(BASE, **{"Threshold": {"display": -20}, "S/C On": {"item": "On"}, "S/C EQ On": {"item": "Off"},
+                           "S/C Gain": {"display": 0}, "S/C Mix": {"display": 100},
+                           "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"}),
+     "cases": [["sc-gain+12", {"S/C Gain": {"display": 12}}], ["sc-mix-50", {"S/C Mix": {"display": 50}}],
+               ["listen-eq-off", {"S/C Listen": {"item": "On"}}]] +
+              [[f"listen-{n}", {"S/C Listen": {"item": "On"}, "S/C EQ On": {"item": "On"}, "S/C EQ Type": {"item": t},
+                                "S/C EQ Freq": {"display": 1000}, "S/C EQ Q": {"display": q}, "S/C EQ Gain": g}]
+               for n, t, q, g in (("bell", "Bell", 2, 12), ("lp", "Low pass", 0.71, 0), ("hp", "High pass", 0.71, 0))]},
 ]

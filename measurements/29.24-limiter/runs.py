@@ -63,4 +63,28 @@ RUNS = [
          ["true-peak", {"Mode": {"item": "True Peak"}}],
          ["ms", {"Routing": {"item": "M/S"}}],
      ]},
+
+    # ---- third set (measurements/third/): the extended probe (bursts over a bed, split tone, mid
+    # and side noise, 10 and 15 kHz sines, the 10 dB/s ramp)
+    {"name": "limiter-auto-release-bursts", "plan": "8", "probe": "ext", "read": ["ext: bedbursts envelope"], "priority": 1,
+     "why": "Auto release after a click, a 100 ms burst and 3 s of limiting, and whether the Release knob still acts with Auto on",
+     "question": "gain over the -30 dBFS bed after each bed burst (18 dB over a -24 dB ceiling): Auto on with Release 10 ms and 1 s; Auto off at 300 ms",
+     "base": dict(BASE, **{"Ceiling": {"display": -24}}),
+     "cases": [["auto-rel10", {"Auto": {"item": "On"}, "Release": {"display": 0.01}}],
+               ["auto-rel1000", {"Auto": {"item": "On"}, "Release": {"display": 1}}],
+               ["manual-300", {"Release": {"display": 0.3}}]]},
+
+    {"name": "limiter-link-routing", "plan": "9, 10", "probe": "ext", "read": ["ext: lrsplit, mid, side"], "priority": 1,
+     "why": "the Link law (gain on the quiet channel) in L/R, M/S Link in M/S, and which of mid and side is limited",
+     "question": "per-channel gain of the split tone (left 6 dB over, right 6 dB under a -12 dB ceiling) at Link 0, 25, 50, 75, 100 %; mid and side noise at a -24 dB ceiling in M/S with M/S Link 0, 50, 100 %",
+     "base": dict(BASE, **{"Ceiling": {"display": -12}}),
+     "cases": [[f"link-{l}", {"Link": {"display": l}}] for l in (0, 25, 50, 75)] +
+              [[f"ms-link-{l}", {"Routing": {"item": "M/S"}, "Ceiling": {"display": -24}, "M/S Link": {"display": l}}] for l in (0, 50, 100)]},
+
+    {"name": "limiter-ceiling-modes", "plan": "11, 12", "probe": "ext", "read": ["ext: tone10k, tone15k (sample and 8x peaks), ramp"], "priority": 2,
+     "why": "inter-sample peaks in Standard against True Peak, the Soft Clip curve in fine steps, and the dry path under the ceiling",
+     "question": "sample and reconstructed peaks of the 10 and 15 kHz sines at Input Gain +6 dB, Ceiling -1 dB, each Mode; the ramp in Soft Clip at Input Gain +6 dB; Input Gain -6 dB under a 0 dB ceiling (Maximize off)",
+     "base": dict(BASE, **{"Ceiling": {"display": -1}, "Input Gain": {"display": 6}}),
+     "cases": [[m.lower().replace(" ", "-"), {"Mode": {"item": m}}] for m in ("Standard", "Soft Clip", "True Peak")] +
+              [["dry-under-ceiling", {"Ceiling": {"display": 0}, "Input Gain": {"display": -6}}]]},
 ]

@@ -58,4 +58,56 @@ RUNS = [
      "cases": [["send-12", {"Send Gain": {"display": -12}}], ["send+12", {"Send Gain": {"display": 12}}],
                ["send+24", {"Send Gain": {"display": 24}}], ["dw-50", {"Dry Wet": {"display": 50}}],
                ["dw-0", {"Dry Wet": {"display": 0}}]]},
+
+    # ---- third set (measurements/third/). Stored elements, not parameters: Global_PitchMode (0 in
+    # the loaded device: Internal; MIDI tried as 1), MidiPitch_MidiGate, MidiPitch_MonoPolyMode,
+    # MidiPitch_Polyphony (stored 3), Modulation_ModMode (0 .. 3 tried: the panel's modes),
+    # PartialFrequencies_FrequencyDialMode. MIDI notes come from a MIDI track into the MIDI
+    # side-chain; the probe's noise (beats 61.5 to 69.5) excites the partials.
+    {"name": "spectral-resonator-midi-mono", "plan": "7", "probe": "gap2", "read": ["noise spectrum over time (partials)"], "priority": 1,
+     "why": "MIDI mode: the note sets the fundamental; legato and staccato with MIDI Gate off and on; Glide; note priority with an overlap; two routing forms",
+     "question": "partials of the noise with notes A2 (61.5 to 64), C3 (64 to 66), E3 overlapping (65 to 68), G3 staccato (68 to 68.5): Gate off and on, Glide 78 ms, the PostFxOut routing",
+     "base": dict(BASE, **{"@Global_PitchMode": 1, "@MidiPitch_MidiGate": 0,
+                           "@MidiSideChain/RoutedInput/Routable/Target": {"midi": {"name": "specres-mono", "length": 72, "notes": [
+                               [45, 61.5, 2.5, 100], [48, 64, 2, 100], [52, 65, 3, 100], [55, 68, 0.5, 100]]}}}),
+     "cases": [["gate-on", {"@MidiPitch_MidiGate": 1}], ["glide-78", {"Glide": {"display": 0.078}}],
+               ["postfx-route", {"@MidiSideChain/RoutedInput/Routable/Target": {"midi": {"name": "specres-mono", "length": 72, "notes": [
+                   [45, 61.5, 2.5, 100], [48, 64, 2, 100], [52, 65, 3, 100], [55, 68, 0.5, 100]]}, "out": "PostFxOut"}}]]},
+
+    {"name": "spectral-resonator-midi-poly", "plan": "8", "probe": "gap2", "read": ["noise spectrum (partials per voice)"], "priority": 2,
+     "why": "Poly mode: a four-note chord at several Polyphony settings (stored 0 .. 3), voice stealing and the split of the harmonics",
+     "question": "partials of the noise under a held A2, C3, E3, G3 chord (beats 61.5 to 69.5), MonoPolyMode 1, Polyphony 0, 1, 2, 3",
+     "base": dict(BASE, **{"@Global_PitchMode": 1, "@MidiPitch_MonoPolyMode": 1,
+                           "@MidiSideChain/RoutedInput/Routable/Target": {"midi": {"name": "specres-chord", "length": 72, "notes": [
+                               [45, 61.5, 8, 100], [48, 61.5, 8, 100], [52, 61.5, 8, 100], [55, 61.5, 8, 100]]}}}),
+     "cases": [[f"poly-{p}", {"@MidiPitch_Polyphony": p}] for p in (0, 1, 2)]},
+
+    {"name": "spectral-resonator-modulation", "plan": "9", "probe": "gap2", "read": ["modulation", "noise spectrum over time"], "priority": 2,
+     "why": "the modulation modes (stored Modulation_ModMode) at Pitch Mod 2.56 st, and Mod Rate's unit",
+     "question": "steady tone and noise at Pitch Mod 2.56 st, Mod Rate 10 %, for ModMode 0, 1, 2, 3; ModMode 0 at Mod Rate 1 % and 64 %",
+     "base": dict(BASE, **{"Pitch Mod": {"display": 2.56}, "Mod Rate": {"display": 10}}),
+     "cases": [[f"mode-{m}", {"@Modulation_ModMode": m}] for m in (0, 1, 2, 3)] +
+              [[f"mode-0-rate{r}", {"@Modulation_ModMode": 0, "Mod Rate": {"display": r}}] for r in (1, 64)]},
+
+    {"name": "spectral-resonator-long-decay-unison", "plan": "4, 10, 1", "probe": "gap10", "read": ["impulse (T60)", "steady (spectrum)"], "priority": 3,
+     "why": "Decay between 8.44 and 20 s, Unison 4 voices, and the frequency dial's stored mode",
+     "question": "T60 at Decay 13.4 and 20 s; Unison 4 at Unison Amount 32 %; FrequencyDialMode 1 with Note A2",
+     "base": BASE,
+     "cases": [[f"decay-{d}", {"Decay": {"display": d}}] for d in (13.4, 20)] +
+              [["unison4-32", {"Unison": 2, "Unison Amount": {"display": 32}}],
+               ["dialmode-1", {"@PartialFrequencies_FrequencyDialMode": 1, "Note": 45}]]},
+
+    # ---- candidates after the third set
+    {"name": "spectral-resonator-mod-rate", "plan": "9", "probe": "gap2", "read": ["noise spectrum over time"], "priority": 3,
+     "why": "the third set's modulation run only changed Mod Rate with ModMode None, which does nothing: Mod Rate's effect needs a mode that modulates",
+     "question": "noise at Pitch Mod 2.56 st in Chorus (ModMode 1) at Mod Rate 1, 10 and 64 %; Wander (ModMode 2) at 1 and 64 %",
+     "base": dict(BASE, **{"Pitch Mod": {"display": 2.56}}),
+     "cases": [[f"chorus-rate{r}", {"@Modulation_ModMode": 1, "Mod Rate": {"display": r}}] for r in (1, 10, 64)] +
+              [[f"wander-rate{r}", {"@Modulation_ModMode": 2, "Mod Rate": {"display": r}}] for r in (1, 64)]},
+
+    {"name": "spectral-resonator-dialmode-conflict", "plan": "1", "probe": "gap10", "read": ["steady (spectrum)"], "priority": 3,
+     "why": "the third set's dial mode case had Note 45 (110 Hz) and Freq. Hz 110 Hz, the same comb: the mode could not be told",
+     "question": "the 1 kHz tone through the comb with Freq. Hz 110 and Note 57 (220 Hz): FrequencyDialMode 0 and 1",
+     "base": dict(BASE, **{"Freq. Hz": {"display": 110}, "Note": 57}),
+     "cases": [[f"dialmode-{m}", {"@PartialFrequencies_FrequencyDialMode": m}] for m in (0, 1)]},
 ]

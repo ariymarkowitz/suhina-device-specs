@@ -65,4 +65,26 @@ RUNS = [
      "base": dict(BASE, **{"Tube Type": {"item": "C"}, "Bias": {"display": 50}, "Drive": {"display": 12}}),
      "cases": [["out-m15", {"Output": {"display": -15}}], ["out-p15", {"Output": {"display": 15}}],
                ["wet-0", {"Dry/Wet": {"display": 0}}], ["wet-50", {"Dry/Wet": {"display": 50}}]]},
+
+    # ---- third set (measurements/third/): the extended probe; Hi-Quality is the stored element
+    # Oversampling (an integer, 0 in the loaded device)
+    {"name": "dyntube-curves-100hz", "plan": "1", "probe": "ext", "read": ["ext: stair100, ramp"], "priority": 1,
+     "why": "the tubes' curves at 100 Hz and in fine steps at 1 kHz, including Bias 75 % and B at 100 %",
+     "question": "100 Hz staircase and 1 kHz ramp for A at Bias 0, 50, 75, 100 %, B at 0, 50, 100 %, C at 0, 50, 75, 100 %",
+     "base": BASE,
+     "cases": [[f"{t.lower()}-bias{b}", {"Tube Type": {"item": t}, "Bias": {"display": b}}]
+               for t, bs in (("A", (0, 50, 75, 100)), ("B", (0, 50, 100)), ("C", (0, 50, 75, 100))) for b in bs]},
+
+    {"name": "dyntube-hiquality", "plan": "6", "probe": "ext", "read": ["ext: tone10k, tone15k peaks"], "priority": 1,
+     "why": "aliasing with Hi-Quality (stored Oversampling) off and on, tube A at Drive +15 dB, Bias 50 %",
+     "question": "spectral lines of the 10 and 15 kHz sines with Oversampling 0 and 1",
+     "base": dict(BASE, **{"Drive": {"display": 15}, "Bias": {"display": 50}}),
+     "cases": [["hq-off", {"@Oversampling": 0}], ["hq-on", {"@Oversampling": 1}]]},
+
+    {"name": "dyntube-detector", "plan": "3", "probe": "ext", "read": ["ext: shortbursts, bedbursts (harmonics over time)"], "priority": 2,
+     "why": "the envelope follower's detector: does a 1 ms burst move the bias like a 300 ms one (peak or RMS)",
+     "question": "distortion of the 1 to 300 ms bursts and the bursts over a bed, tube A, Bias 50 %, Envelope +100 %, Attack 1 ms, Release 100 ms",
+     "base": dict(BASE, **{"Bias": {"display": 50}, "Envelope": {"display": 100}, "Attack": {"display": 0.001},
+                           "Release": {"display": 0.1}}),
+     "cases": [["env+100", {}], ["env-100", {"Envelope": {"display": -100}}]]},
 ]

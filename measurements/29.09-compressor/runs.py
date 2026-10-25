@@ -85,4 +85,80 @@ RUNS = [
      "cases": [["makeup-r2", {"Ratio": {"display": 2}}], ["makeup-r4", {"Ratio": {"display": 4}}],
                ["makeup-rinf", {"Ratio": {"norm": 1.0}}],
                ["makeup-r4-t40", {"Ratio": {"display": 4}, "Threshold": {"display": -40}}]]},
+
+    # ---- third set (measurements/third/). The extended probe has 1 kHz bursts of 1, 5, 10, 30,
+    # 100 and 300 ms at -6 dBFS with silence between (detector windows), bursts of 1 ms, 100 ms and
+    # 3 s over a -30 dBFS bed (release after short and long compression), a loud left and quieter
+    # right channel, mid-only and side-only noise, and a 50 Hz tone. The side-chain runs play the
+    # main probe with key-duck on a key track (signals.py --kind key-duck): silence under the
+    # staircase, the probe's own sweep and noise, and 1 kHz key bursts at -36 to 0 dBFS under
+    # the steady tone.
+    {"name": "compressor-rms-window", "plan": "5", "probe": "ext", "read": ["ext: shortbursts"], "priority": 1,
+     "why": "the RMS detector's window: the reduction a burst gets against its length, Peak against RMS",
+     "question": "peak gain of 1 to 300 ms bursts at 6 dB over a -12 dB threshold, ratio 10, hard knee, fastest attack, Release 100 ms, RMS and Peak, Lin",
+     "base": dict(DYN, **{"Threshold": {"display": -12}, "Attack": {"norm": 0.0}}),
+     "cases": [["rms", {"Model": {"item": "RMS"}}], ["peak", {}], ["rms-log", {"Model": {"item": "RMS"}, "Env Mode": {"item": "Log"}}]]},
+
+    {"name": "compressor-auto-release-bursts", "plan": "8", "probe": "ext", "read": ["ext: bedbursts envelope"], "priority": 1,
+     "why": "Auto release after a click, a 100 ms burst and a 3 s burst (18 dB over the threshold), Lin and Log, against a fixed 300 ms release",
+     "question": "gain over the -30 dBFS bed after each burst, Threshold -24 dB, ratio 10, Attack 1 ms: Auto on in Lin and Log; Release 300 ms Lin",
+     "base": DYN,
+     "cases": [["auto-lin", {"Auto Release On/Off": {"item": "On"}}],
+               ["auto-log", {"Auto Release On/Off": {"item": "On"}, "Env Mode": {"item": "Log"}}],
+               ["fixed-300-lin", {"Release": {"display": 0.3}}]]},
+
+    {"name": "compressor-log-lin-amounts", "plan": "7", "probe": "gap2", "read": ["dynamics"], "priority": 2,
+     "why": "how the release time depends on the amount of reduction in Lin and Log (reductions of about 3, 6, 12 and 21 dB on the -6 dBFS burst)",
+     "question": "attack and release of the bursts at ratio inf with Threshold -9, -12, -18, -27 dB, Release 100 ms, Lin and Log",
+     "base": dict(DYN, **{"Ratio": {"norm": 1.0}}),
+     "cases": [[f"{m.lower()}-thr{t}", {"Env Mode": {"item": m}, "Threshold": {"display": t}}]
+               for m in ("Lin", "Log") for t in (-9, -12, -18, -27)]},
+
+    {"name": "compressor-makeup-more", "plan": "10", "probe": "gap2", "read": ["static", "noise level"], "priority": 2,
+     "why": "whether Knee, the times or Lookahead change the makeup, and the makeup on noise",
+     "question": "static curve and noise level with Makeup on, Threshold -20 dB, Ratio 4: Knee 6 and 18 dB, Attack 30 ms with Release 300 ms, Lookahead 10 ms",
+     "base": dict(STATIC, **{"Makeup": {"item": "On"}, "Ratio": {"display": 4}}),
+     "cases": [["knee-6", {"Knee": 6}], ["knee-18", {"Knee": 18}],
+               ["slow", {"Attack": {"display": 0.03}, "Release": {"display": 0.3}}],
+               ["lookahead-10", {"LookAhead": {"item": "10 ms"}}]]},
+
+    {"name": "compressor-drywet", "plan": "11", "probe": "gap2", "read": ["static", "impulse"], "priority": 2,
+     "why": "Dry/Wet at 50 %: the law with and without compression, and whether the dry path is delayed with Lookahead 10 ms",
+     "question": "staircase and impulse at Dry/Wet 50 %, Threshold 0 and -30 dB (Peak, ratio 10); and at Lookahead 10 ms",
+     "base": dict(STATIC, **{"Ratio": {"display": 10}, "Dry/Wet": {"display": 50}}),
+     "cases": [["thr0", {"Threshold": {"display": 0}}], ["thr-30", {"Threshold": {"display": -30}}],
+               ["thr-30-la10", {"Threshold": {"display": -30}, "LookAhead": {"item": "10 ms"}}]]},
+
+    {"name": "compressor-stereo", "plan": "12", "probe": "ext", "read": ["ext: lrsplit, mid, side"], "priority": 1,
+     "why": "stereo linking: whether the quieter channel is reduced with the louder one, and whether the detector hears the sum (side-only noise would then not compress)",
+     "question": "gain of each channel of the left -6 / right -18 dBFS tone, and of mid-only and side-only noise, Threshold -24 dB, ratio 10, Peak and RMS",
+     "base": dict(STATIC, **{"Threshold": {"display": -24}, "Ratio": {"display": 10}}),
+     "cases": [["peak", {}], ["rms", {"Model": {"item": "RMS"}}]]},
+
+    {"name": "compressor-sidechain", "plan": "10, 13", "probe": "gap2", "read": ["modulation (steady tone under the key bursts)", "response (Listen)"], "priority": 1,
+     "why": "the external side-chain: reduction against key level, S/C Gain, S/C Mix, the S/C EQ's shapes heard through Listen, and makeup with an external key",
+     "question": "the steady tone under key-duck's bursts, Threshold -30, ratio 10, Peak: S/C Gain 0, +12, -12 dB, S/C Mix 50 %, Makeup on; with Listen on, the key sweep through S/C EQ off, Bell 1 kHz +12 dB Q 2, Low pass 1 kHz, High pass 1 kHz, Low Shelf 200 Hz -12 dB, High Shelf 5 kHz +12 dB, Peak 1 kHz",
+     "base": dict(STATIC, **{"Threshold": {"display": -30}, "Ratio": {"display": 10}, "S/C On": {"item": "On"},
+                             "S/C EQ On": {"item": "Off"}, "S/C Gain": {"display": 0}, "S/C Mix": {"display": 100},
+                             "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"}),
+     "cases": [["sc-gain+12", {"S/C Gain": {"display": 12}}], ["sc-gain-12", {"S/C Gain": {"display": -12}}],
+               ["sc-mix-50", {"S/C Mix": {"display": 50}}], ["sc-makeup", {"Makeup": {"item": "On"}}],
+               ["listen-eq-off", {"S/C Listen": {"item": "On"}}]] +
+              [[f"listen-{n}", dict({"S/C Listen": {"item": "On"}, "S/C EQ On": {"item": "On"}, "S/C EQ Type": {"item": t},
+                                     "S/C EQ Freq": {"display": f}, "S/C EQ Q": {"display": q}, "S/C EQ Gain": g})]
+               for n, t, f, q, g in (("bell", "Bell", 1000, 2, 12), ("lp", "Low pass", 1000, 0.71, 0),
+                                     ("hp", "High pass", 1000, 0.71, 0), ("lowshelf", "Low Shelf", 200, 0.71, -12),
+                                     ("highshelf", "High Shelf", 5000, 0.71, 12), ("peak", "Peak", 1000, 2, 0))]},
+
+    {"name": "compressor-peak-buzz", "plan": "14", "probe": "ext", "read": ["ext: tone50 thd and peaks"], "priority": 2,
+     "why": "gain modulation at the signal period with the fastest times (the manual's buzz in Peak mode)",
+     "question": "distortion of the 50 Hz tone at 10 dB over a -16 dB threshold, ratio 10, fastest attack and release, Peak, RMS, and Peak with Release 100 ms",
+     "base": dict(STATIC, **{"Threshold": {"display": -16}, "Ratio": {"display": 10}}),
+     "cases": [["peak-fast", {}], ["rms-fast", {"Model": {"item": "RMS"}}], ["peak-rel100", {"Release": {"display": 0.1}}]]},
+
+    {"name": "compressor-peak-buzz-eq-off", "plan": "14", "probe": "ext", "read": ["ext: tone50 thd and peaks"], "priority": 2,
+     "why": "the third set's peak-buzz run had the loaded preset's side-chain EQ (a high-pass at 80 Hz) on, which hid most of a 50 Hz tone from the detector; this repeats it with the EQ off",
+     "question": "distortion of the 50 Hz tone at 10 dB over a -16 dB threshold, ratio 10, fastest attack and release, side-chain EQ off: Peak, RMS, and Peak with Release 100 ms",
+     "base": dict(STATIC, **{"Threshold": {"display": -16}, "Ratio": {"display": 10}, "S/C EQ On": {"item": "Off"}}),
+     "cases": [["peak-fast", {}], ["rms-fast", {"Model": {"item": "RMS"}}], ["peak-rel100", {"Release": {"display": 0.1}}]]},
 ]

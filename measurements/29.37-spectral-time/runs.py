@@ -86,4 +86,38 @@ RUNS = [
                ["delay-10ms-mix100", {"Delay On": ON, "Delay Mix": {"display": 100}, "Delay Time": {"display": 0.01},
                                       "Delay Feedback": {"display": 0}}],
                ["send-6", {"Send Gain": {"display": -6}}], ["send-12", {"Send Gain": {"display": -12}}]]},
+
+    # ---- third set (measurements/third/). Resolution, ZeroLatencyDry, ProcessingOrder and
+    # Freezer_AvoidFreezingOnsets are stored elements (Resolution 1 in the loaded device; only
+    # values next to it are tried, as an out-of-range enum could make Live refuse the set)
+    {"name": "spectral-time-resolution-order", "plan": "1, 2", "probe": "gap2", "read": ["impulse", "response", "static"], "priority": 1,
+     "why": "Resolution's time smearing and frequency resolution, the processing order, Zero Dry Signal Latency, and what AvoidFreezingOnsets does",
+     "question": "impulse, sweep and staircase through the Delay alone (250 ms, Feedback 0) at Resolution 0 and 2; ProcessingOrder 1 with Freezer and Delay on; ZeroLatencyDry true at Dry Wet 50 %; the Freezer (onsets) with AvoidFreezingOnsets true",
+     "base": dict(DELAY, **{"Delay Feedback": {"display": 0}}),
+     "cases": [[f"resolution-{r}", {"@Resolution": r}] for r in (0, 2)] +
+              [["order-1", {"@ProcessingOrder": 1, "On": ON, "Frozen": ON, "Mode": {"item": "Retrigger"},
+                            "Retrigger Mode": {"item": "Sync"}, "S.Rate ms": {"display": 0.5}}],
+               ["zerodry-50", {"@ZeroLatencyDry": True, "Dry Wet": {"display": 50}}],
+               ["avoid-onsets", dict(FREEZER, **{"Retrigger Mode": {"item": "Onsets"}, "@Freezer_AvoidFreezingOnsets": True})]]},
+
+    {"name": "spectral-time-freeze-lane", "plan": "3", "probe": "gap2", "read": ["raw render (level and spectrum over time)"], "priority": 1,
+     "why": "a manual freeze pressed during the steady tone and released after it: level and spectrum over time, the fades",
+     "question": "Frozen on at beat 44 (22 s) and off at beat 62 (31 s, into the noise), Manual mode: Crossfade, and Envelope with Fade In 100 ms, Fade Out 500 ms",
+     "base": dict(FREEZER, **{"Mode": {"item": "Manual"}, "Frozen": {"auto": [[0, OFF], [44, ON], [62, OFF]]}}),
+     "cases": [["crossfade", {}],
+               ["envelope", {"Fade Type": {"item": "Envelope"}, "Fade In": {"display": 0.1}, "Fade Out": {"display": 0.5}}]]},
+
+    {"name": "spectral-time-synced-steps", "plan": "6", "probe": "gap2", "read": ["impulse"], "priority": 3,
+     "why": "the other steps of the Delay's Synced list",
+     "question": "delay of the impulse in Synced mode at Delay Synced 6, 9, 12, 18",
+     "base": dict(DELAY, **{"Delay Mode": {"item": "Synced"}, "Delay Feedback": {"display": 0}}),
+     "cases": [[f"synced-{i}", {"Delay Synced": i}] for i in (6, 9, 12, 18)]},
+
+    # ---- candidate after the third set: `order-1` of spectral-time-resolution-order has no render of the other order to compare with
+    {"name": "spectral-time-order-reference", "plan": "9", "probe": "gap2", "read": ["raw render (level and spectrum over time)"], "priority": 3,
+     "why": "the processing order: the third set rendered Freezer and Delay on with ProcessingOrder 1 only, so the order's effect cannot be read",
+     "question": "Freezer (Retrigger, Sync every 500 ms, Frozen) and Delay (250 ms, Feedback 0) both on: ProcessingOrder 0 and 1",
+     "base": dict(DELAY, **{"Delay Feedback": {"display": 0}, "On": ON, "Frozen": ON, "Mode": {"item": "Retrigger"},
+                            "Retrigger Mode": {"item": "Sync"}, "S.Rate ms": {"display": 0.5}}),
+     "cases": [[f"order-{o}", {"@ProcessingOrder": o}] for o in (0, 1)]},
 ]
