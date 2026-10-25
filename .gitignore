@@ -20,3 +20,5 @@ measurements/*/live/*.ir.wav
 measurements/*/Samples/
 # the folder that makes a generated set's folder a Live Project (make_als.py creates it)
 Ableton Project Info/
+# side-chain keys and carriers (signals.py --kind key-...)
+measurements/probe-keys/*.wav

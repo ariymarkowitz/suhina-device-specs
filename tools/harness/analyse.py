@@ -313,6 +313,172 @@ def silence(out):
             "peak_db": [to_db(np.max(np.abs(out[:, c])) if len(out) else 0) for c in range(out.shape[1])]}
 
 
+# ------------------------------------------------------------------ the extended probe
+
+def peaks(x, rate, count=8, floor_db=-120.0):
+    """The strongest spectral lines of x: [(Hz, dB re a full-scale sine)], Hann window."""
+    n = len(x)
+    if n < 64 or rms(x) < 1e-12:
+        return []
+    w = np.hanning(n)
+    spec = np.abs(np.fft.rfft(x * w)) * 2 / np.sum(w)
+    f = np.fft.rfftfreq(n, 1 / rate)
+    loc = np.where((spec[1:-1] > spec[:-2]) & (spec[1:-1] >= spec[2:]))[0] + 1
+    loc = loc[np.argsort(-spec[loc])][:count]
+    return [[round(float(f[i]), 2), round(to_db(spec[i]), 2)] for i in sorted(loc) if to_db(spec[i]) > floor_db]
+
+
+def tone_gain(x, freq, rate):
+    """Level (dB re a full-scale sine) and phase of x at freq, by projection on whole cycles."""
+    cycles = int(len(x) * freq / rate)
+    n = int(round(cycles * rate / freq)) if cycles else len(x)
+    t = np.arange(n) / rate
+    c = 2 * np.mean(x[:n] * np.cos(2 * np.pi * freq * t))
+    s_ = 2 * np.mean(x[:n] * np.sin(2 * np.pi * freq * t))
+    return to_db(math.hypot(c, s_)), math.degrees(math.atan2(c, s_))
+
+
+def chan_db(x):
+    return [to_db(rms(x[:, c])) for c in range(x.shape[1])]
+
+
+def ext_measures(manifest, probe, render, rate, offset):
+    """Generic readings of the extended probe's segments; the device notes do the rest from the
+    renders. Levels are dB re a full-scale sine unless they say RMS."""
+    segs = {s["name"]: s for s in manifest["segments"]}
+    gap = int(manifest["gap"] * rate)
+    res, env = {}, {}
+    inner = int(0.05 * rate)
+
+    def out(name, extra=0):
+        return segment(render, segs[name], offset, extra)
+
+    def inp(name, extra=0):
+        return segment(probe, segs[name], 0, extra)
+
+    if "stair100" in segs:
+        res["stair100"] = static_curve(out("stair100"), segs["stair100"], rate)
+
+    for name in ("tone10k", "tone15k", "tone3k", "tone50", "saw"):
+        if name not in segs:
+            continue
+        s = segs[name]
+        x = out(name)[inner:-inner]
+        d = {"rms_db": chan_db(x)}
+        d["level_db"] = [tone_gain(x[:, c], s["freq"], rate)[0] for c in range(x.shape[1])]
+        ref = tone_gain(inp(name)[inner:-inner][:, 0], s["freq"], rate)[0]
+        d["gain_db"] = [v - ref for v in d["level_db"]]
+        d["peaks"] = [peaks(x[:, c], rate, 12) for c in range(x.shape[1])]
+        h = harmonics(x[:, 0], s["freq"], rate)
+        d["thd_pct"] = h["thd_pct"] if h else None
+        res[name] = d
+
+    if "shortbursts" in segs:
+        s = segs["shortbursts"]
+        x = out("shortbursts")
+        rows = []
+        for a, length in zip(s["burst_starts_s"], s["burst_lengths_s"]):
+            i0, i1 = int(round(a * rate)), int(round((a + length) * rate))
+            part = x[i0:i1]
+            tail = x[i1:i1 + int(0.5 * rate)]
+            peak = [to_db(np.max(np.abs(part[:, c]))) for c in range(x.shape[1])]
+            rows.append({"length_ms": 1000 * length, "peak_db": peak,
+                         "peak_gain_db": [p - s["level_db"] for p in peak],
+                         "rms_gain_db": [to_db(rms(part[:, c]) * math.sqrt(2)) - s["level_db"] for c in range(x.shape[1])],
+                         "tail_peak_db": [to_db(np.max(np.abs(tail[:, c]))) for c in range(x.shape[1])]})
+        res["shortbursts"] = rows
+
+    for name in ("bedbursts", "ramp", "shortbursts", "bursts60"):
+        if name not in segs:
+            continue
+        s = segs[name]
+        x, ix = out(name), inp(name)
+        cyc = 1.0 / s["freq"]
+        t, ei = envelope(ix[:, 0], rate, hop_s=0.0005, win_s=cyc)
+        _, el = envelope(x[:, 0], rate, hop_s=0.0005, win_s=cyc)
+        _, er = envelope(x[:, -1], rate, hop_s=0.0005, win_s=cyc)
+        k = math.sqrt(2)
+        env[name] = (t, 20 * np.log10(np.maximum(ei * k, EPS)), 20 * np.log10(np.maximum(el * k, EPS)),
+                     20 * np.log10(np.maximum(er * k, EPS)))
+
+    if "ramp" in segs:
+        t, ind, l, r = env["ramp"]
+        half = len(t) // 2
+        rows = []
+        for lvl in range(-60, 1, 1):
+            row = {"in_db": lvl}
+            for part, key in ((slice(0, half), "up"), (slice(half, len(t)), "down")):
+                m = np.abs(ind[part] - lvl) < 0.25
+                row[f"{key}_left_gain_db"] = float(np.median(l[part][m] - ind[part][m])) if m.any() else None
+                row[f"{key}_right_gain_db"] = float(np.median(r[part][m] - ind[part][m])) if m.any() else None
+            rows.append(row)
+        res["ramp"] = rows
+
+    if "threetone" in segs:
+        s = segs["threetone"]
+        x = out("threetone")[inner:-inner]
+        res["threetone"] = {"gain_db": {str(int(f)): [tone_gain(x[:, c], f, rate)[0] - s["level_db"]
+                                                       for c in range(x.shape[1])] for f in s["freqs"]},
+                            "peaks": [peaks(x[:, c], rate, 12) for c in range(x.shape[1])]}
+
+    if "lrsplit" in segs:
+        s = segs["lrsplit"]
+        x = out("lrsplit")[inner:-inner]
+        lv = [tone_gain(x[:, c], s["freq"], rate)[0] for c in range(x.shape[1])]
+        res["lrsplit"] = {"level_db": lv, "gain_db": [lv[0] - s["left_db"], lv[-1] - s["right_db"]]}
+
+    for name in ("mid", "side"):
+        if name not in segs:
+            continue
+        x = out(name)[inner:-inner]
+        ix = inp(name)[inner:-inner]
+        ref = rms(ix[:, 0])
+        m, sd = (x[:, 0] + x[:, -1]) / 2, (x[:, 0] - x[:, -1]) / 2
+        res[name] = {"mid_db": to_db(rms(m) / ref), "side_db": to_db(rms(sd) / ref),
+                     "left_db": to_db(rms(x[:, 0]) / ref), "right_db": to_db(rms(x[:, -1]) / ref)}
+
+    if "dcstep" in segs:
+        s = segs["dcstep"]
+        x = out("dcstep", gap)
+        n = segs["dcstep"]["length"]
+        mono = x[:, 0]
+        head = mono[:max(1, int(0.002 * rate))]
+        i0 = int(np.argmax(np.abs(head)))
+        first = float(head[i0])
+        d = {"start": first, "end": float(np.mean(mono[n - int(0.1 * rate):n])),
+             "after_end_min": float(np.min(mono[n:n + int(0.5 * rate)])) if len(mono) > n else None,
+             "tau_ms": None}
+        if abs(first) > 1e-4:
+            below = np.where(mono[i0:n] * np.sign(first) <= abs(first) / math.e)[0]
+            if len(below):
+                d["tau_ms"] = 1000 * float(below[0]) / rate
+        res["dcstep"] = d
+
+    if "lowsines" in segs:
+        s = segs["lowsines"]
+        x = out("lowsines")
+        rows, pos = [], 0
+        for f, secs in zip(s["freqs"], s["lengths_s"]):
+            n = int(round(secs * rate))
+            part = x[pos:pos + n]
+            q = n // 4
+            rows.append({"freq": f, "gain_db": [tone_gain(part[q:n - q, c], f, rate)[0] - s["level_db"]
+                                                for c in range(x.shape[1])]})
+            pos += n
+        res["lowsines"] = rows
+
+    if "glide" in segs:
+        x = out("glide")[inner:-inner]
+        res["glide"] = {"rms_db": chan_db(x)}
+
+    if "impulsetrain" in segs:
+        s = segs["impulsetrain"]
+        x = out("impulsetrain", gap)
+        res["impulsetrain"] = {"rms_db": chan_db(x)}
+
+    return res, env
+
+
 # ------------------------------------------------------------------ driver
 
 def analyse(manifest, probe, render, rate, align="none"):
@@ -335,51 +501,68 @@ def analyse(manifest, probe, render, rate, align="none"):
     s = segs["impulse"]
     result["impulse"], extras["ir"] = impulse(segment(render, s, offset, gap), s, rate)
 
-    s = segs["sweep"]
-    out = segment(render, s, offset, gap)
-    inp = segment(probe, s, 0, gap)[:, 0]
-    sweep = response_sweep(inp, out, rate, centres)
+    if "sweep" in segs and "noise" in segs:
+        s = segs["sweep"]
+        out = segment(render, s, offset, gap)
+        inp = segment(probe, s, 0, gap)[:, 0]
+        sweep = response_sweep(inp, out, rate, centres)
+        s = segs["noise"]
+        noise = response_noise(segment(probe, s), segment(render, s, offset), rate, centres)
+        result["response"] = {"centres_hz": centres, "sweep_db": sweep, "noise_db": noise}
 
-    s = segs["noise"]
-    noise = response_noise(segment(probe, s), segment(render, s, offset), rate, centres)
-    result["response"] = {"centres_hz": centres, "sweep_db": sweep, "noise_db": noise}
+    if "staircase" in segs:
+        s = segs["staircase"]
+        result["static"] = static_curve(segment(render, s, offset), s, rate)
 
-    s = segs["staircase"]
-    result["static"] = static_curve(segment(render, s, offset), s, rate)
+    if "bursts" in segs:
+        s = segs["bursts"]
+        result["dynamics"], extras["envelope"] = dynamics(segment(render, s, offset), s, rate)
 
-    s = segs["bursts"]
-    result["dynamics"], extras["envelope"] = dynamics(segment(render, s, offset), s, rate)
+    if "steady" in segs:
+        s = segs["steady"]
+        result["modulation"] = modulation(segment(render, s, offset), s, rate)
 
-    s = segs["steady"]
-    result["modulation"] = modulation(segment(render, s, offset), s, rate)
-
-    result["stereo"] = stereo(segment(render, segs["left"], offset), segment(render, segs["right"], offset),
-                              segs["left"], rate)
+    if "left" in segs and "right" in segs:
+        result["stereo"] = stereo(segment(render, segs["left"], offset), segment(render, segs["right"], offset),
+                                  segs["left"], rate)
     result["silence"] = silence(segment(render, segs["silence"], offset))
+
+    if manifest.get("kind") == "ext":
+        result["ext"], extras["ext_envelope"] = ext_measures(manifest, probe, render, rate, offset)
     return result, extras
 
 
 def write_outputs(base, result, extras, rate):
     with open(base + ".json", "w") as f:
         json.dump(result, f, indent=1)
-    r = result["response"]
-    with open(base + ".response.csv", "w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["freq_hz", "sweep_left_db", "sweep_right_db", "noise_left_db", "noise_right_db"])
-        for i, c in enumerate(r["centres_hz"]):
-            w.writerow([f"{c:.1f}"] + [("" if v[i] is None else f"{v[i]:.3f}") for v in r["sweep_db"] + r["noise_db"]])
-    with open(base + ".static.csv", "w", newline="") as f:
-        w = csv.writer(f)
-        keys = ["in_db", "left_out_db", "right_out_db", "left_gain_db", "right_gain_db", "left_thd_pct", "right_thd_pct"]
-        w.writerow(keys)
-        for row in result["static"]:
-            w.writerow(["" if row.get(k) is None else f"{row[k]:.3f}" for k in keys])
-    t, g = extras["envelope"]
-    with open(base + ".envelope.csv", "w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["time_s", "gain_db"])
-        for a, b in zip(t, g):
-            w.writerow([f"{a:.5f}", f"{b:.3f}"])
+    r = result.get("response")
+    if r:
+        with open(base + ".response.csv", "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["freq_hz", "sweep_left_db", "sweep_right_db", "noise_left_db", "noise_right_db"])
+            for i, c in enumerate(r["centres_hz"]):
+                w.writerow([f"{c:.1f}"] + [("" if v[i] is None else f"{v[i]:.3f}") for v in r["sweep_db"] + r["noise_db"]])
+    if result.get("static"):
+        with open(base + ".static.csv", "w", newline="") as f:
+            w = csv.writer(f)
+            keys = ["in_db", "left_out_db", "right_out_db", "left_gain_db", "right_gain_db", "left_thd_pct", "right_thd_pct"]
+            w.writerow(keys)
+            for row in result["static"]:
+                w.writerow(["" if row.get(k) is None else f"{row[k]:.3f}" for k in keys])
+    if "envelope" in extras:
+        t, g = extras["envelope"]
+        with open(base + ".envelope.csv", "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["time_s", "gain_db"])
+            for a, b in zip(t, g):
+                w.writerow([f"{a:.5f}", f"{b:.3f}"])
+    if "ext_envelope" in extras:
+        with open(base + ".ext-envelope.csv", "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["segment", "time_s", "in_db", "left_db", "right_db"])
+            for name, (t, ind, l, r) in extras["ext_envelope"].items():
+                for row in zip(t, ind, l, r):
+                    w.writerow([name, f"{row[0]:.5f}"] + [f"{x:.3f}" for x in row[1:]])
     write_wav(base + ".ir.wav", rate, extras["ir"])
 
 
@@ -412,10 +595,12 @@ def main(argv=None):
             continue
         result["source"] = os.path.abspath(path)
         write_outputs(os.path.join(a.out, name), result, extras, rate)
-        d = result["dynamics"]
-        print(f"{name}: peak {result['impulse']['peak_db']:.1f} dB, taps {len(result['impulse']['taps'])}, "
-              f"1 kHz gain {result['static'][-8]['left_gain_db']:.2f} dB, "
-              f"attack t63 {d['attack']['t63_ms']}, release t63 {d['release']['t63_ms']}")
+        line = f"{name}: peak {result['impulse']['peak_db']:.1f} dB, taps {len(result['impulse']['taps'])}"
+        if "static" in result:
+            d = result["dynamics"]
+            line += (f", 1 kHz gain {result['static'][-8]['left_gain_db']:.2f} dB, "
+                     f"attack t63 {d['attack']['t63_ms']}, release t63 {d['release']['t63_ms']}")
+        print(line)
     return 1 if failed else 0
 
 

@@ -427,6 +427,121 @@ class FromLiveSets(unittest.TestCase):
         self.assertFalse(live_check.loaded(Fake(names[:-1]), names))
         self.assertFalse(live_check.loaded(Fake(["other"] + names[1:]), names))
 
+    def test_elements_and_automation(self):
+        """A stored element is written as it is; an automation lane becomes an envelope on the
+        case's track that targets the parameter's AutomationTarget, and the device stores the
+        lane's first value."""
+        with tempfile.TemporaryDirectory() as tmp:
+            amap = os.path.join(tmp, "map.json")
+            with open(amap, "w") as f:
+                json.dump(COMPRESSOR_MAP, f)
+            src = os.path.join(tmp, "e.json")
+            with open(src, "w") as f:
+                json.dump({"device": "Compressor", "cases": [
+                    {"id": "a", "params": {"@Live8LegacyMode": True, "@RmsTimeShort": 12}},
+                    {"id": "b", "params": {"Threshold": {"auto": [[0, {"display": -20}], [8, {"display": -20}],
+                                                                  [8, {"display": -40}]]},
+                                           "Model": {"auto": [[0, 1], [4, 2]]}}},
+                    {"id": "c", "params": {"@Live8LegacyMode": True, "@RmsTimeShort": 12}}]}, f)
+            out = os.path.join(tmp, "e.als")
+            self.assertEqual(quiet(make_als.main, ["build", src, "--map", amap, "-o", out, "--share"]), 0)
+            root, ts = self.check_set(out)
+            spec = make_als.load_json(os.path.join(tmp, "e.cases.json"))
+            recs = {c["case"]: c for c in spec["cases"]}
+            self.assertEqual(recs["a"]["elements"], {"Live8LegacyMode": "true", "RmsTimeShort": "12"})
+            self.assertEqual(recs["c"]["track"], recs["a"]["track"])
+            self.assertEqual(len(ts), 2)
+            (dev,) = list(als.devices_holder(ts[0]))
+            self.assertEqual(dev.find("Live8LegacyMode").get("Value"), "true")
+            self.assertEqual(dev.find("RmsTimeShort").get("Value"), "12")
+            (dev,) = list(als.devices_holder(ts[1]))
+            thr = als.parameter(dev, "Threshold")
+            self.assertAlmostEqual(float(als.manual(thr)), 0.1, places=6)
+            self.assertAlmostEqual(recs["b"]["params"]["Threshold"]["value"],
+                                   recs["b"]["params"]["Threshold"]["auto"][0][1])
+            envs = list(ts[1].find("AutomationEnvelopes/Envelopes"))
+            self.assertEqual(len(envs), 2)
+            self.assertEqual([e.get("Id") for e in envs], ["0", "1"])
+            byid = {e.find("EnvelopeTarget/PointeeId").get("Value"): e for e in envs}
+            env = byid[thr.find("AutomationTarget").get("Id")]
+            ev = list(env.find("Automation/Events"))
+            self.assertEqual([e.tag for e in ev], ["FloatEvent"] * 4)
+            self.assertEqual([e.get("Time") for e in ev], [make_als.BEFORE_SONG, "0", "8", "8"])
+            self.assertAlmostEqual(float(ev[-1].get("Value")), 0.01, places=6)
+            model = byid[als.parameter(dev, "Model").find("AutomationTarget").get("Id")]
+            self.assertEqual([e.tag for e in model.find("Automation/Events")], ["EnumEvent"] * 3)
+
+    def test_side_chain_key(self):
+        """A "key:" element gets one key track per file, and the target names that track."""
+        with tempfile.TemporaryDirectory() as tmp:
+            amap = os.path.join(tmp, "map.json")
+            with open(amap, "w") as f:
+                json.dump(COMPRESSOR_MAP, f)
+            from wavio import write_wav
+            import numpy as np
+            key = os.path.join(tmp, "key-x.wav")
+            write_wav(key, 44100, np.zeros((4410, 2)))
+            target = "@SideChain/RoutedInput/Routable/Target"
+            src = os.path.join(tmp, "k.json")
+            with open(src, "w") as f:
+                json.dump({"device": "Compressor", "cases": [
+                    {"id": "a", "params": {target: "key:" + key}},
+                    {"id": "b", "params": {target: "key:" + key, "Threshold": {"display": -20}}}]}, f)
+            out = os.path.join(tmp, "k.als")
+            self.assertEqual(quiet(make_als.main, ["build", src, "--map", amap, "-o", out]), 0)
+            root, ts = self.check_set(out)
+            names = [als.track_name(t) for t in ts]
+            self.assertEqual(names, ["key key-x", "k a", "k b"])
+            kid = ts[0].get("Id")
+            self.assertEqual(ts[0].find(".//SampleRef/FileRef/Path").get("Value"), os.path.abspath(key))
+            self.assertFalse(list(als.devices_holder(ts[0])))
+            for t in ts[1:]:
+                (dev,) = list(als.devices_holder(t))
+                self.assertEqual(dev.find("SideChain/RoutedInput/Routable/Target").get("Value"),
+                                 f"AudioIn/Track.{kid}/PostFxOut")
+
+    def test_midi_key(self):
+        """A {"midi": clip} element gets a MIDI track holding the clip, shared by equal clips."""
+        with tempfile.TemporaryDirectory() as tmp:
+            amap = os.path.join(tmp, "map.json")
+            with open(amap, "w") as f:
+                json.dump(COMPRESSOR_MAP, f)
+            target = "@SideChain/RoutedInput/Routable/Target"
+            clip = {"midi": {"notes": [[60, 0, 1, 100], [64, 2, 1, 100]], "length": 8, "name": "two"}}
+            src = os.path.join(tmp, "m.json")
+            with open(src, "w") as f:
+                json.dump({"device": "Compressor", "cases": [
+                    {"id": "a", "params": {target: clip}},
+                    {"id": "b", "params": {target: dict(clip, out="PostFxOut"), "Threshold": {"display": -20}}}]}, f)
+            out = os.path.join(tmp, "m.als")
+            self.assertEqual(quiet(make_als.main, ["build", src, "--map", amap, "-o", out]), 0)
+            root, ts = self.check_set(out)
+            self.assertEqual([als.track_name(t) for t in ts], ["midi two", "m a", "m b"])
+            self.assertEqual(ts[0].tag, "MidiTrack")
+            mid = ts[0].get("Id")
+            notes = [(n.get("Time"), k.find("MidiKey").get("Value")) for k in ts[0].iter("KeyTrack")
+                     for n in k.iter("MidiNoteEvent")]
+            self.assertEqual(sorted(notes), [("0.0", "60"), ("2.0", "64")])
+            targets = [list(als.devices_holder(t))[0].find("SideChain/RoutedInput/Routable/Target").get("Value")
+                       for t in ts[1:]]
+            self.assertEqual(targets, [f"MidiIn/Track.{mid}/TrackOut", f"MidiIn/Track.{mid}/PostFxOut"])
+
+    def test_bad_elements_and_lanes_are_errors(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            amap = os.path.join(tmp, "map.json")
+            with open(amap, "w") as f:
+                json.dump(COMPRESSOR_MAP, f)
+            src = os.path.join(tmp, "e.json")
+            with open(src, "w") as f:
+                json.dump({"device": "Compressor", "cases": [
+                    {"id": "a", "params": {"@Nope": 1, "@Live8LegacyMode": 3, "@RmsTimeShort": 1.5}},
+                    {"id": "b", "params": {"Threshold": {"auto": [[4, 0.5], [0, 0.5]]}}}]}, f)
+            out = os.path.join(tmp, "e.als")
+            self.assertEqual(quiet(make_als.main, ["build", src, "--map", amap, "-o", out]), 1)
+            spec = make_als.load_json(os.path.join(tmp, "e.cases.json"))
+            self.assertEqual(len(spec["cases"][0]["errors"]), 3)
+            self.assertIn("time order", spec["cases"][1]["errors"][0])
+
     def test_unmapped_parameter_is_an_error(self):
         with tempfile.TemporaryDirectory() as tmp:
             amap = os.path.join(tmp, "map.json")

@@ -179,6 +179,60 @@ class Signals(unittest.TestCase):
                 read_wav(p)
 
 
+class ExtendedProbe(unittest.TestCase):
+    """The extended probe (signals.py --kind ext) and what analyse.py reads from it."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.audio, cls.manifest = signals.build_ext(rate=RATE, gap=0.5)
+        cls.probe = cls.audio
+
+    def analyse(self, fn):
+        out = fn(self.audio.copy())
+        return analyse.analyse(self.manifest, self.probe, out, RATE)
+
+    def test_manifest_matches_audio(self):
+        self.assertEqual(self.manifest["kind"], "ext")
+        self.assertEqual(self.manifest["segments"][0]["name"], "impulse")
+        for s in self.manifest["segments"]:
+            self.assertLessEqual(s["start"] + s["length"], len(self.audio))
+        self.assertLessEqual(np.max(np.abs(self.audio)), 1.0)
+
+    def test_identity(self):
+        r, extras = self.analyse(lambda x: x)
+        self.assertNotIn("static", r)
+        e = r["ext"]
+        self.assertAlmostEqual(e["stair100"][10]["left_gain_db"], 0.0, places=2)
+        for k in ("tone10k", "tone15k", "tone3k", "tone50", "saw"):
+            self.assertAlmostEqual(e[k]["gain_db"][0], 0.0, places=3, msg=k)
+        self.assertAlmostEqual(e["shortbursts"][0]["peak_gain_db"][0], 0.0, places=2)
+        self.assertAlmostEqual(e["mid"]["side_db"], -240.0)
+        self.assertAlmostEqual(e["side"]["mid_db"], -240.0)
+        self.assertAlmostEqual(e["lrsplit"]["gain_db"][1], 0.0, places=3)
+        self.assertAlmostEqual(e["dcstep"]["end"], 0.3, places=4)
+        self.assertAlmostEqual(e["ramp"][40]["down_left_gain_db"], 0.0, places=1)
+        self.assertIn("ramp", extras["ext_envelope"])
+
+    def test_gain_and_swap(self):
+        r, _ = self.analyse(lambda x: 0.5 * x[:, ::-1])
+        e = r["ext"]
+        self.assertAlmostEqual(e["tone3k"]["gain_db"][0], -6.02, places=1)
+        self.assertAlmostEqual(e["lrsplit"]["level_db"][0], -18 - 6.02, places=1)
+        self.assertAlmostEqual(e["side"]["side_db"], -6.02, places=1)
+
+    def test_dc_blocker(self):
+        """A one-pole high-pass's step response, written over the DC step."""
+        tau = 0.03
+        seg = next(x for x in self.manifest["segments"] if x["name"] == "dcstep")
+
+        def hp(x):
+            n = seg["length"]
+            x[seg["start"]:seg["start"] + n] = (0.3 * np.exp(-np.arange(n) / RATE / tau))[:, None]
+            return x
+        r, _ = self.analyse(hp)
+        self.assertAlmostEqual(r["ext"]["dcstep"]["tau_ms"], 1000 * tau, delta=0.1)
+
+
 class Analysis(unittest.TestCase):
     def test_identity(self):
         r = run(lambda x: x)

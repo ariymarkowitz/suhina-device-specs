@@ -38,6 +38,30 @@ Value specs are cases.py's (`norm`, `value` or a plain number, `item`, `display`
 `{"stored": x}`, which writes x as it is. A `display` value in base units (Hz, s, dB, %) is
 converted exactly; a `norm` or `value` goes through the dump's sampled display curve
 (65 points), so it lands within the display's rounding (three figures) of the target.
+
+Two more kinds of case entry reach what a static parameter value cannot:
+
+- **A stored element**, named `@<path>` (`"@Input_RoutingMode": 0`, `"@Oversampling": true`):
+  an element of the device that is no API parameter (Roar's routing mode, the Hi-Quality
+  switches, Vocoder's band count), written as it is into its `Value` (or its `Manual`). Live
+  cannot report these, so `verify` does not check them; `<set>.cases.json` lists them under
+  `elements`.
+- **A side-chain key**: a stored element whose value is `"key:<wav>"` (a path from the
+  repository), such as `"@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"`.
+  The set gets one track per key file, named `key <file>`, playing it from the start like a
+  probe (no device), and the element is written as that track's post-FX output
+  (`AudioIn/Track.<id>/PostFxOut`, the form Live's own sets use). The device's side-chain
+  switch is still its parameter (`"S/C On"`).
+- **A MIDI key**: a stored element given `{"midi": {"notes": [[pitch, beat, length, velocity],
+  ...], "length": beats, "name": "..."}, "out": "TrackOut"}`, for a device's MIDI side-chain
+  (`"@MidiSideChain/RoutedInput/Routable/Target"`). The set gets a MIDI track per distinct clip
+  (no instrument; the clip from beat 0, notes in midi_set.py's form), and the element is written
+  as `MidiIn/Track.<id>/<out>`, the form midi_set.py found Live takes for a track's MIDI output.
+- **An automation lane**, `{"auto": [[beat, spec], ...]}`: the parameter follows the points
+  (each spec as above) through the song, as an arrangement envelope on the case's track.
+  Between points a float glides linearly and a stepped value holds; two points at one beat
+  make a jump. The device stores the first point's value, which is what `verify` expects (Live
+  shows the envelope's value at the start of the song). At 120 BPM a beat is 0.5 s of the probe.
 """
 
 import argparse
@@ -47,6 +71,7 @@ import math
 import os
 import re
 import sys
+import xml.etree.ElementTree as ET
 
 import als
 from wavio import read_wav
@@ -638,6 +663,89 @@ def stored_value(item, dp, spec, rng=None):
     return v, als.format_stored(CONVERSIONS[conv](n), kind)
 
 
+# ---------------------------------------------------------------- stored elements and automation
+
+# the time Live gives an envelope's first event, which holds the value before the song starts
+BEFORE_SONG = "-63072000"
+EVENTS = {"float": "FloatEvent", "int": "EnumEvent", "bool": "BoolEvent"}
+
+
+def is_element(name):
+    return name.startswith("@")
+
+
+def set_element(dev, name, value):
+    """Writes a stored-element override (`@<path>`) into a device; returns the stored text."""
+    path = name[1:]
+    el = dev.find(path)
+    if el is None:
+        raise ValueError(f"{dev.tag} has no element {path!r}")
+    target = el.find("Manual") if el.find("Manual") is not None else el
+    old = target.get("Value")
+    if old is None:
+        raise ValueError(f"element {path!r} has no stored value")
+    if isinstance(value, str):
+        text = value
+    else:
+        kind = als.stored_kind(old)
+        if kind == "bool":
+            if value not in (0, 1, True, False):
+                raise ValueError(f"element {path!r} is on/off, not {value!r}")
+            text = als.format_stored(bool(value), "bool")
+        else:
+            # a parameter element (Manual with a controller range) is continuous even when its
+            # stored value happens to be whole (Utility's MidSideBalance, 1 in 0 .. 2)
+            rng = als.controller_range(el) if el.find("Manual") is not None else None
+            if rng is not None and not min(rng) - 1e-9 <= float(value) <= max(rng) + 1e-9:
+                raise ValueError(f"element {path!r}: {value!r} outside {rng[0]:g} .. {rng[1]:g}")
+            if kind == "int" and not float(value).is_integer() and rng is None:
+                raise ValueError(f"element {path!r} holds whole numbers, not {value!r}")
+            whole = kind == "int" and float(value).is_integer()
+            text = als.format_stored(value, "int") if whole else als.format_stored(float(value), "float")
+    target.set("Value", text)
+    return text
+
+
+def is_auto(spec):
+    return isinstance(spec, dict) and "auto" in spec
+
+
+def auto_points(item, dp, spec, rng=None):
+    """[(beat, API value or None, stored text)] for an automation spec, in time order."""
+    pts = spec["auto"]
+    if not pts:
+        raise ValueError("an automation lane needs at least one point")
+    out = []
+    for t, s in pts:
+        if is_auto(s):
+            raise ValueError("an automation point cannot itself be automated")
+        v, text = stored_value(item, dp, s, rng)
+        out.append((float(t), v, text))
+    if any(b[0] < a[0] for a, b in zip(out, out[1:])):
+        raise ValueError("automation points must be in time order")
+    return out
+
+
+def write_envelope(track, element, kind, points):
+    """Adds an arrangement envelope for the parameter `element` (already in the track) that
+    follows `points` [(beat, _, stored text)]."""
+    target = element.find("AutomationTarget").get("Id")
+    holder = track.find("AutomationEnvelopes/Envelopes")
+    if holder is None:
+        raise ValueError("the template track has no AutomationEnvelopes")
+    env = ET.SubElement(holder, "AutomationEnvelope", Id=str(len(holder)))
+    ET.SubElement(ET.SubElement(env, "EnvelopeTarget"), "PointeeId", Value=target)
+    auto = ET.SubElement(env, "Automation")
+    events = ET.SubElement(auto, "Events")
+    tag = EVENTS[kind]
+    ET.SubElement(events, tag, Id="0", Time=BEFORE_SONG, Value=points[0][2])
+    for i, (t, _, text) in enumerate(points, 1):
+        ET.SubElement(events, tag, Id=str(i), Time=format(t, ".10g"), Value=text)
+    view = ET.SubElement(auto, "AutomationTransformViewState")
+    ET.SubElement(view, "IsTransformPending", Value="false")
+    ET.SubElement(view, "TimeAndValueTransforms")
+
+
 def case_probe(spec, path, default):
     """The probe a cases file asks for (`"probe"`: a path relative to the repository or to the
     file), or `default`."""
@@ -658,9 +766,43 @@ def cmd_build(a):
     tempo = set_tempo(root)
     templates = {os.path.abspath(a.probe): template}
     ids = als.Ids(root)
-    out = {"set": os.path.basename(a.output), "generated_by": "make_als.py", "cases": []}
+    out = {"set": os.path.basename(a.output), "generated_by": "make_als.py", "cases": [], "keys": {}}
     problems = 0
     shared = {}  # (probe, device, stored values) -> track name, with --share
+    keys = {}  # key wav -> its track's Id
+
+    def key_target(path):
+        wav = next((os.path.abspath(os.path.join(b, path)) for b in (ROOT, os.getcwd())
+                    if os.path.exists(os.path.join(b, path))), None)
+        if wav is None:
+            raise ValueError(f"key {path} not found")
+        if wav not in keys:
+            t = copy.deepcopy(template)
+            point_template(t, wav, a.output, tempo)
+            name = "key " + os.path.splitext(os.path.basename(wav))[0]
+            keys[wav] = als.add_track(root, t, name, [], ids).get("Id")
+            out["keys"][name] = {"wav": os.path.relpath(wav, ROOT), "track_id": keys[wav]}
+        return f"AudioIn/Track.{keys[wav]}/PostFxOut"
+
+    midi = {}  # a clip's JSON -> its MIDI track's Id
+    midi_src = {}
+
+    def midi_target(spec, out_point):
+        import midi_set  # imports this module, so only when needed
+        clip = midi_set.norm_clip(spec)
+        k = json.dumps(clip, sort_keys=True)
+        if k not in midi:
+            if not midi_src:
+                mroot = als.read_set(midi_set.DEFAULTS["template"])
+                midi_src["track"] = als.find_track(mroot, midi_set.DEFAULTS["track"])
+                midi_src["clip"] = copy.deepcopy(midi_set.clip_skeleton(mroot))
+            name = "midi " + (spec.get("name") or str(len(midi) + 1))
+            t = als.add_track(root, midi_src["track"], name, [], ids)
+            midi_set.arrangement_events(t).append(midi_set.make_clip(midi_src["clip"], clip, 0.0, name))
+            midi[k] = t.get("Id")
+            out["keys"][name] = {"midi": clip, "track_id": midi[k]}
+        return f"MidiIn/Track.{midi[k]}/{out_point}"
+
     for path in a.cases:
         spec = load_json(path)
         run = os.path.splitext(os.path.basename(path))[0]
@@ -679,29 +821,56 @@ def cmd_build(a):
             dev = copy.deepcopy(fresh)
             rec = {"id": f"{run} {case['id']}", "run": run, "case": case["id"], "device": cls,
                    "probe": os.path.relpath(probe, ROOT), "params": {}, "errors": []}
+            lanes = []  # (element path, kind, points) of the case's automation
             for name, vspec in (case.get("params") or {}).items():
+                if is_element(name):
+                    try:
+                        if isinstance(vspec, str) and vspec.startswith("key:"):
+                            vspec = key_target(vspec[4:])
+                        elif isinstance(vspec, dict) and "midi" in vspec:
+                            vspec = midi_target(vspec["midi"], vspec.get("out", "TrackOut"))
+                        text = set_element(dev, name, vspec)
+                    except ValueError as e:
+                        rec["errors"].append(f"{name}: {e}")
+                        continue
+                    rec.setdefault("elements", {})[name[1:]] = text
+                    continue
                 item, dp = mparams.get(name), dparams.get(name)
                 if item is None or dp is None:
                     rec["errors"].append(f"{name}: not in the map" if dp else f"no parameter {name}")
                     continue
                 el = als.parameter(dev, item["element"])
                 try:
-                    v, text = stored_value(item, dp, vspec, als.controller_range(el))
+                    if is_auto(vspec):
+                        pts = auto_points(item, dp, vspec, als.controller_range(el))
+                        v, text = pts[0][1], pts[0][2]
+                    else:
+                        pts = None
+                        v, text = stored_value(item, dp, vspec, als.controller_range(el))
                 except ValueError as e:
                     rec["errors"].append(f"{name}: {e}")
                     continue
                 als.set_manual(el, text)
                 rec["params"][name] = {"value": v, "element": item["element"], "stored": text}
-                if isinstance(vspec, dict) and "display" in vspec and dp.get("samples"):
+                first = vspec["auto"][0][1] if pts else vspec
+                if isinstance(first, dict) and "display" in first and dp.get("samples"):
                     # the API value is only known to within the samples the display was read at
                     rec["params"][name]["tol"] = 1.0 / (len(dp["samples"]) - 1)
+                if pts:
+                    rec["params"][name]["auto"] = [[t, x, s] for t, x, s in pts]
+                    lanes.append((item["element"], item["kind"], pts))
             problems += len(rec["errors"])
-            # the device's whole stored state, so cases that differ only in how they were written share
-            key = (probe, cls, tuple(als.manual(p) for _, p in als.parameters(dev)))
+            # the device's whole stored state and its lanes, so cases that differ only in how they
+            # were written share
+            key = (probe, cls, ET.tostring(dev),
+                   tuple((e, tuple(p)) for e, _, p in lanes))
             if a.share and key in shared:
                 rec["track"] = shared[key]
             else:
-                als.add_track(root, templates[probe], rec["id"], [dev], ids)
+                t = als.add_track(root, templates[probe], rec["id"], [dev], ids)
+                (placed,) = list(als.devices_holder(t))
+                for element, kind, pts in lanes:
+                    write_envelope(t, als.parameter(placed, element), kind, pts)
                 rec["track"] = shared[key] = rec["id"]
             out["cases"].append(rec)
     write_out(root, ids, a.output)

@@ -8,6 +8,13 @@
     python batch.py analyse measurements/top100/selection.json --export measurements/top100/export
     python batch.py summary measurements/top100/selection.json [run ...]   # key figures per case
 
+A large selection can be built in several parts, one selection file and one set each (the third
+set: `measurements/third/third-1.selection.json` to `third-5`; `measurements/third/selection.json`
+lists all 147 runs). The run specs also take the stored elements (`"@Input_RoutingMode": 0`),
+automation lanes (`{"auto": [[beat, spec], ...]}`) and key tracks (audio and MIDI) that
+make_als.py documents; the third set used all three. Render at the project's 44.1 kHz: a set
+exported at 88.2 kHz and resampled (the pilot) did not play every lane (Looper's State).
+
 **Runs.** Each device folder (`measurements/29.NN-name/`) can hold a `runs.py` with
 `DEVICE` (its display name) and `RUNS`, a list of dicts:
 
@@ -50,6 +57,7 @@ offsets and, per run and case, the result file.
 """
 
 import argparse
+import copy
 import importlib.util
 import json
 import math
@@ -115,6 +123,23 @@ def check_run(r, device, dump, amap, devices_root):
     dev = make_als.source_device(devices_root, dd)
     for c in cs:
         for name, vspec in c["params"].items():
+            if make_als.is_element(name):
+                if isinstance(vspec, str) and vspec.startswith("key:"):
+                    if not os.path.exists(os.path.join(ROOT, vspec[4:])):
+                        problems.append(f"{c['id']}: {name}: key {vspec[4:]} not found")
+                    vspec = "AudioIn/Track.0/PostFxOut"
+                elif isinstance(vspec, dict) and "midi" in vspec:
+                    import midi_set
+                    try:
+                        midi_set.norm_clip(vspec["midi"])
+                    except (ValueError, KeyError) as e:
+                        problems.append(f"{c['id']}: {name}: {e}")
+                    vspec = "MidiIn/Track.0/TrackOut"
+                try:
+                    make_als.set_element(copy.deepcopy(dev), name, vspec)
+                except ValueError as e:
+                    problems.append(f"{c['id']}: {e}")
+                continue
             item, dp = mparams.get(name), dparams.get(name)
             if dp is None:
                 problems.append(f"{c['id']}: no parameter {name!r}")
@@ -123,7 +148,11 @@ def check_run(r, device, dump, amap, devices_root):
                 problems.append(f"{c['id']}: {name} is not in the map")
                 continue
             try:
-                make_als.stored_value(item, dp, vspec, als.controller_range(als.parameter(dev, item["element"])))
+                rng = als.controller_range(als.parameter(dev, item["element"]))
+                if make_als.is_auto(vspec):
+                    make_als.auto_points(item, dp, vspec, rng)
+                else:
+                    make_als.stored_value(item, dp, vspec, rng)
             except ValueError as e:
                 problems.append(f"{c['id']}: {name}: {e}")
     for k in ("name", "question", "cases"):

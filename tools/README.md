@@ -294,8 +294,11 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
   Color Amt Low and Hi, Amp Bass, Reverb Diffuse Level, Roar Env Gain), `integer` (Corpus Transpose -18.6 is written and read back as -19, Resonators I Note
   40.4 as 40), `base` (Auto Shift LFO Rate), nested elements (EQ Eight band 3) and `gain`
   (External Audio Effect Input Gain), each by norm and by display.
-- **Not covered yet:** automation (Freeze, Smooth), side-chain routing, MIDI-driven devices
-  (Vocoder carrier, Spectral Resonator MIDI), and devices inside racks.
+- **Added for the third set:** stored elements (`"@path"`: routing modes, oversampling switches, the
+  Vocoder carrier), automation lanes (`{"auto": ...}`), audio key tracks for side-chains and MIDI
+  tracks for the MIDI modes (make_als.py's docstring); their effect on the audio was checked in the third set's renders (Live does not read stored elements back).
+- **Not covered yet:** devices inside racks, the Spread of Shifter, and controls that are neither a
+  parameter nor a stored element.
 
 ### Many devices' runs in one set: `batch.py`
 
@@ -328,6 +331,10 @@ $PY tools/harness/batch.py summary measurements/top100/selection.json [run ...]
   result file. `summary` prints each run's `read` figures per case.
 - **First used** for the top 100 runs (`measurements/top100/README.md`): 100 runs of 37 devices,
   805 cases on 690 tracks; Live 12.4.6 opened the set in 30 s and `verify` matched 802 cases.
+- **Third set** (`measurements/third/README.md`): 147 runs of 39 devices, 1158 cases on 1048 tracks
+  in five parts built from `third-N.selection.json`, rendered by Live 12.4.7; `verify` matched all
+  1158 cases. Live was updated to 12.4.7 between the top 100 set and the remaining set, so the
+  remaining set's renders are 12.4.7 as well (its notes keep the tag 12.4.6).
 
 ## 3. Compare an implementation with Live
 

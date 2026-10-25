@@ -156,6 +156,17 @@ def cmd_verify(a):
         for name, p in now.items():
             want = rec["params"][name]["value"] if name in rec["params"] else (defaults.get(name) or {}).get("value")
             tol = max(a.tol, rec["params"].get(name, {}).get("tol", 0.0))
+            lane = rec["params"].get(name, {}).get("auto")
+            if lane:
+                # Live shows an automated parameter at some point of its lane, not always the first
+                vals = [x[1] for x in lane if x[1] is not None]
+                ok = any(close(p, v, tol) for v in vals) or (
+                    not p.get("is_quantized") and vals and min(vals) - tol * (p["max"] - p["min"]) <= p["value"]
+                    <= max(vals) + tol * (p["max"] - p["min"]))
+                if not ok:
+                    problems.append(f"{rec['id']}: {name} is {p['value']}, off its lane {vals}")
+                rec["params"][name]["live"] = {"value": p["value"], "display": p.get("value_string")}
+                continue
             if not close(p, want, tol):
                 what = "case value" if name in rec["params"] else "default"
                 problems.append(f"{rec['id']}: {name} is {p['value']} ({p.get('value_string')}), {what} {want}")
