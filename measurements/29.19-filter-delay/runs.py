@@ -105,4 +105,18 @@ RUNS = [
      "question": "the steady tone's echo around 2 Time Delay jumping from 100 to 200 ms at beat 46 (23 s), DelayTransitionMode 1 and 0",
      "base": dict(BASE, **{"2 Time Delay": {"auto": [[0, {"display": 0.1}], [46, {"display": 0.1}], [46, {"display": 0.2}]]}}),
      "cases": [["mode1", {"@DelayTransitionMode": 1}], ["mode0", {"@DelayTransitionMode": 0}]]},
+
+    # ---- fifth set: the same change on the noise (a 1 kHz tone hides a shift of a whole number of
+    # cycles), with every value of the stored mode (0 and 1 were read in the third set; 2 is new)
+    {"name": "filter-delay-time-step-noise", "plan": "7", "probe": "gap2", "read": ["raw render around the step (pitch, crossfade, discontinuity)"], "priority": 2,
+     "why": "the third set's tone read modes 0 and 1 as a pitch glide and a short crossfade, but a 100 ms step is invisible on a 1 kHz tone, and the third stored mode was not run",
+     "question": "the noise's echo around 2 Time Delay stepping from 100 to 200 ms at beat 64 (32 s), DelayTransitionMode 0, 1 and 2",
+     "base": dict(BASE, **{"2 Time Delay": {"auto": [[0, {"display": 0.1}], [64, {"display": 0.1}], [64, {"display": 0.2}]]}}),
+     "cases": [[f"mode{m}", {"@DelayTransitionMode": m}] for m in (0, 1, 2)]},
+
+    {"name": "filter-delay-time-ramp-noise", "plan": "7", "probe": "gap2", "read": ["raw render around the ramp (local delay against time)"], "priority": 2,
+     "why": "a ramp is what Repitch glides over and Fade crosses; the step in filter-delay-time-step-noise only shows the splice",
+     "question": "the noise's echo while 2 Time Delay ramps from 100 to 200 ms over the 2.75 s from beat 64 (32 s) to beat 69.5, DelayTransitionMode 0, 1 and 2",
+     "base": dict(BASE, **{"2 Time Delay": {"auto": [[0, {"display": 0.1}], [64, {"display": 0.1}], [69.5, {"display": 0.2}]]}}),
+     "cases": [[f"mode{m}", {"@DelayTransitionMode": m}] for m in (0, 1, 2)]},
 ]

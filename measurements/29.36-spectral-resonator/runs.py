@@ -111,3 +111,26 @@ RUNS = [
      "base": dict(BASE, **{"Freq. Hz": {"display": 110}, "Note": 57}),
      "cases": [[f"dialmode-{m}", {"@PartialFrequencies_FrequencyDialMode": m}] for m in (0, 1)]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+def _case(run, case):
+    return next(c for r in RUNS if r["name"] == run for c in r["cases"] if c[0] == case)[1]
+
+
+# ---- fifth set: Mod Rate in Hz and in Granular. The partial at 1 kHz under the steady 1 kHz tone is
+# excited whenever the modulation brings it onto the tone, so the output envelope shows the rate
+RUNS += [
+    {"name": "spectral-resonator-mod-rate-tone", "plan": "9", "probe": "gap2", "read": ["raw render of the steady tone (envelope)"], "priority": 2,
+     "why": "the fourth set bounded Mod Rate by the 46 ms frames of the noise; a partial on the steady tone shows each excursion as a burst, so the rate is read in Hz, and Granular's grains are counted",
+     "question": "the envelope of the steady 1 kHz tone through the partial at 1 kHz (Freq 1000 Hz, Decay 100 ms, Pitch Mod 2.56 st): Chorus at Mod Rate 1, 10, 30, 64 and 100 %; Wander at 1, 10 and 64 %; Granular at 1, 10, 30, 64 and 100 %; Chorus at Pitch Mod 0 and 0.64 st (Mod Rate 10 %)",
+     "base": {"Dry Wet": {"display": 100}, "Freq. Hz": {"display": 1000}, "Decay": {"display": 0.1}, "Pitch Mod": {"display": 2.56}},
+     "cases": [[f"{n}-rate{r}", {"@Modulation_ModMode": m, "Mod Rate": {"display": r}}]
+               for n, m, rates in (("chorus", 1, (1, 10, 30, 64, 100)), ("wander", 2, (1, 10, 64)), ("granular", 3, (1, 10, 30, 64, 100)))
+               for r in rates] +
+              [["chorus-pm0", {"@Modulation_ModMode": 1, "Mod Rate": {"display": 10}, "Pitch Mod": {"display": 0}}],
+               ["chorus-pm0.64", {"@Modulation_ModMode": 1, "Mod Rate": {"display": 10}, "Pitch Mod": {"display": 0.64}}]]},
+]

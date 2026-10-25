@@ -190,3 +190,44 @@ RUNS = [
                               "Noise Rate Mode": {"item": "Free"}, "Noise Rate": {"display": 4}}],
                ["env", {"@ModulationMatrix_Output_Lfo1": 0, "@ModulationMatrix_Output_Env": 1}]]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+def _case(run, case):
+    return next(c for r in RUNS if r["name"] == run for c in r["cases"] if c[0] == case)[1]
+
+
+# ---- fifth set: the matrix cells other than Output (the cell is the swing of the target in units of
+# its whole range, read off an LFO 1 square wave at 1 Hz so each half cycle is one extreme)
+_MATRIX = dict(_base("roar-modulation"), **{
+    "Output": {"display": 0}, "Drive": {"display": 6}, "Tone Amt": {"display": 50}, "Tone Freq": {"display": 1000},
+    "Shaper 1 On": 1, "Shaper 1 Type": {"item": "Soft Sine"}, "Shaper 1 Amt": {"display": 50},
+    "Flt 1 On": 1, "Flt 1 Type": {"item": "LP"}, "Flt 1 Freq": {"display": 4000}, "Flt 1 Res": {"display": 0.5},
+    "LFO 1 Wave": {"item": "Square"}, "@ModulationMatrix_Output_Lfo1": 0})
+
+
+def _cell(target, source="Lfo1", value=1, **extra):
+    return {f"@ModulationMatrix_{target}_{source}": value, **extra}
+
+
+RUNS += [
+    {"name": "roar-matrix-targets", "plan": "10", "probe": "gap2", "read": ["raw render of the steady tone and the noise (per half cycle)"], "priority": 2,
+     "why": "only the Output cell was read; the same cell at 1 for the other targets gives each target's range, direction and curve, and three sources and the Global Mod Amt are checked on Input and Output",
+     "question": "gain, distortion and spectrum of the steady tone and the noise in each half cycle of an LFO 1 square wave at 1 Hz with one matrix cell stored as 1: Input, Tone Amount, Tone Frequency, Blend, Dry/Wet, Stage 1 Amount, Bias, Trim, Frequency, Resonance, Morph (type Morph), PeakGain (type Peak), Feedback Amount; LFO 2, Noise and Env as sources; the Output cell at Global Mod Amt 50 and 200 %; LFO 2 into LFO 1's Rate",
+     "base": _MATRIX,
+     "cases": [[f"{t.lower()}", _cell(t)] for t in ("Input", "ToneAmount", "ToneFrequency", "Blend", "DryWet", "Stage1Amount",
+                                                   "Stage1Bias", "Stage1Trim", "Stage1Frequency", "Stage1Resonance", "FeedbackAmount")] +
+              [["stage1morph", _cell("Stage1Morph", **{"Flt 1 Type": {"item": "Morph"}})],
+               ["stage1peakgain", _cell("Stage1PeakGain", **{"Flt 1 Type": {"item": "Peak"}})],
+               ["lfo2-input", _cell("Input", "Lfo2", **{"LFO 2 Wave": {"item": "Square"}, "LFO 2 Rate Mode": {"item": "Free"}, "LFO 2 Rate": {"display": 1}})],
+               ["noise-input", _cell("Input", "Noise", **{"Noise Type": {"item": "Sample & Hold"}, "Noise Rate Mode": {"item": "Free"}, "Noise Rate": {"display": 4}})],
+               ["env-stage1amount", _cell("Stage1Amount", "Env")],
+               ["output-ref", _cell("Output")],
+               ["output-global50", _cell("Output", **{"Global Mod Amt": {"display": 50}})],
+               ["output-global200", _cell("Output", **{"Global Mod Amt": {"display": 200}})],
+               ["lfo2-lfo1rate", _cell("Output", **{"@ModulationMatrix_Lfo1Rate_Lfo2": 1, "LFO 2 Wave": {"item": "Square"},
+                                                    "LFO 2 Rate Mode": {"item": "Free"}, "LFO 2 Rate": {"display": 0.25}})]]},
+]

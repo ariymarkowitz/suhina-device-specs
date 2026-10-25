@@ -1,0 +1,248 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-avoid-onsets",
+ "question": "level over time of the bursts, staircase, impulse and noise with Frozen on, Retrigger Onsets, Sensitivity 25, 50 and 100 %, AvoidFreezingOnsets false and true",
+ "plan": "9",
+ "read": [
+  "dynamics",
+  "static",
+  "impulse",
+  "raw render"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Onsets"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "sens25-plain",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Onsets"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Sensitivity": {
+     "display": 25
+    },
+    "@Freezer_AvoidFreezingOnsets": false
+   }
+  },
+  {
+   "id": "sens25-avoid",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Onsets"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Sensitivity": {
+     "display": 25
+    },
+    "@Freezer_AvoidFreezingOnsets": true
+   }
+  },
+  {
+   "id": "sens50-plain",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Onsets"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Sensitivity": {
+     "display": 50
+    },
+    "@Freezer_AvoidFreezingOnsets": false
+   }
+  },
+  {
+   "id": "sens50-avoid",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Onsets"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Sensitivity": {
+     "display": 50
+    },
+    "@Freezer_AvoidFreezingOnsets": true
+   }
+  },
+  {
+   "id": "sens100-plain",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Onsets"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Sensitivity": {
+     "display": 100
+    },
+    "@Freezer_AvoidFreezingOnsets": false
+   }
+  },
+  {
+   "id": "sens100-avoid",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Frozen": 1,
+    "Mode": {
+     "item": "Retrigger"
+    },
+    "Retrigger Mode": {
+     "item": "Onsets"
+    },
+    "Unit": {
+     "item": "Milliseconds"
+    },
+    "S.Rate ms": {
+     "display": 0.5
+    },
+    "Fade Type": {
+     "item": "Crossfade"
+    },
+    "XFade %": {
+     "display": 0
+    },
+    "Sensitivity": {
+     "display": 100
+    },
+    "@Freezer_AvoidFreezingOnsets": true
+   }
+  }
+ ]
+}

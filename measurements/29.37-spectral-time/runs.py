@@ -121,3 +121,24 @@ RUNS = [
                             "Retrigger Mode": {"item": "Sync"}, "S.Rate ms": {"display": 0.5}}),
      "cases": [[f"order-{o}", {"@ProcessingOrder": o}] for o in (0, 1)]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+def _case(run, case):
+    return next(c for r in RUNS if r["name"] == run for c in r["cases"] if c[0] == case)[1]
+
+
+# ---- fifth set: AvoidFreezingOnsets with a reference (the fourth set's avoid-onsets case had none)
+_ONSETS = {k: v for k, v in _case("spectral-time-resolution-order", "avoid-onsets").items() if k != "@Freezer_AvoidFreezingOnsets"}
+
+RUNS += [
+    {"name": "spectral-time-avoid-onsets", "plan": "9", "probe": "gap2", "read": ["dynamics", "static", "impulse", "raw render"], "priority": 2,
+     "why": "the stored AvoidFreezingOnsets was rendered only on, so what it changes is not read; the same Retrigger Onsets cases with it false and true",
+     "question": "level over time of the bursts, staircase, impulse and noise with Frozen on, Retrigger Onsets, Sensitivity 25, 50 and 100 %, AvoidFreezingOnsets false and true",
+     "base": _ONSETS,
+     "cases": [[f"sens{s}-{'avoid' if a else 'plain'}", {"Sensitivity": {"display": s}, "@Freezer_AvoidFreezingOnsets": a}]
+               for s in (25, 50, 100) for a in (False, True)]},
+]

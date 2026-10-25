@@ -1,0 +1,217 @@
+{
+ "set": "fifth.als",
+ "groups": {
+  "gap2": {
+   "export": "fifth",
+   "offset_samples": 0,
+   "bypass_renders": 8,
+   "bypass_disagreeing": {}
+  },
+  "ext": {
+   "export": "fifth-ext",
+   "offset_samples": 0,
+   "bypass_renders": 1,
+   "bypass_disagreeing": {}
+  },
+  "fifth": {
+   "export": "fifth-fifth",
+   "offset_samples": 0,
+   "bypass_renders": 3,
+   "bypass_disagreeing": {}
+  }
+ },
+ "runs": {
+  "looper-feedback-noise": {
+   "bypass": "measurements/29.25-looper/live/looper-feedback-noise bypass.json",
+   "default": "measurements/29.25-looper/live/looper-feedback-noise default.json",
+   "fb100": "measurements/29.25-looper/live/looper-feedback-noise fb100.json",
+   "fb75": "measurements/29.25-looper/live/looper-feedback-noise fb75.json",
+   "fb50": "measurements/29.25-looper/live/looper-feedback-noise fb50.json",
+   "fb25": "measurements/29.25-looper/live/looper-feedback-noise fb25.json",
+   "fb0": "measurements/29.25-looper/live/looper-feedback-noise fb0.json",
+   "fb100-always": "measurements/29.25-looper/live/looper-feedback-noise fb100-always.json",
+   "rec-play-never": "measurements/29.25-looper/live/looper-feedback-noise rec-play-never.json",
+   "rec-play-always": "measurements/29.25-looper/live/looper-feedback-noise rec-play-always.json",
+   "fb-lane-mid-pass": "measurements/29.25-looper/live/looper-feedback-noise fb-lane-mid-pass.json",
+   "od-edges": "measurements/29.25-looper/live/looper-feedback-noise od-edges.json"
+  },
+  "looper-speed-reverse": {
+   "bypass": "measurements/29.25-looper/live/looper-feedback-noise bypass.json",
+   "default": "measurements/29.25-looper/live/looper-feedback-noise default.json",
+   "speedp0": "measurements/29.25-looper/live/looper-speed-reverse speedp0.json",
+   "speedp12": "measurements/29.25-looper/live/looper-speed-reverse speedp12.json",
+   "speedm12": "measurements/29.25-looper/live/looper-speed-reverse speedm12.json",
+   "speedp7": "measurements/29.25-looper/live/looper-speed-reverse speedp7.json",
+   "speedp24": "measurements/29.25-looper/live/looper-speed-reverse speedp24.json",
+   "speedm24": "measurements/29.25-looper/live/looper-speed-reverse speedm24.json",
+   "sweep-fwd": "measurements/29.25-looper/live/looper-speed-reverse sweep-fwd.json",
+   "sweep-reverse": "measurements/29.25-looper/live/looper-speed-reverse sweep-reverse.json"
+  },
+  "delay-time-ramp-noise": {
+   "bypass": "measurements/29.11-delay/live/delay-time-ramp-noise bypass.json",
+   "default": "measurements/29.11-delay/live/delay-time-ramp-noise default.json",
+   "repitch": "measurements/29.11-delay/live/delay-time-ramp-noise default.json",
+   "fade": "measurements/29.11-delay/live/delay-time-ramp-noise fade.json",
+   "jump": "measurements/29.11-delay/live/delay-time-ramp-noise jump.json"
+  },
+  "filter-delay-time-step-noise": {
+   "bypass": "measurements/29.19-filter-delay/live/filter-delay-time-step-noise bypass.json",
+   "default": "measurements/29.19-filter-delay/live/filter-delay-time-step-noise default.json",
+   "mode0": "measurements/29.19-filter-delay/live/filter-delay-time-step-noise mode0.json",
+   "mode1": "measurements/29.19-filter-delay/live/filter-delay-time-step-noise default.json",
+   "mode2": "measurements/29.19-filter-delay/live/filter-delay-time-step-noise mode2.json"
+  },
+  "filter-delay-time-ramp-noise": {
+   "bypass": "measurements/29.19-filter-delay/live/filter-delay-time-step-noise bypass.json",
+   "default": "measurements/29.19-filter-delay/live/filter-delay-time-ramp-noise default.json",
+   "mode0": "measurements/29.19-filter-delay/live/filter-delay-time-ramp-noise mode0.json",
+   "mode1": "measurements/29.19-filter-delay/live/filter-delay-time-ramp-noise default.json",
+   "mode2": "measurements/29.19-filter-delay/live/filter-delay-time-ramp-noise mode2.json"
+  },
+  "corpus-tune-sweep": {
+   "bypass": "measurements/29.10-corpus/live/corpus-tune-sweep bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-tune-sweep default.json",
+   "tune-55": "measurements/29.10-corpus/live/corpus-tune-sweep tune-55.json",
+   "tune-82.41": "measurements/29.10-corpus/live/corpus-tune-sweep tune-82.41.json",
+   "tune-110": "measurements/29.10-corpus/live/corpus-tune-sweep tune-110.json",
+   "tune-146.83": "measurements/29.10-corpus/live/corpus-tune-sweep tune-146.83.json",
+   "tune-196": "measurements/29.10-corpus/live/corpus-tune-sweep tune-196.json",
+   "tune-329.63": "measurements/29.10-corpus/live/corpus-tune-sweep tune-329.63.json",
+   "tune-440": "measurements/29.10-corpus/live/corpus-tune-sweep tune-440.json",
+   "tune-523.25": "measurements/29.10-corpus/live/corpus-tune-sweep tune-523.25.json",
+   "tune-698.46": "measurements/29.10-corpus/live/corpus-tune-sweep tune-698.46.json",
+   "tune-880": "measurements/29.10-corpus/live/corpus-tune-sweep tune-880.json",
+   "tune-1174.66": "measurements/29.10-corpus/live/corpus-tune-sweep tune-1174.66.json",
+   "tune-1568": "measurements/29.10-corpus/live/corpus-tune-sweep tune-1568.json",
+   "tune-2093": "measurements/29.10-corpus/live/corpus-tune-sweep tune-2093.json",
+   "t523-decay0.2": "measurements/29.10-corpus/live/corpus-tune-sweep t523-decay0.2.json",
+   "t523-decay3": "measurements/29.10-corpus/live/corpus-tune-sweep t523-decay3.json",
+   "t523-eco": "measurements/29.10-corpus/live/corpus-tune-sweep t523-eco.json",
+   "t523-low": "measurements/29.10-corpus/live/corpus-tune-sweep t523-low.json",
+   "t523-med": "measurements/29.10-corpus/live/corpus-tune-sweep t523-med.json",
+   "t523-bright100": "measurements/29.10-corpus/live/corpus-tune-sweep t523-bright100.json",
+   "t523-material100": "measurements/29.10-corpus/live/corpus-tune-sweep t523-material100.json"
+  },
+  "corpus-lfo-steady": {
+   "bypass": "measurements/29.10-corpus/live/corpus-tune-sweep bypass.json",
+   "default": "measurements/29.10-corpus/live/corpus-lfo-steady default.json",
+   "rate-0.5": "measurements/29.10-corpus/live/corpus-lfo-steady rate-0.5.json",
+   "rate-3": "measurements/29.10-corpus/live/corpus-lfo-steady rate-3.json",
+   "rate-7": "measurements/29.10-corpus/live/corpus-lfo-steady rate-7.json",
+   "rate-10": "measurements/29.10-corpus/live/corpus-lfo-steady rate-10.json",
+   "phase-0": "measurements/29.10-corpus/live/corpus-lfo-steady phase-0.json",
+   "phase-90": "measurements/29.10-corpus/live/corpus-lfo-steady phase-90.json",
+   "phase-270": "measurements/29.10-corpus/live/corpus-lfo-steady phase-270.json",
+   "spin-25": "measurements/29.10-corpus/live/corpus-lfo-steady spin-25.json",
+   "spin-50": "measurements/29.10-corpus/live/corpus-lfo-steady spin-50.json",
+   "sync-6": "measurements/29.10-corpus/live/corpus-lfo-steady sync-6.json",
+   "sync-12": "measurements/29.10-corpus/live/corpus-lfo-steady sync-12.json",
+   "sync-17": "measurements/29.10-corpus/live/corpus-lfo-steady sync-17.json",
+   "sync-12-offset90": "measurements/29.10-corpus/live/corpus-lfo-steady sync-12-offset90.json",
+   "sync-12-offset180": "measurements/29.10-corpus/live/corpus-lfo-steady sync-12-offset180.json",
+   "sawdown": "measurements/29.10-corpus/live/corpus-lfo-steady sawdown.json",
+   "random-ramp": "measurements/29.10-corpus/live/corpus-lfo-steady random-ramp.json"
+  },
+  "spectral-resonator-mod-rate-tone": {
+   "bypass": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone bypass.json",
+   "default": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone default.json",
+   "chorus-rate1": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone chorus-rate1.json",
+   "chorus-rate10": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone chorus-rate10.json",
+   "chorus-rate30": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone chorus-rate30.json",
+   "chorus-rate64": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone chorus-rate64.json",
+   "chorus-rate100": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone chorus-rate100.json",
+   "wander-rate1": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone wander-rate1.json",
+   "wander-rate10": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone wander-rate10.json",
+   "wander-rate64": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone wander-rate64.json",
+   "granular-rate1": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone granular-rate1.json",
+   "granular-rate10": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone granular-rate10.json",
+   "granular-rate30": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone granular-rate30.json",
+   "granular-rate64": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone granular-rate64.json",
+   "granular-rate100": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone granular-rate100.json",
+   "chorus-pm0": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone chorus-pm0.json",
+   "chorus-pm0.64": "measurements/29.36-spectral-resonator/live/spectral-resonator-mod-rate-tone chorus-pm0.64.json"
+  },
+  "spectral-time-avoid-onsets": {
+   "bypass": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets bypass.json",
+   "default": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets default.json",
+   "sens25-plain": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets sens25-plain.json",
+   "sens25-avoid": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets sens25-avoid.json",
+   "sens50-plain": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets default.json",
+   "sens50-avoid": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets sens50-avoid.json",
+   "sens100-plain": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets sens100-plain.json",
+   "sens100-avoid": "measurements/29.37-spectral-time/live/spectral-time-avoid-onsets sens100-avoid.json"
+  },
+  "shifter-spin-sync": {
+   "bypass": "measurements/29.35-shifter/live/shifter-spin-sync bypass.json",
+   "default": "measurements/29.35-shifter/live/shifter-spin-sync default.json",
+   "freq-ref": "measurements/29.35-shifter/live/shifter-spin-sync freq-ref.json",
+   "freq-spin25": "measurements/29.35-shifter/live/shifter-spin-sync freq-spin25.json",
+   "freq-spin50": "measurements/29.35-shifter/live/shifter-spin-sync freq-spin50.json",
+   "freq-offset90": "measurements/29.35-shifter/live/shifter-spin-sync freq-offset90.json",
+   "sync-ref": "measurements/29.35-shifter/live/shifter-spin-sync sync-ref.json",
+   "sync-spin50": "measurements/29.35-shifter/live/shifter-spin-sync sync-spin50.json",
+   "sync-offset90": "measurements/29.35-shifter/live/shifter-spin-sync sync-offset90.json",
+   "sync-offset180": "measurements/29.35-shifter/live/shifter-spin-sync sync-offset180.json",
+   "sync-phase90": "measurements/29.35-shifter/live/shifter-spin-sync sync-phase90.json"
+  },
+  "roar-matrix-targets": {
+   "bypass": "measurements/29.33-roar/live/roar-matrix-targets bypass.json",
+   "default": "measurements/29.33-roar/live/roar-matrix-targets default.json",
+   "input": "measurements/29.33-roar/live/roar-matrix-targets input.json",
+   "toneamount": "measurements/29.33-roar/live/roar-matrix-targets toneamount.json",
+   "tonefrequency": "measurements/29.33-roar/live/roar-matrix-targets tonefrequency.json",
+   "blend": "measurements/29.33-roar/live/roar-matrix-targets blend.json",
+   "drywet": "measurements/29.33-roar/live/roar-matrix-targets drywet.json",
+   "stage1amount": "measurements/29.33-roar/live/roar-matrix-targets stage1amount.json",
+   "stage1bias": "measurements/29.33-roar/live/roar-matrix-targets stage1bias.json",
+   "stage1trim": "measurements/29.33-roar/live/roar-matrix-targets stage1trim.json",
+   "stage1frequency": "measurements/29.33-roar/live/roar-matrix-targets stage1frequency.json",
+   "stage1resonance": "measurements/29.33-roar/live/roar-matrix-targets stage1resonance.json",
+   "feedbackamount": "measurements/29.33-roar/live/roar-matrix-targets feedbackamount.json",
+   "stage1morph": "measurements/29.33-roar/live/roar-matrix-targets stage1morph.json",
+   "stage1peakgain": "measurements/29.33-roar/live/roar-matrix-targets stage1peakgain.json",
+   "lfo2-input": "measurements/29.33-roar/live/roar-matrix-targets lfo2-input.json",
+   "noise-input": "measurements/29.33-roar/live/roar-matrix-targets noise-input.json",
+   "env-stage1amount": "measurements/29.33-roar/live/roar-matrix-targets env-stage1amount.json",
+   "output-ref": "measurements/29.33-roar/live/roar-matrix-targets output-ref.json",
+   "output-global50": "measurements/29.33-roar/live/roar-matrix-targets output-global50.json",
+   "output-global200": "measurements/29.33-roar/live/roar-matrix-targets output-global200.json",
+   "lfo2-lfo1rate": "measurements/29.33-roar/live/roar-matrix-targets lfo2-lfo1rate.json"
+  },
+  "glue-oversample-clip": {
+   "bypass": "measurements/29.21-glue-compressor/live/glue-oversample-clip bypass.json",
+   "default": "measurements/29.21-glue-compressor/live/glue-oversample-clip default.json",
+   "clip-mk6-osoff": "measurements/29.21-glue-compressor/live/glue-oversample-clip clip-mk6-osoff.json",
+   "clip-mk6-oson": "measurements/29.21-glue-compressor/live/glue-oversample-clip clip-mk6-oson.json",
+   "clip-mk12-osoff": "measurements/29.21-glue-compressor/live/glue-oversample-clip clip-mk12-osoff.json",
+   "clip-mk12-oson": "measurements/29.21-glue-compressor/live/glue-oversample-clip clip-mk12-oson.json"
+  },
+  "limiter-fs4-45": {
+   "bypass": "measurements/29.24-limiter/live/limiter-fs4-45 bypass.json",
+   "default": "measurements/29.24-limiter/live/limiter-fs4-45 default.json",
+   "standard": "measurements/29.24-limiter/live/limiter-fs4-45 default.json",
+   "soft-clip": "measurements/29.24-limiter/live/limiter-fs4-45 soft-clip.json",
+   "true-peak": "measurements/29.24-limiter/live/limiter-fs4-45 true-peak.json"
+  },
+  "vocoder-pitch-rest": {
+   "bypass": "measurements/29.42-vocoder/live/vocoder-pitch-rest bypass.json",
+   "default": "measurements/29.42-vocoder/live/vocoder-pitch-rest default.json",
+   "limits-loaded": "measurements/29.42-vocoder/live/vocoder-pitch-rest default.json",
+   "limits-wide": "measurements/29.42-vocoder/live/vocoder-pitch-rest limits-wide.json",
+   "limits-mid": "measurements/29.42-vocoder/live/vocoder-pitch-rest limits-mid.json"
+  },
+  "pedal-low-high-stairs": {
+   "bypass": "measurements/29.28-pedal/live/pedal-low-high-stairs bypass.json",
+   "default": "measurements/29.28-pedal/live/pedal-low-high-stairs default.json",
+   "over-0": "measurements/29.28-pedal/live/pedal-low-high-stairs default.json",
+   "over-50": "measurements/29.28-pedal/live/pedal-low-high-stairs over-50.json",
+   "over-100": "measurements/29.28-pedal/live/pedal-low-high-stairs over-100.json",
+   "dist-0": "measurements/29.28-pedal/live/pedal-low-high-stairs dist-0.json",
+   "dist-50": "measurements/29.28-pedal/live/pedal-low-high-stairs dist-50.json",
+   "dist-100": "measurements/29.28-pedal/live/pedal-low-high-stairs dist-100.json",
+   "fuzz-0": "measurements/29.28-pedal/live/pedal-low-high-stairs fuzz-0.json",
+   "fuzz-50": "measurements/29.28-pedal/live/pedal-low-high-stairs fuzz-50.json",
+   "fuzz-100": "measurements/29.28-pedal/live/pedal-low-high-stairs fuzz-100.json"
+  }
+ }
+}

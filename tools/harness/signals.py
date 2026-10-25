@@ -233,6 +233,69 @@ def build_ext(rate=48000, gap=1.0, tempo=120.0, seed=2):
     return audio, manifest
 
 
+def build_fifth(rate=48000, gap=1.0, tempo=120.0):
+    """The fifth probe: three signals the others lack. A sine at a quarter of the sample rate
+    at phases 0 and 45 degrees (the second has sample peaks 3 dB under its reconstructed peak), 20 Hz
+    and 5 kHz staircases, and a sequence of band-limited saws (and one sine) with silences between
+    them, for a pitch tracker's rest value: what it does outside its limits and after what history.
+    It starts with the same impulse, so renders align the same way."""
+    segments, parts = [], []
+    pos = 0
+
+    def add(name, left, right=None, **info):
+        nonlocal pos
+        right = left if right is None else right
+        seg = np.stack([left, right], axis=1)
+        segments.append(dict(name=name, start=pos, length=len(seg), **info))
+        parts.append(seg)
+        pos += len(seg)
+        parts.append(np.zeros((int(round(gap * rate)), 2)))
+        pos += len(parts[-1])
+
+    parts.append(np.zeros((int(0.5 * rate), 2)))
+    pos += len(parts[-1])
+
+    imp = np.zeros(1)
+    imp[0] = db(-6)
+    add("impulse", imp, level_db=-6.0)
+
+    f4 = rate / 4.0
+    for deg in (0, 45):
+        add(f"fs4_p{deg}", fade(sine(f4, 1.0, rate, -6.0, math.radians(deg)), rate),
+            freq=f4, phase_deg=deg, level_db=-6.0)
+
+    for f, step_s in ((20.0, 0.5), (5000.0, 0.25)):
+        stair, levels = staircase(f, -54.0, -6.0, 3.0, step_s, rate)
+        add(f"stair{f / 1000:g}k" if f >= 1000 else f"stair{f:g}", fade(stair, rate), freq=f,
+            levels_db=levels, step_length=int(round(step_s * rate)))
+
+    # (frequency in Hz, "saw" | "sine"; None is silence), one second each
+    seq = [(220, "saw"), (None, ""), (1760, "saw"), (None, ""), (330, "saw"), (1760, "saw"), (None, ""),
+           (1760, "saw"), (None, ""), (40, "saw"), (None, ""), (110, "saw"), (40, "saw"), (None, ""),
+           (3000, "sine"), (None, ""), (150, "saw"), (3000, "sine")]
+    pieces, items = [], []
+    for k, (f, wave) in enumerate(seq):
+        n = int(round(1.0 * rate))
+        t = np.arange(n) / rate
+        if f is None:
+            x = np.zeros(n)
+        elif wave == "saw":
+            x = sum(np.sin(2 * np.pi * f * h * t) / h for h in range(1, int(rate / 2 / f)))
+            x = fade(x / np.max(np.abs(x)) * db(-12), rate)
+        else:
+            x = fade(sine(f, 1.0, rate, -12.0), rate)
+        pieces.append(x)
+        items.append(dict(start_s=float(k), freq=f, wave=wave or "silence"))
+    add("vocseq", np.concatenate(pieces), items=items, level_db=-12.0)
+
+    add("silence", np.zeros(int(2.0 * rate)))
+
+    audio = np.concatenate(parts)
+    manifest = dict(suhina_probe_signal=1, kind="fifth", rate=rate, channels=2, length=len(audio), gap=gap,
+                    tempo=tempo, segments=segments)
+    return audio, manifest
+
+
 def build_key(kind, rate=48000, gap=2.0, tempo=120.0, seed=3):
     """A side-chain key (or vocoder carrier) the length of the main probe, timed against it:
 
@@ -285,9 +348,10 @@ def build_key(kind, rate=48000, gap=2.0, tempo=120.0, seed=3):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("-o", "--output", default="probe.wav")
-    ap.add_argument("--kind", choices=("main", "ext", "key-duck", "key-saw", "key-noise"), default="main",
+    ap.add_argument("--kind", choices=("main", "ext", "fifth", "key-duck", "key-saw", "key-noise"), default="main",
                     help="the main probe, the extended one (build_ext) with the signals it lacks, or a "
-                         "side-chain key timed against the main probe (build_key)")
+                         "side-chain key timed against the main probe (build_key); the fifth probe (build_fifth) "
+                         "has the quarter-sample-rate tones, 20 Hz and 5 kHz staircases and the saw sequence")
     ap.add_argument("--rate", type=int, default=48000)
     ap.add_argument("--gap", type=float, default=2.0, help="seconds of silence after each signal")
     ap.add_argument("--tempo", type=float, default=120.0, help="the set's tempo, recorded in the manifest")
@@ -299,7 +363,7 @@ def main():
     if a.kind.startswith("key-"):
         audio, manifest = build_key(a.kind, a.rate, a.gap, a.tempo)
     else:
-        audio, manifest = (build_ext if a.kind == "ext" else build)(a.rate, a.gap, a.tempo)
+        audio, manifest = {"ext": build_ext, "fifth": build_fifth}.get(a.kind, build)(a.rate, a.gap, a.tempo)
     write_wav(a.output, a.rate, audio)
     with open(os.path.splitext(a.output)[0] + ".json", "w") as f:
         json.dump(manifest, f, indent=1)

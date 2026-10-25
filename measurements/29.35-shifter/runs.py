@@ -7,7 +7,10 @@ Plan steps refer to live-12/audio-effects/29.35-shifter.md › Measurement plan.
 Output frequencies are read from the renders (the 8 s steady 1 kHz tone, spectrum or zero-crossing
 frequency), which analyse.py does not do for a shifter; `read` says so per run.
 
-Left out (cannot be measured this way): Spread (not an API parameter) and so Wide; MIDI mode and
+Spread is the Fine knob while Wide is on (the user saw the dial change its name); it has no parameter
+of its own, so `shifter-wide-spread` sets Wide and moves Fine.
+
+Left out (cannot be measured this way): MIDI mode and
 Glide (no MIDI input); the LFO's stereo and shape-warp controls (Phase, Spin, Width, Offset, Duty
 Cycle), which come after the basic LFO run if its result calls for them; the Window's effect on a
 click or a low tone beyond what the pitch runs show; changes during the render.
@@ -135,4 +138,42 @@ RUNS = [
                ["postfx-route", {"@MidiSideChain/RoutedInput/Routable/Target": {"midi": {"name": "shifter", "length": 60, "notes": [
                    [60, 42, 4, 100], [64, 46, 4, 100], [67, 50, 4, 100], [72, 53, 3, 100]]}, "out": "PostFxOut"}}],
                ["pitchmode-2", {"@Global_PitchMode": 2}]]},
+]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+def _case(run, case):
+    return next(c for r in RUNS if r["name"] == run for c in r["cases"] if c[0] == case)[1]
+
+
+# ---- fifth set: Spin and Offset in Freq mode and with a synced rate (the third set's Pitch mode ignored both)
+RUNS += [
+    {"name": "shifter-spin-sync", "plan": "5", "probe": "gap2", "read": ["modulation (per channel)"], "priority": 3,
+     "why": "Spin and Offset did nothing in Pitch mode with a free rate; the manual says Offset acts on synced rates, and the Spin knob may belong to Freq mode",
+     "question": "per-channel pitch of the steady tone: Freq mode (depth 98.9 Hz, 1 Hz) alone, with Spin 25 and 50 % and with Offset 90; Pitch mode (3 st) synced to 1/4 alone, with Spin 50 %, with Offset 90 and 180 and with Phase 90",
+     "base": _base("shifter-lfo-more"),
+     "cases": [["freq-ref", {"Mode": {"item": "Freq"}, "Lfo Amount St": {"display": 0}, "Lfo Amount Hz": {"display": 98.9}}],
+               ["freq-spin25", {"Mode": {"item": "Freq"}, "Lfo Amount St": {"display": 0}, "Lfo Amount Hz": {"display": 98.9}, "Lfo Spin": 1, "Lfo Spin Amount": {"display": 25}}],
+               ["freq-spin50", {"Mode": {"item": "Freq"}, "Lfo Amount St": {"display": 0}, "Lfo Amount Hz": {"display": 98.9}, "Lfo Spin": 1, "Lfo Spin Amount": {"display": 50}}],
+               ["freq-offset90", {"Mode": {"item": "Freq"}, "Lfo Amount St": {"display": 0}, "Lfo Amount Hz": {"display": 98.9}, "Lfo Offset": {"display": 90}}],
+               ["sync-ref", {"Lfo Sync": 1, "Lfo S. Rate": 12}],
+               ["sync-spin50", {"Lfo Sync": 1, "Lfo S. Rate": 12, "Lfo Spin": 1, "Lfo Spin Amount": {"display": 50}}],
+               ["sync-offset90", {"Lfo Sync": 1, "Lfo S. Rate": 12, "Lfo Offset": {"display": 90}}],
+               ["sync-offset180", {"Lfo Sync": 1, "Lfo S. Rate": 12, "Lfo Offset": {"display": 180}}],
+               ["sync-phase90", {"Lfo Sync": 1, "Lfo S. Rate": 12, "Lfo Phase": {"display": 90}}]]},
+    {"name": "shifter-wide-spread", "plan": "6", "probe": "gap2", "read": ["steady (spectrum, per channel)"], "priority": 2,
+     "why": "with Wide on the Fine knob is Spread; the manual says left and right then shift by opposite amounts",
+     "question": "per-channel lines of the steady tone: Wide on with Fine at 25, 50, 100 ct (Pitch, Coarse 0 and +7), at +62.5 and -500 Hz (Freq, Coarse 0 and +100 Hz) and at +10 Hz (Ring); Wide off with Fine 100 ct and +62.5 Hz as the reference",
+     "base": dict(BASE, **{"Wide": ON}),
+     "cases": [[f"pitch-fine{f:+d}", {"Pitch Fine": {"display": f}}] for f in (25, 50, 100, -100)]
+     + [["pitch7-fine50", {"Pitch Coarse": 7, "Pitch Fine": {"display": 50}}],
+        ["pitch-fine100-nowide", {"Pitch Fine": {"display": 100}, "Wide": OFF}],
+        ["freq-fine62.5", {"Mode": {"item": "Freq"}, "Mod Fine": {"display": 62.5}}],
+        ["freq-fine-500", {"Mode": {"item": "Freq"}, "Mod Fine": {"display": -500}}],
+        ["freq100-fine62.5", {"Mode": {"item": "Freq"}, "FShift Coarse": {"display": 100}, "Mod Fine": {"display": 62.5}}],
+        ["freq-fine62.5-nowide", {"Mode": {"item": "Freq"}, "Mod Fine": {"display": 62.5}, "Wide": OFF}],
+        ["ring-fine10", {"Mode": {"item": "Ring"}, "Mod Fine": {"display": 10}}]]},
 ]

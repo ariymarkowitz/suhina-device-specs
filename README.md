@@ -97,7 +97,8 @@ and the other 157 priority 1 to 3 runs of all 42 devices in a second set in
 notes. A third set of 147 runs on 39 devices (1048 renders, five parts and a pilot) was rendered in
 Live 12.4.7 ([`measurements/third/`](measurements/third/README.md)) and read into the notes as
 `[measured 12.4.7]` (Measured › Third set). Eight runs the third set left open were rendered as a fourth set
-in Live 12.4.7 ([`measurements/fourth/`](measurements/fourth/README.md)). All 42 notes now have a Measured section with
+in Live 12.4.7 ([`measurements/fourth/`](measurements/fourth/README.md)), and the items still open after that (16 runs on 12
+devices, with a new probe) as a fifth set ([`measurements/fifth/`](measurements/fifth/README.md)). All 42 notes now have a Measured section with
 `[measured 12.4.6]` facts (INDEX: `partly measured`; Compressor's are in its Behaviour section).
 
 The eight MIDI effects of chapter 30 have notes too ([`live-12/midi-effects/`](live-12/midi-effects/INDEX.md)),

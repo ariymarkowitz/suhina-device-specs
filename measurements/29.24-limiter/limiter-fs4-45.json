@@ -1,0 +1,158 @@
+{
+ "device": "Limiter",
+ "parameter": "limiter-fs4-45",
+ "question": "sample and reconstructed peaks of the fs/4 sines (-6 dBFS reconstructed peak, -9 dBFS sample peak at 45 degrees) at Input Gain +6 dB, Ceiling -1 dB, each Mode",
+ "plan": "11",
+ "read": [
+  "fifth: fs4_p0, fs4_p45 (sample and reconstructed peaks)"
+ ],
+ "probe": "measurements/probe-fifth/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Input Gain": {
+     "display": 6
+    },
+    "Ceiling": {
+     "display": -1
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "standard",
+   "params": {
+    "Input Gain": {
+     "display": 6
+    },
+    "Ceiling": {
+     "display": -1
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "soft-clip",
+   "params": {
+    "Input Gain": {
+     "display": 6
+    },
+    "Ceiling": {
+     "display": -1
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Soft Clip"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "true-peak",
+   "params": {
+    "Input Gain": {
+     "display": 6
+    },
+    "Ceiling": {
+     "display": -1
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "True Peak"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

@@ -88,3 +88,19 @@ RUNS = [
      "cases": [[m.lower().replace(" ", "-"), {"Mode": {"item": m}}] for m in ("Standard", "Soft Clip", "True Peak")] +
               [["dry-under-ceiling", {"Ceiling": {"display": 0}, "Input Gain": {"display": -6}}]]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+# ---- fifth set (probe-fifth): a sine at a quarter of the sample rate has its reconstructed peak 3 dB
+# over its sample peaks when its phase is 45 degrees
+RUNS += [
+    {"name": "limiter-fs4-45", "plan": "11", "probe": "fifth", "read": ["fifth: fs4_p0, fs4_p45 (sample and reconstructed peaks)"], "priority": 2,
+     "why": "Standard looks at the sample peaks and True Peak at the reconstructed ones: the 45 degree tone at fs/4 is the case where they differ by 3 dB (the 0 degree tone is the control)",
+     "question": "sample and reconstructed peaks of the fs/4 sines (-6 dBFS reconstructed peak, -9 dBFS sample peak at 45 degrees) at Input Gain +6 dB, Ceiling -1 dB, each Mode",
+     "base": _base("limiter-ceiling-modes"),
+     "cases": [["standard", {"Mode": {"item": "Standard"}}], ["soft-clip", {"Mode": {"item": "Soft Clip"}}],
+               ["true-peak", {"Mode": {"item": "True Peak"}}]]},
+]

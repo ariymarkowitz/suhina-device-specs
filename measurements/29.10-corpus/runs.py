@@ -162,3 +162,44 @@ RUNS = [
                                   "@SideChain/RoutedInput/Routable/Target": {"midi": {"name": "corpus-short", "length": 72, "notes": [
                                       [57, 0, 1.5, 100], [60, 61, 8, 100], [64, 63, 4, 100]]}}}] for d in (0, 50, 100)]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+def _case(run, case):
+    return next(c for r in RUNS if r["name"] == run for c in r["cases"] if c[0] == case)[1]
+
+
+# ---- fifth set: Tune against the display at more values and the dependence of the offset on other
+# settings; the LFO read from a steady tone (the resonator's partial crosses the tone twice per cycle)
+_STEADY = dict(_base("corpus-lfo"), **{"Resonance Type": {"item": "String"}, "Tune": {"display": 1000}, "Decay": {"display": 0.5},
+                                        "LFO Amount": {"display": 25}, "Phase": {"display": 180}})
+_TUNE = dict(_base("corpus-tune-types"), **{"Resonance Type": {"item": "String"}})
+
+RUNS += [
+    {"name": "corpus-tune-sweep", "plan": "3", "probe": "gap2", "read": ["impulse (partials)"], "priority": 2,
+     "why": "the audio is 19 to 28 cents sharp at every Tune but the default, for every type: the offset against Tune at 13 values, and whether it depends on Decay, Quality, Brightness or Material",
+     "question": "String's fundamental at Tune 55 to 2093 Hz (13 values); at Tune 523.25 Hz with Decay 0.2 and 3 s, Quality Eco, Low and Med, Brightness +100 % and Material +100 %",
+     "base": _TUNE,
+     "cases": [[f"tune-{t}", {"Tune": {"display": t}}] for t in (55, 82.41, 110, 146.83, 196, 329.63, 440, 523.25, 698.46, 880, 1174.66, 1568, 2093)] +
+              [["t523-decay0.2", {"Tune": {"display": 523.25}, "Decay": {"display": 0.2}}],
+               ["t523-decay3", {"Tune": {"display": 523.25}, "Decay": {"display": 3}}],
+               ["t523-eco", {"Tune": {"display": 523.25}, "Resonator Quality": {"item": "Eco"}}],
+               ["t523-low", {"Tune": {"display": 523.25}, "Resonator Quality": {"item": "Low"}}],
+               ["t523-med", {"Tune": {"display": 523.25}, "Resonator Quality": {"item": "Med"}}],
+               ["t523-bright100", {"Tune": {"display": 523.25}, "Brightness": {"display": 100}}],
+               ["t523-material100", {"Tune": {"display": 523.25}, "Material": {"display": 100}}]]},
+
+    {"name": "corpus-lfo-steady", "plan": "12", "probe": "gap2", "read": ["raw render of the steady tone (envelope per channel)"], "priority": 2,
+     "why": "the LFO's rate range, the sync list, Phase, Spin and Offset were open: String at Tune 1000 Hz under the steady 1 kHz tone with the LFO swinging the resonator +-300 cents rings once at every crossing of the tone, so the crossing times give the LFO's rate and phase in each channel",
+     "question": "the envelope of the steady tone through String at Tune 1 kHz, Decay 0.5 s, LFO Amount 25 %: free Rate 0.5, 3, 7 and 10 Hz (1 Hz is the Phase default case); Phase 0, 90 and 270; Spin mode at Spin 25 and 50 %; sync with stored list index 6, 12 and 17, and 12 with Offset 90 and 180; Saw Down and Random Ramp at 1 Hz",
+     "base": _STEADY,
+     "cases": [[f"rate-{r}", {"LFO Rate": {"display": r}}] for r in (0.5, 3, 7, 10)] +
+              [[f"phase-{p}", {"Phase": {"display": p}}] for p in (0, 90, 270)] +
+              [[f"spin-{s}", {"LFO Stereo Mode": {"item": "Spin"}, "Spin": {"display": s}}] for s in (25, 50)] +
+              [[f"sync-{i}", {"LFO Sync": {"item": "Sync"}, "@LfoSyncRate": i}] for i in (6, 12, 17)] +
+              [[f"sync-12-offset{o}", {"LFO Sync": {"item": "Sync"}, "@LfoSyncRate": 12, "Offset": {"display": o}}] for o in (90, 180)] +
+              [["sawdown", {"LFO Shape": {"item": "SawDown"}}], ["random-ramp", {"LFO Shape": {"item": "Random Ramp"}}]]},
+]

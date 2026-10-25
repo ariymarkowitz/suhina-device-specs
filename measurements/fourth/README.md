@@ -51,7 +51,8 @@ Phaser-Flanger, whose notes keep the run beside the third-set run it repeats).
 
 ## Left open
 
-The rule for the Vocoder's parked pitch (a sequence of tones with silence between them and the same
-tone after different histories would separate a hold from a fixed value), Mod Rate's unit in Hz and in
-Granular, the Delay's ramped time (`delay-time-ramp-noise`) and the other points listed in
-[`../third/README.md`](../third/README.md) › Settings that did not read, and what is open.
+The rule for the Vocoder's parked pitch, Mod Rate's unit in Hz and in Granular, the Delay's ramped time
+(`delay-time-ramp-noise`) and the other points listed in
+[`../third/README.md`](../third/README.md) › Settings that did not read, and what is open, were all taken
+up in the fifth set ([`../fifth/README.md`](../fifth/README.md)): the Vocoder's oscillator keeps its last
+tracked pitch at the loaded limits, Mod Rate is Rate / 3 Hz in Chorus, and the Delay's ramp is read.

@@ -161,7 +161,7 @@ RUNS = [
                            "L Time": {"auto": [[0, {"display": 0.1}], [64, {"display": 0.1}], [64, {"display": 0.2}]]}}),
      "cases": [[s.lower(), {"Smoothing": {"item": s}}] for s in ("Repitch", "Fade", "Jump")]},
 
-    # ---- candidate after the fourth set: the lane's step was taken at once and the same in all three modes
+    # ---- fifth set: the lane's step was taken at once and the same in all three modes, so a ramp
     {"name": "delay-time-ramp-noise", "plan": "7", "probe": "gap2", "read": ["raw render around the ramp (pitch, crossfade, discontinuity)"], "priority": 2,
      "why": "delay-time-jump-noise found a lane's step sample-exact and identical in Repitch, Fade and Jump; a ramp is a gradual change, which is what Repitch would glide over and Fade would crossfade through",
      "question": "the noise's echo while L Time ramps from 100 to 200 ms over the 2.75 s from beat 64 (32 s) to beat 69.5, each Smoothing: the local delay against time, any glide, crossfade or repeated sections",

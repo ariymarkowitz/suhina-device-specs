@@ -1,0 +1,28 @@
+{
+ "set": "fifth-wide.als",
+ "groups": {
+  "gap2": {
+   "export": "fifth-wide",
+   "offset_samples": 0,
+   "bypass_renders": 1,
+   "bypass_disagreeing": {}
+  }
+ },
+ "runs": {
+  "shifter-wide-spread": {
+   "bypass": "measurements/29.35-shifter/live/shifter-wide-spread bypass.json",
+   "default": "measurements/29.35-shifter/live/shifter-wide-spread default.json",
+   "pitch-fine+25": "measurements/29.35-shifter/live/shifter-wide-spread pitch-fine+25.json",
+   "pitch-fine+50": "measurements/29.35-shifter/live/shifter-wide-spread pitch-fine+50.json",
+   "pitch-fine+100": "measurements/29.35-shifter/live/shifter-wide-spread pitch-fine+100.json",
+   "pitch-fine-100": "measurements/29.35-shifter/live/shifter-wide-spread pitch-fine-100.json",
+   "pitch7-fine50": "measurements/29.35-shifter/live/shifter-wide-spread pitch7-fine50.json",
+   "pitch-fine100-nowide": "measurements/29.35-shifter/live/shifter-wide-spread pitch-fine100-nowide.json",
+   "freq-fine62.5": "measurements/29.35-shifter/live/shifter-wide-spread freq-fine62.5.json",
+   "freq-fine-500": "measurements/29.35-shifter/live/shifter-wide-spread freq-fine-500.json",
+   "freq100-fine62.5": "measurements/29.35-shifter/live/shifter-wide-spread freq100-fine62.5.json",
+   "freq-fine62.5-nowide": "measurements/29.35-shifter/live/shifter-wide-spread freq-fine62.5-nowide.json",
+   "ring-fine10": "measurements/29.35-shifter/live/shifter-wide-spread ring-fine10.json"
+  }
+ }
+}

@@ -338,6 +338,12 @@ $PY tools/harness/batch.py summary measurements/top100/selection.json [run ...]
 - **Fourth set** (`measurements/fourth/README.md`): the eight candidate runs left open by the third set,
   45 cases on 40 tracks in one set, rendered by Live 12.4.7 with every track exported at once at 60
   bars (`analyse --trim` cut each probe group back); `verify` matched all 45 cases.
+- **Fifth set** (`measurements/fifth/README.md`): the 15 runs still open after the fourth set, 162 cases
+  on 151 tracks, on three probes (the main one, the extended one and the new `measurements/probe-fifth/`
+  made by `signals.py --kind fifth`: fs/4 sines at 0 and 45 degrees, 20 Hz and 5 kHz staircases and a
+  sequence of tones for the Vocoder); State and parameter lanes (`{"auto": [...]}`) drive the Looper and the
+  Delay's time. `verify` matched all 162 cases. A sixteenth run, the Shifter's Wide and Spread, is its own
+  small set (`measurements/fifth-wide/`, 13 tracks).
 
 ## 3. Compare an implementation with Live
 

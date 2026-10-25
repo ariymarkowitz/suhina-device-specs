@@ -143,3 +143,18 @@ RUNS = [
                                 "S/C EQ Freq": {"display": 1000}, "S/C EQ Q": {"display": q}, "S/C EQ Gain": g}]
                for n, t, q, g in (("bell", "Bell", 2, 12), ("lp", "Low pass", 0.71, 0), ("hp", "High pass", 0.71, 0))]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+# ---- fifth set: a test that clips (the third set's compressed tones never reached the clipper)
+RUNS += [
+    {"name": "glue-oversample-clip", "plan": "10", "probe": "ext", "read": ["ext: tone10k, tone15k peaks", "impulse"], "priority": 2,
+     "why": "Oversample did not change the aliasing of tones the compressor held under the clip; with Peak Clip In and a Makeup that drives the tones into it, the oversampling should show",
+     "question": "spectral lines of the 10 and 15 kHz sines (-6 and -6 dBFS) with no compression (Threshold 0, Range 0 dB), Peak Clip In on and Output +6 and +12 dB, Oversample off and on",
+     "base": _base("glue-softclip"),
+     "cases": [[f"clip-mk{mk}-os{'on' if os_ else 'off'}", {"Peak Clip In": {"item": "On"}, "Output": {"display": mk}, "@Oversample": os_}]
+               for mk in (6, 12) for os_ in (False, True)]},
+]

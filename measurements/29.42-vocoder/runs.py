@@ -139,3 +139,24 @@ RUNS = [
      "cases": [["limits-wide", {"Lower Pitch Detection": {"display": 30}, "Upper Pitch Detection": {"display": 3000}}],
                ["limits-mid", {"Lower Pitch Detection": {"display": 200}, "Upper Pitch Detection": {"display": 800}}]]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+def _case(run, case):
+    return next(c for r in RUNS if r["name"] == run for c in r["cases"] if c[0] == case)[1]
+
+
+# ---- fifth set (probe-fifth): the oscillator's rest value outside the Pitch Tracking limits, after
+# silence and after a tracked tone
+RUNS += [
+    {"name": "vocoder-pitch-rest", "plan": "8", "probe": "fifth", "read": ["fifth: vocseq (output pitch per tone)"], "priority": 2,
+     "why": "the fourth set found the oscillator parked at 215.7, 415.4 or 100.4 Hz outside the limits; a sequence of tones with silences and without, in range and out, shows whether it is a hold of the last tracked pitch or a fixed value",
+     "question": "output pitch for each tone of the sequence (220, 1760, 330, 1760 straight after, 1760, 40, 110, 40 straight after, 3000 sine, 150, 3000 sine straight after; silences between) at the loaded limits 80 to 500 Hz, 30 to 3000 Hz and 200 to 800 Hz",
+     "base": _base("vocoder-pitch-limits"),
+     "cases": [["limits-loaded", {}],
+               ["limits-wide", {"Lower Pitch Detection": {"display": 30}, "Upper Pitch Detection": {"display": 3000}}],
+               ["limits-mid", {"Lower Pitch Detection": {"display": 200}, "Upper Pitch Detection": {"display": 800}}]]},
+]

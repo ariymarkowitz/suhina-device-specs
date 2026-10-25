@@ -100,3 +100,18 @@ RUNS = [
      "cases": [["type-switch", {"Type": {"auto": [[0, {"item": "Overdrive"}], [46, {"item": "Distortion"}], [52, {"item": "Fuzz"}]]}}],
                ["midfreq-switch", {"Mid Freq": {"auto": [[0, {"item": "Low"}], [46, {"item": "High"}]]}}]]},
 ]
+
+
+def _base(name):
+    return next(r for r in RUNS if r["name"] == name)["base"]
+
+
+# ---- fifth set (probe-fifth): the 20 Hz and 5 kHz staircases
+RUNS += [
+    {"name": "pedal-low-high-stairs", "plan": "1", "probe": "fifth", "read": ["fifth: stair20, stair5k (level and harmonics per step)"], "priority": 2,
+     "why": "the 100 Hz staircase, the 50 Hz, 20 Hz and 1 Hz sines and the 3 kHz sine were read; the 20 Hz staircase (the high-pass in front of the clipper at every level) and the 5 kHz staircase were not",
+     "question": "level and distortion per step of the 20 Hz and 5 kHz staircases for each type at Gain 0, 50 and 100 %",
+     "base": _base("pedal-curves-low-high"),
+     "cases": [[f"{t}-{g}", {"Type": {"item": t_}, "Drive": {"display": g}}]
+               for t, t_ in (("over", "Overdrive"), ("dist", "Distortion"), ("fuzz", "Fuzz")) for g in (0, 50, 100)]},
+]

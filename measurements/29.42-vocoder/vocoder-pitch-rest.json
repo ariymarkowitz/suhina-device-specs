@@ -1,0 +1,94 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-pitch-rest",
+ "question": "output pitch for each tone of the sequence (220, 1760, 330, 1760 straight after, 1760, 40, 110, 40 straight after, 3000 sine, 150, 3000 sine straight after; silences between) at the loaded limits 80 to 500 Hz, 30 to 3000 Hz and 200 to 800 Hz",
+ "plan": "8",
+ "read": [
+  "fifth: vocseq (output pitch per tone)"
+ ],
+ "probe": "measurements/probe-fifth/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3
+   }
+  },
+  {
+   "id": "limits-loaded",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3
+   }
+  },
+  {
+   "id": "limits-wide",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3,
+    "Lower Pitch Detection": {
+     "display": 30
+    },
+    "Upper Pitch Detection": {
+     "display": 3000
+    }
+   }
+  },
+  {
+   "id": "limits-mid",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3,
+    "Lower Pitch Detection": {
+     "display": 200
+    },
+    "Upper Pitch Detection": {
+     "display": 800
+    }
+   }
+  }
+ ]
+}

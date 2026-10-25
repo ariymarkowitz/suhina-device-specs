@@ -156,4 +156,11 @@ sines and pulses to modulation traces).
 - **Not set up**: Shifter's Spread, Roar's other matrix cells, Pedal's 20 Hz staircase.
 
 The eight candidate runs of this list were run as the fourth set
-([`../fourth/README.md`](../fourth/README.md)).
+([`../fourth/README.md`](../fourth/README.md)). Every item still open after that was taken up in the
+fifth set ([`../fifth/README.md`](../fifth/README.md)): the Looper's Feedback law and fades (the 0.95
+is a low-pass on every write, the 0.42 most probably an edge crossfade), Delay's and Filter Delay's
+ramped time and Fade and Jump modes, Glue's Oversample with a clipping tone (2x), Limiter's fs/4 at 45
+degrees, Corpus's Tune offset curve and LFO details, Spectral Resonator's Mod Rate in Hz and Granular,
+Spectral Time's AvoidFreezingOnsets with a reference, the Vocoder's parked pitch (a hold at the loaded
+limits), Shifter's Spread (the Fine knob with Wide on), Spin and Offset, Roar's matrix cells and Pedal's
+20 Hz and 5 kHz staircases.
