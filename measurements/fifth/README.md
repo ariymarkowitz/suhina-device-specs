@@ -85,8 +85,10 @@ twelve device notes** (each note's Measured › Fifth set).
   sustained one and an impulse is not captured.
 - **Shifter**: with Wide on the Fine knob is Spread: left Coarse + Fine, right Coarse - Fine, in cents and in
   Hz, in all three modes. Spin still does nothing; Offset shifts a synced LFO, Phase is right minus left.
-- **Roar**: Input, Dry/Wet, Stage 1 Amount, Trim and Frequency respond to a matrix cell; Blend, Feedback
-  Amount and Morph show nothing in Single; Global Mod Amt scales every cell linearly.
+- **Roar**: Input, Dry/Wet, Stage 1 Amount, Trim and Frequency respond to a matrix cell; Global Mod Amt scales
+  every cell linearly. Blend (not in Single), Feedback Amount (the user sees it act in Single) and the
+  filter Morph (left at 0, where both ends are Low Pass) gave nothing, which is a flaw of the cases, not a
+  finding.
 - **Pedal**: at 20 Hz each circuit is linear below its knee and its gain is far under the 1 kHz one; at 5 kHz
   Distortion and Fuzz at Gain 100 % are saturated from the first step.
 
@@ -101,10 +103,10 @@ twelve device notes** (each note's Measured › Fifth set).
   its listed value), Duty Cycle and the sign of the Phase and Offset shifts.
 - **Vocoder**: the rule at 200 to 800 Hz and at the Upper limit, and the tracker's latency.
 - **Spectral Resonator**: the grain envelope and Pitch Mod 2 and 4 st in each mode.
-- **Shifter**: why Spin does nothing (the Phase / Spin switch may need a state a stored element does not
-  set), and Width.
-- **Roar**: cells below 1, negative cells, the other stages' targets, and Blend and Feedback Amount in a
-  routing that uses them.
+- **Shifter**: Width. Spin does nothing in the render and in the user's hands in Live 12.4.7, so it is
+  probably a bug there.
+- **Roar**: Feedback Amount and the filter Morph again (Morph knob in the middle, Feedback Amount at 50 %),
+  Blend in a two-stage routing, cells below 1, negative cells and the other stages' targets.
 - **Pedal**: Gain 25 and 75 % and 10 dB steps at the two frequencies.
 - the points listed in [`../third/README.md`](../third/README.md) › Settings that did not read, and what is
   open, that are not named above.
