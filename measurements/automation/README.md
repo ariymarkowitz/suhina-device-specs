@@ -21,6 +21,16 @@ a jump (two points at one beat).
 | `curve-drag` | Utility's Gain | 14 starting curves in 4 copies, each copy Alt-dragged by hand by a different amount | Bounce, 88.2 kHz |
 | `curve-drag-lopsided` | Utility's Gain | 12 lopsided S curves and curves that cross the diagonal in 4 copies; copy 4 dragged twice the same way | Bounce, 88.2 kHz |
 
+`kinds/` holds a different sort of run: lanes on an integer, a frequency, a choice and a toggle,
+built as files by `make_als.py build` (a point may carry the Bezier controls of the segment that
+starts at it), read by moving the playhead to each beat of a grid with playback stopped and asking
+the Remote Script for the parameter (`poll.py`), and compared by `analyse.py`. No render is made.
+
+| Set | Lanes | Poll |
+|---|---|---|
+| `kinds/kinds.als` (from `resonators.json`, `eq-eight.json`, `auto-pan.json`) | Resonators I Note (straight, two bends, three short ones), I On (up, down); EQ Eight 3 Frequency A (straight, two bends); Auto Pan Waveform (three) | `live/kinds.poll.json`, 273 beats of 0.125, about 15 minutes |
+| `kinds/kinds-negative.als` (from `corpus.json`) | Corpus Transpose 3 to -3 and back over 12 beats | `live/kinds-negative.poll.json` |
+
 A Bounce renders the track before its mixer, so the track volume run was recorded instead: the
 Operator track routed into a second audio track's input and recorded there.
 

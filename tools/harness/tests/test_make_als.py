@@ -439,8 +439,8 @@ class FromLiveSets(unittest.TestCase):
             with open(src, "w") as f:
                 json.dump({"device": "Compressor", "cases": [
                     {"id": "a", "params": {"@Live8LegacyMode": True, "@RmsTimeShort": 12}},
-                    {"id": "b", "params": {"Threshold": {"auto": [[0, {"display": -20}], [8, {"display": -20}],
-                                                                  [8, {"display": -40}]]},
+                    {"id": "b", "params": {"Threshold": {"auto": [[0, {"display": -20}, [1, 0, 1, 0]],
+                                                                  [8, {"display": -20}], [8, {"display": -40}]]},
                                            "Model": {"auto": [[0, 1], [4, 2]]}}},
                     {"id": "c", "params": {"@Live8LegacyMode": True, "@RmsTimeShort": 12}}]}, f)
             out = os.path.join(tmp, "e.als")
@@ -468,6 +468,9 @@ class FromLiveSets(unittest.TestCase):
             self.assertEqual([e.tag for e in ev], ["FloatEvent"] * 4)
             self.assertEqual([e.get("Time") for e in ev], [make_als.BEFORE_SONG, "0", "8", "8"])
             self.assertAlmostEqual(float(ev[-1].get("Value")), 0.01, places=6)
+            # a point's third item bends the segment that starts at it, and only that one
+            self.assertEqual([e.get("CurveControl1X") for e in ev], [None, "1", None, None])
+            self.assertEqual([e.get("CurveControl2Y") for e in ev], [None, "0", None, None])
             model = byid[als.parameter(dev, "Model").find("AutomationTarget").get("Id")]
             self.assertEqual([e.tag for e in model.find("Automation/Events")], ["EnumEvent"] * 3)
 

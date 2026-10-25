@@ -60,7 +60,9 @@ Two more kinds of case entry reach what a static parameter value cannot:
 - **An automation lane**, `{"auto": [[beat, spec], ...]}`: the parameter follows the points
   (each spec as above) through the song, as an arrangement envelope on the case's track.
   Between points a float glides linearly and a stepped value holds; two points at one beat
-  make a jump. The device stores the first point's value, which is what `verify` expects (Live
+  make a jump. A point with a third item `[x1, y1, x2, y2]` bends the segment that starts at it
+  (Bezier control points in share of time and share of the way; Live's own pair for a bend
+  mirrors through the centre). The device stores the first point's value, which is what `verify` expects (Live
   shows the envelope's value at the start of the song). At 120 BPM a beat is 0.5 s of the probe.
 """
 
@@ -711,16 +713,20 @@ def is_auto(spec):
 
 
 def auto_points(item, dp, spec, rng=None):
-    """[(beat, API value or None, stored text)] for an automation spec, in time order."""
+    """[(beat, API value or None, stored text, curve or None)] for an automation spec, in time
+    order. A point may carry a third item, [x1, y1, x2, y2], the Bezier control points of the
+    segment that starts at it (Live stores them on the point)."""
     pts = spec["auto"]
     if not pts:
         raise ValueError("an automation lane needs at least one point")
     out = []
-    for t, s in pts:
+    for t, s, *bend in pts:
         if is_auto(s):
             raise ValueError("an automation point cannot itself be automated")
         v, text = stored_value(item, dp, s, rng)
-        out.append((float(t), v, text))
+        if bend and len(bend[0]) != 4:
+            raise ValueError("a point's curve is its two control points [x1, y1, x2, y2]")
+        out.append((float(t), v, text, tuple(float(c) for c in bend[0]) if bend else None))
     if any(b[0] < a[0] for a, b in zip(out, out[1:])):
         raise ValueError("automation points must be in time order")
     return out
@@ -728,7 +734,7 @@ def auto_points(item, dp, spec, rng=None):
 
 def write_envelope(track, element, kind, points):
     """Adds an arrangement envelope for the parameter `element` (already in the track) that
-    follows `points` [(beat, _, stored text)]."""
+    follows `points` [(beat, _, stored text, curve or None)]."""
     target = element.find("AutomationTarget").get("Id")
     holder = track.find("AutomationEnvelopes/Envelopes")
     if holder is None:
@@ -739,8 +745,11 @@ def write_envelope(track, element, kind, points):
     events = ET.SubElement(auto, "Events")
     tag = EVENTS[kind]
     ET.SubElement(events, tag, Id="0", Time=BEFORE_SONG, Value=points[0][2])
-    for i, (t, _, text) in enumerate(points, 1):
-        ET.SubElement(events, tag, Id=str(i), Time=format(t, ".10g"), Value=text)
+    for i, (t, _, text, bend) in enumerate(points, 1):
+        ev = ET.SubElement(events, tag, Id=str(i), Time=format(t, ".10g"), Value=text)
+        if bend:
+            for name, c in zip(("CurveControl1X", "CurveControl1Y", "CurveControl2X", "CurveControl2Y"), bend):
+                ev.set(name, format(c, ".10g"))
     view = ET.SubElement(auto, "AutomationTransformViewState")
     ET.SubElement(view, "IsTransformPending", Value="false")
     ET.SubElement(view, "TimeAndValueTransforms")
@@ -857,7 +866,7 @@ def cmd_build(a):
                     # the API value is only known to within the samples the display was read at
                     rec["params"][name]["tol"] = 1.0 / (len(dp["samples"]) - 1)
                 if pts:
-                    rec["params"][name]["auto"] = [[t, x, s] for t, x, s in pts]
+                    rec["params"][name]["auto"] = [[t, x, s] + ([list(c)] if c else []) for t, x, s, c in pts]
                     lanes.append((item["element"], item["kind"], pts))
             problems += len(rec["errors"])
             # the device's whole stored state and its lanes, so cases that differ only in how they

@@ -2,7 +2,7 @@
 
 How Live plays an arrangement automation lane: what a segment between two points moves along,
 the shape of a bent segment, the volume fader's taper and how a jump is smoothed. It holds for
-every parameter measured so far (four, on three devices and the mixer), so it is written once
+every parameter measured so far (the last section adds five of other kinds), so it is written once
 here; a device's note points here for the part that is its own (a taper, a smoothing time). It
 also says how Live's editor splits a bent segment and how dragging a curve reshapes it.
 
@@ -28,6 +28,13 @@ again are in [`measurements/automation/README.md`](../measurements/automation/RE
   opposite sides.
 - **Track volume** and **Operator's Volume** share one fader taper: even in dB at 40 dB per
   travel from -18 dB to +6 dB, 0 dB at 0.85 of the travel, falling faster below.
+- **An integer parameter drops the fraction toward zero.** The lane moves the value evenly in
+  position as for any other parameter; what the parameter takes is that value with its fraction
+  cut off: 36.98 gives 36, 0.94 gives 0, and -2.97 gives -2, so a lane through zero spends twice as
+  long on 0. It is not rounded.
+- **A frequency knob** follows the same rule (even in the knob's position, so a straight segment
+  is a straight line in log frequency). **A choice and a toggle hold**: the value changes at the
+  point and not before, whatever lies between the two values.
 - **A jump on a gain parameter is smoothed** by a fixed-time S-shaped ramp, even in position and
   centred on the jump: 4.3 to 4.4 ms for Utility's Gain and the track volume, about 8.7 ms for
   Operator's Volume. A pitch parameter (Operator's Fine) is not smoothed.
@@ -260,6 +267,62 @@ rms off its Bezier, but 0.11 dB rms off the Bezier averaged over 4 to 6 ms and 1
 box average and a smootherstep ramp fit alike). The jumps' ramps above are centred, not late; the
 delay is from this one segment [measure].
 
+## Other kinds of parameter
+
+Lanes on an integer, a frequency, a choice and a toggle, 14 lanes of 8 to 32 beats at 120 BPM
+(`measurements/automation/kinds/`: the set `kinds.als` from three cases files, plus
+`kinds-negative.als`). Unlike the sets above these were not rendered: the playhead was moved to
+each beat of a 0.125 grid with playback stopped and every track's automated parameter was read
+through the Remote Script (`poll.py`), so the values are the API values, and what the device does
+with them is not heard [measured 12.4.6]. `analyse.py` makes the comparisons below.
+
+**Integer** (Resonators I Note, 12 to 84; Corpus Transpose, -48 to 48). The
+lane's value moves along the segment as before, and the parameter reads that value with the
+fraction cut off, toward zero:
+
+| Lane | Samples | Floor | Toward zero | Round | Ceiling |
+|---|---|---|---|---|---|
+| I Note 36 to 72 over 32 beats, straight | 273 | 0 wrong | 0 | 128 | 252 |
+| I Note 40 to 41 over 8 beats | 273 | 0 | 0 | 32 | 63 |
+| I Note 41 to 40 over 8 beats | 273 | 0 | 0 | 32 | 63 |
+| I Note 40 to 40.5 over 8 beats | 273 | 0 | 0 | 209 | 272 |
+| I Note 36 to 72, extreme bend | 273 | 8 | 8 | 59 | 247 |
+| I Note 36 to 72, medium bend | 273 | 8 | 8 | 134 | 255 |
+| Corpus Transpose 3 to -3 over 12 beats | 105 | 45 | **0** | 45 | 45 |
+| Corpus Transpose -3 to 3 over 12 beats | 105 | 45 | **0** | 45 | 45 |
+
+- **Toward zero, not floor:** I Note is positive, so floor and truncation agree there, and only
+  Corpus Transpose tells them apart. Going from 3 to -3 it reads 2 from the first step (2.94), 0
+  from beat 4.125 (0.94) until beat 8 (-1.0), and -1 only at -1.0; going the other way it is the
+  mirror. A rounded or floored value would read 3 and -3 at the ends of the zero band, not 1 and
+  -1.
+- **Nothing is rounded to the nearest:** 40 to 41 over eight beats stays at 40 until the last
+  point, and 41 to 40 reads 40 from the first step; a value of 40.5 held at the end of a lane
+  (the lane file can hold it) reads 40.
+- **The bent lanes** differ in 8 samples each, all within 0.1 of a whole number, where the
+  Bezier of automation.md › Curve shapes puts a value a hair over the line that Live puts just
+  under. They are the size of the Bezier's own error (next point), not a different rule [inferred].
+- **The API says the parameter is not quantised:** I Note has `is_quantized` false and still
+  reads whole values while a lane moves it; the cut-off belongs to the parameter's integer
+  storage and not to its being a stepped control.
+
+**Frequency** (EQ Eight 3 Frequency A, 100 Hz to 10 kHz; its API value is the knob position
+0.299 to 0.898, 0.299 per decade). The lane stores Hz; the position moves in exact step with the
+share of the time (largest distance from a straight line 5e-8, 273 samples), so a straight lane
+is a straight line in log frequency, 0.0625 decades per beat, and not in Hz. The bends follow
+the Bezier in position to 0.0013 (medium) and 0.0094 (extreme) of the 0.598 span, the largest
+in the last half beat of the extreme bend where the curve is steepest [measured, fitted]. This
+agrees with the Summary: the segment moves evenly in the parameter's position, here with a
+logarithmic taper.
+
+**Choice and toggle** (Auto Pan Waveform, nine items; Resonators I On). A segment between two
+points is a hold: the value stays that of the first point until the second point's beat, where
+it changes. A segment from Sine (0) to S & H (8) over 32 beats reads 0 until beat 32 and then 8,
+never 1 to 7; with a point at Saw Up (3) at beat 16 it reads 0, 3 and 8, changing at beats 16
+and 32. Rising and falling segments are alike, a toggle changes at its point (beat 16 for both
+directions), and there is no ramp or smoothing to read in the 0.125-beat grid [measured, to
+0.125 beat].
+
 ## Open
 
 - Which way on the screen a curve drag moves a curve later, and how far the mouse moves per step
@@ -268,5 +331,11 @@ delay is from this one segment [measure].
   point is elsewhere [measure].
 - The smoothing of a mute, and of a gain parameter's continuous motion faster than its ramp time
   [measure].
-- Other parameter kinds: a frequency knob (logarithmic), a choice, a toggle [measure].
+- What an integer lane sounds like: the values above are read from the API, not rendered, so
+  whether the device's own code cuts a fractional value the same way is not heard, nor how fast it
+  changes between whole values [measure].
+- Whether the cut toward zero is done on the stored number or on the number shown, for an integer
+  parameter whose two differ (an index shown from 1, a note shown as a name) [measure].
+- A bent segment on a choice or toggle (the editor draws none), the smoothing of a toggle and a
+  frequency lane's motion faster than a gain's ramp [measure].
 - Whether a lane interpolates in position for every device, plug-ins included [measure].
