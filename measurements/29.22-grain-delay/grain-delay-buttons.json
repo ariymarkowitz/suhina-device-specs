@@ -1,0 +1,244 @@
+{
+ "device": "Grain Delay",
+ "parameter": "grain-delay-buttons",
+ "question": "echo time of the impulse for Beat Delay 2, 3, 5, 6, 8 and for 4 with Beat Swing -33.3 %",
+ "plan": "2",
+ "read": [
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Delay Mode": {
+     "item": "On"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    },
+    "Beat Swing": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "beat-2",
+   "params": {
+    "Delay Mode": {
+     "item": "On"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    },
+    "Beat Swing": {
+     "display": 0
+    },
+    "Beat Delay": {
+     "item": "2"
+    }
+   }
+  },
+  {
+   "id": "beat-3",
+   "params": {
+    "Delay Mode": {
+     "item": "On"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    },
+    "Beat Swing": {
+     "display": 0
+    },
+    "Beat Delay": {
+     "item": "3"
+    }
+   }
+  },
+  {
+   "id": "beat-5",
+   "params": {
+    "Delay Mode": {
+     "item": "On"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    },
+    "Beat Swing": {
+     "display": 0
+    },
+    "Beat Delay": {
+     "item": "5"
+    }
+   }
+  },
+  {
+   "id": "beat-6",
+   "params": {
+    "Delay Mode": {
+     "item": "On"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    },
+    "Beat Swing": {
+     "display": 0
+    },
+    "Beat Delay": {
+     "item": "6"
+    }
+   }
+  },
+  {
+   "id": "beat-8",
+   "params": {
+    "Delay Mode": {
+     "item": "On"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    },
+    "Beat Swing": {
+     "display": 0
+    },
+    "Beat Delay": {
+     "item": "8"
+    }
+   }
+  },
+  {
+   "id": "beat-4-swing-33",
+   "params": {
+    "Delay Mode": {
+     "item": "On"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    },
+    "Beat Swing": -0.333,
+    "Beat Delay": {
+     "item": "4"
+    }
+   }
+  }
+ ]
+}

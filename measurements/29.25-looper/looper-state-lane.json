@@ -1,0 +1,111 @@
+{
+ "device": "Looper",
+ "parameter": "looper-state-lane",
+ "question": "the render with State Record at beat 0.5 and Play at beat 4; then Record 0.5, Overdub 4, Play 8; Monitor Always",
+ "plan": "4, 9, 12",
+ "read": [
+  "impulse",
+  "raw render"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "rec-play",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Stop"
+       }
+      ],
+      [
+       0.5,
+       {
+        "item": "Record"
+       }
+      ],
+      [
+       4,
+       {
+        "item": "Play"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "rec-overdub-play",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Stop"
+       }
+      ],
+      [
+       0.5,
+       {
+        "item": "Record"
+       }
+      ],
+      [
+       4,
+       {
+        "item": "Overdub"
+       }
+      ],
+      [
+       8,
+       {
+        "item": "Play"
+       }
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

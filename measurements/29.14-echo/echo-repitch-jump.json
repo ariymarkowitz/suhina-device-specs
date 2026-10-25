@@ -1,0 +1,528 @@
+{
+ "device": "Echo",
+ "parameter": "echo-repitch-jump",
+ "question": "the steady tone's echo around L and R Time jumping from 100 to 200 ms at beat 46 (23 s): Repitch on at 400 and 100 ms, Repitch off",
+ "plan": "11",
+ "read": [
+  "raw render around the jump (pitch glide)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Link": {
+     "item": "On"
+    },
+    "Repitch": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.2
+       }
+      ]
+     ]
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Sync Mode": {
+     "item": "Synced"
+    },
+    "R Sync Mode": {
+     "item": "Synced"
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Clip Dry": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Gate On": {
+     "item": "Off"
+    },
+    "Duck On": {
+     "item": "Off"
+    },
+    "Noise On": {
+     "item": "Off"
+    },
+    "Wobble On": {
+     "item": "Off"
+    },
+    "Mod Sync": {
+     "item": "Off"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 90
+    },
+    "Dly < Mod": {
+     "display": 0
+    },
+    "Flt < Mod": {
+     "display": 0
+    },
+    "Mod 4x": {
+     "item": "Off"
+    },
+    "Env Mix": {
+     "display": 0
+    },
+    "Reverb Level": {
+     "display": 0
+    },
+    "Reverb Loc": {
+     "item": "Post"
+    },
+    "Reverb Decay": {
+     "display": 50
+    },
+    "Stereo Width": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "repitch-400",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Link": {
+     "item": "On"
+    },
+    "Repitch": {
+     "item": "On"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.2
+       }
+      ]
+     ]
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Sync Mode": {
+     "item": "Synced"
+    },
+    "R Sync Mode": {
+     "item": "Synced"
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Clip Dry": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Gate On": {
+     "item": "Off"
+    },
+    "Duck On": {
+     "item": "Off"
+    },
+    "Noise On": {
+     "item": "Off"
+    },
+    "Wobble On": {
+     "item": "Off"
+    },
+    "Mod Sync": {
+     "item": "Off"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 90
+    },
+    "Dly < Mod": {
+     "display": 0
+    },
+    "Flt < Mod": {
+     "display": 0
+    },
+    "Mod 4x": {
+     "item": "Off"
+    },
+    "Env Mix": {
+     "display": 0
+    },
+    "Reverb Level": {
+     "display": 0
+    },
+    "Reverb Loc": {
+     "item": "Post"
+    },
+    "Reverb Decay": {
+     "display": 50
+    },
+    "Stereo Width": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Repitch Smoothing Time": {
+     "display": 0.4
+    }
+   }
+  },
+  {
+   "id": "repitch-100",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Link": {
+     "item": "On"
+    },
+    "Repitch": {
+     "item": "On"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.2
+       }
+      ]
+     ]
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Sync Mode": {
+     "item": "Synced"
+    },
+    "R Sync Mode": {
+     "item": "Synced"
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Clip Dry": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Gate On": {
+     "item": "Off"
+    },
+    "Duck On": {
+     "item": "Off"
+    },
+    "Noise On": {
+     "item": "Off"
+    },
+    "Wobble On": {
+     "item": "Off"
+    },
+    "Mod Sync": {
+     "item": "Off"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 90
+    },
+    "Dly < Mod": {
+     "display": 0
+    },
+    "Flt < Mod": {
+     "display": 0
+    },
+    "Mod 4x": {
+     "item": "Off"
+    },
+    "Env Mix": {
+     "display": 0
+    },
+    "Reverb Level": {
+     "display": 0
+    },
+    "Reverb Loc": {
+     "item": "Post"
+    },
+    "Reverb Decay": {
+     "display": 50
+    },
+    "Stereo Width": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Repitch Smoothing Time": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "repitch-off",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Link": {
+     "item": "On"
+    },
+    "Repitch": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.2
+       }
+      ]
+     ]
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Sync Mode": {
+     "item": "Synced"
+    },
+    "R Sync Mode": {
+     "item": "Synced"
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Clip Dry": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Gate On": {
+     "item": "Off"
+    },
+    "Duck On": {
+     "item": "Off"
+    },
+    "Noise On": {
+     "item": "Off"
+    },
+    "Wobble On": {
+     "item": "Off"
+    },
+    "Mod Sync": {
+     "item": "Off"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 90
+    },
+    "Dly < Mod": {
+     "display": 0
+    },
+    "Flt < Mod": {
+     "display": 0
+    },
+    "Mod 4x": {
+     "item": "Off"
+    },
+    "Env Mix": {
+     "display": 0
+    },
+    "Reverb Level": {
+     "display": 0
+    },
+    "Reverb Loc": {
+     "item": "Post"
+    },
+    "Reverb Decay": {
+     "display": 50
+    },
+    "Stereo Width": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,547 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-sidechain",
+ "question": "the steady tone under key-duck's bursts, Threshold -30, ratio 10, Peak: S/C Gain 0, +12, -12 dB, S/C Mix 50 %, Makeup on; with Listen on, the key sweep through S/C EQ off, Bell 1 kHz +12 dB Q 2, Low pass 1 kHz, High pass 1 kHz, Low Shelf 200 Hz -12 dB, High Shelf 5 kHz +12 dB, Peak 1 kHz",
+ "plan": "10, 13",
+ "read": [
+  "modulation (steady tone under the key bursts)",
+  "response (Listen)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"
+   }
+  },
+  {
+   "id": "sc-gain+12",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    },
+    "S/C Gain": {
+     "display": 12
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"
+   }
+  },
+  {
+   "id": "sc-gain-12",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    },
+    "S/C Gain": {
+     "display": -12
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"
+   }
+  },
+  {
+   "id": "sc-mix-50",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 50
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"
+   }
+  },
+  {
+   "id": "sc-makeup",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "Makeup": {
+     "item": "On"
+    }
+   }
+  },
+  {
+   "id": "listen-eq-off",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "S/C Listen": {
+     "item": "On"
+    }
+   }
+  },
+  {
+   "id": "listen-bell",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "On"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "S/C Listen": {
+     "item": "On"
+    },
+    "S/C EQ Type": {
+     "item": "Bell"
+    },
+    "S/C EQ Freq": {
+     "display": 1000
+    },
+    "S/C EQ Q": {
+     "display": 2
+    },
+    "S/C EQ Gain": 12
+   }
+  },
+  {
+   "id": "listen-lp",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "On"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "S/C Listen": {
+     "item": "On"
+    },
+    "S/C EQ Type": {
+     "item": "Low pass"
+    },
+    "S/C EQ Freq": {
+     "display": 1000
+    },
+    "S/C EQ Q": {
+     "display": 0.71
+    },
+    "S/C EQ Gain": 0
+   }
+  },
+  {
+   "id": "listen-hp",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "On"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "S/C Listen": {
+     "item": "On"
+    },
+    "S/C EQ Type": {
+     "item": "High pass"
+    },
+    "S/C EQ Freq": {
+     "display": 1000
+    },
+    "S/C EQ Q": {
+     "display": 0.71
+    },
+    "S/C EQ Gain": 0
+   }
+  },
+  {
+   "id": "listen-lowshelf",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "On"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "S/C Listen": {
+     "item": "On"
+    },
+    "S/C EQ Type": {
+     "item": "Low Shelf"
+    },
+    "S/C EQ Freq": {
+     "display": 200
+    },
+    "S/C EQ Q": {
+     "display": 0.71
+    },
+    "S/C EQ Gain": -12
+   }
+  },
+  {
+   "id": "listen-highshelf",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "On"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "S/C Listen": {
+     "item": "On"
+    },
+    "S/C EQ Type": {
+     "item": "High Shelf"
+    },
+    "S/C EQ Freq": {
+     "display": 5000
+    },
+    "S/C EQ Q": {
+     "display": 0.71
+    },
+    "S/C EQ Gain": 12
+   }
+  },
+  {
+   "id": "listen-peak",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -30
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C On": {
+     "item": "On"
+    },
+    "S/C EQ On": {
+     "item": "On"
+    },
+    "S/C Gain": {
+     "display": 0
+    },
+    "S/C Mix": {
+     "display": 100
+    },
+    "@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav",
+    "S/C Listen": {
+     "item": "On"
+    },
+    "S/C EQ Type": {
+     "item": "Peak"
+    },
+    "S/C EQ Freq": {
+     "display": 1000
+    },
+    "S/C EQ Q": {
+     "display": 2
+    },
+    "S/C EQ Gain": 0
+   }
+  }
+ ]
+}

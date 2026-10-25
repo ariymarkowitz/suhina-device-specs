@@ -1,0 +1,153 @@
+{
+ "device": "Gate",
+ "parameter": "gate-detector-retrigger",
+ "question": "which of the 1 to 300 ms bursts at -6 dBFS open the gate at Threshold -9 and -12 dB; with Release 1.5 s the second burst during the release (Attack 0.02 and 20 ms)",
+ "plan": "6, 9",
+ "read": [
+  "ext: shortbursts, impulsetrain, bedbursts"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Threshold": {
+     "display": -18
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "thr-9",
+   "params": {
+    "Threshold": {
+     "display": -9
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "thr-12",
+   "params": {
+    "Threshold": {
+     "display": -12
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.0001
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "release-1.5-fast",
+   "params": {
+    "Threshold": {
+     "display": -12
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 2e-05
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 1.5
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  },
+  {
+   "id": "release-1.5-attack20",
+   "params": {
+    "Threshold": {
+     "display": -12
+    },
+    "Return": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.02
+    },
+    "Hold": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 1.5
+    },
+    "Floor": -75,
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "FlipMode": {
+     "item": "Normal"
+    }
+   }
+  }
+ ]
+}

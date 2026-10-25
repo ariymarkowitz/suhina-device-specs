@@ -1,0 +1,71 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-enhance-saw",
+ "question": "the probe through the 110 Hz saw carrier with Enhance off and on",
+ "plan": "9",
+ "read": [
+  "noise",
+  "steady (spectrum)",
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 1,
+    "@CarrierSource/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-saw.wav"
+   }
+  },
+  {
+   "id": "enhance-off",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 1,
+    "@CarrierSource/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-saw.wav"
+   }
+  },
+  {
+   "id": "enhance-on",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 1,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 1,
+    "@CarrierSource/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-saw.wav"
+   }
+  }
+ ]
+}

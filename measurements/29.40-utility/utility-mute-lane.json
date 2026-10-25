@@ -1,0 +1,76 @@
+{
+ "device": "Utility",
+ "parameter": "utility-mute-lane",
+ "question": "the steady tone around Mute on at beat 44 (22 s) and off at beat 46 (23 s); the staircase around a Gain jump from 0 to -12 dB at beat 22",
+ "plan": "10",
+ "read": [
+  "raw render around the jumps"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {}
+  },
+  {
+   "id": "mute",
+   "params": {
+    "Mute": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Off"
+       }
+      ],
+      [
+       44,
+       {
+        "item": "On"
+       }
+      ],
+      [
+       46,
+       {
+        "item": "Off"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "gain-jump",
+   "params": {
+    "Output": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0
+       }
+      ],
+      [
+       22,
+       {
+        "display": 0
+       }
+      ],
+      [
+       22,
+       {
+        "display": -12
+       }
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,742 @@
+{
+ "device": "Auto Filter",
+ "parameter": "autofilter-morph-dj-comb",
+ "question": "sweep response at Freq 1 kHz, Res 30 %: Morph 0, 25, 75, 100 % (24 dB) and Morph 50 % at 6, 12, 48 dB; DJ Control -100, -50, 50 %; Comb Morph 0 and 100 %; Vowel Formant 0, 25, 75, 100 %; Vowel at Pitch +12 and -12",
+ "plan": "2",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "morph-0",
+   "params": {
+    "Filter Type": {
+     "item": "Morph"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "morph-25",
+   "params": {
+    "Filter Type": {
+     "item": "Morph"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 25
+    }
+   }
+  },
+  {
+   "id": "morph-75",
+   "params": {
+    "Filter Type": {
+     "item": "Morph"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 75
+    }
+   }
+  },
+  {
+   "id": "morph-100",
+   "params": {
+    "Filter Type": {
+     "item": "Morph"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "morph50-6dB",
+   "params": {
+    "Filter Type": {
+     "item": "Morph"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 50
+    },
+    "Morph Slope": {
+     "item": "6dB"
+    }
+   }
+  },
+  {
+   "id": "morph50-12dB",
+   "params": {
+    "Filter Type": {
+     "item": "Morph"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 50
+    },
+    "Morph Slope": {
+     "item": "12dB"
+    }
+   }
+  },
+  {
+   "id": "morph50-48dB",
+   "params": {
+    "Filter Type": {
+     "item": "Morph"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 50
+    },
+    "Morph Slope": {
+     "item": "48dB"
+    }
+   }
+  },
+  {
+   "id": "dj-100",
+   "params": {
+    "Filter Type": {
+     "item": "DJ"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Control": {
+     "display": -100
+    }
+   }
+  },
+  {
+   "id": "dj-50",
+   "params": {
+    "Filter Type": {
+     "item": "DJ"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Control": {
+     "display": -50
+    }
+   }
+  },
+  {
+   "id": "dj+50",
+   "params": {
+    "Filter Type": {
+     "item": "DJ"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Control": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "comb-morph-0",
+   "params": {
+    "Filter Type": {
+     "item": "Comb"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "comb-morph-100",
+   "params": {
+    "Filter Type": {
+     "item": "Comb"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter Morph": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "vowel-formant-0",
+   "params": {
+    "Filter Type": {
+     "item": "Vowel"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Formant": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "vowel-formant-25",
+   "params": {
+    "Filter Type": {
+     "item": "Vowel"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Formant": {
+     "display": 25
+    }
+   }
+  },
+  {
+   "id": "vowel-formant-75",
+   "params": {
+    "Filter Type": {
+     "item": "Vowel"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Formant": {
+     "display": 75
+    }
+   }
+  },
+  {
+   "id": "vowel-formant-100",
+   "params": {
+    "Filter Type": {
+     "item": "Vowel"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Formant": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "vowel-pitch+12",
+   "params": {
+    "Filter Type": {
+     "item": "Vowel"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pitch": 12
+   }
+  },
+  {
+   "id": "vowel-pitch-12",
+   "params": {
+    "Filter Type": {
+     "item": "Vowel"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 30
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pitch": -12
+   }
+  }
+ ]
+}

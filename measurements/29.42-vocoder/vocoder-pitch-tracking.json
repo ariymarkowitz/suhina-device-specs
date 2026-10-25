@@ -1,0 +1,108 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-pitch-tracking",
+ "question": "output pitch for the glide, the 150 Hz saw and the 50 Hz and 3 kHz tones: Saw, Pulse10, Pulse25, Pulse48; Oscillator Pitch +12",
+ "plan": "8",
+ "read": [
+  "ext: glide, saw, tone50, tone3k (output pitch)"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3
+   }
+  },
+  {
+   "id": "wave-pulse10",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3,
+    "Oscillator Waveform": {
+     "item": "Pulse10"
+    }
+   }
+  },
+  {
+   "id": "wave-pulse25",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3,
+    "Oscillator Waveform": {
+     "item": "Pulse25"
+    }
+   }
+  },
+  {
+   "id": "wave-pulse48",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3,
+    "Oscillator Waveform": {
+     "item": "Pulse48"
+    }
+   }
+  },
+  {
+   "id": "pitch+12",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3,
+    "Oscillator Pitch": 12
+   }
+  }
+ ]
+}

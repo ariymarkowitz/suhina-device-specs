@@ -164,14 +164,14 @@ on/off with a glide time of 0.01 – 1 s in its Max wrapper [source: 1].
   - Not measured: Auto Filter, Auto Pan-Tremolo, Beat Repeat, Filter Delay, Limiter, Looper, Multiband Dynamics, Gate and Resonators (several have no wet/dry
     knob of their own); Erosion, Utility and the EQs have none.
 - Delay and Echo have a **Dry/Wet Equal-Loudness** option (context menu; `drywetmode` 0 linear,
-  1 equal-loudness in the wrapper) [manual; source: 1].
+  1 equal-loudness in the wrapper) [manual; source: 1]. It is the stored `DryWetMode`: at 50 % the taps are 0.5 and 0.5 for 0 and 0.707 and 0.707 for 1 in both devices. Delay's loaded set has 1 (so the S-shaped law above is its Equal-Loudness law), Echo's has 0 (so its tables are linear) [measured 12.4.7].
 - Dry/Wet sits at the output in Compressor, Glue Compressor and Drum Buss. In Multiband Dynamics
   and Gate the only Dry/Wet is the side-chain one, which blends detector sources [manual].
 - Erosion, Vinyl Distortion and Dynamic Tube have no Dry/Wet in the manual; in Vinyl Distortion
   the global Drive acts as the wet amount [manual].
 - To measure a new device: render an impulse and a 1 kHz tone at 0, 25, 50, 75 and 100 %; read the taps and gains
   of the dry and the wet part and compare them with the families above. Equal-Loudness in Delay and Echo
-  changes the law, which the runs did not toggle.
+  changes the law (Delay and Echo's third-set runs toggled it: linear against the equal-loudness law, above) [measured 12.4.7].
 
 ## Analysers and displays
 

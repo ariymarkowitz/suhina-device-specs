@@ -1,0 +1,852 @@
+{
+ "device": "Corpus",
+ "parameter": "corpus-lfo",
+ "question": "fundamental of each 100 ms ring (Decay 0.2 s, Tune 440 Hz) with the LFO at 1 Hz free: Amount 50 and 100 % Sine, 100 % Square, Triangle, SawUp, Sample & Hold; Spin 25 %; Phase 0",
+ "plan": "7",
+ "read": [
+  "ext: impulsetrain (pitch of each ring)"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Sine"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "sine-50",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Sine"
+    },
+    "LFO Amount": {
+     "display": 50
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "sine-100",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Sine"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "square",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Square"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "triangle",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Triangle"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "sawup",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "SawUp"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "sample-hold",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Sample & Hold"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "spin-25",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Sine"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "LFO Stereo Mode": {
+     "item": "Spin"
+    },
+    "Spin": {
+     "display": 25
+    }
+   }
+  },
+  {
+   "id": "phase-0",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "On"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    },
+    "LFO Sync": {
+     "item": "Free"
+    },
+    "LFO Rate": {
+     "display": 1
+    },
+    "LFO Shape": {
+     "item": "Sine"
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Phase": {
+     "display": 0
+    },
+    "Offset": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "device": "Chorus-Ensemble",
+ "parameter": "chorus-mode-switch",
+ "question": "the steady tone with Mode switching from Chorus to Ensemble at beat 46 (23 s) and to Vibrato at beat 52 (26 s), Amount 100 %",
+ "plan": "4",
+ "read": [
+  "raw render around the switch"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "switch",
+   "params": {
+    "Mode": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Chorus"
+       }
+      ],
+      [
+       46,
+       {
+        "item": "Ensemble"
+       }
+      ],
+      [
+       52,
+       {
+        "item": "Vibrato"
+       }
+      ]
+     ]
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

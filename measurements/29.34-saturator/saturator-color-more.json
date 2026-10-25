@@ -1,0 +1,175 @@
+{
+ "device": "Saturator",
+ "parameter": "saturator-color-more",
+ "question": "sweep and staircase through Digital Clip at Drive +12 dB with Color on: Amt Lo -100 %; Amt Hi -100 %; Amt Hi +50 % at 200 Hz and 5 kHz (Width 30 %)",
+ "plan": "5",
+ "read": [
+  "response",
+  "static"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Color On": 1,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 12
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    },
+    "Color Amt Low": {
+     "display": 0
+    },
+    "Color Amt Hi": {
+     "display": 0
+    },
+    "Color Width": {
+     "display": 30
+    }
+   }
+  },
+  {
+   "id": "lo-100",
+   "params": {
+    "Color On": 1,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 12
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    },
+    "Color Amt Low": {
+     "display": -100
+    },
+    "Color Amt Hi": {
+     "display": 0
+    },
+    "Color Width": {
+     "display": 30
+    }
+   }
+  },
+  {
+   "id": "hi-100",
+   "params": {
+    "Color On": 1,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 12
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    },
+    "Color Amt Low": {
+     "display": 0
+    },
+    "Color Amt Hi": {
+     "display": -100
+    },
+    "Color Width": {
+     "display": 30
+    }
+   }
+  },
+  {
+   "id": "hi50-200",
+   "params": {
+    "Color On": 1,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 12
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    },
+    "Color Amt Low": {
+     "display": 0
+    },
+    "Color Amt Hi": {
+     "display": 50
+    },
+    "Color Width": {
+     "display": 30
+    },
+    "Color Freq": {
+     "display": 200
+    }
+   }
+  },
+  {
+   "id": "hi50-5000",
+   "params": {
+    "Color On": 1,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 12
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    },
+    "Color Amt Low": {
+     "display": 0
+    },
+    "Color Amt Hi": {
+     "display": 50
+    },
+    "Color Width": {
+     "display": 30
+    },
+    "Color Freq": {
+     "display": 5000
+    }
+   }
+  }
+ ]
+}

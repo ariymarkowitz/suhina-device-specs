@@ -1,0 +1,330 @@
+{
+ "device": "Saturator",
+ "parameter": "saturator-curves-ramp",
+ "question": "gain and harmonics against level on the ramp and the 100 Hz staircase for each fixed Type at Drive 0 and +18 dB, Hi-Quality on",
+ "plan": "1",
+ "read": [
+  "ext: ramp, stair100"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "analog-clip-d0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Analog Clip"
+    }
+   }
+  },
+  {
+   "id": "analog-clip-d18",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Analog Clip"
+    }
+   }
+  },
+  {
+   "id": "soft-sine-d0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Soft Sine"
+    }
+   }
+  },
+  {
+   "id": "soft-sine-d18",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Soft Sine"
+    }
+   }
+  },
+  {
+   "id": "bass-shaper-d0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Bass Shaper"
+    }
+   }
+  },
+  {
+   "id": "bass-shaper-d18",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Bass Shaper"
+    }
+   }
+  },
+  {
+   "id": "medium-curve-d0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Medium Curve"
+    }
+   }
+  },
+  {
+   "id": "medium-curve-d18",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Medium Curve"
+    }
+   }
+  },
+  {
+   "id": "hard-curve-d0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Hard Curve"
+    }
+   }
+  },
+  {
+   "id": "hard-curve-d18",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Hard Curve"
+    }
+   }
+  },
+  {
+   "id": "sinoid-fold-d0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Sinoid Fold"
+    }
+   }
+  },
+  {
+   "id": "sinoid-fold-d18",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Sinoid Fold"
+    }
+   }
+  },
+  {
+   "id": "digital-clip-d0",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    }
+   }
+  },
+  {
+   "id": "digital-clip-d18",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 18
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    }
+   }
+  }
+ ]
+}

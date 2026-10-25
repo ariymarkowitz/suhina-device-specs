@@ -1,0 +1,153 @@
+{
+ "device": "Grain Delay",
+ "parameter": "grain-delay-window",
+ "question": "envelope and spectrum of the steady tone at Pitch +12, -12 and +7 with Frequency 10 Hz, and +12 at 60 Hz",
+ "plan": "3",
+ "read": [
+  "envelope of the steady tone (grain window shape)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch+12-10hz",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 10
+    },
+    "Pitch": 12,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch-12-10hz",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 10
+    },
+    "Pitch": -12,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch+7-10hz",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 10
+    },
+    "Pitch": 7,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pitch+12-60hz",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 12,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

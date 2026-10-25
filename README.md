@@ -46,6 +46,7 @@ Building a device from a note before you start. In short:
   - **[als 12.4.6]** read from a set saved by Live 12.4.6 (`measurements/populate-12.4.6.als`; the
     MIDI effects in `measurements/populate-midi-12.4.6.als`): element names and stored values.
   - **[measured 12.4.6]** measured from audio rendered by Live 12.4.6 (`tools/` › 2).
+  - **[measured 12.4.7]** measured from audio rendered by Live 12.4.7 (the third set, `measurements/third/`). The remaining set was exported after Live's update to 12.4.7 although its sections say 12.4.6; see `measurements/third/README.md` › Live 12.4.7 against the `[measured 12.4.6]` tags.
 
 ## Layout
 
@@ -93,8 +94,10 @@ by behaviour runs ([`tools/`](tools/README.md) › 2 and 2b): the first (Compres
 top 100 runs of 37 devices in one set in [`measurements/top100/`](measurements/top100/README.md),
 and the other 157 priority 1 to 3 runs of all 42 devices in a second set in
 [`measurements/remaining/`](measurements/remaining/README.md), whose answers are written into the
-notes. All 42 notes now have a Measured section with `[measured 12.4.6]` facts (INDEX: `partly
-measured`; Compressor's are in its Behaviour section).
+notes. A third set of 147 runs on 39 devices (1048 renders, five parts and a pilot) was rendered in
+Live 12.4.7 ([`measurements/third/`](measurements/third/README.md)) and read into the notes as
+`[measured 12.4.7]` (Measured › Third set). All 42 notes now have a Measured section with
+`[measured 12.4.6]` facts (INDEX: `partly measured`; Compressor's are in its Behaviour section).
 
 The eight MIDI effects of chapter 30 have notes too ([`live-12/midi-effects/`](live-12/midi-effects/INDEX.md)),
 dump checked from their own dump (`measurements/dump-midi-12.4.6.json`); all eight have a
@@ -105,12 +108,14 @@ Automation playback is measured from seven hand-made sets (`measurements/automat
 segment moves, the curve family, the volume fader's taper and the smoothing of jumps are in
 [`live-12/automation.md`](live-12/automation.md), and Utility's Gain taper and smoothing in its note.
 
-Next: the re-runs the INDEX remarks name (Auto Pan-Tremolo's waveforms, Beat Repeat's triplet
-grids, Roar in Single routing, a way to start the Looper), the settings the remaining set could not
-reach ([`measurements/remaining/README.md`](measurements/remaining/README.md) › Settings that did not
-reach the audio), new runs for the open gaps the notes list (all 257 candidates in the devices' `runs.py` files have now been run), and what audio
-with static settings cannot show (side-chain, MIDI, Hi-Quality; automation beyond the parameters in
-`measurements/automation/`).
+Next: the eight candidate runs added to the devices' `runs.py` files after the third set (listed in
+[`measurements/third/README.md`](measurements/third/README.md) › Settings that did not read, and what is
+open: Compressor's 50 Hz buzz with the side-chain EQ off, Delay's time jumps with noise, the
+Phaser-Flanger envelope times, Spectral Resonator's Mod Rate and frequency dial, Spectral Time's
+processing order, the Vocoder's band counts and Pitch Tracking limits), the other open points the notes
+list (every other candidate in the devices' `runs.py` files has been run), and what audio with static
+settings cannot show (MIDI pitch bend and velocity, Roar's other matrix cells, Shifter's Spread;
+automation beyond the parameters in `measurements/automation/`).
 
 ## Licence
 

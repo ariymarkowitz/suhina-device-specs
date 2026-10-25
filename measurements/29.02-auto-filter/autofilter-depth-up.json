@@ -1,0 +1,354 @@
+{
+ "device": "Auto Filter",
+ "parameter": "autofilter-depth-up",
+ "question": "steady tone through Low-pass at Freq 100 Hz, LFO Amount 50 and 100 %; bursts with Env Amount +100 and -100 % at Freq 2 kHz, Res 70 %",
+ "plan": "6",
+ "read": [
+  "modulation",
+  "envelope",
+  "dynamics"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 40
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "LFO T Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Phase": {
+     "display": 0
+    },
+    "LFO Offset": {
+     "display": 0
+    },
+    "LFO S Mode": {
+     "item": "Phase"
+    },
+    "LFO Spin": {
+     "display": 0
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "LFO Smoothing": {
+     "display": 0
+    },
+    "LFO Q Mode": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "up-amt-50",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 100
+    },
+    "Resonance": {
+     "display": 40
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 50
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "LFO T Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Phase": {
+     "display": 0
+    },
+    "LFO Offset": {
+     "display": 0
+    },
+    "LFO S Mode": {
+     "item": "Phase"
+    },
+    "LFO Spin": {
+     "display": 0
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "LFO Smoothing": {
+     "display": 0
+    },
+    "LFO Q Mode": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "up-amt-100",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 100
+    },
+    "Resonance": {
+     "display": 40
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 100
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "LFO T Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Phase": {
+     "display": 0
+    },
+    "LFO Offset": {
+     "display": 0
+    },
+    "LFO S Mode": {
+     "item": "Phase"
+    },
+    "LFO Spin": {
+     "display": 0
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "LFO Smoothing": {
+     "display": 0
+    },
+    "LFO Q Mode": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "env+100-res70",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 2000
+    },
+    "Resonance": {
+     "display": 70
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 100
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "LFO T Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Phase": {
+     "display": 0
+    },
+    "LFO Offset": {
+     "display": 0
+    },
+    "LFO S Mode": {
+     "item": "Phase"
+    },
+    "LFO Spin": {
+     "display": 0
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "LFO Smoothing": {
+     "display": 0
+    },
+    "LFO Q Mode": {
+     "item": "None"
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "env-100-res70",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 2000
+    },
+    "Resonance": {
+     "display": 70
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": -100
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "LFO T Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Phase": {
+     "display": 0
+    },
+    "LFO Offset": {
+     "display": 0
+    },
+    "LFO S Mode": {
+     "item": "Phase"
+    },
+    "LFO Spin": {
+     "display": 0
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "LFO Smoothing": {
+     "display": 0
+    },
+    "LFO Q Mode": {
+     "item": "None"
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  }
+ ]
+}

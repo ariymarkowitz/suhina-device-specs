@@ -1,0 +1,99 @@
+{
+ "device": "Multiband Dynamics",
+ "parameter": "mbd-knee-ramp",
+ "question": "gain against level on the 1 kHz ramp, Mid band Above 1:4 at -30 dB, Peak, fastest times, Soft Knee off and on",
+ "plan": "4",
+ "read": [
+  "ext: ramp"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Ratio (Mid)": -0.75
+   }
+  },
+  {
+   "id": "knee-off",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Ratio (Mid)": -0.75
+   }
+  },
+  {
+   "id": "knee-on",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "On"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Ratio (Mid)": -0.75
+   }
+  }
+ ]
+}

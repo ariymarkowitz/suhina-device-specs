@@ -1,0 +1,59 @@
+{
+ "device": "Utility",
+ "parameter": "utility-midside",
+ "question": "gains of mid-only and side-only noise with MidSideBalanceOn and MidSideBalance 0, 0.5, 1, 1.5, 2",
+ "plan": "1, 4",
+ "read": [
+  "ext: mid, side, lrsplit"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "@MidSideBalanceOn": true
+   }
+  },
+  {
+   "id": "ms-0",
+   "params": {
+    "@MidSideBalanceOn": true,
+    "@MidSideBalance": 0
+   }
+  },
+  {
+   "id": "ms-0.5",
+   "params": {
+    "@MidSideBalanceOn": true,
+    "@MidSideBalance": 0.5
+   }
+  },
+  {
+   "id": "ms-1",
+   "params": {
+    "@MidSideBalanceOn": true,
+    "@MidSideBalance": 1
+   }
+  },
+  {
+   "id": "ms-1.5",
+   "params": {
+    "@MidSideBalanceOn": true,
+    "@MidSideBalance": 1.5
+   }
+  },
+  {
+   "id": "ms-2",
+   "params": {
+    "@MidSideBalanceOn": true,
+    "@MidSideBalance": 2
+   }
+  }
+ ]
+}

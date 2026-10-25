@@ -1,0 +1,185 @@
+{
+ "device": "Corpus",
+ "parameter": "corpus-drywet-ring",
+ "question": "the impulse's ring (Decay 3 s) with Dry Wet jumping from 100 to 0 % at beat 2 (1 s)",
+ "plan": "10",
+ "read": [
+  "raw render after the impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 3
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "drop",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 3
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 100
+       }
+      ],
+      [
+       2,
+       {
+        "display": 100
+       }
+      ],
+      [
+       2,
+       {
+        "display": 0
+       }
+      ]
+     ]
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

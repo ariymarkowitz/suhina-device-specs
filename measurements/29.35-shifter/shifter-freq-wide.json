@@ -1,0 +1,221 @@
+{
+ "device": "Shifter",
+ "parameter": "shifter-freq-wide",
+ "question": "spectrum of the steady tone: Freq +2.5 kHz and -5 kHz; Fine +62.5 and -500 Hz; Wide on at Pitch +7, Freq +100 Hz and Ring 1 kHz",
+ "plan": "4, 6",
+ "read": [
+  "steady (spectrum)",
+  "stereo"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0
+   }
+  },
+  {
+   "id": "freq+2500",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": 2500
+    }
+   }
+  },
+  {
+   "id": "freq-5000",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": -5000
+    }
+   }
+  },
+  {
+   "id": "fine+62.5",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Mod Fine": {
+     "display": 62.5
+    }
+   }
+  },
+  {
+   "id": "fine-500",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Mod Fine": {
+     "display": -500
+    }
+   }
+  },
+  {
+   "id": "wide-pitch",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 7,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Wide": 1
+   }
+  },
+  {
+   "id": "wide-freq",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": 100
+    },
+    "Wide": 1
+   }
+  },
+  {
+   "id": "wide-ring",
+   "params": {
+    "Mode": {
+     "item": "Ring"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Wide": 1
+   }
+  }
+ ]
+}

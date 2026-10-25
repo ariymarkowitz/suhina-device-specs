@@ -1,0 +1,368 @@
+{
+ "device": "Auto Filter",
+ "parameter": "autofilter-freq-res-grid",
+ "question": "sweep response of Low-pass 24 dB at Freq 200 Hz and 8 kHz, Res 0, 50, 100 %, SVF; and of each other circuit at Freq 200 Hz, Res 100 %",
+ "plan": "2",
+ "read": [
+  "response"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lp-200-res0",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 200
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lp-200-res50",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 200
+    },
+    "Resonance": {
+     "display": 50
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lp-200-res100",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 200
+    },
+    "Resonance": {
+     "display": 100
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lp-8000-res0",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 8000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lp-8000-res50",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 8000
+    },
+    "Resonance": {
+     "display": 50
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lp-8000-res100",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 8000
+    },
+    "Resonance": {
+     "display": 100
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "dfm-200-res100",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "DFM"
+    },
+    "Frequency": {
+     "display": 200
+    },
+    "Resonance": {
+     "display": 100
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "ms2-200-res100",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "MS2"
+    },
+    "Frequency": {
+     "display": 200
+    },
+    "Resonance": {
+     "display": 100
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "prd-200-res100",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "PRD"
+    },
+    "Frequency": {
+     "display": 200
+    },
+    "Resonance": {
+     "display": 100
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+ "device": "Redux",
+ "parameter": "redux-rate-hq",
+ "question": "spectral lines of the 10 and 15 kHz sines at Rate 12, 25 kHz, and at 12 kHz with EcoProcessing true; the impulse and 1 kHz tone at the lowest Rate",
+ "plan": "1, 7, 8",
+ "read": [
+  "ext: tone10k, tone15k peaks",
+  "impulse"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "rate-12000",
+   "params": {
+    "Sample Rate": {
+     "display": 12000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "rate-25000",
+   "params": {
+    "Sample Rate": {
+     "display": 25000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "rate-12000-eco",
+   "params": {
+    "Sample Rate": {
+     "display": 12000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@EcoProcessing": true
+   }
+  },
+  {
+   "id": "rate-min",
+   "params": {
+    "Sample Rate": {
+     "norm": 0
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

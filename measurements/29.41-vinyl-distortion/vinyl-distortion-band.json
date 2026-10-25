@@ -1,0 +1,114 @@
+{
+ "device": "Vinyl Distortion",
+ "parameter": "vinyl-distortion-band",
+ "question": "100 Hz staircase with the band at 100 Hz; 3 kHz sine with the band at 3 kHz; Drive 0 (impulse); band at 1 kHz with Drive 1",
+ "plan": "2, 4",
+ "read": [
+  "ext: stair100, tone3k, tone10k",
+  "impulse"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tracing On": 1,
+    "Pinch On": 0,
+    "Tracing Drive": {
+     "display": 0.5
+    },
+    "Tracing Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "band100",
+   "params": {
+    "Tracing On": 1,
+    "Pinch On": 0,
+    "Tracing Drive": {
+     "display": 1
+    },
+    "Tracing Freq.": {
+     "display": 100
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "band3k",
+   "params": {
+    "Tracing On": 1,
+    "Pinch On": 0,
+    "Tracing Drive": {
+     "display": 1
+    },
+    "Tracing Freq.": {
+     "display": 3000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "drive0",
+   "params": {
+    "Tracing On": 1,
+    "Pinch On": 0,
+    "Tracing Drive": {
+     "display": 0
+    },
+    "Tracing Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "band1k-drive1",
+   "params": {
+    "Tracing On": 1,
+    "Pinch On": 0,
+    "Tracing Drive": {
+     "display": 1
+    },
+    "Tracing Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

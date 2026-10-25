@@ -1,0 +1,71 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-long-decay-unison",
+ "question": "T60 at Decay 13.4 and 20 s; Unison 4 at Unison Amount 32 %; FrequencyDialMode 1 with Note A2",
+ "plan": "4, 10, 1",
+ "read": [
+  "impulse (T60)",
+  "steady (spectrum)"
+ ],
+ "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "decay-13.4",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Decay": {
+     "display": 13.4
+    }
+   }
+  },
+  {
+   "id": "decay-20",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Decay": {
+     "display": 20
+    }
+   }
+  },
+  {
+   "id": "unison4-32",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Unison": 2,
+    "Unison Amount": {
+     "display": 32
+    }
+   }
+  },
+  {
+   "id": "dialmode-1",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@PartialFrequencies_FrequencyDialMode": 1,
+    "Note": 45
+   }
+  }
+ ]
+}

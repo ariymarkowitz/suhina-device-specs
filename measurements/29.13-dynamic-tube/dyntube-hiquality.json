@@ -1,0 +1,116 @@
+{
+ "device": "Dynamic Tube",
+ "parameter": "dyntube-hiquality",
+ "question": "spectral lines of the 10 and 15 kHz sines with Oversampling 0 and 1",
+ "plan": "6",
+ "read": [
+  "ext: tone10k, tone15k peaks"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 15
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "hq-off",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 15
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": 0
+   }
+  },
+  {
+   "id": "hq-on",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 15
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": 1
+   }
+  }
+ ]
+}

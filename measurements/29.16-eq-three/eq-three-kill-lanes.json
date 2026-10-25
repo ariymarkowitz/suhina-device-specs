@@ -1,0 +1,104 @@
+{
+ "device": "EQ Three",
+ "parameter": "eq-three-kill-lanes",
+ "question": "the steady 1 kHz tone with MidOn off at beat 44 and on at beat 48, and GainMid jumping from 0 dB to -inf at beat 52",
+ "plan": "5",
+ "read": [
+  "raw render around the switches"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "FreqLo": {
+     "display": 500
+    },
+    "FreqHi": {
+     "display": 2000
+    },
+    "Slope": {
+     "item": "48"
+    }
+   }
+  },
+  {
+   "id": "kill-mid",
+   "params": {
+    "FreqLo": {
+     "display": 500
+    },
+    "FreqHi": {
+     "display": 2000
+    },
+    "Slope": {
+     "item": "48"
+    },
+    "MidOn": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "On"
+       }
+      ],
+      [
+       44,
+       {
+        "item": "Off"
+       }
+      ],
+      [
+       48,
+       {
+        "item": "On"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "gain-jump",
+   "params": {
+    "FreqLo": {
+     "display": 500
+    },
+    "FreqHi": {
+     "display": 2000
+    },
+    "Slope": {
+     "item": "48"
+    },
+    "GainMid": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0
+       }
+      ],
+      [
+       52,
+       {
+        "display": 0
+       }
+      ],
+      [
+       52,
+       {
+        "norm": 0.0
+       }
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,298 @@
+{
+ "device": "Limiter",
+ "parameter": "limiter-link-routing",
+ "question": "per-channel gain of the split tone (left 6 dB over, right 6 dB under a -12 dB ceiling) at Link 0, 25, 50, 75, 100 %; mid and side noise at a -24 dB ceiling in M/S with M/S Link 0, 50, 100 %",
+ "plan": "9, 10",
+ "read": [
+  "ext: lrsplit, mid, side"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -12
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "link-0",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -12
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 0
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "link-25",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -12
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 25
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "link-50",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -12
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 50
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "link-75",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -12
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 75
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "ms-link-0",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -24
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "M/S"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "ms-link-50",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -24
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 50
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "M/S"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "ms-link-100",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -24
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 100
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "M/S"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

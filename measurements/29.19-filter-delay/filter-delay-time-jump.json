@@ -1,0 +1,176 @@
+{
+ "device": "Filter Delay",
+ "parameter": "filter-delay-time-jump",
+ "question": "the steady tone's echo around 2 Time Delay jumping from 100 to 200 ms at beat 46 (23 s), DelayTransitionMode 1 and 0",
+ "plan": "7",
+ "read": [
+  "raw render around the jump (pitch glide or crossfade)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.2
+       }
+      ]
+     ]
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "mode1",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.2
+       }
+      ]
+     ]
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "@DelayTransitionMode": 1
+   }
+  },
+  {
+   "id": "mode0",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.1
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0.2
+       }
+      ]
+     ]
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "@DelayTransitionMode": 0
+   }
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-modulation",
+ "question": "steady tone and noise at Pitch Mod 2.56 st, Mod Rate 10 %, for ModMode 0, 1, 2, 3; ModMode 0 at Mod Rate 1 % and 64 %",
+ "plan": "9",
+ "read": [
+  "modulation",
+  "noise spectrum over time"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Pitch Mod": {
+     "display": 2.56
+    },
+    "Mod Rate": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "mode-0",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Pitch Mod": {
+     "display": 2.56
+    },
+    "Mod Rate": {
+     "display": 10
+    },
+    "@Modulation_ModMode": 0
+   }
+  },
+  {
+   "id": "mode-1",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Pitch Mod": {
+     "display": 2.56
+    },
+    "Mod Rate": {
+     "display": 10
+    },
+    "@Modulation_ModMode": 1
+   }
+  },
+  {
+   "id": "mode-2",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Pitch Mod": {
+     "display": 2.56
+    },
+    "Mod Rate": {
+     "display": 10
+    },
+    "@Modulation_ModMode": 2
+   }
+  },
+  {
+   "id": "mode-3",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Pitch Mod": {
+     "display": 2.56
+    },
+    "Mod Rate": {
+     "display": 10
+    },
+    "@Modulation_ModMode": 3
+   }
+  },
+  {
+   "id": "mode-0-rate1",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Pitch Mod": {
+     "display": 2.56
+    },
+    "Mod Rate": {
+     "display": 1
+    },
+    "@Modulation_ModMode": 0
+   }
+  },
+  {
+   "id": "mode-0-rate64",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Pitch Mod": {
+     "display": 2.56
+    },
+    "Mod Rate": {
+     "display": 64
+    },
+    "@Modulation_ModMode": 0
+   }
+  }
+ ]
+}

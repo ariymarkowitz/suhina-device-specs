@@ -1,0 +1,138 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-auto-release-bursts",
+ "question": "gain over the -30 dBFS bed after each burst, Threshold -24 dB, ratio 10, Attack 1 ms: Auto on in Lin and Log; Release 300 ms Lin",
+ "plan": "8",
+ "read": [
+  "ext: bedbursts envelope"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "auto-lin",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "On"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "auto-log",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Log"
+    },
+    "Auto Release On/Off": {
+     "item": "On"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "fixed-300-lin",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  }
+ ]
+}

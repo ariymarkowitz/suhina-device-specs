@@ -1,0 +1,160 @@
+{
+ "device": "Auto Filter",
+ "parameter": "autofilter-env-detector",
+ "question": "output of 1 to 300 ms bursts at -6 dBFS and of bursts over a -30 dBFS bed, Freq 400 Hz, Env 100 %, Attack 1 ms, Release 100 ms; Hold off (default) and on; Env S&H 1/16",
+ "plan": "8",
+ "read": [
+  "ext: shortbursts, bedbursts"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 100
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "hold-on",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 100
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "On"
+    },
+    "Env S&H On": {
+     "item": "Off"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "snh-1-16",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 400
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 100
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Env Hold On": {
+     "item": "Off"
+    },
+    "Env S&H On": {
+     "item": "On"
+    },
+    "Env Attack": {
+     "display": 0.001
+    },
+    "Env Release": {
+     "display": 0.1
+    },
+    "Env S&H": -4
+   }
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "device": "Saturator",
+ "parameter": "saturator-predc-step",
+ "question": "the DC step and the 1, 5, 20 Hz sines at Drive 0, Pre Dc Filter off and on",
+ "plan": "8",
+ "read": [
+  "ext: dcstep, lowsines"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "predc-off",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pre Dc Filter": 0
+   }
+  },
+  {
+   "id": "predc-on",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pre Dc Filter": 1
+   }
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "device": "Auto Pan-Tremolo",
+ "parameter": "autopan-harmonic-crossover",
+ "question": "the three-tone segment through Tremolo, Amount 100 %, 1 Hz, Harmonic on (per-tone envelopes)",
+ "plan": "10",
+ "read": [
+  "ext: threetone",
+  "raw render"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "harmonic",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "On"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "harmonic-amount-50",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 50
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "On"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

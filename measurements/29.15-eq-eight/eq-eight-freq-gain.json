@@ -1,0 +1,333 @@
+{
+ "device": "EQ Eight",
+ "parameter": "eq-eight-freq-gain",
+ "question": "sweep response: Bell at 100 Hz and 10 kHz, +15 and -15 dB, Q 0.71; Notch at 1 kHz Q 0.71 and 6; Bell -6 dB with Adaptive Q on; Low Shelf +12 dB with Adaptive Q on and off",
+ "plan": "2, 3",
+ "read": [
+  "response",
+  "impulse"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "bell-100-p15",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 100
+    },
+    "3 Gain A": {
+     "display": 15
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  },
+  {
+   "id": "bell-100-m15",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 100
+    },
+    "3 Gain A": {
+     "display": -15
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  },
+  {
+   "id": "bell-10000-p15",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 10000
+    },
+    "3 Gain A": {
+     "display": 15
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  },
+  {
+   "id": "bell-10000-m15",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 10000
+    },
+    "3 Gain A": {
+     "display": -15
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  },
+  {
+   "id": "notch-q0.71",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Notch"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  },
+  {
+   "id": "notch-q6",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Notch"
+    },
+    "3 Q A": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "bell-m6-adaptive",
+   "params": {
+    "Adaptive Q": {
+     "item": "On"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": -6
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  },
+  {
+   "id": "lowshelf-12-adaptive",
+   "params": {
+    "Adaptive Q": {
+     "item": "On"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 200
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "Low Shelf"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  },
+  {
+   "id": "lowshelf-12",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 200
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "Low Shelf"
+    },
+    "3 Q A": {
+     "display": 0.71
+    }
+   }
+  }
+ ]
+}

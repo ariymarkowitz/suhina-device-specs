@@ -1,0 +1,402 @@
+{
+ "device": "Dynamic Tube",
+ "parameter": "dyntube-curves-100hz",
+ "question": "100 Hz staircase and 1 kHz ramp for A at Bias 0, 50, 75, 100 %, B at 0, 50, 100 %, C at 0, 50, 75, 100 %",
+ "plan": "1",
+ "read": [
+  "ext: stair100, ramp"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 0
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "a-bias0",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 0
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "a-bias50",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "a-bias75",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 75
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "a-bias100",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 100
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b-bias0",
+   "params": {
+    "Tube Type": {
+     "item": "B"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 0
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b-bias50",
+   "params": {
+    "Tube Type": {
+     "item": "B"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b-bias100",
+   "params": {
+    "Tube Type": {
+     "item": "B"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 100
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-bias0",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 0
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-bias50",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-bias75",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 75
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "c-bias100",
+   "params": {
+    "Tube Type": {
+     "item": "C"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 100
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 0
+    },
+    "Attack": {
+     "display": 0.005
+    },
+    "Release": {
+     "display": 0.035
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

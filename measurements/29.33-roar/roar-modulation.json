@@ -1,0 +1,564 @@
+{
+ "device": "Roar",
+ "parameter": "roar-modulation",
+ "question": "the steady tone in Single, shaper off, LFO 1 free at 1 Hz with ModulationMatrix_Output_Lfo1 stored 1, 50, 100 and -100 (the cell holds whole numbers; its scale is unknown); LFO 1 Square, Ramp Up, Morph +50 %, Smooth 50 %; LFO 2 cell; Noise cell (Simplex, S&H); Env cell on the bursts",
+ "plan": "9, 10",
+ "read": [
+  "envelope of the steady tone"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 1
+   }
+  },
+  {
+   "id": "lfo1-cell+50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 50
+   }
+  },
+  {
+   "id": "lfo1-cell+100",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 100
+   }
+  },
+  {
+   "id": "lfo1-cell-100",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": -100
+   }
+  },
+  {
+   "id": "lfo1-triangle",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Triangle"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 1
+   }
+  },
+  {
+   "id": "lfo1-square",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Square"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 1
+   }
+  },
+  {
+   "id": "lfo1-ramp-up",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Ramp Up"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 1
+   }
+  },
+  {
+   "id": "lfo1-morph+50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 50
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 1
+   }
+  },
+  {
+   "id": "lfo1-smooth-50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 50
+    },
+    "@ModulationMatrix_Output_Lfo1": 1
+   }
+  },
+  {
+   "id": "noise-simplex",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 0,
+    "@ModulationMatrix_Output_Noise": 1,
+    "Noise Rate Mode": {
+     "item": "Free"
+    },
+    "Noise Rate": {
+     "display": 1
+    }
+   }
+  },
+  {
+   "id": "noise-snh",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 0,
+    "@ModulationMatrix_Output_Noise": 1,
+    "Noise Type": {
+     "item": "Sample & Hold"
+    },
+    "Noise Rate Mode": {
+     "item": "Free"
+    },
+    "Noise Rate": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "env",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "@Input_RoutingMode": 0,
+    "Output": {
+     "display": -12
+    },
+    "LFO 1 Rate Mode": {
+     "item": "Free"
+    },
+    "LFO 1 Rate": {
+     "display": 1
+    },
+    "LFO 1 Wave": {
+     "item": "Sine"
+    },
+    "LFO 1 Morph": {
+     "display": 0
+    },
+    "LFO 1 Smooth": {
+     "display": 0
+    },
+    "@ModulationMatrix_Output_Lfo1": 0,
+    "@ModulationMatrix_Output_Env": 1
+   }
+  }
+ ]
+}

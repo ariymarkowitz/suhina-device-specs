@@ -1,0 +1,449 @@
+{
+ "device": "Auto Pan-Tremolo",
+ "parameter": "autopan-sync-offset",
+ "question": "Panning envelopes, Synced: Rate 1/4 with Offset 0, 90, 180; Rate 1/8, 1/16, 1/2 and 3/16 at Offset 0",
+ "plan": "6, 7",
+ "read": [
+  "envelope"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "q-offset-0",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    },
+    "Rate": 12
+   }
+  },
+  {
+   "id": "q-offset-90",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 90
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    },
+    "Rate": 12
+   }
+  },
+  {
+   "id": "q-offset-180",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 180
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    },
+    "Rate": 12
+   }
+  },
+  {
+   "id": "rate-1-8",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    },
+    "Rate": 15
+   }
+  },
+  {
+   "id": "rate-1-16",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    },
+    "Rate": 17
+   }
+  },
+  {
+   "id": "rate-1-2",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    },
+    "Rate": 8
+   }
+  },
+  {
+   "id": "rate-3-16",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Synced"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    },
+    "Rate": 13
+   }
+  }
+ ]
+}

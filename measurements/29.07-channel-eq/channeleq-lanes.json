@@ -1,0 +1,125 @@
+{
+ "device": "Channel EQ",
+ "parameter": "channeleq-lanes",
+ "question": "steady tone with Mid Gain jumping 0 to +12 dB at beat 46 (23 s), Mid Freq 1 kHz; noise with Mid Freq gliding 120 Hz to 7.5 kHz over beats 62 to 69 at Mid Gain +12 dB",
+ "plan": "4, 8",
+ "read": [
+  "raw render around the changes"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "mid-gain-jump",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 0
+       }
+      ],
+      [
+       46,
+       {
+        "display": 0
+       }
+      ],
+      [
+       46,
+       {
+        "display": 12
+       }
+      ]
+     ]
+    },
+    "Mid Freq": {
+     "display": 1000
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "mid-freq-glide",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 120
+       }
+      ],
+      [
+       62,
+       {
+        "display": 120
+       }
+      ],
+      [
+       69,
+       {
+        "display": 7500
+       }
+      ]
+     ]
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

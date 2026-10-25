@@ -1,0 +1,167 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-smooth-glide",
+ "question": "early reflection taps of the impulse with Room Size jumping from 10 to 100 at beat 0.9 (45 ms before the impulse), each Size Smoothing",
+ "plan": "10",
+ "read": [
+  "impulse (tap times against time)"
+ ],
+ "probe": "measurements/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 100
+       }
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "none",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 100
+       }
+      ]
+     ]
+    },
+    "Size Smoothing": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "slow",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 100
+       }
+      ]
+     ]
+    },
+    "Size Smoothing": {
+     "item": "Slow"
+    }
+   }
+  },
+  {
+   "id": "fast",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.0
+    },
+    "Room Size": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 10
+       }
+      ],
+      [
+       0.9,
+       {
+        "display": 100
+       }
+      ]
+     ]
+    },
+    "Size Smoothing": {
+     "item": "Fast"
+    }
+   }
+  }
+ ]
+}

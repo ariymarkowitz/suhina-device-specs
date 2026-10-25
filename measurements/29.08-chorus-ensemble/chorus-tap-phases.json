@@ -1,0 +1,253 @@
+{
+ "device": "Chorus-Ensemble",
+ "parameter": "chorus-tap-phases",
+ "question": "tap delays of each impulse of the train, Amount 100 %, Rate 1 Hz, Feedback 0: Chorus with 2 taps and 1 tap, Ensemble, Vibrato",
+ "plan": "4",
+ "read": [
+  "ext: impulsetrain (taps per impulse)"
+ ],
+ "probe": "measurements/probe-ext/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "chorus-2taps",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "chorus-1tap",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "1"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "ensemble",
+   "params": {
+    "Mode": {
+     "item": "Ensemble"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "vibrato",
+   "params": {
+    "Mode": {
+     "item": "Vibrato"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "20 ms"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}
