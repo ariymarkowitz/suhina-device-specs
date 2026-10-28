@@ -1,0 +1,185 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live vs Suhina</title>
+<style>
+:root{--bg:#16181c;--panel:#1f2227;--fg:#e6e8eb;--dim:#8a9099;--a:#f5a524;--b:#4ea8ff;--d:#c678dd;--line:#2f333a}
+@media (prefers-color-scheme:light){:root{--bg:#f4f5f7;--panel:#fff;--fg:#1c1e22;--dim:#69707a;--line:#d9dce1}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px system-ui,sans-serif;display:grid;grid-template-columns:320px 1fr;height:100vh}
+aside{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+aside header{padding:12px;border-bottom:1px solid var(--line);display:grid;gap:8px}
+select,input[type=search]{width:100%;padding:6px;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px}
+#cases{overflow:auto;flex:1}
+.run{padding:8px 12px 4px;color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.05em;position:sticky;top:0;background:var(--panel)}
+.case{display:flex;justify-content:space-between;gap:8px;padding:6px 12px;cursor:pointer;border-left:3px solid transparent}
+.case:hover{background:var(--bg)}.case.sel{background:var(--bg);border-left-color:var(--a)}
+.case.miss{opacity:.45}.case small{color:var(--dim)}
+main{padding:20px;overflow:auto;display:flex;flex-direction:column;gap:14px;min-width:0}
+h1{font-size:16px;margin:0}.dim{color:var(--dim)}
+canvas{width:100%;height:150px;background:var(--panel);border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button{background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:8px 14px;font:inherit;cursor:pointer}
+button.on{border-color:var(--fg);font-weight:600}
+button[data-m=a].on{color:var(--a);border-color:var(--a)}button[data-m=b].on{color:var(--b);border-color:var(--b)}button[data-m=d].on{color:var(--d);border-color:var(--d)}
+table{border-collapse:collapse}td,th{padding:4px 14px 4px 0;text-align:left;font-variant-numeric:tabular-nums}th{color:var(--dim);font-weight:400}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px;margin:0;overflow:auto;font-size:12px}
+.err{color:#ff6b6b}
+</style>
+<aside>
+  <header>
+    <select id="set"></select>
+    <input id="filter" type="search" placeholder="Filter cases">
+    <div id="setinfo" class="dim"></div>
+  </header>
+  <div id="cases"></div>
+</aside>
+<main>
+  <h1 id="title">Live vs Suhina</h1>
+  <div id="msg" class="dim"></div>
+  <canvas id="wave" width="1400" height="300"></canvas>
+  <div class="row">
+    <button id="play">Play ␣</button>
+    <button data-m="a" class="on">A · Live (1)</button>
+    <button data-m="b">B · Suhina (2)</button>
+    <button data-m="d">A − B · difference (3)</button>
+    <label><input type="checkbox" id="loop" checked> loop</label>
+    <label><input type="checkbox" id="match"> match B's level to A</label>
+    <span class="dim" id="time"></span>
+  </div>
+  <table id="stats"></table>
+  <div class="dim">Tab switches A/B at the same position. Click the waveform to seek.</div>
+  <pre id="params"></pre>
+</main>
+<script>
+// Files: sets/<set>/{info.json, set.cases.json, export/<export name> <track>.wav, suhina/<safe track>.wav}.
+// Served by `python3 -m http.server -d compare`; set and file lists are read from its directory listings.
+const $ = id => document.getElementById(id);
+const ctx = new (window.AudioContext || window.webkitAudioContext)();
+const safe = n => n.replace(/[^A-Za-z0-9._+-]+/g, '_').replace(/^[._]+|[._]+$/g, '') || 'track';
+const liveName = (info, t) => `${info.export_name} ${t.replace(/\//g, '_')}.wav`;
+const db = x => x > 0 ? (20 * Math.log10(x)).toFixed(2) + ' dB' : '−∞';
+let set, info, cases = [], sel = null, A = null, B = null, mode = 'a';
+let src = null, gA, gB, gD, startedAt = 0, offset = 0, playing = false, bGain = 1;
+
+async function list(dir) {
+  const r = await fetch(dir); if (!r.ok) return [];
+  const doc = new DOMParser().parseFromString(await r.text(), 'text/html');
+  return [...doc.querySelectorAll('a')].map(a => decodeURIComponent(a.getAttribute('href'))).filter(h => !h.startsWith('?') && !h.startsWith('/'));
+}
+async function init() {
+  const sets = (await list('sets/')).filter(h => h.endsWith('/')).map(h => h.slice(0, -1));
+  $('set').innerHTML = sets.map(s => `<option>${s}</option>`).join('');
+  if (!sets.length) { $('msg').textContent = 'No sets in sets/. Run compare/build_set.py (see README.md).'; return; }
+  $('set').onchange = () => loadSet($('set').value); loadSet(sets[0]);
+}
+async function loadSet(name) {
+  stop(); set = name; sel = null; A = B = null;
+  info = await (await fetch(`sets/${name}/info.json`)).json();
+  const spec = await (await fetch(`sets/${name}/set.cases.json`)).json();
+  const [live, mine] = await Promise.all([list(`sets/${name}/export/`), list(`sets/${name}/suhina/`)]);
+  const seen = new Set();
+  cases = spec.cases.filter(c => !seen.has(c.track) && seen.add(c.track)).map(c => ({
+    ...c, live: live.includes(liveName(info, c.track)) ? `sets/${name}/export/${encodeURIComponent(liveName(info, c.track))}` : null,
+    mine: mine.includes(safe(c.track) + '.wav') ? `sets/${name}/suhina/${safe(c.track)}.wav` : null }));
+  const both = cases.filter(c => c.live && c.mine).length;
+  $('setinfo').textContent = `${info.sample} · ${cases.length} tracks · ${cases.filter(c => c.live).length} from Live, ${cases.filter(c => c.mine).length} from Suhina, ${both} pairs`;
+  renderList(); const first = cases.find(c => c.live && c.mine); if (first) pick(first);
+}
+function renderList() {
+  const q = $('filter').value.toLowerCase(); let html = '', run = null;
+  cases.forEach((c, i) => {
+    if (q && !c.track.toLowerCase().includes(q)) return;
+    if (c.run !== run) { run = c.run; html += `<div class="run">${run}</div>`; }
+    const note = !c.live ? 'no Live render' : !c.mine ? 'no Suhina render' : '';
+    html += `<div class="case ${c === sel ? 'sel' : ''} ${note ? 'miss' : ''}" data-i="${i}"><span>${c.case}</span><small>${note}</small></div>`;
+  });
+  $('cases').innerHTML = html;
+  $('cases').querySelectorAll('.case').forEach(e => e.onclick = () => pick(cases[e.dataset.i]));
+}
+async function load(url) {
+  if (!url) return null;
+  return ctx.decodeAudioData(await (await fetch(url)).arrayBuffer());
+}
+async function pick(c) {
+  const was = playing, pos = position(); stop(); sel = c; renderList();
+  $('title').textContent = c.track; $('msg').textContent = 'Loading…';
+  $('params').textContent = JSON.stringify(Object.fromEntries(Object.entries(c.params).map(([k, v]) => [k, v.value])), null, 1);
+  [A, B] = await Promise.all([load(c.live), load(c.mine)]);
+  if (sel !== c) return;
+  $('msg').innerHTML = (!A ? '<span class="err">No Live render for this case. </span>' : '') + (!B ? '<span class="err">No Suhina render for this case.</span>' : '');
+  stats(); draw(); offset = Math.min(pos, dur()); if (was) play();
+}
+const dur = () => Math.max(A ? A.duration : 0, B ? B.duration : 0);
+const position = () => playing ? (offset + ctx.currentTime - startedAt) % (dur() || 1) : offset;
+function chan(buf, ch) { return buf.getChannelData(Math.min(ch, buf.numberOfChannels - 1)); }
+function measure(f, n) { let pk = 0, ss = 0; for (let i = 0; i < n; i++) { const v = f(i); pk = Math.max(pk, Math.abs(v)); ss += v * v; } return [pk, Math.sqrt(ss / n)]; }
+function stats() {
+  const rows = [];
+  if (A && B) {
+    const n = Math.min(A.length, B.length), ch = Math.min(2, A.numberOfChannels);
+    // The level B is matched to A by: one gain from the RMS of both over all channels.
+    let ra = 0, rb = 0, rd = 0, pd = 0;
+    for (let c = 0; c < ch; c++) { const a = chan(A, c), b = chan(B, c);
+      for (let i = 0; i < n; i++) { ra += a[i] * a[i]; rb += b[i] * b[i]; const d = a[i] - b[i]; rd += d * d; pd = Math.max(pd, Math.abs(d)); } }
+    const N = n * ch; ra = Math.sqrt(ra / N); rb = Math.sqrt(rb / N); rd = Math.sqrt(rd / N);
+    bGain = rb > 0 ? ra / rb : 1;
+    rows.push(['A · Live', db(Math.max(...[...Array(ch).keys()].map(c => measure(i => chan(A, c)[i], A.length)[0]))), db(ra)],
+              ['B · Suhina', db(Math.max(...[...Array(ch).keys()].map(c => measure(i => chan(B, c)[i], B.length)[0]))), db(rb)],
+              ['A − B', db(pd), db(rd)]);
+    rows.push(['level difference (RMS, B − A)', '', (20 * Math.log10(rb / ra)).toFixed(2) + ' dB'],
+              ['difference below A (RMS)', '', ra > 0 ? (20 * Math.log10(rd / ra)).toFixed(1) + ' dB' : '']);
+    if (A.length !== B.length) rows.push(['length', `${A.length} vs ${B.length} samples`, '']);
+  } else bGain = 1;
+  $('stats').innerHTML = '<tr><th></th><th>peak</th><th>RMS</th></tr>' + rows.map(r => `<tr><td>${r.join('</td><td>')}</td></tr>`).join('');
+}
+function draw() {
+  const cv = $('wave'), g = cv.getContext('2d'), W = cv.width, H = cv.height;
+  const css = getComputedStyle(document.documentElement);
+  g.clearRect(0, 0, W, H);
+  const d = dur() || 1;
+  [[A, css.getPropertyValue('--a'), 1], [B, css.getPropertyValue('--b'), $('match').checked ? bGain : 1]].forEach(([buf, col, k]) => {
+    if (!buf) return; const x = chan(buf, 0); g.strokeStyle = col.trim(); g.globalAlpha = .8; g.beginPath();
+    for (let px = 0; px < W; px++) {
+      const i0 = Math.floor(px / W * d * buf.sampleRate), i1 = Math.min(x.length, Math.floor((px + 1) / W * d * buf.sampleRate));
+      let lo = 0, hi = 0; for (let i = i0; i < i1; i++) { lo = Math.min(lo, x[i]); hi = Math.max(hi, x[i]); }
+      g.moveTo(px, H / 2 - hi * k * H / 2); g.lineTo(px, H / 2 - lo * k * H / 2 + 1);
+    }
+    g.stroke();
+  });
+  g.globalAlpha = 1; g.strokeStyle = css.getPropertyValue('--fg').trim(); const p = position() / d * W;
+  g.beginPath(); g.moveTo(p, 0); g.lineTo(p, H); g.stroke();
+  $('time').textContent = `${position().toFixed(2)} / ${dur().toFixed(2)} s`;
+}
+function routing() {
+  const m = $('match').checked ? bGain : 1;
+  gA.gain.value = mode === 'a' || mode === 'd' ? 1 : 0;
+  gB.gain.value = (mode === 'b' ? 1 : mode === 'd' ? -1 : 0) * m;
+}
+function play() {
+  if (!A && !B) return; stop(); ctx.resume();
+  gA = ctx.createGain(); gB = ctx.createGain(); gA.connect(ctx.destination); gB.connect(ctx.destination);
+  const t = ctx.currentTime + 0.05; src = [];
+  [[A, gA], [B, gB]].forEach(([buf, g]) => { if (!buf) return; const s = ctx.createBufferSource(); s.buffer = buf; s.loop = $('loop').checked; s.connect(g); s.start(t, offset); src.push(s); });
+  startedAt = t; playing = true; routing();
+  src[0].onended = () => { if (playing && !$('loop').checked) { offset = 0; stop(); } };
+}
+function stop() { if (playing) offset = position(); playing = false; (src || []).forEach(s => { s.onended = null; try { s.stop(); } catch (e) {} }); src = null; }
+function seek(t) { const was = playing; stop(); offset = Math.max(0, Math.min(t, dur() - 0.01)); if (was) play(); }
+function setMode(m) { mode = m; document.querySelectorAll('[data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === m)); if (playing) routing(); }
+$('play').onclick = () => playing ? stop() : play();
+document.querySelectorAll('[data-m]').forEach(b => b.onclick = () => setMode(b.dataset.m));
+$('match').onchange = () => { routing && playing && routing(); draw(); };
+$('loop').onchange = () => { if (playing) { const p = position(); stop(); offset = p; play(); } };
+$('filter').oninput = renderList;
+$('wave').onclick = e => { const r = e.target.getBoundingClientRect(); seek((e.clientX - r.left) / r.width * dur()); };
+addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+  if (e.code === 'Space') { e.preventDefault(); $('play').click(); }
+  else if (e.key === '1') setMode('a'); else if (e.key === '2') setMode('b'); else if (e.key === '3') setMode('d');
+  else if (e.key === 'Tab') { e.preventDefault(); setMode(mode === 'a' ? 'b' : 'a'); }
+  else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault();
+    const ok = cases.filter(c => c.live || c.mine), i = ok.indexOf(sel) + (e.key === 'ArrowDown' ? 1 : -1); if (ok[i]) pick(ok[i]); }
+});
+setInterval(() => { if (playing) draw(); }, 50);
+init();
+</script>

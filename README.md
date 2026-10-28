@@ -59,6 +59,7 @@ Building a device from a note before you start. In short:
 | [`live-12/automation.md`](live-12/automation.md) | how Live plays automation, for every parameter: segments even in the control's position, the Bezier curve family, the volume fader's taper, the smoothing of jumps |
 | [`live-12/midi-effects/`](live-12/midi-effects/) | one note per MIDI effect of Live 12 (manual chapter 30), file `30.NN-name.md`, with its own `_template.md`, `common.md` and [`INDEX.md`](live-12/midi-effects/INDEX.md) |
 | [`devices/`](devices/README.md) | one folder per device, named like its note (`29.01-amp/`, and `30.01-arpeggiator/` for the MIDI effects): the `runs.py` that defines its measurement runs, the `cases/` file of each run (every case's settings), and `results/`, Live's measured response to each case |
+| [`compare/`](compare/README.md) | listen to a Live device and the Suhina device side by side: builds a set that runs a sample through a device's cases, and a page that switches between the two renders |
 | [`probes/`](probes/README.md) | the test signals every run plays through the device (44.1 kHz WAV and manifest each), for measuring Live and for rendering a Suhina device the same way |
 | [`reference/`](reference/README.md) | what was read from Live 12.4.6 itself: the parameter dump, a readable summary per device, the saved sets that show how Live stores parameters, and the map from API parameters to stored elements |
 | [`automation/`](automation/README.md) | the automation runs: hand-made sets, their analyses and `analyse.py` |

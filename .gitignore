@@ -30,3 +30,8 @@ Ableton Project Info/
 # written by tools/probe-device/build_patch.py
 tools/probe-device/Suhina Probe.maxpat
 tools/probe-device/clipboard.json
+
+# Side-by-side comparison with Live (compare/): the samples (made by make_samples.py) and the sets with
+# their projects, Live's exports and Suhina's renders are local; the scripts and the page are kept
+compare/samples/
+compare/sets/
