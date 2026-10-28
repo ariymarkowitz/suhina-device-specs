@@ -1,0 +1,2953 @@
+{
+ "set": "shelf-q-sweep.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "eq-eight-shelf-q-sweep bypass",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "bypass",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep bypass"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep default",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "default",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 0.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "0",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep default"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q0.2",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q0.2",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.1330078939752983,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "0.2",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.1334783285856247,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q0.2"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q0.35",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q0.35",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.2397314836167154,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "0.35",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.24124270677566528,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q0.35"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q0.5",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q0.5",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.30871175917611476,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "0.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.3099270761013031,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q0.5"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q1",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q1",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.44350541186655207,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4434053897857666,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q1"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q1.5",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q1.5",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.520971645147193,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "1.5",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5214852094650269,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q1.5"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q3",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q3",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.6549962128258983,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "3",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.6549635529518127,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q3"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q4",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q4",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7103869195132008,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "4",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7103620171546936,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q4"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q8",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q8",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.84375,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "8",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8438403606414795,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q8"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q12",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q12",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.921875,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.9219201803207397,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q12"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q18",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q18",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 1.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "18",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q18"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep ls-q0.2",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "ls-q0.2",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 2,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "2",
+     "live": {
+      "value": 2.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.1330078939752983,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "0.2",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.1334783285856247,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep ls-q0.2"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep ls-q1",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "ls-q1",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 2,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "2",
+     "live": {
+      "value": 2.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.44350541186655207,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.4434053897857666,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep ls-q1"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep ls-q4",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "ls-q4",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 2,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "2",
+     "live": {
+      "value": 2.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7103869195132008,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "4",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7103620171546936,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep ls-q4"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep ls-q18",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "ls-q18",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 2,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "2",
+     "live": {
+      "value": 2.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 1.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "18",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep ls-q18"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q0.1-g3",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q0.1-g3",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 3.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "3",
+     "tol": 0.015625,
+     "live": {
+      "value": 3.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q0.1-g3"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q0.1-gm12",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q0.1-gm12",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": -12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "-12",
+     "tol": 0.015625,
+     "live": {
+      "value": -12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q0.1-gm12"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q0.1-g15",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q0.1-g15",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 15.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "15",
+     "tol": 0.015625,
+     "live": {
+      "value": 15.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "0.1",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q0.1-g15"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q2-g3",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q2-g3",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 3.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "3",
+     "tol": 0.015625,
+     "live": {
+      "value": 3.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.5771202022919649,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "2",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5768837332725525,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q2-g3"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q2-gm12",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q2-gm12",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": -12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "-12",
+     "tol": 0.015625,
+     "live": {
+      "value": -12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.5771202022919649,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "2",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5768837332725525,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q2-gm12"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q2-g15",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q2-g15",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 15.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "15",
+     "tol": 0.015625,
+     "live": {
+      "value": 15.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.5771202022919649,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "2",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5768837332725525,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q2-g15"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q6-g3",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q6-g3",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 3.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "3",
+     "tol": 0.015625,
+     "live": {
+      "value": 3.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7884229752837588,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "6",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7884418368339539,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q6-g3"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q6-gm12",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q6-gm12",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": -12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "-12",
+     "tol": 0.015625,
+     "live": {
+      "value": -12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7884229752837588,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "6",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7884418368339539,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q6-gm12"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q6-g15",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q6-g15",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 15.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "15",
+     "tol": 0.015625,
+     "live": {
+      "value": 15.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7884229752837588,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "6",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7884418368339539,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q6-g15"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q18-g3",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q18-g3",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 3.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "3",
+     "tol": 0.015625,
+     "live": {
+      "value": 3.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 1.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "18",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q18-g3"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q18-gm12",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q18-gm12",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": -12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "-12",
+     "tol": 0.015625,
+     "live": {
+      "value": -12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 1.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "18",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q18-gm12"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q18-g15",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q18-g15",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.5983202165514613,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "1000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.5983683466911316,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 15.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "15",
+     "tol": 0.015625,
+     "live": {
+      "value": 15.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 1.0,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "18",
+     "tol": 0.015625,
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q18-g15"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep ls-q6-100",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "ls-q6-100",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.2991913794325851,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "100",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.2991841733455658,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 2,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "2",
+     "live": {
+      "value": 2.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7884229752837588,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "6",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7884418368339539,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep ls-q6-100"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep ls-q6-10000",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "ls-q6-10000",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.8975173764917626,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "10000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8975525498390198,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 2,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "2",
+     "live": {
+      "value": 2.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7884229752837588,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "6",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7884418368339539,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep ls-q6-10000"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q6-100",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q6-100",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.2991913794325851,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "100",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.2991841733455658,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7884229752837588,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "6",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7884418368339539,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q6-100"
+  },
+  {
+   "id": "eq-eight-shelf-q-sweep hs-q6-10000",
+   "run": "eq-eight-shelf-q-sweep",
+   "case": "hs-q6-10000",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Adaptive Q": {
+     "value": 0,
+     "element": "AdaptiveQ",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "1 Filter On A": {
+     "value": 0,
+     "element": "Bands.0/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "2 Filter On A": {
+     "value": 0,
+     "element": "Bands.1/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "4 Filter On A": {
+     "value": 0,
+     "element": "Bands.3/ParameterA/IsOn",
+     "stored": "false",
+     "live": {
+      "value": 0.0,
+      "display": null
+     }
+    },
+    "3 Filter On A": {
+     "value": 1,
+     "element": "Bands.2/ParameterA/IsOn",
+     "stored": "true",
+     "live": {
+      "value": 1.0,
+      "display": null
+     }
+    },
+    "3 Frequency A": {
+     "value": 0.8975173764917626,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "10000",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.8975525498390198,
+      "display": null
+     }
+    },
+    "3 Gain A": {
+     "value": 12.0,
+     "element": "Bands.2/ParameterA/Gain",
+     "stored": "12",
+     "tol": 0.015625,
+     "live": {
+      "value": 12.0,
+      "display": null
+     }
+    },
+    "3 Filter Type A": {
+     "value": 5,
+     "element": "Bands.2/ParameterA/Mode",
+     "stored": "5",
+     "live": {
+      "value": 5.0,
+      "display": null
+     }
+    },
+    "3 Q A": {
+     "value": 0.7884229752837588,
+     "element": "Bands.2/ParameterA/Q",
+     "stored": "6",
+     "tol": 0.015625,
+     "live": {
+      "value": 0.7884418368339539,
+      "display": null
+     }
+    }
+   },
+   "errors": [],
+   "track": "eq-eight-shelf-q-sweep hs-q6-10000"
+  }
+ ],
+ "keys": {}
+}

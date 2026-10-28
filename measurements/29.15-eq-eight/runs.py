@@ -177,4 +177,15 @@ RUNS = [
      "question": "the noise through a +12 dB bell, Q 2, whose frequency glides from 100 Hz to 10 kHz over beats 62 to 69",
      "base": dict(BASE, **band("Bell", 12, 2)),
      "cases": [["glide", {"3 Frequency A": {"auto": [[0, {"display": 100}], [62, {"display": 100}], [69, {"display": 10000}]]}}]]},
+
+    {"name": "eq-eight-shelf-q-sweep", "plan": "2", "probe": "gap2", "read": ["response.sweep_db"], "priority": 1,
+     "why": "the law that turns a shelf's Q into its shape: eq-eight-shelf-q (Q 0.1, 2, 6 at +12 dB, 1 kHz) is matched by a cookbook shelf only with effective Q 0.30, 1.06 and 1.49, so the law needs more points, a check that it does not depend on gain or frequency, and a check that low and high shelves agree",
+     "question": "high shelf at 1 kHz, +12 dB, Q 0.2 to 18; low shelf at Q 0.2, 1, 4 and 18; Q 0.1, 2, 6 and 18 at +3, -12 and +15 dB; Q 6 at 100 Hz and 10 kHz, low and high",
+     "base": BASE,
+     "cases": [[f"hs-q{q}", band("High Shelf", gain=12, q=q)] for q in (0.2, 0.35, 0.5, 1, 1.5, 3, 4, 8, 12, 18)] +
+              [[f"ls-q{q}", band("Low Shelf", gain=12, q=q)] for q in (0.2, 1, 4, 18)] +
+              [[f"hs-q{q}-g{name}", band("High Shelf", gain=g, q=q)]
+               for q in (0.1, 2, 6, 18) for name, g in (("3", 3), ("m12", -12), ("15", 15))] +
+              [[f"{k}-q6-{f}", band(kind, gain=12, q=6, freq=f)]
+               for k, kind in (("ls", "Low Shelf"), ("hs", "High Shelf")) for f in (100, 10000)]},
 ]
