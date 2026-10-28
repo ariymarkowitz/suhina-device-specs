@@ -1,0 +1,158 @@
+{
+ "device": "Limiter",
+ "parameter": "limiter-auto-release-bursts",
+ "question": "gain over the -30 dBFS bed after each bed burst (18 dB over a -24 dB ceiling): Auto on with Release 10 ms and 1 s; Auto off at 300 ms",
+ "plan": "8",
+ "read": [
+  "ext: bedbursts envelope"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -24
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "auto-rel10",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -24
+    },
+    "Release": {
+     "display": 0.01
+    },
+    "Auto": {
+     "item": "On"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "auto-rel1000",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -24
+    },
+    "Release": {
+     "display": 1
+    },
+    "Auto": {
+     "item": "On"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "manual-300",
+   "params": {
+    "Input Gain": {
+     "display": 0
+    },
+    "Ceiling": {
+     "display": -24
+    },
+    "Release": {
+     "display": 0.3
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

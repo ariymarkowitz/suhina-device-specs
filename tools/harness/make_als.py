@@ -6,7 +6,7 @@
     python make_als.py calibrate --device Compressor -o calib.als
     python live_check.py read -o calib.read.json            # with calib.als open in Live
     python make_als.py map calib.calibration.json calib.read.json
-    python make_als.py build cases.json [cases.json ...] -o measure.als [--probe probe-gap10/probe.wav] [--share]
+    python make_als.py build cases.json [cases.json ...] -o measure.als [--probe gap10] [--share]
     python live_check.py verify measure.cases.json          # with measure.als open in Live
 
 A set holds each parameter as a stored value in its own units, under an element name that
@@ -22,7 +22,7 @@ often differs from the parameter's API name and in a different order (Compressor
   text, it picks how an API value becomes a stored value (the same number; the same number as
   an integer; the display's number in Hz, s, ms, % / 100 or dB as linear gain; a straight line
   from the API range onto the element's controller range; an index), and writes it to the map
-  file (`measurements/als-map-12.4.6.json`).
+  file (`reference/als-map-12.4.6.json`).
 
 `build` then writes any number of cases files (cases.py's format) into one set: a copy of the
 template track per case, named `<run> <case id>` (run = the cases file's name), holding a fresh
@@ -46,8 +46,9 @@ Two more kinds of case entry reach what a static parameter value cannot:
   switches, Vocoder's band count), written as it is into its `Value` (or its `Manual`). Live
   cannot report these, so `verify` does not check them; `<set>.cases.json` lists them under
   `elements`.
-- **A side-chain key**: a stored element whose value is `"key:<wav>"` (a path from the
-  repository), such as `"@SideChain/RoutedInput/Routable/Target": "key:measurements/probe-keys/key-duck.wav"`.
+- **A side-chain key**: a stored element whose value is `"key:<name>"` (a
+  probe name from probes.py, or a WAV path from the repository), such as
+  `"@SideChain/RoutedInput/Routable/Target": "key:key-duck"`.
   The set gets one track per key file, named `key <file>`, playing it from the start like a
   probe (no device), and the element is written as that track's post-FX output
   (`AudioIn/Track.<id>/PostFxOut`, the form Live's own sets use). The device's side-chain
@@ -76,18 +77,19 @@ import sys
 import xml.etree.ElementTree as ET
 
 import als
+import probes
 from wavio import read_wav
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 PROJECT_INFO = "Ableton Project Info"
 DEFAULTS = {
-    "dump": os.path.join(ROOT, "measurements", "dump-12.4.6.json"),
-    "devices": os.path.join(ROOT, "measurements", "populate-12.4.6.als"),
-    "template": os.path.join(ROOT, "measurements", "29.09-compressor", "compressor-threshold.als"),
+    "dump": os.path.join(ROOT, "reference", "dump-12.4.6.json"),
+    "devices": os.path.join(ROOT, "reference", "populate-12.4.6.als"),
+    "template": os.path.join(HERE, "data", "template.als"),
     "track": None,
-    "map": os.path.join(ROOT, "measurements", "als-map-12.4.6.json"),
-    "probe": os.path.join(ROOT, "measurements", "probe.wav"),
+    "map": os.path.join(ROOT, "reference", "als-map-12.4.6.json"),
+    "probe": "gap2",
 }
 
 # How an API value becomes a stored value, for continuous parameters, by the display's number
@@ -185,7 +187,7 @@ def source_device(devices_root, dump_dev):
 def start_set(a):
     root = als.read_set(a.template)
     template = als.find_track(root, a.track) if a.track else als.clip_track(root)
-    point_template(template, a.probe, a.output, set_tempo(root))
+    point_template(template, probe_path(a.probe), a.output, set_tempo(root))
     if not a.keep_returns:
         als.remove_returns(root)
     als.clear_tracks(root)
@@ -755,12 +757,19 @@ def write_envelope(track, element, kind, points):
     ET.SubElement(view, "TimeAndValueTransforms")
 
 
+def probe_path(p):
+    """A probe's WAV: a name from probes.py (made if missing) or a path."""
+    return probes.path(p) if p in probes.PROBES else os.path.abspath(p)
+
+
 def case_probe(spec, path, default):
-    """The probe a cases file asks for (`"probe"`: a path relative to the repository or to the
-    file), or `default`."""
+    """The probe a cases file asks for (`"probe"`: a name from probes.py, or a path relative to
+    the repository or to the file), or `default`."""
     p = spec.get("probe")
     if not p:
-        return os.path.abspath(default)
+        return probe_path(default)
+    if p in probes.PROBES:
+        return probes.path(p)
     for base in (ROOT, os.path.dirname(os.path.abspath(path))):
         if os.path.exists(os.path.join(base, p)):
             return os.path.abspath(os.path.join(base, p))
@@ -773,7 +782,7 @@ def cmd_build(a):
     amap = load_json(a.map)["devices"]
     root, template = start_set(a)
     tempo = set_tempo(root)
-    templates = {os.path.abspath(a.probe): template}
+    templates = {probe_path(a.probe): template}
     ids = als.Ids(root)
     out = {"set": os.path.basename(a.output), "generated_by": "make_als.py", "cases": [], "keys": {}}
     problems = 0
@@ -781,6 +790,8 @@ def cmd_build(a):
     keys = {}  # key wav -> its track's Id
 
     def key_target(path):
+        if path in probes.PROBES:
+            path = os.path.relpath(probes.path(path), ROOT)
         wav = next((os.path.abspath(os.path.join(b, path)) for b in (ROOT, os.getcwd())
                     if os.path.exists(os.path.join(b, path))), None)
         if wav is None:
@@ -912,7 +923,7 @@ def main(argv=None):
                            help="that track's name (default: the first audio track with a clip)")
             p.add_argument("--keep-returns", action="store_true")
             p.add_argument("--probe", default=DEFAULTS["probe"],
-                           help="the probe WAV the clip plays, at the set's sample rate (its length sets the clip's)")
+                           help="the probe the clip plays: a name from probes.py or a WAV at the set's sample rate (its length sets the clip's)")
             p.add_argument("-o", "--output", required=True)
 
     c = sub.add_parser("calibrate")

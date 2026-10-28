@@ -1,0 +1,101 @@
+{
+ "device": "EQ Eight",
+ "parameter": "eq-eight-freq-glide",
+ "question": "the noise through a +12 dB bell, Q 2, whose frequency glides from 100 Hz to 10 kHz over beats 62 to 69",
+ "plan": "9",
+ "read": [
+  "raw render over the noise (steps, zipper)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 2
+    }
+   }
+  },
+  {
+   "id": "glide",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "auto": [
+      [
+       0,
+       {
+        "display": 100
+       }
+      ],
+      [
+       62,
+       {
+        "display": 100
+       }
+      ],
+      [
+       69,
+       {
+        "display": 10000
+       }
+      ]
+     ]
+    },
+    "3 Gain A": {
+     "display": 12
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 2
+    }
+   }
+  }
+ ]
+}

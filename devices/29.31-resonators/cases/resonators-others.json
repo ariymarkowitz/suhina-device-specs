@@ -1,0 +1,153 @@
+{
+ "device": "Resonators",
+ "parameter": "resonators-others",
+ "question": "ring frequency and decay of each of II to V alone at Pitch +12 (I at C2); II at Pitch -24 and +24 and Tune +50; II at Pitch +12 with Const off",
+ "plan": "2, 3",
+ "read": [
+  "impulse (ring frequency, T30)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0
+   }
+  },
+  {
+   "id": "ii-p12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 1,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "II Pitch": 12
+   }
+  },
+  {
+   "id": "iii-p12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 0,
+    "III On": 1,
+    "IV On": 0,
+    "V On": 0,
+    "III Pitch": 12
+   }
+  },
+  {
+   "id": "iv-p12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 1,
+    "V On": 0,
+    "IV Pitch": 12
+   }
+  },
+  {
+   "id": "v-p12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 1,
+    "V Pitch": 12
+   }
+  },
+  {
+   "id": "ii-p-24",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 1,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "II Pitch": -24
+   }
+  },
+  {
+   "id": "ii-p+24",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 1,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "II Pitch": 24
+   }
+  },
+  {
+   "id": "ii-tune+50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 1,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "II Tune": 50
+   }
+  },
+  {
+   "id": "ii-p12-constoff",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "I On": 0,
+    "II On": 1,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "II Pitch": 12,
+    "Const": 0
+   }
+  }
+ ]
+}

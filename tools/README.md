@@ -7,7 +7,7 @@ parts:
 | Part | What it does |
 |---|---|
 | [`probe-device/`](probe-device/) | **Suhina Probe**, a Max for Live audio effect. Passes audio through unchanged; dumps every device's parameters (range, default, steps, display text across the range, so tapers and units) to JSON; builds one track per test case with the device set to the case's values; adds a track per Live audio effect |
-| [`harness/`](harness/) | Python: the probe signal (`signals.py`), case files from a dump (`cases.py`), a measurement set written directly as an `.als` (`make_als.py`, `als.py`) and checked in Live (`live_check.py`), measurements of renders (`analyse.py`), renders of the same set through the implementation under test (`render_set.py`), and the comparison (`compare.py`) |
+| [`harness/`](harness/) | Python: **`measure.py`**, which builds a device's measurement set and analyses its renders; the probe signals (`signals.py`, `probes.py`); a set written directly as an `.als` (`make_als.py`, `als.py`) and checked in Live (`live_check.py`); measurements of renders (`analyse.py`); renders of the same set through the implementation under test (`render_set.py`); and the comparison (`compare.py`) |
 
 Everything here observes the running program through Live's public interfaces (the Live Object
 Model as documented by Cycling '74, rendered audio, saved sets). Nothing reads Live's program
@@ -19,9 +19,9 @@ files (README › Clean-room rules).
 python3 -m venv tools/.venv && tools/.venv/bin/pip install -r tools/harness/requirements.txt
 ```
 
-Run commands from this folder (`suhina-resources`). `PY` below is `tools/.venv/bin/python`.
+Run commands from the repository's root. `PY` below is `tools/.venv/bin/python`.
 
-### Build the Suhina Probe device (once, about two minutes)
+### Build the Suhina Probe device (only to dump a new Live version's parameters; about two minutes)
 
 The device is kept as text (`suhina_probe.js` and the patcher written by `build_patch.py`), since
 an `.amxd` is a binary container. To turn it into a device:
@@ -64,7 +64,7 @@ there, so check their results by their effects (tracks, files).
    the same factory default preset as the browser (Live's status bar says "Using Default Preset
    ….adv"); a user default preset in `User Library/Defaults/Audio Effects` would replace it, so
    check that folder is empty first.
-3. Click **Dump parameters** and choose where to save, for example `measurements/dump-12.4.6.json`.
+3. Click **Dump parameters** and choose where to save, for example `reference/dump-12.4.6.json`.
 
 Each device in the dump has `class_name` (the `.als` element name, e.g. `Compressor2`), and each
 parameter `name`, `original_name`, `min`, `max`, `value` (the default, on a fresh device),
@@ -73,8 +73,8 @@ display text]` at 65 evenly spaced values (send `samples 257` to the js object f
 samples are the control's display curve, so they give the taper and the unit:
 
 ```bash
-$PY tools/harness/cases.py list measurements/dump-12.4.6.json                 # every device
-$PY tools/harness/cases.py list measurements/dump-12.4.6.json --device Compressor   # its parameters, ranges, tapers
+$PY tools/harness/cases.py list reference/dump-12.4.6.json                 # every device
+$PY tools/harness/cases.py list reference/dump-12.4.6.json --device Compressor   # its parameters, ranges, tapers
 ```
 
 `value` is what the loaded preset sets and `default_value` what double-click or Delete restores;
@@ -84,7 +84,7 @@ they can differ (Compressor loads with Env Mode Log but resets to Lin). The rese
 Copy what the dump settles into the device's note: replace `[measure]` with the value and the
 tag `[dump 12.4.6]`. Save the populated set too: its device elements hold the parameters under
 their `.als` names in stored units (Compressor `Threshold` = 1 is linear gain, 0 dB; `Attack` = 1
-is ms), which the dump's 0..1 internal values do not show. `measurements/dump-12.4.6-summary/`
+is ms), which the dump's 0..1 internal values do not show. `reference/dump-12.4.6-summary/`
 has one readable file per device with both.
 
 **MIDI effects.** The probe's Populate adds only audio effects, but its dump reads every track,
@@ -92,69 +92,60 @@ MIDI tracks included. `harness/populate_midi.py` makes the set for the MIDI effe
 `write` puts the probe and one MIDI track per MIDI effect into a new set, `live_check.py open`
 loads it, and `load` puts each effect on its track from the browser through the Remote Script
 (the factory default preset). Then Dump parameters and save the set, as above. The 12.4.6 run
-is `measurements/dump-midi-12.4.6.json`, `measurements/populate-midi-12.4.6.als` and the
+is `reference/dump-midi-12.4.6.json`, `reference/populate-midi-12.4.6.als` and the
 `Midi*.txt` summaries; its docstring has the commands.
 
-## 2. Measure the device's behaviour
 
-1. Make the probe signal at the set's sample rate (use `--gap 10` or more for reverbs and long
-   delays, so tails do not run into the next signal):
+## 2. Measure a device's behaviour
 
-   ```bash
-   $PY tools/harness/signals.py -o measurements/probe.wav --rate 48000 --gap 2
-   ```
+A device's runs are in `devices/<device>/runs.py` (`measure.py`'s docstring has the format): each
+run is a question ("slope above the threshold for Ratio 2 to inf"), the probe that answers it
+and the cases, each a set of parameter values. `measure.py` turns the runs into one Live Set, so
+no case is built by hand.
 
-   `probe.json` beside it says where each test signal starts (impulse, sweep, level staircase,
-   level bursts, steady tone, noise, left-only, right-only, silence).
-2. New Live Set at 120 BPM, 48 kHz (**Settings > Audio**). Drag `probe.wav` to the start of an
-   audio track in the Arrangement. In the clip's view turn **Warp** off, so the file plays
-   untouched. Put Suhina Probe on the track, and the device to measure right of it.
-   - Dropping the file into an empty set warps it and **changes the set's tempo** to fit (82.14
-     BPM in the first run). Turn Warp off first, then type 120 into the tempo field.
-   - Some audio outputs fix the rate: with Bluetooth headphones as output, Live offers only
-     44.1 kHz. Everything here works at any rate as long as it is the same throughout: make the
-     probe with `--rate 44100` and render the implementation's cases at 44.1 kHz too. The first run used
-     44.1 kHz for this reason.
-   - Easiest way to reach `probe.wav` and the probe from Live's browser without adding a folder to
-     Places: save the new set first (Live makes `<name> Project/`), copy `probe.wav`, `Suhina
-     Probe.amxd` and `suhina_probe.js` into that folder, then use the browser's **Current
-     Project**.
-3. Make the cases, for example the Compressor's Threshold at seven values with Ratio fixed:
+```bash
+PY=tools/.venv/bin/python
+$PY tools/harness/measure.py list                          # devices and runs
+$PY tools/harness/measure.py list compressor               # one device's runs and questions
+$PY tools/harness/measure.py check compressor              # every run's values, without Live
+$PY tools/harness/measure.py build compressor              # work/sets/compressor/compressor.als
+$PY tools/harness/live_check.py open work/sets/compressor/compressor.als
+$PY tools/harness/live_check.py verify work/sets/compressor/compressor.cases.json   # optional
+#   File > Export Audio/Video (below)
+$PY tools/harness/measure.py analyse compressor            # devices/29.09-compressor/results/
+```
 
-   ```bash
-   $PY tools/harness/cases.py sweep measurements/dump-12.4.6.json --device Compressor \
-       --param Threshold --points 7 --set "Ratio=display:4" \
-       -o measurements/29.09-compressor/compressor-threshold.json
-   ```
+A DEVICE argument is a folder of `devices/` or any part of its name; none means every audio
+effect (about 2700 tracks, an hour of export), and `--run` picks runs. `build` writes each run's
+cases file into `devices/<device>/cases/`, makes the probes it needs in `probes/`
+(`probes.py`: the main probe with 2, 10 or 30 s of silence after each signal, the extended and
+fifth probes, the side-chain keys; all at 44.1 kHz) and prints the export name and length for each
+probe it used.
 
-   Values: `--points N` steps evenly through the internal range, `--display=-40,-30,-20` picks
-   values by what the control shows (Hz, s, dB, %), a quantized parameter gets one case per item.
-   Every file starts with `bypass` (device off) and `default`. Each device's runs go in its own
-   folder under `measurements/`, named like its note (`29.09-compressor/` for the Compressor).
-4. Click **Build cases** on the probe and choose the cases file. One track per case appears
-   under the template, named by case id; `compressor-threshold.built.json` records the value and
-   display text each parameter actually got, and any parameter it could not set.
-5. **File > Export Audio/Video**: Rendered Track **All Individual Tracks**, from 1.1.1 for the
-   length of the probe (the manifest's `length` / `rate` seconds), WAV, 32-bit, the same sample
-   rate, Normalize off, Dither off (greyed out at 32-bit), Create Analysis File off. The probe is
-   46.75 s, so 24 bars at 120 BPM. Export into the device's `export/` folder
-   (`measurements/29.09-compressor/export/`) and save the set at the top of its folder
-   (`compressor-threshold.als`). Live names the files `<export name> <track name>.wav` (e.g.
-   `compressor-threshold bypass.wav`), adds `<export name>.wav` for the main mix, writes silent
-   files for audio and return tracks without clips, and skips MIDI tracks without instruments.
-   `compare.py --cases` pairs these by the case id at the end of the name, as it is.
-6. Measure:
+**Opening the set.** With the AbletonMCP Remote Script installed (2b) `live_check.py open` loads
+the set and waits for it; without it, double-click the `.als`. It is a Live Project (the empty
+`Ableton Project Info` folder beside it), which Live needs to load the probe clips; they play the
+files in `probes/`, so move nothing there while Live has the set open. Live 12.4.6 and
+12.4.7 differ in places (the notes' `[measured 12.4.6]` and `[measured 12.4.7]` tags); a set
+renders in whichever version opens it.
 
-   ```bash
-   $PY tools/harness/analyse.py measurements/probe.json measurements/29.09-compressor/export/*.wav \
-       -o measurements/29.09-compressor/live
-   ```
+**Export** (the one step that needs Live's window): File > Export Audio/Video, Rendered Track
+**All Individual Tracks** (or **Selected Tracks Only** for one probe's tracks), from 1.1.1, for the
+length `build` prints (the probe's length in bars at 120 BPM), WAV, 32-bit, the set's sample rate
+(44.1 kHz), Normalize off, Dither off (greyed out at 32-bit), Create Analysis File off, into
+`work/sets/<name>/export/`, with the export name `build` prints. Live names the files `<export
+name> <track name>.wav`, adds `<export name>.wav` for the main mix (ignored) and writes silent files
+for tracks without clips. When a set uses more than one probe, export each probe's tracks on
+their own under `<name>-<probe>`, or every track at once under `<name>` at the longest length and
+add `--trim` to `analyse`.
 
-   Per render: `<name>.json` (impulse taps, RT60, frequency response from sweep and noise, static
-   gain curve with THD, attack and release times, amplitude and pitch modulation, stereo matrix,
-   output with no input), and `<name>.response.csv`, `.static.csv`, `.envelope.csv`, `.ir.wav`.
-   Live's export is delay-compensated, so renders line up with the probe; add `--align xcorr` if
-   one does not.
+**Analyse** measures every render (`analyse.py`) and writes `devices/<device>/results/<track>.json`
+for each (kept in the repository), the CSV views and impulse response into `extras/`, and files the
+render in `renders/<track>.wav` (the last two are not in the repository; `--no-file` leaves the
+render). The offset of Live's export against the probe is taken from the `bypass` renders of each
+probe's tracks; Live has exported a whole set 40 ms early, so check the line `analyse` prints. A
+render that is not there is reported, so a partial export is measured as far as it goes and
+`analyse` run again afterwards finds the renders already filed.
 
 Which signal answers which question:
 
@@ -163,7 +154,7 @@ Which signal answers which question:
 | range, default, steps, taper, unit | the dump |
 | filter shape, slope, EQ curve | `response.sweep_db` (time-invariant devices), `response.noise_db` (modulated ones) |
 | delay times, feedback, echoes | `impulse.taps` |
-| reverb or resonator decay | `impulse.rt60_s`, `.ir.wav` |
+| reverb or resonator decay | `impulse.rt60_s`, the `.ir.wav` in `extras/` |
 | compressor or distortion curve, makeup, ceiling | `static` (output and gain per input level, THD and harmonics) |
 | attack and release | `dynamics` (63 % and 90 % times; resolution one cycle of the tone, 1 ms) |
 | LFO rate and depth (tremolo, pan, chorus, vibrato) | `modulation` (AM rate/depth, FM rate/depth in cents, L/R envelope correlation) |
@@ -171,13 +162,21 @@ Which signal answers which question:
 | noise, crackle | `silence` |
 | latency | Live's own readout (hover the device title), or `--align xcorr` on a render with compensation off |
 
-## 2b. Write the measurement set as one `.als` instead
+`signals.py`'s docstring lists the probe's signals, and `probes/<name>.json` says where each
+starts. Analysing one render by hand: `$PY tools/harness/analyse.py probes/gap2.json
+<render>.wav -o <folder>`.
 
-`make_als.py` writes the cases of any number of cases files, for any calibrated devices, into one
-Live Set: one track per case, named `<run> <case id>`, holding the probe clip and a fresh copy of
-the device with the case's values. It replaces steps 2.2 to 2.4 (no dragging the probe in, no
-Build cases). The set still has to be opened in Live and exported (step 2.5), but once for a whole
-batch of runs.
+**Adding a run.** Add a dict to the device's `runs.py`, `check` it, `build` and measure it as
+above. To look at a device's parameters first: `$PY tools/harness/cases.py list
+reference/dump-12.4.6.json --device Compressor`. Old runs stay: a new run answers a new question
+and the note records it.
+
+## 2b. How the set is written, and calibrating a device
+
+`make_als.py` (which `measure.py build` calls) writes the cases of any number of cases files, for
+any calibrated devices, into one Live Set: one track per case, named `<run> <case id>`, holding the
+probe clip and a fresh copy of the device with the case's values. The set is opened in Live and
+exported once for a whole batch of runs; the Suhina Probe is not needed.
 
 A set stores each parameter in its own units, under an element name that often differs from the
 API name and in a different order (Compressor's Output is `Gain`, EQ Eight's Adaptive Q comes
@@ -198,18 +197,18 @@ Remote Script, not Live's window: `live_check.py open <set>.als` opens a set (`o
 until the script lists its tracks (the number, and the first and last names), `read` dumps every
 track's devices, `verify` checks a generated set. Live replaces the open set without asking only
 when that one has no unsaved changes; if `open` times out, a dialog is waiting in Live. Live's API
-has no audio export and the script cannot arm, route or record, so the export (step 2.5) is the
+has no audio export and the script cannot arm, route or record, so the export (2) is the
 one step done in the UI. Agents ask the user before taking over Live's window for it
 (`AGENTS.md`).
 
 **Calibrate a device (once per device):**
 
 ```bash
-$PY tools/harness/make_als.py calibrate --device Compressor -o measurements/29.09-compressor/compressor-calibrate.als
-$PY tools/harness/live_check.py open measurements/29.09-compressor/compressor-calibrate.als
-$PY tools/harness/live_check.py read -o measurements/29.09-compressor/compressor-calibrate.read.json
-$PY tools/harness/make_als.py map measurements/29.09-compressor/compressor-calibrate.calibration.json \
-    measurements/29.09-compressor/compressor-calibrate.read.json
+$PY tools/harness/make_als.py calibrate --device Compressor -o work/calibrate/compressor.als
+$PY tools/harness/live_check.py open work/calibrate/compressor.als
+$PY tools/harness/live_check.py read -o work/calibrate/compressor.read.json
+$PY tools/harness/make_als.py map work/calibrate/compressor.calibration.json \
+    work/calibrate/compressor.read.json
 ```
 
 The calibration set has a `ref <class>` track (the factory default) and one `cal <class>
@@ -226,33 +225,30 @@ parameter that moved on each track and works out how an API value becomes the st
 
 `linear` is chosen over a display conversion when the dump's display lies on that line at every
 sample, since it is exact where the display is rounded. The result goes to
-`measurements/als-map-12.4.6.json`. Elements that move no API parameter (the Compressor's
+`reference/als-map-12.4.6.json`. Elements that move no API parameter (the Compressor's
 `LegacyModel`) are listed as unmatched and never set. Re-running `map` for another device
 replaces that device's entry.
 
-The calibration files of each device are `measurements/29.NN-<device>/<device>-calibrate.*`
-(`.als`, `.calibration.json`, `.read.json`). All 42 Live audio effects are mapped; see [All
-effects calibrated](#all-effects-calibrated-live-1246-2026-10-18) for what has no element or no
+The calibration sets are scratch files (`work/calibrate/`, not kept; the result is the map). All 42
+Live audio effects are mapped; see [All effects calibrated](#all-effects-calibrated-live-1246-2026-10-18) for what has no element or no
 parameter.
 
-**Build and check a measurement set:**
+**Build and check a measurement set by hand** (`measure.py build` does this for a device's runs):
 
 ```bash
-$PY tools/harness/make_als.py build measurements/29.09-compressor/compressor-threshold.json \
-    measurements/29.09-compressor/compressor-attack-gen.json -o measurements/29.09-compressor/compressor-gen.als
-$PY tools/harness/live_check.py open measurements/29.09-compressor/compressor-gen.als
-$PY tools/harness/live_check.py verify measurements/29.09-compressor/compressor-gen.cases.json \
-    -o measurements/29.09-compressor/compressor-gen.verified.json
+$PY tools/harness/make_als.py build devices/29.09-compressor/cases/compressor-threshold.json \
+    devices/29.09-compressor/cases/compressor-attack.json -o work/compressor-gen.als
+$PY tools/harness/live_check.py open work/compressor-gen.als
+$PY tools/harness/live_check.py verify work/compressor-gen.cases.json \
+    -o work/compressor-gen.verified.json
 ```
 
 `build` writes the set and `<set>.cases.json` (per track: device, and per case parameter the
 API value, element and stored value). `verify` reads every track back from Live. It checks each
 case parameter against its API value, and every other parameter against the dump's default,
 which is where a wrongly mapped element shows. With `-o` it writes what Live reports (`live`)
-beside each value: the record to analyse against, in place of `<run>.built.json`. Export as in
-step 2.5 under one export name. Each run's files are then `<export> <run> <case id>.wav`, so
-analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases` takes the
-`.verified.json`.
+beside each value: the record to analyse against, as the record of what each case holds. Export as in (2) under one
+export name; each run's files are then `<export> <run> <case id>.wav`.
 
 - **Values.** A `display` spec in base units is converted exactly (Threshold `display:-20` is
   stored as 0.1), and so is any value through `same`, `integer`, `linear`, `bool` or `offset`.
@@ -273,12 +269,12 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
   conversion for. A display-given value's expected API value is only known to one sample step
   (1/64 of the range) except on a `linear` line, and `verify` allows that much for every
   display-given value.
-- **The template** (`--template`, default `measurements/29.09-compressor/compressor-threshold.als`)
+- **The template** (`--template`, default `tools/harness/data/template.als`, a set Live saved with one probe clip, Warp off, at 120 BPM)
   supplies the audio track with the probe clip (Warp off), the tempo and the main track. Its
   other tracks and its return tracks are dropped (`--keep-returns` keeps the returns). The clip
-  is pointed at `--probe` (default `measurements/probe.wav`) and fitted to its length, so a
-  reverb run can use `probe-gap30/probe.wav`. The probe must have the set's sample rate. A cases
-  file can name its own probe (`"probe"`), so runs with different probes can share a set; a run
+  is pointed at `--probe` (a name from `probes.py`, default `gap2`, or a WAV) and fitted to its length, so a
+  reverb run can use `gap30`. The probe must have the set's sample rate. A cases
+  file can name its own probe (`"probe"`: a name from `probes.py`), so runs with different probes can share a set; a run
   that needs another tempo goes in another set.
 - **`--share`** gives one track to every case whose device is stored identically with the same
   probe (every run's `bypass` of a device, a `default` that another run also has), named after
@@ -286,11 +282,10 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
 - **The set is a Live Project.** Live 12.4.6 loads no sample of a set that is not in a Project
   folder, whatever the clip's Path says: every clip shows Sample Offline and Live's `Log.txt`
   says `The file "probe.wav" could not be opened`. `build` writes an empty
-  `Ableton Project Info/` beside each set for that (ignored by git). `verify` reads only devices,
+  `Ableton Project Info/` beside each set for that. `verify` reads only devices,
   so it does not catch an offline clip; a silent `bypass` render does.
 - **Export names.** Live writes a `/` in a track name as `_` in the exported file's name.
-- **Checked in Live 12.4.6.** `measurements/map-check/` builds into one 37-track set
-  (`map-check-gen.als`; `verify` reports 0 problems) that covers `linear` (Saturator Drive and
+- **Checked in Live 12.4.6.** A 37-track set built through the map (`verify` reported 0 problems) covered `linear` (Saturator Drive and
   Color Amt Low and Hi, Amp Bass, Reverb Diffuse Level, Roar Env Gain), `integer` (Corpus Transpose -18.6 is written and read back as -19, Resonators I Note
   40.4 as 40), `base` (Auto Shift LFO Rate), nested elements (EQ Eight band 3) and `gain`
   (External Audio Effect Input Gain), each by norm and by display.
@@ -300,50 +295,8 @@ analyse one run with the glob `"<export> <run> "*.wav`, and `compare.py --cases`
 - **Not covered yet:** devices inside racks, the Spread of Shifter, and controls that are neither a
   parameter nor a stored element.
 
-### Many devices' runs in one set: `batch.py`
-
-For more than a few runs, write them as data and let `batch.py` make the cases files, the set and
-the analyses (its docstring has the formats):
-
-```bash
-$PY tools/harness/batch.py check                                        # every device's runs.py
-$PY tools/harness/batch.py build measurements/top100/selection.json     # cases files and one set
-$PY tools/harness/live_check.py open measurements/top100/top100.als --timeout 900
-$PY tools/harness/live_check.py verify measurements/top100/top100.cases.json -o measurements/top100/top100.verified.json
-# export (step 2.5), then
-$PY tools/harness/batch.py analyse measurements/top100/selection.json --export measurements/top100/export --trim
-$PY tools/harness/batch.py summary measurements/top100/selection.json [run ...]
-```
-
-- **Runs** live in each device folder's `runs.py` (`DEVICE` and `RUNS`: name, the Measurement
-  plan step it answers, the question, which parts of `analyse.py`'s result answer it, the probe,
-  a `base` and the cases). Every run also gets `bypass` and `default`. `check` works out every
-  value against the dump and the map, so a wrong name or impossible value shows before Live does.
-- **A selection** (`selection.json`) names the set, its probes and the runs. `build` writes each
-  run's cases file beside its `runs.py`, then one set with `make_als.py build --share`, the
-  tracks ordered by probe, every clip pointing at its group's one probe file.
-- **Export** each probe group's tracks on their own (Selected Tracks Only, the probe's length,
-  name `<set>` for the first probe and `<set>-<probe>` for the others), or all tracks at once
-  under `<set>` at the longest probe's length; then `analyse --trim` cuts each render back to its
-  probe's length and keeps the disk use down (690 tracks at 60 bars: 27 GB, 11 GB trimmed).
-- **Analyse** takes each probe group's offset from its `bypass` renders and writes every track's
-  analysis into its device's `live/`; `<set>.analysis.json` records the offsets and each case's
-  result file. `summary` prints each run's `read` figures per case.
-- **First used** for the top 100 runs (`measurements/top100/README.md`): 100 runs of 37 devices,
-  805 cases on 690 tracks; Live 12.4.6 opened the set in 30 s and `verify` matched 802 cases.
-- **Third set** (`measurements/third/README.md`): 147 runs of 39 devices, 1158 cases on 1048 tracks
-  in five parts built from `third-N.selection.json`, rendered by Live 12.4.7; `verify` matched all
-  1158 cases. Live was updated to 12.4.7 between the top 100 set and the remaining set, so the
-  remaining set's renders are 12.4.7 as well (its notes keep the tag 12.4.6).
-- **Fourth set** (`measurements/fourth/README.md`): the eight candidate runs left open by the third set,
-  45 cases on 40 tracks in one set, rendered by Live 12.4.7 with every track exported at once at 60
-  bars (`analyse --trim` cut each probe group back); `verify` matched all 45 cases.
-- **Fifth set** (`measurements/fifth/README.md`): the 15 runs still open after the fourth set, 162 cases
-  on 151 tracks, on three probes (the main one, the extended one and the new `measurements/probe-fifth/`
-  made by `signals.py --kind fifth`: fs/4 sines at 0 and 45 degrees, 20 Hz and 5 kHz staircases and a
-  sequence of tones for the Vocoder); State and parameter lanes (`{"auto": [...]}`) drive the Looper and the
-  Delay's time. `verify` matched all 162 cases. A sixteenth run, the Shifter's Wide and Spread, is its own
-  small set (`measurements/fifth-wide/`, 13 tracks).
+Measurement runs, devices and probes are described in 2; the batches made so far are listed in the
+README's Measurement sets.
 
 ## 3. Compare an implementation with Live
 
@@ -351,25 +304,26 @@ Render every case through the implementation, one WAV per case named by its case
 those renders the same way, and compare. Two ways to get the renders:
 
 - **From the saved set**, if the implementation can import and render a Live Set offline: give
-  `render_set.py` its renderer's command line. It renders the set once per track with every other
-  track switched off.
+  `render_set.py` its renderer's command line. It renders the set (`measure.py build compressor`
+  makes `work/sets/compressor/compressor.als`) once per track with every other track switched off.
 
   ```bash
-  $PY tools/harness/render_set.py measurements/29.09-compressor/compressor-threshold.als \
-      -o measurements/29.09-compressor/mine-renders \
+  $PY tools/harness/render_set.py work/sets/compressor/compressor.als \
+      -o work/mine/compressor/renders \
       --command "<renderer> {set} -o {out} --sample-rate {rate}" --rate 44100
   ```
 
-- **From the cases file**, if it cannot import Live Sets yet: play `probe.wav` through the device
-  with each case's settings and save `<case id>.wav`. `compressor-threshold.built.json` lists
-  every case's parameters by Live's name, with the value and display text Live gave them; the
-  device's note maps those to stored units (Controls, Implementation notes).
+- **From the cases file**, if it cannot import Live Sets yet: play the run's probe
+  (`probes/<probe>.wav`, named in the cases file) through the device with each case's
+  settings and save `<case id>.wav`. `devices/29.09-compressor/cases/compressor-threshold.json`
+  lists every case's parameters by Live's name; the device's note maps those to stored units
+  (Controls, Implementation notes).
 
 ```bash
-$PY tools/harness/analyse.py measurements/probe.json measurements/29.09-compressor/mine-renders/*.wav \
-    -o measurements/29.09-compressor/mine
-$PY tools/harness/compare.py measurements/29.09-compressor/live measurements/29.09-compressor/mine \
-    --cases measurements/29.09-compressor/compressor-threshold.built.json
+$PY tools/harness/analyse.py probes/gap2.json work/mine/compressor/renders/*.wav \
+    -o work/mine/compressor/results
+$PY tools/harness/compare.py devices/29.09-compressor/results work/mine/compressor/results \
+    --cases devices/29.09-compressor/cases/compressor-threshold.json
 ```
 
 A device the implementation does not have yet must not pass audio through silently: the
@@ -389,63 +343,50 @@ a hard clipper, a compressor with 10 ms attack and 100 ms release, tremolo, vibr
 noise reverb, swapped channels) and check that the measurements recover them. The probe test runs
 `suhina_probe.js` in Node with mocks of `LiveAPI`, `File` and `Task`.
 
-## First run in Live 12.4.6 (2026-10-18)
+## Quirks of Live and of the harness
 
-Live 12.4.6 Trial with its bundled Max, macOS, 44.1 kHz.
+- **Size set through the API is ignored by the export while Smooth is Fast or Slow** (Reverb).
+  Five Size values gave bit-identical renders; with Smooth = None they differ. Put
+  `"Size Smoothing": {"item": "None"}` in every case that sets Room Size.
+- **An export can come out early.** Three of five Reverb exports were 1764 samples (40.00 ms)
+  ahead of the probe, bypass included; cause not found. `analyse` takes the offset from the
+  `bypass` renders and prints it; check that line. `analyse.py --align -1764` fixes one by hand.
+- **Dropping a WAV into an empty set warps it and changes the tempo.** The built sets avoid this
+  (Warp off, 120 BPM); do it the same way for any hand-made set.
+- **Export dialog:** the Render Length field keeps its last value; set it to the length `build`
+  prints each time. The default set's four tracks and two returns export as silent files.
+- **Harness:** `impulse.rt60_s` reads far too short for a reverb with early reflections; refit
+  from the `.ir.wav`. `modulation` figures for a tone through a reverb are a rough spread, not a
+  clean depth. On a silent render (a track with no clip) `analyse.py` still reports attack and
+  release times (about 0.7 ms) from noise; ignore `dynamics` when `impulse.peak_db` is −240.
+- **A setting can be stored and read back and still not reach the audio.** Before reading a case,
+  check that its render is not bit-identical to the `default` (or, for a lane, the `bypass`). In the
+  first sets Auto Pan-Tremolo's Waveform (all eight cases rendered as Sine) and the Looper's stored State
+  did not reach the render; stored elements (`"@..."`) later did work (Roar's routing, the
+  oversampling switches, Spectral Time's Resolution, the Vocoder's carrier) but Live does not read
+  them back, so `verify` cannot confirm them. Some bit-identical pairs are genuine (EQ Three Mid off
+  and -inf; Gate Floor 0 dB is the bypass; Overdrive Tone at Dry/Wet 0 %).
+- **A display value is stored at the nearest step.** A display with two significant digits cannot
+  say which API value it means, so cases such as Limiter Ceiling -12 dB, Saturator Drive -12 dB
+  (stored as -12.375) and Shifter Env Amount 0 st can verify off the requested API value. The
+  notes quote the stored value, and `verify -o` records what Live holds.
+- **Live names two exports the same file** when two tracks have the same name (`...-1.wav`); keep
+  case ids unique within a run.
+- **The export is delay-compensated**, so a device's latency is hidden (Compressor's lookahead,
+  Spectral Resonator, Amp, the oversampling of Hi-Quality): look for a response that begins before
+  the impulse. A render of 88.2 kHz resampled to 44.1 kHz did not play every automation lane (a
+  Looper State lane left the device idle): render at the project's 44.1 kHz.
+- **Silent renders can be right** (a gate closed, Beat Repeat idling, Volume 0, Utility Gain -inf,
+  Amp Input Gain 0).
+- **Parameter names:** Corpus has two parameters named Width (`Width` is the filter bandwidth,
+  `Width #2` the stereo width); Glue Compressor's Ratio, Attack and Release are set by index.
+- **Roar loads in Multi Band** (stored routing 3), so a shaper or filter run that does not set the
+  routing reaches only the low band.
+- **Figures beyond `analyse.py`.** Reverbs, delay swings, partials and pitch tracking need their own
+  readings (Schroeder curves per band, Hilbert envelopes, cross-correlation, comb scores); the notes
+  say how each was read. `analyse.py`'s `rt60_s` and `noise_db` (186 ms window) do not suit reverbs.
+- **A save or open panel takes a path only through Go to Folder** (Cmd+Shift+G).
 
-- **Worked the first time:** pasting `clipboard.json` with **Edit > Paste**; Populate
-  (`create_audio_track`, `insert_device` for all 42 effects); Dump (1065 parameters, every one
-  with `default_value`, readable display text, `value_items` on all stepped ones, no stray quotes;
-  the save dialog's `Macintosh HD:/Users/…` path was written to without change);
-  `probePosition()` (the `this_device` path had the expected form); `duplicate_track`; setting
-  values by `norm`; the export's delay compensation.
-- **Fixed:** Build cases failed with `cannot read Macintosh HD:/…/compressor-threshold.json`.
-  `readText` opened the file with the type list `"TEXT"`, and Max does not count a `.json` file as
-  TEXT. It now opens with no type list. Test: "build reads a .json cases file from the open
-  dialog's Max-style path"; the `File` mock now refuses a `.json` read with `"TEXT"`, as Max did.
-- **Compressor, Threshold at 5 points** (`measurements/29.09-compressor/`): `bypass` and
-  `default` equal the probe (impulse at 0 ms, 0 dB, sample offset 0). With the loaded preset
-  (4:1, RMS, knee 6 dB, attack 1 ms, release 30 ms) the static curve fits an RMS detector (a sine
-  reads 3 dB below its peak) and a 1/4 slope above the threshold: at Threshold −28.8 dB a −6 dBFS
-  sine lost 14.85 dB. The Knee of 6 dB is a half-width: at all three finite thresholds below 0 dB
-  the curve fits a quadratic soft knee over threshold ± 6 dB to within 0.01 dB
-  (`live-12/audio-effects/29.09-compressor.md` › Measured).
-- **Harness quirk:** on a silent render (a track with no clip) `analyse.py` still reports attack
-  and release times (about 0.7 ms) from noise; ignore `dynamics` when `impulse.peak_db` is −240.
-- **Before this run, checked without Live:** both test suites.
-
-### Reverb run (`measurements/29.32-reverb/`, five sets, 2026-10-18)
-
-Driven through desktop control (screenshots, clicks and keystrokes on the Live window), not by hand.
-Later runs build the set as a file and open and check it through the Remote Script (2b), which
-leaves only the export to the UI.
-
-- **Size set through the API is ignored by the export while Smooth is Fast or Slow.** Five Size
-  values gave bit-identical renders; with Smooth = None they differ, and a Fast case at Size 1.53
-  equals the untouched default. Put `"Size Smoothing": {"item": "None"}` in every case that sets
-  Room Size.
-- **An export can come out early.** Three of the five Reverb exports were 1764 samples (40.00 ms)
-  ahead of the probe, bypass included; the first two were exact. Cause not found (same steps, same
-  devices). Check the `bypass` render's impulse position first (`impulse.taps[0].time_ms` is
-  not enough: the impulse then lies before the window); fix with `analyse.py --align -1764`.
-- **A save or open panel takes a path only through Go to Folder.** Typing `/Users/...` into a Save As
-  name field turns the slashes into colons and saves a folder of that name on the Desktop. In the
-  panel press Cmd+Shift+G, type the folder, Return, then type the bare name.
-- **Dropping `probe.wav` warps it to about 63 BPM and shortens the clip**: turn Warp off after the
-  drop (the clip then spans the whole file; its Start 1.1.1 and Length show in the status line
-  when the clip is selected). Drop the file with the pointer at the very left of the lane or the
-  clip lands on bar 2; Cut and Paste did not move it.
-- **Export dialog:** the Render Length field keeps its last value; set it to the file's length in
-  bars every run (60 for the 10 s gap, 150 for the 30 s gap). Settings other than Rendered Track
-  and length persisted between runs.
-- **The default set has four tracks and two returns that export as silent files**; delete them
-  before building cases, and clear the browser's search box (it persists) before using Current
-  Project.
-- **Harness:** `impulse.rt60_s` reads far too short for a reverb with early reflections; refit from
-  `.ir.wav`. `modulation` figures for a tone through a reverb are a rough spread, not a clean
-  depth.
-- A Build cases call on 20 to 24 cases took about 15 to 30 s; 60 bars rendered 24 tracks in under
-  30 s, 150 bars in 40 s.
 
 ## Limits
 
@@ -457,16 +398,6 @@ leaves only the export to the UI.
 - `analyse.py`'s `rt60_s` and `noise_db` (186 ms window) do not suit reverbs, and its attack,
   release and FM figures failed for several devices in the top 100 runs; the device notes say
   where and give the figures computed from the renders instead.
-
-### Generated set, Compressor (`measurements/29.09-compressor/compressor-gen.*`, 2026-10-18)
-
-Live 12.4.6 opened both generated sets (`open -a`) with no warning or missing media.
-Calibration mapped all 23 API parameters of the Compressor; two elements (`LegacyModel`,
-`LegacyEnvFollowerMode`) move none. A set of three runs (the Threshold sweep, Attack by display
-with Ratio and Model set, Release by norm with S/C EQ Freq, Knee and Output set; 20 tracks) read
-back with every case value and every other parameter as intended. Threshold's stored values
-match those Live saved for the probe-built run to within 1e-6. The Remote Script gives no
-display text in 12.4.6 (`value_string` missing), so `map` reads the display from the dump.
 
 ### All effects calibrated (Live 12.4.6, 2026-10-18)
 

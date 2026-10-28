@@ -1,0 +1,174 @@
+{
+ "device": "Shifter",
+ "parameter": "shifter-delay-loop",
+ "question": "frequency of the 1 kHz tone in each 1 s repeat with Delay 1 s, Feedback 70 %: Freq +-100 Hz, Pitch +-12 st",
+ "plan": "7",
+ "read": [
+  "steady (spectrum over time)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 1,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Delay Sync": 0,
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    }
+   }
+  },
+  {
+   "id": "loop-freq+100",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 1,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Delay Sync": 0,
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    },
+    "FShift Coarse": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "loop-freq-100",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 1,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Delay Sync": 0,
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    },
+    "FShift Coarse": {
+     "display": -100
+    }
+   }
+  },
+  {
+   "id": "loop-pitch+12",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 12,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 1,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Delay Sync": 0,
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    }
+   }
+  },
+  {
+   "id": "loop-pitch-12",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": -12,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 1,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Delay Sync": 0,
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 70
+    }
+   }
+  }
+ ]
+}

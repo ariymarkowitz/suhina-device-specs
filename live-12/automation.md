@@ -8,9 +8,9 @@ also says how Live's editor splits a bent segment and how dragging a curve resha
 
 Everything below is `[measured 12.4.6]` unless tagged otherwise: ten sets automating one
 parameter each on a track playing Operator's sine (261.6 Hz), rendered and read back by
-`measurements/automation/analyse.py`; the split and dragged curves are read from three of those
-sets by `measurements/automation/curve_drag.py`. The runs, the sets and how to make the renders
-again are in [`measurements/automation/README.md`](../measurements/automation/README.md).
+`automation/analyse.py`; the split and dragged curves are read from three of those
+sets by `automation/curve_drag.py`. The runs, the sets and how to make the renders
+again are in [`automation/README.md`](../automation/README.md).
 
 ## Summary
 
@@ -211,7 +211,7 @@ it is not seen [measure]; curve_drag.py assumes Live's family.
 
 From the track volume run's straight segment from the lane's bottom (-70 dB stored, gain
 0.000316, the least the lane stores) to its top (+6 dB, gain 1.995) over beats 3 to 6, where the
-share of the time is the position; the table is `measurements/automation/live/fader-taper.csv`.
+share of the time is the position; the table is `automation/live/fader-taper.csv`.
 That table predicts every other segment of the run (0.03 dB rms) and every segment of
 Operator's Volume at 88.2 kHz (0.02 dB rms), so the two share it.
 
@@ -270,7 +270,7 @@ delay is from this one segment [measure].
 ## Other kinds of parameter
 
 Lanes on an integer, a frequency, a choice and a toggle, 14 lanes of 8 to 32 beats at 120 BPM
-(`measurements/automation/kinds/`: the set `kinds.als` from three cases files, plus
+(`automation/kinds/`: the set `kinds.als` from three cases files, plus
 `kinds-negative.als`). Unlike the sets above these were not rendered: the playhead was moved to
 each beat of a 0.125 grid with playback stopped and every track's automated parameter was read
 through the Remote Script (`poll.py`), so the values are the API values, and what the device does

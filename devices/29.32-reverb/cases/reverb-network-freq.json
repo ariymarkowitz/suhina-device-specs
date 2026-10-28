@@ -1,0 +1,219 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-network-freq",
+ "question": "decay per octave band (filtered .ir.wav) with the High filter at 250 Hz, 4 kHz, 12 kHz, Lowpass at 250 Hz and 4 kHz, Low shelf at 200 Hz and 2 kHz, gain 0.4",
+ "plan": "6",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap10",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0
+   }
+  },
+  {
+   "id": "hi-shelf-250",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 0,
+    "Diff. Hi Type": {
+     "item": "Shelf"
+    },
+    "Diff. Hi Freq": {
+     "display": 250
+    },
+    "HiShelf Gain": {
+     "display": 0.4
+    }
+   }
+  },
+  {
+   "id": "hi-shelf-4k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 0,
+    "Diff. Hi Type": {
+     "item": "Shelf"
+    },
+    "Diff. Hi Freq": {
+     "display": 4000
+    },
+    "HiShelf Gain": {
+     "display": 0.4
+    }
+   }
+  },
+  {
+   "id": "hi-shelf-12k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 0,
+    "Diff. Hi Type": {
+     "item": "Shelf"
+    },
+    "Diff. Hi Freq": {
+     "display": 12000
+    },
+    "HiShelf Gain": {
+     "display": 0.4
+    }
+   }
+  },
+  {
+   "id": "hi-lowpass-250",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 0,
+    "Diff. Hi Type": {
+     "item": "Lowpass"
+    },
+    "Diff. Hi Freq": {
+     "display": 250
+    },
+    "HiShelf Gain": {
+     "display": 0.4
+    }
+   }
+  },
+  {
+   "id": "hi-lowpass-4k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 1,
+    "Diff. Lo On": 0,
+    "Diff. Hi Type": {
+     "item": "Lowpass"
+    },
+    "Diff. Hi Freq": {
+     "display": 4000
+    },
+    "HiShelf Gain": {
+     "display": 0.4
+    }
+   }
+  },
+  {
+   "id": "lo-shelf-200",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 1,
+    "Diff. Lo Freq": {
+     "display": 200
+    },
+    "LowShelf Gain": {
+     "display": 0.4
+    }
+   }
+  },
+  {
+   "id": "lo-shelf-2k",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 1,
+    "Diff. Lo Freq": {
+     "display": 2000
+    },
+    "LowShelf Gain": {
+     "display": 0.4
+    }
+   }
+  }
+ ]
+}

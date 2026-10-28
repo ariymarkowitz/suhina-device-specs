@@ -1,0 +1,126 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-peak-buzz-eq-off",
+ "question": "distortion of the 50 Hz tone at 10 dB over a -16 dB threshold, ratio 10, fastest attack and release, side-chain EQ off: Peak, RMS, and Peak with Release 100 ms",
+ "plan": "14",
+ "read": [
+  "ext: tone50 thd and peaks"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -16
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "peak-fast",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -16
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "rms-fast",
+   "params": {
+    "Model": {
+     "item": "RMS"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -16
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "peak-rel100",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -16
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "S/C EQ On": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

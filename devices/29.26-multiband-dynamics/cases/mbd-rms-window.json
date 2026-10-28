@@ -1,0 +1,99 @@
+{
+ "device": "Multiband Dynamics",
+ "parameter": "mbd-rms-window",
+ "question": "peak gain of the short bursts (-6 dBFS) through the Mid band, Above -12 dB at 1 : Inf, fastest times, RMS and Peak",
+ "plan": "8",
+ "read": [
+  "ext: shortbursts"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -12
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Ratio (Mid)": -1
+   }
+  },
+  {
+   "id": "peak",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -12
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Ratio (Mid)": -1
+   }
+  },
+  {
+   "id": "rms",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "RMS"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -12
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Ratio (Mid)": -1
+   }
+  }
+ ]
+}

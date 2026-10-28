@@ -1,0 +1,228 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-env-mode",
+ "question": "attack and release times of the burst step in Lin, Log and Auto release for Ratio 2 (about 9 dB of reduction) and Ratio 10 (about 16 dB), Attack 10 ms, Release 300 ms",
+ "plan": "7, 8",
+ "read": [
+  "dynamics"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "lin-ratio-2",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 2
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "lin-ratio-10",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "log-ratio-2",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Log"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 2
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "log-ratio-10",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Log"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "auto-lin",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "On"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "auto-log",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Log"
+    },
+    "Auto Release On/Off": {
+     "item": "On"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.3
+    }
+   }
+  }
+ ]
+}

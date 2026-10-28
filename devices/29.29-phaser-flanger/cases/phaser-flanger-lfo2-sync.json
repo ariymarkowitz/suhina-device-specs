@@ -1,0 +1,507 @@
+{
+ "device": "Phaser-Flanger",
+ "parameter": "phaser-flanger-lfo2-sync",
+ "question": "Flanger delay per impulse, Amount 100 %: LFO2 alone (Lfo Blend 100 %) at 1 and 8 Hz; LFO1 synced at Rate 8, 12, 15",
+ "plan": "8",
+ "read": [
+  "ext: impulsetrain (delay per impulse)"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Flanger"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Notches": 4,
+    "Center Freq": {
+     "display": 1000
+    },
+    "Spread": {
+     "display": 50
+    },
+    "Mod Blend": {
+     "norm": 0.0
+    },
+    "Flanger Time": {
+     "display": 0.0025
+    },
+    "Doubler Time": {
+     "display": 0.08
+    },
+    "Mod Sync": {
+     "item": "Off"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 0
+    },
+    "Spin Enabled": {
+     "item": "Off"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Duty Cycle": {
+     "display": 0
+    },
+    "Lfo Blend": {
+     "display": 0
+    },
+    "Mod Sync 2": {
+     "item": "Off"
+    },
+    "Mod Freq 2": {
+     "display": 4
+    },
+    "Env Enabled": {
+     "item": "Off"
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Safe Freq": {
+     "display": 5
+    }
+   }
+  },
+  {
+   "id": "lfo2-1hz",
+   "params": {
+    "Mode": {
+     "item": "Flanger"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Notches": 4,
+    "Center Freq": {
+     "display": 1000
+    },
+    "Spread": {
+     "display": 50
+    },
+    "Mod Blend": {
+     "norm": 0.0
+    },
+    "Flanger Time": {
+     "display": 0.0025
+    },
+    "Doubler Time": {
+     "display": 0.08
+    },
+    "Mod Sync": {
+     "item": "Off"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 0
+    },
+    "Spin Enabled": {
+     "item": "Off"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Duty Cycle": {
+     "display": 0
+    },
+    "Lfo Blend": {
+     "display": 100
+    },
+    "Mod Sync 2": {
+     "item": "Off"
+    },
+    "Mod Freq 2": {
+     "display": 1
+    },
+    "Env Enabled": {
+     "item": "Off"
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Safe Freq": {
+     "display": 5
+    }
+   }
+  },
+  {
+   "id": "lfo2-8hz",
+   "params": {
+    "Mode": {
+     "item": "Flanger"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Notches": 4,
+    "Center Freq": {
+     "display": 1000
+    },
+    "Spread": {
+     "display": 50
+    },
+    "Mod Blend": {
+     "norm": 0.0
+    },
+    "Flanger Time": {
+     "display": 0.0025
+    },
+    "Doubler Time": {
+     "display": 0.08
+    },
+    "Mod Sync": {
+     "item": "Off"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 0
+    },
+    "Spin Enabled": {
+     "item": "Off"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Duty Cycle": {
+     "display": 0
+    },
+    "Lfo Blend": {
+     "display": 100
+    },
+    "Mod Sync 2": {
+     "item": "Off"
+    },
+    "Mod Freq 2": {
+     "display": 8
+    },
+    "Env Enabled": {
+     "item": "Off"
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Safe Freq": {
+     "display": 5
+    }
+   }
+  },
+  {
+   "id": "sync-r8",
+   "params": {
+    "Mode": {
+     "item": "Flanger"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Notches": 4,
+    "Center Freq": {
+     "display": 1000
+    },
+    "Spread": {
+     "display": 50
+    },
+    "Mod Blend": {
+     "norm": 0.0
+    },
+    "Flanger Time": {
+     "display": 0.0025
+    },
+    "Doubler Time": {
+     "display": 0.08
+    },
+    "Mod Sync": {
+     "item": "On"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 0
+    },
+    "Spin Enabled": {
+     "item": "Off"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Duty Cycle": {
+     "display": 0
+    },
+    "Lfo Blend": {
+     "display": 0
+    },
+    "Mod Sync 2": {
+     "item": "Off"
+    },
+    "Mod Freq 2": {
+     "display": 4
+    },
+    "Env Enabled": {
+     "item": "Off"
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Safe Freq": {
+     "display": 5
+    },
+    "Mod Rate": 8
+   }
+  },
+  {
+   "id": "sync-r12",
+   "params": {
+    "Mode": {
+     "item": "Flanger"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Notches": 4,
+    "Center Freq": {
+     "display": 1000
+    },
+    "Spread": {
+     "display": 50
+    },
+    "Mod Blend": {
+     "norm": 0.0
+    },
+    "Flanger Time": {
+     "display": 0.0025
+    },
+    "Doubler Time": {
+     "display": 0.08
+    },
+    "Mod Sync": {
+     "item": "On"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 0
+    },
+    "Spin Enabled": {
+     "item": "Off"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Duty Cycle": {
+     "display": 0
+    },
+    "Lfo Blend": {
+     "display": 0
+    },
+    "Mod Sync 2": {
+     "item": "Off"
+    },
+    "Mod Freq 2": {
+     "display": 4
+    },
+    "Env Enabled": {
+     "item": "Off"
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Safe Freq": {
+     "display": 5
+    },
+    "Mod Rate": 12
+   }
+  },
+  {
+   "id": "sync-r15",
+   "params": {
+    "Mode": {
+     "item": "Flanger"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Notches": 4,
+    "Center Freq": {
+     "display": 1000
+    },
+    "Spread": {
+     "display": 50
+    },
+    "Mod Blend": {
+     "norm": 0.0
+    },
+    "Flanger Time": {
+     "display": 0.0025
+    },
+    "Doubler Time": {
+     "display": 0.08
+    },
+    "Mod Sync": {
+     "item": "On"
+    },
+    "Mod Freq": {
+     "display": 1
+    },
+    "Mod Wave": {
+     "item": "Sine"
+    },
+    "Mod Phase": {
+     "display": 0
+    },
+    "Spin Enabled": {
+     "item": "Off"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Duty Cycle": {
+     "display": 0
+    },
+    "Lfo Blend": {
+     "display": 0
+    },
+    "Mod Sync 2": {
+     "item": "Off"
+    },
+    "Mod Freq 2": {
+     "display": 4
+    },
+    "Env Enabled": {
+     "item": "Off"
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Safe Freq": {
+     "display": 5
+    },
+    "Mod Rate": 15
+   }
+  }
+ ]
+}

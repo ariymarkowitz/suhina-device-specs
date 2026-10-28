@@ -1,0 +1,156 @@
+{
+ "device": "Glue Compressor",
+ "parameter": "glue-softclip",
+ "question": "no compression (Threshold 0, Range 0 dB), Soft clip on with Makeup 0, 6, 12 and 20 dB (pushing the staircase above 0 dBFS); off with Makeup 12",
+ "plan": "8,9",
+ "read": [
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Threshold": {
+     "display": 0
+    },
+    "Ratio": 1,
+    "Attack": 0,
+    "Release": 0,
+    "Range": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "off-mk12",
+   "params": {
+    "Threshold": {
+     "display": 0
+    },
+    "Ratio": 1,
+    "Attack": 0,
+    "Release": 0,
+    "Range": {
+     "display": 0
+    },
+    "Output": {
+     "display": 12
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "on-mk0",
+   "params": {
+    "Threshold": {
+     "display": 0
+    },
+    "Ratio": 1,
+    "Attack": 0,
+    "Release": 0,
+    "Range": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "On"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "on-mk6",
+   "params": {
+    "Threshold": {
+     "display": 0
+    },
+    "Ratio": 1,
+    "Attack": 0,
+    "Release": 0,
+    "Range": {
+     "display": 0
+    },
+    "Output": {
+     "display": 6
+    },
+    "Peak Clip In": {
+     "item": "On"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "on-mk12",
+   "params": {
+    "Threshold": {
+     "display": 0
+    },
+    "Ratio": 1,
+    "Attack": 0,
+    "Release": 0,
+    "Range": {
+     "display": 0
+    },
+    "Output": {
+     "display": 12
+    },
+    "Peak Clip In": {
+     "item": "On"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "on-mk20",
+   "params": {
+    "Threshold": {
+     "display": 0
+    },
+    "Ratio": 1,
+    "Attack": 0,
+    "Release": 0,
+    "Range": {
+     "display": 0
+    },
+    "Output": {
+     "display": 20
+    },
+    "Peak Clip In": {
+     "item": "On"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

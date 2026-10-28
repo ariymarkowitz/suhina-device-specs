@@ -1,0 +1,121 @@
+{
+ "device": "Shifter",
+ "parameter": "shifter-window-more",
+ "question": "impulse, sweep and steady tone at Pitch +12 with Window 10, 30 and 350 ms",
+ "plan": "2",
+ "read": [
+  "impulse",
+  "modulation",
+  "response"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 12,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0
+   }
+  },
+  {
+   "id": "window-10",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 12,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Pitch Window": {
+     "display": 0.01
+    }
+   }
+  },
+  {
+   "id": "window-30",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 12,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Pitch Window": {
+     "display": 0.03
+    }
+   }
+  },
+  {
+   "id": "window-350",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 12,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Pitch Window": {
+     "display": 0.35
+    }
+   }
+  }
+ ]
+}

@@ -1,9 +1,0 @@
-{
- "name": "shelf-q-sweep",
- "probes": {
-  "gap2": "measurements/probe.wav"
- },
- "runs": [
-  "eq-eight-shelf-q-sweep"
- ]
-}

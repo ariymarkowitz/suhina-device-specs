@@ -1,0 +1,197 @@
+{
+ "device": "Roar",
+ "parameter": "roar-compressor-output",
+ "question": "staircase and bursts with shapers off for Comp Amount 50 and 100 % (SC high-pass on and off), Drive +24 dB into the output clip, Output +12 dB, Dry/Wet 50 % at Drive +24",
+ "plan": "3, 7, 8",
+ "read": [
+  "static",
+  "dynamics"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0
+   }
+  },
+  {
+   "id": "comp-50",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 50
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0
+   }
+  },
+  {
+   "id": "comp-100",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0
+   }
+  },
+  {
+   "id": "comp-100-nohp",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Comp Hp On": 0
+   }
+  },
+  {
+   "id": "drive+24",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 24
+    }
+   }
+  },
+  {
+   "id": "out+12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Output": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "drive+24-dw50",
+   "params": {
+    "Dry/Wet": {
+     "display": 50
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "Drive": {
+     "display": 24
+    }
+   }
+  }
+ ]
+}

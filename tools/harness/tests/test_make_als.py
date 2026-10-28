@@ -1,7 +1,7 @@
 # Copyright (C) 2026 The Suhina contributors
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-"""Checks make_als.py and als.py against the sets Live 12.4.6 saved (measurements/).
+"""Checks make_als.py and als.py against the sets Live 12.4.6 saved (reference/ and tools/harness/data/).
 
     tools/.venv/bin/python -m unittest discover -s tools/harness/tests
 """
@@ -21,7 +21,7 @@ import live_check  # noqa: E402
 import make_als  # noqa: E402
 
 D = make_als.DEFAULTS
-COMPRESSOR_RUN = os.path.join(make_als.ROOT, "measurements", "29.09-compressor")
+COMPRESSOR_CASES = os.path.join(make_als.ROOT, "devices", "29.09-compressor", "cases")
 HAVE_DATA = all(os.path.exists(p) for p in (D["dump"], D["devices"], D["template"]))
 
 # The Compressor's map as calibration in Live 12.4.6 gives it, for the parameters used here.
@@ -152,7 +152,7 @@ class ChangedValue(unittest.TestCase):
         self.assertEqual(make_als.changed_value(self.element("2")), "3")
 
 
-@unittest.skipUnless(HAVE_DATA, "needs measurements/ from Live 12.4.6")
+@unittest.skipUnless(HAVE_DATA, "needs reference/ from Live 12.4.6")
 class FromLiveSets(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -163,7 +163,7 @@ class FromLiveSets(unittest.TestCase):
         Live saved the stored values, which the conversion must give back."""
         dp = make_als.dump_params(make_als.dump_device(self.dump, "Compressor"))["Threshold"]
         item = COMPRESSOR_MAP["devices"]["Compressor2"]["params"]["Threshold"]
-        root = als.read_set(os.path.join(COMPRESSOR_RUN, "compressor-threshold.als"))
+        root = als.read_set(D["template"])
         seen = 0
         for t in als.tracks(root, ("AudioTrack",)):
             name = t.find("Name/EffectiveName").get("Value")
@@ -340,7 +340,7 @@ class FromLiveSets(unittest.TestCase):
             with open(amap, "w") as f:
                 json.dump(COMPRESSOR_MAP, f)
             out = os.path.join(tmp, "measure.als")
-            src = os.path.join(COMPRESSOR_RUN, "compressor-threshold.json")
+            src = os.path.join(COMPRESSOR_CASES, "compressor-threshold.json")
             self.assertEqual(quiet(make_als.main, ["build", src, "--map", amap, "-o", out]), 0)
             root, ts = self.check_set(out)
             spec = make_als.load_json(os.path.join(tmp, "measure.cases.json"))
@@ -407,12 +407,12 @@ class FromLiveSets(unittest.TestCase):
             self.assertEqual(track["c bypass"], "c bypass")
             paths = [t.find(".//SampleRef/FileRef/Path").get("Value") for t in ts]
             self.assertEqual(paths[-1], os.path.abspath(short))
-            self.assertEqual(paths[0], os.path.abspath(D["probe"]))
+            self.assertEqual(paths[0], make_als.probe_path(D["probe"]))
             self.assertEqual(ts[-1].find(".//SampleRef/DefaultDuration").get("Value"), "4410")
 
     def test_open_waits_for_the_sets_tracks(self):
-        names = live_check.set_tracks(os.path.join(COMPRESSOR_RUN, "compressor-gen.als"))
-        self.assertEqual(len(names), 20)
+        names = live_check.set_tracks(D["template"])
+        self.assertGreater(len(names), 3)
 
         class Fake:
             def __init__(self, tracks):

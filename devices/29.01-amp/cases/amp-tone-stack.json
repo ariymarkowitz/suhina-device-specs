@@ -1,0 +1,274 @@
+{
+ "device": "Amp",
+ "parameter": "amp-tone-stack",
+ "question": "sweep response of Rock at low Gain with each of Bass, Middle, Treble at 0 and 10, the others at 5",
+ "plan": "2",
+ "read": [
+  "response"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "flat",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-0",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-10",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 10
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "middle-0",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "middle-10",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 10
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "treble-0",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "treble-10",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 10
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,198 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-delay-timing",
+ "question": "echo times of an impulse with Feedback 50 %: Time 10, 100, 1000 ms; Synced 1/8; 16th, 16th Triplet, 16th Dotted at 3 (default 250 ms)",
+ "plan": "6",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "t-10ms",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.01
+    },
+    "Delay Feedback": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "t-100ms",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 0.1
+    },
+    "Delay Feedback": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "t-1000ms",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Time"
+    },
+    "Delay Time": {
+     "display": 1.0
+    },
+    "Delay Feedback": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "synced-1/8",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Synced"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    },
+    "Delay Synced": 6
+   }
+  },
+  {
+   "id": "16th-3",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "16th"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    },
+    "Delay 16th": 3
+   }
+  },
+  {
+   "id": "triplet-3",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "16th Triplet"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    },
+    "Delay 16th": 3
+   }
+  },
+  {
+   "id": "dotted-3",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "16th Dotted"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 50
+    },
+    "Delay 16th": 3
+   }
+  }
+ ]
+}

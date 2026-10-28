@@ -1,0 +1,223 @@
+{
+ "device": "Shifter",
+ "parameter": "shifter-freq",
+ "question": "spectrum of the 1 kHz tone shifted by Coarse -1200, -100, -10, +10, +100, +1000 Hz and Fine +2 Hz",
+ "plan": "4",
+ "read": [
+  "steady (spectrum)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0
+   }
+  },
+  {
+   "id": "fshift-1200",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": -1200
+    }
+   }
+  },
+  {
+   "id": "fshift-100",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": -100
+    }
+   }
+  },
+  {
+   "id": "fshift-10",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": -10
+    }
+   }
+  },
+  {
+   "id": "fshift+10",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "fshift+100",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fshift+1000",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "FShift Coarse": {
+     "display": 1000
+    }
+   }
+  },
+  {
+   "id": "fine+2",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Mod Fine": {
+     "display": 2
+    }
+   }
+  }
+ ]
+}

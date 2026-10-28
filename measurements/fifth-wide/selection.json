@@ -1,9 +1,0 @@
-{
- "name": "fifth-wide",
- "probes": {
-  "gap2": "measurements/probe.wav"
- },
- "runs": [
-  "shifter-wide-spread"
- ]
-}

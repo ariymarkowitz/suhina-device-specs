@@ -1,0 +1,131 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-unvoiced",
+ "question": "level and spectrum of the unvoiced noise in silence (Sens. 100 %) at 0, -10, -20 dB; Sens. 0 % and 50 % Fast and Slow at 0 dB with the noise segment as modulator",
+ "plan": "10",
+ "read": [
+  "silence",
+  "noise (long FFT)",
+  "dynamics"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "display": 0
+    },
+    "Unvoiced Sensitivity": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "unv--10dB",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "display": -10
+    },
+    "Unvoiced Sensitivity": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "unv--20dB",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "display": -20
+    },
+    "Unvoiced Sensitivity": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "sens-0",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "display": 0
+    },
+    "Unvoiced Sensitivity": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "sens-50-fast",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "display": 0
+    },
+    "Unvoiced Sensitivity": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "sens-50-slow",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "display": 0
+    },
+    "Unvoiced Sensitivity": {
+     "display": 50
+    },
+    "Unvoiced Speed": {
+     "item": "Slow"
+    }
+   }
+  }
+ ]
+}

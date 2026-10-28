@@ -24,9 +24,9 @@ and browser access (`grep command_type` in
 - **Do not install or start the `ableton-mcp` project's MCP server.** Only its Remote Script is
   installed: the server can record sessions to a remote dataset. Talk to the socket directly, as
   `live_check.py` does.
-- **Make sets as files, not by hand.** `make_als.py build` (one or a few runs) and `batch.py build`
-  (many devices' runs in one set) write the measurement set; `live_check.py open` loads it and
-  `verify` checks it. Do not use the Suhina Probe's Build cases button, drag files in, or change a
+- **Make sets as files, not by hand.** `measure.py build <device>` (any number of devices, `--run`
+  for single runs) writes the measurement set into `work/sets/<name>/`; `live_check.py open` loads
+  it and `verify` checks it. Do not use the Suhina Probe's Build cases button, drag files in, or change a
   measurement set through `set_device_parameter`: a set has to be reproducible from its cases files.
 - If port 9877 is not listening, ask the user to start Live with AbletonMCP chosen as a Control
   Surface (`tools/README.md` › 2b). Do not fall back to clicking through Live instead.
@@ -35,20 +35,27 @@ and browser access (`grep command_type` in
 
 Live's API has no audio export, and the Remote Script cannot arm, route or record tracks. So
 **File › Export Audio/Video** is the one step that needs the UI. Settings are in
-`tools/README.md` › 2, step 5: All Individual Tracks (or Selected Tracks Only), the probe's
-length in bars, WAV, 32-bit, Normalize off, into the batch's `export/` folder, under the export
-name the batch expects. Before taking control of Live's window, ask the user. They may prefer to
+`tools/README.md` › 2: All Individual Tracks (or Selected Tracks Only), the probe's
+length in bars, WAV, 32-bit, Normalize off, into the set's `export/` folder, under the export
+name `measure.py build` prints. Before taking control of Live's window, ask the user. They may prefer to
 click the export themselves from the exact settings you give them. Settings dialogs, installing
 the Suhina Probe and Max editing are also UI-only and the user's to do.
 
 ## Measuring and tests
 
-- New behaviour runs go in a device folder's `runs.py` and through `tools/harness/batch.py`
-  (check, build, analyse, summary); see its docstring.
+- New behaviour runs go in a device folder's `runs.py` (`devices/29.NN-name/`) and through
+  `tools/harness/measure.py` (list, check, build, analyse, summary); see its docstring.
+  `analyse` writes `devices/<device>/results/`, which is kept in the repository, and files the
+  renders under `renders/` and the CSV views under `extras/`, which are not.
 - Run the tests with their output in a log file and read failures from it:
   `$PY -m unittest discover -s tools/harness/tests > <scratch>/tests.log 2>&1`.
-- Renders (`export/`) and probe WAVs are not in the repository. Point every track's clip at the
-  one shared probe file (the builders do), and do not copy probes into Live projects.
+- Renders, built sets (`work/sets/`) and extras are not in the repository and `work/` is scratch:
+  everything in it is made again by `measure.py`. The probe WAVs are kept in `probes/` (except the
+  unused `gap30`): never regenerate over them with other settings. Point every
+  track's clip at the one shared probe file (the builders do), and do not copy probes into Live
+  projects. Keep only `results/`, `cases/` and `runs.py` per device, and `reference/`.
+- When a Live version other than 12.4.6/12.4.7 is measured, its dump, populate set and map go in
+  `reference/` beside the existing ones, never over them.
 
 ## Building a device from a note
 

@@ -1,0 +1,121 @@
+{
+ "device": "Vinyl Distortion",
+ "parameter": "vinyl-distortion-crackle",
+ "question": "clicks per second and amplitude in the quiet gaps for Volume 0.1, 0.5, 1 at Density 10, and Density 1, 25, 50 at Volume 0.5; both models at Drive 0",
+ "plan": "7",
+ "read": [
+  "silence",
+  "raw render (click counts in the quiet gaps)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tracing Drive": {
+     "display": 0
+    },
+    "Pinch Drive": {
+     "display": 0
+    },
+    "Crackle Volume": {
+     "display": 0.5
+    },
+    "Crackle Density": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "vol-0.1",
+   "params": {
+    "Tracing Drive": {
+     "display": 0
+    },
+    "Pinch Drive": {
+     "display": 0
+    },
+    "Crackle Volume": {
+     "display": 0.1
+    },
+    "Crackle Density": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "vol-1",
+   "params": {
+    "Tracing Drive": {
+     "display": 0
+    },
+    "Pinch Drive": {
+     "display": 0
+    },
+    "Crackle Volume": {
+     "display": 1.0
+    },
+    "Crackle Density": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "dens-1",
+   "params": {
+    "Tracing Drive": {
+     "display": 0
+    },
+    "Pinch Drive": {
+     "display": 0
+    },
+    "Crackle Volume": {
+     "display": 0.5
+    },
+    "Crackle Density": {
+     "display": 1
+    }
+   }
+  },
+  {
+   "id": "dens-25",
+   "params": {
+    "Tracing Drive": {
+     "display": 0
+    },
+    "Pinch Drive": {
+     "display": 0
+    },
+    "Crackle Volume": {
+     "display": 0.5
+    },
+    "Crackle Density": {
+     "display": 25
+    }
+   }
+  },
+  {
+   "id": "dens-50",
+   "params": {
+    "Tracing Drive": {
+     "display": 0
+    },
+    "Pinch Drive": {
+     "display": 0
+    },
+    "Crackle Volume": {
+     "display": 0.5
+    },
+    "Crackle Density": {
+     "display": 50
+    }
+   }
+  }
+ ]
+}

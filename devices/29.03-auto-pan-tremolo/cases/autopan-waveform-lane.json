@@ -1,0 +1,304 @@
+{
+ "device": "Auto Pan-Tremolo",
+ "parameter": "autopan-waveform-lane",
+ "question": "envelope of the steady tone, Tremolo 1 Hz: Waveform Triangle by a jump at beat 0.5, Saw Up by a one-point lane, Triangle stored (Tremolo and Panning)",
+ "plan": "3, 4",
+ "read": [
+  "envelope",
+  "modulation"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Sine"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "lane-triangle-jump",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Sine"
+       }
+      ],
+      [
+       0.5,
+       {
+        "item": "Triangle"
+       }
+      ]
+     ]
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "lane-sawup-const",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Saw Up"
+       }
+      ]
+     ]
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "stored-triangle",
+   "params": {
+    "Mode": {
+     "item": "Tremolo"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Triangle"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "stored-triangle-pan",
+   "params": {
+    "Mode": {
+     "item": "Panning"
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Waveform": {
+     "item": "Triangle"
+    },
+    "Invert": {
+     "item": "Off"
+    },
+    "Time Mode": {
+     "item": "Rate"
+    },
+    "Frequency": {
+     "display": 1
+    },
+    "Phase": {
+     "display": 180
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Stereo Mode": {
+     "item": "Phase"
+    },
+    "Spin": {
+     "display": 0
+    },
+    "Panning Shape": {
+     "display": 0
+    },
+    "Tremolo Shape": {
+     "display": 0
+    },
+    "Attack Time": {
+     "display": 0
+    },
+    "Dyn Mod": {
+     "display": 0
+    },
+    "Harmonic": {
+     "item": "Off"
+    },
+    "Vintage": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

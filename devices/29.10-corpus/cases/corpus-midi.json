@@ -1,0 +1,837 @@
+{
+ "device": "Corpus",
+ "parameter": "corpus-midi",
+ "question": "fundamental of the impulse's ring with A3 held (beats 0 to 4); then the noise with C4 held from beat 61 and E4 from 63 to 67: Last and Low; Note Off on with Off Decay 0, 50, 100 % (A3 released at beat 1.5)",
+ "plan": "11",
+ "read": [
+  "impulse (partials)",
+  "noise spectrum over time"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        4,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "postfx-route",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        4,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     },
+     "out": "PostFxOut"
+    }
+   }
+  },
+  {
+   "id": "transpose+12",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": 12,
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        4,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "fine+50",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": 50,
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        4,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "low",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        4,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     }
+    },
+    "MIDI Mode": {
+     "item": "Low"
+    }
+   }
+  },
+  {
+   "id": "offdecay-0",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus-short",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        1.5,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     }
+    },
+    "Note Off": {
+     "item": "On"
+    },
+    "Off Decay": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "offdecay-50",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus-short",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        1.5,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     }
+    },
+    "Note Off": {
+     "item": "On"
+    },
+    "Off Decay": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "offdecay-100",
+   "params": {
+    "Resonance Type": {
+     "item": "Beam"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "On"
+    },
+    "@SideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "corpus-short",
+      "length": 72,
+      "notes": [
+       [
+        57,
+        0,
+        1.5,
+        100
+       ],
+       [
+        60,
+        61,
+        8,
+        100
+       ],
+       [
+        64,
+        63,
+        4,
+        100
+       ]
+      ]
+     }
+    },
+    "Note Off": {
+     "item": "On"
+    },
+    "Off Decay": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

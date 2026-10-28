@@ -1,0 +1,228 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-attack",
+ "question": "attack t63 and t90 of the -30 to -6 dBFS step for Attack 0.1, 1, 10, 100 ms in Peak and 1, 10 ms in RMS (Lin, Release 100 ms, Threshold -24 dB, Ratio 10)",
+ "plan": "6",
+ "read": [
+  "dynamics"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "attack-0.1ms",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.0001
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "attack-1ms",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "attack-10ms",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "attack-100ms",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.1
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "rms-attack-1ms",
+   "params": {
+    "Model": {
+     "item": "RMS"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "rms-attack-10ms",
+   "params": {
+    "Model": {
+     "item": "RMS"
+    },
+    "Knee": 0,
+    "Env Mode": {
+     "item": "Lin"
+    },
+    "Auto Release On/Off": {
+     "item": "Off"
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    },
+    "Attack": {
+     "display": 0.01
+    },
+    "Release": {
+     "display": 0.1
+    }
+   }
+  }
+ ]
+}

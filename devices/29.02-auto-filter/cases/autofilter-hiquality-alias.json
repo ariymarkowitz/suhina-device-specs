@@ -1,0 +1,197 @@
+{
+ "device": "Auto Filter",
+ "parameter": "autofilter-hiquality-alias",
+ "question": "spectral lines of the 10 and 15 kHz sines through MS2 and PRD at Drive 100 %, Freq 20 kHz, HiQuality off and on",
+ "plan": "11",
+ "read": [
+  "ext: tone10k, tone15k peaks"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 20000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 100
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "ms2-hq-off",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "MS2"
+    },
+    "Frequency": {
+     "display": 20000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 100
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@HiQuality": false
+   }
+  },
+  {
+   "id": "ms2-hq-on",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "MS2"
+    },
+    "Frequency": {
+     "display": 20000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 100
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@HiQuality": true
+   }
+  },
+  {
+   "id": "prd-hq-off",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "PRD"
+    },
+    "Frequency": {
+     "display": 20000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 100
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@HiQuality": false
+   }
+  },
+  {
+   "id": "prd-hq-on",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "PRD"
+    },
+    "Frequency": {
+     "display": 20000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 100
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@HiQuality": true
+   }
+  }
+ ]
+}

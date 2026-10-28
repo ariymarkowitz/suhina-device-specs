@@ -1,0 +1,132 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-synced-steps",
+ "question": "delay of the impulse in Synced mode at Delay Synced 6, 9, 12, 18",
+ "plan": "6",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Synced"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "synced-6",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Synced"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Synced": 6
+   }
+  },
+  {
+   "id": "synced-9",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Synced"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Synced": 9
+   }
+  },
+  {
+   "id": "synced-12",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Synced"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Synced": 12
+   }
+  },
+  {
+   "id": "synced-18",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Mode": {
+     "item": "Synced"
+    },
+    "Delay Time": {
+     "display": 0.25
+    },
+    "Delay Feedback": {
+     "display": 0
+    },
+    "Delay Synced": 18
+   }
+  }
+ ]
+}

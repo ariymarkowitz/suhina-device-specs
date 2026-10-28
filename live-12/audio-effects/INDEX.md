@@ -4,7 +4,7 @@ One note per device of manual chapter 29. *Note* is `draft` until it has been ch
 `dump checked` once its ranges, defaults, steps, tapers and `.als` names come from the Live 12.4.6
 parameter dump (behaviour items can still be `[measure]`), and `partly measured` once behaviour runs
 rendered in Live have answered some of its Measurement plan (the note's Measured section,
-facts tagged `[measured 12.4.6]`, or `[measured 12.4.7]` for the third set, which Live 12.4.7 rendered; the runs are in `measurements/top100/`, for the priority 1 to 3 runs that followed in `measurements/remaining/` (rendered after the update to 12.4.7 although tagged 12.4.6, see `measurements/third/README.md`), and for the third set in `measurements/third/`). `measured` means the
+facts tagged `[measured 12.4.6]`, or `[measured 12.4.7]` for the third set, which Live 12.4.7 rendered; the sets, their dates and Live versions are listed in the README › Measurement sets). `measured` means the
 plan is answered apart from what audio with static settings cannot show.
 Shared controls and behaviour (side-chain, LFO, latency, Hi-Quality, dry/wet, MIDI input) are in
 [common.md](common.md).
@@ -42,7 +42,7 @@ Shared controls and behaviour (side-chain, LFO, latency, Hi-Quality, dry/wet, MI
 | 29.29 | [Phaser-Flanger](29.29-phaser-flanger.md) | modulation and pitch | partly measured |  |
 | 29.30 | [Redux](29.30-redux.md) | distortion | partly measured |  |
 | 29.31 | [Resonators](29.31-resonators.md) | reverb and resonance | partly measured |  |
-| 29.32 | [Reverb](29.32-reverb.md) | reverb and resonance | measured | `abl.device.reverb~` is a different (plate) reverb; do not use it as a source. Measured in its own five sets (`measurements/29.32-reverb/`) and six runs of the remaining set; Spin's depth is a fraction of each tap's delay, not milliseconds |
+| 29.32 | [Reverb](29.32-reverb.md) | reverb and resonance | measured | `abl.device.reverb~` is a different (plate) reverb; do not use it as a source. Measured in its own five sets (`devices/29.32-reverb/`) and six runs of the remaining set; Spin's depth is a fraction of each tap's delay, not milliseconds |
 | 29.33 | [Roar](29.33-roar.md) | distortion | partly measured | loads in Multi Band; the stored `Input_RoutingMode` element sets the routing in a render (0 Single to 6 Delay), which the third set used for the shapers, filters, routings and modulation; the 12.4.6 shaper and filter runs only reached the low band |
 | 29.34 | [Saturator](29.34-saturator.md) | distortion | partly measured | some Drive and Output display values were stored at the nearest step (±12.375 dB for ±12); the note gives stored values. The Waveshaper's Curve adds an even-order term, contrary to the manual's third-order |
 | 29.35 | [Shifter](29.35-shifter.md) | modulation and pitch | partly measured |  |

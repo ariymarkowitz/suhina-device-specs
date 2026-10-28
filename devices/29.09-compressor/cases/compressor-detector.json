@@ -1,0 +1,141 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-detector",
+ "question": "static curve at Threshold -20 dB, Ratio 4, hard knee: RMS, and Expand with Expansion Ratio 1, 1.5, 2 (Peak is the default case)",
+ "plan": "2, 4",
+ "read": [
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "rms",
+   "params": {
+    "Model": {
+     "item": "RMS"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "expand-1",
+   "params": {
+    "Model": {
+     "item": "Expand"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    },
+    "Expansion Ratio": 1
+   }
+  },
+  {
+   "id": "expand-1.5",
+   "params": {
+    "Model": {
+     "item": "Expand"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    },
+    "Expansion Ratio": 1.5
+   }
+  },
+  {
+   "id": "expand-2",
+   "params": {
+    "Model": {
+     "item": "Expand"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": {
+     "display": 4
+    },
+    "Expansion Ratio": 2
+   }
+  }
+ ]
+}

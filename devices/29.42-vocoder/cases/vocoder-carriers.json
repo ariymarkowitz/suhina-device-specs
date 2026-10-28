@@ -1,0 +1,102 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-carriers",
+ "question": "the probe as modulator at Depth 100 %: Type 1 with key-saw and with key-noise; Type 2; Type 3",
+ "plan": "2, 4, 8, 14",
+ "read": [
+  "response",
+  "static",
+  "dynamics",
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "external-saw",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 1,
+    "@CarrierSource/RoutedInput/Routable/Target": "key:key-saw"
+   }
+  },
+  {
+   "id": "external-noise",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 1,
+    "@CarrierSource/RoutedInput/Routable/Target": "key:key-noise"
+   }
+  },
+  {
+   "id": "type-2",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 2
+   }
+  },
+  {
+   "id": "type-3",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "@CarrierSource/Type": 3
+   }
+  }
+ ]
+}

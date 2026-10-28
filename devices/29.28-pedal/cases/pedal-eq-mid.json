@@ -1,0 +1,275 @@
+{
+ "device": "Pedal",
+ "parameter": "pedal-eq-mid",
+ "question": "Mid +100 % at Mid Freq Low, Mid and High; Mid +50 %; Mid -100 % and -50 % at Mid; Mid -100 % at Low",
+ "plan": "3",
+ "read": [
+  "response.sweep_db",
+  "response.noise_db"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mid+100-low",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 100
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Low"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mid+100-mid",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 100
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mid+100-high",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 100
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "High"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mid+50-mid",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 50
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mid-100-mid",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": -100
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mid-50-mid",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": -50
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "mid-100-low",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": -100
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Low"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

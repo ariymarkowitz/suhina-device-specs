@@ -1,0 +1,194 @@
+{
+ "device": "Multiband Dynamics",
+ "parameter": "multiband-dynamics-below",
+ "question": "Mid band Below Threshold -30 dB (Above stage out of the way): ratios 1:2, 1:0.50, 1:0.25, 1:Inf; Soft Knee on at 1:2",
+ "plan": "4,5",
+ "read": [
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b2",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": 0
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Below Ratio (Mid)": 0.5,
+    "Below Threshold (Mid)": {
+     "display": -30
+    }
+   }
+  },
+  {
+   "id": "b0.5",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": 0
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Below Ratio (Mid)": -1,
+    "Below Threshold (Mid)": {
+     "display": -30
+    }
+   }
+  },
+  {
+   "id": "b0.25",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": 0
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Below Ratio (Mid)": -3,
+    "Below Threshold (Mid)": {
+     "display": -30
+    }
+   }
+  },
+  {
+   "id": "b-inf",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": 0
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Below Ratio (Mid)": 1,
+    "Below Threshold (Mid)": {
+     "display": -30
+    }
+   }
+  },
+  {
+   "id": "b2-knee",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "On"
+    },
+    "Above Threshold (Mid)": {
+     "display": 0
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Below Ratio (Mid)": 0.5,
+    "Below Threshold (Mid)": {
+     "display": -30
+    }
+   }
+  }
+ ]
+}

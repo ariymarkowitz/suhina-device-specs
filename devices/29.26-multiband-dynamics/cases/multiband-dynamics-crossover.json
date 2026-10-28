@@ -1,0 +1,223 @@
+{
+ "device": "Multiband Dynamics",
+ "parameter": "multiband-dynamics-crossover",
+ "question": "flat sum at 120 Hz / 2.5 kHz (default case), 500 Hz / 2 kHz and 60 Hz / 10 kHz; each band alone (others -24 dB) at 500 Hz / 2 kHz",
+ "plan": "2,3",
+ "read": [
+  "response.sweep_db",
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "flat-500-2k",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Low-Mid Crossover": {
+     "display": 500
+    },
+    "Mid-High Crossover": {
+     "display": 2000
+    }
+   }
+  },
+  {
+   "id": "flat-60-10k",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Low-Mid Crossover": {
+     "display": 60
+    },
+    "Mid-High Crossover": {
+     "display": 10000
+    }
+   }
+  },
+  {
+   "id": "low-500",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Low-Mid Crossover": {
+     "display": 500
+    },
+    "Mid-High Crossover": {
+     "display": 2000
+    },
+    "Output Gain (Mid)": {
+     "display": -24
+    },
+    "Output Gain (High)": {
+     "display": -24
+    }
+   }
+  },
+  {
+   "id": "mid-500-2k",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Low-Mid Crossover": {
+     "display": 500
+    },
+    "Mid-High Crossover": {
+     "display": 2000
+    },
+    "Output Gain (Low)": {
+     "display": -24
+    },
+    "Output Gain (High)": {
+     "display": -24
+    }
+   }
+  },
+  {
+   "id": "high-2k",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Low-Mid Crossover": {
+     "display": 500
+    },
+    "Mid-High Crossover": {
+     "display": 2000
+    },
+    "Output Gain (Low)": {
+     "display": -24
+    },
+    "Output Gain (Mid)": {
+     "display": -24
+    }
+   }
+  }
+ ]
+}

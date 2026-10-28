@@ -3,8 +3,8 @@
 Device notes link here instead of repeating these parts. Where a device departs from what is
 written here, its own note says so. The eight devices of manual chapter 30 are Arpeggiator,
 CC Control, Chord, Note Length, Pitch, Random, Scale and Velocity ([INDEX.md](INDEX.md)). Their
-Live 12.4.6 parameter dump (`measurements/dump-midi-12.4.6.json`, summaries in
-`measurements/dump-12.4.6-summary/Midi*.txt`) is in each device note's Controls; this file has
+Live 12.4.6 parameter dump (`reference/dump-midi-12.4.6.json`, summaries in
+`reference/dump-12.4.6-summary/Midi*.txt`) is in each device note's Controls; this file has
 not been revised against it, so everything below is `[manual]`, `[source: N]`, `[inferred]` or
 `[measure]`. Sources are listed at the bottom.
 

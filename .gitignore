@@ -8,17 +8,25 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
-# Large, regenerable audio (probe signal from tools/harness/signals.py; renders from Live)
-probe.wav
-measurements/*/export/
+# Everything measure.py and the harness make on one machine: built sets, exports
+work/
+
+# The one probe that is over GitHub's 100 MB file limit and that no run uses; probes.py makes it
+# on request (python tools/harness/probes.py gap30). Its manifest is kept.
+probes/gap30.wav
+
+# Live's renders of the runs and the bulky views analyse.py writes beside each result (CSV, impulse
+# responses). Both are remade by the measurement (README > Measuring a device); the results/ next
+# to them are what is kept.
+devices/*/renders/
+devices/*/extras/
+automation/export/
+
+# Live's own files in a generated set's Project folder
 *.asd
 Backup/
-# the impulse responses analyse.py writes beside each result (the Reverb runs' alone are 434 MB,
-# the top 100 runs' 577 MB); remade by analyse.py from the renders
-measurements/*/live/*.ir.wav
-# what Live writes into a generated set's Project folder while it exports
-measurements/*/Samples/
-# the folder that makes a generated set's folder a Live Project (make_als.py creates it)
 Ableton Project Info/
-# side-chain keys and carriers (signals.py --kind key-...)
-measurements/probe-keys/*.wav
+
+# written by tools/probe-device/build_patch.py
+tools/probe-device/Suhina Probe.maxpat
+tools/probe-device/clipboard.json

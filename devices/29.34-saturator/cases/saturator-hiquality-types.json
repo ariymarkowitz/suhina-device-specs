@@ -1,0 +1,212 @@
+{
+ "device": "Saturator",
+ "parameter": "saturator-hiquality-types",
+ "question": "spectral lines of the 10 and 15 kHz sines at Drive +24 dB for Analog Clip, Digital Clip, Sinoid Fold and Waveshaper, Oversampling true and false",
+ "plan": "7",
+ "read": [
+  "ext: tone10k, tone15k peaks"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "analog-clip-hq-on",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Analog Clip"
+    },
+    "@Oversampling": true
+   }
+  },
+  {
+   "id": "analog-clip-hq-off",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Analog Clip"
+    },
+    "@Oversampling": false
+   }
+  },
+  {
+   "id": "digital-clip-hq-on",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    },
+    "@Oversampling": true
+   }
+  },
+  {
+   "id": "digital-clip-hq-off",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Digital Clip"
+    },
+    "@Oversampling": false
+   }
+  },
+  {
+   "id": "sinoid-fold-hq-on",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Sinoid Fold"
+    },
+    "@Oversampling": true
+   }
+  },
+  {
+   "id": "sinoid-fold-hq-off",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Sinoid Fold"
+    },
+    "@Oversampling": false
+   }
+  },
+  {
+   "id": "waveshaper-hq-on",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Waveshaper"
+    },
+    "@Oversampling": true
+   }
+  },
+  {
+   "id": "waveshaper-hq-off",
+   "params": {
+    "Color On": 0,
+    "Post Clip Mode": {
+     "item": "No Clip"
+    },
+    "Drive": {
+     "display": 24
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Type": {
+     "item": "Waveshaper"
+    },
+    "@Oversampling": false
+   }
+  }
+ ]
+}

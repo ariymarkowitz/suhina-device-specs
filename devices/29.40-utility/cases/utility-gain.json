@@ -1,0 +1,90 @@
+{
+ "device": "Utility",
+ "parameter": "utility-gain",
+ "question": "staircase gain for Gain -inf, -60, -30, -12, +12, +35 dB",
+ "plan": "7",
+ "read": [
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    }
+   }
+  },
+  {
+   "id": "gain--inf",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Output": -1
+   }
+  },
+  {
+   "id": "gain-60",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Output": {
+     "display": -60
+    }
+   }
+  },
+  {
+   "id": "gain-30",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Output": {
+     "display": -30
+    }
+   }
+  },
+  {
+   "id": "gain-12",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Output": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "gain+12",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Output": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "gain+35",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Output": {
+     "display": 35
+    }
+   }
+  }
+ ]
+}

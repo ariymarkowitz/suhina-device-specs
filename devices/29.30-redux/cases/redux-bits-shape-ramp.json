@@ -1,0 +1,229 @@
+{
+ "device": "Redux",
+ "parameter": "redux-bits-shape-ramp",
+ "question": "quantizer levels on the ramp: Bits 4 at Shape 25, 75 %; Bits 8 and 12 at Shape 100 %; Bits 3 and 6 at Shape 0",
+ "plan": "4",
+ "read": [
+  "ext: ramp (quantizer levels)",
+  "stair100"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b4-shape25",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 4,
+    "Quantizer Shape": {
+     "display": 25
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b4-shape75",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 4,
+    "Quantizer Shape": {
+     "display": 75
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b8-shape100",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 8,
+    "Quantizer Shape": {
+     "display": 100
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b12-shape100",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 12,
+    "Quantizer Shape": {
+     "display": 100
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b3",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 3,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "b6",
+   "params": {
+    "Sample Rate": {
+     "display": 40000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 6,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}
