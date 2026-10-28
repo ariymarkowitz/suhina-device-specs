@@ -119,4 +119,15 @@ RUNS = [
         ["diffusion-60", {"Diffusion": {"display": 60}}],
         ["scale-5", {"Diffusion": {"display": 60}, "Scale": {"display": 5}}]]
      + [[f"density-{d.lower()}", {"Density": {"item": d}}] for d in ("Sparse", "Mid", "High")]},
+    # Each line's allpass grows with Scale while its delay does not, so at Diffusion 0.1 % every
+    # arrival moves with Scale by the allpass lengths along its path: that tells apart lines fed the
+    # same input (C1/C2, D1/D2 in the first run). Two more Sizes move the overlaps elsewhere.
+    {"name": "reverb-network-scale", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "which line each arrival passed, from how far it moves with Scale; the mixing matrix of the network",
+     "question": "impulse response of the bare network (as reverb-network-id) for Scale 5 to 100 %, and at Size 50 and 200 with their reflections alone",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY},
+     "cases": [[f"scale-{v:g}", {"Scale": {"display": v}}] for v in (5, 20, 60, 80, 100)]
+     + [c for z in (50, 200) for c in ([f"size-{z}", {"Room Size": {"display": z}}],
+                                       [f"size-{z}-er-only", {"Room Size": {"display": z}, **ER_ONLY}])]},
 ]

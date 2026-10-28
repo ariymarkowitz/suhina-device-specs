@@ -1,0 +1,703 @@
+{
+ "set": "reverb-network-2.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "reverb-network-scale bypass",
+   "run": "reverb-network-scale",
+   "case": "bypass",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Device On": {
+     "value": 0,
+     "element": "On",
+     "stored": "false"
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale bypass"
+  },
+  {
+   "id": "reverb-network-scale default",
+   "run": "reverb-network-scale",
+   "case": "default",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7915194760383312,
+     "element": "RoomSize",
+     "stored": "100",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale default"
+  },
+  {
+   "id": "reverb-network-scale scale-5",
+   "run": "reverb-network-scale",
+   "case": "scale-5",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7915194760383312,
+     "element": "RoomSize",
+     "stored": "100",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    },
+    "Scale": {
+     "value": 0,
+     "element": "AllPassSize",
+     "stored": "0.05",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale scale-5"
+  },
+  {
+   "id": "reverb-network-scale scale-20",
+   "run": "reverb-network-scale",
+   "case": "scale-20",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7915194760383312,
+     "element": "RoomSize",
+     "stored": "100",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    },
+    "Scale": {
+     "value": 0.15789473617728533,
+     "element": "AllPassSize",
+     "stored": "0.2",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale scale-20"
+  },
+  {
+   "id": "reverb-network-scale scale-60",
+   "run": "reverb-network-scale",
+   "case": "scale-60",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7915194760383312,
+     "element": "RoomSize",
+     "stored": "100",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    },
+    "Scale": {
+     "value": 0.5789473680886427,
+     "element": "AllPassSize",
+     "stored": "0.6",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale scale-60"
+  },
+  {
+   "id": "reverb-network-scale scale-80",
+   "run": "reverb-network-scale",
+   "case": "scale-80",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7915194760383312,
+     "element": "RoomSize",
+     "stored": "100",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    },
+    "Scale": {
+     "value": 0.7894736840443214,
+     "element": "AllPassSize",
+     "stored": "0.8",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale scale-80"
+  },
+  {
+   "id": "reverb-network-scale scale-100",
+   "run": "reverb-network-scale",
+   "case": "scale-100",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7915194760383312,
+     "element": "RoomSize",
+     "stored": "100",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    },
+    "Scale": {
+     "value": 1.0,
+     "element": "AllPassSize",
+     "stored": "1",
+     "tol": 0.015625
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale scale-100"
+  },
+  {
+   "id": "reverb-network-scale size-50",
+   "run": "reverb-network-scale",
+   "case": "size-50",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7017327514332155,
+     "element": "RoomSize",
+     "stored": "50",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale size-50"
+  },
+  {
+   "id": "reverb-network-scale size-50-er-only",
+   "run": "reverb-network-scale",
+   "case": "size-50-er-only",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.7017327514332155,
+     "element": "RoomSize",
+     "stored": "50",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    },
+    "Diffuse Level": {
+     "value": 0.0,
+     "element": "MixDiffuse",
+     "stored": "0.02999999933"
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale size-50-er-only"
+  },
+  {
+   "id": "reverb-network-scale size-200",
+   "run": "reverb-network-scale",
+   "case": "size-200",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.8813043708399761,
+     "element": "RoomSize",
+     "stored": "200",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale size-200"
+  },
+  {
+   "id": "reverb-network-scale size-200-er-only",
+   "run": "reverb-network-scale",
+   "case": "size-200-er-only",
+   "device": "Reverb",
+   "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+   "params": {
+    "Dry/Wet": {
+     "value": 1.0,
+     "element": "MixDirect",
+     "stored": "1",
+     "tol": 0.015625
+    },
+    "Chorus On": {
+     "value": 0,
+     "element": "ChorusOn",
+     "stored": "false"
+    },
+    "ER Spin On": {
+     "value": 0,
+     "element": "SpinOn",
+     "stored": "false"
+    },
+    "Size Smoothing": {
+     "value": 0,
+     "element": "SizeSmoothing",
+     "stored": "0"
+    },
+    "Room Size": {
+     "value": 0.8813043708399761,
+     "element": "RoomSize",
+     "stored": "200",
+     "tol": 0.015625
+    },
+    "Diffusion": {
+     "value": 0,
+     "element": "AllPassGain",
+     "stored": "0.001",
+     "tol": 0.015625
+    },
+    "Decay Time": {
+     "value": 1.0,
+     "element": "DecayTime",
+     "stored": "60000"
+    },
+    "Diff. Hi On": {
+     "value": 0,
+     "element": "ShelfHighOn",
+     "stored": "false"
+    },
+    "Diff. Lo On": {
+     "value": 0,
+     "element": "ShelfLowOn",
+     "stored": "false"
+    },
+    "Reflect Level": {
+     "value": 0.0,
+     "element": "MixReflect",
+     "stored": "0.02999999933"
+    },
+    "Diffuse Level": {
+     "value": 0.0,
+     "element": "MixDiffuse",
+     "stored": "0.02999999933"
+    }
+   },
+   "errors": [],
+   "track": "reverb-network-scale size-200-er-only"
+  }
+ ],
+ "keys": {}
+}

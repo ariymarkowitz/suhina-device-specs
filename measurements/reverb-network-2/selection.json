@@ -1,0 +1,9 @@
+{
+ "name": "reverb-network-2",
+ "probes": {
+  "gap10": "measurements/29.32-reverb/probe-gap10/probe.wav"
+ },
+ "runs": [
+  "reverb-network-scale"
+ ]
+}
