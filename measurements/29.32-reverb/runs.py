@@ -103,4 +103,20 @@ RUNS = [
      "question": "early reflection taps of the impulse with Room Size jumping from 10 to 100 at beat 0.9 (45 ms before the impulse), each Size Smoothing",
      "base": dict(STATIC, **SHORT, **{"Room Size": {"auto": [[0, {"display": 10}], [0.9, {"display": 10}], [0.9, {"display": 100}]]}}),
      "cases": [[s.lower(), {"Size Smoothing": {"item": s}}] for s in ("None", "Slow", "Fast")]},
+    # ---- network identification (measurements/reverb-network/): the tail network read from
+    # sparse arrivals. Diffusion 0.1 % leaves the allpasses as plain delays, Decay 60 s keeps every
+    # pass at nearly full level, and Size 100 spreads the arrivals twice as far apart as the
+    # Size 10.54 render did. Shape fades the direct taps at different rates, which tells the input
+    # groups apart; Stereo 0 and the other Densities show which lines each side hears and how many.
+    {"name": "reverb-network-id", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the diffusion network's lines, input vectors and mixing matrix, which the Size 10.54 render left open (arrivals overlap there)",
+     "question": "impulse response of the bare network (Diffusion 0.1 %, Decay 60 s, filters off, Size 100) for Shape 0 to 1, Stereo 0, each Density, with the reflections alone as reference",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY},
+     "cases": [[f"shape-{v:g}", {"ER Shape": {"display": v}}] for v in (0, 0.25, 0.75, 1)]
+     + [["er-only", ER_ONLY],
+        ["stereo-0", {"Stereo Image": {"display": 0}}],
+        ["diffusion-60", {"Diffusion": {"display": 60}}],
+        ["scale-5", {"Diffusion": {"display": 60}, "Scale": {"display": 5}}]]
+     + [[f"density-{d.lower()}", {"Density": {"item": d}}] for d in ("Sparse", "Mid", "High")]},
 ]

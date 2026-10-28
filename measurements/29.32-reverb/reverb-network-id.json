@@ -1,0 +1,372 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-network-id",
+ "question": "impulse response of the bare network (Diffusion 0.1 %, Decay 60 s, filters off, Size 100) for Shape 0 to 1, Stereo 0, each Density, with the reflections alone as reference",
+ "plan": "7",
+ "read": [
+  "impulse (.ir.wav arrivals)"
+ ],
+ "probe": "measurements/29.32-reverb/probe-gap10/probe.wav",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "shape-0",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "shape-0.25",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 0.25
+    }
+   }
+  },
+  {
+   "id": "shape-0.75",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 0.75
+    }
+   }
+  },
+  {
+   "id": "shape-1",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "ER Shape": {
+     "display": 1
+    }
+   }
+  },
+  {
+   "id": "er-only",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "stereo-0",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "diffusion-60",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 60
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "scale-5",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 60
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Scale": {
+     "display": 5
+    }
+   }
+  },
+  {
+   "id": "density-sparse",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Sparse"
+    }
+   }
+  },
+  {
+   "id": "density-mid",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    }
+   }
+  },
+  {
+   "id": "density-high",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "High"
+    }
+   }
+  }
+ ]
+}

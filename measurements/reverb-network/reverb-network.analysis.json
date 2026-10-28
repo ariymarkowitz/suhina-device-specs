@@ -1,0 +1,28 @@
+{
+ "set": "reverb-network.als",
+ "groups": {
+  "gap10": {
+   "export": "reverb-network",
+   "offset_samples": 0,
+   "bypass_renders": 1,
+   "bypass_disagreeing": {}
+  }
+ },
+ "runs": {
+  "reverb-network-id": {
+   "bypass": "measurements/29.32-reverb/live/reverb-network-id bypass.json",
+   "default": "measurements/29.32-reverb/live/reverb-network-id default.json",
+   "shape-0": "measurements/29.32-reverb/live/reverb-network-id shape-0.json",
+   "shape-0.25": "measurements/29.32-reverb/live/reverb-network-id shape-0.25.json",
+   "shape-0.75": "measurements/29.32-reverb/live/reverb-network-id shape-0.75.json",
+   "shape-1": "measurements/29.32-reverb/live/reverb-network-id shape-1.json",
+   "er-only": "measurements/29.32-reverb/live/reverb-network-id er-only.json",
+   "stereo-0": "measurements/29.32-reverb/live/reverb-network-id stereo-0.json",
+   "diffusion-60": "measurements/29.32-reverb/live/reverb-network-id diffusion-60.json",
+   "scale-5": "measurements/29.32-reverb/live/reverb-network-id scale-5.json",
+   "density-sparse": "measurements/29.32-reverb/live/reverb-network-id density-sparse.json",
+   "density-mid": "measurements/29.32-reverb/live/reverb-network-id density-mid.json",
+   "density-high": "measurements/29.32-reverb/live/reverb-network-id density-high.json"
+  }
+ }
+}
