@@ -1,0 +1,85 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-decay-none",
+ "question": "impulse response of decay-14.4s (as reverb-decay, filters off, Reflect at its minimum) with Smooth None, with its reflections alone, and with Smooth Fast",
+ "plan": "5",
+ "read": [
+  "impulse (.ir.wav)",
+  "impulse.rt60_s"
+ ],
+ "probe": "gap30",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Decay Time": {
+     "norm": 0.75
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "er-only",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Decay Time": {
+     "norm": 0.75
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "smooth-fast",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Decay Time": {
+     "norm": 0.75
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    }
+   }
+  }
+ ]
+}

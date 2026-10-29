@@ -139,4 +139,13 @@ RUNS = [
      "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
               "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY},
      "cases": [["repeat-1", {}], ["repeat-2", {}]]},
+    # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
+    # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
+    # for sample by a network measured with Smooth None. The same case with Smooth None, its
+    # reflections alone to take them out, and the Fast case again as the control.
+    {"name": "reverb-decay-none", "plan": "5", "probe": "gap30", "read": ["impulse (.ir.wav)", "impulse.rt60_s"], "priority": 1,
+     "why": "the tail at a real decay (14.4 s, the preset's other values) with Smooth None, to compare the measured network against",
+     "question": "impulse response of decay-14.4s (as reverb-decay, filters off, Reflect at its minimum) with Smooth None, with its reflections alone, and with Smooth Fast",
+     "base": {**SMALL_SMOOTH_NONE, "Decay Time": {"norm": 0.75}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY},
+     "cases": [["er-only", ER_ONLY], ["smooth-fast", {"Size Smoothing": {"item": "Fast"}}]]},
 ]
