@@ -12,6 +12,7 @@ import argparse
 import glob
 import json
 import os
+import shutil
 import subprocess
 import sys
 
@@ -85,9 +86,13 @@ def main():
     seconds = len(audio) / rate
     bars = seconds / (4 * 60 / BPM)
 
+    # The set plays its own copy of the sample: suhina-cli loads audio only from inside the
+    # project's folder, and Live keeps a project's audio there too.
+    copy = os.path.join(out, os.path.basename(sample))
+    shutil.copyfile(sample, copy)
     als = os.path.join(out, "set.als")
     subprocess.run([PY, os.path.join(ROOT, "tools", "harness", "make_als.py"), "build", *cases,
-                    "-o", als, "--probe", sample, "--share"], check=True, cwd=ROOT)
+                    "-o", als, "--probe", copy, "--share"], check=True, cwd=ROOT)
     with open(os.path.join(out, "info.json"), "w") as f:
         json.dump({"device": slug, "sample": os.path.basename(sample), "export_name": name,
                    "seconds": seconds, "bars": bars, "sample_rate": rate}, f, indent=1)
