@@ -139,6 +139,81 @@ RUNS = [
      "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
               "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY},
      "cases": [["repeat-1", {}], ["repeat-2", {}]]},
+    # The measured network explains Live's right side only to about 0.27 s: there Live hears the
+    # first two direct reflections again (13,045 frames in, 11 times the tail's rms) where the
+    # network has nothing. Stereo 120 gives each side without the cross-mix. Shape tilts the
+    # reflections' levels against the even fade, by +-0.17 dB/ms at Decay 0.2 s (+-9 dB from the
+    # first direct reflection to the last), so with the even fade taken out each Shape is another
+    # mix of the reflections' own responses, which can be solved for; Scale and Size move the
+    # arrivals as in the runs above.
+    {"name": "reverb-network-taps", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the network's paths past 0.27 s, on each side apart and for each direct reflection apart",
+     "question": "impulse response of the bare network (as reverb-network-id) with Stereo 120, at Scale 5 and 100 and Size 300, and at Decay 0.2 and 0.83 s for Shape 0, 0.5 and 1",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}},
+     "cases": [[f"scale-{v:g}", {"Scale": {"display": v}}] for v in (5, 100)]
+     + [["size-300", {"Room Size": {"display": 300}}]]
+     + [[f"decay-{d}-shape-{v:g}", {"Decay Time": {"norm": n}, "ER Shape": {"display": v}}]
+        for d, n in (("0.2s", 0.0), ("0.83s", 0.25)) for v in (0, 0.5, 1)]},
+    # The return of reverb-network-taps (every direct reflection heard again on the right, A's and
+    # G's lengths later) moves with Scale by both lines' allpasses, but at Diffusion 60 % its copies
+    # come every G-allpass length, with none at A's own and the return at about one allpass gain:
+    # which allpasses it passes, and in what order, is not settled. Stereo 120 keeps the right
+    # apart; Scale 100 makes A's allpass 505 frames and G's 144, far apart from the input pairs'
+    # 324-frame spacing; three Diffusions give the gain law.
+    {"name": "reverb-network-allpass", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the allpasses on the network's return path, and their gain against Diffusion",
+     "question": "impulse response of the bare network (as reverb-network-taps, Stereo 120) at Diffusion 60 % and Scale 40 and 100, and at Diffusion 30 and 96 % with Scale 100",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 60},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}},
+     "cases": [["scale-100", {"Scale": {"display": 100}}]]
+     + [[f"diffusion-{d:g}-scale-100", {"Diffusion": {"display": d}, "Scale": {"display": 100}}] for d in (30, 96)]},
+    # Suhina's reverb sums the input to mono before the reflections and the network. Every render
+    # above fed both sides the same, so a network that takes its right reflections from the right
+    # input and its left ones from the left would look the same. Built with compare/build_set.py
+    # and the impulse-left and impulse-right samples, not with a probe: the bare network with
+    # Stereo 120, at Scale 40 and 100.
+    {"name": "reverb-network-sides", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "whether the reflections and the network take the input in stereo, and from which side the right's return comes",
+     "question": "impulse response of the bare network (as reverb-network-taps, Stereo 120) to an impulse on the left only and on the right only, at Scale 40 and 100",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}},
+     "cases": [["scale-100", {"Scale": {"display": 100}}]]},
+    # reverb-network-sides showed the input is summed to mono (left-only and right-only renders are
+    # bit-identical), so the six input groups can only be told apart by Shape's tilt of the
+    # reflections (0.336 dB per ms of a reflection's delay between Shape 0 and 1 at Decay 0.2 s).
+    # Four Shapes at three Scales give each group's own response, Scale by Scale, to decode its paths.
+    {"name": "reverb-network-groups", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "each input group's own response through the network, from Shape's tilt, at three Scales",
+     "question": "impulse response of the bare network (as reverb-network-taps, Stereo 120) at Decay 0.2 s for Shape 0, 0.25, 0.75 and 1 at Scale 5, 40 and 100, and Shape 0.5 at 0.2 s and Shape 0 and 1 at 0.83 s for Scale 5 and 100 (reverb-network-taps has them at 40): seven tilts at every Scale",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 0.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}},
+     "cases": [[f"scale-{c:g}-shape-{v:g}", {"Scale": {"display": c}, "ER Shape": {"display": v}}]
+               for c in (5, 40, 100) for v in (0, 0.25, 0.75, 1)]
+     + [[f"scale-{c:g}-shape-0.5", {"Scale": {"display": c}}] for c in (5, 100)]
+     + [[f"scale-{c:g}-decay-0.83s-shape-{v:g}", {"Scale": {"display": c}, "Decay Time": {"norm": 0.25}, "ER Shape": {"display": v}}]
+        for c in (5, 100) for v in (0, 1)]},
+    # Shape's tilt cannot tell the input groups apart (groups 4 and 5, at 28.4 and 34.2 ms, differ
+    # by under 0.5 dB over its whole range). Spin can: it swings each direct reflection's delay on
+    # its own LFO by a share of that delay, and the network's input with it, so an impulse every 2 s
+    # (compare/build_set.py with the impulse-train sample) catches every reflection at ten
+    # different shifts. The reflections alone, with the same Spin, show each shift; Live restarts
+    # the LFOs whenever playback starts. Decay 0.2 s, so each response has died before the next.
+    # High Cut off: the direct reflections then reach 18 kHz while the filtered ones that follow
+    # them stop near 8.6 kHz, so a high-pass leaves the direct ones alone to read the shifts from.
+    {"name": "reverb-network-spin", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "each direct reflection's own response through the network, told apart by Spin's shift of it",
+     "question": "responses of the bare network (Stereo 120, Diffusion 0.1 %, Decay 0.2 s) to an impulse every 2 s with Spin at 0.3 Hz and Amount 30, at Scale 5, 40 and 100, and the reflections alone",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 0.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "ER Spin On": ON, "ER Spin Rate": {"display": 0.3},
+              "ER Spin Amount": {"display": 30}, "In Hi Cut On": OFF},
+     "cases": [[f"scale-{c:g}", {"Scale": {"display": c}}] for c in (5, 100)]
+     + [["er-only", {"Reflect Level": {"display": 0.0}, **ER_ONLY}]]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
