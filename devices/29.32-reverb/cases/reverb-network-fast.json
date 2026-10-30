@@ -1,0 +1,343 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-network-fast",
+ "question": "impulse response of the bare network (as reverb-network-small, Hi Cut off, Diffusion 0.1 %, Decay 60 s) with Smooth Fast at Size 1.53, 10.54 and 100 (Scale 40 %), Scale 5 and 100 % at Size 1.53, the reflections alone at each Size, and Size 1.53 with Smooth None and Slow",
+ "plan": "7",
+ "read": [
+  "impulse (.ir.wav arrivals)"
+ ],
+ "probe": "gap10",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0
+   }
+  },
+  {
+   "id": "size-1.53-scale-5",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Scale": {
+     "display": 5
+    }
+   }
+  },
+  {
+   "id": "size-1.53-scale-100",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Scale": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "size-1.53-er-only",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "size-10.54",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 10.54
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0
+   }
+  },
+  {
+   "id": "size-10.54-er-only",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 10.54
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "size-100",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0
+   }
+  },
+  {
+   "id": "size-100-er-only",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Fast"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Diffuse Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "size-1.53-smooth-none",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0
+   }
+  },
+  {
+   "id": "size-1.53-smooth-slow",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "Slow"
+    },
+    "Room Size": {
+     "display": 1.53
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Decay Time": {
+     "norm": 1.0
+    },
+    "Diff. Hi On": 0,
+    "Diff. Lo On": 0,
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0
+   }
+  }
+ ]
+}

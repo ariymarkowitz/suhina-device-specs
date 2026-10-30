@@ -279,6 +279,26 @@ RUNS = [
      "cases": [[f"size-{z:g}-scale-{v:g}", {"Room Size": {"display": z}, "Scale": {"display": v}}]
                for z, scales in ((100, (5, 20, 100)), (10.54, (5, 40, 100)), (1.53, (5, 40, 100))) for v in scales]
      + [["size-100-scale-100-diffusion-60", {"Scale": {"display": 100}, "Diffusion": {"display": 60}}]]},
+    # Under Smooth Fast Live's tail at Size 1.53 loses about 1 dB more than under None from its first
+    # arrivals, its delays run a few frames short, and its reflections come 4 or 9 to 10 frames
+    # early (reverb-impulse set, Fast cases against their reverb-size twins). The bare network of
+    # reverb-network-small with Smooth Fast, read sample by sample, shows how Fast reads each line
+    # (fractions of a frame, the interpolation and its loss) and each reflection. Scale 5 and 100 at
+    # Size 1.53 move the allpasses apart from the delays; Smooth None at Size 1.53 repeats
+    # reverb-network-small's size-1.53-scale-40 (it should be bit-identical), and Slow is the
+    # other smoothing mode.
+    {"name": "reverb-network-fast", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "how Smooth Fast changes Density Low's network and reflections, sample by sample, in small and large rooms",
+     "question": "impulse response of the bare network (as reverb-network-small, Hi Cut off, Diffusion 0.1 %, Decay 60 s) with Smooth Fast at Size 1.53, 10.54 and 100 (Scale 40 %), Scale 5 and 100 % at Size 1.53, the reflections alone at each Size, and Size 1.53 with Smooth None and Slow",
+     "base": {**STATIC, "Size Smoothing": {"item": "Fast"}, "Room Size": {"display": 1.53}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [[f"size-1.53-scale-{v:g}", {"Scale": {"display": v}}] for v in (5, 100)]
+     + [c for z in (1.53, 10.54, 100) for c in (
+           ([[f"size-{z:g}", {"Room Size": {"display": z}}]] if z != 1.53 else [])
+           + [[f"size-{z:g}-er-only", {"Room Size": {"display": z}, "Reflect Level": {"display": 0.0}, **ER_ONLY}]])]
+     + [["size-1.53-smooth-none", {"Size Smoothing": {"item": "None"}}],
+        ["size-1.53-smooth-slow", {"Size Smoothing": {"item": "Slow"}}]]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
