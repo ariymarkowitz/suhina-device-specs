@@ -1,0 +1,96 @@
+{
+ "suhina_probe_signal": 1,
+ "rate": 96000,
+ "channels": 2,
+ "length": 11400001,
+ "gap": 10.0,
+ "tempo": 120.0,
+ "segments": [
+  {
+   "name": "impulse",
+   "start": 48000,
+   "length": 1,
+   "level_db": -6.0
+  },
+  {
+   "name": "sweep",
+   "start": 1008001,
+   "length": 384000,
+   "f0": 20.0,
+   "f1": 20000.0,
+   "level_db": -12.0
+  },
+  {
+   "name": "staircase",
+   "start": 2352001,
+   "length": 504000,
+   "freq": 1000.0,
+   "levels_db": [
+    -60.0,
+    -57.0,
+    -54.0,
+    -51.0,
+    -48.0,
+    -45.0,
+    -42.0,
+    -39.0,
+    -36.0,
+    -33.0,
+    -30.0,
+    -27.0,
+    -24.0,
+    -21.0,
+    -18.0,
+    -15.0,
+    -12.0,
+    -9.0,
+    -6.0,
+    -3.0,
+    0.0
+   ],
+   "step_length": 24000
+  },
+  {
+   "name": "bursts",
+   "start": 3816001,
+   "length": 288000,
+   "freq": 1000.0,
+   "low_db": -30.0,
+   "high_db": -6.0,
+   "phase_length": 96000
+  },
+  {
+   "name": "steady",
+   "start": 5064001,
+   "length": 768000,
+   "freq": 1000.0,
+   "level_db": -12.0
+  },
+  {
+   "name": "noise",
+   "start": 6792001,
+   "length": 384000,
+   "level_db": -18.0,
+   "seed": 1
+  },
+  {
+   "name": "left",
+   "start": 8136001,
+   "length": 96000,
+   "freq": 1000.0,
+   "level_db": -12.0
+  },
+  {
+   "name": "right",
+   "start": 9192001,
+   "length": 96000,
+   "freq": 1000.0,
+   "level_db": -12.0
+  },
+  {
+   "name": "silence",
+   "start": 10248001,
+   "length": 192000
+  }
+ ]
+}

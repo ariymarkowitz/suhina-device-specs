@@ -37,6 +37,32 @@ def shelf(typ, freq, gain=0.4):
 
 SMALL_SMOOTH_NONE = {**STATIC, "Size Smoothing": {"item": "None"}}
 
+
+def rate_cases():
+    """The cases of the runs at other sample rates (note › Measurement plan 14), the same at each
+    rate: the bare network as reverb-network-exact, under Smooth None and Fast."""
+    smooth = {"none": {"Size Smoothing": {"item": "None"}}, "fast": {"Size Smoothing": {"item": "Fast"}}}
+    er = {"Reflect Level": {"display": 0.0}, **ER_ONLY}
+    cases = []
+    for sm, s in smooth.items():
+        # Low's lines, A's and B's fractions as a slope over three Sizes, and the blocks under None
+        for z in (1.53, 10.54, 100):
+            if (sm, z) != ("none", 100):  # the run's default
+                cases.append([f"{sm}-size-{z:g}", {**s, "Room Size": {"display": z}}])
+            cases.append([f"{sm}-size-{z:g}-er-only", {**s, "Room Size": {"display": z}, **er}])
+        # Mid's and High's allpasses, which split only above Diffusion 0.1 %
+        for d in ("Mid", "High"):
+            cases.append([f"{d.lower()}-{sm}-diffusion-60-scale-100",
+                          {**s, "Density": {"item": d}, "Diffusion": {"display": 60}, "Scale": {"display": 100}}])
+            cases.append([f"{d.lower()}-{sm}-er-only", {**s, "Density": {"item": d}, **er}])
+        # Stereo's delay of the reflections
+        for st in (0, 60):
+            cases.append([f"{sm}-stereo-{st:g}-er-only", {**s, "Stereo Image": {"display": st}, **er}])
+        # the Shape entry
+        for v in (0, 0.25, 0.5, 1):
+            cases.append([f"{sm}-decay-0.83s-shape-{v:g}", {**s, "Decay Time": {"norm": 0.25}, "ER Shape": {"display": v}}])
+    return cases
+
 RUNS = [
     {"name": "reverb-locut-law", "plan": "3", "probe": "gap2", "read": ["response"], "priority": 2,
      "why": "the Lo Cut's law, which the note calls not understood: corner against Input Freq and Input Width",
@@ -455,4 +481,25 @@ RUNS = [
                    *((f"spin-amt{a:g}-{r:g}Hz", {"ER Spin On": ON, "Diffuse Level": {"norm": 0.0},
                                                  "ER Spin Amount": {"display": a}, "ER Spin Rate": {"display": r}})
                      for a, r in ((17.5, 0.3), (55, 1.3))))]},
+    # Every length so far was read at 44.1 kHz. Converted to 48 kHz a few are round there and only
+    # there (Low's A line 2500 samples, two of Mid's and High's allpasses 600 and 700), and A and B
+    # are the lines Live reads between frames under Fast. The same bare-network cases at 48 and
+    # 96 kHz show whether Live converts its lengths by time, whether A and B are whole samples at
+    # 48 kHz, and whether Smooth None's blocks are 8 samples at the session's rate. Both runs go in
+    # one set, exported with Live's audio at each rate; only the run whose probe is at the export's
+    # rate is read from it (the other's probe is resampled, so its impulse is not one sample).
+    {"name": "reverb-rate-48k", "plan": "14", "probe": "gap10-48k", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the network's lengths, Stereo's delay and the Shape entry at 48 kHz, against their 44.1 kHz reads",
+     "question": "impulse response at 48 kHz of the bare network (as reverb-network-exact, Hi Cut off, Diffusion 0.1 %, Decay 60 s) under Smooth None and Fast at Size 1.53, 10.54 and 100, Mid and High at Diffusion 60 % and Scale 100 %, each with its reflections alone; the reflections alone at Stereo 0 and 60; Shape 0, 0.25, 0.5 and 1 at Decay 0.83 s",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": rate_cases()},
+    {"name": "reverb-rate-96k", "plan": "14", "probe": "gap10-96k", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the network's lengths, Stereo's delay and the Shape entry at 96 kHz, against their 44.1 kHz reads",
+     "question": "impulse response at 96 kHz of the bare network (as reverb-network-exact, Hi Cut off, Diffusion 0.1 %, Decay 60 s) under Smooth None and Fast at Size 1.53, 10.54 and 100, Mid and High at Diffusion 60 % and Scale 100 %, each with its reflections alone; the reflections alone at Stereo 0 and 60; Shape 0, 0.25, 0.5 and 1 at Decay 0.83 s",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": rate_cases()},
 ]

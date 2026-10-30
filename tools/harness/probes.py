@@ -7,7 +7,8 @@
     python probes.py gap10 ext  # make these
 
 Every probe is made at 44.1 kHz and 120 BPM by signals.py (the noise is seeded, so a remade
-probe is the one the original measurements used). A run names its probe with `"probe": "<name>"`
+probe is the one the original measurements used), but those named for another rate (`gap10-48k`),
+for a set rendered with Live's audio set to that rate. A run names its probe with `"probe": "<name>"`
 (default `gap2`); a side-chain key is `"key:<name>"`.
 """
 
@@ -31,6 +32,8 @@ PROBES = {
     "key-duck": ["--kind", "key-duck", "--gap", "2"],
     "key-saw": ["--kind", "key-saw", "--gap", "2"],
     "key-noise": ["--kind", "key-noise", "--gap", "2"],
+    "gap10-48k": ["--gap", "10", "--rate", "48000"],
+    "gap10-96k": ["--gap", "10", "--rate", "96000"],
 }
 
 
@@ -41,8 +44,9 @@ def path(name):
     wav = os.path.join(DIR, name + ".wav")
     if not (os.path.exists(wav) and os.path.exists(os.path.join(DIR, name + ".json"))):
         os.makedirs(DIR, exist_ok=True)
-        subprocess.run([sys.executable, os.path.join(HERE, "signals.py"), "-o", wav, "--rate", str(RATE),
-                        *PROBES[name]], check=True, stdout=subprocess.DEVNULL)
+        args = PROBES[name] if "--rate" in PROBES[name] else ["--rate", str(RATE), *PROBES[name]]
+        subprocess.run([sys.executable, os.path.join(HERE, "signals.py"), "-o", wav, *args],
+                       check=True, stdout=subprocess.DEVNULL)
     return wav
 
 
