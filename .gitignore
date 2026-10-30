@@ -11,9 +11,9 @@ __pycache__/
 # Everything measure.py and the harness make on one machine: built sets, exports
 work/
 
-# The one probe that is over GitHub's 100 MB file limit and that no run uses; probes.py makes it
-# on request (python tools/harness/probes.py gap30). Its manifest is kept.
-probes/gap30.wav
+# The probe WAVs: probes.py makes each again, byte for byte, on first use or with
+# `python tools/harness/probes.py`. Their manifests are kept.
+probes/*.wav
 
 # Live's renders of the runs and the bulky views analyse.py writes beside each result (CSV, impulse
 # responses). Both are remade by the measurement (README > Measuring a device); the results/ next

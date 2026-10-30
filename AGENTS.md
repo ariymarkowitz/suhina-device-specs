@@ -50,8 +50,9 @@ the Suhina Probe and Max editing are also UI-only and the user's to do.
 - Run the tests with their output in a log file and read failures from it:
   `$PY -m unittest discover -s tools/harness/tests > <scratch>/tests.log 2>&1`.
 - Renders, built sets (`work/sets/`) and extras are not in the repository and `work/` is scratch:
-  everything in it is made again by `measure.py`. The probe WAVs are kept in `probes/` (except the
-  unused `gap30`): never regenerate over them with other settings. Point every
+  everything in it is made again by `measure.py`. The probe WAVs are not in the repository either:
+  `tools/harness/probes.py` makes each in `probes/`, byte for byte, on first use (their manifests
+  are kept). Never change a probe's arguments or `signals.py` in a way that changes its samples. Point every
   track's clip at the one shared probe file (the builders do), and do not copy probes into Live
   projects. Keep only `results/`, `cases/` and `runs.py` per device, and `reference/`.
 - When a Live version other than 12.4.6/12.4.7 is measured, its dump, populate set and map go in
