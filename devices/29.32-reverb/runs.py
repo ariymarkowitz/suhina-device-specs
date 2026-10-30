@@ -243,6 +243,19 @@ RUNS = [
      "cases": [[f"scale-{c:g}", {"Scale": {"display": c}}] for c in (5, 20, 60, 80, 100)]
      + [["er-only", {"Reflect Level": {"display": 0.0}, **ER_ONLY}]]
      + [[f"decay-0.83s-shape-{v:g}", {"Decay Time": {"norm": 0.25}, "ER Shape": {"display": v}}] for v in (0, 0.5, 1)]},
+    # Densities Sparse, Mid and High run networks Suhina has not read: Live's first arrivals come
+    # 1,060 (Sparse) and 2,760 frames (Mid, High) after Suhina's, from reverb-network-id's single
+    # renders, which have no reflections alone to deconvolve by. The same six Scales as
+    # reverb-network-exact for each Density, and each Density's reflections alone.
+    {"name": "reverb-network-density", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the lines, input vectors and mixing matrix of the Sparse, Mid and High networks as exact sample values",
+     "question": "impulse response of the bare network (as reverb-network-exact, Hi Cut off) at Density Sparse, Mid and High for Scale 5, 20, 40, 60, 80 and 100 %, and each Density's reflections alone",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [c for d in ("Sparse", "Mid", "High") for c in (
+                   [[f"{d.lower()}-scale-{v:g}", {"Density": {"item": d}, "Scale": {"display": v}}] for v in (5, 20, 40, 60, 80, 100)]
+                   + [[f"{d.lower()}-er-only", {"Density": {"item": d}, "Reflect Level": {"display": 0.0}, **ER_ONLY}]])]},
     # reverb-network-exact read Density Low's network at Size 100 only, and Suhina's tail at Size 1.53
     # and 10.54 comes out 0.3 to 1.6 dB loud. The same bare network at small Sizes, read sample by
     # sample: whether every length (lines, allpasses, entry, family offsets) scales with the size
@@ -314,6 +327,53 @@ RUNS = [
      "cases": [[f"size-{z:g}", {"Room Size": {"display": z}}] for z in (10.54, 100)]
      + [[f"size-{z:g}-er-only", {"Room Size": {"display": z}, "Reflect Level": {"display": 0.0}, **ER_ONLY}] for z in (1.53, 10.54, 100)]
      + [[f"size-{z:g}-smooth-none", {"Room Size": {"display": z}, "Size Smoothing": {"item": "None"}}] for z in (1.53, 100)]},
+    # In Live's bare network each line has its own High Shelf, as long as the line, and the input none
+    # (reverb-network-small hi-shelf-4k, each line's filter a pass solved as a short FIR). The
+    # Low-Pass is not like that: in reverb-filters and reverb-network-freq every line's first pass
+    # carries one whole one-pole at the set frequency, and the loop then loses far less, unevenly
+    # between the sides. The bare network with the Low-Pass at three frequencies (Size 10.54, so
+    # each line's passes stand apart), 1 kHz at Size 1.53 and 100 for how it scales with the
+    # lines, and a Low Shelf and a 1 kHz High Shelf to check those are per line too; each Size's
+    # reflections alone to deconvolve by.
+    {"name": "reverb-network-filters", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "where Density Low's network damping sits (input or lines, which lines) and its response a pass, for the Low-Pass above all",
+     "question": "impulse response of the bare network (as reverb-network-small, Hi Cut off, Diffusion 0.1 %, Decay 60 s, Smooth None) at Size 10.54 with the Low-Pass at 250 Hz, 1 kHz and 4 kHz, the Low Shelf at 500 Hz gain 0.2 and the High Shelf at 1 kHz gain 0.2; the Low-Pass at 1 kHz at Size 1.53 and 100; each Size with filters off and its reflections alone",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 10.54}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [[f"size-{z:g}-lowpass-{f:g}", {"Room Size": {"display": z}, **shelf("Lowpass", f)}]
+               for z, f in ((10.54, 250), (10.54, 1000), (10.54, 4000), (1.53, 1000), (100, 1000))]
+     + [["size-10.54-lo-shelf-500-g0.2", {"Diff. Lo On": ON, "Diff. Lo Freq": {"display": 500}, "LowShelf Gain": {"display": 0.2}}],
+        ["size-10.54-hi-shelf-1000-g0.2", shelf("Shelf", 1000, 0.2)]]
+     + [c for z in (1.53, 10.54, 100) for c in (
+           [f"size-{z:g}", {"Room Size": {"display": z}}],
+           [f"size-{z:g}-er-only", {"Room Size": {"display": z}, "Reflect Level": {"display": 0.0}, **ER_ONLY}])]},
+    # reverb-network-filters read Density Low's damping (a whole one-pole of the Low-Pass a pass in
+    # every line, cookbook shelves with a loss proportional to the line's length). Sparse, Mid and
+    # High keep Low's law in Suhina and their highs decay 1.5 to 3.6 dB/s too slowly at the default
+    # damping (reverb-texture density-*, Decay 1 s), so the same cases at each Density, and the
+    # default damping at three Sizes.
+    {"name": "reverb-network-density-filters", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the damping of the Sparse, Mid and High networks: the Low-Pass and shelves a pass, and their law against Size, as Density Low's",
+     "question": "impulse response of the bare network (as reverb-network-filters, Hi Cut off, Diffusion 0.1 %, Decay 60 s, Smooth None) at Density Sparse, Mid and High: at Size 10.54 the Low-Pass at 250 Hz, 1 kHz and 4 kHz, the Low Shelf at 500 Hz gain 0.2 and the High Shelf at 1 kHz gain 0.2; the Low-Pass at 1 kHz at Size 1.53 and 100; the High Shelf at 4 kHz at Size 1.53, 10.54 and 100; the default damping at Size 1.53, 10.54 and 100; each Size with filters off and its reflections alone",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 10.54}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [c for d in ("Sparse", "Mid", "High") for c in (
+                   [[f"{d.lower()}-size-{z:g}-lowpass-{f:g}", {"Density": {"item": d}, "Room Size": {"display": z}, **shelf("Lowpass", f)}]
+                    for z, f in ((10.54, 250), (10.54, 1000), (10.54, 4000), (1.53, 1000), (100, 1000))]
+                   + [[f"{d.lower()}-size-10.54-lo-shelf-500-g0.2", {"Density": {"item": d}, "Diff. Lo On": ON,
+                                                                      "Diff. Lo Freq": {"display": 500}, "LowShelf Gain": {"display": 0.2}}],
+                      [f"{d.lower()}-size-10.54-hi-shelf-1000-g0.2", {"Density": {"item": d}, **shelf("Shelf", 1000, 0.2)}]]
+                   + [[f"{d.lower()}-size-{z:g}-hi-shelf-4k", {"Density": {"item": d}, "Room Size": {"display": z}, **shelf("Shelf", 4000)}]
+                      for z in (1.53, 10.54, 100)]
+                   + [[f"{d.lower()}-size-{z:g}-default-damping", {"Density": {"item": d}, "Room Size": {"display": z},
+                                                                   "Diff. Hi On": ON, "Diff. Lo On": ON}]
+                      for z in (1.53, 10.54, 100)]
+                   + [c for z in (1.53, 10.54, 100) for c in (
+                         [f"{d.lower()}-size-{z:g}", {"Density": {"item": d}, "Room Size": {"display": z}}],
+                         [f"{d.lower()}-size-{z:g}-er-only", {"Density": {"item": d}, "Room Size": {"display": z},
+                                                              "Reflect Level": {"display": 0.0}, **ER_ONLY}])])]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
