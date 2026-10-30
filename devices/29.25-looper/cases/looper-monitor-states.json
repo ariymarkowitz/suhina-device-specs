@@ -1,0 +1,194 @@
+{
+ "device": "Looper",
+ "parameter": "looper-monitor-states",
+ "question": "output level with the state fixed from the first sample: Stop with Never, Rec/OVR, Rec/OVR/Stop; Record with Never and Rec/OVR; Play with Rec/OVR and Rec/OVR/Stop; Overdub with Rec/OVR/Stop (default: Stop, Always)",
+ "plan": "9",
+ "read": [
+  "silence",
+  "static",
+  "raw render (is anything but the input heard?)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    }
+   }
+  },
+  {
+   "id": "stop-never",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Stop"
+    },
+    "Monitor": {
+     "item": "Never"
+    }
+   }
+  },
+  {
+   "id": "stop-recovr",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Stop"
+    },
+    "Monitor": {
+     "item": "Rec/OVR"
+    }
+   }
+  },
+  {
+   "id": "stop-recovrstop",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Stop"
+    },
+    "Monitor": {
+     "item": "Rec/OVR/Stop"
+    }
+   }
+  },
+  {
+   "id": "record-never",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Record"
+    },
+    "Monitor": {
+     "item": "Never"
+    }
+   }
+  },
+  {
+   "id": "record-recovr",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Record"
+    },
+    "Monitor": {
+     "item": "Rec/OVR"
+    }
+   }
+  },
+  {
+   "id": "play-recovr",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Play"
+    },
+    "Monitor": {
+     "item": "Rec/OVR"
+    }
+   }
+  },
+  {
+   "id": "play-recovrstop",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Play"
+    },
+    "Monitor": {
+     "item": "Rec/OVR/Stop"
+    }
+   }
+  },
+  {
+   "id": "overdub-recovrstop",
+   "params": {
+    "Tempo Control": {
+     "item": "None"
+    },
+    "Song Control": {
+     "item": "None"
+    },
+    "Quantization": {
+     "item": "None"
+    },
+    "State": {
+     "item": "Overdub"
+    },
+    "Monitor": {
+     "item": "Rec/OVR/Stop"
+    }
+   }
+  }
+ ]
+}

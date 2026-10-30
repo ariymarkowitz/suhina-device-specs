@@ -1,0 +1,230 @@
+{
+ "device": "Limiter",
+ "parameter": "limiter-lookahead-modes",
+ "question": "Lookahead 1.5 and 6 ms (3 ms is the default case), Soft Clip, True Peak and M/S routing, all with Gain +12 and Ceiling -6 dB",
+ "plan": "5,6,11",
+ "read": [
+  "impulse",
+  "dynamics",
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "la-1.5",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "1.5 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "la-6",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "6 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "soft-clip",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "Soft Clip"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "true-peak",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "L/R"
+    },
+    "Mode": {
+     "item": "True Peak"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "ms",
+   "params": {
+    "Input Gain": {
+     "display": 12
+    },
+    "Ceiling": {
+     "display": -6
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Auto": {
+     "item": "Off"
+    },
+    "Link": {
+     "display": 100
+    },
+    "M/S Link": {
+     "display": 0
+    },
+    "Lookahead": {
+     "item": "3 ms"
+    },
+    "Routing": {
+     "item": "M/S"
+    },
+    "Mode": {
+     "item": "Standard"
+    },
+    "Maximize On": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "device": "Dynamic Tube",
+ "parameter": "dyntube-detector",
+ "question": "distortion of the 1 to 300 ms bursts and the bursts over a bed, tube A, Bias 50 %, Envelope +100 %, Attack 1 ms, Release 100 ms",
+ "plan": "3",
+ "read": [
+  "ext: shortbursts, bedbursts (harmonics over time)"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 100
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "env+100",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": 100
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "env-100",
+   "params": {
+    "Tube Type": {
+     "item": "A"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Bias": {
+     "display": 50
+    },
+    "Tone": {
+     "display": 0
+    },
+    "Envelope": {
+     "display": -100
+    },
+    "Attack": {
+     "display": 0.001
+    },
+    "Release": {
+     "display": 0.1
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

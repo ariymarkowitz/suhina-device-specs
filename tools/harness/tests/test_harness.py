@@ -233,6 +233,63 @@ class ExtendedProbe(unittest.TestCase):
         self.assertAlmostEqual(r["ext"]["dcstep"]["tau_ms"], 1000 * tau, delta=0.1)
 
 
+class FifthProbe(unittest.TestCase):
+    """The fifth probe (signals.py --kind fifth): fs/4 at two phases, two staircases, a tone sequence."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.audio, cls.manifest = signals.build_fifth(rate=RATE, gap=0.5)
+        cls.seg = {s["name"]: s for s in cls.manifest["segments"]}
+
+    def part(self, name, a=0, n=None):
+        s = self.seg[name]
+        n = s["length"] - a if n is None else n
+        return self.audio[s["start"] + a:s["start"] + a + n, 0]
+
+    def test_manifest_matches_audio(self):
+        self.assertEqual(self.manifest["kind"], "fifth")
+        self.assertEqual([s["name"] for s in self.manifest["segments"]],
+                         ["impulse", "fs4_p0", "fs4_p45", "stair20", "stair5k", "vocseq", "silence"])
+        for s in self.manifest["segments"]:
+            self.assertLessEqual(s["start"] + s["length"], len(self.audio))
+        self.assertLessEqual(np.max(np.abs(self.audio)), 1.0)
+
+    def test_fs4_sample_and_reconstructed_peaks(self):
+        """The 45 degree tone has the same reconstructed peak and sample peaks 3 dB under it."""
+        n = RATE // 2
+        z = {}
+        for name in ("fs4_p0", "fs4_p45"):
+            x = self.part(name, RATE // 4, n)
+            k = np.arange(len(x))
+            z[name] = abs(np.sum(x * np.exp(-2j * np.pi * k / 4)) * 2 / len(x))
+            self.assertAlmostEqual(20 * np.log10(z[name]), -6.0, places=2)
+        self.assertAlmostEqual(20 * np.log10(np.max(np.abs(self.part("fs4_p0", RATE // 4, n)))), -6.0, places=2)
+        self.assertAlmostEqual(20 * np.log10(np.max(np.abs(self.part("fs4_p45", RATE // 4, n)))), -9.01, places=2)
+
+    def test_staircases(self):
+        for name, f in (("stair20", 20.0), ("stair5k", 5000.0)):
+            s = self.seg[name]
+            self.assertEqual(len(s["levels_db"]), 17)
+            self.assertEqual((s["levels_db"][0], s["levels_db"][-1]), (-54.0, -6.0))
+            self.assertEqual(s["length"], 17 * s["step_length"])
+            self.assertEqual(s["freq"], f)
+        # the last step is a sine at -6 dBFS
+        s = self.seg["stair5k"]
+        last = self.part("stair5k", 16 * s["step_length"], s["step_length"])
+        self.assertAlmostEqual(20 * np.log10(np.max(np.abs(last))), -6.0, delta=0.05)
+
+    def test_tone_sequence(self):
+        items = self.seg["vocseq"]["items"]
+        self.assertEqual(len(items), 18)
+        self.assertEqual([i["freq"] for i in items if i["freq"]][:3], [220, 1760, 330])
+        for k, item in enumerate(items):
+            x = self.part("vocseq", k * RATE, RATE)
+            if item["freq"] is None:
+                self.assertEqual(np.max(np.abs(x)), 0.0)
+            else:
+                self.assertAlmostEqual(20 * np.log10(np.max(np.abs(x))), -12.0, delta=0.05)
+
+
 class Analysis(unittest.TestCase):
     def test_identity(self):
         r = run(lambda x: x)

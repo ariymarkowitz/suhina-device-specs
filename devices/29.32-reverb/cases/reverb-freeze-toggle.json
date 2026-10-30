@@ -1,0 +1,141 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-freeze-toggle",
+ "question": "Freeze on at beat 2 (1 s) and off at beat 40 (20 s), Decay 3.46 s: Flat off and on with Cut off, and Cut on",
+ "plan": "9",
+ "read": [
+  "raw render (level over time)",
+  "response"
+ ],
+ "probe": "gap10",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Freeze On": {
+     "auto": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       40,
+       0
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "flat-off",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Freeze On": {
+     "auto": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       40,
+       0
+      ]
+     ]
+    },
+    "Flat On": 0,
+    "Cut On": 0
+   }
+  },
+  {
+   "id": "flat-on",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Freeze On": {
+     "auto": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       40,
+       0
+      ]
+     ]
+    },
+    "Flat On": 1,
+    "Cut On": 0
+   }
+  },
+  {
+   "id": "cut-on",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Freeze On": {
+     "auto": [
+      [
+       0,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       40,
+       0
+      ]
+     ]
+    },
+    "Flat On": 0,
+    "Cut On": 1
+   }
+  }
+ ]
+}

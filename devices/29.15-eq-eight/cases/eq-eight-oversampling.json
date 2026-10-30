@@ -1,0 +1,177 @@
+{
+ "device": "EQ Eight",
+ "parameter": "eq-eight-oversampling",
+ "question": "sweep response and impulse with a 15 kHz bell at +15 dB, Q 18, and a 48 dB low-pass at 18 kHz, Precision 0 and 1",
+ "plan": "7",
+ "read": [
+  "response",
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 1000
+    },
+    "3 Gain A": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "bell15k-p0",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 15000
+    },
+    "3 Gain A": {
+     "display": 15
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 18
+    },
+    "@Precision": 0
+   }
+  },
+  {
+   "id": "bell15k-p1",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 15000
+    },
+    "3 Gain A": {
+     "display": 15
+    },
+    "3 Filter Type A": {
+     "item": "Bell"
+    },
+    "3 Q A": {
+     "display": 18
+    },
+    "@Precision": 1
+   }
+  },
+  {
+   "id": "lp48-18k-p0",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 18000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Low Pass 48dB"
+    },
+    "3 Q A": {
+     "display": 0.71
+    },
+    "@Precision": 0
+   }
+  },
+  {
+   "id": "lp48-18k-p1",
+   "params": {
+    "Adaptive Q": {
+     "item": "Off"
+    },
+    "1 Filter On A": {
+     "item": "Off"
+    },
+    "2 Filter On A": {
+     "item": "Off"
+    },
+    "4 Filter On A": {
+     "item": "Off"
+    },
+    "3 Filter On A": {
+     "item": "On"
+    },
+    "3 Frequency A": {
+     "display": 18000
+    },
+    "3 Gain A": {
+     "display": 0
+    },
+    "3 Filter Type A": {
+     "item": "Low Pass 48dB"
+    },
+    "3 Q A": {
+     "display": 0.71
+    },
+    "@Precision": 1
+   }
+  }
+ ]
+}

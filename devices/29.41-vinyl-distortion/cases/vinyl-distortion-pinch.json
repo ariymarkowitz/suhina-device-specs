@@ -1,0 +1,180 @@
+{
+ "device": "Vinyl Distortion",
+ "parameter": "vinyl-distortion-pinch",
+ "question": "odd harmonics per staircase level and the L/R phase of the 3rd harmonic for Pinch Drive 0.1, 1 (0.5 default), band at 200 Hz and 5 kHz, Width 0.1, Mono, Hard",
+ "plan": "3, 4, 6",
+ "read": [
+  "static",
+  "raw render (L/R harmonic phase)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 0.5
+    },
+    "Pinch Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "drive-0.1",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 0.1
+    },
+    "Pinch Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "drive-1",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 1.0
+    },
+    "Pinch Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "freq-200",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 0.5
+    },
+    "Pinch Freq.": {
+     "display": 200
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "freq-5000",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 0.5
+    },
+    "Pinch Freq.": {
+     "display": 5000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "width-0.1",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 0.5
+    },
+    "Pinch Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    },
+    "Pinch Width": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "mono",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 0.5
+    },
+    "Pinch Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    },
+    "Pinch Mono On": {
+     "item": "Mono"
+    }
+   }
+  },
+  {
+   "id": "hard",
+   "params": {
+    "Tracing On": 0,
+    "Pinch On": 1,
+    "Pinch Drive": {
+     "display": 0.5
+    },
+    "Pinch Freq.": {
+     "display": 1000
+    },
+    "Global Drive": {
+     "display": 1
+    },
+    "Crackle Volume": {
+     "display": 0
+    },
+    "Pinch Soft On": {
+     "item": "Hard"
+    }
+   }
+  }
+ ]
+}

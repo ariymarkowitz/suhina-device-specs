@@ -1,0 +1,269 @@
+{
+ "device": "Auto Filter",
+ "parameter": "autofilter-clip-output-mix",
+ "question": "staircase and impulse: Soft Clip on and off with Res 90 % at Freq 1 kHz; Output -12 dB; Dry/Wet 50 % at Freq 500 Hz; MS2 at Drive 100 % with HiQuality stored on and off",
+ "plan": "10, 11",
+ "read": [
+  "static",
+  "impulse",
+  "response"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "clip-res90",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 90
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "On"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "noclip-res90",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 90
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "output-12",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 1000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Output": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "drywet-50",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "SVF"
+    },
+    "Frequency": {
+     "display": 500
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 0
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "ms2-drive-hq",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "MS2"
+    },
+    "Frequency": {
+     "display": 20000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 100
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@HiQuality": true
+   }
+  },
+  {
+   "id": "ms2-drive",
+   "params": {
+    "Filter Type": {
+     "item": "Low-pass"
+    },
+    "Filter Slope": {
+     "item": "24dB"
+    },
+    "Circuit": {
+     "item": "MS2"
+    },
+    "Frequency": {
+     "display": 20000
+    },
+    "Resonance": {
+     "display": 0
+    },
+    "Drive": {
+     "display": 100
+    },
+    "LFO Amount": {
+     "display": 0
+    },
+    "Env Amount": {
+     "display": 0
+    },
+    "Soft Clip On": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

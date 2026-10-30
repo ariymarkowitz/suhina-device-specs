@@ -1,0 +1,188 @@
+{
+ "device": "Multiband Dynamics",
+ "parameter": "multiband-dynamics-bands",
+ "question": "1 kHz tone put in the Low band (crossovers 3 kHz / 10 kHz) and High band (30 Hz / 300 Hz) with that band at 1:4; Low band at 1:4 with the tone in Mid; Mid band activator off at 1:4",
+ "plan": "4,10",
+ "read": [
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "tone-in-low",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Low-Mid Crossover": {
+     "display": 3000
+    },
+    "Mid-High Crossover": {
+     "display": 10000
+    },
+    "Above Threshold (Low)": {
+     "display": -30
+    },
+    "Above Ratio (Low)": -0.75,
+    "Attack Time (Low)": {
+     "display": 0.0001
+    },
+    "Release Time (Low)": {
+     "display": 0.0001
+    }
+   }
+  },
+  {
+   "id": "tone-in-high",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Low-Mid Crossover": {
+     "display": 30
+    },
+    "Mid-High Crossover": {
+     "display": 300
+    },
+    "Above Threshold (High)": {
+     "display": -30
+    },
+    "Above Ratio (High)": -0.75,
+    "Attack Time (High)": {
+     "display": 0.0001
+    },
+    "Release Time (High)": {
+     "display": 0.0001
+    }
+   }
+  },
+  {
+   "id": "neighbour-low-r4",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Threshold (Low)": {
+     "display": -30
+    },
+    "Above Ratio (Low)": -0.75
+   }
+  },
+  {
+   "id": "mid-off-r4",
+   "params": {
+    "Peak/RMS Mode": {
+     "item": "Peak"
+    },
+    "Soft Knee On/Off": {
+     "item": "Off"
+    },
+    "Above Threshold (Mid)": {
+     "display": -30
+    },
+    "Attack Time (Mid)": {
+     "display": 0.0001
+    },
+    "Release Time (Mid)": {
+     "display": 0.0001
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Time Scaling": {
+     "display": 100
+    },
+    "Above Ratio (Mid)": -0.75,
+    "Band Activator (Mid)": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

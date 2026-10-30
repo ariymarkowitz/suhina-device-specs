@@ -1,0 +1,190 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-midi-mono",
+ "question": "partials of the noise with notes A2 (61.5 to 64), C3 (64 to 66), E3 overlapping (65 to 68), G3 staccato (68 to 68.5): Gate off and on, Glide 78 ms, the PostFxOut routing",
+ "plan": "7",
+ "read": [
+  "noise spectrum over time (partials)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MidiGate": 0,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-mono",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        2.5,
+        100
+       ],
+       [
+        48,
+        64,
+        2,
+        100
+       ],
+       [
+        52,
+        65,
+        3,
+        100
+       ],
+       [
+        55,
+        68,
+        0.5,
+        100
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "gate-on",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MidiGate": 1,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-mono",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        2.5,
+        100
+       ],
+       [
+        48,
+        64,
+        2,
+        100
+       ],
+       [
+        52,
+        65,
+        3,
+        100
+       ],
+       [
+        55,
+        68,
+        0.5,
+        100
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "glide-78",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MidiGate": 0,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-mono",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        2.5,
+        100
+       ],
+       [
+        48,
+        64,
+        2,
+        100
+       ],
+       [
+        52,
+        65,
+        3,
+        100
+       ],
+       [
+        55,
+        68,
+        0.5,
+        100
+       ]
+      ]
+     }
+    },
+    "Glide": {
+     "display": 0.078
+    }
+   }
+  },
+  {
+   "id": "postfx-route",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MidiGate": 0,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-mono",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        2.5,
+        100
+       ],
+       [
+        48,
+        64,
+        2,
+        100
+       ],
+       [
+        52,
+        65,
+        3,
+        100
+       ],
+       [
+        55,
+        68,
+        0.5,
+        100
+       ]
+      ]
+     },
+     "out": "PostFxOut"
+    }
+   }
+  }
+ ]
+}

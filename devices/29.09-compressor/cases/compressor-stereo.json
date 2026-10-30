@@ -1,0 +1,90 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-stereo",
+ "question": "gain of each channel of the left -6 / right -18 dBFS tone, and of mid-only and side-only noise, Threshold -24 dB, ratio 10, Peak and RMS",
+ "plan": "12",
+ "read": [
+  "ext: lrsplit, mid, side"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "peak",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    }
+   }
+  },
+  {
+   "id": "rms",
+   "params": {
+    "Model": {
+     "item": "RMS"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -24
+    },
+    "Ratio": {
+     "display": 10
+    }
+   }
+  }
+ ]
+}

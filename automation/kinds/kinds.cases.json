@@ -1,0 +1,431 @@
+{
+ "set": "kinds.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "resonators note-line",
+   "run": "resonators",
+   "case": "note-line",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I Note": {
+     "value": 36,
+     "element": "ResNote",
+     "stored": "36",
+     "auto": [
+      [
+       0.0,
+       36,
+       "36"
+      ],
+      [
+       32.0,
+       72,
+       "72"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators note-line"
+  },
+  {
+   "id": "resonators note-bend-ease",
+   "run": "resonators",
+   "case": "note-bend-ease",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I Note": {
+     "value": 36,
+     "element": "ResNote",
+     "stored": "36",
+     "auto": [
+      [
+       0.0,
+       36,
+       "36",
+       [
+        1.0,
+        0.0,
+        1.0,
+        0.0
+       ]
+      ],
+      [
+       32.0,
+       72,
+       "72"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators note-bend-ease"
+  },
+  {
+   "id": "resonators note-bend-mild",
+   "run": "resonators",
+   "case": "note-bend-mild",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I Note": {
+     "value": 36,
+     "element": "ResNote",
+     "stored": "36",
+     "auto": [
+      [
+       0.0,
+       36,
+       "36",
+       [
+        0.15234375,
+        0.54296875,
+        0.45703125,
+        0.84765625
+       ]
+      ],
+      [
+       32.0,
+       72,
+       "72"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators note-bend-mild"
+  },
+  {
+   "id": "resonators note-up-1",
+   "run": "resonators",
+   "case": "note-up-1",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I Note": {
+     "value": 40,
+     "element": "ResNote",
+     "stored": "40",
+     "auto": [
+      [
+       0.0,
+       40,
+       "40"
+      ],
+      [
+       8.0,
+       41,
+       "41"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators note-up-1"
+  },
+  {
+   "id": "resonators note-down-1",
+   "run": "resonators",
+   "case": "note-down-1",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I Note": {
+     "value": 41,
+     "element": "ResNote",
+     "stored": "41",
+     "auto": [
+      [
+       0.0,
+       41,
+       "41"
+      ],
+      [
+       8.0,
+       40,
+       "40"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators note-down-1"
+  },
+  {
+   "id": "resonators note-frac-end",
+   "run": "resonators",
+   "case": "note-frac-end",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I Note": {
+     "value": 40,
+     "element": "ResNote",
+     "stored": "40",
+     "auto": [
+      [
+       0.0,
+       40,
+       "40"
+      ],
+      [
+       8.0,
+       null,
+       "40.5"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators note-frac-end"
+  },
+  {
+   "id": "resonators on-ramp",
+   "run": "resonators",
+   "case": "on-ramp",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I On": {
+     "value": 0,
+     "element": "ResOn1",
+     "stored": "false",
+     "auto": [
+      [
+       0.0,
+       0,
+       "false"
+      ],
+      [
+       16.0,
+       1,
+       "true"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators on-ramp"
+  },
+  {
+   "id": "resonators on-ramp-down",
+   "run": "resonators",
+   "case": "on-ramp-down",
+   "device": "Resonator",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "I On": {
+     "value": 1,
+     "element": "ResOn1",
+     "stored": "true",
+     "auto": [
+      [
+       0.0,
+       1,
+       "true"
+      ],
+      [
+       16.0,
+       0,
+       "false"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "resonators on-ramp-down"
+  },
+  {
+   "id": "eq-eight freq-line",
+   "run": "eq-eight",
+   "case": "freq-line",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "3 Frequency A": {
+     "value": 0.2991913794325851,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "100",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       0.2991913794325851,
+       "100"
+      ],
+      [
+       32.0,
+       0.8975173764917626,
+       "10000"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "eq-eight freq-line"
+  },
+  {
+   "id": "eq-eight freq-bend-ease",
+   "run": "eq-eight",
+   "case": "freq-bend-ease",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "3 Frequency A": {
+     "value": 0.2991913794325851,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "100",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       0.2991913794325851,
+       "100",
+       [
+        1.0,
+        0.0,
+        1.0,
+        0.0
+       ]
+      ],
+      [
+       32.0,
+       0.8975173764917626,
+       "10000"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "eq-eight freq-bend-ease"
+  },
+  {
+   "id": "eq-eight freq-bend-mild",
+   "run": "eq-eight",
+   "case": "freq-bend-mild",
+   "device": "Eq8",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "3 Frequency A": {
+     "value": 0.2991913794325851,
+     "element": "Bands.2/ParameterA/Freq",
+     "stored": "100",
+     "tol": 0.015625,
+     "auto": [
+      [
+       0.0,
+       0.2991913794325851,
+       "100",
+       [
+        0.15234375,
+        0.54296875,
+        0.45703125,
+        0.84765625
+       ]
+      ],
+      [
+       32.0,
+       0.8975173764917626,
+       "10000"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "eq-eight freq-bend-mild"
+  },
+  {
+   "id": "auto-pan wave-ramp",
+   "run": "auto-pan",
+   "case": "wave-ramp",
+   "device": "AutoPan2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Waveform": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "auto": [
+      [
+       0.0,
+       0,
+       "0"
+      ],
+      [
+       32.0,
+       8,
+       "8"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "auto-pan wave-ramp"
+  },
+  {
+   "id": "auto-pan wave-ramp-mid",
+   "run": "auto-pan",
+   "case": "wave-ramp-mid",
+   "device": "AutoPan2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Waveform": {
+     "value": 0,
+     "element": "Modulation_Waveform",
+     "stored": "0",
+     "auto": [
+      [
+       0.0,
+       0,
+       "0"
+      ],
+      [
+       16.0,
+       3,
+       "3"
+      ],
+      [
+       32.0,
+       8,
+       "8"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "auto-pan wave-ramp-mid"
+  },
+  {
+   "id": "auto-pan wave-ramp-down",
+   "run": "auto-pan",
+   "case": "wave-ramp-down",
+   "device": "AutoPan2",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Waveform": {
+     "value": 8,
+     "element": "Modulation_Waveform",
+     "stored": "8",
+     "auto": [
+      [
+       0.0,
+       8,
+       "8"
+      ],
+      [
+       32.0,
+       0,
+       "0"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "auto-pan wave-ramp-down"
+  }
+ ],
+ "keys": {}
+}

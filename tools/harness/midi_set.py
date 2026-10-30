@@ -3,12 +3,12 @@
 
 """Writes the MIDI effects' measurement set and reads back what Live recorded from it.
 
-    python midi_set.py check [measurements/30.*/runs.py ...]       # every run, every value
-    python midi_set.py build -o measurements/midi-effects/midi-effects.als [runs.py ...]
-    python live_check.py open measurements/midi-effects/midi-effects.als
-    python midi_set.py verify measurements/midi-effects/midi-effects.cases.json
+    python midi_set.py check [devices/30.*/runs.py ...]       # every run, every value
+    python midi_set.py build -o work/sets/midi-effects/midi-effects.als [runs.py ...]
+    python live_check.py open work/sets/midi-effects/midi-effects.als
+    python midi_set.py verify work/sets/midi-effects/midi-effects.cases.json
     # in Live: record the Arrangement from 1.1.1 to the end marker (the UI step), then
-    python midi_set.py read measurements/midi-effects/midi-effects.cases.json
+    python midi_set.py read work/sets/midi-effects/midi-effects.cases.json
 
 A MIDI effect is observed by the MIDI it emits (live-12/midi-effects/common.md › Measurement
 plan, way 1). Each case gets two MIDI tracks:
@@ -21,12 +21,12 @@ plan, way 1). Each case gets two MIDI tracks:
 
 One Arrangement recording over the whole set then records every device's output at once, and
 `read` takes the recorded clips' notes through the AbletonMCP Remote Script
-(`get_session_snapshot`) into `<set>.recorded.json` and one `live/<run>.json` per run in the
+(`get_session_snapshot`) into `<set>.recorded.json` and one `results/<run>.json` per run in the
 device's folder: per case, the input notes and the output notes, start and length in beats from
 the start of the song. Every input clip starts at bar 2 (`LEAD`), so nothing falls on the first
 instant of the take; the set ends `TAIL` beats after the longest clip.
 
-**Runs** live in each MIDI effect folder's `runs.py` (`measurements/30.NN-name/`), with
+**Runs** live in each MIDI effect folder's `runs.py` (`devices/30.NN-name/`), with
 `DEVICE` (the display name) and `RUNS`, a list of dicts:
 
     {"name": "pitch-transpose",            # unique; starts with the device's slug
@@ -48,7 +48,7 @@ gets a `bypass` case (Device On off: the input as Live passes it, the reference 
 a `default` case (the base alone). Cases stored identically (the device, the clip and the
 automation all the same) share one track pair.
 
-The source and recorder tracks are copies of a MIDI track Live saved (`measurements/
+The source and recorder tracks are copies of a MIDI track Live saved (`reference/
 populate-midi-12.4.6.als`), and the clip a copy of the MIDI clip it saved in its Groove Pool.
 How Live stores a track's MIDI input from another track was not in any saved set when this was
 written: `--route` is a format string for its `Target` (`{id}` is the source track's id), and the
@@ -68,11 +68,12 @@ import live_check
 import make_als
 
 ROOT = make_als.ROOT
-MEAS = os.path.join(ROOT, "measurements")
+DEVICES = os.path.join(ROOT, "devices")
+REF = os.path.join(ROOT, "reference")
 DEFAULTS = {
-    "dump": os.path.join(MEAS, "dump-midi-12.4.6.json"),
-    "devices": os.path.join(MEAS, "populate-midi-12.4.6.als"),
-    "template": os.path.join(MEAS, "populate-midi-12.4.6.als"),
+    "dump": os.path.join(REF, "dump-midi-12.4.6.json"),
+    "devices": os.path.join(REF, "populate-midi-12.4.6.als"),
+    "template": os.path.join(REF, "populate-midi-12.4.6.als"),
     "track": "Arpeggiator",
     "map": make_als.DEFAULTS["map"],
 }
@@ -100,8 +101,8 @@ CLIP_SCALES = ["Major", "Minor", "Dorian", "Mixolydian", "Lydian", "Phrygian", "
 def load_runs(paths=None):
     """[(run, device display name, device folder)] from the MIDI effects' runs.py files."""
     if not paths:
-        paths = sorted(os.path.join(MEAS, d, "runs.py") for d in os.listdir(MEAS)
-                       if d.startswith("30.") and os.path.exists(os.path.join(MEAS, d, "runs.py")))
+        paths = sorted(os.path.join(DEVICES, d, "runs.py") for d in os.listdir(DEVICES)
+                       if d.startswith("30.") and os.path.exists(os.path.join(DEVICES, d, "runs.py")))
     out, seen = [], set()
     for path in paths:
         spec = importlib.util.spec_from_file_location(f"midi_runs_{len(seen)}", path)
@@ -507,12 +508,12 @@ def cmd_read(a):
     for (run, folder), rows in by_run.items():
         if not folder:
             continue
-        d = os.path.join(ROOT, folder, "live")
+        d = os.path.join(ROOT, folder, "results")
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, f"{run}.json"), "w") as f:
             json.dump({"set": spec["set"], "run": run, "lead_beats": spec["lead_beats"],
                        "tempo": out["tempo"], "cases": rows}, f, indent=1)
-    print(f"wrote {path} and {len(by_run)} runs' live/<run>.json: {len(out['cases'])} cases, "
+    print(f"wrote {path} and {len(by_run)} runs' results/<run>.json: {len(out['cases'])} cases, "
           f"{empty} with no recorded notes")
     return 0
 
@@ -532,7 +533,7 @@ def main(argv=None):
         p.add_argument("--map", default=DEFAULTS["map"])
         p.add_argument("--route", default=ROUTE, help="the recorders' MIDI input Target; {id} = source track id")
         p.add_argument("--only", action="append", help="build only this run (repeatable)")
-        p.add_argument("runs", nargs="*", help="runs.py files (default: every measurements/30.*/runs.py)")
+        p.add_argument("runs", nargs="*", help="runs.py files (default: every devices/30.*/runs.py)")
 
     c = sub.add_parser("check")
     common(c)

@@ -1,0 +1,39 @@
+{
+ "device": "Corpus",
+ "cases": [
+  {
+   "id": "transpose-down",
+   "params": {
+    "Transpose": {
+     "auto": [
+      [
+       0,
+       3
+      ],
+      [
+       12,
+       -3
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "transpose-up",
+   "params": {
+    "Transpose": {
+     "auto": [
+      [
+       0,
+       -3
+      ],
+      [
+       12,
+       3
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

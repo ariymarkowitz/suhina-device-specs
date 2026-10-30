@@ -1,0 +1,189 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-midi-poly",
+ "question": "partials of the noise under a held A2, C3, E3, G3 chord (beats 61.5 to 69.5), MonoPolyMode 1, Polyphony 0, 1, 2, 3",
+ "plan": "8",
+ "read": [
+  "noise spectrum (partials per voice)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MonoPolyMode": 1,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-chord",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        8,
+        100
+       ],
+       [
+        48,
+        61.5,
+        8,
+        100
+       ],
+       [
+        52,
+        61.5,
+        8,
+        100
+       ],
+       [
+        55,
+        61.5,
+        8,
+        100
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "poly-0",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MonoPolyMode": 1,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-chord",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        8,
+        100
+       ],
+       [
+        48,
+        61.5,
+        8,
+        100
+       ],
+       [
+        52,
+        61.5,
+        8,
+        100
+       ],
+       [
+        55,
+        61.5,
+        8,
+        100
+       ]
+      ]
+     }
+    },
+    "@MidiPitch_Polyphony": 0
+   }
+  },
+  {
+   "id": "poly-1",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MonoPolyMode": 1,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-chord",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        8,
+        100
+       ],
+       [
+        48,
+        61.5,
+        8,
+        100
+       ],
+       [
+        52,
+        61.5,
+        8,
+        100
+       ],
+       [
+        55,
+        61.5,
+        8,
+        100
+       ]
+      ]
+     }
+    },
+    "@MidiPitch_Polyphony": 1
+   }
+  },
+  {
+   "id": "poly-2",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "@Global_PitchMode": 1,
+    "@MidiPitch_MonoPolyMode": 1,
+    "@MidiSideChain/RoutedInput/Routable/Target": {
+     "midi": {
+      "name": "specres-chord",
+      "length": 72,
+      "notes": [
+       [
+        45,
+        61.5,
+        8,
+        100
+       ],
+       [
+        48,
+        61.5,
+        8,
+        100
+       ],
+       [
+        52,
+        61.5,
+        8,
+        100
+       ],
+       [
+        55,
+        61.5,
+        8,
+        100
+       ]
+      ]
+     }
+    },
+    "@MidiPitch_Polyphony": 2
+   }
+  }
+ ]
+}

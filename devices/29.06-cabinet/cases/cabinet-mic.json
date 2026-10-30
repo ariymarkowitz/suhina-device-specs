@@ -1,0 +1,159 @@
+{
+ "device": "Cabinet",
+ "parameter": "cabinet-mic",
+ "question": "sweep response and impulse for the three positions with Condenser and Dynamic, 4x12",
+ "plan": "1",
+ "read": [
+  "response",
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "near-on-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "near-off-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "far-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "near-on-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "near-off-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "far-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,260 @@
+{
+ "device": "Redux",
+ "parameter": "redux-filters",
+ "question": "Rate 8 kHz: Pre only, Post only, both; Post at octave +2, -2, +4 and -4 (set by norm 0.75, 0.25, 1, 0; octave 0 is the 'post-only' case)",
+ "plan": "3",
+ "read": [
+  "response.noise_db",
+  "response.sweep_db",
+  "steady tone spectrum"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pre",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "post",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "pre-post",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter": {
+     "norm": 0.5
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "post+2",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter": {
+     "norm": 0.75
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "post-2",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter": {
+     "norm": 0.25
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "post+4",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter": {
+     "norm": 1.0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "post-4",
+   "params": {
+    "Sample Rate": {
+     "display": 8000
+    },
+    "Jitter": {
+     "display": 0
+    },
+    "Bit Depth": 16,
+    "Quantizer Shape": {
+     "display": 0
+    },
+    "DC Shift": {
+     "item": "Off"
+    },
+    "Pre-Filter On": {
+     "item": "Off"
+    },
+    "Post-Filter On": {
+     "item": "On"
+    },
+    "Post-Filter": {
+     "norm": 0.0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

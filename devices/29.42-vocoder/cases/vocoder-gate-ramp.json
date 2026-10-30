@@ -1,0 +1,51 @@
+{
+ "device": "Vocoder",
+ "parameter": "vocoder-gate-ramp",
+ "question": "the ramp through Gate -30 dB (Depth 100 %, noise carrier): where the output opens rising and closes falling",
+ "plan": "6",
+ "read": [
+  "ext: ramp"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "gate-30",
+   "params": {
+    "Envelope Depth": {
+     "display": 100
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Enhance": 0,
+    "Unvoiced Level": {
+     "norm": 0.0
+    },
+    "Gate Threshold": {
+     "display": -30
+    }
+   }
+  }
+ ]
+}

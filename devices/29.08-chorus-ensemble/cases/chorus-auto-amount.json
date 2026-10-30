@@ -1,0 +1,207 @@
+{
+ "device": "Chorus-Ensemble",
+ "parameter": "chorus-auto-amount",
+ "question": "impulse taps and FM depth for Delay Time Auto at Amount 25, 50, 100 %, 2 taps",
+ "plan": "2",
+ "read": [
+  "impulse",
+  "modulation"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "Auto"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "auto-amount-25",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 25
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "Auto"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "auto-amount-50",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 50
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "Auto"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "auto-amount-100",
+   "params": {
+    "Mode": {
+     "item": "Chorus"
+    },
+    "Shape": {
+     "display": 0
+    },
+    "Rate": {
+     "display": 1
+    },
+    "Amount": {
+     "display": 100
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "FB Invert": {
+     "item": "Off"
+    },
+    "Offset": {
+     "display": 0
+    },
+    "Delay Time": {
+     "item": "Auto"
+    },
+    "Delay Taps": {
+     "item": "2"
+    },
+    "HP On": {
+     "item": "Off"
+    },
+    "Width": {
+     "display": 100
+    },
+    "Warmth": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

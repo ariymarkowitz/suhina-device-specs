@@ -1,0 +1,63 @@
+{
+ "set": "kinds-negative.als",
+ "generated_by": "make_als.py",
+ "cases": [
+  {
+   "id": "corpus transpose-down",
+   "run": "corpus",
+   "case": "transpose-down",
+   "device": "Corpus",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Transpose": {
+     "value": 3,
+     "element": "Transpose",
+     "stored": "3",
+     "auto": [
+      [
+       0.0,
+       3,
+       "3"
+      ],
+      [
+       12.0,
+       -3,
+       "-3"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "corpus transpose-down"
+  },
+  {
+   "id": "corpus transpose-up",
+   "run": "corpus",
+   "case": "transpose-up",
+   "device": "Corpus",
+   "probe": "measurements/probe.wav",
+   "params": {
+    "Transpose": {
+     "value": -3,
+     "element": "Transpose",
+     "stored": "-3",
+     "auto": [
+      [
+       0.0,
+       -3,
+       "-3"
+      ],
+      [
+       12.0,
+       3,
+       "3"
+      ]
+     ]
+    }
+   },
+   "errors": [],
+   "track": "corpus transpose-up"
+  }
+ ],
+ "keys": {}
+}

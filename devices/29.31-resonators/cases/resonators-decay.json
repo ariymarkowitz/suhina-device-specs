@@ -1,0 +1,115 @@
+{
+ "device": "Resonators",
+ "parameter": "resonators-decay",
+ "question": "ring-out time of Resonator I against Decay 0..100, Const on, Mode A, Note C2",
+ "plan": "3",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap10",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0
+   }
+  },
+  {
+   "id": "decay-0",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 0
+   }
+  },
+  {
+   "id": "decay-15",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 15
+   }
+  },
+  {
+   "id": "decay-30",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 30
+   }
+  },
+  {
+   "id": "decay-70",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 70
+   }
+  },
+  {
+   "id": "decay-85",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 85
+   }
+  },
+  {
+   "id": "decay-100",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Decay": 100
+   }
+  }
+ ]
+}

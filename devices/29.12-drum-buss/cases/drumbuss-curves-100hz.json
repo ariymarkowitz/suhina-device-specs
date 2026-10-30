@@ -1,0 +1,458 @@
+{
+ "device": "Drum Buss",
+ "parameter": "drumbuss-curves-100hz",
+ "question": "100 Hz staircase and 1 kHz ramp for Soft, Medium, Hard at Drive 0, 50, 100 %, Damping 20 kHz",
+ "plan": "2",
+ "read": [
+  "ext: stair100, ramp"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 20
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "soft-0",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "soft-50",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 50
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "soft-100",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "medium-0",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Medium"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "medium-50",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 50
+    },
+    "Drive Type": {
+     "item": "Medium"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "medium-100",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Drive Type": {
+     "item": "Medium"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "hard-0",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Hard"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "hard-50",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 50
+    },
+    "Drive Type": {
+     "item": "Hard"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "hard-100",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Drive Type": {
+     "item": "Hard"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

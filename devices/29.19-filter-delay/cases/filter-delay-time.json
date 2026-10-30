@@ -1,0 +1,183 @@
+{
+ "device": "Filter Delay",
+ "parameter": "filter-delay-time",
+ "question": "Sync off, Delay Time 1 (the default case), 10, 100, 500 and 999 ms, feedback 0, filter off",
+ "plan": "2",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "ms-10",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.01
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "ms-100",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.1
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "ms-500",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.5
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "ms-999",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.999
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  }
+ ]
+}

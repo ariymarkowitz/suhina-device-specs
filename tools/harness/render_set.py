@@ -4,11 +4,13 @@
 """Renders each track of a Live Set through an implementation under test, one track at a time.
 
     python render_set.py cases.als -o renders/mine --command "mytool render {set} -o {out} --rate {rate}"
-        [--only id,id] [--rate 48000]
+        [--only id,id] [--rate 48000] [--jobs 4]
 
 For every track (or those named in --only) writes a copy of the set beside the original with all
-other tracks switched off (the mixer's track on/off, `Speaker`), runs --command on it, and
-expects <out>/<track name>.wav. The copy sits beside the original so the set's relative paths to
+other tracks removed (so the implementation does not run their devices), runs --command on it,
+and expects <out>/<track name>.wav. A group the track sits in stays, switched on, as does the
+chain of tracks inside a group that is rendered; any other track left in is switched off (the
+mixer's track on/off, `Speaker`). --jobs runs several renders at once. The copy sits beside the original so the set's relative paths to
 its audio still resolve, and is removed afterwards.
 
 --command is the implementation's own offline renderer of a Live Set, with {set} (the copy),
@@ -24,6 +26,7 @@ import shlex
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 
 TRACK_TAGS = ("AudioTrack", "MidiTrack", "GroupTrack")
 
@@ -67,11 +70,38 @@ def set_speaker(track, on):
     return True
 
 
+def group_of(track):
+    e = track.find("TrackGroupId")
+    gid = None if e is None else e.get("Value")
+    return None if gid in (None, "", "-1") else gid
+
+
 def solo_copy(root, keep):
-    """The set's XML with only track number `keep` switched on."""
+    """The set's XML with only track number `keep` left in, on, and the groups it needs: the
+    groups it sits in (on) and the tracks inside it when it is a group (off, as before)."""
     copy = ET.fromstring(ET.tostring(root))
-    for i, t in enumerate(tracks(copy)):
-        set_speaker(t, i == keep)
+    holder = copy.find("LiveSet/Tracks")
+    all_tracks = tracks(copy)
+    by_id = {t.get("Id"): t for t in all_tracks}
+    wanted = {id(all_tracks[keep])}
+    parent = group_of(all_tracks[keep])
+    while parent is not None and parent in by_id and id(by_id[parent]) not in wanted:
+        wanted.add(id(by_id[parent]))
+        parent = group_of(by_id[parent])
+    inside = {all_tracks[keep].get("Id")}
+    grew = True
+    while grew:
+        grew = False
+        for t in all_tracks:
+            if id(t) not in wanted and group_of(t) in inside:
+                wanted.add(id(t))
+                inside.add(t.get("Id"))
+                grew = True
+    for i, t in enumerate(all_tracks):
+        if id(t) not in wanted:
+            holder.remove(t)
+        else:
+            set_speaker(t, i == keep or inside.isdisjoint({t.get("Id")}))
     return copy
 
 
@@ -92,6 +122,8 @@ def main(argv=None):
     ap.add_argument("-o", "--out", default="renders/mine")
     ap.add_argument("--only", help="comma-separated track names")
     ap.add_argument("--rate", type=int, default=48000)
+    ap.add_argument("--jobs", type=int, default=os.cpu_count() or 1,
+                    help="renders at once (default: the number of cores)")
     ap.add_argument("--command", required=True,
                     help="the renderer's command line, with {set}, {out} and {rate}")
     a = ap.parse_args(argv)
@@ -107,12 +139,10 @@ def main(argv=None):
     wanted = set(a.only.split(",")) if a.only else None
     os.makedirs(a.out, exist_ok=True)
     folder = os.path.dirname(os.path.abspath(a.set))
-    failed = 0
-    for i, name in enumerate(names):
-        if wanted is not None and name not in wanted:
-            continue
+    def render_one(i, name):
         tmp = os.path.join(folder, f".render-set-{os.getpid()}-{i}.als")
         out = os.path.join(a.out, safe_name(name) + ".wav")
+        error = None
         try:
             write_set(solo_copy(root, i), tmp, gz)
             argv_ = [w.replace("{set}", tmp).replace("{out}", out).replace("{rate}", str(a.rate))
@@ -125,11 +155,17 @@ def main(argv=None):
         finally:
             if os.path.exists(tmp):
                 os.remove(tmp)
-        if error is not None:
-            failed += 1
-            print(f"{name}: the renderer failed: {error}", file=sys.stderr)
-        else:
-            print(f"{name}: {out}")
+        return name, out, error
+
+    todo = [(i, name) for i, name in enumerate(names) if wanted is None or name in wanted]
+    failed = 0
+    with ThreadPoolExecutor(max_workers=max(1, a.jobs)) as pool:
+        for name, out, error in pool.map(lambda job: render_one(*job), todo):
+            if error is not None:
+                failed += 1
+                print(f"{name}: the renderer failed: {error}", file=sys.stderr)
+            else:
+                print(f"{name}: {out}")
     if wanted is not None:
         missing = wanted - set(names)
         if missing:

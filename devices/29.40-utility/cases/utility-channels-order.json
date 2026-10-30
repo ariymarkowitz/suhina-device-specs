@@ -1,0 +1,102 @@
+{
+ "device": "Utility",
+ "parameter": "utility-channels-order",
+ "question": "2x2 matrix and impulse polarity for Left, Right, Swap, Mono; Right Inv with Mono; \u00d8 R in Left mode and \u00d8 L in Right mode; Balance 50R into Bass Mono 500 Hz",
+ "plan": "2, 5, 11",
+ "read": [
+  "stereo",
+  "impulse (polarity)",
+  "noise"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    }
+   }
+  },
+  {
+   "id": "mode-left",
+   "params": {
+    "Channel Mode": {
+     "item": "Left"
+    }
+   }
+  },
+  {
+   "id": "mode-right",
+   "params": {
+    "Channel Mode": {
+     "item": "Right"
+    }
+   }
+  },
+  {
+   "id": "mode-swap",
+   "params": {
+    "Channel Mode": {
+     "item": "Swap"
+    }
+   }
+  },
+  {
+   "id": "mono",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Mono": 1
+   }
+  },
+  {
+   "id": "invR-mono",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Right Inv": 1,
+    "Mono": 1
+   }
+  },
+  {
+   "id": "modeL-invR",
+   "params": {
+    "Channel Mode": {
+     "item": "Left"
+    },
+    "Right Inv": 1
+   }
+  },
+  {
+   "id": "modeR-invL",
+   "params": {
+    "Channel Mode": {
+     "item": "Right"
+    },
+    "Left Inv": 1
+   }
+  },
+  {
+   "id": "bal+1-bassmono500",
+   "params": {
+    "Channel Mode": {
+     "item": "Stereo"
+    },
+    "Balance": 1,
+    "Bass Mono": 1,
+    "Bass Freq": {
+     "display": 500
+    }
+   }
+  }
+ ]
+}

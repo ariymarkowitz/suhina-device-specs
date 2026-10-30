@@ -1,0 +1,519 @@
+{
+ "device": "Cabinet",
+ "parameter": "cabinet-grid",
+ "question": "impulse and sweep response of the 24 combinations of the four speakers besides the 4x12",
+ "plan": "1",
+ "read": [
+  "impulse",
+  "response"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "1x12-near-on-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "1x12-near-on-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "1x12-near-off-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "1x12-near-off-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "1x12-far-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "1x12-far-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "2x12-near-on-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "2x12-near-on-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "2x12-near-off-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "2x12-near-off-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "2x12-far-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "2x12-far-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "2x12"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-near-on-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-near-on-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-near-off-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-near-off-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-far-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-far-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-bass-near-on-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-bass-near-on-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-bass-near-off-axis-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-bass-near-off-axis-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Near Off-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-bass-far-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "4x10-bass-far-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

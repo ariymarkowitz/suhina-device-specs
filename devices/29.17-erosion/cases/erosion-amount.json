@@ -1,0 +1,159 @@
+{
+ "device": "Erosion",
+ "parameter": "erosion-amount",
+ "question": "sine modulator only, Amount 0 to 100 % at Freq 500 Hz (the default case is Amount 50 %), and Freq 20 Hz and 5 kHz",
+ "plan": "1,2,7",
+ "read": [
+  "modulation",
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Amount": {
+     "display": 50
+    },
+    "Frequency": {
+     "display": 500
+    },
+    "Noise Blend": {
+     "display": 0
+    },
+    "Filter Width": {
+     "display": 1.0
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "amt-0",
+   "params": {
+    "Amount": {
+     "display": 0
+    },
+    "Frequency": {
+     "display": 500
+    },
+    "Noise Blend": {
+     "display": 0
+    },
+    "Filter Width": {
+     "display": 1.0
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "amt-25",
+   "params": {
+    "Amount": {
+     "display": 25
+    },
+    "Frequency": {
+     "display": 500
+    },
+    "Noise Blend": {
+     "display": 0
+    },
+    "Filter Width": {
+     "display": 1.0
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "amt-100",
+   "params": {
+    "Amount": {
+     "display": 100
+    },
+    "Frequency": {
+     "display": 500
+    },
+    "Noise Blend": {
+     "display": 0
+    },
+    "Filter Width": {
+     "display": 1.0
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "f20-amt-100",
+   "params": {
+    "Amount": {
+     "display": 100
+    },
+    "Frequency": {
+     "display": 20
+    },
+    "Noise Blend": {
+     "display": 0
+    },
+    "Filter Width": {
+     "display": 1.0
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "f5k-amt-50",
+   "params": {
+    "Amount": {
+     "display": 50
+    },
+    "Frequency": {
+     "display": 5000
+    },
+    "Noise Blend": {
+     "display": 0
+    },
+    "Filter Width": {
+     "display": 1.0
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "f5k-amt-100",
+   "params": {
+    "Amount": {
+     "display": 100
+    },
+    "Frequency": {
+     "display": 5000
+    },
+    "Noise Blend": {
+     "display": 0
+    },
+    "Filter Width": {
+     "display": 1.0
+    },
+    "Stereo Width": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

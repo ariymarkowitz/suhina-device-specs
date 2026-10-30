@@ -1,0 +1,1572 @@
+{
+ "device": "Corpus",
+ "parameter": "corpus-tune-sweep",
+ "question": "String's fundamental at Tune 55 to 2093 Hz (13 values); at Tune 523.25 Hz with Decay 0.2 and 3 s, Quality Eco, Low and Med, Brightness +100 % and Material +100 %",
+ "plan": "3",
+ "read": [
+  "impulse (partials)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 261.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-55",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 55
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-82.41",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 82.41
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-110",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 110
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-146.83",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 146.83
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-196",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 196
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-329.63",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 329.63
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-440",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 440
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-523.25",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-698.46",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 698.46
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-880",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 880
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-1174.66",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 1174.66
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-1568",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 1568
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "tune-2093",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 2093
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "t523-decay0.2",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.2
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "t523-decay3",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 3
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "t523-eco",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "Eco"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "t523-low",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "Low"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "t523-med",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "Med"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "t523-bright100",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 0
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 100
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "t523-material100",
+   "params": {
+    "Resonance Type": {
+     "item": "String"
+    },
+    "Resonator Quality": {
+     "item": "High"
+    },
+    "Tune": {
+     "display": 523.25
+    },
+    "Transpose": {
+     "display": 0
+    },
+    "Fine": {
+     "display": 0
+    },
+    "Spread": {
+     "display": 0
+    },
+    "Decay": {
+     "display": 0.8
+    },
+    "Material": {
+     "display": 100
+    },
+    "Radius": {
+     "display": 50
+    },
+    "Brightness": {
+     "display": 0
+    },
+    "Inharmonics": {
+     "display": 0
+    },
+    "Opening": {
+     "display": 100
+    },
+    "Ratio": {
+     "display": 50
+    },
+    "Hit": {
+     "display": 50
+    },
+    "Listening L": {
+     "display": 10
+    },
+    "Listening R": {
+     "display": 90
+    },
+    "LFO On/Off": {
+     "item": "Off"
+    },
+    "Filter On/Off": {
+     "item": "Off"
+    },
+    "Bleed": {
+     "display": 0
+    },
+    "Gain": {
+     "display": 0
+    },
+    "Dry Wet": {
+     "display": 100
+    },
+    "Width #2": {
+     "display": 100
+    },
+    "MIDI Frequency": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

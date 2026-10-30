@@ -1,0 +1,283 @@
+{
+ "device": "Drum Buss",
+ "parameter": "drumbuss-damp-crunch",
+ "question": "sweep response for Damp 500, 2000, 9200 Hz; sweep and THD for Crunch 50 and 100 % at Drive 0, Damp wide open",
+ "plan": "4, 5",
+ "read": [
+  "response",
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "damp-500",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 500
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "damp-2000",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 2000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "damp-9200",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 0
+    },
+    "Damping Freq": {
+     "display": 9200
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "crunch-50",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 50
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "crunch-100",
+   "params": {
+    "Compressor On": {
+     "item": "Off"
+    },
+    "Drive": {
+     "display": 0
+    },
+    "Drive Type": {
+     "item": "Soft"
+    },
+    "Crunch": {
+     "display": 100
+    },
+    "Damping Freq": {
+     "display": 20000
+    },
+    "Transients": {
+     "display": 0
+    },
+    "Boom Freq": {
+     "display": 50
+    },
+    "Boom Amt": {
+     "display": 0
+    },
+    "Boom Decay": {
+     "display": 100
+    },
+    "Boom Audition": {
+     "item": "Off"
+    },
+    "Trim": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

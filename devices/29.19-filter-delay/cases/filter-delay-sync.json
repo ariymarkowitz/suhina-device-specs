@@ -1,0 +1,324 @@
+{
+ "device": "Filter Delay",
+ "parameter": "filter-delay-sync",
+ "question": "Sync on, buttons 1, 3, 5 and 8 sixteenths; button 4 with swing +33.3, -33.3 and +16.7 %",
+ "plan": "2",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "beat-1",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "On"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "2 Beat Delay": {
+     "item": "1"
+    },
+    "2 Beat Swing": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "beat-3",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "On"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "2 Beat Delay": {
+     "item": "3"
+    },
+    "2 Beat Swing": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "beat-5",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "On"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "2 Beat Delay": {
+     "item": "5"
+    },
+    "2 Beat Swing": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "beat-8",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "On"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "2 Beat Delay": {
+     "item": "8"
+    },
+    "2 Beat Swing": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "beat-4-sw+33",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "On"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "2 Beat Delay": {
+     "item": "4"
+    },
+    "2 Beat Swing": {
+     "display": 33.3
+    }
+   }
+  },
+  {
+   "id": "beat-4-sw-33",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "On"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "2 Beat Delay": {
+     "item": "4"
+    },
+    "2 Beat Swing": {
+     "display": -33.3
+    }
+   }
+  },
+  {
+   "id": "beat-4-sw+17",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "On"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "2 Beat Delay": {
+     "item": "4"
+    },
+    "2 Beat Swing": {
+     "display": 16.7
+    }
+   }
+  }
+ ]
+}

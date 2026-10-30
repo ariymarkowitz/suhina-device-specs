@@ -1,0 +1,344 @@
+{
+ "device": "Shifter",
+ "parameter": "shifter-lfo-more",
+ "question": "pitch of the steady tone (LFO 1 Hz, 3 st): Spin 50 %; Offset 90; Rectangle at Duty Cycle 50 %; Phase 0 and 90; Freq mode at 98.9 Hz depth; Sync 1/4; Triangle 8; Random",
+ "plan": "8",
+ "read": [
+  "modulation (per channel)"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Sine"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0
+   }
+  },
+  {
+   "id": "spin-50",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Sine"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 1,
+    "Lfo Spin Amount": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "offset-90",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Sine"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0,
+    "Lfo Offset": {
+     "display": 90
+    }
+   }
+  },
+  {
+   "id": "rect-duty50",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Rectangle"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0,
+    "Lfo Duty Cycle": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "phase-0",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Sine"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0,
+    "Lfo Phase": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "phase-90",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Sine"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0,
+    "Lfo Phase": {
+     "display": 90
+    }
+   }
+  },
+  {
+   "id": "hz-depth",
+   "params": {
+    "Mode": {
+     "item": "Freq"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 0
+    },
+    "Lfo Amount Hz": {
+     "display": 98.9
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Sine"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0
+   }
+  },
+  {
+   "id": "sync-q",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Sine"
+    },
+    "Lfo Sync": 1,
+    "Lfo Spin": 0,
+    "Lfo S. Rate": 12
+   }
+  },
+  {
+   "id": "triangle8",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Triangle 8"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0
+   }
+  },
+  {
+   "id": "random",
+   "params": {
+    "Mode": {
+     "item": "Pitch"
+    },
+    "Pitch Coarse": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Delay On": 0,
+    "Lfo Amount St": {
+     "display": 3
+    },
+    "Lfo Amount Hz": {
+     "display": 0
+    },
+    "Env On": 0,
+    "Lfo Rate Hz": {
+     "display": 1
+    },
+    "Lfo Waveform": {
+     "item": "Random"
+    },
+    "Lfo Sync": 0,
+    "Lfo Spin": 0
+   }
+  }
+ ]
+}

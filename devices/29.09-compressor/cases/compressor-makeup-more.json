@@ -1,0 +1,154 @@
+{
+ "device": "Compressor",
+ "parameter": "compressor-makeup-more",
+ "question": "static curve and noise level with Makeup on, Threshold -20 dB, Ratio 4: Knee 6 and 18 dB, Attack 30 ms with Release 300 ms, Lookahead 10 ms",
+ "plan": "10",
+ "read": [
+  "static",
+  "noise level"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Makeup": {
+     "item": "On"
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "knee-6",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 6,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Makeup": {
+     "item": "On"
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "knee-18",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 18,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Makeup": {
+     "item": "On"
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "slow",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "display": 0.03
+    },
+    "Release": {
+     "display": 0.3
+    },
+    "LookAhead": {
+     "item": "0 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Makeup": {
+     "item": "On"
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "lookahead-10",
+   "params": {
+    "Model": {
+     "item": "Peak"
+    },
+    "Knee": 0,
+    "Attack": {
+     "norm": 0.0
+    },
+    "Release": {
+     "norm": 0.0
+    },
+    "LookAhead": {
+     "item": "10 ms"
+    },
+    "Threshold": {
+     "display": -20
+    },
+    "Makeup": {
+     "item": "On"
+    },
+    "Ratio": {
+     "display": 4
+    }
+   }
+  }
+ ]
+}

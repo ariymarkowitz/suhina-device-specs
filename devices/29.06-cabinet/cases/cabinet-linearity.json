@@ -1,0 +1,118 @@
+{
+ "device": "Cabinet",
+ "parameter": "cabinet-linearity",
+ "question": "static curve (gain and THD vs level) for a small, a large and a bass cabinet, Dynamic and Condenser",
+ "plan": "2",
+ "read": [
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lin-1x12-condenser",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lin-1x12-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "1x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lin-4x12-dynamic",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x12"
+    },
+    "Microphone Position": {
+     "item": "Near On-Axis"
+    },
+    "Microphone Type": {
+     "item": "Dynamic"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lin-bass-far",
+   "params": {
+    "Cabinet Type": {
+     "item": "4x10 Bass"
+    },
+    "Microphone Position": {
+     "item": "Far"
+    },
+    "Microphone Type": {
+     "item": "Condenser"
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

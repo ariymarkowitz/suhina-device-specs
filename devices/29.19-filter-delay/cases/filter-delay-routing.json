@@ -1,0 +1,213 @@
+{
+ "device": "Filter Delay",
+ "parameter": "filter-delay-routing",
+ "question": "each delay alone with Pan centre; read the L/R matrix of the one-channel sines",
+ "plan": "6",
+ "read": [
+  "stereo"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "On"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "1 Pan": 0,
+    "3 Pan": 0,
+    "1 Filter On": {
+     "item": "Off"
+    },
+    "3 Filter On": {
+     "item": "Off"
+    },
+    "1 Delay Mode": {
+     "item": "Off"
+    },
+    "3 Delay Mode": {
+     "item": "Off"
+    },
+    "1 Time Delay": {
+     "display": 0.001
+    },
+    "3 Time Delay": {
+     "display": 0.001
+    },
+    "1 Feedback": {
+     "display": 0
+    },
+    "3 Feedback": {
+     "display": 0
+    },
+    "1 Volume": {
+     "display": 0
+    },
+    "3 Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "d1-only",
+   "params": {
+    "1 Input On": {
+     "item": "On"
+    },
+    "3 Input On": {
+     "item": "Off"
+    },
+    "2 Input On": {
+     "item": "Off"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "1 Pan": 0,
+    "3 Pan": 0,
+    "1 Filter On": {
+     "item": "Off"
+    },
+    "3 Filter On": {
+     "item": "Off"
+    },
+    "1 Delay Mode": {
+     "item": "Off"
+    },
+    "3 Delay Mode": {
+     "item": "Off"
+    },
+    "1 Time Delay": {
+     "display": 0.001
+    },
+    "3 Time Delay": {
+     "display": 0.001
+    },
+    "1 Feedback": {
+     "display": 0
+    },
+    "3 Feedback": {
+     "display": 0
+    },
+    "1 Volume": {
+     "display": 0
+    },
+    "3 Volume": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "d3-only",
+   "params": {
+    "1 Input On": {
+     "item": "Off"
+    },
+    "3 Input On": {
+     "item": "On"
+    },
+    "2 Input On": {
+     "item": "Off"
+    },
+    "2 Filter On": {
+     "item": "Off"
+    },
+    "2 Delay Mode": {
+     "item": "Off"
+    },
+    "2 Time Delay": {
+     "display": 0.001
+    },
+    "2 Feedback": {
+     "display": 0
+    },
+    "2 Volume": {
+     "display": 0
+    },
+    "2 Pan": 0,
+    "Dry": {
+     "norm": 0.0
+    },
+    "1 Pan": 0,
+    "3 Pan": 0,
+    "1 Filter On": {
+     "item": "Off"
+    },
+    "3 Filter On": {
+     "item": "Off"
+    },
+    "1 Delay Mode": {
+     "item": "Off"
+    },
+    "3 Delay Mode": {
+     "item": "Off"
+    },
+    "1 Time Delay": {
+     "display": 0.001
+    },
+    "3 Time Delay": {
+     "display": 0.001
+    },
+    "1 Feedback": {
+     "display": 0
+    },
+    "3 Feedback": {
+     "display": 0
+    },
+    "1 Volume": {
+     "display": 0
+    },
+    "3 Volume": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

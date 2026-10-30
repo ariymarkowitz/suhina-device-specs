@@ -1,0 +1,285 @@
+{
+ "device": "Beat Repeat",
+ "parameter": "beatrepeat-variation-quarters",
+ "question": "slice lengths per trigger at Interval 1/4, Gate 1/4, Variation 5 in each Variation Type, and Variation 10 in Auto with No Triplets on",
+ "plan": "5",
+ "read": [
+  "envelope",
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 3,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 5,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "var5-trigger",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 3,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 5,
+    "Variation Type": {
+     "item": "Trigger"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "var5-1-4",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 3,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 5,
+    "Variation Type": {
+     "item": "1/4"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "var5-1-8",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 3,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 5,
+    "Variation Type": {
+     "item": "1/8"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "var5-1-16",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 3,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 5,
+    "Variation Type": {
+     "item": "1/16"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "var5-auto",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 3,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "Off"
+    },
+    "Variation": 5,
+    "Variation Type": {
+     "item": "Auto"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  },
+  {
+   "id": "var10-auto-notrip",
+   "params": {
+    "Chance": {
+     "display": 100
+    },
+    "Interval": 3,
+    "Offset": 0,
+    "Grid": 7,
+    "Block Triplets": {
+     "item": "On"
+    },
+    "Variation": 10,
+    "Variation Type": {
+     "item": "Auto"
+    },
+    "Gate": 3,
+    "Decay": {
+     "display": 0
+    },
+    "Pitch Decay": {
+     "display": 0
+    },
+    "Pitch": 0,
+    "Mix Type": {
+     "item": "Gate"
+    },
+    "Volume": {
+     "display": 0
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Repeat": {
+     "item": "Off"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1202 @@
+{
+ "device": "Amp",
+ "parameter": "amp-tone-stack-models",
+ "question": "sweep response at Input Gain 1 with Bass, Middle, Treble each at 0 and 10 alone, for Clean, Boost, Blues, Lead, Heavy, Bass",
+ "plan": "2",
+ "read": [
+  "response"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Amp Type": {
+     "item": "Rock"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "clean-bass-0",
+   "params": {
+    "Amp Type": {
+     "item": "Clean"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "clean-bass-10",
+   "params": {
+    "Amp Type": {
+     "item": "Clean"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 10
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "clean-middle-0",
+   "params": {
+    "Amp Type": {
+     "item": "Clean"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "clean-middle-10",
+   "params": {
+    "Amp Type": {
+     "item": "Clean"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 10
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "clean-treble-0",
+   "params": {
+    "Amp Type": {
+     "item": "Clean"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "clean-treble-10",
+   "params": {
+    "Amp Type": {
+     "item": "Clean"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 10
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "boost-bass-0",
+   "params": {
+    "Amp Type": {
+     "item": "Boost"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "boost-bass-10",
+   "params": {
+    "Amp Type": {
+     "item": "Boost"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 10
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "boost-middle-0",
+   "params": {
+    "Amp Type": {
+     "item": "Boost"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "boost-middle-10",
+   "params": {
+    "Amp Type": {
+     "item": "Boost"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 10
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "boost-treble-0",
+   "params": {
+    "Amp Type": {
+     "item": "Boost"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "boost-treble-10",
+   "params": {
+    "Amp Type": {
+     "item": "Boost"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 10
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "blues-bass-0",
+   "params": {
+    "Amp Type": {
+     "item": "Blues"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "blues-bass-10",
+   "params": {
+    "Amp Type": {
+     "item": "Blues"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 10
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "blues-middle-0",
+   "params": {
+    "Amp Type": {
+     "item": "Blues"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "blues-middle-10",
+   "params": {
+    "Amp Type": {
+     "item": "Blues"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 10
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "blues-treble-0",
+   "params": {
+    "Amp Type": {
+     "item": "Blues"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "blues-treble-10",
+   "params": {
+    "Amp Type": {
+     "item": "Blues"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 10
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lead-bass-0",
+   "params": {
+    "Amp Type": {
+     "item": "Lead"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lead-bass-10",
+   "params": {
+    "Amp Type": {
+     "item": "Lead"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 10
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lead-middle-0",
+   "params": {
+    "Amp Type": {
+     "item": "Lead"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lead-middle-10",
+   "params": {
+    "Amp Type": {
+     "item": "Lead"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 10
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lead-treble-0",
+   "params": {
+    "Amp Type": {
+     "item": "Lead"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "lead-treble-10",
+   "params": {
+    "Amp Type": {
+     "item": "Lead"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 10
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "heavy-bass-0",
+   "params": {
+    "Amp Type": {
+     "item": "Heavy"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "heavy-bass-10",
+   "params": {
+    "Amp Type": {
+     "item": "Heavy"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 10
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "heavy-middle-0",
+   "params": {
+    "Amp Type": {
+     "item": "Heavy"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "heavy-middle-10",
+   "params": {
+    "Amp Type": {
+     "item": "Heavy"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 10
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "heavy-treble-0",
+   "params": {
+    "Amp Type": {
+     "item": "Heavy"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "heavy-treble-10",
+   "params": {
+    "Amp Type": {
+     "item": "Heavy"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 10
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-bass-0",
+   "params": {
+    "Amp Type": {
+     "item": "Bass"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-bass-10",
+   "params": {
+    "Amp Type": {
+     "item": "Bass"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 10
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-middle-0",
+   "params": {
+    "Amp Type": {
+     "item": "Bass"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-middle-10",
+   "params": {
+    "Amp Type": {
+     "item": "Bass"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 10
+    },
+    "Treble": {
+     "display": 5
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-treble-0",
+   "params": {
+    "Amp Type": {
+     "item": "Bass"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "bass-treble-10",
+   "params": {
+    "Amp Type": {
+     "item": "Bass"
+    },
+    "Input Gain": {
+     "display": 1
+    },
+    "Bass": {
+     "display": 5
+    },
+    "Middle": {
+     "display": 5
+    },
+    "Treble": {
+     "display": 10
+    },
+    "Presence": {
+     "display": 5
+    },
+    "Volume": {
+     "display": 5
+    },
+    "Dual Mono": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

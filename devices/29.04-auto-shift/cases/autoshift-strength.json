@@ -1,0 +1,338 @@
+{
+ "device": "Auto Shift",
+ "parameter": "autoshift-strength",
+ "question": "output pitch of the tone against Strength 0, 25, 50, 75, 100 % (C major, Smooth off)",
+ "plan": "4",
+ "read": [
+  "modulation"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Quantizer On": {
+     "item": "On"
+    },
+    "Smooth On": {
+     "item": "Off"
+    },
+    "Scale Aware": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pitch St.": 0,
+    "Pitch Scale Deg.": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Formant Shift": {
+     "display": 0
+    },
+    "Formant Follow": {
+     "display": 0
+    },
+    "Strength": {
+     "display": 100
+    },
+    "Root": {
+     "item": "C"
+    },
+    "Scale": {
+     "item": "Major"
+    },
+    "Vibrato Amt": {
+     "display": 0
+    },
+    "Vibrato Natural": {
+     "item": "Off"
+    },
+    "Vibrato Fade-In": {
+     "display": 0
+    },
+    "LFO On": {
+     "item": "Off"
+    },
+    "LFO > Pitch": {
+     "display": 0
+    },
+    "LFO > Form.": {
+     "display": 0
+    },
+    "LFO > Vol": {
+     "display": 0
+    },
+    "LFO > Pan": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "strength-0",
+   "params": {
+    "Quantizer On": {
+     "item": "On"
+    },
+    "Smooth On": {
+     "item": "Off"
+    },
+    "Scale Aware": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pitch St.": 0,
+    "Pitch Scale Deg.": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Formant Shift": {
+     "display": 0
+    },
+    "Formant Follow": {
+     "display": 0
+    },
+    "Strength": {
+     "display": 0
+    },
+    "Root": {
+     "item": "C"
+    },
+    "Scale": {
+     "item": "Major"
+    },
+    "Vibrato Amt": {
+     "display": 0
+    },
+    "Vibrato Natural": {
+     "item": "Off"
+    },
+    "Vibrato Fade-In": {
+     "display": 0
+    },
+    "LFO On": {
+     "item": "Off"
+    },
+    "LFO > Pitch": {
+     "display": 0
+    },
+    "LFO > Form.": {
+     "display": 0
+    },
+    "LFO > Vol": {
+     "display": 0
+    },
+    "LFO > Pan": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "strength-25",
+   "params": {
+    "Quantizer On": {
+     "item": "On"
+    },
+    "Smooth On": {
+     "item": "Off"
+    },
+    "Scale Aware": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pitch St.": 0,
+    "Pitch Scale Deg.": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Formant Shift": {
+     "display": 0
+    },
+    "Formant Follow": {
+     "display": 0
+    },
+    "Strength": {
+     "display": 25
+    },
+    "Root": {
+     "item": "C"
+    },
+    "Scale": {
+     "item": "Major"
+    },
+    "Vibrato Amt": {
+     "display": 0
+    },
+    "Vibrato Natural": {
+     "item": "Off"
+    },
+    "Vibrato Fade-In": {
+     "display": 0
+    },
+    "LFO On": {
+     "item": "Off"
+    },
+    "LFO > Pitch": {
+     "display": 0
+    },
+    "LFO > Form.": {
+     "display": 0
+    },
+    "LFO > Vol": {
+     "display": 0
+    },
+    "LFO > Pan": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "strength-50",
+   "params": {
+    "Quantizer On": {
+     "item": "On"
+    },
+    "Smooth On": {
+     "item": "Off"
+    },
+    "Scale Aware": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pitch St.": 0,
+    "Pitch Scale Deg.": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Formant Shift": {
+     "display": 0
+    },
+    "Formant Follow": {
+     "display": 0
+    },
+    "Strength": {
+     "display": 50
+    },
+    "Root": {
+     "item": "C"
+    },
+    "Scale": {
+     "item": "Major"
+    },
+    "Vibrato Amt": {
+     "display": 0
+    },
+    "Vibrato Natural": {
+     "item": "Off"
+    },
+    "Vibrato Fade-In": {
+     "display": 0
+    },
+    "LFO On": {
+     "item": "Off"
+    },
+    "LFO > Pitch": {
+     "display": 0
+    },
+    "LFO > Form.": {
+     "display": 0
+    },
+    "LFO > Vol": {
+     "display": 0
+    },
+    "LFO > Pan": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "strength-75",
+   "params": {
+    "Quantizer On": {
+     "item": "On"
+    },
+    "Smooth On": {
+     "item": "Off"
+    },
+    "Scale Aware": {
+     "item": "Off"
+    },
+    "Input Gain": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Pitch St.": 0,
+    "Pitch Scale Deg.": 0,
+    "Pitch Fine": {
+     "display": 0
+    },
+    "Formant Shift": {
+     "display": 0
+    },
+    "Formant Follow": {
+     "display": 0
+    },
+    "Strength": {
+     "display": 75
+    },
+    "Root": {
+     "item": "C"
+    },
+    "Scale": {
+     "item": "Major"
+    },
+    "Vibrato Amt": {
+     "display": 0
+    },
+    "Vibrato Natural": {
+     "item": "Off"
+    },
+    "Vibrato Fade-In": {
+     "display": 0
+    },
+    "LFO On": {
+     "item": "Off"
+    },
+    "LFO > Pitch": {
+     "display": 0
+    },
+    "LFO > Form.": {
+     "display": 0
+    },
+    "LFO > Vol": {
+     "display": 0
+    },
+    "LFO > Pan": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

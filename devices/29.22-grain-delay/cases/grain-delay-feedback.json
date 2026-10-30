@@ -1,0 +1,153 @@
+{
+ "device": "Grain Delay",
+ "parameter": "grain-delay-feedback",
+ "question": "100 ms delay, Feedback 25, 50 and 95 %, and 50 % with Pitch +12",
+ "plan": "7",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.1
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-25",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.1
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 25
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-50",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.1
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-95",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.1
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 95
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "fb-50-p12",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.1
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 12,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

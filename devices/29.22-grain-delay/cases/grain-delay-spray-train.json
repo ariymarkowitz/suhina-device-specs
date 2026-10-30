@@ -1,0 +1,181 @@
+{
+ "device": "Grain Delay",
+ "parameter": "grain-delay-spray-train",
+ "question": "arrival times of each impulse of the train's copies at Spray 20, 60, 200 ms; the 150 Hz saw's partials and the glide at Random 40 and 161, Frequency 10 Hz",
+ "plan": "5, 6",
+ "read": [
+  "ext: impulsetrain (arrival times per impulse)",
+  "glide"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spray-20",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0.02
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spray-60",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0.06
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "spray-200",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 60
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0.2
+    },
+    "Random": {
+     "norm": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "random-40-10hz",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 10
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "display": 40
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "random-161-10hz",
+   "params": {
+    "Delay Mode": {
+     "item": "Off"
+    },
+    "Time Delay": {
+     "display": 0.04
+    },
+    "Frequency": {
+     "display": 10
+    },
+    "Pitch": 0,
+    "Spray": {
+     "display": 0
+    },
+    "Random": {
+     "display": 161
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "DryWet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

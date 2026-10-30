@@ -1,0 +1,90 @@
+{
+ "device": "Resonators",
+ "parameter": "resonators-gain-mix",
+ "question": "impulse and staircase: I Gain -12 dB; Output +6 dB; Dry/Wet 50 % and 0 %",
+ "plan": "8, 10",
+ "read": [
+  "impulse",
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0
+   }
+  },
+  {
+   "id": "i-gain-12",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "I Gain": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "output+6",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0,
+    "Output": {
+     "display": 6
+    }
+   }
+  },
+  {
+   "id": "drywet-50",
+   "params": {
+    "Dry/Wet": {
+     "display": 50
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0
+   }
+  },
+  {
+   "id": "drywet-0",
+   "params": {
+    "Dry/Wet": {
+     "display": 0
+    },
+    "Filter On": 0,
+    "II On": 0,
+    "III On": 0,
+    "IV On": 0,
+    "V On": 0
+   }
+  }
+ ]
+}

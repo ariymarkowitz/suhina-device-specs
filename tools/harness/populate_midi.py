@@ -4,17 +4,17 @@
 """Makes the set the MIDI effects' parameter dump is taken from: the Suhina Probe on an audio
 track and one MIDI track per Live 12 MIDI effect, each holding a fresh copy of that device.
 
-    python populate_midi.py write -o measurements/populate-midi-gen.als
-    python live_check.py open measurements/populate-midi-gen.als
+    python populate_midi.py write -o work/populate-midi-gen.als
+    python live_check.py open work/populate-midi-gen.als
     python populate_midi.py load
     # in Live: Dump parameters on the probe, then save the set (the UI steps)
 
 The 2026-10-18 run wrote the set, loaded the devices, dumped them to
-`measurements/dump-midi-12.4.6.json` and saved the set; Live saved it into a Project folder,
-and the copy beside the dump is `measurements/populate-midi-12.4.6.als`. Do not write over that
+`reference/dump-midi-12.4.6.json` and saved the set; Live saved it into a Project folder,
+and the copy beside the dump is `reference/populate-midi-12.4.6.als`. Do not write over that
 saved set: it is the record the `[als 12.4.6]` facts of the MIDI effect notes come from.
 
-`write` takes the tracks from a set Live saved (`measurements/populate-12.4.6.als`): its audio
+`write` takes the tracks from a set Live saved (`reference/populate-12.4.6.als`): its audio
 track with the probe, and its empty MIDI track, copied once per MIDI effect and named after it.
 No device element of a MIDI effect is known before Live has saved one, so `load` puts the
 devices in afterwards through the AbletonMCP Remote Script: each track gets the browser's item
@@ -31,7 +31,7 @@ import live_check
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-SOURCE = os.path.join(ROOT, "measurements", "populate-12.4.6.als")
+SOURCE = os.path.join(ROOT, "reference", "populate-12.4.6.als")
 PROBE = os.path.join(ROOT, "tools", "probe-device", "Suhina Probe.amxd")
 PROBE_TRACK = "3-Audio"
 MIDI_TRACK = "1-MIDI"

@@ -1,0 +1,249 @@
+{
+ "device": "Pedal",
+ "parameter": "pedal-hiquality",
+ "question": "spectral lines of the 10 and 15 kHz sines for each type at Gain 100 %, Oversampling false and true",
+ "plan": "5",
+ "read": [
+  "ext: tone10k, tone15k peaks",
+  "impulse"
+ ],
+ "probe": "ext",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "over-hq-off",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": false
+   }
+  },
+  {
+   "id": "over-hq-on",
+   "params": {
+    "Type": {
+     "item": "Overdrive"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": true
+   }
+  },
+  {
+   "id": "dist-hq-off",
+   "params": {
+    "Type": {
+     "item": "Distortion"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": false
+   }
+  },
+  {
+   "id": "dist-hq-on",
+   "params": {
+    "Type": {
+     "item": "Distortion"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": true
+   }
+  },
+  {
+   "id": "fuzz-hq-off",
+   "params": {
+    "Type": {
+     "item": "Fuzz"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": false
+   }
+  },
+  {
+   "id": "fuzz-hq-on",
+   "params": {
+    "Type": {
+     "item": "Fuzz"
+    },
+    "Drive": {
+     "display": 100
+    },
+    "Output": {
+     "display": 0
+    },
+    "Bass": {
+     "display": 0
+    },
+    "Mid": {
+     "display": 0
+    },
+    "Treble": {
+     "display": 0
+    },
+    "Mid Freq": {
+     "item": "Mid"
+    },
+    "Sub": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    },
+    "@Oversampling": true
+   }
+  }
+ ]
+}

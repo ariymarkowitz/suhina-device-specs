@@ -1,0 +1,188 @@
+{
+ "suhina_probe_signal": 1,
+ "kind": "fifth",
+ "rate": 44100,
+ "channels": 2,
+ "length": 1863226,
+ "gap": 1.0,
+ "tempo": 120.0,
+ "segments": [
+  {
+   "name": "impulse",
+   "start": 22050,
+   "length": 1,
+   "level_db": -6.0
+  },
+  {
+   "name": "fs4_p0",
+   "start": 66151,
+   "length": 44100,
+   "freq": 11025.0,
+   "phase_deg": 0,
+   "level_db": -6.0
+  },
+  {
+   "name": "fs4_p45",
+   "start": 154351,
+   "length": 44100,
+   "freq": 11025.0,
+   "phase_deg": 45,
+   "level_db": -6.0
+  },
+  {
+   "name": "stair20",
+   "start": 242551,
+   "length": 374850,
+   "freq": 20.0,
+   "levels_db": [
+    -54.0,
+    -51.0,
+    -48.0,
+    -45.0,
+    -42.0,
+    -39.0,
+    -36.0,
+    -33.0,
+    -30.0,
+    -27.0,
+    -24.0,
+    -21.0,
+    -18.0,
+    -15.0,
+    -12.0,
+    -9.0,
+    -6.0
+   ],
+   "step_length": 22050
+  },
+  {
+   "name": "stair5k",
+   "start": 661501,
+   "length": 187425,
+   "freq": 5000.0,
+   "levels_db": [
+    -54.0,
+    -51.0,
+    -48.0,
+    -45.0,
+    -42.0,
+    -39.0,
+    -36.0,
+    -33.0,
+    -30.0,
+    -27.0,
+    -24.0,
+    -21.0,
+    -18.0,
+    -15.0,
+    -12.0,
+    -9.0,
+    -6.0
+   ],
+   "step_length": 11025
+  },
+  {
+   "name": "vocseq",
+   "start": 893026,
+   "length": 793800,
+   "items": [
+    {
+     "start_s": 0.0,
+     "freq": 220,
+     "wave": "saw"
+    },
+    {
+     "start_s": 1.0,
+     "freq": null,
+     "wave": "silence"
+    },
+    {
+     "start_s": 2.0,
+     "freq": 1760,
+     "wave": "saw"
+    },
+    {
+     "start_s": 3.0,
+     "freq": null,
+     "wave": "silence"
+    },
+    {
+     "start_s": 4.0,
+     "freq": 330,
+     "wave": "saw"
+    },
+    {
+     "start_s": 5.0,
+     "freq": 1760,
+     "wave": "saw"
+    },
+    {
+     "start_s": 6.0,
+     "freq": null,
+     "wave": "silence"
+    },
+    {
+     "start_s": 7.0,
+     "freq": 1760,
+     "wave": "saw"
+    },
+    {
+     "start_s": 8.0,
+     "freq": null,
+     "wave": "silence"
+    },
+    {
+     "start_s": 9.0,
+     "freq": 40,
+     "wave": "saw"
+    },
+    {
+     "start_s": 10.0,
+     "freq": null,
+     "wave": "silence"
+    },
+    {
+     "start_s": 11.0,
+     "freq": 110,
+     "wave": "saw"
+    },
+    {
+     "start_s": 12.0,
+     "freq": 40,
+     "wave": "saw"
+    },
+    {
+     "start_s": 13.0,
+     "freq": null,
+     "wave": "silence"
+    },
+    {
+     "start_s": 14.0,
+     "freq": 3000,
+     "wave": "sine"
+    },
+    {
+     "start_s": 15.0,
+     "freq": null,
+     "wave": "silence"
+    },
+    {
+     "start_s": 16.0,
+     "freq": 150,
+     "wave": "saw"
+    },
+    {
+     "start_s": 17.0,
+     "freq": 3000,
+     "wave": "sine"
+    }
+   ],
+   "level_db": -12.0
+  },
+  {
+   "name": "silence",
+   "start": 1730926,
+   "length": 88200
+  }
+ ]
+}

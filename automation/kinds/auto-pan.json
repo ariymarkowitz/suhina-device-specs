@@ -1,0 +1,74 @@
+{
+ "device": "Auto Pan-Tremolo",
+ "cases": [
+  {
+   "id": "wave-ramp",
+   "params": {
+    "Waveform": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Sine"
+       }
+      ],
+      [
+       32,
+       {
+        "item": "S & H"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "wave-ramp-mid",
+   "params": {
+    "Waveform": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "Sine"
+       }
+      ],
+      [
+       16,
+       {
+        "item": "Saw Up"
+       }
+      ],
+      [
+       32,
+       {
+        "item": "S & H"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "wave-ramp-down",
+   "params": {
+    "Waveform": {
+     "auto": [
+      [
+       0,
+       {
+        "item": "S & H"
+       }
+      ],
+      [
+       32,
+       {
+        "item": "Sine"
+       }
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -532,18 +532,20 @@ def analyse(manifest, probe, render, rate, align="none"):
     return result, extras
 
 
-def write_outputs(base, result, extras, rate):
+def write_outputs(base, result, extras, rate, extras_base=None):
+    """Writes `<base>.json`; the CSV views and the impulse response go beside it, or to `extras_base`."""
+    ebase = extras_base or base
     with open(base + ".json", "w") as f:
         json.dump(result, f, indent=1)
     r = result.get("response")
     if r:
-        with open(base + ".response.csv", "w", newline="") as f:
+        with open(ebase + ".response.csv", "w", newline="") as f:
             w = csv.writer(f)
             w.writerow(["freq_hz", "sweep_left_db", "sweep_right_db", "noise_left_db", "noise_right_db"])
             for i, c in enumerate(r["centres_hz"]):
                 w.writerow([f"{c:.1f}"] + [("" if v[i] is None else f"{v[i]:.3f}") for v in r["sweep_db"] + r["noise_db"]])
     if result.get("static"):
-        with open(base + ".static.csv", "w", newline="") as f:
+        with open(ebase + ".static.csv", "w", newline="") as f:
             w = csv.writer(f)
             keys = ["in_db", "left_out_db", "right_out_db", "left_gain_db", "right_gain_db", "left_thd_pct", "right_thd_pct"]
             w.writerow(keys)
@@ -551,19 +553,19 @@ def write_outputs(base, result, extras, rate):
                 w.writerow(["" if row.get(k) is None else f"{row[k]:.3f}" for k in keys])
     if "envelope" in extras:
         t, g = extras["envelope"]
-        with open(base + ".envelope.csv", "w", newline="") as f:
+        with open(ebase + ".envelope.csv", "w", newline="") as f:
             w = csv.writer(f)
             w.writerow(["time_s", "gain_db"])
             for a, b in zip(t, g):
                 w.writerow([f"{a:.5f}", f"{b:.3f}"])
     if "ext_envelope" in extras:
-        with open(base + ".ext-envelope.csv", "w", newline="") as f:
+        with open(ebase + ".ext-envelope.csv", "w", newline="") as f:
             w = csv.writer(f)
             w.writerow(["segment", "time_s", "in_db", "left_db", "right_db"])
             for name, (t, ind, l, r) in extras["ext_envelope"].items():
                 for row in zip(t, ind, l, r):
                     w.writerow([name, f"{row[0]:.5f}"] + [f"{x:.3f}" for x in row[1:]])
-    write_wav(base + ".ir.wav", rate, extras["ir"])
+    write_wav(ebase + ".ir.wav", rate, extras["ir"])
 
 
 def main(argv=None):

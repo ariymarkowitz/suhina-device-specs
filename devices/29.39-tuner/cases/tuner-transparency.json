@@ -1,0 +1,30 @@
+{
+ "device": "Tuner",
+ "parameter": "tuner-transparency",
+ "question": "is the render with the device on identical to the bypass render, sample for sample, in all probe segments?",
+ "plan": "-",
+ "read": [
+  "impulse",
+  "response",
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {}
+  },
+  {
+   "id": "on",
+   "params": {
+    "Device On": 1
+   }
+  }
+ ]
+}

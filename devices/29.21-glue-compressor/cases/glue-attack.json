@@ -1,0 +1,179 @@
+{
+ "device": "Glue Compressor",
+ "parameter": "glue-attack",
+ "question": "bursts at -30, -6, -30 dBFS with Threshold -20 dB, Ratio 4, Release 0.1 s: Attack 0.1 to 30 ms (0.01 ms is the default case)",
+ "plan": "4",
+ "read": [
+  "dynamics"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": 1,
+    "Attack": 0,
+    "Release": 0,
+    "Range": {
+     "display": 70
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "att-0.1",
+   "params": {
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": 1,
+    "Attack": 1,
+    "Release": 0,
+    "Range": {
+     "display": 70
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "att-0.3",
+   "params": {
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": 1,
+    "Attack": 2,
+    "Release": 0,
+    "Range": {
+     "display": 70
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "att-1",
+   "params": {
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": 1,
+    "Attack": 3,
+    "Release": 0,
+    "Range": {
+     "display": 70
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "att-3",
+   "params": {
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": 1,
+    "Attack": 4,
+    "Release": 0,
+    "Range": {
+     "display": 70
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "att-10",
+   "params": {
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": 1,
+    "Attack": 5,
+    "Release": 0,
+    "Range": {
+     "display": 70
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "att-30",
+   "params": {
+    "Threshold": {
+     "display": -20
+    },
+    "Ratio": 1,
+    "Attack": 6,
+    "Release": 0,
+    "Range": {
+     "display": 70
+    },
+    "Output": {
+     "display": 0
+    },
+    "Peak Clip In": {
+     "item": "Off"
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

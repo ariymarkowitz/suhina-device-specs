@@ -1,0 +1,156 @@
+{
+ "device": "Channel EQ",
+ "parameter": "channeleq-mid-freq",
+ "question": "sweep response for Mid +12 dB at Mid Freq 120 Hz, 400 Hz, 1.5 kHz, 4 kHz, 7.5 kHz",
+ "plan": "4",
+ "read": [
+  "response"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "freq-120",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "display": 120
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "freq-400",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "display": 400
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "freq-1500",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "display": 1500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "freq-4000",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "display": 4000
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "freq-7500",
+   "params": {
+    "Highpass On": {
+     "item": "Off"
+    },
+    "Low Gain": {
+     "display": 0
+    },
+    "Mid Gain": {
+     "display": 12
+    },
+    "Mid Freq": {
+     "display": 7500
+    },
+    "High Gain": {
+     "display": 0
+    },
+    "Output": {
+     "display": 0
+    }
+   }
+  }
+ ]
+}

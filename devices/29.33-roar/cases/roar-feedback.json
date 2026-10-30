@@ -1,0 +1,345 @@
+{
+ "device": "Roar",
+ "parameter": "roar-feedback",
+ "question": "repeat times and levels of an impulse with Feedback 50 %, gate off, loop band-pass wide open: Time 5/50/250 ms, Synced 1/8, Note A2, Invert, 25 %, gate on",
+ "plan": "6",
+ "read": [
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Time"
+    },
+    "FB Time": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "time-5ms",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Time"
+    },
+    "FB Time": {
+     "display": 0.005
+    }
+   }
+  },
+  {
+   "id": "time-50ms",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Time"
+    },
+    "FB Time": {
+     "display": 0.05
+    }
+   }
+  },
+  {
+   "id": "time-250ms",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Time"
+    },
+    "FB Time": {
+     "display": 0.25
+    }
+   }
+  },
+  {
+   "id": "synced-1/8",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Synced"
+    },
+    "FB Time": {
+     "display": 0.1
+    },
+    "FB Synced": -3
+   }
+  },
+  {
+   "id": "note-A2",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Note"
+    },
+    "FB Time": {
+     "display": 0.1
+    },
+    "FB Note": 45
+   }
+  },
+  {
+   "id": "invert",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Time"
+    },
+    "FB Time": {
+     "display": 0.1
+    },
+    "FB Invert": 1
+   }
+  },
+  {
+   "id": "fb-25",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 25
+    },
+    "Fb Gate On": 0,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Time"
+    },
+    "FB Time": {
+     "display": 0.1
+    }
+   }
+  },
+  {
+   "id": "gate-on",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Tone Amt": {
+     "display": 0
+    },
+    "Comp Amt": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 50
+    },
+    "Fb Gate On": 1,
+    "Shaper 1 On": 0,
+    "Shaper 2 On": 0,
+    "Shaper 3 On": 0,
+    "Flt 1 On": 0,
+    "Flt 2 On": 0,
+    "Flt 3 On": 0,
+    "FB Freq": {
+     "display": 1000
+    },
+    "FB Width": {
+     "display": 9
+    },
+    "FB Time Mode": {
+     "item": "Time"
+    },
+    "FB Time": {
+     "display": 0.1
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,495 @@
+{
+ "device": "Delay",
+ "parameter": "delay-lfo-delay",
+ "question": "FM depth/rate and envelope of the steady tone for LFO > Delay 100 % at 100/200 ms and 300 ms, 25 and 50 % at 300 ms (Repitch), and Fade and Jump at 300 ms",
+ "plan": "6, 7",
+ "read": [
+  "modulation",
+  "envelope"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "display": 0.1
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 100
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "d100-200-a100",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "display": 0.1
+    },
+    "R Time": {
+     "display": 0.2
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 100
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "d300-a100",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "display": 0.3
+    },
+    "R Time": {
+     "display": 0.3
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 100
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "d300-a50",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "display": 0.3
+    },
+    "R Time": {
+     "display": 0.3
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 50
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "d300-a25",
+   "params": {
+    "Smoothing": {
+     "item": "Repitch"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "display": 0.3
+    },
+    "R Time": {
+     "display": 0.3
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 25
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "d300-fade",
+   "params": {
+    "Smoothing": {
+     "item": "Fade"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "display": 0.3
+    },
+    "R Time": {
+     "display": 0.3
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 100
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "d300-jump",
+   "params": {
+    "Smoothing": {
+     "item": "Jump"
+    },
+    "Link": {
+     "item": "Off"
+    },
+    "Ping Pong": {
+     "item": "Off"
+    },
+    "L Sync": {
+     "item": "Off"
+    },
+    "R Sync": {
+     "item": "Off"
+    },
+    "L Time": {
+     "display": 0.3
+    },
+    "R Time": {
+     "display": 0.3
+    },
+    "L Offset": {
+     "display": 0
+    },
+    "R Offset": {
+     "display": 0
+    },
+    "Feedback": {
+     "display": 0
+    },
+    "Freeze": {
+     "item": "Off"
+    },
+    "Filter On": {
+     "item": "Off"
+    },
+    "Filter Freq": {
+     "display": 1000
+    },
+    "Filter Width": {
+     "display": 8
+    },
+    "LFO > Delay": {
+     "display": 100
+    },
+    "LFO > Filter": {
+     "display": 0
+    },
+    "LFO Mode": {
+     "item": "Rate"
+    },
+    "LFO Freq": {
+     "display": 1
+    },
+    "LFO Wave": {
+     "item": "Sine"
+    },
+    "LFO Morph": {
+     "display": 0
+    },
+    "Dry/Wet": {
+     "display": 100
+    }
+   }
+  }
+ ]
+}

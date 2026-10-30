@@ -1,0 +1,94 @@
+{
+ "device": "Spectral Time",
+ "parameter": "spectral-time-mix-latency",
+ "question": "impulse delay and levels with the sections off, Dry/Wet 50 %, an idle Freezer, the Delay at 10 ms, Input Send -6 and -12 dB",
+ "plan": "2, 9",
+ "read": [
+  "impulse",
+  "static"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "On": 0,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "dw-50",
+   "params": {
+    "On": 0,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 50
+    }
+   }
+  },
+  {
+   "id": "freezer-idle",
+   "params": {
+    "On": 1,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    }
+   }
+  },
+  {
+   "id": "delay-10ms-mix100",
+   "params": {
+    "On": 0,
+    "Delay On": 1,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Delay Mix": {
+     "display": 100
+    },
+    "Delay Time": {
+     "display": 0.01
+    },
+    "Delay Feedback": {
+     "display": 0
+    }
+   }
+  },
+  {
+   "id": "send-6",
+   "params": {
+    "On": 0,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "display": -6
+    }
+   }
+  },
+  {
+   "id": "send-12",
+   "params": {
+    "On": 0,
+    "Delay On": 0,
+    "Dry Wet": {
+     "display": 100
+    },
+    "Send Gain": {
+     "display": -12
+    }
+   }
+  }
+ ]
+}

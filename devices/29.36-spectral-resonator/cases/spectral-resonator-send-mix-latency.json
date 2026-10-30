@@ -1,0 +1,112 @@
+{
+ "device": "Spectral Resonator",
+ "parameter": "spectral-resonator-send-mix-latency",
+ "question": "staircase with a partial on 1 kHz (short Decay) for Input Send -12, +12, +24 dB and Dry/Wet 50 and 0 %; impulse delay of wet and dry",
+ "plan": "6, 12, 13",
+ "read": [
+  "static",
+  "impulse"
+ ],
+ "probe": "gap2",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 1000
+    },
+    "Decay": {
+     "display": 0.04
+    }
+   }
+  },
+  {
+   "id": "send-12",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 1000
+    },
+    "Decay": {
+     "display": 0.04
+    },
+    "Send Gain": {
+     "display": -12
+    }
+   }
+  },
+  {
+   "id": "send+12",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 1000
+    },
+    "Decay": {
+     "display": 0.04
+    },
+    "Send Gain": {
+     "display": 12
+    }
+   }
+  },
+  {
+   "id": "send+24",
+   "params": {
+    "Dry Wet": {
+     "display": 100
+    },
+    "Freq. Hz": {
+     "display": 1000
+    },
+    "Decay": {
+     "display": 0.04
+    },
+    "Send Gain": {
+     "display": 24
+    }
+   }
+  },
+  {
+   "id": "dw-50",
+   "params": {
+    "Dry Wet": {
+     "display": 50
+    },
+    "Freq. Hz": {
+     "display": 1000
+    },
+    "Decay": {
+     "display": 0.04
+    }
+   }
+  },
+  {
+   "id": "dw-0",
+   "params": {
+    "Dry Wet": {
+     "display": 0
+    },
+    "Freq. Hz": {
+     "display": 1000
+    },
+    "Decay": {
+     "display": 0.04
+    }
+   }
+  }
+ ]
+}
