@@ -374,6 +374,22 @@ RUNS = [
                          [f"{d.lower()}-size-{z:g}", {"Density": {"item": d}, "Room Size": {"display": z}}],
                          [f"{d.lower()}-size-{z:g}-er-only", {"Density": {"item": d}, "Room Size": {"display": z},
                                                               "Reflect Level": {"display": 0.0}, **ER_ONLY}])])]},
+    # With reverb-network-density-filters Mid and High match Live at Decay 60 s with the default damping,
+    # yet at the default Decay (reverb-texture density-mid and -high, Size 100) their 8 to 16 kHz
+    # decays 1.4 to 1.6 dB/s too slowly. Decay, Diffusion and damping apart, on the bare network.
+    {"name": "reverb-network-density-decay", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "what makes the top octave of the Mid and High networks decay faster in Live at a short Decay: the Decay, the Diffusion or the damping",
+     "question": "impulse response of the bare network (Size 100, Hi Cut off, Smooth None, Stereo 120, reflections off) at Density Mid and High for the default Decay, 0.83 s, 3.46 s and 60 s, each with Diffusion 0.1 % and the default 60 %, and with the damping off and on (default settings); each Density's reflections alone",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [c for d in ("Mid", "High") for c in (
+                   [[f"{d.lower()}-decay-{dn}-diffusion-{fn}-damping-{mn}",
+                     {"Density": {"item": d}, **dec, **fd, "Diff. Hi On": mv, "Diff. Lo On": mv}]
+                    for dn, dec in (("default", {}), ("0.83s", {"Decay Time": {"norm": 0.25}}),
+                                    ("3.46s", {"Decay Time": {"norm": 0.5}}), ("60s", {"Decay Time": {"norm": 1.0}}))
+                    for fn, fd in (("0.1", {"Diffusion": {"display": 0.1}}), ("60", {}))
+                    for mn, mv in (("off", OFF), ("on", ON))]
+                   + [[f"{d.lower()}-er-only", {"Density": {"item": d}, "Reflect Level": {"display": 0.0}, **ER_ONLY}]])]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
