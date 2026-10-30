@@ -1,0 +1,939 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-er-decay",
+ "question": "impulse response of the reflections alone (Size 100, Hi Cut off, Spin off, Smooth None, Stereo 120, Diffusion 0.1 %) at Density Sparse, Low, Mid and High for Decay 0.2 s, 0.83 s, 1.2 s (default), 3.46 s, 14.4 s and 60 s; and Low and Mid at 1.2 s with Hi Cut on",
+ "plan": "7",
+ "read": [
+  "impulse (.ir.wav arrivals)"
+ ],
+ "probe": "gap10",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "sparse-decay-0.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Sparse"
+    },
+    "Decay Time": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "sparse-decay-0.83s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Sparse"
+    },
+    "Decay Time": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "sparse-decay-1.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Sparse"
+    }
+   }
+  },
+  {
+   "id": "sparse-decay-3.46s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Sparse"
+    },
+    "Decay Time": {
+     "norm": 0.5
+    }
+   }
+  },
+  {
+   "id": "sparse-decay-14.4s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Sparse"
+    },
+    "Decay Time": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "sparse-decay-60s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Sparse"
+    },
+    "Decay Time": {
+     "norm": 1.0
+    }
+   }
+  },
+  {
+   "id": "low-decay-0.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Low"
+    },
+    "Decay Time": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "low-decay-0.83s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Low"
+    },
+    "Decay Time": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "low-decay-1.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Low"
+    }
+   }
+  },
+  {
+   "id": "low-decay-3.46s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Low"
+    },
+    "Decay Time": {
+     "norm": 0.5
+    }
+   }
+  },
+  {
+   "id": "low-decay-14.4s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Low"
+    },
+    "Decay Time": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "low-decay-60s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Low"
+    },
+    "Decay Time": {
+     "norm": 1.0
+    }
+   }
+  },
+  {
+   "id": "mid-decay-0.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    },
+    "Decay Time": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "mid-decay-0.83s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    },
+    "Decay Time": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "mid-decay-1.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    }
+   }
+  },
+  {
+   "id": "mid-decay-3.46s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    },
+    "Decay Time": {
+     "norm": 0.5
+    }
+   }
+  },
+  {
+   "id": "mid-decay-14.4s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    },
+    "Decay Time": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "mid-decay-60s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    },
+    "Decay Time": {
+     "norm": 1.0
+    }
+   }
+  },
+  {
+   "id": "high-decay-0.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "High"
+    },
+    "Decay Time": {
+     "norm": 0.0
+    }
+   }
+  },
+  {
+   "id": "high-decay-0.83s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "High"
+    },
+    "Decay Time": {
+     "norm": 0.25
+    }
+   }
+  },
+  {
+   "id": "high-decay-1.2s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "High"
+    }
+   }
+  },
+  {
+   "id": "high-decay-3.46s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "High"
+    },
+    "Decay Time": {
+     "norm": 0.5
+    }
+   }
+  },
+  {
+   "id": "high-decay-14.4s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "High"
+    },
+    "Decay Time": {
+     "norm": 0.75
+    }
+   }
+  },
+  {
+   "id": "high-decay-60s",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 0,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "High"
+    },
+    "Decay Time": {
+     "norm": 1.0
+    }
+   }
+  },
+  {
+   "id": "low-decay-1.2s-hi-cut",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 1,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Low"
+    }
+   }
+  },
+  {
+   "id": "mid-decay-1.2s-hi-cut",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0,
+    "Size Smoothing": {
+     "item": "None"
+    },
+    "Room Size": {
+     "display": 100
+    },
+    "Diffusion": {
+     "display": 0.1
+    },
+    "Stereo Image": {
+     "display": 120
+    },
+    "In Hi Cut On": 1,
+    "Reflect Level": {
+     "display": 0.0
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "Density": {
+     "item": "Mid"
+    }
+   }
+  }
+ ]
+}

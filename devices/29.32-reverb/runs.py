@@ -399,4 +399,20 @@ RUNS = [
      "question": "impulse response of decay-14.4s (as reverb-decay, filters off, Reflect at its minimum) with Smooth None, with its reflections alone, and with Smooth Fast",
      "base": {**SMALL_SMOOTH_NONE, "Decay Time": {"norm": 0.75}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY},
      "cases": [["er-only", ER_ONLY], ["smooth-fast", {"Size Smoothing": {"item": "Fast"}}]]},
+    # Solved from the reflections alone, every copy is one tap through a Q 0.5 low-pass, at 11.9 kHz
+    # at Decay 60 s, but at 1.2 s Mid's and High's (Hi Cut off) sit at 8.4 and 8.9 kHz while Low's
+    # (reverb-size size-100-er, Hi Cut on) sits at 11.25 kHz. Either the corner follows the Density
+    # or Hi Cut changes the copies' path (the copy model fits poorly whenever Hi Cut is on). Each
+    # Density's reflections alone over Decay with Hi Cut off, and Low and Mid at 1.2 s with Hi Cut on.
+    {"name": "reverb-er-decay", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the law of the reflections' low-pass against Decay, and whether it depends on the Density or on Hi Cut",
+     "question": "impulse response of the reflections alone (Size 100, Hi Cut off, Spin off, Smooth None, Stereo 120, Diffusion 0.1 %) at Density Sparse, Low, Mid and High for Decay 0.2 s, 0.83 s, 1.2 s (default), 3.46 s, 14.4 s and 60 s; and Low and Mid at 1.2 s with Hi Cut on",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF, "Reflect Level": {"display": 0.0}, **ER_ONLY},
+     "cases": [[f"{d.lower()}-decay-{dn}", {"Density": {"item": d}, **dec}]
+               for d in ("Sparse", "Low", "Mid", "High")
+               for dn, dec in (("0.2s", {"Decay Time": {"norm": 0.0}}), ("0.83s", {"Decay Time": {"norm": 0.25}}),
+                               ("1.2s", {}), ("3.46s", {"Decay Time": {"norm": 0.5}}),
+                               ("14.4s", {"Decay Time": {"norm": 0.75}}), ("60s", {"Decay Time": {"norm": 1.0}}))]
+              + [[f"{d.lower()}-decay-1.2s-hi-cut", {"Density": {"item": d}, "In Hi Cut On": ON}] for d in ("Low", "Mid")]},
 ]
