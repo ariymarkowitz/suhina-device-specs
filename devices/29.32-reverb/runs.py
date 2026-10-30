@@ -243,6 +243,42 @@ RUNS = [
      "cases": [[f"scale-{c:g}", {"Scale": {"display": c}}] for c in (5, 20, 60, 80, 100)]
      + [["er-only", {"Reflect Level": {"display": 0.0}, **ER_ONLY}]]
      + [[f"decay-0.83s-shape-{v:g}", {"Decay Time": {"norm": 0.25}, "ER Shape": {"display": v}}] for v in (0, 0.5, 1)]},
+    # reverb-network-exact read Density Low's network at Size 100 only, and Suhina's tail at Size 1.53
+    # and 10.54 comes out 0.3 to 1.6 dB loud. The same bare network at small Sizes, read sample by
+    # sample: whether every length (lines, allpasses, entry, family offsets) scales with the size
+    # factor, whether the gains do, and (with the High filter on) whether the damping is per pass of
+    # a line or per second. Size 0.22 is the smallest, 50 sits between.
+    {"name": "reverb-network-small", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "Density Low's network at small Sizes: lengths, gains and the damping's law against Size",
+     "question": "impulse response of the bare network (as reverb-network-exact, Hi Cut off) at Size 1.53 and 10.54 for Scale 5, 40 and 100 %, the reflections alone, Decay 0.83 s and the High shelf at 4 kHz; at Size 0.22 and 50 the default and the reflections alone; and the High shelf at Size 100",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 1.53}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [c for z in (1.53, 10.54) for c in (
+                   [[f"size-{z:g}-scale-{v:g}", {"Room Size": {"display": z}, "Scale": {"display": v}}] for v in (5, 40, 100)]
+                   + [[f"size-{z:g}-er-only", {"Room Size": {"display": z}, "Reflect Level": {"display": 0.0}, **ER_ONLY}],
+                      [f"size-{z:g}-decay-0.83s", {"Room Size": {"display": z}, "Decay Time": {"norm": 0.25}}],
+                      [f"size-{z:g}-hi-shelf-4k", {"Room Size": {"display": z}, **shelf("Shelf", 4000)}]])]
+     + [c for z in (0.22, 50) for c in (
+                   [f"size-{z:g}", {"Room Size": {"display": z}}],
+                   [f"size-{z:g}-er-only", {"Room Size": {"display": z}, "Reflect Level": {"display": 0.0}, **ER_ONLY}])]
+     + [["size-100-hi-shelf-4k", {"Room Size": {"display": 100}, **shelf("Shelf", 4000)}]]},
+    # In reverb-network-small, A, B, D and F follow one law per line (whole 8-frame blocks, the
+    # allpass floored on its own), but C and R miss it at low Scales: C is one or two blocks short at
+    # Scale 5 at Size 10.54 and 1.53, R one long at Size 100, Scale 5 and 20. With Diffusion at 30 %
+    # each allpass section echoes a pass at -g, 1 - g^2, g(1 - g^2) ... one section length apart, so
+    # the sections inside C and R (and how each rounds) show as the spacing of the copies around
+    # their first passes. The same Sizes and Scales the misses came from, with Scale 40 and 100 as
+    # controls, and Diffusion 60 at Size 100 to check the copies' gains against the setting.
+    {"name": "reverb-network-sections", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the allpass sections inside Density Low's C and R lines, and how each rounds with Size and Scale",
+     "question": "impulse response of the bare network (as reverb-network-small) with Diffusion 30 % at Size 100 for Scale 5, 20 and 100, at Size 10.54 and 1.53 for Scale 5, 40 and 100, and with Diffusion 60 % at Size 100 and Scale 100",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 30},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [[f"size-{z:g}-scale-{v:g}", {"Room Size": {"display": z}, "Scale": {"display": v}}]
+               for z, scales in ((100, (5, 20, 100)), (10.54, (5, 40, 100)), (1.53, (5, 40, 100))) for v in scales]
+     + [["size-100-scale-100-diffusion-60", {"Scale": {"display": 100}, "Diffusion": {"display": 60}}]]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
