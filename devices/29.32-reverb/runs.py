@@ -299,6 +299,21 @@ RUNS = [
            + [[f"size-{z:g}-er-only", {"Room Size": {"display": z}, "Reflect Level": {"display": 0.0}, **ER_ONLY}]])]
      + [["size-1.53-smooth-none", {"Size Smoothing": {"item": "None"}}],
         ["size-1.53-smooth-slow", {"Size Smoothing": {"item": "Slow"}}]]},
+    # Under Smooth Fast Live's lines are fractions of a frame long (A and B read between frames) and
+    # keep moving after an impulse (reverb-network-fast): a network fixed at the first passes'
+    # lengths matches only the first 0.1 s. An impulse every 0.5 s (compare/samples/
+    # impulse-train-fast.wav) reads each line's length and fraction from its first pass at 39
+    # times. Decay 0.83 s, so each response is about 40 dB down before the next impulse; None at
+    # Size 1.53 and 100 should give the same lengths at every impulse.
+    {"name": "reverb-network-fast-train", "plan": "7", "probe": "gap10", "read": ["impulse train (arrivals per impulse)"], "priority": 1,
+     "why": "how Smooth Fast's line lengths move over time, from each impulse's first passes",
+     "question": "responses of the bare network (as reverb-network-fast, Decay 0.83 s) to an impulse every 0.5 s, with Smooth Fast at Size 1.53, 10.54 and 100, each Size's reflections alone, and Smooth None at Size 1.53 and 100",
+     "base": {**STATIC, "Size Smoothing": {"item": "Fast"}, "Room Size": {"display": 1.53}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 0.25}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [[f"size-{z:g}", {"Room Size": {"display": z}}] for z in (10.54, 100)]
+     + [[f"size-{z:g}-er-only", {"Room Size": {"display": z}, "Reflect Level": {"display": 0.0}, **ER_ONLY}] for z in (1.53, 10.54, 100)]
+     + [[f"size-{z:g}-smooth-none", {"Room Size": {"display": z}, "Size Smoothing": {"item": "None"}}] for z in (1.53, 100)]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
