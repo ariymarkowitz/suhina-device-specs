@@ -415,4 +415,28 @@ RUNS = [
                                ("1.2s", {}), ("3.46s", {"Decay Time": {"norm": 0.5}}),
                                ("14.4s", {"Decay Time": {"norm": 0.75}}), ("60s", {"Decay Time": {"norm": 1.0}}))]
               + [[f"{d.lower()}-decay-1.2s-hi-cut", {"Density": {"item": d}, "In Hi Cut On": ON}] for d in ("Low", "Mid")]},
+    # Live's reflections come later as Stereo falls from 120, while the tail stays put and Hi Cut adds
+    # only its filter's own delay (reflections alone against Stereo 120: 8 frames at Stereo 100 and 32
+    # at 0 under Smooth None; 4, 13 and 27 at 100, 60 and 0 under Fast). The 8 frames Decision 24 put
+    # on Hi Cut were Stereo 100's. The delay's law over Stereo under each Smooth, whether it moves with
+    # Size, Density or Predelay, that Hi Cut leaves it alone, and that the tail does not move.
+    {"name": "reverb-er-stereo", "plan": "11", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the law of the reflections' delay against Stereo under Smooth None and Fast, and what else moves it",
+     "question": "impulse response of the reflections alone (Size 100, Hi Cut off, Spin off, Diffusion 0.1 %, Decay 60 s) at Stereo 0 to 120 under Smooth None and Fast, and Slow at three; at Stereo 0, 60 and 120 at Size 10.54, Density Mid and Predelay 50 ms (None); Hi Cut on at Stereo 60; and the bare network at Stereo 0, 60 and 120 (None)",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "In Hi Cut On": OFF, "Reflect Level": {"display": 0.0}, **ER_ONLY},
+     "cases": [[f"{sm.lower()}-stereo-{st:g}", {"Size Smoothing": {"item": sm}, "Stereo Image": {"display": st}}]
+               for sm in ("None", "Fast")
+               for st in (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 105, 110, 115, 119, 120)]
+              + [[f"slow-stereo-{st:g}", {"Size Smoothing": {"item": "Slow"}, "Stereo Image": {"display": st}}]
+                 for st in (0, 60, 100)]
+              + [[f"{name}-stereo-{st:g}", {**extra, "Stereo Image": {"display": st}}]
+                 for name, extra in (("size-10.54", {"Room Size": {"display": 10.54}}),
+                                     ("mid", {"Density": {"item": "Mid"}}),
+                                     ("predelay-50ms", {"Predelay": {"display": 0.05}}))
+                 for st in (0, 60, 120)]
+              + [["hi-cut-stereo-60", {"In Hi Cut On": ON, "Stereo Image": {"display": 60}}]]
+              + [[f"tail-stereo-{st:g}", {**TAIL_ONLY, "Diffuse Level": {"display": 0.0}, "Diff. Hi On": OFF,
+                                          "Diff. Lo On": OFF, "Stereo Image": {"display": st}}]
+                 for st in (0, 60, 120)]},
 ]
