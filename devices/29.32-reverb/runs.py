@@ -225,6 +225,24 @@ RUNS = [
               "Stereo Image": {"display": 120}, "ER Spin On": ON, "ER Spin Rate": {"display": 0.37},
               "ER Spin Amount": {"display": 30}, "In Hi Cut On": OFF},
      "cases": [["er-only", {"Reflect Level": {"display": 0.0}, **ER_ONLY}]]},
+    # The network's coefficients, read exactly rather than from the peaks of low-passed bumps.
+    # With Hi Cut off, Spin and Chorus off and Smooth None every delay settles on whole frames, so
+    # at Diffusion 0.1 % each arrival is close to one sample whose value is a product of the
+    # network's weights: one line gives its input weight times its output level, two lines the
+    # mix entry between them as well. Each line's allpass grows with Scale at its own rate, so six
+    # Scales move every path differently and overlapping arrivals can be solved together. The
+    # reflections alone at Hi Cut off settle the 4-frame offset between the reflections and the
+    # network (reverb-network-spin found it with Spin moving); Shape at Decay 0.83 s tilts each
+    # arrival by its source reflection's delay, which tells a filtered reflection from its source.
+    {"name": "reverb-network-exact", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "the network's input weights, mix and output levels as exact sample values, at six Scales",
+     "question": "impulse response of the bare network (as reverb-network-taps, Stereo 120) with Hi Cut off at Scale 5, 20, 40, 60, 80 and 100 %, the reflections alone, and Shape 0, 0.5 and 1 at Decay 0.83 s",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 1.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "In Hi Cut On": OFF},
+     "cases": [[f"scale-{c:g}", {"Scale": {"display": c}}] for c in (5, 20, 60, 80, 100)]
+     + [["er-only", {"Reflect Level": {"display": 0.0}, **ER_ONLY}]]
+     + [[f"decay-0.83s-shape-{v:g}", {"Decay Time": {"norm": 0.25}, "ER Shape": {"display": v}}] for v in (0, 0.5, 1)]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
