@@ -47,7 +47,8 @@
     },
     "ER Spin Amount": {
      "display": 30
-    }
+    },
+    "In Hi Cut On": 0
    }
   },
   {
@@ -84,6 +85,7 @@
     "ER Spin Amount": {
      "display": 30
     },
+    "In Hi Cut On": 0,
     "Scale": {
      "display": 5
     }
@@ -123,6 +125,7 @@
     "ER Spin Amount": {
      "display": 30
     },
+    "In Hi Cut On": 0,
     "Scale": {
      "display": 100
     }
@@ -162,6 +165,7 @@
     "ER Spin Amount": {
      "display": 30
     },
+    "In Hi Cut On": 0,
     "Diffuse Level": {
      "norm": 0.0
     }

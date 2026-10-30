@@ -214,6 +214,17 @@ RUNS = [
               "ER Spin Amount": {"display": 30}, "In Hi Cut On": OFF},
      "cases": [[f"scale-{c:g}", {"Scale": {"display": c}}] for c in (5, 100)]
      + [["er-only", {"Reflect Level": {"display": 0.0}, **ER_ONLY}]]},
+    # The same at Spin Rate 0.37 Hz, so the LFOs reach other phases: with reverb-network-spin's
+    # default case that is twenty impulses at Scale 40 %, enough to solve each of the ten direct
+    # reflections' own responses and still test them on impulses left out.
+    {"name": "reverb-network-spin2", "plan": "7", "probe": "gap10", "read": ["impulse (.ir.wav arrivals)"], "priority": 1,
+     "why": "each direct reflection's own response, not one per input group, from twenty impulses",
+     "question": "reverb-network-spin's default and er-only cases with Spin Rate 0.37 Hz",
+     "base": {**SMALL_SMOOTH_NONE, "Room Size": {"display": 100}, "Diffusion": {"display": 0.1},
+              "Decay Time": {"norm": 0.0}, "Diff. Hi On": OFF, "Diff. Lo On": OFF, **TAIL_ONLY,
+              "Stereo Image": {"display": 120}, "ER Spin On": ON, "ER Spin Rate": {"display": 0.37},
+              "ER Spin Amount": {"display": 30}, "In Hi Cut On": OFF},
+     "cases": [["er-only", {"Reflect Level": {"display": 0.0}, **ER_ONLY}]]},
     # `reverb-decay decay-14.4s` keeps the preset's Smooth Fast, under which Live's network runs a
     # little short (up to 11 frames by 0.25 s against Smooth None), so it cannot be matched sample
     # for sample by a network measured with Smooth None. The same case with Smooth None, its
