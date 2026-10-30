@@ -439,4 +439,20 @@ RUNS = [
               + [[f"tail-stereo-{st:g}", {**TAIL_ONLY, "Diffuse Level": {"display": 0.0}, "Diff. Hi On": OFF,
                                           "Diff. Lo On": OFF, "Stereo Image": {"display": st}}]
                  for st in (0, 60, 120)]},
+    # Suhina's tail hissed in and out at the Chorus rate (reverb-texture chorus-amt2-4Hz on white
+    # noise), and Spin a little, while Live's did not; the texture run has them at Low only. The same
+    # Chorus and Spin cases at each Density, to listen to and to read the highs' ripple from.
+    {"name": "reverb-modulation-density", "plan": "8", "probe": "gap10", "read": ["noise (the highs' level against time)"], "priority": 1,
+     "why": "whether the highs of the tail and reflections rise and fall at the Chorus and Spin rates at each Density",
+     "question": "the level above 6 and 12 kHz against time of the tail alone (Decay 3.46 s) with Chorus Amount 2 at 1 and 4 Hz, and of the reflections alone with Spin Amount 17.5 at 0.3 Hz and 55 at 1.3 Hz, at Density Sparse, Low, Mid and High",
+     "base": STATIC,
+     "cases": [[f"{d.lower()}-{name}", {"Density": {"item": d}, **params}]
+               for d in ("Sparse", "Low", "Mid", "High")
+               for name, params in (
+                   *((f"chorus-amt2-{r:g}Hz", {"Chorus On": ON, **TAIL_ONLY, "Decay Time": {"norm": 0.5},
+                                               "Chorus Amount": {"display": 2}, "Chorus Rate": {"display": r}})
+                     for r in (1, 4)),
+                   *((f"spin-amt{a:g}-{r:g}Hz", {"ER Spin On": ON, "Diffuse Level": {"norm": 0.0},
+                                                 "ER Spin Amount": {"display": a}, "ER Spin Rate": {"display": r}})
+                     for a, r in ((17.5, 0.3), (55, 1.3))))]},
 ]

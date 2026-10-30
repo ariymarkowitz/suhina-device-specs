@@ -1,0 +1,404 @@
+{
+ "device": "Reverb",
+ "parameter": "reverb-modulation-density",
+ "question": "the level above 6 and 12 kHz against time of the tail alone (Decay 3.46 s) with Chorus Amount 2 at 1 and 4 Hz, and of the reflections alone with Spin Amount 17.5 at 0.3 Hz and 55 at 1.3 Hz, at Density Sparse, Low, Mid and High",
+ "plan": "8",
+ "read": [
+  "noise (the highs' level against time)"
+ ],
+ "probe": "gap10",
+ "cases": [
+  {
+   "id": "bypass",
+   "params": {
+    "Device On": 0
+   }
+  },
+  {
+   "id": "default",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 0
+   }
+  },
+  {
+   "id": "sparse-chorus-amt2-1Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "Sparse"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 1
+    }
+   }
+  },
+  {
+   "id": "sparse-chorus-amt2-4Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "Sparse"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "sparse-spin-amt17.5-0.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "Sparse"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 17.5
+    },
+    "ER Spin Rate": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "sparse-spin-amt55-1.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "Sparse"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 55
+    },
+    "ER Spin Rate": {
+     "display": 1.3
+    }
+   }
+  },
+  {
+   "id": "low-chorus-amt2-1Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "Low"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 1
+    }
+   }
+  },
+  {
+   "id": "low-chorus-amt2-4Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "Low"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "low-spin-amt17.5-0.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "Low"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 17.5
+    },
+    "ER Spin Rate": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "low-spin-amt55-1.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "Low"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 55
+    },
+    "ER Spin Rate": {
+     "display": 1.3
+    }
+   }
+  },
+  {
+   "id": "mid-chorus-amt2-1Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "Mid"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 1
+    }
+   }
+  },
+  {
+   "id": "mid-chorus-amt2-4Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "Mid"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "mid-spin-amt17.5-0.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "Mid"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 17.5
+    },
+    "ER Spin Rate": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "mid-spin-amt55-1.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "Mid"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 55
+    },
+    "ER Spin Rate": {
+     "display": 1.3
+    }
+   }
+  },
+  {
+   "id": "high-chorus-amt2-1Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "High"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 1
+    }
+   }
+  },
+  {
+   "id": "high-chorus-amt2-4Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 1,
+    "ER Spin On": 0,
+    "Density": {
+     "item": "High"
+    },
+    "Reflect Level": {
+     "norm": 0.0
+    },
+    "Decay Time": {
+     "norm": 0.5
+    },
+    "Chorus Amount": {
+     "display": 2
+    },
+    "Chorus Rate": {
+     "display": 4
+    }
+   }
+  },
+  {
+   "id": "high-spin-amt17.5-0.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "High"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 17.5
+    },
+    "ER Spin Rate": {
+     "display": 0.3
+    }
+   }
+  },
+  {
+   "id": "high-spin-amt55-1.3Hz",
+   "params": {
+    "Dry/Wet": {
+     "display": 100
+    },
+    "Chorus On": 0,
+    "ER Spin On": 1,
+    "Density": {
+     "item": "High"
+    },
+    "Diffuse Level": {
+     "norm": 0.0
+    },
+    "ER Spin Amount": {
+     "display": 55
+    },
+    "ER Spin Rate": {
+     "display": 1.3
+    }
+   }
+  }
+ ]
+}
